@@ -34,6 +34,28 @@ The main conversation is the **orchestrator**. Delegate concrete work to the age
 - **Advisor is LLM + pro-curated KB**, not pure ML. Open-source LLM (Llama 3.1 / Qwen 2.5 class) for cost.
 - **Pure ML draft model deprioritized** to Phase 3 and gated on pick-order reconstruction (Brawl Stars API doesn't expose pick order).
 
+## Stack decisions (locked 2026-05-22)
+
+- **Frontend framework:** Next.js (App Router).
+- **Canvas:** PixiJS via `@pixi/react v8`. WebGL-backed, scales fine for the 10-20-token / ~1000-tile scenes we render, and "I built it on WebGL" is better resume signal than "I used a 2D library."
+- **CRDT:** Y.js + `y-websocket` (self-hosted sync server, Node, Fly.io). Free, battle-tested (Notion, Tldraw, JupyterLite); deferred until after the static whiteboard renders. Liveblocks rejected because it's lower resume signal and costs more at scale.
+- **Hosting:** Vercel for the Next.js app (free tier OK for v1). Fly.io for the Y.js sync server (~$5/mo).
+
+## Reticle rendering (current state)
+
+- All 85 playable brawlers have generated SVGs in `data/reticles/<BrawlerHash>.svg` + an `index.html` gallery. Each shows attack / super / hyper variants (purple) / gadgets / alt-forms.
+- Classifier in `data/render_all_reticles.py` infers one of 9 shape primitives per skill from the CSVs: cone, line, dash, placement, wave, cluster (quincunx/plus/triangle/pair/hexagon), area-follow, self-aoe.
+- 38 per-skill overrides in `data/reticle_overrides.json` for cases where the data-driven classifier gets the shape wrong (e.g., Barley super = quincunx, Tara Black Hole = placement, Amber attack = line). Each entry has a `note` field with reasoning + source URL.
+- 20 newest brawlers (Starr-Nova, Damian, Najia, Sirius, Glowy, Ziggy, Mina, Jae-Yong, etc.) are absent — they post-date the v67.264 CSV dump.
+- The Python renderer needs to be ported / baked into a `brawlers.json` for the frontend. That's the next concrete step.
+
+## Visual convention for reticles
+
+- **Color:** default white; hypercharge variants purple (`#c084fc`).
+- **Circular shapes** (cone, circle, placement splash): hard outer edge + inward white gradient fade from all edges (matches in-game Brawl Stars).
+- **Rectangular shapes** (line, dash): uniform translucent white fill (~65 % opacity), no separate border.
+- **Trajectory hints** (throwers, placement): single straight dotted line from brawler to landing center (NOT a parabolic arc; stops at the splash center, doesn't extend past).
+
 ## License
 
 All extracted assets are Supercell IP, usable under the [Supercell Fan Content Policy](https://www.supercell.com/fan-content-policy) — non-commercial only until reviewed.

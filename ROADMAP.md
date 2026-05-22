@@ -20,17 +20,36 @@ After ML feasibility research:
 ### Phase 1 — Collaborative whiteboard MVP (~6 weeks)
 **Owner agents:** `data-loader`, `frontend`, `backend` (activates here for sync server)
 
-- [ ] `data-loader` → `data/brawlers.json` (validate vs Shelly's known values).
-- [ ] `data-loader` → `data/maps.json` (decode tile encoding in `maps.csv` for ranked pool only — filter via Brawlify's ranked field; ~25 maps).
-- [ ] `frontend` picks stack (recommend: SvelteKit or Next + Konva/PixiJS for canvas + **Y.js for collaboration**) and scaffolds.
-- [ ] Render a ranked map tile grid; place single brawler with base-attack reticle.
-- [ ] Full reticle library (cone/line/arc/circle/indirect/self-AoE/placement) wired to all `AttackVariant`s.
-- [ ] Drag-and-drop placement + rotation to set aim direction.
-- [ ] **Map builder mode** — toggle to edit-mode, paint tiles from a palette, save custom layouts. Doubles as validation: if the builder can reproduce game maps, the renderer is correct.
-- [ ] `backend` stands up minimal Y.js sync server (y-websocket on Node, or Hocuspocus).
-- [ ] `backend` cron: weekly fetch of Brawlify ranked pool → write `data/ranked-rotation.json`. Bake season's map list into config; refresh per season.
-- [ ] Multi-user same-canvas presence (cursors, selections, additions).
-- [ ] Room URLs you can share.
+**Stack** (decided 2026-05-22): **Next.js + PixiJS via `@pixi/react v8` + Y.js + `y-websocket`.** See CLAUDE.md for rationale.
+
+**Pre-coding data prep:**
+- [x] Reticle renderer for all 85 brawlers (`data/render_all_reticles.py`, generates `data/reticles/*.svg`).
+- [x] 38 per-skill reticle overrides (`data/reticle_overrides.json`) from research across all brawlers.
+- [ ] **Bake `data/brawlers.json`** — extract the Python classifier's output as a static JSON the frontend can `import`. One entry per brawler with all variants (attack/super/hyper/gadgets) and their shape primitives + tile-unit params.
+- [ ] **Decode ranked-pool maps → `data/maps.json`** — single-char encoding in `maps.csv` → 2D tile arrays. Filter to ~25 current ranked maps using Brawlify's ranked-pool field.
+- [ ] **Hand-curated `data/map-name-map.json`** — bridge between Brawlify display names ("Hard Rock Mine", id 15000051) and internal `maps.csv` names ("Gemgrab_42").
+
+**Frontend scaffold:**
+- [ ] `npx create-next-app brawl-digram-web` (App Router, TypeScript).
+- [ ] Install `pixi.js`, `@pixi/react`, `yjs`, `y-websocket`, `y-protocols`.
+- [ ] Asset folder pipeline: copy `assets/` → `brawl-digram-web/public/assets/`. Brawler portraits, gadgets, star powers, maps from Brawlify mirror.
+- [ ] Static single-map renderer with PixiJS (one map, no interactivity).
+- [ ] Brawler token placement (drag-drop, snap-to-tile).
+- [ ] Reticle overlay (read `brawlers.json`, render per current selection — white for base, purple for hyper).
+- [ ] UI for picking brawlers / toggling attack vs super vs gadget reticle.
+- [ ] **Map builder mode** — paint tiles from a palette, save custom layouts.
+
+**Sync server (do after the static whiteboard works):**
+- [ ] Spin up `y-websocket` sync server (Node, separate repo, ~50 lines).
+- [ ] Deploy to Fly.io with persistent volume (SQLite stores room snapshots).
+- [ ] Wire frontend ↔ sync server with awareness API (live cursors, selection state).
+- [ ] Room URLs (`/r/{room-id}`) + persistence (room state survives all-users-leave).
+
+**Background tracks (in parallel with frontend coding):**
+- [ ] `backend` cron: weekly fetch of Brawlify ranked pool → `data/ranked-rotation.json`.
+- [ ] `pro-curator` drafts first 3-5 outreach DMs (review before sending).
+- [ ] `content` drafts first build-in-public posts (r/Brawlstars, Twitter).
+- [ ] Refresh `data/csv_logic/` from a newer tailsjs version to pick up the 20 missing newest brawlers.
 
 **Done = two people in different cities can build a "what if we play this draft on this ranked map" scene together in their browsers, on any current-season ranked map, with the option to use custom user-built maps.**
 
