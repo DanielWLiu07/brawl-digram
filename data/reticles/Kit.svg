@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1016 758" style="background:#0a0d18;font-family:sans-serif">
+  <defs>
+  <filter id="blur4" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="4"/></filter>
+</defs>
+  <text x="508.0" y="26" text-anchor="middle" font-family="monospace" font-size="18" fill="#fff" font-weight="bold">Kit — 4 reticle variants</text>
+  <rect x="14" y="50" width="320" height="340" fill="#0f1320"/>
+<line x1="14" y1="50" x2="14" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="34" y1="50" x2="34" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="54" y1="50" x2="54" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="74" y1="50" x2="74" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="94" y1="50" x2="94" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="114" y1="50" x2="114" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="134" y1="50" x2="134" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="154" y1="50" x2="154" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="174" y1="50" x2="174" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="194" y1="50" x2="194" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="214" y1="50" x2="214" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="234" y1="50" x2="234" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="254" y1="50" x2="254" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="274" y1="50" x2="274" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="294" y1="50" x2="294" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="314" y1="50" x2="314" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="334" y1="50" x2="334" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="50" x2="334" y2="50" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="70" x2="334" y2="70" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="90" x2="334" y2="90" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="110" x2="334" y2="110" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="130" x2="334" y2="130" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="150" x2="334" y2="150" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="170" x2="334" y2="170" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="190" x2="334" y2="190" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="210" x2="334" y2="210" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="230" x2="334" y2="230" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="250" x2="334" y2="250" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="270" x2="334" y2="270" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="290" x2="334" y2="290" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="310" x2="334" y2="310" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="330" x2="334" y2="330" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="350" x2="334" y2="350" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="370" x2="334" y2="370" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="390" x2="334" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<defs><clipPath id="clip-g-Kit-0"><path d="M 174.0,320 L 103.2,301.0 A 73.33333333333333,73.33333333333333 0 0,1 244.8,301.0 Z"/></clipPath><filter id="blur-g-Kit-0" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4.03"/></filter></defs>
+<g clip-path="url(#clip-g-Kit-0)"><path d="M 174.0,320 L 103.2,301.0 A 73.33333333333333,73.33333333333333 0 0,1 244.8,301.0 Z" fill="none" stroke="white" stroke-width="16.133333333333333" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Kit-0)"/></g>
+<path d="M 174.0,320 L 103.2,301.0 A 73.33333333333333,73.33333333333333 0 0,1 244.8,301.0 Z" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95" stroke-linejoin="round"/>
+<circle cx="174.0" cy="320" r="16" fill="white" fill-opacity="0.10"/>
+<image href="../../assets/brawlers/Kit/portrait.png" x="160.0" y="306.0" width="28" height="28"/>
+<text x="24" y="68" font-family="monospace" font-size="12" fill="#fff" font-weight="bold">Attack</text>
+<text x="24" y="84" font-family="monospace" font-size="9" fill="#9ba3b8">skill: AttacherWeapon</text>
+<text x="24" y="97" font-family="monospace" font-size="9" fill="#9ba3b8">cone — 3.67 tiles, 150°</text><rect x="348" y="50" width="320" height="340" fill="#0f1320"/>
+<line x1="348" y1="50" x2="348" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="368" y1="50" x2="368" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="388" y1="50" x2="388" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="408" y1="50" x2="408" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="428" y1="50" x2="428" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="448" y1="50" x2="448" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="468" y1="50" x2="468" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="488" y1="50" x2="488" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="508" y1="50" x2="508" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="528" y1="50" x2="528" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="548" y1="50" x2="548" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="568" y1="50" x2="568" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="588" y1="50" x2="588" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="608" y1="50" x2="608" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="628" y1="50" x2="628" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="648" y1="50" x2="648" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="668" y1="50" x2="668" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="50" x2="668" y2="50" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="70" x2="668" y2="70" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="90" x2="668" y2="90" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="110" x2="668" y2="110" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="130" x2="668" y2="130" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="150" x2="668" y2="150" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="170" x2="668" y2="170" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="190" x2="668" y2="190" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="210" x2="668" y2="210" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="230" x2="668" y2="230" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="250" x2="668" y2="250" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="270" x2="668" y2="270" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="290" x2="668" y2="290" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="310" x2="668" y2="310" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="330" x2="668" y2="330" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="350" x2="668" y2="350" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="370" x2="668" y2="370" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="390" x2="668" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<rect x="498.0" y="186.66666666666666" width="20.0" height="133.33333333333334" fill="white" fill-opacity="0.65"/>
+<circle cx="508.0" cy="320" r="16" fill="white" fill-opacity="0.10"/>
+<image href="../../assets/brawlers/Kit/portrait.png" x="494.0" y="306.0" width="28" height="28"/>
+<text x="358" y="68" font-family="monospace" font-size="12" fill="#fff" font-weight="bold">Super</text>
+<text x="358" y="84" font-family="monospace" font-size="9" fill="#9ba3b8">skill: AttacherUlti</text>
+<text x="358" y="97" font-family="monospace" font-size="9" fill="#9ba3b8">dash — 6.67 tiles</text><rect x="682" y="50" width="320" height="340" fill="#0f1320"/>
+<line x1="682" y1="50" x2="682" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="702" y1="50" x2="702" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="722" y1="50" x2="722" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="742" y1="50" x2="742" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="762" y1="50" x2="762" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="782" y1="50" x2="782" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="802" y1="50" x2="802" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="822" y1="50" x2="822" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="842" y1="50" x2="842" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="862" y1="50" x2="862" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="882" y1="50" x2="882" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="902" y1="50" x2="902" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="922" y1="50" x2="922" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="942" y1="50" x2="942" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="962" y1="50" x2="962" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="982" y1="50" x2="982" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="1002" y1="50" x2="1002" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="682" y1="50" x2="1002" y2="50" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="682" y1="70" x2="1002" y2="70" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="682" y1="90" x2="1002" y2="90" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="682" y1="110" x2="1002" y2="110" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="682" y1="130" x2="1002" y2="130" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="682" y1="150" x2="1002" y2="150" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="682" y1="170" x2="1002" y2="170" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="682" y1="190" x2="1002" y2="190" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="682" y1="210" x2="1002" y2="210" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="682" y1="230" x2="1002" y2="230" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="682" y1="250" x2="1002" y2="250" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="682" y1="270" x2="1002" y2="270" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="682" y1="290" x2="1002" y2="290" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="682" y1="310" x2="1002" y2="310" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="682" y1="330" x2="1002" y2="330" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="682" y1="350" x2="1002" y2="350" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="682" y1="370" x2="1002" y2="370" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="682" y1="390" x2="1002" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<defs><clipPath id="clip-g-Kit-2"><path d="M 842.0,320 L 753.5,296.3 A 91.66666666666666,91.66666666666666 0 0,1 930.5,296.3 Z"/></clipPath><filter id="blur-g-Kit-2" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5.04"/></filter></defs>
+<g clip-path="url(#clip-g-Kit-2)"><path d="M 842.0,320 L 753.5,296.3 A 91.66666666666666,91.66666666666666 0 0,1 930.5,296.3 Z" fill="none" stroke="#c084fc" stroke-width="20.166666666666664" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Kit-2)"/></g>
+<path d="M 842.0,320 L 753.5,296.3 A 91.66666666666666,91.66666666666666 0 0,1 930.5,296.3 Z" fill="none" stroke="#c084fc" stroke-width="2.5" stroke-opacity="0.95" stroke-linejoin="round"/>
+<circle cx="842.0" cy="320" r="16" fill="white" fill-opacity="0.10"/>
+<image href="../../assets/brawlers/Kit/portrait.png" x="828.0" y="306.0" width="28" height="28"/>
+<text x="692" y="68" font-family="monospace" font-size="12" fill="#fff" font-weight="bold">Hypercharged Attack (+25%)</text>
+<text x="692" y="84" font-family="monospace" font-size="9" fill="#9ba3b8">skill: AttacherWeapon</text>
+<text x="692" y="97" font-family="monospace" font-size="9" fill="#9ba3b8">cone — 4.58 tiles, 150°</text><rect x="14" y="404" width="320" height="340" fill="#0f1320"/>
+<line x1="14" y1="404" x2="14" y2="744" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="34" y1="404" x2="34" y2="744" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="54" y1="404" x2="54" y2="744" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="74" y1="404" x2="74" y2="744" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="94" y1="404" x2="94" y2="744" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="114" y1="404" x2="114" y2="744" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="134" y1="404" x2="134" y2="744" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="154" y1="404" x2="154" y2="744" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="174" y1="404" x2="174" y2="744" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="194" y1="404" x2="194" y2="744" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="214" y1="404" x2="214" y2="744" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="234" y1="404" x2="234" y2="744" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="254" y1="404" x2="254" y2="744" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="274" y1="404" x2="274" y2="744" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="294" y1="404" x2="294" y2="744" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="314" y1="404" x2="314" y2="744" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="334" y1="404" x2="334" y2="744" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="404" x2="334" y2="404" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="424" x2="334" y2="424" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="444" x2="334" y2="444" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="464" x2="334" y2="464" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="484" x2="334" y2="484" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="504" x2="334" y2="504" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="524" x2="334" y2="524" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="544" x2="334" y2="544" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="564" x2="334" y2="564" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="584" x2="334" y2="584" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="604" x2="334" y2="604" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="624" x2="334" y2="624" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="644" x2="334" y2="644" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="664" x2="334" y2="664" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="684" x2="334" y2="684" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="704" x2="334" y2="704" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="724" x2="334" y2="724" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="744" x2="334" y2="744" stroke="#1e2538" stroke-width="0.5"/>
+<rect x="164.0" y="507.3333333333333" width="20.0" height="166.66666666666669" fill="#c084fc" fill-opacity="0.65"/>
+<circle cx="174.0" cy="674" r="16" fill="white" fill-opacity="0.10"/>
+<image href="../../assets/brawlers/Kit/portrait.png" x="160.0" y="660.0" width="28" height="28"/>
+<text x="24" y="422" font-family="monospace" font-size="12" fill="#fff" font-weight="bold">Hypercharged Super (+25%)</text>
+<text x="24" y="438" font-family="monospace" font-size="9" fill="#9ba3b8">skill: AttacherUlti</text>
+<text x="24" y="451" font-family="monospace" font-size="9" fill="#9ba3b8">dash — 8.33 tiles</text>
+</svg>

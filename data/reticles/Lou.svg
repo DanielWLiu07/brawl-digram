@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1016 404" style="background:#0a0d18;font-family:sans-serif">
+  <defs>
+  <filter id="blur4" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="4"/></filter>
+</defs>
+  <text x="508.0" y="26" text-anchor="middle" font-family="monospace" font-size="18" fill="#fff" font-weight="bold">Lou — 2 reticle variants</text>
+  <rect x="14" y="50" width="320" height="340" fill="#0f1320"/>
+<line x1="14" y1="50" x2="14" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="34" y1="50" x2="34" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="54" y1="50" x2="54" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="74" y1="50" x2="74" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="94" y1="50" x2="94" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="114" y1="50" x2="114" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="134" y1="50" x2="134" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="154" y1="50" x2="154" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="174" y1="50" x2="174" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="194" y1="50" x2="194" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="214" y1="50" x2="214" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="234" y1="50" x2="234" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="254" y1="50" x2="254" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="274" y1="50" x2="274" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="294" y1="50" x2="294" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="314" y1="50" x2="314" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="334" y1="50" x2="334" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="50" x2="334" y2="50" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="70" x2="334" y2="70" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="90" x2="334" y2="90" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="110" x2="334" y2="110" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="130" x2="334" y2="130" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="150" x2="334" y2="150" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="170" x2="334" y2="170" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="190" x2="334" y2="190" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="210" x2="334" y2="210" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="230" x2="334" y2="230" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="250" x2="334" y2="250" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="270" x2="334" y2="270" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="290" x2="334" y2="290" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="310" x2="334" y2="310" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="330" x2="334" y2="330" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="350" x2="334" y2="350" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="370" x2="334" y2="370" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="14" y1="390" x2="334" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<rect x="168.0" y="133.33333333333331" width="12.0" height="186.66666666666669" fill="white" fill-opacity="0.65"/>
+<circle cx="174.0" cy="320" r="16" fill="white" fill-opacity="0.10"/>
+<image href="../../assets/brawlers/Lou/portrait.png" x="160.0" y="306.0" width="28" height="28"/>
+<text x="24" y="68" font-family="monospace" font-size="12" fill="#fff" font-weight="bold">Attack</text>
+<text x="24" y="84" font-family="monospace" font-size="9" fill="#9ba3b8">skill: IceDudeWeapon</text>
+<text x="24" y="97" font-family="monospace" font-size="9" fill="#9ba3b8">line — 9.33 tiles, ~0.6 wide</text><rect x="348" y="50" width="320" height="340" fill="#0f1320"/>
+<line x1="348" y1="50" x2="348" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="368" y1="50" x2="368" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="388" y1="50" x2="388" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="408" y1="50" x2="408" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="428" y1="50" x2="428" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="448" y1="50" x2="448" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="468" y1="50" x2="468" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="488" y1="50" x2="488" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="508" y1="50" x2="508" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="528" y1="50" x2="528" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="548" y1="50" x2="548" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="568" y1="50" x2="568" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="588" y1="50" x2="588" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="608" y1="50" x2="608" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="628" y1="50" x2="628" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="648" y1="50" x2="648" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="668" y1="50" x2="668" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="50" x2="668" y2="50" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="70" x2="668" y2="70" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="90" x2="668" y2="90" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="110" x2="668" y2="110" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="130" x2="668" y2="130" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="150" x2="668" y2="150" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="170" x2="668" y2="170" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="190" x2="668" y2="190" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="210" x2="668" y2="210" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="230" x2="668" y2="230" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="250" x2="668" y2="250" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="270" x2="668" y2="270" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="290" x2="668" y2="290" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="310" x2="668" y2="310" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="330" x2="668" y2="330" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="350" x2="668" y2="350" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="370" x2="668" y2="370" stroke="#1e2538" stroke-width="0.5"/>
+<line x1="348" y1="390" x2="668" y2="390" stroke="#1e2538" stroke-width="0.5"/>
+<circle cx="508.0" cy="320" r="153.33333333333334" fill="none" stroke="white" stroke-width="1.0" stroke-dasharray="4,5" stroke-opacity="0.22"/>
+<line x1="508.0" y1="320" x2="508.0" y2="178.9333333333333" stroke="white" stroke-width="1.5" stroke-dasharray="3,4" stroke-opacity="0.55"/>
+<defs><clipPath id="clip-g-Lou-1-splash"><path d="M 462.1666666666667,178.9333333333333 a 45.83333333333333,45.83333333333333 0 1,0 91.66666666666666,0 a 45.83333333333333,45.83333333333333 0 1,0 -91.66666666666666,0 Z"/></clipPath><filter id="blur-g-Lou-1-splash" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.86"/></filter></defs>
+<g clip-path="url(#clip-g-Lou-1-splash)"><path d="M 462.1666666666667,178.9333333333333 a 45.83333333333333,45.83333333333333 0 1,0 91.66666666666666,0 a 45.83333333333333,45.83333333333333 0 1,0 -91.66666666666666,0 Z" fill="none" stroke="white" stroke-width="11.458333333333332" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Lou-1-splash)"/></g>
+<circle cx="508.0" cy="178.9333333333333" r="45.83333333333333" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95"/>
+<circle cx="508.0" cy="320" r="16" fill="white" fill-opacity="0.10"/>
+<image href="../../assets/brawlers/Lou/portrait.png" x="494.0" y="306.0" width="28" height="28"/>
+<text x="358" y="68" font-family="monospace" font-size="12" fill="#fff" font-weight="bold">Super</text>
+<text x="358" y="84" font-family="monospace" font-size="9" fill="#9ba3b8">skill: IceDudeUlti</text>
+<text x="358" y="97" font-family="monospace" font-size="9" fill="#9ba3b8">placement — 7.67 tile range, 2.29 tile splash</text>
+</svg>
