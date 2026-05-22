@@ -1,0 +1,304 @@
+{
+  "_doc": "Per-skill reticle overrides. Agents researched all 85 brawlers and proposed overrides for cases where the data-driven classifier got the shape wrong. Keep this list curated; edit individual entries as needed.",
+  "BarkeepUlti": {
+    "shape": "cluster",
+    "params": {
+      "range_tiles": 9.33,
+      "splash_tiles": 1.25,
+      "pattern": "quincunx",
+      "spacing_tiles": 1.5
+    },
+    "note": "Barley's super throws 5 flaming bottles in a diagonal-cross (quincunx) pattern covering a large area; data shows spread=75\u00b0 with pattern=9 (internal burst code) and Indirect=true, which could be mis-classified as a 'wave', but the actual landing is 5 fixed-position splashes arranged in a cross/quincunx, not a fanned spray. Source: https://brawlstars.fandom.com/wiki/Barley"
+  },
+  "BlackHoleUlti": {
+    "shape": "placement",
+    "params": {
+      "range_tiles": 6.67,
+      "splash_tiles": 2.5,
+      "equip": "ulti"
+    },
+    "note": "Tara's super throws a black hole that pulls enemies within ~2.5 tiles inward then explodes; the in-game reticle is a placement circle, not a line \u2014 the CSV has spread=0 and 1 direct projectile which would falsely imply 'line', but the projectile creates a timed AoE on arrival. Source: https://brawlstars.fandom.com/wiki/Tara"
+  },
+  "BlowerUlti": {
+    "shape": "line",
+    "params": {
+      "range_tiles": 10.0,
+      "width_tiles": 4.0
+    },
+    "note": "Gale's Super is a wide gust of wind that travels in a 4-tile wide band (Hypercharge widens it further to 7 tiles) \u2014 AttackPattern=7 with 4 parallel snow projectiles (PiercesCharacters=true) that push enemies; same parallel-band shape as attack but longer. Source: https://brawlstars.fandom.com/wiki/Gale"
+  },
+  "BlowerWeapon": {
+    "shape": "line",
+    "params": {
+      "range_tiles": 8.33,
+      "width_tiles": 4.0
+    },
+    "note": "Gale fires 6 parallel snowballs simultaneously in a wide 4-tile band (AttackPattern=7 in skills.csv = parallel simultaneous shots, no angular spread) \u2014 data-driven inference produces 'line' which is correct shape-wise but must set width_tiles=4 to represent the full band width rather than a thin line. Source: https://brawlstars.fandom.com/wiki/Gale"
+  },
+  "BowDudeUlti": {
+    "shape": "cluster",
+    "params": {
+      "range_tiles": 8.67,
+      "splash_tiles": 0.84,
+      "pattern": "triangle",
+      "spacing_tiles": 1.5
+    },
+    "note": "Bo's super fires an arrow that plants 3 hidden mines in a triangular cluster at the target area; the data shows indirect single-projectile with summoned BoxOfMines which would imply simple 'placement', but in-game three mines land spread in a triangle, making it a 3-point cluster. Source: https://brawlstars.fandom.com/wiki/Bo"
+  },
+  "BulletstormUlti": {
+    "shape": "placement",
+    "params": {
+      "range_tiles": 8.33,
+      "splash_tiles": 0.54,
+      "equip": "ulti"
+    },
+    "note": "Pierce's super projectile has Indirect=true in projectiles_logic.csv and the skill has AimIndirectAsFlat, making it a lob/placement rather than a direct-fire line \u2014 data-driven inference that reads spread=0 and bullets=1 would classify as line. In-game it's a targeted lob that marks enemies in the landing zone (Radius=260/480\u22480.54 tiles). https://brawlstars.fandom.com/wiki/Pierce"
+  },
+  "ChronomancerUlti": {
+    "shape": "placement",
+    "params": {
+      "range_tiles": 7.33,
+      "splash_tiles": 0.63,
+      "equip": "ulti"
+    },
+    "note": "Finx's super fires a single projectile (Radius=300/480\u22480.63 tiles) that creates a stationary time-warp zone at the target location lasting 7 seconds; data-driven inference sees follow=follow and 1 bullet with spread=0 and could produce line, but the AoE zone at landing is a placement. https://brawlstars.fandom.com/wiki/Finx"
+  },
+  "ChronomancerWeapon": {
+    "shape": "line",
+    "params": {
+      "range_tiles": 8.33,
+      "width_tiles": 0.83
+    },
+    "note": "Finx fires 3 parallel side-by-side projectiles (center pharaoh + 2 flanking hands, pattern=23) with no angular spread \u2014 the correct shape is a wide line (3-column parallel beam), not a cone. The ChronomancerProjectile (100px wide) and ChronomancerProjectileSecondary (60px wide) share the same forward axis. width_tiles is approximate combined footprint. https://brawlstars.fandom.com/wiki/Finx"
+  },
+  "ClusterBombDudeUlti": {
+    "shape": "placement",
+    "params": {
+      "range_tiles": 3.33,
+      "splash_tiles": 1.04,
+      "equip": "ulti"
+    },
+    "note": "Tick lobs his own head to a target location (short-ranged indirect lob reticle); the head then autonomously chases enemies and explodes \u2014 the player-facing reticle is a standard placement circle, despite the summoned=ClusterBombPet field. Source: https://brawlstars.fandom.com/wiki/Tick"
+  },
+  "ClusterBombDudeWeapon": {
+    "shape": "cluster",
+    "params": {
+      "range_tiles": 8.67,
+      "splash_tiles": 1.56,
+      "pattern": "triangle",
+      "spacing_tiles": 1.33
+    },
+    "note": "Tick's attack lobs a single projectile that splits mid-air into 3 mines landing in a triangular cluster (not a simple single-splash placement); spacing grows with distance (~1.33 tiles at min range, up to ~90% wider at max). Source: https://brawlstars.fandom.com/wiki/Tick"
+  },
+  "ConductorUltiSpawn": {
+    "shape": "placement",
+    "params": {
+      "range_tiles": 10.0,
+      "splash_tiles": 0.42,
+      "equip": "ulti"
+    },
+    "note": "Chuck's super places a post (flag/sign) at a targeted location (CastingRange=30/3=10 tiles, NumSpawns=1, MaxSpawns=3); subsequent activations dash to the nearest post (ConductorUltiCharge, behavior=Charge). The first activation is a placement-type reticle; data-driven inference might call it line (1 bullet) or miss the post-placement intent entirely. ConductorUltiProjectile Radius=0 but the post itself occupies the target tile. https://brawlstars.fandom.com/wiki/Chuck"
+  },
+  "ConductorWeapon": {
+    "shape": "cone",
+    "params": {
+      "range_tiles": 6.67,
+      "spread_deg": 30
+    },
+    "note": "Chuck fires 3 steam clouds in a fan pattern (sources confirm 3 clouds of steam that pierce enemies); the CSV shows bullets=1 but the ConductorProjectile spawns 3 sub-projectiles (DamagePercentStart=100, DamagePercentEnd=100 flankers from the projectile data) making it a narrow cone rather than a single line. spread_deg is approximate from in-game appearance. https://brawlstars.fandom.com/wiki/Chuck"
+  },
+  "CrowUlti": {
+    "shape": "self-aoe",
+    "params": {},
+    "note": "Crow leaps into the air and releases 14 poisoned daggers radially outward on both takeoff and landing (28 total); the behavior=Charge field and areaEffect=CrowUltiKnifes describe a brawler-centered radial burst, not a targeted dash \u2014 no directional reticle is shown. Source: https://brawlstars.fandom.com/wiki/Crow"
+  },
+  "DaredevilUlti": {
+    "shape": "placement",
+    "params": {
+      "range_tiles": 7.33,
+      "splash_tiles": 1.46,
+      "equip": "ulti"
+    },
+    "note": "Gigi's super is a Blink teleport (behavior=Blink in CSV) to a targeted location; data-driven inference has no Blink\u2192shape mapping and would produce no result. In-game the reticle is a circular landing-zone indicator at the target position (radius ~1.46 tiles from DaredevilUltiNoDamageLeave area Radius=700/480). https://brawlstars.fandom.com/wiki/Gigi"
+  },
+  "DragonRiderDragonWeapon": {
+    "shape": "cone",
+    "params": {
+      "range_tiles": 5.67,
+      "spread_deg": 90
+    },
+    "note": "Draco's dragon-form attack (secondary skill active during super) fires 4 bullets in a 90\u00b0 cone flamethrower stream (CastingRange=17/3\u22485.67 tiles, Spread=90\u00b0, NumBullets=4); the primary skill row in the batch only shows DragonRiderWeapon as the WeaponSkill so this secondary dragon-form cone would be missed without the secondary skill lookup. https://brawlstars.fandom.com/wiki/Draco"
+  },
+  "DragonRiderUlti": {
+    "shape": "self-aoe",
+    "params": {},
+    "note": "Draco's super (behavior=MountUp) is an instant self-transform into dragon form with no targeting or range \u2014 data-driven inference has no MountUp\u2192shape mapping. In-game there is no aimed reticle; it is an instant self-buff activation. https://brawlstars.fandom.com/wiki/Draco"
+  },
+  "FireDudeWeapon": {
+    "shape": "line",
+    "params": {
+      "range_tiles": 8.33,
+      "width_tiles": 0.5
+    },
+    "note": "Amber's attack is a continuous single-stream flame jet \u2014 Spread=30 in CSV is the flamethrower's curvature/aim wobble, not a multi-pellet shotgun spread; the in-game reticle is a narrow line, not a fan. Source: https://brawlstars.fandom.com/wiki/Amber"
+  },
+  "GeishaUlti": {
+    "shape": "placement",
+    "params": {
+      "range_tiles": 7.33,
+      "splash_tiles": 3.12,
+      "equip": "ulti"
+    },
+    "note": "Kaze's Geisha super (Fan Storm) creates a 3.12-tile damage zone at the landing point (area_effects.csv: GeishaStormDamage Radius=1500). Indirect projectile; agent's initial 0.35 was the projectile hitbox, not the storm damage radius."
+  },
+  "GhostUlti": {
+    "shape": "dash",
+    "params": {
+      "range_tiles": 3.33
+    },
+    "note": "Shade's super is a forward dash through obstacles (behavior=Charge, CastingRange=10/3\u22483.33 tiles) granting 6 s of incorporeal/wall-pass form; data-driven Charge inference would correctly produce dash but the range is short and the super does not deal damage on contact, so it is a mobility-only dash. https://brawlstars.fandom.com/wiki/Shade"
+  },
+  "GhostWeapon": {
+    "shape": "cone",
+    "params": {
+      "range_tiles": 3.67,
+      "spread_deg": 300
+    },
+    "note": "Shade's attack is a 300\u00b0 wide melee arc hug with no projectile (the CSV Spread field = 300 degrees, far exceeding any standard cone); at 300\u00b0 this is almost a full-circle sweep rather than a directional cone. The data pipeline may treat large Spread as a cone which is technically correct by shape taxonomy, but the 300\u00b0 value should be noted \u2014 in-game it appears as a near-full-circle front+side arc. https://brawlstars.fandom.com/wiki/Shade"
+  },
+  "InsectManUlti": {
+    "shape": "self-aoe",
+    "params": {},
+    "note": "Angelo's super has no CastingRange and no targeting \u2014 it is a self-activated toxic zone placed at Angelo's current position (InsectManUltiDamageArea Radius=700/480\u22481.46 tiles); the search and wiki confirm it is self-cast with no aiming required. Data-driven inference without recognizing the zero-range self-cast pattern could produce no shape or line. https://brawlstars.fandom.com/wiki/Angelo"
+  },
+  "LeaperUlti": {
+    "shape": "self-aoe",
+    "params": {},
+    "note": "Mico's super (behavior=FlyJump) launches him into the air and crashes down for AoE damage after 6 s; the data has no CastingRange and behavior=FlyJump which has no standard shape mapping \u2014 data-driven inference yields no result. In-game there is no aimed reticle; the landing is at the brawler's current position. LeaperUltiArea Radius=6000/480\u224812.5 tiles is the warning radius, explosion is 300/480\u22480.63 tiles. https://brawlstars.fandom.com/wiki/Mico"
+  },
+  "MechaDudeUlti": {
+    "shape": "self-aoe",
+    "params": {},
+    "note": "Meg's super (behavior=ChangeCharacter) is an instant self-transformation that summons her mech \u2014 there is no targeting reticle, no projectile, and no area effect; the closest schema shape is self-aoe to represent an untargeted self-activation. Source: https://brawlstars.fandom.com/wiki/Meg"
+  },
+  "MorningstarUlti": {
+    "shape": "wave",
+    "params": {
+      "range_tiles": 7.33,
+      "splash_tiles": 3.67,
+      "spread_deg": 0,
+      "count": 3,
+      "equip": "ulti"
+    },
+    "note": "Lumi's super fires 3 sequential expanding circular explosions in a straight line (pattern=11; radii 240/480\u22480.5, 555/480\u22481.16, and ~3.67 tiles per sources staggered 0.3 s apart); data-driven inference with 3 projectiles and no spread would misclassify this. Closest shape is wave (multi-projectile fan) but with spread_deg=0 it is a forward-only stacked burst. splash_tiles is the largest (3rd) explosion. https://brawlstars.fandom.com/wiki/Lumi"
+  },
+  "NinjaUlti": {
+    "shape": "self-aoe",
+    "params": {},
+    "note": "Leon's super activates invisibility for 5 seconds with no projectile, aiming, or placement reticle \u2014 behavior=Invisibility with no range/projectile fields; the data-driven classifier would produce nothing useful, and the correct representation is an immediate self-targeted activation with no reticle drawn. Source: https://brawlstars.fandom.com/wiki/Leon"
+  },
+  "PainterWeapon": {
+    "shape": "placement",
+    "params": {
+      "range_tiles": 6.33,
+      "splash_tiles": 1.04,
+      "equip": "weapon"
+    },
+    "note": "Berry's attack (PainterProjectile) has Indirect=true in projectiles_logic.csv \u2014 it is a lobbed ice cream cone that creates a melted puddle on landing (PainterAreaEffect Radius=500/480\u22481.04 tiles); data-driven inference with spread=0, bullets=1 and no visible AreaEffect in the skill row would produce line. https://brawlstars.fandom.com/wiki/Berry"
+  },
+  "RockUlti": {
+    "shape": "self-aoe",
+    "params": {},
+    "note": "Bolt's super is an instant self-buff (speed boost + 40% damage reduction) that leaves a lightning trail behind movement; it has StatusEffect behavior with no range or targeting \u2014 no aimed reticle, trail is purely cosmetic/movement-derived. https://brawlstars.fandom.com/wiki/Bolt"
+  },
+  "RockWeapon": {
+    "shape": "area-follow",
+    "params": {
+      "splash_tiles": 0.5
+    },
+    "note": "Bolt's attack is collision-based rolling damage (no projectile, no areaEffect in CSV) \u2014 StatusEffect behavior with no geometry fields; the reticle is a small brawler-centered contact zone, not a targeted skill. splash_tiles is approximate (hitbox-scale). https://brawlstars.fandom.com/wiki/Bolt"
+  },
+  "RuffsWeapon": {
+    "shape": "line",
+    "params": {
+      "range_tiles": 9.0,
+      "width_tiles": 1.0
+    },
+    "note": "Ruffs fires 2 parallel lasers simultaneously side-by-side (AttackPattern=7, bullets=2, no spread) \u2014 data-driven inference produces 'line' which is correct but width_tiles should be ~1 tile to represent the two-laser spread rather than a single-pixel line. Source: https://brawlstars.fandom.com/wiki/Ruffs"
+  },
+  "SilencerWeapon": {
+    "shape": "line",
+    "params": {
+      "range_tiles": 9.0,
+      "width_tiles": 0.21
+    },
+    "note": "Otis fires 3 blobs of paint sequentially in a straight line; the CSV spread=22 is slight projectile divergence (each blob can deviate ~11\u00b0 max), not a shotgun fan \u2014 the in-game reticle is a straight line indicator, not a cone. Source: https://brawlstars.fandom.com/wiki/Otis"
+  },
+  "SpeedyWeapon": {
+    "shape": "line",
+    "params": {
+      "range_tiles": 6.67,
+      "width_tiles": 0.5
+    },
+    "note": "Max fires 4 rapid sequential shots (pattern=6, MsBetween=100ms) in a narrow straight band with only slight offset \u2014 Spread=30 in CSV causes data-driven inference to yield 'cone' but the in-game reticle is a single narrow line (not a fan spread); the 4 shots stagger slightly but track a single aiming line. Source: https://brawlstars.fandom.com/wiki/Max"
+  },
+  "StalkerUlti": {
+    "shape": "self-aoe",
+    "params": {},
+    "note": "Alli's super is a pulsing-invisibility StatusEffect with no geometry (no range, no projectile, no areaEffect in CSV) \u2014 data-driven inference yields no shape; in-game there is no aimed reticle, it is an instant self-buff activation. https://brawlstars.fandom.com/wiki/Alli"
+  },
+  "StickyBombUlti": {
+    "shape": "cluster",
+    "params": {
+      "range_tiles": 8.33,
+      "splash_tiles": 0.83,
+      "pattern": "quincunx",
+      "spacing_tiles": 2.22
+    },
+    "note": "Squeak's Super lands at target location and spawns 6 smaller sticky blobs in a fixed hexagon pattern (60\u00b0 apart, each traveling 6.67 tiles) \u2014 the data-driven inference would produce 'placement' (single indirect lob) but in-game it's a 6-point cluster explosion; closest available pattern is quincunx/cluster though the actual arrangement is hexagonal. Source: https://brawlstars.fandom.com/wiki/Squeak"
+  },
+  "TntDudeWeapon": {
+    "shape": "cluster",
+    "params": {
+      "range_tiles": 7.33,
+      "splash_tiles": 1.67,
+      "pattern": "pair",
+      "spacing_tiles": 0.75
+    },
+    "note": "Dynamike lobs 2 dynamite sticks that land side-by-side perpendicular to the throw direction (not fanned forward); data spread=30\u00b0 describes the lateral offset angle between two parallel trajectories, making the effective reticle a dual side-by-side cluster, not a forward-spreading wave or cone. Source: https://brawlstars.fandom.com/wiki/Dynamike"
+  },
+  "VoodooUlti": {
+    "shape": "placement",
+    "params": {
+      "range_tiles": 5.0,
+      "splash_tiles": 0.35,
+      "equip": "ulti"
+    },
+    "note": "Juju's super (VoodooUltiProjectile) has Indirect=true \u2014 it is a lobbed doll-head projectile (Gravity=170) that lands and spawns the Gris-Gris pet; data-driven inference with bullets=1, spread=empty would produce line. range=15/3=5.0 tiles. https://brawlstars.fandom.com/wiki/Juju"
+  },
+  "VoodooWeaponEarth": {
+    "shape": "placement",
+    "params": {
+      "range_tiles": 6.33,
+      "splash_tiles": 0.5,
+      "equip": "weapon"
+    },
+    "note": "Juju's attack (VoodooProjectileEarth) has Indirect=true in projectiles_logic.csv \u2014 it is a lobbed voodoo toy that explodes in a ~2-tile radius (splash ~0.5 tiles from the projectile on-hit area per Brawlify); data-driven inference with spread=0, bullets=1 and no AreaEffect in the skill row would produce line. https://brawlstars.fandom.com/wiki/Juju"
+  },
+  "WallyWeapon": {
+    "shape": "placement",
+    "params": {
+      "range_tiles": 5.0,
+      "splash_tiles": 0.1,
+      "equip": "weapon"
+    },
+    "note": "Sprout lobs a single bouncing seed bomb over obstacles as an indirect projectile (Indirect=true in CSV); Spread=30 is the lob arc input tolerance, not a multi-pellet spread \u2014 reticle is a placement arc, not a cone. Source: https://brawlstars.fandom.com/wiki/Sprout"
+  },
+  "WhirlwindUlti": {
+    "shape": "area-follow",
+    "params": {
+      "splash_tiles": 2.33
+    },
+    "note": "Carl's Super 'Tailspin' (behavior=Ww) spins him in place doubling movement speed and dealing melee damage to all nearby enemies in a short radius around him for 3 seconds \u2014 the 'Ww' behavior type has no data-driven shape mapping, and the range=7 raw value (2.33 tiles) is the melee strike radius, not a cast range. Source: https://brawlstars.fandom.com/wiki/Carl"
+  }
+}
