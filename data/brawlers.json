@@ -1,0 +1,6057 @@
+{
+  "_meta": {
+    "generatedFrom": "data/render_all_reticles.py + data/reticle_overrides.json",
+    "csvVersion": "67.264",
+    "brawlerCount": 85,
+    "skippedNewBrawlers": [
+      "Starr-Nova",
+      "Damian",
+      "Najia",
+      "Sirius",
+      "Glowy",
+      "Ziggy",
+      "Mina",
+      "Jae-Yong",
+      "Buzz-Lightyear",
+      "Kenji",
+      "Moe",
+      "Melodie",
+      "Larry-&-Lawrie",
+      "Hank",
+      "R-T",
+      "Lola",
+      "Mr-P",
+      "8-Bit",
+      "El-Primo",
+      "Rico"
+    ],
+    "units": "All geometry values are in TILES (1 tile = standard Brawl Stars grid square). rangeTiles, splashTiles, widthTiles, spacingTiles are tile distances. spreadDeg is degrees. See data/SCHEMA_FLOW.md for CSV unit conventions.",
+    "passesWalls": "true \u2192 reticle projects over walls (placements, throwers, indirect projectiles); false \u2192 solid reticle that should be clipped against wall tiles when rendered on a map."
+  },
+  "brawlers": [
+    {
+      "id": 16000106,
+      "hash": "Bolt",
+      "name": "Bolt",
+      "internalName": "Rock",
+      "class": "Unknown",
+      "rarity": "Epic",
+      "hasHypercharge": false,
+      "assets": {
+        "portrait": "/assets/brawlers/Bolt/portrait.png",
+        "render": "/assets/brawlers/Bolt/render.png",
+        "emoji": "/assets/brawlers/Bolt/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "RockWeapon",
+          "shape": "area-follow",
+          "params": {
+            "splashTiles": 0.5
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Super",
+          "skillName": "RockUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Gadget: Jump",
+          "skillName": "RockGadgetJump",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 4.0
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000100,
+      "hash": "Gigi",
+      "name": "Gigi",
+      "internalName": "Daredevil",
+      "class": "Unknown",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Gigi/portrait.png",
+        "render": "/assets/brawlers/Gigi/render.png",
+        "emoji": "/assets/brawlers/Gigi/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "DaredevilWeapon",
+          "shape": "area-follow",
+          "params": {
+            "splashTiles": 1.4583333333333333
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "DaredevilUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.33,
+            "splashTiles": 1.46,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "DaredevilWeapon",
+          "shape": "area-follow",
+          "params": {
+            "splashTiles": 1.8229166666666665
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "DaredevilUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 9.1625,
+            "splashTiles": 1.825,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        }
+      ]
+    },
+    {
+      "id": 16000099,
+      "hash": "Pierce",
+      "name": "Pierce",
+      "internalName": "Bulletstorm",
+      "class": "Unknown",
+      "rarity": "Legendary",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Pierce/portrait.png",
+        "render": "/assets/brawlers/Pierce/render.png",
+        "emoji": "/assets/brawlers/Pierce/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "BulletstormWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.0,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "BulletstormUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 8.33,
+            "splashTiles": 0.54,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "BulletstormWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 12.5,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "BulletstormUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 10.4125,
+            "splashTiles": 0.675,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        }
+      ]
+    },
+    {
+      "id": 16000096,
+      "hash": "Trunk",
+      "name": "Trunk",
+      "internalName": "Domain",
+      "class": "Unknown",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Trunk/portrait.png",
+        "render": "/assets/brawlers/Trunk/render.png",
+        "emoji": "/assets/brawlers/Trunk/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "DomainWeapon",
+          "shape": "area-follow",
+          "params": {
+            "splashTiles": 2.0833333333333335
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "DomainUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 7.0
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "DomainWeapon",
+          "shape": "area-follow",
+          "params": {
+            "splashTiles": 2.604166666666667
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super",
+          "skillName": "DomainOverchargedUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 7.0
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000095,
+      "hash": "Alli",
+      "name": "Alli",
+      "internalName": "Stalker",
+      "class": "Unknown",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Alli/portrait.png",
+        "render": "/assets/brawlers/Alli/render.png",
+        "emoji": "/assets/brawlers/Alli/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "StalkerWeaponDash",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 0.6666666666666666
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "StalkerUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "StalkerWeaponDash",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 0.8333333333333333
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "StalkerUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        }
+      ]
+    },
+    {
+      "id": 16000094,
+      "hash": "Kaze",
+      "name": "Kaze",
+      "internalName": "Geisha",
+      "class": "Unknown",
+      "rarity": "Ultra Legendary",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Kaze/portrait.png",
+        "render": "/assets/brawlers/Kaze/render.png",
+        "emoji": "/assets/brawlers/Kaze/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "GeishaWeapon",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 2.6666666666666665
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "GeishaUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.33,
+            "splashTiles": 3.12,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "GeishaWeapon",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 3.333333333333333
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "GeishaUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 9.1625,
+            "splashTiles": 3.9000000000000004,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        },
+        {
+          "label": "Alt-form Attack",
+          "skillName": "GeishaTransformedWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 6.666666666666667,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Alt-form Super",
+          "skillName": "GeishaTransformedUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 9.0
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000092,
+      "hash": "Finx",
+      "name": "Finx",
+      "internalName": "Chronomancer",
+      "class": "Unknown",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Finx/portrait.png",
+        "render": "/assets/brawlers/Finx/render.png",
+        "emoji": "/assets/brawlers/Finx/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "ChronomancerWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 8.33,
+            "widthTiles": 0.83
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Super",
+          "skillName": "ChronomancerUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.33,
+            "splashTiles": 0.63,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "ChronomancerWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.4125,
+            "widthTiles": 0.83
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "ChronomancerUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 9.1625,
+            "splashTiles": 0.7875,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        }
+      ]
+    },
+    {
+      "id": 16000091,
+      "hash": "Lumi",
+      "name": "Lumi",
+      "internalName": "Morningstar",
+      "class": "Damage Dealer",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Lumi/portrait.png",
+        "render": "/assets/brawlers/Lumi/render.png",
+        "emoji": "/assets/brawlers/Lumi/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "MorningstarWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 8.0,
+            "widthTiles": 0.7083333333333334
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "MorningstarUlti",
+          "shape": "wave",
+          "params": {
+            "rangeTiles": 7.33,
+            "splashTiles": 3.67,
+            "spreadDeg": 0,
+            "count": 3,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "MorningstarWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.0,
+            "widthTiles": 0.7083333333333334
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "MorningstarUlti",
+          "shape": "wave",
+          "params": {
+            "rangeTiles": 9.1625,
+            "splashTiles": 4.5875,
+            "spreadDeg": 0,
+            "count": 3,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        }
+      ]
+    },
+    {
+      "id": 16000090,
+      "hash": "Ollie",
+      "name": "Ollie",
+      "internalName": "Skater",
+      "class": "Unknown",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Ollie/portrait.png",
+        "render": "/assets/brawlers/Ollie/render.png",
+        "emoji": "/assets/brawlers/Ollie/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "SkaterWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 6.333333333333333,
+            "spreadDeg": 27
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "SkaterUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 5.666666666666667
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "SkaterWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 7.916666666666666,
+            "spreadDeg": 27
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super",
+          "skillName": "SkaterOverchargedUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 6.666666666666667
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000089,
+      "hash": "Meeple",
+      "name": "Meeple",
+      "internalName": "Meeple",
+      "class": "Unknown",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Meeple/portrait.png",
+        "render": "/assets/brawlers/Meeple/render.png",
+        "emoji": "/assets/brawlers/Meeple/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "MeepleWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 7.666666666666667,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "MeepleUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 5.0,
+            "splashTiles": 1.875,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "MeepleWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.583333333333334,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "MeepleUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 6.25,
+            "splashTiles": 2.34375,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000087,
+      "hash": "Juju",
+      "name": "Juju",
+      "internalName": "Voodoo",
+      "class": "Artillery",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Juju/portrait.png",
+        "render": "/assets/brawlers/Juju/render.png",
+        "emoji": "/assets/brawlers/Juju/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "VoodooWeaponEarth",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 6.33,
+            "splashTiles": 0.5,
+            "equip": "weapon"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Super",
+          "skillName": "VoodooUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 5.0,
+            "splashTiles": 0.35,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "VoodooWeaponEarth",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.9125,
+            "splashTiles": 0.625,
+            "equip": "weapon"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "VoodooUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 6.25,
+            "splashTiles": 0.4375,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        }
+      ]
+    },
+    {
+      "id": 16000086,
+      "hash": "Shade",
+      "name": "Shade",
+      "internalName": "Ghost",
+      "class": "Assassin",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Shade/portrait.png",
+        "render": "/assets/brawlers/Shade/render.png",
+        "emoji": "/assets/brawlers/Shade/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "GhostWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 3.67,
+            "spreadDeg": 300
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Super",
+          "skillName": "GhostUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 3.33
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "GhostWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 4.5875,
+            "spreadDeg": 300
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "GhostUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 4.1625
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        }
+      ]
+    },
+    {
+      "id": 16000083,
+      "hash": "Clancy",
+      "name": "Clancy",
+      "internalName": "Crab",
+      "class": "Damage Dealer",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Clancy/portrait.png",
+        "render": "/assets/brawlers/Clancy/render.png",
+        "emoji": "/assets/brawlers/Clancy/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "CrabWeapon1",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 7.666666666666667,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "CrabUlti1",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 5.666666666666667,
+            "spreadDeg": 220
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "CrabWeapon1",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.583333333333334,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "CrabUlti1",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 7.083333333333334,
+            "spreadDeg": 220
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000082,
+      "hash": "Berry",
+      "name": "Berry",
+      "internalName": "Painter",
+      "class": "Support",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Berry/portrait.png",
+        "render": "/assets/brawlers/Berry/render.png",
+        "emoji": "/assets/brawlers/Berry/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "PainterWeapon",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 6.33,
+            "splashTiles": 1.04,
+            "equip": "weapon"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Super",
+          "skillName": "PainterUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 8.333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "PainterWeapon",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.9125,
+            "splashTiles": 1.3,
+            "equip": "weapon"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "PainterUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 10.416666666666668
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000081,
+      "hash": "Lily",
+      "name": "Lily",
+      "internalName": "Ambusher",
+      "class": "Assassin",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Lily/portrait.png",
+        "render": "/assets/brawlers/Lily/render.png",
+        "emoji": "/assets/brawlers/Lily/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "AmbusherWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 2.0,
+            "widthTiles": 1.25
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "AmbusherUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.0,
+            "widthTiles": 0.8333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "AmbusherWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 2.5,
+            "widthTiles": 1.25
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "AmbusherUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 11.25,
+            "widthTiles": 0.8333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000080,
+      "hash": "Draco",
+      "name": "Draco",
+      "internalName": "DragonRider",
+      "class": "Tank",
+      "rarity": "Legendary",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Draco/portrait.png",
+        "render": "/assets/brawlers/Draco/render.png",
+        "emoji": "/assets/brawlers/Draco/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "DragonRiderWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 4.0,
+            "widthTiles": 0.8333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "DragonRiderUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "DragonRiderWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 5.0,
+            "widthTiles": 0.8333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "DragonRiderUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        }
+      ]
+    },
+    {
+      "id": 16000079,
+      "hash": "Angelo",
+      "name": "Angelo",
+      "internalName": "InsectMan",
+      "class": "Marksman",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Angelo/portrait.png",
+        "render": "/assets/brawlers/Angelo/render.png",
+        "emoji": "/assets/brawlers/Angelo/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "InsectManWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.0,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "InsectManUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "InsectManWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 12.5,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "InsectManUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        }
+      ]
+    },
+    {
+      "id": 16000076,
+      "hash": "Kit",
+      "name": "Kit",
+      "internalName": "Attacher",
+      "class": "Support",
+      "rarity": "Legendary",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Kit/portrait.png",
+        "render": "/assets/brawlers/Kit/render.png",
+        "emoji": "/assets/brawlers/Kit/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "AttacherWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 3.6666666666666665,
+            "spreadDeg": 150
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "AttacherUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 6.666666666666667
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "AttacherWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 4.583333333333333,
+            "spreadDeg": 150
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "AttacherUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 8.333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000075,
+      "hash": "Mico",
+      "name": "Mico",
+      "internalName": "Leaper",
+      "class": "Assassin",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Mico/portrait.png",
+        "render": "/assets/brawlers/Mico/render.png",
+        "emoji": "/assets/brawlers/Mico/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "LeaperWeapon",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 4.0
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "LeaperUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "LeaperWeapon",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 5.0
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "LeaperUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        }
+      ]
+    },
+    {
+      "id": 16000074,
+      "hash": "Charlie",
+      "name": "Charlie",
+      "internalName": "Cocooner",
+      "class": "Controller",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Charlie/portrait.png",
+        "render": "/assets/brawlers/Charlie/render.png",
+        "emoji": "/assets/brawlers/Charlie/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "CocoonerWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.0,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "CocoonerUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.0,
+            "widthTiles": 0.8333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "CocoonerWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 11.25,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "CocoonerUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 11.25,
+            "widthTiles": 0.8333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000073,
+      "hash": "Chuck",
+      "name": "Chuck",
+      "internalName": "Conductor",
+      "class": "Damage Dealer",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Chuck/portrait.png",
+        "render": "/assets/brawlers/Chuck/render.png",
+        "emoji": "/assets/brawlers/Chuck/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "ConductorWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 6.67,
+            "spreadDeg": 30
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Super",
+          "skillName": "ConductorUltiSpawn",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 10.0,
+            "splashTiles": 0.42,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "ConductorWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 8.3375,
+            "spreadDeg": 30
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "ConductorUltiSpawn",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 12.5,
+            "splashTiles": 0.525,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        }
+      ]
+    },
+    {
+      "id": 16000072,
+      "hash": "Pearl",
+      "name": "Pearl",
+      "internalName": "Cooker",
+      "class": "Damage Dealer",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Pearl/portrait.png",
+        "render": "/assets/brawlers/Pearl/render.png",
+        "emoji": "/assets/brawlers/Pearl/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "CookerWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 9.0,
+            "spreadDeg": 40
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "CookerUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "CookerWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 11.25,
+            "spreadDeg": 40
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "CookerUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000071,
+      "hash": "Doug",
+      "name": "Doug",
+      "internalName": "Reviver",
+      "class": "Support",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Doug/portrait.png",
+        "render": "/assets/brawlers/Doug/render.png",
+        "emoji": "/assets/brawlers/Doug/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "ReviverWeapon",
+          "shape": "area-follow",
+          "params": {
+            "splashTiles": 2.0833333333333335
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "ReviverUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.333333333333334,
+            "widthTiles": 0.8333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "ReviverWeapon",
+          "shape": "area-follow",
+          "params": {
+            "splashTiles": 2.604166666666667
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "ReviverUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 11.666666666666668,
+            "widthTiles": 0.8333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000070,
+      "hash": "Cordelius",
+      "name": "Cordelius",
+      "internalName": "Duelist",
+      "class": "Assassin",
+      "rarity": "Legendary",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Cordelius/portrait.png",
+        "render": "/assets/brawlers/Cordelius/render.png",
+        "emoji": "/assets/brawlers/Cordelius/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "DuelistWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 5.333333333333333,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "DuelistUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.0,
+            "widthTiles": 0.8333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "DuelistWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 6.666666666666666,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "DuelistUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 11.25,
+            "widthTiles": 0.8333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000068,
+      "hash": "Maisie",
+      "name": "Maisie",
+      "internalName": "Maisie",
+      "class": "Marksman",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Maisie/portrait.png",
+        "render": "/assets/brawlers/Maisie/render.png",
+        "emoji": "/assets/brawlers/Maisie/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "MaisieWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 8.666666666666666,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "MaisieUlti",
+          "shape": "area-follow",
+          "params": {
+            "splashTiles": 3.125
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "MaisieWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.833333333333332,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "MaisieUlti",
+          "shape": "area-follow",
+          "params": {
+            "splashTiles": 3.90625
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000067,
+      "hash": "Willow",
+      "name": "Willow",
+      "internalName": "Puppeteer",
+      "class": "Controller",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Willow/portrait.png",
+        "render": "/assets/brawlers/Willow/render.png",
+        "emoji": "/assets/brawlers/Willow/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "PuppeteerWeapon",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "splashTiles": 1.25,
+            "equip": "weapon"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "PuppeteerUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 8.333333333333334,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "PuppeteerWeapon",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 9.166666666666666,
+            "splashTiles": 1.5625,
+            "equip": "weapon"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "PuppeteerUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.416666666666668,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000065,
+      "hash": "Mandy",
+      "name": "Mandy",
+      "internalName": "Beamer",
+      "class": "Marksman",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Mandy/portrait.png",
+        "render": "/assets/brawlers/Mandy/render.png",
+        "emoji": "/assets/brawlers/Mandy/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "BeamerWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.0,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "BeamerUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 40.0,
+            "widthTiles": 1.0416666666666667
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "BeamerWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 11.25,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super",
+          "skillName": "BeamerOverchargedUlti",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 40.0,
+            "spreadDeg": 170
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000064,
+      "hash": "Gray",
+      "name": "Gray",
+      "internalName": "DoorMan",
+      "class": "Support",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Gray/portrait.png",
+        "render": "/assets/brawlers/Gray/render.png",
+        "emoji": "/assets/brawlers/Gray/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "DoorManWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.0,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "DoorManUlti",
+          "shape": null,
+          "params": {},
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "unrecognized": true,
+          "reason": "unrecognized (range=20, spread=0, proj=, behavior=Portals)"
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "DoorManWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 11.25,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "DoorManUlti",
+          "shape": null,
+          "params": {},
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "unrecognized": true,
+          "reason": "unrecognized (range=20, spread=0, proj=, behavior=Portals)"
+        }
+      ]
+    },
+    {
+      "id": 16000063,
+      "hash": "Chester",
+      "name": "Chester",
+      "internalName": "Jester",
+      "class": "Damage Dealer",
+      "rarity": "Legendary",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Chester/portrait.png",
+        "render": "/assets/brawlers/Chester/render.png",
+        "emoji": "/assets/brawlers/Chester/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "JesterWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 8.333333333333334,
+            "spreadDeg": 30
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "JesterUltiExploding",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 6.333333333333333,
+            "splashTiles": 0.0,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "JesterWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 10.416666666666668,
+            "spreadDeg": 30
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super",
+          "skillName": "JesterOverchargedUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 6.333333333333333,
+            "splashTiles": 1.6666666666666667,
+            "equip": "overchargedUlti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000062,
+      "hash": "Buster",
+      "name": "Buster",
+      "internalName": "ShieldTank",
+      "class": "Tank",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Buster/portrait.png",
+        "render": "/assets/brawlers/Buster/render.png",
+        "emoji": "/assets/brawlers/Buster/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "ShieldTankWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 5.333333333333333,
+            "spreadDeg": 90
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "ShieldTankUlti",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 3.0,
+            "spreadDeg": 120
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "ShieldTankWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 6.666666666666666,
+            "spreadDeg": 90
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "ShieldTankUlti",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 3.75,
+            "spreadDeg": 120
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000061,
+      "hash": "Gus",
+      "name": "Gus",
+      "internalName": "SoulCollector",
+      "class": "Support",
+      "rarity": "Super Rare",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Gus/portrait.png",
+        "render": "/assets/brawlers/Gus/render.png",
+        "emoji": "/assets/brawlers/Gus/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "SoulCollectorWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.333333333333334,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "SoulCollectorUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.333333333333334,
+            "widthTiles": 0.8333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "SoulCollectorWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 11.666666666666668,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "SoulCollectorUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 11.666666666666668,
+            "widthTiles": 0.8333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000060,
+      "hash": "Sam",
+      "name": "Sam",
+      "internalName": "WeaponThrower",
+      "class": "Assassin",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Sam/portrait.png",
+        "render": "/assets/brawlers/Sam/render.png",
+        "emoji": "/assets/brawlers/Sam/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "WeaponThrowerWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 3.0,
+            "spreadDeg": 100
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "WeaponThrowerUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 8.666666666666666,
+            "widthTiles": 1.0416666666666667
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "WeaponThrowerWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 3.75,
+            "spreadDeg": 100
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "WeaponThrowerUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.833333333333332,
+            "widthTiles": 1.0416666666666667
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000059,
+      "hash": "Otis",
+      "name": "Otis",
+      "internalName": "Silencer",
+      "class": "Controller",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Otis/portrait.png",
+        "render": "/assets/brawlers/Otis/render.png",
+        "emoji": "/assets/brawlers/Otis/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "SilencerWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.0,
+            "widthTiles": 0.21
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Super",
+          "skillName": "SilencerUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.0,
+            "widthTiles": 0.8333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "SilencerWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 11.25,
+            "widthTiles": 0.21
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "SilencerUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 11.25,
+            "widthTiles": 0.8333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000058,
+      "hash": "Bonnie",
+      "name": "Bonnie",
+      "internalName": "CannonGirl",
+      "class": "Marksman",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Bonnie/portrait.png",
+        "render": "/assets/brawlers/Bonnie/render.png",
+        "emoji": "/assets/brawlers/Bonnie/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "CannonGirlWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.0,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "CannonGirlUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 7.333333333333333
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "CannonGirlWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 11.25,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "CannonGirlUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 9.166666666666666
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000057,
+      "hash": "Janet",
+      "name": "Janet",
+      "internalName": "JetpackGirl",
+      "class": "Marksman",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Janet/portrait.png",
+        "render": "/assets/brawlers/Janet/render.png",
+        "emoji": "/assets/brawlers/Janet/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "JetpackGirlWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 4.0,
+            "spreadDeg": 160
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "JetpackGirlUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 2.3333333333333335,
+            "splashTiles": 1.25,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "JetpackGirlWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 5.0,
+            "spreadDeg": 160
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "JetpackGirlUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 2.916666666666667,
+            "splashTiles": 1.5625,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000056,
+      "hash": "Eve",
+      "name": "Eve",
+      "internalName": "Flea",
+      "class": "Damage Dealer",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Eve/portrait.png",
+        "render": "/assets/brawlers/Eve/render.png",
+        "emoji": "/assets/brawlers/Eve/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "FleaWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.333333333333334,
+            "widthTiles": 0.8
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "FleaUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 5.0,
+            "splashTiles": 0.0,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "FleaWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 11.666666666666668,
+            "widthTiles": 0.8
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "FleaUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 6.25,
+            "splashTiles": 0.0,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000054,
+      "hash": "Fang",
+      "name": "Fang",
+      "internalName": "KickerDude",
+      "class": "Assassin",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Fang/portrait.png",
+        "render": "/assets/brawlers/Fang/render.png",
+        "emoji": "/assets/brawlers/Fang/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "KickerDudeWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 2.6666666666666665,
+            "widthTiles": 1.25
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "KickerDudeUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 10.0
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "KickerDudeWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 3.333333333333333,
+            "widthTiles": 1.25
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "KickerDudeUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 12.5
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000052,
+      "hash": "Meg",
+      "name": "Meg",
+      "internalName": "MechaDude",
+      "class": "Tank",
+      "rarity": "Legendary",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Meg/portrait.png",
+        "render": "/assets/brawlers/Meg/render.png",
+        "emoji": "/assets/brawlers/Meg/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "MechaDudeWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.0,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "MechaDudeUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "MechaDudeWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 11.25,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "MechaDudeUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        }
+      ]
+    },
+    {
+      "id": 16000051,
+      "hash": "Ash",
+      "name": "Ash",
+      "internalName": "Knight",
+      "class": "Tank",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Ash/portrait.png",
+        "render": "/assets/brawlers/Ash/render.png",
+        "emoji": "/assets/brawlers/Ash/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "KnightWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 4.666666666666667,
+            "widthTiles": 1.0416666666666667
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "KnightUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 5.0,
+            "splashTiles": 1.25,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "KnightWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 5.833333333333334,
+            "widthTiles": 1.0416666666666667
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "KnightUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 6.25,
+            "splashTiles": 1.5625,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000050,
+      "hash": "Griff",
+      "name": "Griff",
+      "internalName": "AssaultShotgun",
+      "class": "Controller",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Griff/portrait.png",
+        "render": "/assets/brawlers/Griff/render.png",
+        "emoji": "/assets/brawlers/Griff/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "AssaultShotgunWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 8.333333333333334,
+            "spreadDeg": 30
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "AssaultShotgunUlti",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 9.0,
+            "spreadDeg": 150
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack",
+          "skillName": "AssaultShotgunOverchargedWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 8.333333333333334,
+            "spreadDeg": 30
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "AssaultShotgunUlti",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 11.25,
+            "spreadDeg": 150
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: Bomb",
+          "skillName": "AssaultShotgunBonusSkillBomb",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "splashTiles": 0.0,
+            "equip": "bonusSkill"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: Projectiles",
+          "skillName": "AssaultShotgunBonusSkillCoinShower",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "splashTiles": 0.0,
+            "equip": "bonusSkill"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000049,
+      "hash": "Buzz",
+      "name": "Buzz",
+      "internalName": "RopeDude",
+      "class": "Assassin",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Buzz/portrait.png",
+        "render": "/assets/brawlers/Buzz/render.png",
+        "emoji": "/assets/brawlers/Buzz/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "RopeDudeWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 2.6666666666666665,
+            "spreadDeg": 165
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "RopeDudeUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.0,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "RopeDudeWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 3.333333333333333,
+            "spreadDeg": 165
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "RopeDudeUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 12.5,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000048,
+      "hash": "Grom",
+      "name": "Grom",
+      "internalName": "CrossBomber",
+      "class": "Artillery",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Grom/portrait.png",
+        "render": "/assets/brawlers/Grom/render.png",
+        "emoji": "/assets/brawlers/Grom/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "CrossBomberWeapon",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.666666666666667,
+            "splashTiles": 6.25,
+            "equip": "weapon"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "CrossBomberUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 8.333333333333334,
+            "splashTiles": 6.25,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "CrossBomberWeapon",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 9.583333333333334,
+            "splashTiles": 7.8125,
+            "equip": "weapon"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "CrossBomberUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 10.416666666666668,
+            "splashTiles": 7.8125,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000047,
+      "hash": "Squeak",
+      "name": "Squeak",
+      "internalName": "StickyBomb",
+      "class": "Controller",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Squeak/portrait.png",
+        "render": "/assets/brawlers/Squeak/render.png",
+        "emoji": "/assets/brawlers/Squeak/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "StickyBombWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 7.666666666666667,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "StickyBombUlti",
+          "shape": "cluster",
+          "params": {
+            "rangeTiles": 8.33,
+            "splashTiles": 0.83,
+            "pattern": "quincunx",
+            "spacingTiles": 2.22
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "StickyBombWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.583333333333334,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "StickyBombUlti",
+          "shape": "cluster",
+          "params": {
+            "rangeTiles": 10.4125,
+            "splashTiles": 1.0374999999999999,
+            "pattern": "quincunx",
+            "spacingTiles": 2.22
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        }
+      ]
+    },
+    {
+      "id": 16000046,
+      "hash": "Belle",
+      "name": "Belle",
+      "internalName": "ElectroSniper",
+      "class": "Marksman",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Belle/portrait.png",
+        "render": "/assets/brawlers/Belle/render.png",
+        "emoji": "/assets/brawlers/Belle/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "ElectroSniperWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.0,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "ElectroSniperUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.666666666666666,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "ElectroSniperWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 12.5,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "ElectroSniperUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 13.333333333333332,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000045,
+      "hash": "Stu",
+      "name": "Stu",
+      "internalName": "Roller",
+      "class": "Assassin",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Stu/portrait.png",
+        "render": "/assets/brawlers/Stu/render.png",
+        "emoji": "/assets/brawlers/Stu/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "RollerWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 7.666666666666667,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "RollerUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 2.3333333333333335
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "RollerWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.583333333333334,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "RollerUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 2.916666666666667
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000044,
+      "hash": "Ruffs",
+      "name": "Ruffs",
+      "internalName": "Ruffs",
+      "class": "Support",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Ruffs/portrait.png",
+        "render": "/assets/brawlers/Ruffs/render.png",
+        "emoji": "/assets/brawlers/Ruffs/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "RuffsWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.0,
+            "widthTiles": 1.0
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Super",
+          "skillName": "RuffsUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.666666666666667,
+            "splashTiles": 1.4583333333333333,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "RuffsWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 11.25,
+            "widthTiles": 1.0
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "RuffsUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 9.583333333333334,
+            "splashTiles": 1.8229166666666665,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000043,
+      "hash": "Edgar",
+      "name": "Edgar",
+      "internalName": "Enrager",
+      "class": "Assassin",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Edgar/portrait.png",
+        "render": "/assets/brawlers/Edgar/render.png",
+        "emoji": "/assets/brawlers/Edgar/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "EnragerWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 2.0,
+            "widthTiles": 1.25
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "EnragerUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 6.666666666666667
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack",
+          "skillName": "EnragerOverchargedWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 2.0,
+            "widthTiles": 0.8
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "EnragerUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 8.333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: Gadget LetsFly",
+          "skillName": "EnragerPull",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 6.666666666666667,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000042,
+      "hash": "Byron",
+      "name": "Byron",
+      "internalName": "SnakeOil",
+      "class": "Support",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Byron/portrait.png",
+        "render": "/assets/brawlers/Byron/render.png",
+        "emoji": "/assets/brawlers/Byron/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "SnakeOilWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.0,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "SnakeOilUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "splashTiles": 1.6666666666666667,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "SnakeOilWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 12.5,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "SnakeOilUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 9.166666666666666,
+            "splashTiles": 2.0833333333333335,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000041,
+      "hash": "Lou",
+      "name": "Lou",
+      "internalName": "IceDude",
+      "class": "Controller",
+      "rarity": "Mythic",
+      "hasHypercharge": false,
+      "assets": {
+        "portrait": "/assets/brawlers/Lou/portrait.png",
+        "render": "/assets/brawlers/Lou/render.png",
+        "emoji": "/assets/brawlers/Lou/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "IceDudeWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.333333333333334,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "IceDudeUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.666666666666667,
+            "splashTiles": 2.2916666666666665,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000040,
+      "hash": "Amber",
+      "name": "Amber",
+      "internalName": "FireDude",
+      "class": "Controller",
+      "rarity": "Legendary",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Amber/portrait.png",
+        "render": "/assets/brawlers/Amber/render.png",
+        "emoji": "/assets/brawlers/Amber/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "FireDudeWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 8.33,
+            "widthTiles": 0.5
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Super",
+          "skillName": "FireDudeUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "splashTiles": 0.0,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "FireDudeWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.4125,
+            "widthTiles": 0.5
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "FireDudeUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 9.166666666666666,
+            "splashTiles": 0.0,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000039,
+      "hash": "Colette",
+      "name": "Colette",
+      "internalName": "Percenter",
+      "class": "Damage Dealer",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Colette/portrait.png",
+        "render": "/assets/brawlers/Colette/render.png",
+        "emoji": "/assets/brawlers/Colette/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "PercenterWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 8.666666666666666,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "PercenterUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 11.0
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack",
+          "skillName": "PercenterOverchargedWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 8.666666666666666,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "PercenterUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 13.75
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: Lifesteal",
+          "skillName": "PercenterLifestealAttack",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 8.333333333333334,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: CharmAttack",
+          "skillName": "PercenterCharmAttack",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 8.333333333333334,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000038,
+      "hash": "Surge",
+      "name": "Surge",
+      "internalName": "PowerLeveler",
+      "class": "Damage Dealer",
+      "rarity": "Legendary",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Surge/portrait.png",
+        "render": "/assets/brawlers/Surge/render.png",
+        "emoji": "/assets/brawlers/Surge/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "PowerLevelerWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 6.666666666666667,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "PowerLevelerUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 3.3333333333333335
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "PowerLevelerWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 8.333333333333334,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "PowerLevelerUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 4.166666666666667
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000037,
+      "hash": "Sprout",
+      "name": "Sprout",
+      "internalName": "Wally",
+      "class": "Artillery",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Sprout/portrait.png",
+        "render": "/assets/brawlers/Sprout/render.png",
+        "emoji": "/assets/brawlers/Sprout/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "WallyWeapon",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 5.0,
+            "splashTiles": 0.1,
+            "equip": "weapon"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Super",
+          "skillName": "WallyUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.666666666666667,
+            "splashTiles": 0.8333333333333334,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "WallyWeapon",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 6.25,
+            "splashTiles": 0.125,
+            "equip": "weapon"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "WallyUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 9.583333333333334,
+            "splashTiles": 1.0416666666666667,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000036,
+      "hash": "Nani",
+      "name": "Nani",
+      "internalName": "Controller",
+      "class": "Marksman",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Nani/portrait.png",
+        "render": "/assets/brawlers/Nani/render.png",
+        "emoji": "/assets/brawlers/Nani/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "ControllerWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 8.666666666666666,
+            "spreadDeg": 50
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "ControllerUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 3.3333333333333335,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "ControllerWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 10.833333333333332,
+            "spreadDeg": 50
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "ControllerUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 4.166666666666667,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000035,
+      "hash": "Gale",
+      "name": "Gale",
+      "internalName": "Blower",
+      "class": "Controller",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Gale/portrait.png",
+        "render": "/assets/brawlers/Gale/render.png",
+        "emoji": "/assets/brawlers/Gale/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "BlowerWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 8.33,
+            "widthTiles": 4.0
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Super",
+          "skillName": "BlowerUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.0,
+            "widthTiles": 4.0
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "BlowerWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.4125,
+            "widthTiles": 4.0
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "BlowerUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 12.5,
+            "widthTiles": 4.0
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        }
+      ]
+    },
+    {
+      "id": 16000034,
+      "hash": "Jacky",
+      "name": "Jacky",
+      "internalName": "Driller",
+      "class": "Tank",
+      "rarity": "Super Rare",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Jacky/portrait.png",
+        "render": "/assets/brawlers/Jacky/render.png",
+        "emoji": "/assets/brawlers/Jacky/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "DrillerWeapon",
+          "shape": "area-follow",
+          "params": {
+            "splashTiles": 2.0833333333333335
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "DrillerUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "DrillerWeapon",
+          "shape": "area-follow",
+          "params": {
+            "splashTiles": 2.604166666666667
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "DrillerUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000032,
+      "hash": "Max",
+      "name": "Max",
+      "internalName": "Speedy",
+      "class": "Support",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Max/portrait.png",
+        "render": "/assets/brawlers/Max/render.png",
+        "emoji": "/assets/brawlers/Max/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "SpeedyWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 6.67,
+            "widthTiles": 0.5
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Super",
+          "skillName": "SpeedyUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "SpeedyWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 8.3375,
+            "widthTiles": 0.5
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "SpeedyUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000030,
+      "hash": "Emz",
+      "name": "Emz",
+      "internalName": "Mummy",
+      "class": "Controller",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Emz/portrait.png",
+        "render": "/assets/brawlers/Emz/render.png",
+        "emoji": "/assets/brawlers/Emz/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "MummyWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 6.666666666666667,
+            "spreadDeg": 80
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "MummyUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack",
+          "skillName": "MummyOverchargedWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 6.666666666666667,
+            "spreadDeg": 100
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "MummyUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: Push",
+          "skillName": "MummyGadgetSkillFriendzoner",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 4.0,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: Acid",
+          "skillName": "MummyGadgetSkillAcidSpray",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 6.666666666666667,
+            "spreadDeg": 80
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000029,
+      "hash": "Bea",
+      "name": "Bea",
+      "internalName": "BeeSniper",
+      "class": "Marksman",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Bea/portrait.png",
+        "render": "/assets/brawlers/Bea/render.png",
+        "emoji": "/assets/brawlers/Bea/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "BeeSniperWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.0,
+            "widthTiles": 0.8
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "BeeSniperUlti",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 9.0,
+            "spreadDeg": 30
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "BeeSniperWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 12.5,
+            "widthTiles": 0.8
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "BeeSniperUlti",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 11.25,
+            "spreadDeg": 30
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000028,
+      "hash": "Sandy",
+      "name": "Sandy",
+      "internalName": "Sandstorm",
+      "class": "Controller",
+      "rarity": "Legendary",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Sandy/portrait.png",
+        "render": "/assets/brawlers/Sandy/render.png",
+        "emoji": "/assets/brawlers/Sandy/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "SandstormWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 6.0,
+            "spreadDeg": 80
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "SandstormUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "splashTiles": 2.0833333333333335,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "SandstormWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 7.5,
+            "spreadDeg": 80
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "SandstormUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 9.166666666666666,
+            "splashTiles": 2.604166666666667,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000026,
+      "hash": "Bibi",
+      "name": "Bibi",
+      "internalName": "Baseball",
+      "class": "Tank",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Bibi/portrait.png",
+        "render": "/assets/brawlers/Bibi/render.png",
+        "emoji": "/assets/brawlers/Bibi/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "BaseballWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 3.6666666666666665,
+            "spreadDeg": 300
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "BaseballUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 40.0,
+            "widthTiles": 1.0416666666666667
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack",
+          "skillName": "BaseballOverchargedWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 3.6666666666666665,
+            "spreadDeg": 300
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "BaseballUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 50.0,
+            "widthTiles": 1.0416666666666667
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: Sticky",
+          "skillName": "BaseballGadgetSkillSticky",
+          "shape": "wave",
+          "params": {
+            "rangeTiles": 5.666666666666667,
+            "splashTiles": 1.5625,
+            "spreadDeg": 30,
+            "count": 5,
+            "equip": "bonusSkill"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000025,
+      "hash": "Carl",
+      "name": "Carl",
+      "internalName": "Whirlwind",
+      "class": "Damage Dealer",
+      "rarity": "Super Rare",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Carl/portrait.png",
+        "render": "/assets/brawlers/Carl/render.png",
+        "emoji": "/assets/brawlers/Carl/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "WhirlwindWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 8.333333333333334,
+            "widthTiles": 1.0416666666666667
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "WhirlwindUlti",
+          "shape": "area-follow",
+          "params": {
+            "splashTiles": 2.33
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "WhirlwindWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.416666666666668,
+            "widthTiles": 1.0416666666666667
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "WhirlwindUlti",
+          "shape": "area-follow",
+          "params": {
+            "splashTiles": 2.9125
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        }
+      ]
+    },
+    {
+      "id": 16000024,
+      "hash": "Rosa",
+      "name": "Rosa",
+      "internalName": "Rosa",
+      "class": "Tank",
+      "rarity": "Rare",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Rosa/portrait.png",
+        "render": "/assets/brawlers/Rosa/render.png",
+        "emoji": "/assets/brawlers/Rosa/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "RosaWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 3.6666666666666665,
+            "spreadDeg": 130
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "RosaUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "RosaWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 4.583333333333333,
+            "spreadDeg": 130
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "RosaUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000023,
+      "hash": "Leon",
+      "name": "Leon",
+      "internalName": "Ninja",
+      "class": "Assassin",
+      "rarity": "Legendary",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Leon/portrait.png",
+        "render": "/assets/brawlers/Leon/render.png",
+        "emoji": "/assets/brawlers/Leon/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "NinjaWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 9.666666666666666,
+            "spreadDeg": 35
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "NinjaUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack",
+          "skillName": "NinjaOverchargedWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 9.666666666666666,
+            "spreadDeg": 35
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "NinjaUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        },
+        {
+          "label": "Gadget: InvisibleArea",
+          "skillName": "NinjaBonusSkillInvisibleArea",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "splashTiles": 0.0,
+            "equip": "bonusSkill"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000022,
+      "hash": "Tick",
+      "name": "Tick",
+      "internalName": "ClusterBombDude",
+      "class": "Artillery",
+      "rarity": "Super Rare",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Tick/portrait.png",
+        "render": "/assets/brawlers/Tick/render.png",
+        "emoji": "/assets/brawlers/Tick/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "ClusterBombDudeWeapon",
+          "shape": "cluster",
+          "params": {
+            "rangeTiles": 8.67,
+            "splashTiles": 1.56,
+            "pattern": "triangle",
+            "spacingTiles": 1.33
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Super",
+          "skillName": "ClusterBombDudeUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 3.33,
+            "splashTiles": 1.04,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "ClusterBombDudeWeapon",
+          "shape": "cluster",
+          "params": {
+            "rangeTiles": 10.8375,
+            "splashTiles": 1.9500000000000002,
+            "pattern": "triangle",
+            "spacingTiles": 1.33
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "ClusterBombDudeUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 4.1625,
+            "splashTiles": 1.3,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        }
+      ]
+    },
+    {
+      "id": 16000021,
+      "hash": "Gene",
+      "name": "Gene",
+      "internalName": "HookDude",
+      "class": "Controller",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Gene/portrait.png",
+        "render": "/assets/brawlers/Gene/render.png",
+        "emoji": "/assets/brawlers/Gene/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "HookWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 5.666666666666667,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "HookUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 7.666666666666667,
+            "widthTiles": 0.8333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "HookWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 7.083333333333334,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "HookUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.583333333333334,
+            "widthTiles": 0.8333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000020,
+      "hash": "Frank",
+      "name": "Frank",
+      "internalName": "HammerDude",
+      "class": "Tank",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Frank/portrait.png",
+        "render": "/assets/brawlers/Frank/render.png",
+        "emoji": "/assets/brawlers/Frank/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "HammerDudeWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 6.0,
+            "spreadDeg": 130
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "HammerDudeUlti",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 7.0,
+            "spreadDeg": 130
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack",
+          "skillName": "HammerDudeOverchargedWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 6.0,
+            "spreadDeg": 130
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "HammerDudeUlti",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 8.75,
+            "spreadDeg": 130
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: Immunity",
+          "skillName": "HammerDudeGadgetSkillNoiseCancel",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 6.0,
+            "spreadDeg": 45
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: Pull",
+          "skillName": "HammerDudeGadgetSkillAttraction",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000019,
+      "hash": "Penny",
+      "name": "Penny",
+      "internalName": "ArtilleryDude",
+      "class": "Artillery",
+      "rarity": "Super Rare",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Penny/portrait.png",
+        "render": "/assets/brawlers/Penny/render.png",
+        "emoji": "/assets/brawlers/Penny/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "ArtilleryDudeWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 8.666666666666666,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "ArtilleryDudeUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 5.0,
+            "splashTiles": 1.6666666666666667,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "ArtilleryDudeWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.833333333333332,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "ArtilleryDudeUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 6.25,
+            "splashTiles": 2.0833333333333335,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000018,
+      "hash": "Darryl",
+      "name": "Darryl",
+      "internalName": "BarrelBot",
+      "class": "Tank",
+      "rarity": "Super Rare",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Darryl/portrait.png",
+        "render": "/assets/brawlers/Darryl/render.png",
+        "emoji": "/assets/brawlers/Darryl/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "BarrelBotWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 6.0,
+            "spreadDeg": 80
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "BarrelBotUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 7.0
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "BarrelBotWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 7.5,
+            "spreadDeg": 80
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "BarrelBotUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 8.75
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000017,
+      "hash": "Tara",
+      "name": "Tara",
+      "internalName": "BlackHole",
+      "class": "Damage Dealer",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Tara/portrait.png",
+        "render": "/assets/brawlers/Tara/render.png",
+        "emoji": "/assets/brawlers/Tara/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "BlackHoleWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 8.0,
+            "spreadDeg": 50
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "BlackHoleUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 6.67,
+            "splashTiles": 2.5,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "BlackHoleWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 10.0,
+            "spreadDeg": 50
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "BlackHoleUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 8.3375,
+            "splashTiles": 3.125,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        }
+      ]
+    },
+    {
+      "id": 16000016,
+      "hash": "Pam",
+      "name": "Pam",
+      "internalName": "MinigunDude",
+      "class": "Support",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Pam/portrait.png",
+        "render": "/assets/brawlers/Pam/render.png",
+        "emoji": "/assets/brawlers/Pam/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "MinigunDudeWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 9.0,
+            "spreadDeg": 60
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "MinigunDudeUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 5.0,
+            "splashTiles": 0.0,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "MinigunDudeWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 11.25,
+            "spreadDeg": 60
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "MinigunDudeUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 6.25,
+            "splashTiles": 0.0,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000015,
+      "hash": "Piper",
+      "name": "Piper",
+      "internalName": "Sniper",
+      "class": "Marksman",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Piper/portrait.png",
+        "render": "/assets/brawlers/Piper/render.png",
+        "emoji": "/assets/brawlers/Piper/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "SniperWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.0,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "SniperUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 8.666666666666666
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "SniperWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 12.5,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "SniperUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 10.833333333333332
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000014,
+      "hash": "Bo",
+      "name": "Bo",
+      "internalName": "BowDude",
+      "class": "Controller",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Bo/portrait.png",
+        "render": "/assets/brawlers/Bo/render.png",
+        "emoji": "/assets/brawlers/Bo/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "BowDudeWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 8.666666666666666,
+            "spreadDeg": 30
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "BowDudeUlti",
+          "shape": "cluster",
+          "params": {
+            "rangeTiles": 8.67,
+            "splashTiles": 0.84,
+            "pattern": "triangle",
+            "spacingTiles": 1.5
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack",
+          "skillName": "BowDudeOverchargedWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 8.666666666666666,
+            "spreadDeg": 30
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "BowDudeUlti",
+          "shape": "cluster",
+          "params": {
+            "rangeTiles": 10.8375,
+            "splashTiles": 1.05,
+            "pattern": "triangle",
+            "spacingTiles": 1.5
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        },
+        {
+          "label": "Gadget: Totem",
+          "skillName": "BowDudeGadgetSkillTotem",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "splashTiles": 0.0,
+            "equip": "bonusSkill"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000013,
+      "hash": "Poco",
+      "name": "Poco",
+      "internalName": "DeadMariachi",
+      "class": "Support",
+      "rarity": "Rare",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Poco/portrait.png",
+        "render": "/assets/brawlers/Poco/render.png",
+        "emoji": "/assets/brawlers/Poco/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "DeadMariachiWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 7.0,
+            "spreadDeg": 130
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "DeadMariachiUlti",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 9.333333333333334,
+            "spreadDeg": 130
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "DeadMariachiWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 8.75,
+            "spreadDeg": 130
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "DeadMariachiUlti",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 11.666666666666668,
+            "spreadDeg": 130
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000012,
+      "hash": "Crow",
+      "name": "Crow",
+      "internalName": "Crow",
+      "class": "Assassin",
+      "rarity": "Legendary",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Crow/portrait.png",
+        "render": "/assets/brawlers/Crow/render.png",
+        "emoji": "/assets/brawlers/Crow/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "CrowWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 8.666666666666666,
+            "spreadDeg": 45
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "CrowUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack",
+          "skillName": "CrowOverchargedWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 8.666666666666666,
+            "spreadDeg": 45
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "CrowUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        },
+        {
+          "label": "Gadget: PoisonDagger",
+          "skillName": "CrowThrowPoisonDagger",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 8.333333333333334,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000011,
+      "hash": "Mortis",
+      "name": "Mortis",
+      "internalName": "Undertaker",
+      "class": "Assassin",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Mortis/portrait.png",
+        "render": "/assets/brawlers/Mortis/render.png",
+        "emoji": "/assets/brawlers/Mortis/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "UndertakerWeapon",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 2.6666666666666665
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "UndertakerUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.0,
+            "widthTiles": 1.6666666666666667
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack",
+          "skillName": "UndertakerOverchargedWeapon",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 2.6666666666666665
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "UndertakerUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 12.5,
+            "widthTiles": 1.6666666666666667
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: Swing",
+          "skillName": "UndertakerGadgetSkillComboSpinner",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 2.6666666666666665,
+            "widthTiles": 0.8
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: Reload",
+          "skillName": "UndertakerGadgetSkillBats",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 5.0,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000009,
+      "hash": "Dynamike",
+      "name": "Dynamike",
+      "internalName": "TntDude",
+      "class": "Artillery",
+      "rarity": "Super Rare",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Dynamike/portrait.png",
+        "render": "/assets/brawlers/Dynamike/render.png",
+        "emoji": "/assets/brawlers/Dynamike/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "TntDudeWeapon",
+          "shape": "cluster",
+          "params": {
+            "rangeTiles": 7.33,
+            "splashTiles": 1.67,
+            "pattern": "pair",
+            "spacingTiles": 0.75
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Super",
+          "skillName": "TntDudeUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "splashTiles": 1.6666666666666667,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "TntDudeWeapon",
+          "shape": "cluster",
+          "params": {
+            "rangeTiles": 9.1625,
+            "splashTiles": 2.0875,
+            "pattern": "pair",
+            "spacingTiles": 0.75
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "TntDudeUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 9.166666666666666,
+            "splashTiles": 2.0833333333333335,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000008,
+      "hash": "Nita",
+      "name": "Nita",
+      "internalName": "Shaman",
+      "class": "Damage Dealer",
+      "rarity": "Rare",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Nita/portrait.png",
+        "render": "/assets/brawlers/Nita/render.png",
+        "emoji": "/assets/brawlers/Nita/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "ShamanWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 6.0,
+            "widthTiles": 1.0416666666666667
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "ShamanUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 5.0,
+            "splashTiles": 2.0833333333333335,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack",
+          "skillName": "ShamanOverchargedWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 6.666666666666667,
+            "widthTiles": 1.0416666666666667
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "ShamanUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 6.25,
+            "splashTiles": 2.604166666666667,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000007,
+      "hash": "Jessie",
+      "name": "Jessie",
+      "internalName": "Mechanic",
+      "class": "Controller",
+      "rarity": "Super Rare",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Jessie/portrait.png",
+        "render": "/assets/brawlers/Jessie/render.png",
+        "emoji": "/assets/brawlers/Jessie/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "MechanicWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.0,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "MechanicUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 5.0,
+            "splashTiles": 2.7083333333333335,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "MechanicWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 11.25,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "MechanicUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 6.25,
+            "splashTiles": 3.385416666666667,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000006,
+      "hash": "Barley",
+      "name": "Barley",
+      "internalName": "Barkeep",
+      "class": "Artillery",
+      "rarity": "Rare",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Barley/portrait.png",
+        "render": "/assets/brawlers/Barley/render.png",
+        "emoji": "/assets/brawlers/Barley/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "BarkeepWeapon",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "splashTiles": 1.25,
+            "equip": "weapon"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "BarkeepUlti",
+          "shape": "cluster",
+          "params": {
+            "rangeTiles": 9.33,
+            "splashTiles": 1.25,
+            "pattern": "quincunx",
+            "spacingTiles": 1.5
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": true
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "BarkeepWeapon",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 9.166666666666666,
+            "splashTiles": 1.5625,
+            "equip": "weapon"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "BarkeepUlti",
+          "shape": "cluster",
+          "params": {
+            "rangeTiles": 11.6625,
+            "splashTiles": 1.5625,
+            "pattern": "quincunx",
+            "spacingTiles": 1.5
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": true
+        }
+      ]
+    },
+    {
+      "id": 16000005,
+      "hash": "Spike",
+      "name": "Spike",
+      "internalName": "Cactus",
+      "class": "Damage Dealer",
+      "rarity": "Legendary",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Spike/portrait.png",
+        "render": "/assets/brawlers/Spike/render.png",
+        "emoji": "/assets/brawlers/Spike/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "CactusWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 7.666666666666667,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "CactusUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.666666666666667,
+            "splashTiles": 1.6666666666666667,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack",
+          "skillName": "CactusOverchargedWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 7.666666666666667,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "CactusUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 9.583333333333334,
+            "splashTiles": 2.0833333333333335,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: ShootAround",
+          "skillName": "CactusBonusSkillPoppin",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 7.666666666666667,
+            "spreadDeg": 60
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: Cover",
+          "skillName": "CactusBonusSkillCover",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "splashTiles": 1.25,
+            "equip": "bonusSkill"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000003,
+      "hash": "Brock",
+      "name": "Brock",
+      "internalName": "RocketGirl",
+      "class": "Marksman",
+      "rarity": "Rare",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Brock/portrait.png",
+        "render": "/assets/brawlers/Brock/render.png",
+        "emoji": "/assets/brawlers/Brock/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "RocketGirlWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.0,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "RocketGirlUlti",
+          "shape": "wave",
+          "params": {
+            "rangeTiles": 8.333333333333334,
+            "splashTiles": 0.9375,
+            "spreadDeg": 160,
+            "count": 5,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "RocketGirlWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 11.25,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "RocketGirlUlti",
+          "shape": "wave",
+          "params": {
+            "rangeTiles": 10.416666666666668,
+            "splashTiles": 1.171875,
+            "spreadDeg": 160,
+            "count": 5,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000002,
+      "hash": "Bull",
+      "name": "Bull",
+      "internalName": "BullDude",
+      "class": "Tank",
+      "rarity": "Rare",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Bull/portrait.png",
+        "render": "/assets/brawlers/Bull/render.png",
+        "emoji": "/assets/brawlers/Bull/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "BullDudeWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 5.333333333333333,
+            "spreadDeg": 90
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "BullDudeUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 11.0
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack",
+          "skillName": "BullDudeOverchargedWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 4.666666666666667,
+            "spreadDeg": 90
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "BullDudeUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 13.75
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: Stomp",
+          "skillName": "BullDudeGadgetSkillStomp",
+          "shape": "area-follow",
+          "params": {
+            "splashTiles": 1.6666666666666667
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000001,
+      "hash": "Colt",
+      "name": "Colt",
+      "internalName": "Gunslinger",
+      "class": "Damage Dealer",
+      "rarity": "Rare",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Colt/portrait.png",
+        "render": "/assets/brawlers/Colt/render.png",
+        "emoji": "/assets/brawlers/Colt/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "GunslingerWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.0,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "GunslingerUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 11.0,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack",
+          "skillName": "GunslingerOverchargedWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.0,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "GunslingerUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 13.75,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: Reload",
+          "skillName": "GunslingerGadgetSkillDoubleShot",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 11.0,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: BigBullet",
+          "skillName": "GunslingerGadgetSkillSilverBullet",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 11.0,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000000,
+      "hash": "Shelly",
+      "name": "Shelly",
+      "internalName": "ShotgunGirl",
+      "class": "Damage Dealer",
+      "rarity": "Common",
+      "hasHypercharge": true,
+      "assets": {
+        "portrait": "/assets/brawlers/Shelly/portrait.png",
+        "render": "/assets/brawlers/Shelly/render.png",
+        "emoji": "/assets/brawlers/Shelly/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "ShotgunGirlWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 7.666666666666667,
+            "spreadDeg": 60
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "ShotgunGirlUlti",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 7.666666666666667,
+            "spreadDeg": 100
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack",
+          "skillName": "ShotgunGirlOverchargedWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 7.666666666666667,
+            "spreadDeg": 60
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "ShotgunGirlUlti",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 9.583333333333334,
+            "spreadDeg": 100
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: Dash",
+          "skillName": "ShotgungirlGadgetSkillReload",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 2.6666666666666665
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: Focus",
+          "skillName": "ShotgunGirlClayPigeons",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 10.0,
+            "spreadDeg": 30
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        }
+      ]
+    }
+  ]
+}
