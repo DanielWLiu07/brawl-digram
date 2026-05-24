@@ -1,6 +1,5 @@
 {
-  "fetchedAt": "2026-05-24T19:38:00+00:00",
-  "note": "Hand-curated bridge from Brawlify display names to internal CSV names. modeMap is heuristic; maps is mostly empty and must be filled in by the maintainer or pro-curator.",
+  "fetchedAt": "2026-05-24T20:18:13+00:00",
   "modeMap": {
     "Gemgrab": "Gem Grab",
     "GemGrab5v5": "Gem Grab 5v5",
@@ -32,5 +31,224 @@
     "BossRace": "Boss Race",
     "CaptureTheFlag": "Capture the Flag"
   },
-  "maps": {}
+  "maps": {
+    "Outlaw-Camp": "Wanted_7",
+    "Layer-Bake": "Deathmatch_512",
+    "Layer-Cake": "Deathmatch_531",
+    "Backyard-Bowl": "Laserball_1",
+    "Triple-Dribble": "Laserball_2",
+    "Winter-Party": "Laserball_32",
+    "Stay-In-Your-Lane": "Gemgrab_532",
+    "Escape-Velocity": "Gemgrab_49",
+    "Last-Stop": "Gemgrab_511",
+    "Bridge-Too-Far": "Bankheist_12",
+    "Riverbed": "Bankheist_531",
+    "Tornado-Ring": "Bankheist_20",
+    "Rush-Hour": "KingOfHill_33",
+    "Ring-Of-Fire": "KingOfHill_16F",
+    "The-Great-Divide": "KingOfHill_531",
+    "Close-Quarters": "Knockout_531",
+    "Out-In-The-Open": "Knockout_442",
+    "Belles-Rock": "Knockout_9"
+  },
+  "matchAudit": [
+    {
+      "internal": "Wanted_7",
+      "mode": "Bounty",
+      "csvCredit": null,
+      "matchedBy": "position-only",
+      "confidence": "low",
+      "brawlifyHash": "Outlaw-Camp",
+      "brawlifyName": "Outlaw Camp",
+      "brawlifyDisabled": true,
+      "brawlifyCredit": null
+    },
+    {
+      "internal": "Deathmatch_512",
+      "mode": "Bounty",
+      "csvCredit": "Gandalf",
+      "matchedBy": "credit-unique",
+      "confidence": "high",
+      "brawlifyHash": "Layer-Bake",
+      "brawlifyName": "Layer Bake",
+      "brawlifyDisabled": true,
+      "brawlifyCredit": "Gandalf"
+    },
+    {
+      "internal": "Deathmatch_531",
+      "mode": "Bounty",
+      "csvCredit": "OwenReds",
+      "matchedBy": "credit-multi-firstpick",
+      "confidence": "med",
+      "brawlifyHash": "Layer-Cake",
+      "brawlifyName": "Layer Cake",
+      "brawlifyDisabled": false,
+      "brawlifyCredit": "OwenReds"
+    },
+    {
+      "internal": "Laserball_1",
+      "mode": "BrawlBall",
+      "csvCredit": null,
+      "matchedBy": "position-only",
+      "confidence": "med",
+      "brawlifyHash": "Backyard-Bowl",
+      "brawlifyName": "Backyard Bowl",
+      "brawlifyDisabled": false,
+      "brawlifyCredit": null
+    },
+    {
+      "internal": "Laserball_2",
+      "mode": "BrawlBall",
+      "csvCredit": null,
+      "matchedBy": "position-only",
+      "confidence": "med",
+      "brawlifyHash": "Triple-Dribble",
+      "brawlifyName": "Triple Dribble",
+      "brawlifyDisabled": false,
+      "brawlifyCredit": null
+    },
+    {
+      "internal": "Laserball_32",
+      "mode": "BrawlBall",
+      "csvCredit": "⚡MićoGamer⚡",
+      "matchedBy": "credit-unique",
+      "confidence": "high",
+      "brawlifyHash": "Winter-Party",
+      "brawlifyName": "Winter Party",
+      "brawlifyDisabled": true,
+      "brawlifyCredit": "⚡MićoGamer⚡"
+    },
+    {
+      "internal": "Gemgrab_532",
+      "mode": "GemGrab",
+      "csvCredit": "Metanoia",
+      "matchedBy": "credit-unique",
+      "confidence": "high",
+      "brawlifyHash": "Stay-In-Your-Lane",
+      "brawlifyName": "Stay In Your Lane",
+      "brawlifyDisabled": true,
+      "brawlifyCredit": "Metanoia"
+    },
+    {
+      "internal": "Gemgrab_49",
+      "mode": "GemGrab",
+      "csvCredit": "Mordeus",
+      "matchedBy": "credit-multi-firstpick",
+      "confidence": "med",
+      "brawlifyHash": "Escape-Velocity",
+      "brawlifyName": "Escape Velocity",
+      "brawlifyDisabled": true,
+      "brawlifyCredit": "Mordeus"
+    },
+    {
+      "internal": "Gemgrab_511",
+      "mode": "GemGrab",
+      "csvCredit": "STB",
+      "matchedBy": "credit-unique",
+      "confidence": "high",
+      "brawlifyHash": "Last-Stop",
+      "brawlifyName": "Last Stop",
+      "brawlifyDisabled": true,
+      "brawlifyCredit": "STB"
+    },
+    {
+      "internal": "Bankheist_12",
+      "mode": "Heist",
+      "csvCredit": "Zagibulenka",
+      "matchedBy": "credit+position",
+      "confidence": "high",
+      "brawlifyHash": "Bridge-Too-Far",
+      "brawlifyName": "Bridge Too Far",
+      "brawlifyDisabled": false,
+      "brawlifyCredit": "Zagibulenka"
+    },
+    {
+      "internal": "Bankheist_531",
+      "mode": "Heist",
+      "csvCredit": "Fairy",
+      "matchedBy": "credit-unique",
+      "confidence": "high",
+      "brawlifyHash": "Riverbed",
+      "brawlifyName": "Riverbed",
+      "brawlifyDisabled": true,
+      "brawlifyCredit": "Fairy"
+    },
+    {
+      "internal": "Bankheist_20",
+      "mode": "Heist",
+      "csvCredit": "gradient33",
+      "matchedBy": "credit-unique",
+      "confidence": "high",
+      "brawlifyHash": "Tornado-Ring",
+      "brawlifyName": "Tornado Ring",
+      "brawlifyDisabled": true,
+      "brawlifyCredit": "gradient33"
+    },
+    {
+      "internal": "KingOfHill_33",
+      "mode": "KingOfHill",
+      "csvCredit": null,
+      "matchedBy": "position-only",
+      "confidence": "low",
+      "brawlifyHash": "Rush-Hour",
+      "brawlifyName": "Rush Hour",
+      "brawlifyDisabled": true,
+      "brawlifyCredit": "Square Lord"
+    },
+    {
+      "internal": "KingOfHill_16F",
+      "mode": "KingOfHill",
+      "csvCredit": null,
+      "matchedBy": "position-only",
+      "confidence": "med",
+      "brawlifyHash": "Ring-Of-Fire",
+      "brawlifyName": "Ring Of Fire",
+      "brawlifyDisabled": false,
+      "brawlifyCredit": null
+    },
+    {
+      "internal": "KingOfHill_531",
+      "mode": "KingOfHill",
+      "csvCredit": "OwenReds",
+      "matchedBy": "credit-multi-firstpick",
+      "confidence": "med",
+      "brawlifyHash": "The-Great-Divide",
+      "brawlifyName": "The Great Divide",
+      "brawlifyDisabled": true,
+      "brawlifyCredit": "OwenReds"
+    },
+    {
+      "internal": "Knockout_531",
+      "mode": "Knockout",
+      "csvCredit": "mars",
+      "matchedBy": "credit-multi-firstpick",
+      "confidence": "med",
+      "brawlifyHash": "Close-Quarters",
+      "brawlifyName": "Close Quarters",
+      "brawlifyDisabled": true,
+      "brawlifyCredit": "mars"
+    },
+    {
+      "internal": "Knockout_442",
+      "mode": "Knockout",
+      "csvCredit": "Ascend",
+      "matchedBy": "credit-multi-firstpick",
+      "confidence": "med",
+      "brawlifyHash": "Out-In-The-Open",
+      "brawlifyName": "Out In The Open",
+      "brawlifyDisabled": false,
+      "brawlifyCredit": "Ascend"
+    },
+    {
+      "internal": "Knockout_9",
+      "mode": "Knockout",
+      "csvCredit": null,
+      "matchedBy": "position-only",
+      "confidence": "med",
+      "brawlifyHash": "Belles-Rock",
+      "brawlifyName": "Belles Rock",
+      "brawlifyDisabled": false,
+      "brawlifyCredit": null
+    }
+  ]
 }

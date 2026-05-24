@@ -1,15 +1,6 @@
-"""Generate `data/maps_compare.html` — a side-by-side viewer for curating
-`map_name_map.json`.
-
-For each of the ~18 ranked maps in `ranked_locations.csv`, render the decoded
-CSV tile grid as inline SVG next to the PNGs of all Brawlify maps in the same
-game mode. Click a Brawlify PNG to record the pairing; the page accumulates
-selections in localStorage and offers a "Copy JSON" button when you're done.
-
-Run:
-  python3 data/build_map_compare.py
-  open data/maps_compare.html
-"""
+"""Generate maps_compare.html — CSV tile grid (SVG) side-by-side with the
+Brawlify PNGs for each ranked map. Click a thumbnail to pair it; export the
+bridge from the top bar."""
 
 import csv
 import json
@@ -27,36 +18,34 @@ CSV_MODE_TO_BRAWLIFY = {
     "BrawlHockey": "Brawl Hockey",
 }
 
-# Tile color palette — kept close to Brawl Stars in-game visuals so the SVG
-# side resembles the PNG side at a glance.
+OPEN_BG = "#7fb56a"
 TILE_COLOR = {
-    ".": "#0f1d2e",  # open ground (dark)
-    "M": "#5c6e88",  # Wall1
-    "X": "#7c8aa5",  # Wall2
-    "Y": "#a87b3a",  # Crate
-    "C": "#9a6234",  # Barrel
-    "I": "#3a4658",  # Indestructible
-    "F": "#1f6f3a",  # Forest (bush)
-    "R": "#2d8a4d",  # RespawningForest
-    "W": "#1f4e91",  # Water
+    "M": "#2c1d12",  # Wall1 — dark brown
+    "X": "#3c2a1a",  # Wall2
+    "Y": "#c08a3a",  # Crate
+    "C": "#a36028",  # Barrel
+    "I": "#1a1a1a",  # Indestructible — near black
+    "F": "#1f6f3a",  # Forest (bush) — dark green
+    "R": "#256b34",  # RespawningForest
+    "W": "#2870c0",  # Water — bright blue
     "T": "#7a5a3a",  # Themed
-    "B": "#b06a44",  # Fragile
-    "N": "#8d6b3a",  # Fence
-    "J": "#3a4658",  # InvisibleIndestructible
-    "V": "#1a3a78",  # InvisibleWater
-    "E": "#6f5731",  # IndestructibleFence
-    "a": "#6f5731",  # RopeFence
+    "B": "#d97a4c",  # Fragile
+    "N": "#6b4a26",  # Fence
+    "J": "#1a1a1a",  # InvisibleIndestructible
+    "V": "#2870c0",  # InvisibleWater
+    "E": "#5a3a1a",  # IndestructibleFence
+    "a": "#a07840",  # RopeFence
     "b": "#5e5e5e",  # PayloadTrack
-    "o": "#c0c0c0",  # Bouncer
-    "x": "#b03030",  # Damage
+    "o": "#e8e8e8",  # Bouncer
+    "x": "#d62828",  # Damage
     "z": "#3aa3c0",  # Slow
-    "w": "#c0a83a",  # Fast
+    "w": "#f4c430",  # Fast
     "v": "#a02828",  # IntervalDamage
-    "S": "#cfd9e6",  # Snow
-    "q": "#9adcf0",  # Ice
-    "1": "#3a9a4d",  # team1 spawn
-    "2": "#c03a3a",  # team2 spawn
-    "c": "#f0d040",  # gem spawn / token
+    "S": "#f0f4f8",  # Snow
+    "q": "#a4def5",  # Ice
+    "1": "#1f7ad6",  # team1 spawn — blue
+    "2": "#e63946",  # team2 spawn — red
+    "c": "#f7d340",  # gem spawn / token
 }
 
 
@@ -64,21 +53,21 @@ def hex_color_for(ch: str) -> str:
     if ch in TILE_COLOR:
         return TILE_COLOR[ch]
     if ch.isdigit():
-        return "#c03a3a"  # other digit = objective marker
+        return "#e63946"  # other digit = objective marker
     # exotic chars (È/É/Ê/Ë/À/Á/Â/Ã and others) — neutral
-    return "#445162"
+    return "#94a3b8"
 
 
-def render_grid_svg(grid, max_px=320):
+def render_grid_svg(grid, max_px=560, min_cell=14):
     h = len(grid)
     w = max(len(r) for r in grid) if grid else 0
     if w == 0 or h == 0:
         return ""
-    cell = min(max_px // max(w, h), 14)
+    cell = max(min_cell, min(max_px // max(w, h), 24))
     width = cell * w
     height = cell * h
-    parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">']
-    parts.append(f'<rect width="{width}" height="{height}" fill="#0a121e"/>')
+    parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" shape-rendering="crispEdges">']
+    parts.append(f'<rect width="{width}" height="{height}" fill="{OPEN_BG}"/>')
     for y, row in enumerate(grid):
         for x, ch in enumerate(row):
             if ch == ".":
@@ -121,28 +110,52 @@ def load_csv_grids():
     return payload["maps"]
 
 
+def load_automatches():
+    path = REPO / "data/map_name_map.json"
+    if not path.exists():
+        return {}, {}
+    payload = json.loads(path.read_text())
+    by_internal = {}
+    confidence = {}
+    for entry in payload.get("matchAudit", []):
+        if entry.get("brawlifyHash"):
+            by_internal[entry["internal"]] = entry["brawlifyHash"]
+            confidence[entry["internal"]] = entry.get("confidence", "med")
+    return by_internal, confidence
+
+
 def build_html(ranked, brawlify, grids):
+    automatches, confidence = load_automatches()
     cards = []
     for r in ranked:
         grid_entry = grids.get(r["mapInternal"], {})
         grid = grid_entry.get("grid", [])
         svg = render_grid_svg(grid)
         candidates = [m for m in brawlify if (m.get("gameMode") or {}).get("name") == r["brawlifyMode"]]
+        auto_hash = automatches.get(r["mapInternal"])
+        conf = confidence.get(r["mapInternal"], "")
         thumbs = []
         for c in candidates:
             img_path = f"../assets/maps/{c['hash']}.png"
             credit_badge = f' <small style="color:#888">credit: {c["credit"]}</small>' if c.get("credit") else ''
+            auto_badge = ''
+            data_auto = ''
+            if auto_hash and c["hash"] == auto_hash:
+                auto_badge = f' <span class="auto-flag conf-{conf}">auto: {conf}</span>'
+                data_auto = ' data-auto="1"'
             thumbs.append(
                 f'<button class="thumb" data-hash="{c["hash"]}" data-name="{c["name"]}" '
-                f'data-internal="{r["mapInternal"]}" title="{c["name"]}">'
+                f'data-internal="{r["mapInternal"]}" title="{c["name"]}"{data_auto}>'
                 f'<img loading="lazy" src="{img_path}" alt="{c["name"]}"/>'
-                f'<div class="lbl">{c["name"]}{credit_badge}</div>'
+                f'<div class="lbl">{c["name"]}{credit_badge}{auto_badge}</div>'
                 f'</button>'
             )
         cards.append(f'''
-        <section class="card" data-internal="{r["mapInternal"]}">
+        <section class="card conf-{conf}" data-internal="{r["mapInternal"]}">
           <header>
-            <h2>{r["mapInternal"]} <small>({r["csvMode"]} → {r["brawlifyMode"]})</small></h2>
+            <h2>{r["mapInternal"]} <small>({r["csvMode"]} → {r["brawlifyMode"]})</small>
+              {'<span class="auto-flag conf-' + conf + '">auto-matched: ' + conf + '</span>' if auto_hash else ''}
+            </h2>
             <div class="meta">TID: <code>{r["tid"]}</code>{' · credit: <b>' + r["credit"] + '</b>' if r["credit"] else ''}</div>
             <div class="picked" data-internal="{r["mapInternal"]}">No match selected</div>
           </header>
@@ -175,11 +188,17 @@ def build_html(ranked, brawlify, grids):
   .picked.set {{ color:#7fc; font-weight:bold; }}
   .row {{ display:flex; gap:24px; margin-top:12px; }}
   .csv-side, .bf-side {{ flex:1; min-width:0; }}
-  .csv-side svg {{ background:#0a121e; border:1px solid #233; }}
+  .csv-side svg {{ background:{OPEN_BG}; border:1px solid #233; display:block; max-width:100%; height:auto; }}
   .thumbs {{ display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:10px; }}
   .thumb {{ background:#0a1726; border:2px solid transparent; border-radius:6px; padding:6px; cursor:pointer; color:inherit; font:inherit; text-align:center; }}
   .thumb:hover {{ border-color:#467; }}
   .thumb.selected {{ border-color:#5fd; background:#163148; }}
+  .thumb[data-auto="1"] {{ outline:2px dashed #f6c64a; outline-offset:1px; }}
+  .auto-flag {{ display:inline-block; font-size:10px; padding:1px 6px; border-radius:3px; margin-left:6px; vertical-align:middle; font-weight:bold; }}
+  .auto-flag.conf-high {{ background:#1f6f3a; color:#cfe9c4; }}
+  .auto-flag.conf-med  {{ background:#a0791f; color:#fff4d0; }}
+  .auto-flag.conf-low  {{ background:#a32828; color:#ffe0d0; }}
+  section.card.conf-low {{ border-color:#a32828; }}
   .thumb img {{ width:100%; height:auto; display:block; border-radius:4px; }}
   .lbl {{ font-size:11px; margin-top:4px; color:#cde; }}
   .lbl small {{ display:block; color:#789; }}
@@ -201,8 +220,16 @@ def build_html(ranked, brawlify, grids):
 <script>
 const STORE_KEY = 'brawl-digram-map-bridge-v1';
 const TOTAL = {len(ranked)};
+const AUTOMATCH = {json.dumps(automatches)};
 
-function load() {{ try {{ return JSON.parse(localStorage.getItem(STORE_KEY)) || {{}}; }} catch {{ return {{}}; }} }}
+function load() {{
+  try {{
+    const stored = JSON.parse(localStorage.getItem(STORE_KEY));
+    if (stored) return stored;
+  }} catch {{}}
+  // First visit: seed from auto-matches.
+  return {{...AUTOMATCH}};
+}}
 function save(s) {{ localStorage.setItem(STORE_KEY, JSON.stringify(s)); }}
 
 function render() {{
