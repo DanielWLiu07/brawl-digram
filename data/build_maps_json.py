@@ -1,41 +1,5 @@
-"""Decode `csv_logic/maps.csv` into a single JSON the frontend can import.
-
-`maps.csv` encodes each map as N consecutive rows: row 0 has the internal name
-in column "Map" plus the first tile-row in "Data"; rows 1..N-1 have an empty
-Map column and a Data row. Some rows also carry a JSON "MetaData" payload
-(Siege turret positions, etc.) on either the first or a later line.
-
-Tile codes come from `tiles.csv`. Codes appearing in `maps.csv` that aren't in
-`tiles.csv` (numeric spawn markers `0-9`, exotic markers like `!`/`+`/`<`/`>`
-that overlay on walkable tiles) are passed through as-is — they're positional
-labels, not tile types. Consumer code should treat anything not in the
-legend as walkable.
-
-Outputs:
-  data/maps.json
-    Ranked-pool maps only (filtered by mode prefix → likelyRanked flag),
-    pretty-printed for review. ~2-3 MB. This is what the frontend imports.
-
-  data/maps-all.json
-    Every map in the CSV, compact (no indent) for size. ~9 MB, for tooling /
-    KB-curation workflows that need the full corpus.
-
-  Common schema:
-    {
-      fetchedAt, source, version,
-      tileLegend: { char: { name, blocksMovement, blocksProjectiles,
-                            isForest, isDestructible, ... } },
-      maps: { <internalName>: { width, height, mode, brawlifyMode,
-                                likelyRanked, grid: [str, str, ...],
-                                metadata?: parsed-JSON } }
-    }
-
-  data/map_name_map.json (seed only — needs hand-curation)
-    {
-      modeMap: { CSVPrefix -> Brawlify gameMode.name },   # editable
-      maps:    { <BrawlifyHash> -> <internalCSVName> }    # empty placeholder
-    }
-"""
+"""Decode maps.csv (multi-row-per-map tile grids) into maps.json + maps-all.json.
+Joins with tiles.csv for per-char semantics."""
 
 import csv
 import json
@@ -49,11 +13,7 @@ MAPS_CSV = CSV_DIR / "maps.csv"
 TILES_CSV = CSV_DIR / "tiles.csv"
 OUT_MAPS = REPO / "data" / "maps.json"
 OUT_MAPS_ALL = REPO / "data" / "maps-all.json"
-OUT_NAME_MAP = REPO / "data" / "map_name_map.json"
-BRAWLIFY_MAPS = REPO / "data" / "brawlify" / "maps.json"
 
-# Heuristic bridge from CSV name prefix (mode slug) -> Brawlify gameMode.name.
-# Built from observation; revise if Brawlify renames modes.
 DEFAULT_MODE_MAP = {
     "Gemgrab":        "Gem Grab",
     "GemGrab5v5":     "Gem Grab 5v5",
@@ -86,8 +46,6 @@ DEFAULT_MODE_MAP = {
     "CaptureTheFlag": "Capture the Flag",
 }
 
-# Canonical Brawl Stars ranked modes (the "comp pool" that rotates per season).
-# Used to flag maps in the output even when Brawlify's /v1/events is empty.
 RANKED_MODES = {
     "Gem Grab",
     "Brawl Ball",
@@ -104,8 +62,6 @@ def utc_now_iso():
 
 
 def load_tile_legend():
-    """Read tiles.csv into a {tileCode: metadata} dict. Skips codes that
-    are blank (e.g. ExtraBush) since those are dynamically painted."""
     legend = {}
     with TILES_CSV.open(newline="") as f:
         reader = csv.reader(f)
@@ -127,8 +83,6 @@ def load_tile_legend():
                 "isForest":          row[idx["IsForest"]] == "true",
                 "isBouncer":         row[idx["IsBouncer"]] == "true",
             }
-            # Many tiles share `.` (Open, SpawnPoint*, Base, Teleport*, etc.).
-            # Keep the first; record overloaded codes for transparency.
             if code in legend:
                 legend[code].setdefault("aliases", []).append(name)
             else:
@@ -137,7 +91,6 @@ def load_tile_legend():
 
 
 def parse_maps_csv():
-    """Group maps.csv rows by map name. Returns {name: {grid, metadata}}."""
     with MAPS_CSV.open(newline="") as f:
         reader = csv.reader(f)
         next(reader); next(reader)  # header + types
@@ -153,7 +106,6 @@ def parse_maps_csv():
         data_col = row[1] if len(row) > 1 else ""
         meta_col = row[2] if len(row) > 2 else ""
         if map_col:
-            # flush previous map's metadata before switching
             if current is not None:
                 maps[current]["_meta_raw"] = " ".join(meta_chunks).strip()
             current = map_col
@@ -168,7 +120,6 @@ def parse_maps_csv():
     if current is not None:
         maps[current]["_meta_raw"] = " ".join(meta_chunks).strip()
 
-    # parse the metadata JSON best-effort
     cleaned = {}
     for name, m in maps.items():
         if not m["grid"]:
@@ -190,32 +141,6 @@ def parse_maps_csv():
     return cleaned
 
 
-def load_brawlify_index():
-    if not BRAWLIFY_MAPS.exists():
-        return []
-    payload = json.loads(BRAWLIFY_MAPS.read_text())
-    return (payload.get("data") or {}).get("list") or []
-
-
-def seed_name_map(maps_internal, brawlify_maps):
-    """Produce a placeholder bridge file with the mode-prefix mapping populated
-    and an empty per-map dictionary the user can fill in by hand. Also pre-
-    fills any obvious matches where the Brawlify hash slug equals the internal
-    name (rare but happens for some test maps)."""
-    obvious = {}
-    internal_lower = {n.lower(): n for n in maps_internal}
-    for bm in brawlify_maps:
-        h = (bm.get("hash") or "").lower().replace("-", "")
-        if h in internal_lower:
-            obvious[bm["hash"]] = internal_lower[h]
-    return {
-        "fetchedAt": utc_now_iso(),
-        "note": "Hand-curated bridge from Brawlify display names to internal CSV names. modeMap is heuristic; maps is mostly empty and must be filled in by the maintainer or pro-curator.",
-        "modeMap": DEFAULT_MODE_MAP,
-        "maps": obvious,
-    }
-
-
 def run():
     print("Reading tiles.csv legend...")
     legend = load_tile_legend()
@@ -225,10 +150,6 @@ def run():
     maps = parse_maps_csv()
     print(f"  {len(maps)} maps with non-empty grids")
 
-    brawlify_maps = load_brawlify_index()
-    print(f"  {len(brawlify_maps)} Brawlify catalog entries available for cross-ref")
-
-    # Annotate ranked-likely maps via mode prefix heuristic.
     ranked_count = 0
     for name, m in maps.items():
         bf_mode = DEFAULT_MODE_MAP.get(m["mode"])
@@ -236,7 +157,7 @@ def run():
         m["likelyRanked"] = bf_mode in RANKED_MODES
         if m["likelyRanked"]:
             ranked_count += 1
-    print(f"  {ranked_count} maps flagged as likelyRanked via mode heuristic")
+    print(f"  {ranked_count} flagged ranked by mode prefix")
 
     base = {
         "fetchedAt": utc_now_iso(),
@@ -252,10 +173,6 @@ def run():
 
     OUT_MAPS_ALL.write_text(json.dumps({**base, "maps": maps}, ensure_ascii=False, separators=(",", ":")))
     print(f"  wrote {OUT_MAPS_ALL.relative_to(REPO)} ({OUT_MAPS_ALL.stat().st_size/1024:.0f} KB, {len(maps)} total maps)")
-
-    name_map = seed_name_map(maps, brawlify_maps)
-    OUT_NAME_MAP.write_text(json.dumps(name_map, indent=2, ensure_ascii=False))
-    print(f"  wrote {OUT_NAME_MAP.relative_to(REPO)} ({len(name_map['maps'])} obvious matches; manual curation needed for the rest)")
     return 0
 
 

@@ -1,25 +1,5 @@
-"""Refresh upstream info that changes (rotation, catalog deltas) from Brawlify.
-
-Lightweight, JSON-only. Does NOT download PNGs — that's `download_assets.py`'s
-job. Run weekly via cron; ranked pools change per season (~2 months), so
-weekly is plenty.
-
-Outputs (all under `data/brawlify/`):
-  events.json     — /v1/events response (active + upcoming slots)
-  maps.json       — /v1/maps catalog (full index, disabled flag included)
-  brawlers.json   — /v1/brawlers catalog
-  gamemodes.json  — /v1/gamemodes catalog
-
-Plus a derived top-level file:
-  data/ranked-rotation.json — slim view of the current ranked map pool,
-                              derived from events.active filtered to slots
-                              whose `slot.name` contains "Ranked" (case-insensitive).
-                              Always written, even if active=[] (between
-                              seasons), so downstream code can rely on the
-                              file existing.
-
-Each output file has a `fetchedAt` ISO-8601 UTC timestamp at the top.
-"""
+"""Refresh upstream Brawlify info (catalogs + event rotation). JSON only;
+PNGs come from download_assets.py."""
 
 import json
 import sys
@@ -67,20 +47,12 @@ def write_json(path: Path, payload: dict):
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False))
 
 
-def is_ranked_slot(slot: dict) -> bool:
-    """Brawlify event slots include a `slot` sub-object with a `name` like
-    'Ranked', 'Trio Showdown', 'Brawl Ball', etc. We treat anything whose
-    slot.name contains 'ranked' as the ranked pool. This is heuristic — if
-    Brawlify changes its labelling, the script keeps working but rotation
-    may go empty until updated."""
-    slot_meta = slot.get("slot") or {}
-    name = (slot_meta.get("name") or "").lower()
+def is_ranked_slot(slot):
+    name = ((slot.get("slot") or {}).get("name") or "").lower()
     return "ranked" in name
 
 
-def derive_rotation(events: dict) -> dict:
-    """Pull current ranked maps out of /v1/events.active. Each active entry
-    is a slot containing `map` and `slot` sub-objects."""
+def derive_rotation(events):
     active = events.get("active") or []
     ranked = []
     for slot in active:
