@@ -2,7 +2,7 @@
   "_meta": {
     "generatedFrom": "data/render_all_reticles.py + data/reticle_overrides.json",
     "csvVersion": "67.264",
-    "brawlerCount": 85,
+    "brawlerCount": 90,
     "skippedNewBrawlers": [
       "Starr-Nova",
       "Damian",
@@ -11,7 +11,6 @@
       "Glowy",
       "Ziggy",
       "Mina",
-      "Jae-Yong",
       "Buzz-Lightyear",
       "Kenji",
       "Moe",
@@ -19,14 +18,10 @@
       "Larry-&-Lawrie",
       "Hank",
       "R-T",
-      "Lola",
-      "Mr-P",
-      "8-Bit",
-      "El-Primo",
-      "Rico"
+      "Lola"
     ],
-    "units": "All geometry values are in TILES (1 tile = standard Brawl Stars grid square). rangeTiles, splashTiles, widthTiles, spacingTiles are tile distances. spreadDeg is degrees. See data/SCHEMA_FLOW.md for CSV unit conventions.",
-    "passesWalls": "true \u2192 reticle projects over walls (placements, throwers, indirect projectiles); false \u2192 solid reticle that should be clipped against wall tiles when rendered on a map."
+    "units": "All geometry in TILES (1 tile = standard Brawl Stars grid square). rangeTiles, splashTiles, widthTiles, spacingTiles are tile distances. spreadDeg is degrees. speedTilesPerSec is tiles/sec. reloadSec is seconds (converted from ms). damage is raw integer (positive=harm). See data/SCHEMA_FLOW.md for CSV unit conventions.",
+    "passesWalls": "true \u2192 reticle projects over walls (placements, throwers, indirect projectiles); false \u2192 solid reticle clipped against wall tiles when rendered on a map."
   },
   "brawlers": [
     {
@@ -37,6 +32,45 @@
       "class": "Unknown",
       "rarity": "Epic",
       "hasHypercharge": false,
+      "speedTilesPerSec": 1.8,
+      "hp": 5400,
+      "attack": {
+        "reloadSec": 2.2,
+        "ammoCount": 2
+      },
+      "super": {},
+      "attackStyle": "melee",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Toss Up",
+          "description": "Bolt will knock enemies upwards when he's at full speed."
+        },
+        {
+          "name": "Unstoppaball",
+          "description": "Bolt is immune to crowd control and gains x% top speed during his Super."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Rocket Laces",
+          "description": "Brock blasts the ground below him and propels himself into the air. The explosion deals x damage to nearby enemies."
+        },
+        {
+          "name": "Rocket Fuel",
+          "description": "Brock's next attack is a mega rocket that is bigger, badder, faster and destroys walls."
+        },
+        {
+          "name": "Oil Change",
+          "description": "Bolt gains a x - x health shield based on his current speed."
+        },
+        {
+          "name": "Bouncy Ball",
+          "description": "Bolt jumps to a target location and deals area damage. Breaks environments but loses all speed when landing."
+        }
+      ],
+      "hypercharge": null,
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Bolt/portrait.png",
         "render": "/assets/brawlers/Bolt/render.png",
@@ -87,6 +121,45 @@
       "class": "Unknown",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.733,
+      "hp": 4100,
+      "attack": {
+        "damage": 600,
+        "reloadSec": 0.22,
+        "ammoCount": 10
+      },
+      "super": {
+        "damage": 1300
+      },
+      "attackStyle": "melee",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Plie Protection",
+          "description": "Increases Super charge rate by x% if no damage has been received for x secs"
+        },
+        {
+          "name": "A Helping Hand",
+          "description": "SHADOW PUPPET now heals for x after charging up."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Longer Strings",
+          "description": "Super charging area is bigger."
+        },
+        {
+          "name": "Disappearing Act",
+          "description": "Gigi creates an area that makes herself and allies invisible while inside. Lasts x secs."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "6"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Gigi/portrait.png",
         "render": "/assets/brawlers/Gigi/render.png",
@@ -155,6 +228,59 @@
       "class": "Unknown",
       "rarity": "Legendary",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3000,
+      "attack": {
+        "damage": 950,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 13.33,
+          "radiusTiles": 0.208
+        }
+      },
+      "super": {
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 96.67,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "sniper",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Mission Swimpossible",
+          "description": "Pierce's last ammo also slows enemies by x%."
+        },
+        {
+          "name": "Slip N Snipe",
+          "description": "When collecting a shell, Pierce gains a short burst (x%) of movement speed."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Bottomless Mags",
+          "description": "Reload x ammo and drop a shell next to Pierce."
+        },
+        {
+          "name": "You Only Brawl Twice",
+          "description": "Pierce will absorb all shells and gain x shield for each one, while also pushing back nearby enemies."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Pierce/portrait.png",
         "render": "/assets/brawlers/Pierce/render.png",
@@ -225,6 +351,45 @@
       "class": "Unknown",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 5200,
+      "attack": {
+        "damage": 1400,
+        "reloadSec": 1.5,
+        "ammoCount": 3
+      },
+      "super": {
+        "damage": 150
+      },
+      "attackStyle": "melee",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "New Insect Overlords",
+          "description": "Ants also reduce the damage of enemies by x%"
+        },
+        {
+          "name": "Colony Scouts",
+          "description": "Ants reveal hidden enemies."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "For The Queen",
+          "description": "Trunk instantly spreads ants in a large area."
+        },
+        {
+          "name": "Worker Ants",
+          "description": "Trunk heals from the first source of damage taken for the next x secs."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Trunk/portrait.png",
         "render": "/assets/brawlers/Trunk/render.png",
@@ -289,6 +454,44 @@
       "class": "Unknown",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 3900,
+      "attack": {
+        "damage": 1300,
+        "reloadSec": 2.1,
+        "ammoCount": 3
+      },
+      "super": {},
+      "attackStyle": "dash-attack",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Lizard Limbs",
+          "description": "While enraged Alli regenerates health faster out of combat after only x seconds."
+        },
+        {
+          "name": "You Better Run You Better Take Cover",
+          "description": "Alli reloads x% faster while enraged."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Feed The Gators",
+          "description": "The next main attack heals Alli for x% of damage dealt."
+        },
+        {
+          "name": "Cold-Blooded",
+          "description": "Alli becomes enraged for the next x secs. Can only be activated when an enemy is visible."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_stalker",
+        "multipliers": {
+          "value": "25",
+          "value2": "20"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Alli/portrait.png",
         "render": "/assets/brawlers/Alli/render.png",
@@ -349,6 +552,56 @@
       "class": "Unknown",
       "rarity": "Ultra Legendary",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.733,
+      "hp": 4100,
+      "attack": {
+        "damage": 750,
+        "reloadSec": 1.0,
+        "ammoCount": 3
+      },
+      "super": {
+        "damage": 650,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 3.33,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "dash-attack",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Advanced Techniques",
+          "description": "Hitting an enemy in a Strike Spot also slows them by x% for x sec"
+        },
+        {
+          "name": "Gratuity Included",
+          "description": "Removes x% ammo from Brawlers initially caught in the Fan Storm"
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Gracious Host",
+          "description": "Switch to Ninja Aspect and gain x% Movement Speed for x sec"
+        },
+        {
+          "name": "Hensojutsu",
+          "description": "Switch to Ninja Aspect and gain short invisibility"
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_geisha",
+        "multipliers": {
+          "value": "1",
+          "value2": "30"
+        }
+      },
+      "specialMechanics": [
+        "Alternates between human (melee dash) and spirit forms; transformation changes attack style"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Kaze/portrait.png",
         "render": "/assets/brawlers/Kaze/render.png",
@@ -435,6 +688,115 @@
       ]
     },
     {
+      "id": 16000093,
+      "hash": "Jae-Yong",
+      "name": "Jae-Yong",
+      "internalName": "Alternator",
+      "class": "Unknown",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 3700,
+      "attack": {
+        "damage": 750,
+        "reloadSec": 1.5,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 12.33,
+          "radiusTiles": 0.469
+        }
+      },
+      "super": {},
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "The Crowd Goes Mild",
+          "description": "Being near teammates gives Jae-yong a x% speed boost per teammate in range."
+        },
+        {
+          "name": "Extra High Note",
+          "description": "Main Attacks now deal an additional x% Damage per target pierced."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Weekend Warrior",
+          "description": "Deals area damage and increases main attack damage for x sec."
+        },
+        {
+          "name": "Time For A Slow Song",
+          "description": "Jae-yong slows enemies around him and his attacks will leave trails of slowing paperwork for x sec."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_super_charge_rate",
+        "multipliers": {
+          "value": "600"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
+      "assets": {
+        "portrait": "/assets/brawlers/Jae-Yong/portrait.png",
+        "render": "/assets/brawlers/Jae-Yong/render.png",
+        "emoji": "/assets/brawlers/Jae-Yong/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "AlternatorWeaponSpeed",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 8.333333333333334,
+            "widthTiles": 0.9375
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "AlternatorUltiHeal",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "AlternatorWeaponSpeed",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.416666666666668,
+            "widthTiles": 0.9375
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "AlternatorUltiHeal",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
       "id": 16000092,
       "hash": "Finx",
       "name": "Finx",
@@ -442,6 +804,61 @@
       "class": "Unknown",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 3700,
+      "attack": {
+        "damage": 900,
+        "reloadSec": 1.3,
+        "ammoCount": 3,
+        "numProjectiles": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.0,
+          "radiusTiles": 0.208
+        }
+      },
+      "super": {
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 6.67,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Hieroglyph Halt",
+          "description": "Finx reduces the reload speed of any enemy Brawlers hit by his main attack by x% for x seconds."
+        },
+        {
+          "name": "Primer",
+          "description": "Damage dealt only from Finx's projectiles that are sped up by Time Warp, will increase the Super duration by x seconds each."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Back To The Finxture",
+          "description": "Finx steps back in time, returning to the position and ammo he had x seconds ago."
+        },
+        {
+          "name": "No Escape",
+          "description": "Finx's next projectiles from his main attack freeze the enemies in time for x seconds, making them unable to take actions for the duration, but also making them immune to any damage."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Finx/portrait.png",
         "render": "/assets/brawlers/Finx/render.png",
@@ -512,6 +929,65 @@
       "class": "Damage Dealer",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3500,
+      "attack": {
+        "damage": 600,
+        "ammoCount": 2,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 11.67,
+          "radiusTiles": 0.354
+        }
+      },
+      "super": {
+        "damage": 1000,
+        "reloadSec": 0.1,
+        "ammoCount": 1,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 96.67,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "42% Burnt",
+          "description": "The explosions from Lumi's Blast Beat also set the area alight for x seconds. Fire damage also scales with explosion damage. Damage per second for the biggest explosion: x"
+        },
+        {
+          "name": "Half-Time",
+          "description": "Lumi slows enemies hit by her recalled morning stars for x seconds."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Hit The Lights",
+          "description": "Lumi ignites her morning stars on the ground, producing flames which damage nearby enemies for x seconds. Damage per second: x"
+        },
+        {
+          "name": "Grim And Frostbitten",
+          "description": "Lumi creates freezing winds around her morning stars on the ground, creating a slippery surface for x secs."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_morningstar",
+        "multipliers": {
+          "value": "3",
+          "value2": "100"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Lumi/portrait.png",
         "render": "/assets/brawlers/Lumi/render.png",
@@ -586,6 +1062,54 @@
       "class": "Unknown",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 5400,
+      "attack": {
+        "damage": 900,
+        "reloadSec": 1.8,
+        "ammoCount": 3,
+        "numProjectiles": 2,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.0,
+          "radiusTiles": 0.208
+        }
+      },
+      "super": {},
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Kick Push",
+          "description": "While near walls Ollie kicks off his hoverboard and gains x% extra movement speed."
+        },
+        {
+          "name": "Renegade",
+          "description": "After dashing forward with his Super, Ollie gains a x decaying shield over x seconds."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Regulate",
+          "description": "Ollie jumps and does a rad kickflip, hypnotizing all enemies where he lands for x seconds."
+        },
+        {
+          "name": "All Eyez On Me",
+          "description": "Ollie's next attack will hypnotize any enemies hit for x seconds."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Ollie/portrait.png",
         "render": "/assets/brawlers/Ollie/render.png",
@@ -652,6 +1176,60 @@
       "class": "Unknown",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3300,
+      "attack": {
+        "damage": 1260,
+        "reloadSec": 1.7,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.0,
+          "radiusTiles": 0.21
+        }
+      },
+      "super": {
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 3.99,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Do Not Pass Go",
+          "description": "When you shoot through environment deal x more damage."
+        },
+        {
+          "name": "Rule Bending",
+          "description": "Critical success also increases allies reload speed within the area by <VALUE>%."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Mansions Of Meeple",
+          "description": "Meeple's next attack creates dice towers around the impact area and deals x damage."
+        },
+        {
+          "name": "Ragequit",
+          "description": "Meeple lashes out in rage at nearby enemies, stunning and knocking them back. The less hitpoints Meeple has, the stun and knockback effects increase."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Meeple/portrait.png",
         "render": "/assets/brawlers/Meeple/render.png",
@@ -722,6 +1300,62 @@
       "class": "Artillery",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3100,
+      "attack": {
+        "damage": 1000,
+        "reloadSec": 1.6,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 5.83,
+          "radiusTiles": 0.0
+        }
+      },
+      "super": {
+        "spawnedEntity": "VoodooPet",
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 3.99,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "thrower",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Guarded Gris-Gris",
+          "description": "Gris-Gris is summoned with a protective shield."
+        },
+        {
+          "name": "Numbing Needles",
+          "description": "Gris-Gris' attack now also slows the enemy for ? sec"
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Voodoo Chile",
+          "description": "Juju's next main attack has the power of all three elements."
+        },
+        {
+          "name": "Elementalist",
+          "description": "Juju gains a temporary buff based on the current environment she is standing on. Earth: Damage reduction Grass: Invisibility Water: Increased movement speed"
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_pet_buff_stats",
+        "multipliers": {
+          "value": "20",
+          "value2": "20"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Juju/portrait.png",
         "render": "/assets/brawlers/Juju/render.png",
@@ -794,6 +1428,43 @@
       "class": "Assassin",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.733,
+      "hp": 3700,
+      "attack": {
+        "damage": 800,
+        "reloadSec": 0.8,
+        "ammoCount": 3
+      },
+      "super": {},
+      "attackStyle": "shotgun-cone",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Spooky Speedster",
+          "description": "Hitting opponents with the center of Shade's main attack gives a short movement speed boost."
+        },
+        {
+          "name": "Hardened Hoodie",
+          "description": "Shade gets x% damage reduction while in its Incorporeal Form."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Longarms",
+          "description": "The next main attack has x% longer range."
+        },
+        {
+          "name": "Jump Scare",
+          "description": "Shade spooks nearby enemies, slowing them for x seconds."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Shade/portrait.png",
         "render": "/assets/brawlers/Shade/render.png",
@@ -860,6 +1531,62 @@
       "class": "Damage Dealer",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3800,
+      "attack": {
+        "damage": 700,
+        "reloadSec": 2.0,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 11.67,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {
+        "damage": 600,
+        "numProjectiles": 2,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.0,
+          "radiusTiles": 0.312
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Recon",
+          "description": "Clancy starts the match with x tokens."
+        },
+        {
+          "name": "Pumping Up",
+          "description": "Clancy reloads all of his ammo on every enemy takedown."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Snappy Shooting",
+          "description": "Clancy gains double tokens for x seconds."
+        },
+        {
+          "name": "Tactical Retreat",
+          "description": "Clancy dashes and reloads x ammo"
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_crab",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Clancy/portrait.png",
         "render": "/assets/brawlers/Clancy/render.png",
@@ -928,6 +1655,54 @@
       "class": "Support",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 2600,
+      "attack": {
+        "damage": 660,
+        "reloadSec": 2.4,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 7.33,
+          "radiusTiles": 0.0
+        }
+      },
+      "super": {
+        "damage": 1520
+      },
+      "attackStyle": "thrower",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Floor Is Fine",
+          "description": "Berry gains x% increased reload speed when standing on his own melted ice cream."
+        },
+        {
+          "name": "Making A Mess",
+          "description": "Berry's basic attack gains x% extra damage on impact in areas with no ice cream."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Friendship Is Great",
+          "description": "Berry swipes his tail, knocking back enemies and healing nearby allies for x health."
+        },
+        {
+          "name": "Healthy Additives",
+          "description": "Berry's next main attack area lasts for x% longer."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_painter",
+        "multipliers": {
+          "value": "1",
+          "value2": "90"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Berry/portrait.png",
         "render": "/assets/brawlers/Berry/render.png",
@@ -996,6 +1771,63 @@
       "class": "Assassin",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.733,
+      "hp": 4200,
+      "attack": {
+        "damage": 1060,
+        "reloadSec": 0.8,
+        "ammoCount": 2,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 11.67,
+          "radiusTiles": 0.625
+        }
+      },
+      "super": {
+        "damage": 500,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 12.67,
+          "radiusTiles": 0.417
+        }
+      },
+      "attackStyle": "melee",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Spiky",
+          "description": "After teleporting to an enemy, Lily's next attack deals x more damage"
+        },
+        {
+          "name": "Vigilance",
+          "description": "Gain x% movement speed while an enemy is in her Super charge radius"
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Vanish",
+          "description": "Lily enters the Shadow Realm for x seconds"
+        },
+        {
+          "name": "Repot",
+          "description": "The next Flourish, becomes a thrown attack, and Lily teleports to the destination on impact"
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_transport_shadowrealm",
+        "multipliers": {
+          "value": "100"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Lily/portrait.png",
         "render": "/assets/brawlers/Lily/render.png",
@@ -1064,6 +1896,54 @@
       "class": "Tank",
       "rarity": "Legendary",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 5600,
+      "attack": {
+        "damage": 700,
+        "reloadSec": 1.0,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 12.67,
+          "radiusTiles": 0.417
+        }
+      },
+      "super": {},
+      "attackStyle": "melee",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Expose",
+          "description": "Every x seconds, the next Lance Stab exposes enemies on hit. Exposed enemies take x% increased damage for x seconds."
+        },
+        {
+          "name": "Shredding",
+          "description": "Dragon Solo now also heals for x when activated."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Upper Cut",
+          "description": "The next Lance Stab also throws enemies in the air for a short time."
+        },
+        {
+          "name": "Last Stand",
+          "description": "Draco can not fall under one health for x seconds."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_dragon_rider",
+        "multipliers": {
+          "value": "10",
+          "value2": "4"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Draco/portrait.png",
         "render": "/assets/brawlers/Draco/render.png",
@@ -1126,6 +2006,53 @@
       "class": "Marksman",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.733,
+      "hp": 3100,
+      "attack": {
+        "damage": 2000,
+        "reloadSec": 0.1,
+        "ammoCount": 1,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 13.33,
+          "radiusTiles": 0.208
+        }
+      },
+      "super": {
+        "damage": 500
+      },
+      "attackStyle": "sniper",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Empower",
+          "description": "Staying inside the Super will heal Angelo for x per second."
+        },
+        {
+          "name": "Flow",
+          "description": "Angelo gains x% increased movement speed after entering water."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Stinging Flight",
+          "description": "Fly into the air for x seconds. Drains x health from nearby enemies on takeoff."
+        },
+        {
+          "name": "Master Fletcher",
+          "description": "The next Take Aim pierces enemies and the environment."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_insectMan",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Angelo/portrait.png",
         "render": "/assets/brawlers/Angelo/render.png",
@@ -1188,6 +2115,45 @@
       "class": "Support",
       "rarity": "Legendary",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.733,
+      "hp": 3100,
+      "attack": {
+        "damage": 1000,
+        "reloadSec": 0.8,
+        "ammoCount": 3
+      },
+      "super": {
+        "damage": 1000
+      },
+      "attackStyle": "shotgun-cone",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Power Hungry",
+          "description": "Kit gains x% power from each Power Cube."
+        },
+        {
+          "name": "Overly Attached",
+          "description": "Kit attaches to friendly Brawlers for x seconds longer."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Cardboard Box",
+          "description": "Hide in a cardboard box becoming invisible for x seconds. Charges the Super x faster while stationary."
+        },
+        {
+          "name": "Cheeseburger",
+          "description": "Heals himself and the friendly Brawler he is attached to for x."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Kit/portrait.png",
         "render": "/assets/brawlers/Kit/render.png",
@@ -1254,6 +2220,41 @@
       "class": "Assassin",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.733,
+      "hp": 3500,
+      "attack": {
+        "damage": 1140,
+        "reloadSec": 2.4,
+        "ammoCount": 3
+      },
+      "super": {},
+      "attackStyle": "dash-attack",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Monkey Business",
+          "description": "Every x seconds, Mico's basic attack steals ammo from his enemies after hitting them."
+        },
+        {
+          "name": "Record Smash",
+          "description": "Mico deals x% extra damage against non Brawlers."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Clipping Scream",
+          "description": "Mico lets out a deafening scream towards the nearest enemy, dealing ? damage and slowing down enemies for ? seconds on hit."
+        },
+        {
+          "name": "Presto",
+          "description": "Mico's next jump has x% longer range."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": null
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Mico/portrait.png",
         "render": "/assets/brawlers/Mico/render.png",
@@ -1314,6 +2315,60 @@
       "class": "Controller",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3700,
+      "attack": {
+        "damage": 800,
+        "reloadSec": 2.0,
+        "ammoCount": 1,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 14.0,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 11.0,
+          "radiusTiles": 0.417
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Digestive",
+          "description": "Cocooned enemies lose x% of their health while cocooned."
+        },
+        {
+          "name": "Slimy",
+          "description": "Cocoon leaves a slimy trail behind it for x seconds that slows down enemies walking over it."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Spiders",
+          "description": "Charlie releases x spiders that seek and attack the nearest enemies."
+        },
+        {
+          "name": "Personal Space",
+          "description": "Charlie cocoons herself, healing x% of her total health."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_projectile_spawn",
+        "multipliers": {
+          "value": "3"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Charlie/portrait.png",
         "render": "/assets/brawlers/Charlie/render.png",
@@ -1382,6 +2437,63 @@
       "class": "Damage Dealer",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 4700,
+      "attack": {
+        "damage": 540,
+        "reloadSec": 2.0,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 5.83,
+          "radiusTiles": 0.417
+        }
+      },
+      "super": {
+        "damage": 400,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 5.0,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Pit Stop",
+          "description": "Increase the maximum amount of Posts by x."
+        },
+        {
+          "name": "Tickets Please",
+          "description": "Dashing through enemies with his Super will also steal ?% of their ammo."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Rerouting",
+          "description": "Chuck removes the nearest Post and recharges his Super."
+        },
+        {
+          "name": "Ghost Train",
+          "description": "Chuck's next Super can go through walls!"
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_conductor",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Chuck/portrait.png",
         "render": "/assets/brawlers/Chuck/render.png",
@@ -1452,6 +2564,49 @@
       "class": "Damage Dealer",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 4300,
+      "attack": {
+        "damage": 280,
+        "reloadSec": 1.5,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 13.33,
+          "radiusTiles": 0.208
+        }
+      },
+      "super": {},
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Heat Retention",
+          "description": "Super will consume x% less Heat when used."
+        },
+        {
+          "name": "Heat Shield",
+          "description": "While the Heat is over x%, reduce damage taken by x%."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Overcooked",
+          "description": "Next basic attack shoots burning cookies, dealing x extra damage over time."
+        },
+        {
+          "name": "Made With Love",
+          "description": "Next basic attack shoots perfectly baked cookies ignoring enemies and healing allies for x over time instead."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": null
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Pearl/portrait.png",
         "render": "/assets/brawlers/Pearl/render.png",
@@ -1514,6 +2669,53 @@
       "class": "Support",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 5200,
+      "attack": {
+        "damage": 1200,
+        "reloadSec": 1.5,
+        "ammoCount": 3
+      },
+      "super": {
+        "reloadSec": 2.0,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 15.0,
+          "radiusTiles": 0.417
+        }
+      },
+      "attackStyle": "melee",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Fast Food",
+          "description": "When Doug revives an ally successfully, he will heal for x% of his max health."
+        },
+        {
+          "name": "Self Service",
+          "description": "Snack Attack also heals Doug by x."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Double Sausage",
+          "description": "The next Snack Attack only heals allies but doubles the amount."
+        },
+        {
+          "name": "Extra Mustard",
+          "description": "The next Snack Attack only damages enemies but doubles the amount."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Doug/portrait.png",
         "render": "/assets/brawlers/Doug/render.png",
@@ -1580,6 +2782,60 @@
       "class": "Assassin",
       "rarity": "Legendary",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.733,
+      "hp": 3500,
+      "attack": {
+        "damage": 800,
+        "reloadSec": 1.2,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 12.67,
+          "radiusTiles": 0.208
+        }
+      },
+      "super": {
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 12.67,
+          "radiusTiles": 0.417
+        }
+      },
+      "attackStyle": "melee",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Comboshrooms",
+          "description": "Hitting the second mushroom to the same target as the first, deals x% extra damage."
+        },
+        {
+          "name": "Mushroom Kingdom",
+          "description": "Cordelius spawns x mushrooms to the Shadow Realm after using his Super, healing allies and damaging enemies for x health on pickup."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Replanting",
+          "description": "Cordelius jumps over a piece of terrain quickly."
+        },
+        {
+          "name": "Poison Mushroom",
+          "description": "Cordelius's next main attack shoots a poison mushroom that prevents the enemy from attacking for x seconds."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "6"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Cordelius/portrait.png",
         "render": "/assets/brawlers/Cordelius/render.png",
@@ -1648,6 +2904,51 @@
       "class": "Marksman",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 4000,
+      "attack": {
+        "damage": 1500,
+        "reloadSec": 1.5,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.0,
+          "radiusTiles": 0.21
+        }
+      },
+      "super": {
+        "reloadSec": 1.8
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Pinpoint Precision",
+          "description": "Pressure rocket deals x% more damage at max distance."
+        },
+        {
+          "name": "Tremors",
+          "description": "Enemies hit by Shockwave are also slowed down for x seconds."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Disengage",
+          "description": "Maisie blasts the ground, stunning enemies for x seconds while dashing forward."
+        },
+        {
+          "name": "Finish Them",
+          "description": "Maisie instantly reloads x ammo and increases the next Pressure Rocket damage by x% of the target's missing HP."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": null
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Maisie/portrait.png",
         "render": "/assets/brawlers/Maisie/render.png",
@@ -1714,6 +3015,60 @@
       "class": "Controller",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3300,
+      "attack": {
+        "reloadSec": 2.0,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 5.83,
+          "radiusTiles": 0.0
+        }
+      },
+      "super": {
+        "reloadSec": 1.5,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 13.77,
+          "radiusTiles": 0.312
+        }
+      },
+      "attackStyle": "thrower",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Love Is Blind",
+          "description": "Lantern's Curse also reduces reload speed of affected Brawlers by x% for x seconds."
+        },
+        {
+          "name": "Obsession",
+          "description": "Hexed enemies gain x% movement speed while mind controlled."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Spellbound",
+          "description": "Willow's next Lantern's Curse deals x more damage and applies the entire damage instantly rather than over time."
+        },
+        {
+          "name": "Dive",
+          "description": "Willow dives for x seconds, becoming untargetable but unable to take any action for the duration."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Willow/portrait.png",
         "render": "/assets/brawlers/Willow/render.png",
@@ -1784,6 +3139,63 @@
       "class": "Marksman",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3000,
+      "attack": {
+        "damage": 1300,
+        "reloadSec": 1.5,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 12.67,
+          "radiusTiles": 0.208
+        }
+      },
+      "super": {
+        "damage": 2500,
+        "reloadSec": 0.1,
+        "ammoCount": 1,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 16.67,
+          "radiusTiles": 0.521
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "In My Sights",
+          "description": "Mandy shoots her candies with x% more speed while Focused."
+        },
+        {
+          "name": "Hard Candy",
+          "description": "Mandy receives x% shield while Focused."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Caramelize",
+          "description": "Mandy's next candy from her Candy Dispenser slows down enemies on hit for ? seconds."
+        },
+        {
+          "name": "Cookie Crumbs",
+          "description": "Mandy's next candy from her Candy Dispenser pierces enemies and environment."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_beamer",
+        "multipliers": null
+      },
+      "specialMechanics": [
+        "Super projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Mandy/portrait.png",
         "render": "/assets/brawlers/Mandy/render.png",
@@ -1852,6 +3264,52 @@
       "class": "Support",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3400,
+      "attack": {
+        "damage": 1160,
+        "reloadSec": 1.4,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 12.68,
+          "radiusTiles": 0.104
+        }
+      },
+      "super": {},
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Fake Injury",
+          "description": "When Gray has full health, the next damage taken is reduced by <VALUE>%."
+        },
+        {
+          "name": "New Perspective",
+          "description": "When Gray or his Allies use Doors, they recover <VALUE>% of their max hit points."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Walking Cane",
+          "description": "Gray's next hit from the Finger Pistol shoots a walking cane which pulls enemies back by a bit."
+        },
+        {
+          "name": "Grand Piano",
+          "description": "Gray's next hit from the Finger Pistol will also leave a target on the ground where a piano will land and hurt enemies. It would be too bad if someone would get hurt, right?"
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_door_man",
+        "multipliers": {
+          "value": "2",
+          "value2": "1000"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Gray/portrait.png",
         "render": "/assets/brawlers/Gray/render.png",
@@ -1916,6 +3374,62 @@
       "class": "Damage Dealer",
       "rarity": "Legendary",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 3800,
+      "attack": {
+        "damage": 670,
+        "reloadSec": 1.9,
+        "ammoCount": 3,
+        "numProjectiles": 4,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 11.0,
+          "radiusTiles": 0.208
+        }
+      },
+      "super": {
+        "damage": 1880,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 2.67,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "shotgun-cone",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Single Bellomania",
+          "description": "The first bell of Chester's attack sequence does x% damage."
+        },
+        {
+          "name": "Sneak Peek",
+          "description": "Chester will always know what his next Super will be."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Spicy Dice",
+          "description": "Chester gets a new random Super that is different from his current one."
+        },
+        {
+          "name": "Candy Beans",
+          "description": "Chester eats a mystery flavored candy bean from his cap, gaining a random buff for x seconds."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_jester",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Chester/portrait.png",
         "render": "/assets/brawlers/Chester/render.png",
@@ -1986,6 +3500,64 @@
       "class": "Tank",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 5000,
+      "attack": {
+        "damage": 1380,
+        "reloadSec": 1.8,
+        "ammoCount": 3,
+        "numProjectiles": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 14.0,
+          "radiusTiles": 0.521
+        }
+      },
+      "super": {
+        "damage": 800,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 14.0,
+          "radiusTiles": 0.104
+        }
+      },
+      "attackStyle": "shotgun-cone",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Blockbuster",
+          "description": "Buster's Lens Flare deals x% more damage for each ally in his Super's charge area."
+        },
+        {
+          "name": "Kevlar Vest",
+          "description": "While Montage is active Buster takes x% less damage and is immune to knockbacks, slows and stuns."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Utility Belt",
+          "description": "Buster heals himself and all nearby allies for x health for each ally in his Super's charge area."
+        },
+        {
+          "name": "Slo-Mo Replay",
+          "description": "Buster's next Lens Flare pulls enemies towards him."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_buster",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Buster/portrait.png",
         "render": "/assets/brawlers/Buster/render.png",
@@ -2054,6 +3626,61 @@
       "class": "Support",
       "rarity": "Super Rare",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3300,
+      "attack": {
+        "damage": 1080,
+        "reloadSec": 1.5,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 13.33,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 12.0,
+          "radiusTiles": 0.417
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Health Bonanza",
+          "description": "Healing gained from spirits is increased by x%."
+        },
+        {
+          "name": "Spirit Animal",
+          "description": "Spooky increases the damage of a teammate by x% for x seconds."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Kooky Popper",
+          "description": "Explode all uncollected spirits, dealing x damage to nearby enemies."
+        },
+        {
+          "name": "Soul Switcher",
+          "description": "Gus loses <ccc0000>x% health but gains x% spirit instantly."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_soul_collector",
+        "multipliers": {
+          "value": "120",
+          "value2": "200"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Gus/portrait.png",
         "render": "/assets/brawlers/Gus/render.png",
@@ -2122,6 +3749,63 @@
       "class": "Assassin",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 5700,
+      "attack": {
+        "damage": 800,
+        "reloadSec": 1.6,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 16.67,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {
+        "damage": 1400,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 9.67,
+          "radiusTiles": 0.521
+        }
+      },
+      "attackStyle": "melee",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Hearty Recovery",
+          "description": "Upon recalling his Knuckle Busters, Sam instantly recovers x% of his missing health."
+        },
+        {
+          "name": "Remote Recharge",
+          "description": "While the Knuckle Busters are on the ground and near enemies, they will charge up Sam's Super."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Magnetic Field",
+          "description": "While the Knuckle Busters are on the ground, Sam can activate them to pull in nearby enemies."
+        },
+        {
+          "name": "Pulse Repellent",
+          "description": "Upon landing on the ground, Sam's next deployed Knuckle Busters releases an electric pulse that knocks back enemies."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Sam/portrait.png",
         "render": "/assets/brawlers/Sam/render.png",
@@ -2190,6 +3874,62 @@
       "class": "Controller",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3600,
+      "attack": {
+        "damage": 500,
+        "reloadSec": 1.5,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 12.0,
+          "radiusTiles": 0.208
+        }
+      },
+      "super": {
+        "damage": 340,
+        "reloadSec": 1.0,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.67,
+          "radiusTiles": 0.417
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Stencil Glue",
+          "description": "Cil mightily squeezes the enemy with all his might. Preventing them from attacking for x% longer."
+        },
+        {
+          "name": "Ink Refills",
+          "description": "Otis now shoots x% more ink drops."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Dormant Star",
+          "description": "The next starfish will stay on the ground if an enemy is not hit, laying dormant until an enemy gets close."
+        },
+        {
+          "name": "Phat Splatter",
+          "description": "Otis's next attack shoots a giant ink ball that leaves a puddle, dealing x damage over time for x seconds."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_silencer",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Otis/portrait.png",
         "render": "/assets/brawlers/Otis/render.png",
@@ -2258,6 +3998,55 @@
       "class": "Marksman",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.067,
+      "hp": 5000,
+      "attack": {
+        "damage": 1120,
+        "reloadSec": 1.0,
+        "ammoCount": 1,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 12.67,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {
+        "damage": 1000,
+        "spawnedEntity": "CannonGirlSmall"
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Black Powder",
+          "description": "The range of Bonnie's Star Launcher is increased by x%."
+        },
+        {
+          "name": "Wisdom Tooth",
+          "description": "Loose Tooth shatters on hit, dealing x% extra damage to nearby enemies."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Sugar Rush",
+          "description": "Clyde's movement and reload speed are increased by x% for x seconds."
+        },
+        {
+          "name": "Crash Test",
+          "description": "Bonnie dashes forward, knocking back enemies and dealing x damage on hit."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_cannon_girl",
+        "multipliers": {
+          "value": "10",
+          "value2": "4"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Bonnie/portrait.png",
         "render": "/assets/brawlers/Bonnie/render.png",
@@ -2324,6 +4113,65 @@
       "class": "Marksman",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3400,
+      "attack": {
+        "damage": 1000,
+        "reloadSec": 1.5,
+        "ammoCount": 3,
+        "numProjectiles": 4,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 12.17,
+          "radiusTiles": 0.208
+        }
+      },
+      "super": {
+        "damage": 800,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 5.0,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "shotgun-cone",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Stage View",
+          "description": "While in the air with her jetpack, Janet reveals a large area of bushes around herself."
+        },
+        {
+          "name": "Vocal Warm Up",
+          "description": "Janet's attack focuses x% faster."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Drop The Bass",
+          "description": "Janet deploys a speaker that deals x damage per second to all enemies in the area until it gets destroyed."
+        },
+        {
+          "name": "Backstage Pass",
+          "description": "Janet's next High Note pushes her back, even over walls. The more focused her attack is, the further she'll be pushed back."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_jetpack_girl",
+        "multipliers": {
+          "value": "3",
+          "value2": "460"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Janet/portrait.png",
         "render": "/assets/brawlers/Janet/render.png",
@@ -2394,6 +4242,61 @@
       "class": "Damage Dealer",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3100,
+      "attack": {
+        "damage": 400,
+        "reloadSec": 1.6,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 11.67,
+          "radiusTiles": 0.208
+        }
+      },
+      "super": {
+        "spawnedEntity": "FleaBigEgg",
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 4.0,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Unnatural Order",
+          "description": "Reverses the order of the eggs shot by her Egg Shooter."
+        },
+        {
+          "name": "Happy Surprise",
+          "description": "Every x seconds, the next largest egg hitting an enemy of her Egg Shooter will spawn a hatchling."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Gotta Go",
+          "description": "Eve jumps away and leaves behind a hatchling."
+        },
+        {
+          "name": "Motherly Love",
+          "description": "Hatchlings spawned from an active big egg will now heal allies over time instead of dealing damage."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_pet_change",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Eve/portrait.png",
         "render": "/assets/brawlers/Eve/render.png",
@@ -2464,6 +4367,53 @@
       "class": "Assassin",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 4800,
+      "attack": {
+        "damage": 1360,
+        "reloadSec": 1.0,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.67,
+          "radiusTiles": 0.625
+        }
+      },
+      "super": {
+        "damage": 1500
+      },
+      "attackStyle": "melee",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Fresh Kicks",
+          "description": "When Fang defeats an enemy Brawler with his Super, it's recharged instantly, allowing him to use his Super again!"
+        },
+        {
+          "name": "Divine Soles",
+          "description": "Reduce x damage from incoming hits once every x seconds. Maximum reduction is x% of the incoming damage."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Corn-Fu",
+          "description": "Fang tosses a handful of corn kernels into the air, making it rain popcorn! Each kernel pop deals x damage."
+        },
+        {
+          "name": "Roundhouse Kick",
+          "description": "Fang spins and hits all enemies around him, stunning them for x seconds."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "6"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Fang/portrait.png",
         "render": "/assets/brawlers/Fang/render.png",
@@ -2530,6 +4480,54 @@
       "class": "Tank",
       "rarity": "Legendary",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.733,
+      "hp": 2400,
+      "attack": {
+        "damage": 300,
+        "reloadSec": 1.3,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 13.33,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {
+        "spawnedEntity": "MechaDudeBig"
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Force Field",
+          "description": "Meg is protected by a x% shield for x seconds when her Mecha is destroyed."
+        },
+        {
+          "name": "Heavy Metal",
+          "description": "Upon expiring, the Mecha suit explodes, dealing x damage to nearby opponents and pushing them away."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Jolting Volts",
+          "description": "Heal the Mecha by x health per second for x seconds."
+        },
+        {
+          "name": "Toolbox",
+          "description": "Meg drops her toolbox, which increases the reload speed for nearby allies by x% until it gets destroyed."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_mecha_dude",
+        "multipliers": {
+          "value": "3000",
+          "value2": "200"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Meg/portrait.png",
         "render": "/assets/brawlers/Meg/render.png",
@@ -2592,6 +4590,64 @@
       "class": "Tank",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 5900,
+      "attack": {
+        "damage": 800,
+        "reloadSec": 1.4,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 16.67,
+          "radiusTiles": 0.521
+        }
+      },
+      "super": {
+        "spawnedEntity": "KnightPet",
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 3.99,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "melee",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "First Bash",
+          "description": "When hitting an opponent with his attack charges full, Ash gets even more angry. His Rage goes up by x%."
+        },
+        {
+          "name": "Mad As Heck",
+          "description": "Ash progressively gains up to x% faster reload speed, equal to how enraged he's become."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Chill Pill",
+          "description": "Though furious, Ash has to collect himself. A full Rage meter will recover x health when this Gadget is popped - less Rage, less recovery."
+        },
+        {
+          "name": "Rotten Banana",
+          "description": "Ash loses <ccc0000>x% health and instantly gains x% rage."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_more_pets",
+        "multipliers": {
+          "value": "5",
+          "value2": "10"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Ash/portrait.png",
         "render": "/assets/brawlers/Ash/render.png",
@@ -2662,6 +4718,65 @@
       "class": "Controller",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3700,
+      "attack": {
+        "damage": 280,
+        "reloadSec": 1.6,
+        "ammoCount": 3,
+        "numProjectiles": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.33,
+          "radiusTiles": 0.104
+        }
+      },
+      "super": {
+        "damage": 720,
+        "numProjectiles": 5,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.67,
+          "radiusTiles": 0.312
+        }
+      },
+      "attackStyle": "shotgun-cone",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Keep The Change",
+          "description": "Griff gains a slightly wider attack and adds another row of coins to the coin toss."
+        },
+        {
+          "name": "Business Resilience",
+          "description": "Every ? seconds, Griff regains up to ?% of his missing health."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Piggy Bank",
+          "description": "Griff throws a firecracker-filled piggy bank that explodes after a short delay, destroying obstacles and dealing ? damage to opponents within range."
+        },
+        {
+          "name": "Coin Shower",
+          "description": "Griff throws a shower of coins at target area, dealing ? damage per sec to opponents inside."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_griff",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [
+        "Super projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Griff/portrait.png",
         "render": "/assets/brawlers/Griff/render.png",
@@ -2758,6 +4873,63 @@
       "class": "Assassin",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 5000,
+      "attack": {
+        "damage": 420,
+        "reloadSec": 1.0,
+        "ammoCount": 3,
+        "numProjectiles": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 13.33,
+          "radiusTiles": 0.521
+        }
+      },
+      "super": {
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 12.67,
+          "radiusTiles": 0.312
+        }
+      },
+      "attackStyle": "melee",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Tougher Torpedo",
+          "description": "The minimum duration of Buzz's Super stun is increased by x seconds."
+        },
+        {
+          "name": "Eyes Sharp",
+          "description": "Buzz's Super charging area is increased by x%."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Reserve Buoy",
+          "description": "Instantly fills the Super meter, but the next Torpedo Throw doesn't stun opponents."
+        },
+        {
+          "name": "X-Ray-Shades",
+          "description": "Buzz can see into all bushes in his Super charging area for x seconds."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "6"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Buzz/portrait.png",
         "render": "/assets/brawlers/Buzz/render.png",
@@ -2826,6 +4998,61 @@
       "class": "Artillery",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3000,
+      "attack": {
+        "damage": 1030,
+        "reloadSec": 2.0,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 2.8,
+          "radiusTiles": 0.0
+        }
+      },
+      "super": {
+        "damage": 1600,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 2.67,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "thrower",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Foot Patrol",
+          "description": "When Grom's Super is fully charged, he gains +x% faster movement speed!"
+        },
+        {
+          "name": "X-Factor",
+          "description": "The split from Grom's main attack deals up to +x% extra damage at max distance."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Watchtower",
+          "description": "Grom ejects a Watchtower from his Grom Bomb that gives all allies sight into bushes over a large area. The watchtower slowly loses health over time."
+        },
+        {
+          "name": "Radio Check",
+          "description": "Grom's next attack throws x Buds in rapid succession."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Grom/portrait.png",
         "render": "/assets/brawlers/Grom/render.png",
@@ -2898,6 +5125,61 @@
       "class": "Controller",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3800,
+      "attack": {
+        "damage": 1160,
+        "reloadSec": 2.1,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 13.33,
+          "radiusTiles": 0.104
+        }
+      },
+      "super": {
+        "damage": 1000,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 2.67,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Chain Reaction",
+          "description": "Each opponent within the area of a Sticky Blomb's explosion increases the Blomb's damage by x%."
+        },
+        {
+          "name": "Super Sticky",
+          "description": "Secondary Sticky Blomb explosions from Squeak's Super also slow down opponents for x seconds."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Windup",
+          "description": "Squeak's next Sticky Blomb deals x% more damage and has x% longer range."
+        },
+        {
+          "name": "Residue",
+          "description": "Squeak's next Sticky Blomb leaves a residue area behind after exploding, slowing down enemies and giving allies sight into bushes for x seconds."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_stickyBomb",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Squeak/portrait.png",
         "render": "/assets/brawlers/Squeak/render.png",
@@ -2970,6 +5252,61 @@
       "class": "Marksman",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 2900,
+      "attack": {
+        "damage": 1040,
+        "reloadSec": 1.4,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 13.33,
+          "radiusTiles": 0.21
+        }
+      },
+      "super": {
+        "damage": 550,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 13.33,
+          "radiusTiles": 0.312
+        }
+      },
+      "attackStyle": "sniper",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Positive Feedback",
+          "description": "Belle gains a x% shield whenever her Electro-Bolts hit a target."
+        },
+        {
+          "name": "Grounded",
+          "description": "Getting marked by Belle's Super prevents the opponent from reloading their attack for x seconds."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Nest Egg",
+          "description": "Belle places a trap on the ground that will explode when triggered by an opponent. The trap deals ? damage, and slows down anyone within its blast radius for ? seconds."
+        },
+        {
+          "name": "Reverse Polarity",
+          "description": "Belle's next Electro-Bolt bounces from walls."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "6"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Belle/portrait.png",
         "render": "/assets/brawlers/Belle/render.png",
@@ -3038,6 +5375,51 @@
       "class": "Assassin",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3500,
+      "attack": {
+        "damage": 540,
+        "reloadSec": 1.5,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 11.0,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {},
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Zero Drag",
+          "description": "Stu's Nitro Boost Super dash distance increases by x%."
+        },
+        {
+          "name": "Gaso-Heal",
+          "description": "Using his Nitro Boost Super restores x of Stu's health."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Speed Zone",
+          "description": "Stu drops a booster that makes himself, his teammates and other allies move faster while inside its area of effect."
+        },
+        {
+          "name": "Breakthrough",
+          "description": "Stu's next Super can bash through obstacles, making debris fly forward. Each piece of debris deals x damage to any opponent it hits."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_ulti_recharge_on_charge",
+        "multipliers": {
+          "value": "4000"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Stu/portrait.png",
         "render": "/assets/brawlers/Stu/render.png",
@@ -3104,6 +5486,64 @@
       "class": "Support",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3000,
+      "attack": {
+        "damage": 600,
+        "reloadSec": 1.4,
+        "ammoCount": 3,
+        "numProjectiles": 2,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": true,
+          "speedTilesPerSec": 12.67,
+          "radiusTiles": 0.146
+        }
+      },
+      "super": {
+        "damage": 1000,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 5.67,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "bouncer",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Air Superiority",
+          "description": "Supply Drop now includes a bomb that adds x% more damage to the drop and also allows it to destroy walls."
+        },
+        {
+          "name": "Field Promotion",
+          "description": "Friendly Brawlers have their maximum health increased by x every second that they are in range of this ability while it's active."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Take Cover",
+          "description": "Ruffs throws down x sandbags as cover. Each one has x% of Ruffs' max health."
+        },
+        {
+          "name": "Air Support",
+          "description": "Ruffs calls a barrage around the nearest opponent, dealing x damage with each hit."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_ruffs",
+        "multipliers": {
+          "value": "25"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectiles bounce off walls"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Ruffs/portrait.png",
         "render": "/assets/brawlers/Ruffs/render.png",
@@ -3174,6 +5614,52 @@
       "class": "Assassin",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.733,
+      "hp": 3700,
+      "attack": {
+        "damage": 540,
+        "reloadSec": 0.7,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 11.67,
+          "radiusTiles": 0.625
+        }
+      },
+      "super": {},
+      "attackStyle": "melee",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Hard Landing",
+          "description": "Edgar's Super and Let's Fly Gadget will also deal ? damage to nearby enemies upon landing, or ? damage on a direct hit."
+        },
+        {
+          "name": "Fisticuffs",
+          "description": "Edgar receives ?% more healing from damage he deals."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Lets Fly",
+          "description": "Edgar's scarf grabs the closest Brawler and he jumps behind them. His scarf can also pull him towards walls."
+        },
+        {
+          "name": "Hardcore",
+          "description": "Edgar gets a shield that protects him from the next ? damage. The shield gets weaker over time."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": null
+      },
+      "specialMechanics": [
+        "Each melee hit heals Edgar; super launches him into the air with a grappling hook",
+        "Attack projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Edgar/portrait.png",
         "render": "/assets/brawlers/Edgar/render.png",
@@ -3253,6 +5739,60 @@
       "class": "Support",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 2600,
+      "attack": {
+        "reloadSec": 1.45,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 13.33,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {
+        "damage": 1500,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 6.67,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "sniper",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Malaise",
+          "description": "Byron's Super will also cause opponents to receive x% less healing from any source for x seconds."
+        },
+        {
+          "name": "Injection",
+          "description": "Every x seconds the next basic attack will pierce through targets."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Shot In The Arm",
+          "description": "Byron uses one of his shots to heal himself x per second for x seconds."
+        },
+        {
+          "name": "Booster Shots",
+          "description": "Byron's next attack shoots x darts instead of one, each dealing <ccc0000>x% less damage and <ccc0000>x% less healing."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Byron/portrait.png",
         "render": "/assets/brawlers/Byron/render.png",
@@ -3323,6 +5863,56 @@
       "class": "Controller",
       "rarity": "Mythic",
       "hasHypercharge": false,
+      "speedTilesPerSec": 2.4,
+      "hp": 3500,
+      "attack": {
+        "damage": 440,
+        "reloadSec": 1.1,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 13.33,
+          "radiusTiles": 0.104
+        }
+      },
+      "super": {
+        "damage": 40,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 5.8,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Supercool",
+          "description": "Opponents standing on Lou's Super area get frozen x% faster."
+        },
+        {
+          "name": "Hypothermia",
+          "description": "Opponents lose up to x% of their damage based on how frozen they are from Lou's attacks."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Ice Block",
+          "description": "Lou shields himself with ice, becoming invulnerable for x seconds."
+        },
+        {
+          "name": "Cryo Syrup",
+          "description": "Instantly adds x% freeze meter to opponents inside Lou's Super."
+        }
+      ],
+      "hypercharge": null,
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Lou/portrait.png",
         "render": "/assets/brawlers/Lou/render.png",
@@ -3366,6 +5956,63 @@
       "class": "Controller",
       "rarity": "Legendary",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3400,
+      "attack": {
+        "damage": 210,
+        "reloadSec": 0.22,
+        "ammoCount": 40,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 11.67,
+          "radiusTiles": 0.417
+        }
+      },
+      "super": {
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 5.83,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Wild Flames",
+          "description": "Amber can have two fuel puddles on the ground simultaneously and she will recharge her Super automatically when standing near one."
+        },
+        {
+          "name": "Scorchin Siphon",
+          "description": "While being near a puddle of fire fluid, Amber uses it to reload her firebreathing x% faster."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Fire Starters",
+          "description": "Amber runs fast for x seconds while spilling her fire fluid, which she can then ignite."
+        },
+        {
+          "name": "Dancing Flames",
+          "description": "Amber creates x orbiting flames around her for x seconds, dealing x damage on hit."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [
+        "Hold to spray a continuous stream of fire; attack has limited range but high sustained damage",
+        "Attack projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Amber/portrait.png",
         "render": "/assets/brawlers/Amber/render.png",
@@ -3436,6 +6083,53 @@
       "class": "Damage Dealer",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3600,
+      "attack": {
+        "damage": 1100,
+        "reloadSec": 1.6,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 13.33,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {
+        "damage": 2200
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Push It",
+          "description": "All enemy Brawlers hit by Colette's charge are carried to the farthest point of the attack! At max distance, they are stunned for ? sec."
+        },
+        {
+          "name": "Mass Tax",
+          "description": "Colette takes ?% less damage during her Super and gains 30% shield for 3 sec if she hits a Brawler."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Na-Ah",
+          "description": "Colette fires a projectile that charms a Brawler for ? sec. Uses ammo."
+        },
+        {
+          "name": "Gotcha",
+          "description": "Colette fires a projectile that heals for ?% of damage dealt. Uses ammo and can be fired 3 times before cooldown."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_pet_charge",
+        "multipliers": {
+          "value": "66"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Colette/portrait.png",
         "render": "/assets/brawlers/Colette/render.png",
@@ -3528,6 +6222,53 @@
       "class": "Damage Dealer",
       "rarity": "Legendary",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.167,
+      "hp": 3300,
+      "attack": {
+        "damage": 1180,
+        "reloadSec": 2.0,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 11.67,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {
+        "damage": 1000
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "To The Max",
+          "description": "Surge's main attack now splits when hitting walls."
+        },
+        {
+          "name": "Serve Ice Cold",
+          "description": "Surge keeps his STAGE 1 Super upgrade for the full match duration."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Power Surge",
+          "description": "Surge overloads his circuits and increases his upgrade stage by x for x seconds."
+        },
+        {
+          "name": "Power Shield",
+          "description": "Within the next x seconds, Surge consumes x% of the damage of the next incoming hit and uses the energy to reload x ammo."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_powerleveler",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Surge/portrait.png",
         "render": "/assets/brawlers/Surge/render.png",
@@ -3594,6 +6335,60 @@
       "class": "Artillery",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3200,
+      "attack": {
+        "damage": 1040,
+        "reloadSec": 1.7,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 5.67,
+          "radiusTiles": 0.104
+        }
+      },
+      "super": {
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 5.8,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "thrower",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Overgrowth",
+          "description": "Every x seconds, the next Seed Bomb will explode with a larger explosion radius."
+        },
+        {
+          "name": "Photosynthesis",
+          "description": "Sprout activates a shield, partially protecting itself from all attacks while inside a bush."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Garden Mulcher",
+          "description": "Sprout consumes a bush to restore x health."
+        },
+        {
+          "name": "Transplant",
+          "description": "Sprout destroys its current Hedge, but will instantly have its Super fully charged again."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "6"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Sprout/portrait.png",
         "render": "/assets/brawlers/Sprout/render.png",
@@ -3666,6 +6461,65 @@
       "class": "Marksman",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 2500,
+      "attack": {
+        "damage": 800,
+        "reloadSec": 1.8,
+        "ammoCount": 3,
+        "numProjectiles": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 13.33,
+          "radiusTiles": 0.083
+        }
+      },
+      "super": {
+        "damage": 1800,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 8.33,
+          "radiusTiles": 0.312
+        }
+      },
+      "attackStyle": "shotgun-cone",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Autofocus",
+          "description": "Peep deals up to x extra damage based on his travel distance."
+        },
+        {
+          "name": "Tempered Steel",
+          "description": "Nani takes x% less damage while her Super is active."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Warpin Time",
+          "description": "Nani teleports to Peep's last known location and ends her Super."
+        },
+        {
+          "name": "Return To Sender",
+          "description": "For the next x seconds, the first time Nani takes damage from an enemy, x% of the damage is returned to the enemy."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_projectile_scale",
+        "multipliers": {
+          "value": "100",
+          "value2": "200"
+        }
+      },
+      "specialMechanics": [
+        "Super detaches and remotely controls Peep; Peep explodes on contact or when recalled"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Nani/portrait.png",
         "render": "/assets/brawlers/Nani/render.png",
@@ -3734,6 +6588,67 @@
       "class": "Controller",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 4000,
+      "attack": {
+        "damage": 300,
+        "reloadSec": 1.2,
+        "ammoCount": 3,
+        "numProjectiles": 6,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.0,
+          "radiusTiles": 0.104
+        }
+      },
+      "super": {
+        "damage": 600,
+        "numProjectiles": 4,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 16.67,
+          "radiusTiles": 0.312
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Blustery Blow",
+          "description": "Gale's Super now stuns enemies for x seconds if they are pushed against obstacles."
+        },
+        {
+          "name": "Freezing Snow",
+          "description": "Gale's snow balls now also slow down opponents for ? seconds."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Spring Ejector",
+          "description": "Gale drops a bounce pad underfoot, launching friend and foe alike into the air."
+        },
+        {
+          "name": "Twister",
+          "description": "Gale uses his leaf blower to create a local tornado, which will push away any opponents that try to pass through."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_blower",
+        "multipliers": {
+          "value": "7",
+          "value2": "400"
+        }
+      },
+      "specialMechanics": [
+        "Super fires a long-range burst of wind that pushes enemies back significantly",
+        "Super projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Gale/portrait.png",
         "render": "/assets/brawlers/Gale/render.png",
@@ -3802,6 +6717,43 @@
       "class": "Tank",
       "rarity": "Super Rare",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 5000,
+      "attack": {
+        "reloadSec": 1.8,
+        "ammoCount": 3
+      },
+      "super": {},
+      "attackStyle": "melee",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Counter Crush",
+          "description": "When receiving damage, Jacky returns the favor by converting x% of the damage into a Groundbreaker counterattack."
+        },
+        {
+          "name": "Hardy Hard Hat",
+          "description": "Jacky's Hard Hat protects her by reducing any damage she takes by x%."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Pneumatic Booster",
+          "description": "Jacky gets a burst of energy and moves x% faster for x seconds."
+        },
+        {
+          "name": "Rebuild",
+          "description": "Jacky rebuilds the environment in a small radius around her."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_global_slow",
+        "multipliers": {
+          "value": "30",
+          "value2": "350"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Jacky/portrait.png",
         "render": "/assets/brawlers/Jacky/render.png",
@@ -3862,6 +6814,51 @@
       "class": "Support",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.733,
+      "hp": 3500,
+      "attack": {
+        "damage": 320,
+        "reloadSec": 1.3,
+        "ammoCount": 4,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 13.33,
+          "radiusTiles": 0.104
+        }
+      },
+      "super": {},
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Super Charged",
+          "description": "Max now charges her Super while moving."
+        },
+        {
+          "name": "Run N Gun",
+          "description": "Max reloads faster while moving."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Phase Shifter",
+          "description": "Max dashes forward, and becomes immune to all damage from enemies while dashing."
+        },
+        {
+          "name": "Sneaky Sneakers",
+          "description": "Max blinks back to a place of her choosing after x seconds' delay, recovering any damage she received in the meantime."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_speedy",
+        "multipliers": {
+          "value": "6"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Max/portrait.png",
         "render": "/assets/brawlers/Max/render.png",
@@ -3917,6 +6914,133 @@
       ]
     },
     {
+      "id": 16000031,
+      "hash": "Mr-P",
+      "name": "Mr. P",
+      "internalName": "SpawnerDude",
+      "class": "Controller",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3700,
+      "attack": {
+        "damage": 760,
+        "reloadSec": 1.6,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.0,
+          "radiusTiles": 0.417
+        }
+      },
+      "super": {
+        "spawnedEntity": "SpawnerDudeTurret",
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 3.99,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": "turret-deployer",
+      "starPowers": [
+        {
+          "name": "Handle With Care",
+          "description": "Every x seconds, the explosion damage of Mr. P's next overstuffed suitcase is increased by x%."
+        },
+        {
+          "name": "Revolving Door",
+          "description": "All robo-porters from the home base now have x% more health and x% higher damage."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Service Bell",
+          "description": "Mr. P buffs his current porter by increasing its damage by x and health by x."
+        },
+        {
+          "name": "Porter Reinforcements",
+          "description": "The next attack will spawn a weak porter where the attack lands."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_pet_change",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [
+        "Super spawns a persistent turret or support structure"
+      ],
+      "assets": {
+        "portrait": "/assets/brawlers/Mr-P/portrait.png",
+        "render": "/assets/brawlers/Mr-P/render.png",
+        "emoji": "/assets/brawlers/Mr-P/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "SpawnerDudeWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 7.0,
+            "widthTiles": 0.8333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "SpawnerDudeUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 5.0,
+            "splashTiles": 0.9375,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "SpawnerDudeWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 8.75,
+            "widthTiles": 0.8333333333333334
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "SpawnerDudeUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 6.25,
+            "splashTiles": 1.171875,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
       "id": 16000030,
       "hash": "Emz",
       "name": "Emz",
@@ -3924,6 +7048,56 @@
       "class": "Controller",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3900,
+      "attack": {
+        "damage": 560,
+        "reloadSec": 2.0,
+        "ammoCount": 3,
+        "numProjectiles": 5,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 5.0,
+          "radiusTiles": 0.417
+        }
+      },
+      "super": {
+        "damage": 240
+      },
+      "attackStyle": "shotgun-cone",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Bad Karma",
+          "description": "Enemies that stay within the cloud of Emz's toxic hair spray suffer increasing damage, x% per hit."
+        },
+        {
+          "name": "Hype",
+          "description": "Emz recovers x health per second for each enemy Brawler inside her Super's area of effect."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Friendzoner",
+          "description": "Emz fires off some hairspray that pushes enemies back. Deals ? damage."
+        },
+        {
+          "name": "Acid Spray",
+          "description": "Emz squirts out hairspray that goes through walls! Deals ? damage."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_mummy",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Emz/portrait.png",
         "render": "/assets/brawlers/Emz/render.png",
@@ -4012,6 +7186,62 @@
       "class": "Marksman",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 2800,
+      "attack": {
+        "damage": 800,
+        "reloadSec": 0.9,
+        "ammoCount": 1,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.85,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {
+        "damage": 100,
+        "numProjectiles": 7,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 8.33,
+          "radiusTiles": 0.312
+        }
+      },
+      "attackStyle": "sniper",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Insta Beaload",
+          "description": "Instantly Supercharge Bea's Big Sting one time if she misses a Supercharged shot."
+        },
+        {
+          "name": "Honeycomb",
+          "description": "Bea receives a x% shield while Big Sting is Supercharged."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Honey Molasses",
+          "description": "Bea drops a beehive with a splash of sticky honey around it. The honey slows down enemies that step in it."
+        },
+        {
+          "name": "Rattled Hive",
+          "description": "Bea unleashes x angry bees that circle away from her, dealing more damage the further they go (up to x damage)."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_beesniper",
+        "multipliers": null
+      },
+      "specialMechanics": [
+        "Hitting an enemy charges the next attack, dealing greatly increased damage"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Bea/portrait.png",
         "render": "/assets/brawlers/Bea/render.png",
@@ -4080,6 +7310,63 @@
       "class": "Controller",
       "rarity": "Legendary",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 4100,
+      "attack": {
+        "damage": 900,
+        "reloadSec": 1.8,
+        "ammoCount": 3,
+        "numProjectiles": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 11.67,
+          "radiusTiles": 0.417
+        }
+      },
+      "super": {
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 6.67,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "shotgun-cone",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Rude Sands",
+          "description": "Sandstorm now also damages enemies for x damage per second."
+        },
+        {
+          "name": "Healing Winds",
+          "description": "Sandstorm now also heals friendly Brawlers for x health per second."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Sleep Stimulator",
+          "description": "Sandy falls asleep for x seconds and his health is fully restored."
+        },
+        {
+          "name": "Sweet Dreams",
+          "description": "Sandy's next attack lulls opponents to sleep for x seconds. They will, however, wake up from any damage."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_sandy",
+        "multipliers": {
+          "value": "6"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Sandy/portrait.png",
         "render": "/assets/brawlers/Sandy/render.png",
@@ -4143,6 +7430,133 @@
       ]
     },
     {
+      "id": 16000027,
+      "hash": "8-Bit",
+      "name": "8-Bit",
+      "internalName": "Arcade",
+      "class": "Damage Dealer",
+      "rarity": "Super Rare",
+      "hasHypercharge": true,
+      "speedTilesPerSec": 1.933,
+      "hp": 5200,
+      "attack": {
+        "damage": 340,
+        "reloadSec": 1.5,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 15.0,
+          "radiusTiles": 0.104
+        }
+      },
+      "super": {
+        "spawnedEntity": "DamageBooster",
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 3.99,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": "turret-deployer",
+      "starPowers": [
+        {
+          "name": "Boosted Booster",
+          "description": "Increases the Damage Booster's range by x% and boosts damage by an additional x%."
+        },
+        {
+          "name": "Plugged In",
+          "description": "When 8-Bit is near his Damage Booster, he will plug in and have increased movement speed."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Cheat Cartridge",
+          "description": "8-Bit instantly teleports to his Damage Booster."
+        },
+        {
+          "name": "Extra Credits",
+          "description": "8-Bit's next attack has the number of projectiles increased to x."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_pet_change",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [
+        "Super spawns a persistent turret or support structure"
+      ],
+      "assets": {
+        "portrait": "/assets/brawlers/8-Bit/portrait.png",
+        "render": "/assets/brawlers/8-Bit/render.png",
+        "emoji": "/assets/brawlers/8-Bit/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "ArcadeWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 10.0,
+            "spreadDeg": 18
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "ArcadeUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 5.0,
+            "splashTiles": 3.125,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "ArcadeWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 12.5,
+            "spreadDeg": 18
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "ArcadeUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 6.25,
+            "splashTiles": 3.90625,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
       "id": 16000026,
       "hash": "Bibi",
       "name": "Bibi",
@@ -4150,6 +7564,56 @@
       "class": "Tank",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.733,
+      "hp": 5000,
+      "attack": {
+        "damage": 1400,
+        "reloadSec": 0.8,
+        "ammoCount": 3
+      },
+      "super": {
+        "damage": 900,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": true,
+          "speedTilesPerSec": 10.0,
+          "radiusTiles": 0.521
+        }
+      },
+      "attackStyle": "shotgun-cone",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Home Run",
+          "description": "Bibi's movement speed is increased by x% when her Home Run bar is fully charged."
+        },
+        {
+          "name": "Batting Stance",
+          "description": "When Bibi's Home run bar is fully charged, she shields herself from all damage by x%."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Vitamin Booster",
+          "description": "Bibi heals ? health per second for ? seconds."
+        },
+        {
+          "name": "Extra Sticky",
+          "description": "Bibi throws bubble gum that slows all enemies in it by ?%"
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "6"
+        }
+      },
+      "specialMechanics": [
+        "Super projectiles bounce off walls",
+        "Super projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Bibi/portrait.png",
         "render": "/assets/brawlers/Bibi/render.png",
@@ -4234,6 +7698,55 @@
       "class": "Damage Dealer",
       "rarity": "Super Rare",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 4200,
+      "attack": {
+        "damage": 740,
+        "reloadSec": 2.0,
+        "ammoCount": 1,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.0,
+          "radiusTiles": 0.521
+        }
+      },
+      "super": {
+        "damage": 500
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Power Throw",
+          "description": "Carl throws his Pickaxe with x% more speed, allowing it to travel and return faster."
+        },
+        {
+          "name": "Protective Pirouette",
+          "description": "During Carl's Super, all damage he receives is reduced by x%."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Heat Ejector",
+          "description": "The next pickaxe Carl throws will drop a trail of hot rocks behind it! Opponents that touch them are set on fire and receive x damage per second."
+        },
+        {
+          "name": "Flying Hook",
+          "description": "Carl's next attack makes his pickaxe pull him to the farthest point of the attack."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_whirlwind",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Carl/portrait.png",
         "render": "/assets/brawlers/Carl/render.png",
@@ -4300,6 +7813,54 @@
       "class": "Tank",
       "rarity": "Rare",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 5400,
+      "attack": {
+        "damage": 500,
+        "reloadSec": 1.0,
+        "ammoCount": 3,
+        "numProjectiles": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 16.67,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {},
+      "attackStyle": "shotgun-cone",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Plant Life",
+          "description": "Rosa recovers x health per second when inside a bush."
+        },
+        {
+          "name": "Thorny Gloves",
+          "description": "Rosa's punches gain +x damage during her Super."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Grow Light",
+          "description": "Rosa fertilizes the ground around her and bushes instantly grow to provide great cover."
+        },
+        {
+          "name": "Unfriendly Bushes",
+          "description": "All opponents hiding in bushes take ? damage and get slowed down for ? seconds."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_slowing_area",
+        "multipliers": {
+          "value": "3"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Rosa/portrait.png",
         "render": "/assets/brawlers/Rosa/render.png",
@@ -4362,6 +7923,49 @@
       "class": "Assassin",
       "rarity": "Legendary",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.733,
+      "hp": 3300,
+      "attack": {
+        "damage": 480,
+        "reloadSec": 1.9,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 11.67,
+          "radiusTiles": 0.208
+        }
+      },
+      "super": {},
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Smoke Trails",
+          "description": "When Leon is not visible, he gains a x% movement speed for the duration of his invisibility."
+        },
+        {
+          "name": "Invisiheal",
+          "description": "Leon recovers ? health per second while his Super is active."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Clone Projector",
+          "description": "Leon creates an illusion of himself to confuse his enemies. The clone attacks enemies dealing minor damage"
+        },
+        {
+          "name": "Lollipop Drop",
+          "description": "Leon throws a stealthy area for his team to hide in. The lollipop slowly loses its health over time."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": null
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Leon/portrait.png",
         "render": "/assets/brawlers/Leon/render.png",
@@ -4438,6 +8042,62 @@
       "class": "Artillery",
       "rarity": "Super Rare",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 2400,
+      "attack": {
+        "damage": 680,
+        "reloadSec": 2.4,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 1.5,
+          "radiusTiles": 0.0
+        }
+      },
+      "super": {
+        "spawnedEntity": "ClusterBombPet",
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 3.99,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "thrower",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Well Oiled",
+          "description": "When Tick takes no damage and doesn't attack, he starts recovering health x seconds sooner than normal."
+        },
+        {
+          "name": "Automa-Tick Reload",
+          "description": "Tick's reload time is x% shorter."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Mine Mania",
+          "description": "Tick's next attack fires x mines."
+        },
+        {
+          "name": "Last Hurrah",
+          "description": "Tick gains a x% shield for x seconds. After that, it bursts out for x damage."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_pet_buff_stats",
+        "multipliers": {
+          "value": "0",
+          "value2": "5"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Tick/portrait.png",
         "render": "/assets/brawlers/Tick/render.png",
@@ -4512,6 +8172,61 @@
       "class": "Controller",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3800,
+      "attack": {
+        "damage": 1000,
+        "reloadSec": 2.0,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.67,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.67,
+          "radiusTiles": 0.417
+        }
+      },
+      "attackStyle": "melee",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Magic Puffs",
+          "description": "Gene heals all friendly Brawlers around him for x health per second."
+        },
+        {
+          "name": "Spirit Slap",
+          "description": "Gene's Magic Hand also damages enemies, dealing x damage on hit."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Lamp Blowout",
+          "description": "All enemies close to Gene are instantly pushed back. If at least one enemy Brawler is within range, Gene will also restore x% of his max health."
+        },
+        {
+          "name": "Vengeful Spirits",
+          "description": "Gene shoots a homing missile at all visible opponents within a large area, dealing up to x damage based on distance."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_hookdude",
+        "multipliers": {
+          "value": "150",
+          "value2": "3"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Gene/portrait.png",
         "render": "/assets/brawlers/Gene/render.png",
@@ -4580,6 +8295,66 @@
       "class": "Tank",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 6800,
+      "attack": {
+        "damage": 1160,
+        "reloadSec": 0.8,
+        "ammoCount": 3,
+        "numProjectiles": 4,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 16.67,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {
+        "damage": 1240,
+        "numProjectiles": 4,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 20.0,
+          "radiusTiles": 0.521
+        }
+      },
+      "attackStyle": "shotgun-cone",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Power Grab",
+          "description": "Frank steals the power of a Brawler he defeats, increasing his damage by x% for x seconds!"
+        },
+        {
+          "name": "Sponge",
+          "description": "Frank gains +x health."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Active Noise Canceling",
+          "description": "Fires a soundwave in a target direction, dealing ? damage to Brawlers. Frank becomes immune to Crowd Control for ? secs."
+        },
+        {
+          "name": "Irresistible Attraction",
+          "description": "Frank aims a long-range attack that pulls enemies towards him. Consumes ammo. Does ? damage."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_attack_pattern_override",
+        "multipliers": {
+          "value": "19",
+          "value2": "10"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Frank/portrait.png",
         "render": "/assets/brawlers/Frank/render.png",
@@ -4674,6 +8449,61 @@
       "class": "Artillery",
       "rarity": "Super Rare",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3500,
+      "attack": {
+        "damage": 980,
+        "reloadSec": 2.0,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 11.33,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {
+        "spawnedEntity": "ArtilleryDudeTurret",
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 3.99,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": "turret-deployer",
+      "starPowers": [
+        {
+          "name": "Heavy Coffers",
+          "description": "Penny's gold pouches burst with a x% wider cone after each hit."
+        },
+        {
+          "name": "Master Blaster",
+          "description": "Penny's cannon deals x damage and knocks back nearby enemies on landing."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Salty Barrel",
+          "description": "Penny drops a barrel of salt that blocks enemy projectiles. She can also use it to burst her own gold pouches."
+        },
+        {
+          "name": "Trusty Spyglass",
+          "description": "Penny's cannon blasts at every visible enemy position within range."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_pet_buff_stats",
+        "multipliers": null
+      },
+      "specialMechanics": [
+        "Super spawns a persistent turret or support structure"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Penny/portrait.png",
         "render": "/assets/brawlers/Penny/render.png",
@@ -4744,6 +8574,54 @@
       "class": "Tank",
       "rarity": "Super Rare",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 5500,
+      "attack": {
+        "damage": 240,
+        "reloadSec": 1.8,
+        "ammoCount": 3,
+        "numProjectiles": 5,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 13.33,
+          "radiusTiles": 0.0
+        }
+      },
+      "super": {
+        "damage": 650
+      },
+      "attackStyle": "shotgun-cone",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Steel Hoops",
+          "description": "After Barrel Roll all damage Darryl takes is reduced by x% for x seconds."
+        },
+        {
+          "name": "Rolling Reload",
+          "description": "When Darryl uses his Super, he doubles his reload speed for x seconds."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Recoiling Rotator",
+          "description": "Darryl spins around and sprays a barrage of shots in all directions. Each shot deals x damage and recharges his Super by x% if it hits enemies!"
+        },
+        {
+          "name": "Tar Barrel",
+          "description": "Darryl creates a slowing area around himself for x seconds."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_barrelbot",
+        "multipliers": {
+          "value": "4000"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Darryl/portrait.png",
         "render": "/assets/brawlers/Darryl/render.png",
@@ -4810,6 +8688,64 @@
       "class": "Damage Dealer",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3300,
+      "attack": {
+        "damage": 480,
+        "reloadSec": 2.0,
+        "ammoCount": 3,
+        "numProjectiles": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.51,
+          "radiusTiles": 0.208
+        }
+      },
+      "super": {
+        "damage": 800,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 5.07,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "shotgun-cone",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Black Portal",
+          "description": "Tara's Super cracks open a dimensional portal! A shadowy version of Tara appears and attacks her enemies."
+        },
+        {
+          "name": "Healing Shade",
+          "description": "Tara's Super cracks open a dimensional portal! A shadowy version of Tara appears to heal Tara and her teammates."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Psychic Enhancer",
+          "description": "Tara and her allies are able to see all enemies, even inside bushes, for x seconds."
+        },
+        {
+          "name": "Support From Beyond",
+          "description": "Tara surrounds herself with three weak Shadows that attack opponents and disappear after x seconds."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_area_radius",
+        "multipliers": {
+          "value": "20"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Tara/portrait.png",
         "render": "/assets/brawlers/Tara/render.png",
@@ -4880,6 +8816,63 @@
       "class": "Support",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 5000,
+      "attack": {
+        "damage": 300,
+        "reloadSec": 1.3,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 13.77,
+          "radiusTiles": 0.104
+        }
+      },
+      "super": {
+        "spawnedEntity": "HealingStation",
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 3.99,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "shotgun-cone",
+      "superStyle": "turret-deployer",
+      "starPowers": [
+        {
+          "name": "Mamas Hug",
+          "description": "Whenever Pam hits enemy Brawlers with Scrapstorm, she heals herself and nearby friendly Brawlers for x health."
+        },
+        {
+          "name": "Mamas Squeeze",
+          "description": "Healing turret now also damages enemies for x damage per second."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Pulse Modulator",
+          "description": "Pam triggers her turret to emit a pulse that heals allies inside the turret's range, including herself, for x health."
+        },
+        {
+          "name": "Scrapsucker",
+          "description": "Each hit from Pam's next attack removes x% of opposing Brawlers' maximum ammo. Pam reclaims x% of the ammo for herself."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_pet_change",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [
+        "Super spawns a persistent turret or support structure"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Pam/portrait.png",
         "render": "/assets/brawlers/Pam/render.png",
@@ -4950,6 +8943,56 @@
       "class": "Marksman",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 2500,
+      "attack": {
+        "damage": 1700,
+        "reloadSec": 2.3,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 13.33,
+          "radiusTiles": 0.21
+        }
+      },
+      "super": {
+        "damage": 900
+      },
+      "attackStyle": "sniper",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Ambush",
+          "description": "Piper's attack deals +x extra damage (at max range) when she's hidden in a bush."
+        },
+        {
+          "name": "Snappy Sniping",
+          "description": "When Piper hits an opponent with her attack, she reloads x ammo instantly."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Auto Aimer",
+          "description": "Piper pops a defensive shot at the closest enemy, dealing x damage, while also pushing them back."
+        },
+        {
+          "name": "Homemade Recipe",
+          "description": "On activation, Piper's next main attack will home in on enemies."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_sniper",
+        "multipliers": {
+          "value": "1",
+          "value2": "2500"
+        }
+      },
+      "specialMechanics": [
+        "Deals more damage the farther the shot travels (min 20% at close range, max 100% at full range)"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Piper/portrait.png",
         "render": "/assets/brawlers/Piper/render.png",
@@ -5016,6 +9059,59 @@
       "class": "Controller",
       "rarity": "Epic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3800,
+      "attack": {
+        "damage": 640,
+        "reloadSec": 1.7,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 9.33,
+          "radiusTiles": 0.146
+        }
+      },
+      "super": {
+        "damage": 1440,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 7.97,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Circling Eagle",
+          "description": "Bo spots enemies hidden in bushes from x% longer distance than normally."
+        },
+        {
+          "name": "Snare A Bear",
+          "description": "Instead of a knockback, Bo's traps now stun the enemy for x seconds!"
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Super Totem",
+          "description": "Bo places a totem that increases allies' Super charging rate by ?%. The totem slowly loses its health over time."
+        },
+        {
+          "name": "Tripwire",
+          "description": "Bo triggers all of his mines after x seconds. During the delay the mines are completely undetectable to opponents."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_bow_dude",
+        "multipliers": null
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Bo/portrait.png",
         "render": "/assets/brawlers/Bo/render.png",
@@ -5102,6 +9198,65 @@
       "class": "Support",
       "rarity": "Rare",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 4000,
+      "attack": {
+        "damage": 760,
+        "reloadSec": 1.6,
+        "ammoCount": 3,
+        "numProjectiles": 4,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 8.33,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {
+        "damage": 2100,
+        "numProjectiles": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 16.67,
+          "radiusTiles": 0.833
+        }
+      },
+      "attackStyle": "shotgun-cone",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Da Capo",
+          "description": "When Poco's attack hits friendly Brawlers they now heal for x health."
+        },
+        {
+          "name": "Screeching Solo",
+          "description": "Poco's Super now also hits enemies, dealing x damage."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Tuning Fork",
+          "description": "Poco and all nearby allies heal x health per second for x seconds."
+        },
+        {
+          "name": "Protective Tunes",
+          "description": "Removes active adverse effects from friendly Brawlers in a large area and gives a x second immunity."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_deadMariachi",
+        "multipliers": {
+          "value": "100"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Poco/portrait.png",
         "render": "/assets/brawlers/Poco/render.png",
@@ -5170,6 +9325,54 @@
       "class": "Assassin",
       "rarity": "Legendary",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.733,
+      "hp": 3000,
+      "attack": {
+        "damage": 320,
+        "reloadSec": 1.4,
+        "ammoCount": 3,
+        "numProjectiles": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.87,
+          "radiusTiles": 0.104
+        }
+      },
+      "super": {
+        "damage": 320
+      },
+      "attackStyle": "shotgun-cone",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Extra Toxic",
+          "description": "Crow's poison saps the strength of enemies, who deal x% less damage while poisoned."
+        },
+        {
+          "name": "Carrion Crow",
+          "description": "Crow deals +x% damage with his attack and Super to targets with x% or less health."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Instapoison",
+          "description": "Crow instantly deals remaining poison damage to all Crow-poisoned enemies and gains a shield for ?% of the value."
+        },
+        {
+          "name": "Slowing Toxin",
+          "description": "Throw a kunai that damages, slows and poisons the first enemy hit for ? sec."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "3"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Crow/portrait.png",
         "render": "/assets/brawlers/Crow/render.png",
@@ -5245,6 +9448,56 @@
       "class": "Assassin",
       "rarity": "Mythic",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.733,
+      "hp": 4000,
+      "attack": {
+        "damage": 1000,
+        "reloadSec": 2.4,
+        "ammoCount": 3
+      },
+      "super": {
+        "damage": 900,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.0,
+          "radiusTiles": 0.833
+        }
+      },
+      "attackStyle": "dash-attack",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Creepy Harvest",
+          "description": "Mortis reaps the life essence of Brawlers he defeats, restoring x% of his max health."
+        },
+        {
+          "name": "Coiled Snake",
+          "description": "Mortis gains his longer dash x seconds faster."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Combo Spinner",
+          "description": "Mortis spins his shovel dealing ? damage. Can also be aimed for a short-distance bat attack."
+        },
+        {
+          "name": "Creature Of The Night",
+          "description": "Mortis turns into a flock of bats and travels to a target location."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [
+        "Attack is a dash that deals damage to enemies in its path; each hit charges the super",
+        "Super projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Mortis/portrait.png",
         "render": "/assets/brawlers/Mortis/render.png",
@@ -5330,6 +9583,121 @@
       ]
     },
     {
+      "id": 16000010,
+      "hash": "El-Primo",
+      "name": "El Primo",
+      "internalName": "Luchador",
+      "class": "Tank",
+      "rarity": "Rare",
+      "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 6500,
+      "attack": {
+        "damage": 380,
+        "reloadSec": 0.8,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.87,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {
+        "damage": 960
+      },
+      "attackStyle": "melee",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "El Fuego",
+          "description": "Enemies caught in El Primo's Super will burn for x damage over 4 seconds."
+        },
+        {
+          "name": "Meteor Rush",
+          "description": "El Primo gains a x% speed boost for x seconds after using his Super."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Suplex Supplement",
+          "description": "El Primo grabs the closest enemy within his reach and flips them like a pancake over his broad shoulders."
+        },
+        {
+          "name": "Asteroid Belt",
+          "description": "El Primo summons a small meteor to strike the nearest enemy. It deals x damage and destroys walls."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "6"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
+      "assets": {
+        "portrait": "/assets/brawlers/El-Primo/portrait.png",
+        "render": "/assets/brawlers/El-Primo/render.png",
+        "emoji": "/assets/brawlers/El-Primo/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "LuchadorWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 3.0,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "LuchadorUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 9.0
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "LuchadorWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 3.75,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "LuchadorUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 11.25
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
       "id": 16000009,
       "hash": "Dynamike",
       "name": "Dynamike",
@@ -5337,6 +9705,65 @@
       "class": "Artillery",
       "rarity": "Super Rare",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 3000,
+      "attack": {
+        "damage": 800,
+        "reloadSec": 1.6,
+        "ammoCount": 3,
+        "numProjectiles": 2,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 35,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 6.33,
+          "radiusTiles": 0.0
+        }
+      },
+      "super": {
+        "damage": 2200,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 35,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 5.33,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "thrower",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Dyna-Jump",
+          "description": "Dynamike can ride the blast wave of his explosives to jump over obstacles!"
+        },
+        {
+          "name": "Demolition",
+          "description": "Adds +x damage to Mike's Super."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Fidget Spinner",
+          "description": "Dynamike spins furiously with increased movement speed and throws multiple sticks of dynamite around himself. Each dynamite deals x damage to enemies."
+        },
+        {
+          "name": "Satchel Charge",
+          "description": "Once activated, the next main attack also stuns enemies for x seconds."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "6"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectiles bounce off walls",
+        "Super projectiles bounce off walls"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Dynamike/portrait.png",
         "render": "/assets/brawlers/Dynamike/render.png",
@@ -5411,6 +9838,64 @@
       "class": "Damage Dealer",
       "rarity": "Rare",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 4200,
+      "attack": {
+        "damage": 960,
+        "reloadSec": 1.1,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 9.06,
+          "radiusTiles": 0.521
+        }
+      },
+      "super": {
+        "spawnedEntity": "ShamanPet",
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 3.99,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Bear With Me",
+          "description": "Nita recovers 1092 health whenever her bear hits an enemy Brawler. When Nita deals damage to an enemy Brawler, her bear regains 1094 health."
+        },
+        {
+          "name": "Hyper Bear",
+          "description": "Nita's bear attacks faster. Time between swipes is reduced by x%."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Bear Paws",
+          "description": "Nita commands her bear to slam the ground, stunning all enemies within its reach."
+        },
+        {
+          "name": "Faux Fur",
+          "description": "For the next ? seconds, Nita's bear gets a ?% shield against damage."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_pet_buff_stats",
+        "multipliers": {
+          "value": "20",
+          "value2": "0"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Nita/portrait.png",
         "render": "/assets/brawlers/Nita/render.png",
@@ -5481,6 +9966,64 @@
       "class": "Controller",
       "rarity": "Super Rare",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3300,
+      "attack": {
+        "damage": 1060,
+        "reloadSec": 1.8,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 9.57,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {
+        "spawnedEntity": "MechanicTurret",
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 3.99,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": "turret-deployer",
+      "starPowers": [
+        {
+          "name": "Energize",
+          "description": "Jessie can repair her gun turret for x of its missing health by zapping it with her attack."
+        },
+        {
+          "name": "Shocky",
+          "description": "Scrappy the Turret now shoots energy orbs that bounce between enemies. The orbs' range after a bounce is x% of normal range."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Spark Plug",
+          "description": "Jessie triggers a shockwave from her turret, slowing down all enemies within its area of effect."
+        },
+        {
+          "name": "Recoil Spring",
+          "description": "Scrappy's attack speed is doubled for x seconds."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_pet_buff_stats",
+        "multipliers": {
+          "value": "50",
+          "value2": "20"
+        }
+      },
+      "specialMechanics": [
+        "Super spawns a persistent turret or support structure"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Jessie/portrait.png",
         "render": "/assets/brawlers/Jessie/render.png",
@@ -5551,6 +10094,62 @@
       "class": "Artillery",
       "rarity": "Rare",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 2700,
+      "attack": {
+        "damage": 800,
+        "reloadSec": 2.0,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 5.83,
+          "radiusTiles": 0.0
+        }
+      },
+      "super": {
+        "damage": 800,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 5.01,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "thrower",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Medical Use",
+          "description": "Barley regains x health from each attack."
+        },
+        {
+          "name": "Extra Noxious",
+          "description": "Adds +x damage per second to Barley's attack."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Sticky Syrup Mixer",
+          "description": "Barley drops a sticky concoction that leaves a puddle, slowing down all enemies that make contact with it."
+        },
+        {
+          "name": "Herbal Tonic",
+          "description": "Barley throws a healing potion at nearby allies that creates an area that heals for x health per second."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_barkeep",
+        "multipliers": {
+          "value": "450",
+          "value2": "21"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Barley/portrait.png",
         "render": "/assets/brawlers/Barley/render.png",
@@ -5625,6 +10224,61 @@
       "class": "Damage Dealer",
       "rarity": "Legendary",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3000,
+      "attack": {
+        "damage": 490,
+        "reloadSec": 2.0,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 7.25,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {
+        "damage": 400,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 5.8,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Fertilize",
+          "description": "Super heals for x% of damage dealt."
+        },
+        {
+          "name": "Curveball",
+          "description": "Spikes from the cactus grenade fly in a curving motion, making it easier to hit targets."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Popping Pincushion",
+          "description": "Spike aims and fires a wave of needles that deal ? damage."
+        },
+        {
+          "name": "Life Plant",
+          "description": "Spike throws a large cactus with ? health to give cover to teammates. If destroyed, the cactus bursts, and all nearby teammates recover ? health."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_area_radius",
+        "multipliers": {
+          "value": "20"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Spike/portrait.png",
         "render": "/assets/brawlers/Spike/render.png",
@@ -5715,6 +10369,131 @@
       ]
     },
     {
+      "id": 16000004,
+      "hash": "Rico",
+      "name": "Rico",
+      "internalName": "TrickshotDude",
+      "class": "Damage Dealer",
+      "rarity": "Super Rare",
+      "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3000,
+      "attack": {
+        "damage": 300,
+        "reloadSec": 1.2,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": true,
+          "speedTilesPerSec": 11.59,
+          "radiusTiles": 0.21
+        }
+      },
+      "super": {
+        "damage": 360,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": true,
+          "speedTilesPerSec": 16.3,
+          "radiusTiles": 0.21
+        }
+      },
+      "attackStyle": "bouncer",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Super Bouncy",
+          "description": "Rico's bullets, from attack and Super alike, get Supercharged by their first bounce and deal +x damage!"
+        },
+        {
+          "name": "Robo Retreat",
+          "description": "When Rico falls below x% health, he runs x% faster!"
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Multiball Launcher",
+          "description": "Rico blasts waves of bouncy bullets in all directions."
+        },
+        {
+          "name": "Bouncy Castle",
+          "description": "Rico's next basic attack will heal him for x health from each projectile bounce."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_trickshotDude",
+        "multipliers": null
+      },
+      "specialMechanics": [
+        "Attack projectiles bounce off walls",
+        "Super projectiles bounce off walls",
+        "Super projectile pierces through multiple enemies"
+      ],
+      "assets": {
+        "portrait": "/assets/brawlers/Rico/portrait.png",
+        "render": "/assets/brawlers/Rico/render.png",
+        "emoji": "/assets/brawlers/Rico/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "TrickshotDudeWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 9.666666666666666,
+            "spreadDeg": 15
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "TrickshotDudeUlti",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 13.333333333333334,
+            "spreadDeg": 20
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hyperModified": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Attack (+25%)",
+          "skillName": "TrickshotDudeWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 12.083333333333332,
+            "spreadDeg": 15
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super (+25%)",
+          "skillName": "TrickshotDudeUlti",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 16.666666666666668,
+            "spreadDeg": 20
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hyperModified": true,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
       "id": 16000003,
       "hash": "Brock",
       "name": "Brock",
@@ -5722,6 +10501,62 @@
       "class": "Marksman",
       "rarity": "Rare",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3000,
+      "attack": {
+        "damage": 1160,
+        "reloadSec": 2.1,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 9.0,
+          "radiusTiles": 0.21
+        }
+      },
+      "super": {
+        "damage": 1040,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 2.9,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "More Rockets",
+          "description": "Rocket Rain now rains down x% more rockets."
+        },
+        {
+          "name": "Rocket No. 4",
+          "description": "Brock loads a fourth rocket into his launcher, increasing his ammo capacity (and discarding the thermos bottle he's been keeping in his launcher's fourth tube)."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Rocket Laces",
+          "description": "Brock blasts the ground below him and propels himself into the air. The explosion deals x damage to nearby enemies."
+        },
+        {
+          "name": "Rocket Fuel",
+          "description": "Brock's next attack is a mega rocket that is bigger, badder, faster and destroys walls."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_brock",
+        "multipliers": {
+          "value": "750",
+          "value2": "18"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Brock/portrait.png",
         "render": "/assets/brawlers/Brock/render.png",
@@ -5796,6 +10631,54 @@
       "class": "Tank",
       "rarity": "Rare",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 5000,
+      "attack": {
+        "damage": 440,
+        "reloadSec": 1.6,
+        "ammoCount": 3,
+        "numProjectiles": 5,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 9.51,
+          "radiusTiles": 0.0
+        }
+      },
+      "super": {
+        "damage": 1000
+      },
+      "attackStyle": "shotgun-cone",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Berserker",
+          "description": "When Bull falls below x% health, his reload speed doubles!"
+        },
+        {
+          "name": "Tough Guy",
+          "description": "When Bull falls below x% health, he gains a shield that reduces all damage he takes by x%."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "T-Bone Missile",
+          "description": "Bull throws a projectile at the target Brawler, dealing ? damage and healing for ? if he hits."
+        },
+        {
+          "name": "Stomper",
+          "description": "Bull stomps the ground, slowing nearby enemies. If a target is already slowed, they are stunned!"
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_reduce_all_damage_while_charging",
+        "multipliers": {
+          "value": "80"
+        }
+      },
+      "specialMechanics": [],
       "assets": {
         "portrait": "/assets/brawlers/Bull/portrait.png",
         "render": "/assets/brawlers/Bull/render.png",
@@ -5874,6 +10757,63 @@
       "class": "Damage Dealer",
       "rarity": "Rare",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3100,
+      "attack": {
+        "damage": 360,
+        "reloadSec": 1.3,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 13.33,
+          "radiusTiles": 0.104
+        }
+      },
+      "super": {
+        "damage": 320,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 16.3,
+          "radiusTiles": 0.21
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Slick Boots",
+          "description": "Colt's movement speed is increased by x%."
+        },
+        {
+          "name": "Magnum Special",
+          "description": "Colt's attack range and bullet speed are increased by x%."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Speedloader",
+          "description": "Colt fires two quick shots that slow targets. Deals ? damage."
+        },
+        {
+          "name": "Silver Bullet",
+          "description": "Colt fires a bullet that destroys the environment and pierces Brawlers. Deals ? damage. Consumes ammo."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_weapon_offset",
+        "multipliers": {
+          "value": "120"
+        }
+      },
+      "specialMechanics": [
+        "Super projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Colt/portrait.png",
         "render": "/assets/brawlers/Colt/render.png",
@@ -5968,6 +10908,66 @@
       "class": "Damage Dealer",
       "rarity": "Common",
       "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 3900,
+      "attack": {
+        "damage": 300,
+        "reloadSec": 1.5,
+        "ammoCount": 3,
+        "numProjectiles": 5,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.33,
+          "radiusTiles": 0.0
+        }
+      },
+      "super": {
+        "damage": 320,
+        "numProjectiles": 9,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 13.77,
+          "radiusTiles": 0.104
+        }
+      },
+      "attackStyle": "shotgun-cone",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Shell Shock",
+          "description": "Shelly's Super shells slow down enemies for ? sec!"
+        },
+        {
+          "name": "Band-Aid",
+          "description": "When Shelly falls below x% health, she instantly heals for x health. Band-Aid recharges in x sec."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Fast Forward",
+          "description": "Shelly dashes to an aimed direction or forwards, fully reloading her ammo!"
+        },
+        {
+          "name": "Clay Pigeons",
+          "description": "Shelly focuses her fire to a smaller area with an increased range. Can be used ? times per activation."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_weapon_spread",
+        "multipliers": {
+          "value": "33",
+          "value2": "3"
+        }
+      },
+      "specialMechanics": [
+        "Super projectile pierces through multiple enemies"
+      ],
       "assets": {
         "portrait": "/assets/brawlers/Shelly/portrait.png",
         "render": "/assets/brawlers/Shelly/render.png",
