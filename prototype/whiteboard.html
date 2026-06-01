@@ -586,7 +586,7 @@ function drawOneReticle(t, dim) {
   reticleLayer.addChild(g);
   const [cx, cy] = tileCenterPx(t.tx, t.ty);
   const fx = t.tx + 0.5, fy = t.ty + 0.5;            // token center, tile space
-  const color = t.variant.isHyper || t.variant.hyperModified ? RET_HYPER : RET_WHITE;
+  const color = t.variant.isHyper ? RET_HYPER : RET_WHITE;
   const p = t.variant.params || {};
   const ang = t.angle;
   const passes = t.variant.passesWalls;

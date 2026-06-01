@@ -83,8 +83,15 @@ _overcharge_cards = {c['Name'].replace('_overcharge', ''): c
                      for c in load_csv('cards.csv')
                      if c.get('Name', '').endswith('_overcharge')}
 HYPER_COLOR = '#c084fc'  # purple — matches Brawl Stars hypercharge UI tint
-HYPER_RANGE_MULTIPLIER = 1.25
-HYPER_SPLASH_MULTIPLIER = 1.25
+def _skills_differ(base, overcharged):
+    """True if the overcharged skill row changes the rendered reticle shape.
+    Projectile name and damage often change without altering the reticle
+    (e.g. Shelly Shellshock just adds slow/pierce to the same cone) — those
+    are described in the kit text, not as a separate reticle variant."""
+    for fld in ('CastingRange', 'Spread', 'NumBulletsInOneAttack'):
+        if (base.get(fld) or '') != (overcharged.get(fld) or ''):
+            return True
+    return False
 
 # Map internal characters.csv name → Brawlify hash (display-ready slug)
 # characters.csv has an 'ItemName' field that's lowercased; matches Brawlify hash lowercased.
@@ -534,18 +541,18 @@ def collect_variants(char_row, b_hash):
         variants.append(('Super', ulti, skills[ulti.lower()], False))
 
     if has_hyper:
-        # Hypercharged Attack — explicit OverchargedWeapon row if present, else base + modifier
+        # Only emit a hyper variant when the CSV has an explicit overcharged
+        # skill row AND it actually differs from the base. Most hypercharges
+        # are pure stat / status / projectile-behavior changes that don't
+        # touch CastingRange or Spread; the wiki kit text covers those.
         oc_weapon = f"{char_row['Name']}OverchargedWeapon"
-        if oc_weapon.lower() in skills:
+        if (oc_weapon.lower() in skills and weapon and weapon.lower() in skills
+                and _skills_differ(skills[weapon.lower()], skills[oc_weapon.lower()])):
             variants.append(('Hypercharged Attack', oc_weapon, skills[oc_weapon.lower()], 'hyper'))
-        elif weapon and weapon.lower() in skills:
-            variants.append(('Hypercharged Attack (+25%)', weapon, skills[weapon.lower()], 'hyper-modified'))
 
-        # Hypercharged Super — explicit row from characters.csv if present, else base + modifier
-        if oc_ulti_name and oc_ulti_name.lower() in skills:
+        if (oc_ulti_name and oc_ulti_name.lower() in skills and ulti and ulti.lower() in skills
+                and _skills_differ(skills[ulti.lower()], skills[oc_ulti_name.lower()])):
             variants.append(('Hypercharged Super', oc_ulti_name, skills[oc_ulti_name.lower()], 'hyper'))
-        elif ulti and ulti.lower() in skills:
-            variants.append(('Hypercharged Super (+25%)', ulti, skills[ulti.lower()], 'hyper-modified'))
 
     # Alt-form skills (Kaze: Geisha → Ninja, etc.)
     for suffix, label in [('TransformedWeapon', 'Alt-form Attack'),
@@ -569,21 +576,11 @@ def collect_variants(char_row, b_hash):
     return variants
 
 def render_panel(px, py, label, skill_name, skill_row, brawler_hash, panel_idx, hyper_mode=False):
-    """hyper_mode: False (base), 'hyper' (explicit overcharged skill row), or
-    'hyper-modified' (base skill with +25 % range/splash modifier). When truthy,
-    the reticle is recolored purple to indicate hypercharge state."""
+    """hyper_mode: False (base) or 'hyper' (explicit overcharged skill row).
+    When truthy, the reticle is recolored purple to indicate hypercharge state."""
     range_u = safe_int(skill_row.get('CastingRange'))
     spread  = safe_int(skill_row.get('Spread'))
     shape_result = infer_shape(skill_row)
-
-    # Apply +25 % modifier when the variant is a synthetic hyper-modified one
-    if hyper_mode == 'hyper-modified' and isinstance(shape_result, tuple) and shape_result[0]:
-        shape, params = shape_result
-        bumped = dict(params)
-        for k in ('range_tiles', 'splash_tiles'):
-            if k in bumped and isinstance(bumped[k], (int, float)):
-                bumped[k] *= HYPER_RANGE_MULTIPLIER if k == 'range_tiles' else HYPER_SPLASH_MULTIPLIER
-        shape_result = (shape, bumped)
 
     cx = px + PANEL_W / 2
     cy = py + PANEL_H - 70

@@ -86,7 +86,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": true
         },
         {
@@ -96,7 +95,6 @@
           "params": {},
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": true
         },
         {
@@ -108,7 +106,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]
@@ -175,7 +172,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -189,33 +185,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "DaredevilWeapon",
-          "shape": "area-follow",
-          "params": {
-            "splashTiles": 1.8229166666666665
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "DaredevilUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 9.1625,
-            "splashTiles": 1.825,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         }
       ]
@@ -297,7 +266,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -311,34 +279,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "BulletstormWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 12.5,
-            "widthTiles": 0.6
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "BulletstormUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 10.4125,
-            "splashTiles": 0.675,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         }
       ]
@@ -405,7 +345,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -417,31 +356,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "DomainWeapon",
-          "shape": "area-follow",
-          "params": {
-            "splashTiles": 2.604166666666667
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super",
-          "skillName": "DomainOverchargedUlti",
-          "shape": "dash",
-          "params": {
-            "rangeTiles": 7.0
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]
@@ -507,7 +421,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -517,29 +430,6 @@
           "params": {},
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "StalkerWeaponDash",
-          "shape": "dash",
-          "params": {
-            "rangeTiles": 0.8333333333333333
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "StalkerUlti",
-          "shape": "self-aoe",
-          "params": {},
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         }
       ]
@@ -617,7 +507,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -631,33 +520,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "GeishaWeapon",
-          "shape": "dash",
-          "params": {
-            "rangeTiles": 3.333333333333333
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "GeishaUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 9.1625,
-            "splashTiles": 3.9000000000000004,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         },
         {
@@ -670,7 +532,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -682,7 +543,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]
@@ -758,7 +618,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -768,30 +627,6 @@
           "params": {},
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "AlternatorWeaponSpeed",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 10.416666666666668,
-            "widthTiles": 0.9375
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "AlternatorUltiHeal",
-          "shape": "self-aoe",
-          "params": {},
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -875,7 +710,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": true
         },
         {
@@ -889,34 +723,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "ChronomancerWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 10.4125,
-            "widthTiles": 0.83
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "ChronomancerUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 9.1625,
-            "splashTiles": 0.7875,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         }
       ]
@@ -1004,7 +810,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -1020,36 +825,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "MorningstarWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 10.0,
-            "widthTiles": 0.7083333333333334
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "MorningstarUlti",
-          "shape": "wave",
-          "params": {
-            "rangeTiles": 9.1625,
-            "splashTiles": 4.5875,
-            "spreadDeg": 0,
-            "count": 3,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         }
       ]
@@ -1126,7 +901,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -1138,20 +912,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "SkaterWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 7.916666666666666,
-            "spreadDeg": 27
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         },
         {
@@ -1163,7 +923,6 @@
           },
           "passesWalls": false,
           "isHyper": true,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]
@@ -1246,7 +1005,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -1260,34 +1018,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "MeepleWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 9.583333333333334,
-            "widthTiles": 0.6
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "MeepleUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 6.25,
-            "splashTiles": 2.34375,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -1373,7 +1103,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": true
         },
         {
@@ -1387,35 +1116,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "VoodooWeaponEarth",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 7.9125,
-            "splashTiles": 0.625,
-            "equip": "weapon"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "VoodooUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 6.25,
-            "splashTiles": 0.4375,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         }
       ]
@@ -1481,7 +1181,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": true
         },
         {
@@ -1493,32 +1192,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "GhostWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 4.5875,
-            "spreadDeg": 300
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "GhostUlti",
-          "shape": "dash",
-          "params": {
-            "rangeTiles": 4.1625
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         }
       ]
@@ -1603,7 +1276,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -1616,33 +1288,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "CrabWeapon1",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 9.583333333333334,
-            "widthTiles": 0.625
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "CrabUlti1",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 7.083333333333334,
-            "spreadDeg": 220
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -1720,7 +1365,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": true
         },
         {
@@ -1732,33 +1376,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "PainterWeapon",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 7.9125,
-            "splashTiles": 1.3,
-            "equip": "weapon"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "PainterUlti",
-          "shape": "dash",
-          "params": {
-            "rangeTiles": 10.416666666666668
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -1844,7 +1461,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -1857,33 +1473,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "AmbusherWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 2.5,
-            "widthTiles": 1.25
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "AmbusherUlti",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 11.25,
-            "widthTiles": 0.8333333333333334
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -1960,7 +1549,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -1970,30 +1558,6 @@
           "params": {},
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "DragonRiderWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 5.0,
-            "widthTiles": 0.8333333333333334
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "DragonRiderUlti",
-          "shape": "self-aoe",
-          "params": {},
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         }
       ]
@@ -2069,7 +1633,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -2079,30 +1642,6 @@
           "params": {},
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "InsectManWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 12.5,
-            "widthTiles": 0.6
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "InsectManUlti",
-          "shape": "self-aoe",
-          "params": {},
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         }
       ]
@@ -2170,7 +1709,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -2182,32 +1720,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "AttacherWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 4.583333333333333,
-            "spreadDeg": 150
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "AttacherUlti",
-          "shape": "dash",
-          "params": {
-            "rangeTiles": 8.333333333333334
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -2270,7 +1782,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -2280,29 +1791,6 @@
           "params": {},
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "LeaperWeapon",
-          "shape": "dash",
-          "params": {
-            "rangeTiles": 5.0
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "LeaperUlti",
-          "shape": "self-aoe",
-          "params": {},
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         }
       ]
@@ -2385,7 +1873,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -2398,33 +1885,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "CocoonerWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 11.25,
-            "widthTiles": 0.625
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "CocoonerUlti",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 11.25,
-            "widthTiles": 0.8333333333333334
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -2510,7 +1970,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": true
         },
         {
@@ -2524,34 +1983,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "ConductorWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 8.3375,
-            "spreadDeg": 30
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "ConductorUltiSpawn",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 12.5,
-            "splashTiles": 0.525,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         }
       ]
@@ -2623,7 +2054,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -2633,30 +2063,6 @@
           "params": {},
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "CookerWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 11.25,
-            "spreadDeg": 40
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "CookerUlti",
-          "shape": "self-aoe",
-          "params": {},
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -2731,7 +2137,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -2744,32 +2149,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "ReviverWeapon",
-          "shape": "area-follow",
-          "params": {
-            "splashTiles": 2.604166666666667
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "ReviverUlti",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 11.666666666666668,
-            "widthTiles": 0.8333333333333334
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -2852,7 +2231,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -2865,33 +2243,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "DuelistWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 6.666666666666666,
-            "widthTiles": 0.6
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "DuelistUlti",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 11.25,
-            "widthTiles": 0.8333333333333334
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -2965,7 +2316,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -2977,32 +2327,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "MaisieWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 10.833333333333332,
-            "widthTiles": 0.6
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "MaisieUlti",
-          "shape": "area-follow",
-          "params": {
-            "splashTiles": 3.90625
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -3086,7 +2410,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -3099,34 +2422,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "PuppeteerWeapon",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 9.166666666666666,
-            "splashTiles": 1.5625,
-            "equip": "weapon"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "PuppeteerUlti",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 10.416666666666668,
-            "widthTiles": 0.625
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -3212,7 +2507,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -3225,20 +2519,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "BeamerWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 11.25,
-            "widthTiles": 0.6
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         },
         {
@@ -3251,7 +2531,6 @@
           },
           "passesWalls": false,
           "isHyper": true,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]
@@ -3326,7 +2605,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -3336,31 +2614,6 @@
           "params": {},
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "unrecognized": true,
-          "reason": "unrecognized (range=20, spread=0, proj=, behavior=Portals)"
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "DoorManWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 11.25,
-            "widthTiles": 0.6
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "DoorManUlti",
-          "shape": null,
-          "params": {},
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "unrecognized": true,
           "reason": "unrecognized (range=20, spread=0, proj=, behavior=Portals)"
         }
@@ -3446,7 +2699,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -3460,34 +2712,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "JesterWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 10.416666666666668,
-            "spreadDeg": 30
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super",
-          "skillName": "JesterOverchargedUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 6.333333333333333,
-            "splashTiles": 1.6666666666666667,
-            "equip": "overchargedUlti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]
@@ -3574,7 +2798,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -3587,33 +2810,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "ShieldTankWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 6.666666666666666,
-            "spreadDeg": 90
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "ShieldTankUlti",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 3.75,
-            "spreadDeg": 120
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -3697,7 +2893,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -3710,33 +2905,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "SoulCollectorWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 11.666666666666668,
-            "widthTiles": 0.625
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "SoulCollectorUlti",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 11.666666666666668,
-            "widthTiles": 0.8333333333333334
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -3822,7 +2990,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -3835,33 +3002,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "WeaponThrowerWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 3.75,
-            "spreadDeg": 100
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "WeaponThrowerUlti",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 10.833333333333332,
-            "widthTiles": 1.0416666666666667
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -3946,7 +3086,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": true
         },
         {
@@ -3959,33 +3098,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "SilencerWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 11.25,
-            "widthTiles": 0.21
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "SilencerUlti",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 11.25,
-            "widthTiles": 0.8333333333333334
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -4063,7 +3175,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -4075,32 +3186,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "CannonGirlWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 11.25,
-            "widthTiles": 0.625
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "CannonGirlUlti",
-          "shape": "dash",
-          "params": {
-            "rangeTiles": 9.166666666666666
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -4188,7 +3273,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -4202,34 +3286,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "JetpackGirlWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 5.0,
-            "spreadDeg": 160
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "JetpackGirlUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 2.916666666666667,
-            "splashTiles": 1.5625,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -4313,7 +3369,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -4327,34 +3382,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "FleaWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 11.666666666666668,
-            "widthTiles": 0.8
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "FleaUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 6.25,
-            "splashTiles": 0.0,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -4430,7 +3457,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -4442,32 +3468,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "KickerDudeWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 3.333333333333333,
-            "widthTiles": 1.25
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "KickerDudeUlti",
-          "shape": "dash",
-          "params": {
-            "rangeTiles": 12.5
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -4544,7 +3544,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -4554,30 +3553,6 @@
           "params": {},
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "MechaDudeWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 11.25,
-            "widthTiles": 0.625
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "MechaDudeUlti",
-          "shape": "self-aoe",
-          "params": {},
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         }
       ]
@@ -4664,7 +3639,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -4678,34 +3652,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "KnightWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 5.833333333333334,
-            "widthTiles": 1.0416666666666667
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "KnightUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 6.25,
-            "splashTiles": 1.5625,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -4793,7 +3739,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -4806,33 +3751,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack",
-          "skillName": "AssaultShotgunOverchargedWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 8.333333333333334,
-            "spreadDeg": 30
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "AssaultShotgunUlti",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 11.25,
-            "spreadDeg": 150
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         },
         {
@@ -4846,7 +3764,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -4860,7 +3777,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]
@@ -4946,7 +3862,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -4959,33 +3874,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "RopeDudeWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 3.333333333333333,
-            "spreadDeg": 165
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "RopeDudeUlti",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 12.5,
-            "widthTiles": 0.625
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -5070,7 +3958,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -5084,35 +3971,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "CrossBomberWeapon",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 9.583333333333334,
-            "splashTiles": 7.8125,
-            "equip": "weapon"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "CrossBomberUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 10.416666666666668,
-            "splashTiles": 7.8125,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -5196,7 +4054,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -5211,35 +4068,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "StickyBombWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 9.583333333333334,
-            "widthTiles": 0.6
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "StickyBombUlti",
-          "shape": "cluster",
-          "params": {
-            "rangeTiles": 10.4125,
-            "splashTiles": 1.0374999999999999,
-            "pattern": "quincunx",
-            "spacingTiles": 2.22
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         }
       ]
@@ -5323,7 +4151,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -5336,33 +4163,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "ElectroSniperWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 12.5,
-            "widthTiles": 0.6
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "ElectroSniperUlti",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 13.333333333333332,
-            "widthTiles": 0.625
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -5436,7 +4236,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -5448,32 +4247,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "RollerWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 9.583333333333334,
-            "widthTiles": 0.625
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "RollerUlti",
-          "shape": "dash",
-          "params": {
-            "rangeTiles": 2.916666666666667
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -5560,7 +4333,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": true
         },
         {
@@ -5574,34 +4346,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "RuffsWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 11.25,
-            "widthTiles": 1.0
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "RuffsUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 9.583333333333334,
-            "splashTiles": 1.8229166666666665,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -5676,7 +4420,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -5688,32 +4431,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack",
-          "skillName": "EnragerOverchargedWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 2.0,
-            "widthTiles": 0.8
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "EnragerUlti",
-          "shape": "dash",
-          "params": {
-            "rangeTiles": 8.333333333333334
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         },
         {
@@ -5726,7 +4443,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]
@@ -5809,7 +4525,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -5823,34 +4538,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "SnakeOilWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 12.5,
-            "widthTiles": 0.625
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "SnakeOilUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 9.166666666666666,
-            "splashTiles": 2.0833333333333335,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -5929,7 +4616,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -5943,7 +4629,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]
@@ -6029,7 +4714,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": true
         },
         {
@@ -6043,34 +4727,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "FireDudeWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 10.4125,
-            "widthTiles": 0.5
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "FireDudeUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 9.166666666666666,
-            "splashTiles": 0.0,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -6146,7 +4802,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -6158,32 +4813,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack",
-          "skillName": "PercenterOverchargedWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 8.666666666666666,
-            "widthTiles": 0.625
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "PercenterUlti",
-          "shape": "dash",
-          "params": {
-            "rangeTiles": 13.75
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         },
         {
@@ -6196,7 +4825,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -6209,7 +4837,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]
@@ -6285,7 +4912,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -6297,32 +4923,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "PowerLevelerWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 8.333333333333334,
-            "widthTiles": 0.625
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "PowerLevelerUlti",
-          "shape": "dash",
-          "params": {
-            "rangeTiles": 4.166666666666667
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -6406,7 +5006,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": true
         },
         {
@@ -6420,35 +5019,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "WallyWeapon",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 6.25,
-            "splashTiles": 0.125,
-            "equip": "weapon"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "WallyUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 9.583333333333334,
-            "splashTiles": 1.0416666666666667,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -6536,7 +5106,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -6549,33 +5118,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "ControllerWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 10.833333333333332,
-            "spreadDeg": 50
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "ControllerUlti",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 4.166666666666667,
-            "widthTiles": 0.625
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -6665,7 +5207,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": true
         },
         {
@@ -6678,33 +5219,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "BlowerWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 10.4125,
-            "widthTiles": 4.0
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "BlowerUlti",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 12.5,
-            "widthTiles": 4.0
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         }
       ]
@@ -6769,7 +5283,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -6779,29 +5292,6 @@
           "params": {},
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "DrillerWeapon",
-          "shape": "area-follow",
-          "params": {
-            "splashTiles": 2.604166666666667
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "DrillerUlti",
-          "shape": "self-aoe",
-          "params": {},
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -6875,7 +5365,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": true
         },
         {
@@ -6885,30 +5374,6 @@
           "params": {},
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "SpeedyWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 8.3375,
-            "widthTiles": 0.5
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "SpeedyUlti",
-          "shape": "self-aoe",
-          "params": {},
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -6994,7 +5459,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -7008,34 +5472,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "SpawnerDudeWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 8.75,
-            "widthTiles": 0.8333333333333334
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "SpawnerDudeUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 6.25,
-            "splashTiles": 1.171875,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -7114,7 +5550,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -7124,7 +5559,6 @@
           "params": {},
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -7137,17 +5571,6 @@
           },
           "passesWalls": false,
           "isHyper": true,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "MummyUlti",
-          "shape": "self-aoe",
-          "params": {},
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         },
         {
@@ -7160,7 +5583,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -7173,7 +5595,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]
@@ -7258,7 +5679,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -7271,33 +5691,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "BeeSniperWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 12.5,
-            "widthTiles": 0.8
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "BeeSniperUlti",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 11.25,
-            "spreadDeg": 30
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -7383,7 +5776,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -7397,34 +5789,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "SandstormWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 7.5,
-            "spreadDeg": 80
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "SandstormUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 9.166666666666666,
-            "splashTiles": 2.604166666666667,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -7510,7 +5874,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -7524,34 +5887,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "ArcadeWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 12.5,
-            "spreadDeg": 18
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "ArcadeUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 6.25,
-            "splashTiles": 3.90625,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -7630,7 +5965,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -7643,33 +5977,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack",
-          "skillName": "BaseballOverchargedWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 3.6666666666666665,
-            "spreadDeg": 300
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "BaseballUlti",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 50.0,
-            "widthTiles": 1.0416666666666667
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         },
         {
@@ -7685,7 +5992,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]
@@ -7763,7 +6069,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -7775,32 +6080,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "WhirlwindWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 10.416666666666668,
-            "widthTiles": 1.0416666666666667
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "WhirlwindUlti",
-          "shape": "area-follow",
-          "params": {
-            "splashTiles": 2.9125
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         }
       ]
@@ -7877,7 +6156,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -7887,30 +6165,6 @@
           "params": {},
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "RosaWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 4.583333333333333,
-            "spreadDeg": 130
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "RosaUlti",
-          "shape": "self-aoe",
-          "params": {},
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -7982,7 +6236,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -7992,30 +6245,6 @@
           "params": {},
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack",
-          "skillName": "NinjaOverchargedWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 9.666666666666666,
-            "spreadDeg": 35
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "NinjaUlti",
-          "shape": "self-aoe",
-          "params": {},
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         },
         {
@@ -8029,7 +6258,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]
@@ -8116,7 +6344,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": true
         },
         {
@@ -8130,36 +6357,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "ClusterBombDudeWeapon",
-          "shape": "cluster",
-          "params": {
-            "rangeTiles": 10.8375,
-            "splashTiles": 1.9500000000000002,
-            "pattern": "triangle",
-            "spacingTiles": 1.33
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "ClusterBombDudeUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 4.1625,
-            "splashTiles": 1.3,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         }
       ]
@@ -8243,7 +6440,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -8256,33 +6452,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "HookWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 7.083333333333334,
-            "widthTiles": 0.625
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "HookUlti",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 9.583333333333334,
-            "widthTiles": 0.8333333333333334
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -8371,7 +6540,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -8384,33 +6552,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack",
-          "skillName": "HammerDudeOverchargedWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 6.0,
-            "spreadDeg": 130
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "HammerDudeUlti",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 8.75,
-            "spreadDeg": 130
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         },
         {
@@ -8423,7 +6564,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -8436,7 +6576,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]
@@ -8520,7 +6659,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -8534,34 +6672,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "ArtilleryDudeWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 10.833333333333332,
-            "widthTiles": 0.625
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "ArtilleryDudeUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 6.25,
-            "splashTiles": 2.0833333333333335,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -8638,7 +6748,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -8650,32 +6759,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "BarrelBotWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 7.5,
-            "spreadDeg": 80
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "BarrelBotUlti",
-          "shape": "dash",
-          "params": {
-            "rangeTiles": 8.75
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -8762,7 +6845,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -8776,34 +6858,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "BlackHoleWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 10.0,
-            "spreadDeg": 50
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "BlackHoleUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 8.3375,
-            "splashTiles": 3.125,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         }
       ]
@@ -8889,7 +6943,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -8903,34 +6956,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "MinigunDudeWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 11.25,
-            "spreadDeg": 60
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "MinigunDudeUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 6.25,
-            "splashTiles": 0.0,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -9009,7 +7034,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -9021,32 +7045,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "SniperWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 12.5,
-            "widthTiles": 0.6
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "SniperUlti",
-          "shape": "dash",
-          "params": {
-            "rangeTiles": 10.833333333333332
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -9128,7 +7126,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -9143,35 +7140,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack",
-          "skillName": "BowDudeOverchargedWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 8.666666666666666,
-            "spreadDeg": 30
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "BowDudeUlti",
-          "shape": "cluster",
-          "params": {
-            "rangeTiles": 10.8375,
-            "splashTiles": 1.05,
-            "pattern": "triangle",
-            "spacingTiles": 1.5
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         },
         {
@@ -9185,7 +7153,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]
@@ -9273,7 +7240,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -9286,33 +7252,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "DeadMariachiWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 8.75,
-            "spreadDeg": 130
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "DeadMariachiUlti",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 11.666666666666668,
-            "spreadDeg": 130
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -9389,7 +7328,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -9399,30 +7337,6 @@
           "params": {},
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack",
-          "skillName": "CrowOverchargedWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 8.666666666666666,
-            "spreadDeg": 45
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "CrowUlti",
-          "shape": "self-aoe",
-          "params": {},
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         },
         {
@@ -9435,7 +7349,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]
@@ -9513,7 +7426,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -9526,32 +7438,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack",
-          "skillName": "UndertakerOverchargedWeapon",
-          "shape": "dash",
-          "params": {
-            "rangeTiles": 2.6666666666666665
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "UndertakerUlti",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 12.5,
-            "widthTiles": 1.6666666666666667
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         },
         {
@@ -9564,7 +7450,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -9577,7 +7462,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]
@@ -9655,7 +7539,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -9667,32 +7550,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "LuchadorWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 3.75,
-            "widthTiles": 0.625
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "LuchadorUlti",
-          "shape": "dash",
-          "params": {
-            "rangeTiles": 11.25
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -9782,7 +7639,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": true
         },
         {
@@ -9796,36 +7652,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "TntDudeWeapon",
-          "shape": "cluster",
-          "params": {
-            "rangeTiles": 9.1625,
-            "splashTiles": 2.0875,
-            "pattern": "pair",
-            "spacingTiles": 0.75
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "TntDudeUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 9.166666666666666,
-            "splashTiles": 2.0833333333333335,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -9912,7 +7738,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -9926,7 +7751,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -9939,21 +7763,6 @@
           },
           "passesWalls": false,
           "isHyper": true,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "ShamanUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 6.25,
-            "splashTiles": 2.604166666666667,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -10040,7 +7849,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -10054,34 +7862,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "MechanicWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 11.25,
-            "widthTiles": 0.625
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "MechanicUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 6.25,
-            "splashTiles": 3.385416666666667,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -10167,7 +7947,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -10182,36 +7961,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": true
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "BarkeepWeapon",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 9.166666666666666,
-            "splashTiles": 1.5625,
-            "equip": "weapon"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "BarkeepUlti",
-          "shape": "cluster",
-          "params": {
-            "rangeTiles": 11.6625,
-            "splashTiles": 1.5625,
-            "pattern": "quincunx",
-            "spacingTiles": 1.5
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": true
         }
       ]
@@ -10295,7 +8044,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -10309,34 +8057,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack",
-          "skillName": "CactusOverchargedWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 7.666666666666667,
-            "widthTiles": 0.625
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "CactusUlti",
-          "shape": "placement",
-          "params": {
-            "rangeTiles": 9.583333333333334,
-            "splashTiles": 2.0833333333333335,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         },
         {
@@ -10349,7 +8069,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -10363,7 +8082,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]
@@ -10449,7 +8167,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -10462,33 +8179,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "TrickshotDudeWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 12.083333333333332,
-            "spreadDeg": 15
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "TrickshotDudeUlti",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 16.666666666666668,
-            "spreadDeg": 20
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -10573,7 +8263,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -10589,36 +8278,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack (+25%)",
-          "skillName": "RocketGirlWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 11.25,
-            "widthTiles": 0.6
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "RocketGirlUlti",
-          "shape": "wave",
-          "params": {
-            "rangeTiles": 10.416666666666668,
-            "splashTiles": 1.171875,
-            "spreadDeg": 160,
-            "count": 5,
-            "equip": "ulti"
-          },
-          "passesWalls": true,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         }
       ]
@@ -10695,7 +8354,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -10707,7 +8365,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -10720,19 +8377,6 @@
           },
           "passesWalls": false,
           "isHyper": true,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "BullDudeUlti",
-          "shape": "dash",
-          "params": {
-            "rangeTiles": 13.75
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         },
         {
@@ -10744,7 +8388,6 @@
           },
           "passesWalls": true,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]
@@ -10830,7 +8473,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -10843,33 +8485,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack",
-          "skillName": "GunslingerOverchargedWeapon",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 9.0,
-            "widthTiles": 0.6
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "GunslingerUlti",
-          "shape": "line",
-          "params": {
-            "rangeTiles": 13.75,
-            "widthTiles": 0.6
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         },
         {
@@ -10882,7 +8497,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -10895,7 +8509,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]
@@ -10984,7 +8597,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -10997,33 +8609,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Attack",
-          "skillName": "ShotgunGirlOverchargedWeapon",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 7.666666666666667,
-            "spreadDeg": 60
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": false,
-          "hasOverride": false
-        },
-        {
-          "label": "Hypercharged Super (+25%)",
-          "skillName": "ShotgunGirlUlti",
-          "shape": "cone",
-          "params": {
-            "rangeTiles": 9.583333333333334,
-            "spreadDeg": 100
-          },
-          "passesWalls": false,
-          "isHyper": true,
-          "hyperModified": true,
           "hasOverride": false
         },
         {
@@ -11035,7 +8620,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         },
         {
@@ -11048,7 +8632,6 @@
           },
           "passesWalls": false,
           "isHyper": false,
-          "hyperModified": false,
           "hasOverride": false
         }
       ]

@@ -14,7 +14,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from render_all_reticles import (  # noqa: E402
     skills, projectiles, characters, load_csv, _overcharge_cards, brawlify_brawlers,
     overrides, infer_shape, collect_variants,
-    HYPER_RANGE_MULTIPLIER, HYPER_SPLASH_MULTIPLIER,
 )
 
 OUT_PATH = Path(__file__).resolve().parent / 'brawlers.json'
@@ -321,18 +320,11 @@ def variant_to_json(label, skill_name, skill_row, hyper_mode):
             'params': {},
             'passesWalls': False,
             'isHyper': bool(hyper_mode),
-            'hyperModified': hyper_mode == 'hyper-modified',
             'unrecognized': True,
             'reason': str(result[1]) if isinstance(result, tuple) else 'unknown',
         }
 
     shape, params = result
-    if hyper_mode == 'hyper-modified':
-        params = dict(params)
-        for k in ('range_tiles', 'splash_tiles'):
-            if k in params and isinstance(params[k], (int, float)):
-                params[k] *= HYPER_RANGE_MULTIPLIER if k == 'range_tiles' else HYPER_SPLASH_MULTIPLIER
-
     return {
         'label': label,
         'skillName': skill_name,
@@ -340,7 +332,6 @@ def variant_to_json(label, skill_name, skill_row, hyper_mode):
         'params': normalize_params(params),
         'passesWalls': passes_walls(skill_row, shape),
         'isHyper': bool(hyper_mode),
-        'hyperModified': hyper_mode == 'hyper-modified',
         'hasOverride': skill_name in overrides,
     }
 
