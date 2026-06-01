@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>brawl-digram · whiteboard prototype</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:-apple-system,system-ui,sans-serif; background:#0a0f17; color:#dde; display:flex; height:100vh; overflow:hidden; }
+  #sidebar { width:280px; flex:0 0 280px; background:#0e1623; border-right:1px solid #223; padding:16px; overflow-y:auto; }
+  #stage-wrap { flex:1; display:flex; align-items:center; justify-content:center; position:relative; }
+  h1 { font-size:16px; margin:0 0 4px; }
+  .sub { font-size:11px; color:#789; margin:0 0 16px; }
+  label { display:block; font-size:11px; text-transform:uppercase; letter-spacing:.04em; color:#8aa; margin:14px 0 4px; }
+  select, button { width:100%; padding:7px 8px; background:#16202f; color:#dde; border:1px solid #2a3b52; border-radius:6px; font:inherit; font-size:13px; }
+  button { cursor:pointer; margin-top:8px; }
+  button:hover { background:#1d2b40; }
+  button.danger { border-color:#a33; }
+  .hint { font-size:11px; color:#678; margin-top:14px; line-height:1.5; }
+  .legend { margin-top:16px; font-size:11px; }
+  .legend div { display:flex; align-items:center; gap:6px; margin:3px 0; }
+  .sw { width:12px; height:12px; border-radius:2px; display:inline-block; }
+  #placed { margin-top:8px; font-size:12px; }
+  #placed .row { display:flex; justify-content:space-between; align-items:center; padding:4px 6px; border-radius:4px; cursor:pointer; }
+  #placed .row:hover { background:#16202f; }
+  #placed .row.sel { background:#1d3a52; }
+  #placed .row button { width:auto; margin:0; padding:2px 6px; font-size:11px; }
+  #status { position:absolute; bottom:10px; left:10px; font-size:11px; color:#567; background:#0009; padding:4px 8px; border-radius:4px; }
+  .info { font-size:11px; color:#9ab; margin-top:6px; line-height:1.5; background:#0c1422; border:1px solid #1d2b40; border-radius:6px; padding:6px 8px; min-height:1.2em; }
+  .info b { color:#cde; }
+  .teamrow { display:flex; gap:8px; }
+  .team { flex:1; }
+  .team.sel { border-color:#5fd3ff; }
+  #teamRed.sel { border-color:#ff6b6b; }
+  label input { vertical-align:middle; margin-right:4px; }
+  label.chk { text-transform:none; letter-spacing:0; color:#cde; font-size:12px; margin:6px 0; }
+  #wallBreakBtn.on { border-color:#f6c64a; color:#f6c64a; }
+</style>
+</head>
+<body>
+<div id="sidebar">
+  <h1>whiteboard prototype</h1>
+  <p class="sub">validating maps.json + brawlers.json render end-to-end</p>
+
+  <label>Map</label>
+  <select id="mapSel"></select>
+
+  <label>Brawler</label>
+  <select id="brawlerSel"></select>
+
+  <label>Reticle variant</label>
+  <select id="variantSel"></select>
+  <div id="variantInfo" class="info"></div>
+
+  <label>Team</label>
+  <div class="teamrow">
+    <button id="teamBlue" class="team sel">Blue</button>
+    <button id="teamRed" class="team">Red</button>
+  </div>
+
+  <button id="placeBtn">Click map to place →</button>
+  <button id="clearBtn" class="danger">Clear all tokens</button>
+
+  <label>Overlays</label>
+  <label class="chk"><input type="checkbox" id="showAll"/> Show all reticles</label>
+  <label class="chk"><input type="checkbox" id="showVision"/> Vision (bushes + line of sight)</label>
+  <div id="visionRow" style="display:none">
+    <label>Bush reveal: <span id="revealVal">2</span> tiles</label>
+    <input type="range" id="revealRadius" min="1" max="6" step="0.5" value="2" style="width:100%"/>
+    <select id="visionPreset" style="margin-top:6px">
+      <option value="2">Normal bush vision</option>
+      <option value="4">Bo · Circling Eagle (+bush vision)</option>
+    </select>
+  </div>
+  <label class="chk"><input type="checkbox" id="showMovement"/> Movement range</label>
+  <div id="moveRow" style="display:none">
+    <label>Time window: <span id="moveVal">2</span> s</label>
+    <input type="range" id="moveSeconds" min="0.5" max="6" step="0.5" value="2" style="width:100%"/>
+    <div id="moveCalc" class="info">select a token to see reach</div>
+  </div>
+
+  <button id="wallBreakBtn">Break walls: off</button>
+
+  <label>Placed tokens</label>
+  <div id="placed"></div>
+
+  <div class="legend">
+    <label>Tile legend</label>
+    <div><span class="sw" style="background:#2c1d12"></span> wall</div>
+    <div><span class="sw" style="background:#1f6f3a"></span> bush</div>
+    <div><span class="sw" style="background:#2870c0"></span> water</div>
+    <div><span class="sw" style="background:#6b4a26"></span> fence</div>
+    <div><span class="sw" style="background:#1f7ad6"></span> / <span class="sw" style="background:#e63946"></span> spawns</div>
+  </div>
+
+  <p class="hint">Pick a brawler + variant, click "place", then click the map. Select a token and move the mouse to aim. Direct-fire reticles (cone/line/dash) are clipped by walls; throwers (Dynamike, Barley…) land wherever you point, clamped to their max-range ring. Movement range is that brawler's speed × the time window, flood-filled around walls. Drag a token to reposition.</p>
+</div>
+
+<div id="stage-wrap"></div>
+<div id="status">loading…</div>
+
+<script type="module">
+import * as PIXI from "https://cdn.jsdelivr.net/npm/pixi.js@8.6.6/dist/pixi.min.mjs";
+
+const TILE_COLOR = {
+  M:0x2c1d12, X:0x3c2a1a, Y:0xc08a3a, C:0xa36028, I:0x1a1a1a,
+  F:0x1f6f3a, R:0x256b34, W:0x2870c0, T:0x7a5a3a, B:0xd97a4c,
+  N:0x6b4a26, J:0x1a1a1a, V:0x2870c0, E:0x5a3a1a, a:0xa07840,
+  b:0x5e5e5e, o:0xe8e8e8, x:0xd62828, z:0x3aa3c0, w:0xf4c430,
+  v:0xa02828, S:0xf0f4f8, q:0xa4def5, "1":0x1f7ad6, "2":0xe63946, c:0xf7d340,
+};
+const OPEN_BG = 0x7fb56a;
+const RET_WHITE = 0xffffff;
+const RET_HYPER = 0xc084fc;
+
+function tileColor(ch) {
+  if (ch === "." ) return null;
+  if (ch in TILE_COLOR) return TILE_COLOR[ch];
+  if (ch >= "0" && ch <= "9") return 0xe63946;
+  return 0x94a3b8;
+}
+
+const status = document.getElementById("status");
+const setStatus = (t) => { status.textContent = t; };
+
+// ---- load data ----
+const [mapsDoc, brawlersDoc] = await Promise.all([
+  fetch("/data/maps.json").then(r => r.json()),
+  fetch("/data/brawlers.json").then(r => r.json()),
+]);
+const maps = mapsDoc.maps;
+const brawlers = brawlersDoc.brawlers;
+
+// tile-class lookups from the legend
+const legendSet = (flag) => new Set(
+  Object.entries(mapsDoc.tileLegend).filter(([, m]) => m[flag]).map(([ch]) => ch)
+);
+const blockProjSet   = legendSet("blocksProjectiles"); // walls stop projectiles + sight
+const blockMoveSet   = legendSet("blocksMovement");    // walls + water stop movement
+const bushSet        = legendSet("isForest");          // concealment, stops sight
+const destructSet    = legendSet("isDestructible");    // walls a super can break
+
+// tiles cleared by a wall-break, per map: keys "x,y"
+let brokenTiles = new Set();
+const tk = (tx, ty) => `${tx},${ty}`;
+
+// ---- pixi app ----
+const wrap = document.getElementById("stage-wrap");
+const app = new PIXI.Application();
+await app.init({ background: 0x0a0f17, antialias: true, resizeTo: wrap });
+wrap.appendChild(app.canvas);
+
+const mapLayer = new PIXI.Container();
+const overlayLayer = new PIXI.Container();   // bush highlight, vision, movement
+const reticleLayer = new PIXI.Container();
+const tokenLayer = new PIXI.Container();
+app.stage.addChild(mapLayer, overlayLayer, reticleLayer, tokenLayer);
+
+// ---- state ----
+let currentMap = null;     // {grid,width,height}
+let cell = 16, originX = 0, originY = 0;
+let tokens = [];           // {id, brawler, variant, tx, ty, angle, sprite}
+let selectedId = null;
+let placing = false;
+let nextId = 1;
+let draggingId = null;
+let placingTeam = "blue";
+let showAllReticles = false;
+let showVision = false;
+let showMovement = false;
+let wallBreakMode = false;
+let moveSeconds = 2;    // movement window; reach = brawler speed × this
+let revealRadius = 2;   // how close you must be to see into a bush (tiles)
+const DEFAULT_SPEED = 2.4;  // tiles/sec fallback if a brawler has no speed stat
+const TEAM_COLOR = { blue: 0x5fb0ff, red: 0xff6b6b };
+
+// ---- populate dropdowns ----
+const mapSel = document.getElementById("mapSel");
+Object.keys(maps).sort().forEach(name => {
+  const o = document.createElement("option");
+  o.value = name; o.textContent = name; mapSel.appendChild(o);
+});
+const brawlerSel = document.getElementById("brawlerSel");
+brawlers.slice().sort((a,b)=>a.name.localeCompare(b.name)).forEach(b => {
+  const o = document.createElement("option");
+  o.value = b.hash; o.textContent = b.name; brawlerSel.appendChild(o);
+});
+const variantSel = document.getElementById("variantSel");
+
+function refreshVariants() {
+  const b = brawlers.find(x => x.hash === brawlerSel.value);
+  variantSel.innerHTML = "";
+  b.variants.forEach((v, i) => {
+    const o = document.createElement("option");
+    o.value = i; o.textContent = `${v.label} (${v.shape})`;
+    variantSel.appendChild(o);
+  });
+  showVariantInfo();
+}
+function fmt(n) { return Math.round(n * 100) / 100; }
+function showVariantInfo() {
+  const b = brawlers.find(x => x.hash === brawlerSel.value);
+  const v = b.variants[parseInt(variantSel.value, 10) || 0];
+  const p = v.params || {};
+  const bits = [];
+  if (p.rangeTiles != null) bits.push(`range <b>${fmt(p.rangeTiles)}</b>t`);
+  if (p.spreadDeg != null) bits.push(`spread <b>${p.spreadDeg}°</b>`);
+  if (p.widthTiles != null) bits.push(`width <b>${fmt(p.widthTiles)}</b>t`);
+  if (p.splashTiles != null) bits.push(`splash <b>${fmt(p.splashTiles)}</b>t`);
+  if (p.pattern) bits.push(`pattern <b>${p.pattern}</b>`);
+  bits.push(v.passesWalls ? "passes walls" : "<b>blocked by walls</b>");
+  document.getElementById("variantInfo").innerHTML = `${v.shape} · ${bits.join(" · ")}`;
+}
+brawlerSel.addEventListener("change", refreshVariants);
+variantSel.addEventListener("change", showVariantInfo);
+
+// ---- geometry helpers ----
+function computeLayout() {
+  const vw = app.screen.width, vh = app.screen.height;
+  const pad = 24;
+  cell = Math.floor(Math.min((vw - pad*2) / currentMap.width, (vh - pad*2) / currentMap.height));
+  cell = Math.max(cell, 6);
+  originX = Math.round((vw - cell * currentMap.width) / 2);
+  originY = Math.round((vh - cell * currentMap.height) / 2);
+}
+const tileCenterPx = (tx, ty) => [originX + (tx + 0.5) * cell, originY + (ty + 0.5) * cell];
+function pxToTile(px, py) {
+  return { tx: (px - originX) / cell - 0.5, ty: (py - originY) / cell - 0.5 };
+}
+
+// tile char at tile coords, or null if out of bounds / broken
+function charAtTile(tx, ty) {
+  const ix = Math.floor(tx), iy = Math.floor(ty);
+  if (iy < 0 || iy >= currentMap.grid.length) return null;
+  const row = currentMap.grid[iy];
+  if (ix < 0 || ix >= row.length) return null;
+  if (brokenTiles.has(tk(ix, iy))) return ".";
+  return row[ix];
+}
+function blocksProjAtTile(tx, ty) {
+  const c = charAtTile(tx, ty);
+  return c === null || blockProjSet.has(c);
+}
+function blocksMoveAtTile(tx, ty) {
+  const c = charAtTile(tx, ty);
+  return c === null || blockMoveSet.has(c);
+}
+function bushAtTile(tx, ty) {
+  const c = charAtTile(tx, ty);
+  return c !== null && bushSet.has(c);
+}
+
+// cast a ray from tile-space (fx,fy) along ang; return distance in tiles to the
+// first blocking tile, capped at maxT. Used to clip direct-fire reticles.
+function raycastTiles(fx, fy, ang, maxT) {
+  const step = 0.08;
+  const dx = Math.cos(ang), dy = Math.sin(ang);
+  let d = 0;
+  while (d < maxT) {
+    const nd = d + step;
+    if (blocksProjAtTile(fx + dx * nd, fy + dy * nd)) return d;
+    d = nd;
+  }
+  return maxT;
+}
+
+// ---- draw map ----
+function drawMap() {
+  computeLayout();
+  mapLayer.removeChildren();
+  const g = new PIXI.Graphics();
+  g.rect(originX, originY, cell * currentMap.width, cell * currentMap.height).fill(OPEN_BG);
+  currentMap.grid.forEach((row, y) => {
+    for (let x = 0; x < row.length; x++) {
+      if (brokenTiles.has(tk(x, y))) {
+        // cleared wall: open ground + a small rubble speck
+        g.circle(originX + (x+0.5)*cell, originY + (y+0.5)*cell, Math.max(cell*0.12, 1.5)).fill({ color: 0x4a3a28, alpha: 0.7 });
+        continue;
+      }
+      const col = tileColor(row[x]);
+      if (col === null) continue;
+      g.rect(originX + x*cell, originY + y*cell, cell, cell).fill(col);
+    }
+  });
+  mapLayer.addChild(g);
+}
+
+function loadMap(name) {
+  currentMap = maps[name];
+  drawMap();
+  // keep tokens inside the new map's bounds
+  brokenTiles = new Set();
+  tokens.forEach(t => {
+    t.tx = Math.min(t.tx, currentMap.width - 1);
+    t.ty = Math.min(t.ty, currentMap.height - 1);
+    positionSprite(t);
+  });
+  redraw();
+  setStatus(`${name} — ${currentMap.width}×${currentMap.height} tiles, ${tokens.length} tokens`);
+}
+
+// ---- tokens ----
+async function placeToken(tx, ty) {
+  const b = brawlers.find(x => x.hash === brawlerSel.value);
+  const vi = parseInt(variantSel.value, 10) || 0;
+  const id = nextId++;
+  let texture;
+  try { texture = await PIXI.Assets.load(b.assets.portrait); }
+  catch { texture = null; }
+  const sprite = new PIXI.Container();
+  const ring = new PIXI.Graphics();
+  sprite.addChild(ring);
+  if (texture) {
+    const img = new PIXI.Sprite(texture);
+    img.anchor.set(0.5);
+    sprite.addChild(img);
+    sprite._img = img;
+  }
+  sprite._ring = ring;
+  sprite.eventMode = "static";
+  sprite.cursor = "grab";
+  tokenLayer.addChild(sprite);
+
+  const label = new PIXI.Text({
+    text: b.name,
+    style: { fontFamily: "system-ui", fontSize: 11, fill: 0xffffff, stroke: { color: 0x000000, width: 3 } },
+  });
+  label.anchor.set(0.5, 0);
+  sprite.addChild(label);
+  sprite._label = label;
+
+  const tok = { id, brawler: b, variant: b.variants[vi], variantIdx: vi, tx, ty, angle: -Math.PI/2, team: placingTeam, sprite };
+  tokens.push(tok);
+  enableDrag(tok);
+  positionSprite(tok);
+  selectToken(id);
+  renderPlacedList();
+}
+
+function positionSprite(t) {
+  const [px, py] = tileCenterPx(t.tx, t.ty);
+  t.sprite.x = px; t.sprite.y = py;
+  const r = Math.max(cell * 0.55, 10);
+  const ring = t.sprite._ring;
+  const teamCol = TEAM_COLOR[t.team] || 0xffffff;
+  const selected = t.id === selectedId;
+  ring.clear();
+  ring.circle(0, 0, r).fill({ color: 0x0a0f17, alpha: 0.6 });
+  ring.circle(0, 0, r).stroke({ width: selected ? 3 : 2, color: teamCol, alpha: selected ? 1 : 0.85 });
+  if (selected) ring.circle(0, 0, r + 3).stroke({ width: 1.5, color: 0xffffff, alpha: 0.8 });
+  if (t.sprite._label) t.sprite._label.position.set(0, r + 2);
+  if (t.sprite._img) {
+    const img = t.sprite._img;
+    const scale = (r * 1.7) / Math.max(img.texture.width, img.texture.height);
+    img.scale.set(scale);
+    // circular mask
+    if (!t.sprite._mask) {
+      const m = new PIXI.Graphics();
+      t.sprite.addChild(m);
+      img.mask = m;
+      t.sprite._mask = m;
+    }
+    t.sprite._mask.clear();
+    t.sprite._mask.circle(0, 0, r - 1).fill(0xffffff);
+  }
+}
+
+function enableDrag(t) {
+  let dragging = false;
+  t.sprite.on("pointerdown", (e) => {
+    e.stopPropagation();
+    selectToken(t.id);
+    dragging = true;
+    draggingId = t.id;
+    t.sprite.cursor = "grabbing";
+  });
+  app.stage.on("pointermove", (e) => {
+    if (!dragging) return;
+    const p = e.global;
+    const { tx, ty } = pxToTile(p.x, p.y);
+    t.tx = Math.max(0, Math.min(currentMap.width - 1, Math.round(tx)));
+    t.ty = Math.max(0, Math.min(currentMap.height - 1, Math.round(ty)));
+    positionSprite(t);
+    redraw();
+  });
+  const endDrag = () => { dragging = false; if (draggingId === t.id) draggingId = null; t.sprite.cursor = "grab"; };
+  app.stage.on("pointerup", endDrag);
+  app.stage.on("pointerupoutside", endDrag);
+}
+
+function selectToken(id) {
+  selectedId = id;
+  tokens.forEach(positionSprite);
+  redraw();
+  renderPlacedList();
+}
+
+function removeToken(id) {
+  const i = tokens.findIndex(t => t.id === id);
+  if (i < 0) return;
+  tokenLayer.removeChild(tokens[i].sprite);
+  tokens.splice(i, 1);
+  if (selectedId === id) selectedId = tokens.length ? tokens[0].id : null;
+  drawReticles();
+  renderPlacedList();
+}
+
+function renderPlacedList() {
+  const el = document.getElementById("placed");
+  el.innerHTML = "";
+  tokens.forEach(t => {
+    const row = document.createElement("div");
+    row.className = "row" + (t.id === selectedId ? " sel" : "");
+    const label = document.createElement("span");
+    label.textContent = `${t.brawler.name} · ${t.variant.label}`;
+    const del = document.createElement("button");
+    del.textContent = "✕";
+    del.onclick = (e) => { e.stopPropagation(); removeToken(t.id); };
+    row.appendChild(label); row.appendChild(del);
+    row.onclick = () => selectToken(t.id);
+    el.appendChild(row);
+  });
+}
+
+// ---- reticle drawing ----
+function redraw() { drawOverlays(); drawReticles(); }
+
+function drawOverlays() {
+  overlayLayer.removeChildren();
+  if (!currentMap) return;
+  const t = tokens.find(x => x.id === selectedId);
+
+  if (showVision) {
+    // bush tiles: revealed (you can see in) if within reveal radius of the
+    // selected token, otherwise concealed. Matches the in-game rule that you
+    // only spot enemies in a bush once you're close.
+    const revealed = new PIXI.Graphics();
+    const concealed = new PIXI.Graphics();
+    currentMap.grid.forEach((row, y) => {
+      for (let x = 0; x < row.length; x++) {
+        if (brokenTiles.has(tk(x, y)) || !bushSet.has(row[x])) continue;
+        const close = t && Math.hypot((x + 0.5) - (t.tx + 0.5), (y + 0.5) - (t.ty + 0.5)) <= revealRadius;
+        (close ? revealed : concealed).rect(originX + x*cell, originY + y*cell, cell, cell);
+      }
+    });
+    concealed.fill({ color: 0x1f6f3a, alpha: 0.45 });
+    revealed.fill({ color: 0xf6e05e, alpha: 0.4 });
+    overlayLayer.addChild(concealed, revealed);
+    if (t) {
+      drawVisionPolygon(t);
+      // reveal-radius ring
+      const [cx, cy] = tileCenterPx(t.tx, t.ty);
+      const rg = new PIXI.Graphics();
+      rg.circle(cx, cy, revealRadius * cell).stroke({ width: 1, color: 0xf6e05e, alpha: 0.4 });
+      overlayLayer.addChild(rg);
+    }
+  }
+  if (showMovement && t) drawMovementReach(t);
+}
+
+// what the selected token can see: 360° ray fan, blocked by walls, stops at bushes
+function drawVisionPolygon(t) {
+  const [cx, cy] = tileCenterPx(t.tx, t.ty);
+  const fx = t.tx + 0.5, fy = t.ty + 0.5;
+  const maxV = 12, N = 160;
+  const pts = [];
+  for (let i = 0; i < N; i++) {
+    const a = (i / N) * Math.PI * 2;
+    pts.push(cx + Math.cos(a) * raycastSight(fx, fy, a, maxV) * cell,
+             cy + Math.sin(a) * raycastSight(fx, fy, a, maxV) * cell);
+  }
+  const g = new PIXI.Graphics();
+  g.poly(pts).fill({ color: 0xfff2c0, alpha: 0.16 });
+  g.poly(pts).stroke({ width: 1, color: 0xfff2c0, alpha: 0.35 });
+  overlayLayer.addChild(g);
+}
+function raycastSight(fx, fy, ang, maxT) {
+  const step = 0.08, dx = Math.cos(ang), dy = Math.sin(ang);
+  let d = 0;
+  while (d < maxT) {
+    const nd = d + step, px = fx + dx * nd, py = fy + dy * nd;
+    if (blocksProjAtTile(px, py)) return d;     // wall blocks sight
+    if (bushAtTile(px, py)) return nd;          // can't see past/into a bush
+    d = nd;
+  }
+  return maxT;
+}
+
+class MinHeap {
+  constructor() { this.a = []; }
+  get size() { return this.a.length; }
+  push(v) {
+    const a = this.a; a.push(v); let i = a.length - 1;
+    while (i > 0) { const p = (i - 1) >> 1; if (a[p][0] <= a[i][0]) break; [a[p], a[i]] = [a[i], a[p]]; i = p; }
+  }
+  pop() {
+    const a = this.a, top = a[0], last = a.pop();
+    if (a.length) {
+      a[0] = last; let i = 0;
+      for (;;) {
+        let l = 2*i+1, r = 2*i+2, s = i;
+        if (l < a.length && a[l][0] < a[s][0]) s = l;
+        if (r < a.length && a[r][0] < a[s][0]) s = r;
+        if (s === i) break; [a[s], a[i]] = [a[i], a[s]]; i = s;
+      }
+    }
+    return top;
+  }
+}
+
+// Movement is continuous, so flood-fill a sub-tile grid (SUB×SUB per tile)
+// rather than whole tiles — gives a smooth, partial-tile reachable boundary.
+const SUB = 4;
+function movementReach(t, budget) {
+  const W = currentMap.width * SUB, H = currentMap.height * SUB;
+  const dist = new Float32Array(W * H).fill(Infinity);
+  const idx = (x, y) => y * W + x;
+  const subBlocked = (sx, sy) =>
+    sx < 0 || sy < 0 || sx >= W || sy >= H || blocksMoveAtTile(sx / SUB, sy / SUB);
+  const sx0 = Math.floor(t.tx * SUB + SUB / 2), sy0 = Math.floor(t.ty * SUB + SUB / 2);
+  dist[idx(sx0, sy0)] = 0;
+  const heap = new MinHeap(); heap.push([0, sx0, sy0]);
+  const o = 1 / SUB, d2 = 1.41421 / SUB;
+  const dirs = [[1,0,o],[-1,0,o],[0,1,o],[0,-1,o],[1,1,d2],[1,-1,d2],[-1,1,d2],[-1,-1,d2]];
+  while (heap.size) {
+    const [d, x, y] = heap.pop();
+    if (d > dist[idx(x, y)]) continue;
+    for (const [dx, dy, c] of dirs) {
+      const nx = x + dx, ny = y + dy, nd = d + c;
+      if (nd > budget || subBlocked(nx, ny)) continue;
+      if (dx && dy && subBlocked(x + dx, y) && subBlocked(x, y + dy)) continue; // no corner-cut
+      const ni = idx(nx, ny);
+      if (nd < dist[ni]) { dist[ni] = nd; heap.push([nd, nx, ny]); }
+    }
+  }
+  return { dist, W, H };
+}
+function drawMovementReach(t) {
+  const speed = t.brawler.speedTilesPerSec || DEFAULT_SPEED;
+  const budget = speed * moveSeconds;
+  const { dist, W, H } = movementReach(t, budget);
+  const col = TEAM_COLOR[t.team] || 0xffffff;
+  const g = new PIXI.Graphics();
+  const sc = cell / SUB;
+  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
+    if (dist[y * W + x] <= budget) g.rect(originX + x*sc, originY + y*sc, sc + 0.5, sc + 0.5);
+  }
+  g.fill({ color: col, alpha: 0.18 });
+  overlayLayer.addChild(g);
+  const info = document.getElementById("moveCalc");
+  if (info) info.textContent = `${t.brawler.name}: ${speed} t/s × ${moveSeconds}s = ${Math.round(budget*10)/10} tiles`;
+}
+
+function drawReticles() {
+  reticleLayer.removeChildren();
+  const sel = tokens.find(x => x.id === selectedId);
+  if (showAllReticles) {
+    tokens.forEach(t => { if (t !== sel) drawOneReticle(t, true); });
+  }
+  if (sel) drawOneReticle(sel, false);
+}
+
+function drawOneReticle(t, dim) {
+  const g = new PIXI.Graphics();
+  g.alpha = dim ? 0.4 : 1;
+  reticleLayer.addChild(g);
+  const [cx, cy] = tileCenterPx(t.tx, t.ty);
+  const fx = t.tx + 0.5, fy = t.ty + 0.5;            // token center, tile space
+  const color = t.variant.isHyper || t.variant.hyperModified ? RET_HYPER : RET_WHITE;
+  const p = t.variant.params || {};
+  const ang = t.angle;
+  const passes = t.variant.passesWalls;
+  const R = (tiles) => tiles * cell;
+
+  switch (t.variant.shape) {
+    case "cone": {
+      const rangeT = p.rangeTiles || 6;
+      const half = ((p.spreadDeg || 60) / 2) * Math.PI / 180;
+      // sample rays across the arc, clip each at the first wall
+      const N = 30;
+      const pts = [cx, cy];
+      for (let i = 0; i <= N; i++) {
+        const a = ang - half + (2 * half) * (i / N);
+        const reach = passes ? rangeT : raycastTiles(fx, fy, a, rangeT);
+        pts.push(cx + Math.cos(a) * R(reach), cy + Math.sin(a) * R(reach));
+      }
+      g.poly(pts).fill({ color, alpha: 0.28 });
+      g.poly(pts).stroke({ width: 2, color, alpha: 0.7 });
+      break;
+    }
+    case "line":
+    case "dash": {
+      const rangeT = passes ? p.rangeTiles : raycastTiles(fx, fy, ang, p.rangeTiles || 6);
+      const w = R(p.widthTiles || (t.variant.shape === "dash" ? 0.8 : 0.6));
+      drawRotRect(g, cx, cy, ang, R(rangeT), w, color, t.variant.shape === "dash" ? 0.22 : 0.5);
+      break;
+    }
+    case "placement":
+    case "cluster": {
+      const maxT = p.rangeTiles || 6;
+      // thrower: land where you aim, clamped to max range (default to max until aimed)
+      const reach = t.reachTiles == null ? maxT : Math.min(t.reachTiles, maxT);
+      drawMaxRangeRing(g, cx, cy, R(maxT), color);
+      const lx = cx + Math.cos(ang) * R(reach), ly = cy + Math.sin(ang) * R(reach);
+      dottedLine(g, cx, cy, lx, ly, color);
+      const sr = R(p.splashTiles || 1.25);
+      if (t.variant.shape === "placement") {
+        splash(g, lx, ly, sr, color);
+      } else {
+        const sp = p.spacingTiles || 1.0;
+        clusterOffsets(p.pattern, sp).forEach(([adir, aperp]) => {
+          const ox = (Math.cos(ang) * adir - Math.sin(ang) * aperp) * cell;
+          const oy = (Math.sin(ang) * adir + Math.cos(ang) * aperp) * cell;
+          splash(g, lx + ox, ly + oy, sr, color, 0.18, 0.5);
+        });
+      }
+      break;
+    }
+    case "self-aoe": {
+      splash(g, cx, cy, R(p.splashTiles || 3), color);
+      break;
+    }
+    case "area-follow": {
+      splash(g, cx, cy, R(p.splashTiles || 0.6), color, 0.3, 0.8);
+      break;
+    }
+    default: {
+      g.circle(cx, cy, R(p.rangeTiles || 5)).stroke({ width: 2, color, alpha: 0.6 });
+    }
+  }
+}
+
+function splash(g, x, y, r, color, fillA = 0.25, strokeA = 0.7) {
+  g.circle(x, y, r).fill({ color, alpha: fillA });
+  g.circle(x, y, r).stroke({ width: 2, color, alpha: strokeA });
+}
+
+function drawMaxRangeRing(g, cx, cy, r, color) {
+  g.circle(cx, cy, r).stroke({ width: 1, color, alpha: 0.25 });
+}
+
+// cluster splash offsets in tile space, [alongThrow, perpThrow], oriented later
+function clusterOffsets(pattern, sp) {
+  switch (pattern) {
+    case "pair":     return [[0, sp/2], [0, -sp/2]];
+    case "triangle": return [[sp*0.55, 0], [-sp*0.4, sp*0.55], [-sp*0.4, -sp*0.55]];
+    case "quincunx": return [[0,0], [sp,0], [-sp,0], [0,sp], [0,-sp]];
+    case "hexagon":  return [[sp,0],[sp/2,sp*0.87],[-sp/2,sp*0.87],[-sp,0],[-sp/2,-sp*0.87],[sp/2,-sp*0.87]];
+    default:         return [[0,0]];
+  }
+}
+
+function drawRotRect(g, cx, cy, ang, len, w, color, alpha) {
+  const hw = w / 2;
+  const dx = Math.cos(ang), dy = Math.sin(ang);
+  const nx = -dy, ny = dx;
+  const pts = [
+    cx + nx*hw,           cy + ny*hw,
+    cx + dx*len + nx*hw,  cy + dy*len + ny*hw,
+    cx + dx*len - nx*hw,  cy + dy*len - ny*hw,
+    cx - nx*hw,           cy - ny*hw,
+  ];
+  g.poly(pts).fill({ color, alpha });
+  g.poly(pts).stroke({ width: 1.5, color, alpha: alpha + 0.2 });
+}
+
+function dottedLine(g, x1, y1, x2, y2, color) {
+  const dist = Math.hypot(x2-x1, y2-y1);
+  const steps = Math.max(2, Math.floor(dist / 8));
+  for (let i = 0; i < steps; i += 2) {
+    const a = i/steps, b = Math.min(1, (i+1)/steps);
+    g.moveTo(x1 + (x2-x1)*a, y1 + (y2-y1)*a);
+    g.lineTo(x1 + (x2-x1)*b, y1 + (y2-y1)*b);
+  }
+  g.stroke({ width: 2, color, alpha: 0.6 });
+}
+
+// ---- interaction ----
+app.stage.eventMode = "static";
+app.stage.hitArea = app.screen;
+app.stage.on("pointermove", (e) => {
+  if (draggingId) return;
+  const t = tokens.find(x => x.id === selectedId);
+  if (!t) return;
+  const [cx, cy] = tileCenterPx(t.tx, t.ty);
+  t.angle = Math.atan2(e.global.y - cy, e.global.x - cx);
+  t.reachTiles = Math.hypot(e.global.x - cx, e.global.y - cy) / cell;
+  drawReticles();
+});
+app.stage.on("pointertap", (e) => {
+  const { tx, ty } = pxToTile(e.global.x, e.global.y);
+  const ix = Math.round(tx), iy = Math.round(ty);
+  if (ix < 0 || iy < 0 || ix >= currentMap.width || iy >= currentMap.height) return;
+
+  if (wallBreakMode) {
+    const ch = currentMap.grid[iy]?.[ix];
+    if (ch && destructSet.has(ch)) {
+      const key = tk(ix, iy);
+      if (brokenTiles.has(key)) brokenTiles.delete(key); else brokenTiles.add(key);
+      drawMap();
+      redraw();
+    }
+    return;
+  }
+  if (placing) {
+    placeToken(ix, iy);
+    placing = false;
+    document.getElementById("placeBtn").textContent = "Click map to place →";
+  }
+});
+
+document.getElementById("placeBtn").addEventListener("click", () => {
+  placing = !placing;
+  document.getElementById("placeBtn").textContent = placing ? "…now click the map" : "Click map to place →";
+});
+document.getElementById("clearBtn").addEventListener("click", () => {
+  tokens.slice().forEach(t => removeToken(t.id));
+});
+
+function setTeam(team) {
+  placingTeam = team;
+  document.getElementById("teamBlue").classList.toggle("sel", team === "blue");
+  document.getElementById("teamRed").classList.toggle("sel", team === "red");
+}
+document.getElementById("teamBlue").addEventListener("click", () => setTeam("blue"));
+document.getElementById("teamRed").addEventListener("click", () => setTeam("red"));
+document.getElementById("showAll").addEventListener("change", (e) => {
+  showAllReticles = e.target.checked;
+  drawReticles();
+});
+document.getElementById("showVision").addEventListener("change", (e) => {
+  showVision = e.target.checked;
+  document.getElementById("visionRow").style.display = showVision ? "block" : "none";
+  redraw();
+});
+const revealSlider = document.getElementById("revealRadius");
+revealSlider.addEventListener("input", (e) => {
+  revealRadius = parseFloat(e.target.value);
+  document.getElementById("revealVal").textContent = revealRadius;
+  redraw();
+});
+document.getElementById("visionPreset").addEventListener("change", (e) => {
+  revealRadius = parseFloat(e.target.value);
+  revealSlider.value = revealRadius;
+  document.getElementById("revealVal").textContent = revealRadius;
+  redraw();
+});
+document.getElementById("showMovement").addEventListener("change", (e) => {
+  showMovement = e.target.checked;
+  document.getElementById("moveRow").style.display = showMovement ? "block" : "none";
+  redraw();
+});
+document.getElementById("moveSeconds").addEventListener("input", (e) => {
+  moveSeconds = parseFloat(e.target.value);
+  document.getElementById("moveVal").textContent = moveSeconds;
+  redraw();
+});
+document.getElementById("wallBreakBtn").addEventListener("click", (e) => {
+  wallBreakMode = !wallBreakMode;
+  e.target.classList.toggle("on", wallBreakMode);
+  e.target.textContent = wallBreakMode ? "Break walls: ON (click a wall)" : "Break walls: off";
+  if (wallBreakMode) { placing = false; document.getElementById("placeBtn").textContent = "Click map to place →"; }
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.target.tagName === "SELECT" || e.target.tagName === "INPUT") return;
+  if ((e.key === "Backspace" || e.key === "Delete") && selectedId != null) {
+    e.preventDefault();
+    removeToken(selectedId);
+  } else if (e.key === "Escape") {
+    placing = false;
+    document.getElementById("placeBtn").textContent = "Click map to place →";
+  }
+});
+
+mapSel.addEventListener("change", () => loadMap(mapSel.value));
+window.addEventListener("resize", () => { if (currentMap) { drawMap(); tokens.forEach(positionSprite); drawReticles(); } });
+
+// ---- boot ----
+refreshVariants();
+loadMap(mapSel.value);
+setStatus(`ready · ${Object.keys(maps).length} maps · ${brawlers.length} brawlers`);
+</script>
+</body>
+</html>
