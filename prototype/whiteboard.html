@@ -35,6 +35,10 @@
   label input { vertical-align:middle; margin-right:4px; }
   label.chk { text-transform:none; letter-spacing:0; color:#cde; font-size:12px; margin:6px 0; }
   #wallBreakBtn.on { border-color:#f6c64a; color:#f6c64a; }
+  .kit { font-size:12px; color:#cde; margin-top:6px; }
+  .kit-prose { padding:8px 10px; background:#0c1422; border-left:2px solid #5fb0ff; border-radius:4px; line-height:1.5; }
+  .kit-quirks { margin-top:6px; display:flex; flex-wrap:wrap; gap:4px; }
+  .quirk { font-size:10px; background:#3a2d10; color:#f6c64a; padding:2px 6px; border-radius:3px; border:1px solid #6b5320; }
 </style>
 </head>
 <body>
@@ -51,6 +55,7 @@
   <label>Reticle variant</label>
   <select id="variantSel"></select>
   <div id="variantInfo" class="info"></div>
+  <div id="kitInfo" class="kit"></div>
 
   <label>Team</label>
   <div class="teamrow">
@@ -124,12 +129,14 @@ const status = document.getElementById("status");
 const setStatus = (t) => { status.textContent = t; };
 
 // ---- load data ----
-const [mapsDoc, brawlersDoc] = await Promise.all([
+const [mapsDoc, brawlersDoc, kitsDoc] = await Promise.all([
   fetch("/data/maps.json").then(r => r.json()),
   fetch("/data/brawlers.json").then(r => r.json()),
+  fetch("/data/kits.json").then(r => r.json()).catch(() => ({ kits: {} })),
 ]);
 const maps = mapsDoc.maps;
 const brawlers = brawlersDoc.brawlers;
+const kits = kitsDoc.kits || {};
 
 // tile-class lookups from the legend
 const legendSet = (flag) => new Set(
@@ -200,7 +207,8 @@ function refreshVariants() {
 function fmt(n) { return Math.round(n * 100) / 100; }
 function showVariantInfo() {
   const b = brawlers.find(x => x.hash === brawlerSel.value);
-  const v = b.variants[parseInt(variantSel.value, 10) || 0];
+  const vi = parseInt(variantSel.value, 10) || 0;
+  const v = b.variants[vi];
   const p = v.params || {};
   const bits = [];
   if (p.rangeTiles != null) bits.push(`range <b>${fmt(p.rangeTiles)}</b>t`);
@@ -210,6 +218,18 @@ function showVariantInfo() {
   if (p.pattern) bits.push(`pattern <b>${p.pattern}</b>`);
   bits.push(v.passesWalls ? "passes walls" : "<b>blocked by walls</b>");
   document.getElementById("variantInfo").innerHTML = `${v.shape} · ${bits.join(" · ")}`;
+
+  const kit = kits[b.hash];
+  const kitBox = document.getElementById("kitInfo");
+  if (!kit) { kitBox.innerHTML = ""; kitBox.style.display = "none"; return; }
+  kitBox.style.display = "block";
+  const isSuper = /super/i.test(v.label);
+  const prose = isSuper ? kit.super : kit.attack;
+  const quirkChips = (kit.quirks || []).map(q => `<span class="quirk">${q}</span>`).join("");
+  kitBox.innerHTML = `
+    <div class="kit-prose">${prose || ""}</div>
+    ${quirkChips ? `<div class="kit-quirks">${quirkChips}</div>` : ""}
+  `;
 }
 brawlerSel.addEventListener("change", refreshVariants);
 variantSel.addEventListener("change", showVariantInfo);
