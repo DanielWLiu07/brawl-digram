@@ -1,0 +1,2366 @@
+"""Generate BRAWLER_KITS.md from baked brawlers.json + wiki-grounded prose.
+
+Wiki kit descriptions are sourced from brawlstars.fandom.com/wiki/<slug> and
+transcribed manually (clean plain English, no template tokens). CSV-derived
+stats (HP, range, splash, etc) come from data/brawlers.json which was baked
+from v67.264 game files.
+
+Run with: python3 data/build_brawler_kits_md.py
+Writes:    data/BRAWLER_KITS.md
+"""
+
+import json
+from pathlib import Path
+
+REPO = Path(__file__).parent.parent
+BAKED = REPO / "data" / "brawlers.json"
+BRAWLIFY = REPO / "data" / "brawlify" / "brawlers.json"
+OUT = REPO / "data" / "BRAWLER_KITS.md"
+
+# ----------------------------------------------------------------------------
+# Wiki-grounded kit data. One entry per brawler keyed by display name.
+# Fields:
+#   class      - role from wiki infobox
+#   role       - one-liner blurb (kit summary)
+#   attack     - 1-2 sentence plain-English attack mechanics (no numbers)
+#   super      - 1-2 sentence plain-English super mechanics
+#   hyper      - hypercharge object {name, effect} or None
+#   stars      - list of {name, effect}
+#   gadgets    - list of {name, effect}
+#   quirks     - list of quirk strings worth flagging
+#   slug       - fandom URL slug
+# ----------------------------------------------------------------------------
+
+WIKI = {
+"8-Bit": {
+    "class": "Damage Dealer",
+    "attack": "Fires a volley of six straight, very long-ranged laser beams.",
+    "super": "Drops a Damage Booster turret that buffs damage for 8-Bit and allies standing in its radius.",
+    "hyper": {"name": "Aimbot", "effect": "Turret gains more health and starts firing long-ranged laser beams of its own."},
+    "stars": [
+        {"name": "Boosted Booster", "effect": "Damage Booster gains larger radius and a bigger damage buff."},
+        {"name": "Plugged In", "effect": "8-Bit moves significantly faster while standing next to his Damage Booster."},
+    ],
+    "gadgets": [
+        {"name": "Cheat Cartridge", "effect": "Instantly teleports 8-Bit to his Damage Booster."},
+        {"name": "Extra Credits", "effect": "Next attack fires triple the number of laser projectiles."},
+    ],
+    "quirks": [
+        "Slowest movement speed in the game",
+        "Super spawns a persistent turret",
+    ],
+    "slug": "8-Bit",
+},
+"Alli": {
+    "class": "Assassin",
+    "attack": "Short dash on the ground; in bushes or over water she jumps over obstacles and slams down for area damage on landing.",
+    "super": "Enters an enraged Stalker state where she becomes intermittently invisible and her first attack deals bonus damage scaled to enemy health.",
+    "hyper": {"name": "Swamp Snacking", "effect": "Attacks heal her when they connect."},
+    "stars": [
+        {"name": "Lizard Limbs", "effect": "Begins regenerating health sooner while enraged."},
+        {"name": "You Better Run You Better Take Cover", "effect": "Reloads faster while enraged."},
+    ],
+    "gadgets": [
+        {"name": "Feed The Gators", "effect": "Next attack heals her based on damage dealt."},
+        {"name": "Cold-Blooded", "effect": "Becomes enraged for a short duration when an enemy is visible."},
+    ],
+    "quirks": [
+        "Attack IS a dash (no projectile)",
+        "Terrain changes attack: bush/water gives a jump",
+        "Super produces partial invisibility",
+    ],
+    "slug": "Alli",
+},
+"Amber": {
+    "class": "Controller",
+    "attack": "Sprays a continuous, long-ranged stream of fire from her flamethrower that pierces enemies.",
+    "super": "Throws a flask of fire fluid that puddles on the ground; her attack stream ignites the puddle, burning enemies that stand in it.",
+    "hyper": {"name": "Oil Spill", "effect": "Increases the radius of her Super's flammable puddle."},
+    "stars": [
+        {"name": "Wild Flames", "effect": "Two puddles can exist at once and Super charges passively when she stands near one."},
+        {"name": "Scorchin Siphon", "effect": "Reloads faster when standing near a fire fluid puddle."},
+    ],
+    "gadgets": [
+        {"name": "Fire Starters", "effect": "Runs forward leaving a flammable trail behind that ignites like her Super puddle."},
+        {"name": "Dancing Flames", "effect": "Spawns three flames that orbit her, damaging enemies on contact."},
+    ],
+    "quirks": [
+        "Attack drains a fuel meter (continuous beam, not discrete shots)",
+        "Super interacts with attack: throw puddle, then ignite with stream",
+        "Attack pierces multiple targets",
+    ],
+    "slug": "Amber",
+},
+"Angelo": {
+    "class": "Marksman",
+    "attack": "Long-ranged charged arrow shot; holding the attack joystick charges damage up to a maximum after ~2.5 seconds.",
+    "super": "Places a toxic puddle on the ground; standing in it makes his attacks apply poison damage over time.",
+    "hyper": {"name": "In My Element", "effect": "His Super's puddle now follows him as he moves."},
+    "stars": [
+        {"name": "Empower", "effect": "Heals over time while standing in his Super puddle."},
+        {"name": "Flow", "effect": "Gains a movement speed boost while hovering on water."},
+    ],
+    "gadgets": [
+        {"name": "Stinging Flight", "effect": "Launches into the air, damaging nearby enemies and healing himself."},
+        {"name": "Master Fletcher", "effect": "Next attack pierces obstacles and enemies."},
+    ],
+    "quirks": [
+        "Attack damage scales with charge time",
+        "Single-ammo design (1 ammo slot, fast individual reload)",
+        "Can hover on water",
+    ],
+    "slug": "Angelo",
+},
+"Ash": {
+    "class": "Tank",
+    "attack": "Smashes his broom on the ground sending a piercing shockwave; damage scales with his Rage meter.",
+    "super": "Releases a swarm of robotic rats that chase the nearest enemy and explode on contact.",
+    "hyper": {"name": "Rat King", "effect": "Super spawns double the number of robotic rats."},
+    "stars": [
+        {"name": "First Bash", "effect": "Gains extra Rage on hit while ammo is full."},
+        {"name": "Mad As Heck", "effect": "Reload speed scales with Rage."},
+    ],
+    "gadgets": [
+        {"name": "Chill Pill", "effect": "Heals based on how much Rage is currently stored."},
+        {"name": "Rotten Banana", "effect": "Trades current health for an instant Rage boost."},
+    ],
+    "quirks": [
+        "Rage meter charges on damage dealt and received; boosts speed and damage",
+        "Third-highest HP in the game",
+        "Attack projectile pierces",
+    ],
+    "slug": "Ash",
+},
+"Barley": {
+    "class": "Artillery",
+    "attack": "Lobs a bottle of harmful liquid over walls that creates a damaging puddle on the ground for a few seconds.",
+    "super": "Lobs five flaming bottles in a wider spread that travel further and create larger lingering puddles.",
+    "hyper": {"name": "Bottled-Up Rage", "effect": "Super now lobs three large bottles covering a wider area and destroying bushes."},
+    "stars": [
+        {"name": "Medical Use", "effect": "Heals himself a small amount with every attack thrown."},
+        {"name": "Extra Noxious", "effect": "Adds more damage-per-second to attack puddles."},
+    ],
+    "gadgets": [
+        {"name": "Sticky Syrup Mixer", "effect": "Drops a slowing puddle of syrup around himself."},
+        {"name": "Herbal Tonic", "effect": "Lobs healing bottles around himself and allies."},
+    ],
+    "quirks": [
+        "Attack and Super lob over walls",
+        "Damage-over-time puddle (not direct impact)",
+    ],
+    "slug": "Barley",
+},
+"Bea": {
+    "class": "Marksman",
+    "attack": "Fires a long-ranged bee dealing moderate damage; hitting an enemy Supercharges her next shot to deal massive damage.",
+    "super": "Releases a swarm of seven bee drones that fan out, dealing damage and slowing enemies hit.",
+    "hyper": {"name": "Protect the Queen", "effect": "Super projectiles split into two on hit or at max range."},
+    "stars": [
+        {"name": "Insta Beaload", "effect": "If she misses a Supercharged shot, the next one is also Supercharged."},
+        {"name": "Honeycomb", "effect": "Gains a shield while a Supercharged shot is loaded."},
+    ],
+    "gadgets": [
+        {"name": "Honey Molasses", "effect": "Drops a beehive surrounded by a slowing honey puddle."},
+        {"name": "Rattled Hive", "effect": "Sends four spiraling bees that deal more damage the further they fly."},
+    ],
+    "quirks": [
+        "Charged-shot mechanic: every hit Supercharges the next attack",
+        "Single-ammo design",
+    ],
+    "slug": "Bea",
+},
+"Belle": {
+    "class": "Marksman",
+    "attack": "Long-ranged Electro-Bolt that chains to nearby enemies on hit.",
+    "super": "Marks an enemy with a tracer that increases all damage taken until the target is defeated or she fires another Super.",
+    "hyper": {"name": "Magnetic", "effect": "Super projectile homes in on enemies."},
+    "stars": [
+        {"name": "Positive Feedback", "effect": "Gains a brief shield whenever her attack hits an enemy Brawler."},
+        {"name": "Grounded", "effect": "Marked enemies cannot reload for a short duration."},
+    ],
+    "gadgets": [
+        {"name": "Nest Egg", "effect": "Places an invisible trap that slows and damages enemies on trigger."},
+        {"name": "Reverse Polarity", "effect": "Next attack bounces off walls."},
+    ],
+    "quirks": [
+        "Attack chains between enemies",
+        "Super is a damage-amplification mark (no direct burst)",
+    ],
+    "slug": "Belle",
+},
+"Berry": {
+    "class": "Support",
+    "attack": "Lobs an ice cream scoop that splashes on impact and leaves a lingering puddle that damages enemies and heals allies who stand in it.",
+    "super": "Dashes forward in a wild spin, leaving a long trail of ice cream behind him that behaves like his attack puddle.",
+    "hyper": {"name": "Double Scoops", "effect": "Super dash leaves two parallel ice cream trails."},
+    "stars": [
+        {"name": "Floor Is Fine", "effect": "Reloads faster while standing on his own ice cream puddle."},
+        {"name": "Making A Mess", "effect": "Attack does bonus impact damage on tiles without existing ice cream."},
+    ],
+    "gadgets": [
+        {"name": "Friendship Is Great", "effect": "Knocks back enemies and heals nearby allies."},
+        {"name": "Healthy Additives", "effect": "Next attack puddle lasts longer."},
+    ],
+    "quirks": [
+        "Same projectile damages enemies and heals allies (puddle field)",
+        "Super is a damaging/healing dash, not a burst",
+    ],
+    "slug": "Berry",
+},
+"Bibi": {
+    "class": "Tank",
+    "attack": "Swings her baseball bat in a wide arc; charging up a Home Run meter while not attacking lets her next swing knock enemies back several tiles.",
+    "super": "Bats a bouncing bubblegum ball that pierces enemies and bounces off walls for several seconds.",
+    "hyper": {"name": "Out of Bounds", "effect": "Super gum ball lasts longer and bounces further."},
+    "stars": [
+        {"name": "Home Run", "effect": "Gains movement speed while the Home Run meter is full."},
+        {"name": "Batting Stance", "effect": "Gains a damage-reduction shield while the Home Run meter is full."},
+    ],
+    "gadgets": [
+        {"name": "Vitamin Booster", "effect": "Heals herself over several seconds."},
+        {"name": "Extra Sticky", "effect": "Next Super slows enemies it hits."},
+    ],
+    "quirks": [
+        "Home Run charge mechanic (stationary buildup)",
+        "Super pierces and bounces off walls",
+    ],
+    "slug": "Bibi",
+},
+"Bo": {
+    "class": "Controller",
+    "attack": "Fires three explosive arrows in a slight sweeping spread that deal splash damage on impact.",
+    "super": "Lobs an arrow over obstacles that places three proximity mines on the ground that explode on enemy contact.",
+    "hyper": {"name": "Catch a Bear", "effect": "Super deploys five mines instead of three (stacks with existing mines)."},
+    "stars": [
+        {"name": "Circling Eagle", "effect": "Sees into bushes from a much longer distance than normal."},
+        {"name": "Snare A Bear", "effect": "Mines stun enemies briefly instead of knocking them back."},
+    ],
+    "gadgets": [
+        {"name": "Super Totem", "effect": "Places a totem that boosts allies' Super-charge rate."},
+        {"name": "Tripwire", "effect": "Manually detonates all his placed mines on a short fuse."},
+    ],
+    "quirks": [
+        "Star Power gives expanded bush-vision (key recon role)",
+        "Super places persistent mines on the map",
+    ],
+    "slug": "Bo",
+},
+"Bolt": {
+    "class": "Damage Dealer",
+    "attack": "Rolls into enemies dealing impact damage that scales with his current movement speed; the first target hit takes double damage.",
+    "super": "Enters overdrive mode, gaining a speed boost, damage-reduction shield, and a lightning trail that burns enemies who touch it.",
+    "hyper": None,
+    "stars": [
+        {"name": "Toss Up", "effect": "Knocks enemies upward when he is at top speed."},
+        {"name": "Unstoppaball", "effect": "Immune to crowd control and gains extra top speed during Super."},
+    ],
+    "gadgets": [
+        {"name": "Oil Change", "effect": "Grants a shield scaled by current movement speed."},
+        {"name": "Bouncy Ball", "effect": "Jumps to a target location, damaging on landing but resetting his speed."},
+    ],
+    "quirks": [
+        "Attack IS the dash (no projectile)",
+        "Speed scales damage; speed builds up by moving",
+        "Super charges while moving (trait)",
+    ],
+    "slug": "Bolt",
+},
+"Bonnie": {
+    "class": "Marksman",
+    "attack": "In her sniper form, fires a long-ranged Star Launcher shot; in her cannon form (after Super), fires a huge tooth at long range.",
+    "super": "Transforms her into Clyde the cannon (or back), launching her a long distance and knocking back enemies on landing.",
+    "hyper": {"name": "Daredevil", "effect": "Super fires teeth in all directions on takeoff and landing while stunning nearby enemies."},
+    "stars": [
+        {"name": "Black Powder", "effect": "Increases the range of her cannon form's Super relaunch."},
+        {"name": "Wisdom Tooth", "effect": "Cannon-form attack splits into smaller projectiles on hit."},
+    ],
+    "gadgets": [
+        {"name": "Sugar Rush", "effect": "Boosts movement and reload speed while in cannon form."},
+        {"name": "Crash Test", "effect": "Dashes forward, knocking back enemies in her path."},
+    ],
+    "quirks": [
+        "Alt-form Brawler: sniper form + cannon form with different attacks/supers",
+        "Super is a long re-positioning launch",
+    ],
+    "slug": "Bonnie",
+},
+"Brock": {
+    "class": "Marksman",
+    "attack": "Fires a long-ranged rocket that explodes on impact, dealing splash damage in a small radius.",
+    "super": "Rocket Rain — fires a barrage of rockets in a fan that destroys obstacles and deals heavy area damage.",
+    "hyper": {"name": "Rocket Barrage", "effect": "Super fires four waves of seven rockets each."},
+    "stars": [
+        {"name": "More Rockets", "effect": "Super fires additional rockets."},
+        {"name": "Rocket No. 4", "effect": "Adds a fourth ammo slot, increasing his ammo capacity."},
+    ],
+    "gadgets": [
+        {"name": "Rocket Laces", "effect": "Blasts the ground, jumping into the air and damaging nearby enemies."},
+        {"name": "Rocket Fuel", "effect": "Next rocket is bigger, faster, and destroys walls."},
+    ],
+    "quirks": [
+        "Attack deals splash on impact (not just direct hit)",
+    ],
+    "slug": "Brock",
+},
+"Bull": {
+    "class": "Tank",
+    "attack": "Fires two waves of close-range shotgun shells from his dual barrels, dealing massive damage at point-blank.",
+    "super": "Charges in a straight line, damaging enemies and destroying obstacles in his path; two charges can be queued.",
+    "hyper": {"name": "Jaws of Steel", "effect": "Gains a damage-reduction shield while his Super is active."},
+    "stars": [
+        {"name": "Berserker", "effect": "Doubles reload speed when his health drops below a threshold."},
+        {"name": "Tough Guy", "effect": "Grants a damage-reduction shield when his health drops below a threshold."},
+    ],
+    "gadgets": [
+        {"name": "T-Bone Missile", "effect": "Throws a long-ranged projectile that heals him on hit."},
+        {"name": "Stomper", "effect": "Slows nearby enemies; stuns enemies already slowed."},
+    ],
+    "quirks": [
+        "Super is a charging dash (destroys walls)",
+        "Two stockable Super charges",
+    ],
+    "slug": "Bull",
+},
+"Buster": {
+    "class": "Tank",
+    "attack": "Projects a light wave in a wide cone, dealing more damage to enemies closer to him; the wave pierces multiple targets.",
+    "super": "Deploys a barrier in front of him that blocks projectiles and reflects them back as a damaging counterattack.",
+    "hyper": {"name": "Plot Armor", "effect": "Super becomes a full 360-degree barrier reflecting projectiles from all directions."},
+    "stars": [
+        {"name": "Blockbuster", "effect": "Attack damage increases per ally in his Super charging area."},
+        {"name": "Kevlar Vest", "effect": "Reduces damage and grants crowd-control immunity while Super is active."},
+    ],
+    "gadgets": [
+        {"name": "Utility Belt", "effect": "Heals himself and nearby allies (scales with ally count)."},
+        {"name": "Slo-Mo Replay", "effect": "Next attack pulls enemies toward him."},
+    ],
+    "quirks": [
+        "Super is a projectile-blocking shield wall",
+        "Attack pierces multiple targets",
+        "Charges Super faster while allies are near him",
+    ],
+    "slug": "Buster",
+},
+"Buzz": {
+    "class": "Assassin",
+    "attack": "Whips out a quick spread of piercing sound waves from his whistle in a short cone.",
+    "super": "Throws a grappling buoy; on hitting a wall or enemy, he is pulled to it and stuns nearby enemies on arrival (stun duration scales with travel distance).",
+    "hyper": {"name": "Buzzwatch", "effect": "Super instantly recharges when Buzz grapples to a wall."},
+    "stars": [
+        {"name": "Tougher Torpedo", "effect": "Doubles the minimum stun duration of his Super."},
+        {"name": "Eyes Sharp", "effect": "Increases his Super charging trait area."},
+    ],
+    "gadgets": [
+        {"name": "Reserve Buoy", "effect": "Instantly charges his Super (but it won't stun on hit)."},
+        {"name": "X-Ray-Shades", "effect": "Reveals enemies in bushes within his Super-charging trait area."},
+    ],
+    "quirks": [
+        "Super charges passively when enemies enter his trait radius",
+        "Grapple-to-wall mobility",
+        "Attack pierces multiple targets",
+    ],
+    "slug": "Buzz",
+},
+"Buzz Lightyear": {
+    "class": "Damage Dealer (Time-Limited Disney Collab)",
+    "attack": "Has three modes — Laser Mode shoots damage-over-time laser blasts; Saber Mode swings a close-range arc; Wing Mode fires twin lasers that hit harder up close.",
+    "super": "Mode-dependent — Laser fires a sweeping spread of lasers; Saber jumps over walls and area-damages on landing; Wing flies above the ground dropping bombs.",
+    "hyper": {"name": "Bravado", "effect": "Stat buffs only (damage / speed / shield) for the active mode; no Super change."},
+    "stars": [
+        {"name": "(no star powers)", "effect": "Buzz Lightyear ships without star powers."},
+    ],
+    "gadgets": [
+        {"name": "Turbo Boosters", "effect": "Dashes a short distance forward."},
+    ],
+    "quirks": [
+        "Three switchable modes (Laser / Saber / Wing) with totally different attacks and supers",
+        "No star powers",
+        "Time-limited brawler (Brawlidays 2024 / Pizza Planet event) — removed from the game",
+    ],
+    "slug": "Buzz_Lightyear",
+},
+"Byron": {
+    "class": "Support",
+    "attack": "Fires a very long-ranged dart that damages enemies over time and heals allies over time.",
+    "super": "Lobs a vial that splashes on impact, damaging all enemies and healing all allies in its splash radius over time.",
+    "hyper": {"name": "Unstable Concoction", "effect": "Super additionally fires six radial darts outward from the impact point."},
+    "stars": [
+        {"name": "Malaise", "effect": "Enemies hit by his Super receive reduced healing from any source for a duration."},
+        {"name": "Injection", "effect": "Periodically, his next attack pierces through targets."},
+    ],
+    "gadgets": [
+        {"name": "Shot In The Arm", "effect": "Consumes one ammo to heal himself over time."},
+        {"name": "Booster Shots", "effect": "Next attack fires three darts (each deals less damage/healing)."},
+    ],
+    "quirks": [
+        "Same projectile damages enemies AND heals allies",
+        "Very long range, dual-target healer/sniper",
+    ],
+    "slug": "Byron",
+},
+"Carl": {
+    "class": "Damage Dealer",
+    "attack": "Throws his pickaxe in a straight line; it returns to him like a boomerang and only reloads once retrieved.",
+    "super": "Tailspin — spins around at greatly increased movement speed, damaging enemies he touches repeatedly.",
+    "hyper": {"name": "Flamespin", "effect": "Super leaves a trail of hot rocks behind him that ignite enemies."},
+    "stars": [
+        {"name": "Power Throw", "effect": "Pickaxe travels and returns faster, effectively reducing reload time."},
+        {"name": "Protective Pirouette", "effect": "Damage taken during Super is reduced."},
+    ],
+    "gadgets": [
+        {"name": "Heat Ejector", "effect": "Next pickaxe leaves a trail of burning rocks behind it."},
+        {"name": "Flying Hook", "effect": "Next pickaxe pulls Carl to the farthest point of its range."},
+    ],
+    "quirks": [
+        "Boomerang attack — must wait for return to reload",
+        "Super is a self-AoE spin, not a projectile",
+        "Attack pierces multiple targets",
+    ],
+    "slug": "Carl",
+},
+"Charlie": {
+    "class": "Controller",
+    "attack": "Slings her yo-yo forward; it damages enemies on its outward trip and on its return, reloading her single ammo only after returning.",
+    "super": "Fires a hair bundle that traps an enemy in a cocoon, immobilizing them for several seconds (cocoon has its own HP).",
+    "hyper": {"name": "Pestilence", "effect": "Super spawns three additional spiders around the cocoon."},
+    "stars": [
+        {"name": "Digestive", "effect": "Cocooned enemies lose health over time while cocooned."},
+        {"name": "Slimy", "effect": "Super leaves a slowing slime trail."},
+    ],
+    "gadgets": [
+        {"name": "Spiders", "effect": "Summons three spiders that chase down nearby enemies."},
+        {"name": "Personal Space", "effect": "Cocoons herself, healing for a percentage of max health."},
+    ],
+    "quirks": [
+        "Yo-yo attack hits on both outbound and return; single-ammo design",
+        "Super is a hard CC (cocoon)",
+    ],
+    "slug": "Charlie",
+},
+"Chester": {
+    "class": "Damage Dealer",
+    "attack": "Cycles through a four-step bell sequence — first attack fires 1 bell, then 2, then 3, then 4 bells in widening spreads.",
+    "super": "Randomly picks one of five Supers — damaging shockwave, stunning candy boxer, salt cloud DoT, slow zone, or large self-heal.",
+    "hyper": {"name": "Crunchy Chewy Gooey", "effect": "Combines three Supers into one — high-damage shot, salt cloud DoT, and slow."},
+    "stars": [
+        {"name": "Single Bellomania", "effect": "First bell in the attack sequence does increased damage."},
+        {"name": "Sneak Peek", "effect": "Reveals which Super he will get next before charging."},
+    ],
+    "gadgets": [
+        {"name": "Spicy Dice", "effect": "Re-rolls his current Super to a different random one."},
+        {"name": "Candy Beans", "effect": "Eats a random candy granting a random buff (speed/reload/damage/heal)."},
+    ],
+    "quirks": [
+        "Attack damage scales through a fixed 4-stage sequence",
+        "Random Super — five possible effects",
+    ],
+    "slug": "Chester",
+},
+"Chuck": {
+    "class": "Damage Dealer",
+    "attack": "Fires three clouds of steam in a slight cone that deal more damage at close range and pierce enemies.",
+    "super": "Places a Post on the ground; if a Post already exists nearby, he dashes between Posts damaging and knocking back enemies in his path.",
+    "hyper": {"name": "Full Steam Ahead", "effect": "Next dash has unlimited range and trails clouds of steam that damage enemies behind him."},
+    "stars": [
+        {"name": "Pit Stop", "effect": "Increases maximum number of active Posts."},
+        {"name": "Tickets Please", "effect": "Next dash removes ammo from any enemy it hits and refunds it to Chuck."},
+    ],
+    "gadgets": [
+        {"name": "Rerouting", "effect": "Removes the nearest Post and recharges his Super."},
+        {"name": "Ghost Train", "effect": "Next dash passes through obstacles."},
+    ],
+    "quirks": [
+        "Super is a dash between placed Posts (rail mechanic)",
+        "Attack projectile pierces",
+    ],
+    "slug": "Chuck",
+},
+"Clancy": {
+    "class": "Damage Dealer",
+    "attack": "Power Wash — has three stages that upgrade automatically as he gains tokens by hitting enemies; Stage 1 fires one paintball, Stage 2 fires two, Stage 3 adds two diagonals.",
+    "super": "Fires a barrage of projectiles in a fan whose range and damage scale with his current Stage.",
+    "hyper": {"name": "Recall of Duty", "effect": "Super paintballs return to him after firing, dealing damage again on the way back."},
+    "stars": [
+        {"name": "Recon", "effect": "Starts the match with 2 tokens already accumulated."},
+        {"name": "Pumping Up", "effect": "Fully reloads all ammo on every enemy Brawler defeat."},
+    ],
+    "gadgets": [
+        {"name": "Snappy Shooting", "effect": "Doubles token-gain rate for a short duration."},
+        {"name": "Tactical Retreat", "effect": "Dashes backward and reloads ammo."},
+    ],
+    "quirks": [
+        "Token-stage progression — attack and Super grow stronger over the match",
+        "Tokens earned by hitting enemies",
+    ],
+    "slug": "Clancy",
+},
+"Colette": {
+    "class": "Damage Dealer",
+    "attack": "Fires a long-ranged bowtie that deals a percentage of the enemy's current HP rather than flat damage.",
+    "super": "Charges forward then dashes back, damaging all enemies in her path based on their maximum HP.",
+    "hyper": {"name": "Teen Spirit", "effect": "Summons a smaller spirit that follows her Super, dealing extra damage in its path."},
+    "stars": [
+        {"name": "Push It", "effect": "Enemies hit by her Super are dragged to the far end and stunned briefly."},
+        {"name": "Mass Tax", "effect": "Reduces damage taken during Super and grants a shield on hit."},
+    ],
+    "gadgets": [
+        {"name": "Na-Ah", "effect": "Briefly charms an enemy Brawler (loses control)."},
+        {"name": "Gotcha", "effect": "Attack heals her by a percentage of damage dealt for several shots."},
+    ],
+    "quirks": [
+        "Percent-health damage on both attack and Super (counters tanks)",
+        "Super is a dash that goes forward AND back",
+    ],
+    "slug": "Colette",
+},
+"Colt": {
+    "class": "Damage Dealer",
+    "attack": "Rapidly fires six straight long-ranged bullets from his dual revolvers in a single burst.",
+    "super": "Bullet Storm — fires a much longer and more powerful stream of bullets that destroys walls and pierces enemies.",
+    "hyper": {"name": "Dual Wielding", "effect": "Super width is greatly increased."},
+    "stars": [
+        {"name": "Slick Boots", "effect": "Increases his movement speed."},
+        {"name": "Magnum Special", "effect": "Increases attack range and bullet speed."},
+    ],
+    "gadgets": [
+        {"name": "Speedloader", "effect": "Fires two quick slowing shots."},
+        {"name": "Silver Bullet", "effect": "Next shot destroys walls and pierces Brawlers."},
+    ],
+    "quirks": [
+        "Attack is a multi-bullet burst (each pellet rolls independently)",
+        "Super pierces multiple targets",
+    ],
+    "slug": "Colt",
+},
+"Cordelius": {
+    "class": "Assassin",
+    "attack": "Fires two medium-range mushroom projectiles from his garden tool.",
+    "super": "Shoots a large mushroom that, on hitting an enemy, transports both Cordelius and the target to the Shadow Realm — a 1v1 isolated arena.",
+    "hyper": {"name": "Complete Darkness", "effect": "Slows enemies inside the Shadow Realm."},
+    "stars": [
+        {"name": "Comboshrooms", "effect": "Hitting the same target with the second mushroom of an attack deals bonus damage."},
+        {"name": "Mushroom Kingdom", "effect": "Spawns mushrooms in the Shadow Realm that heal allies / damage enemies."},
+    ],
+    "gadgets": [
+        {"name": "Replanting", "effect": "Jumps over terrain quickly."},
+        {"name": "Poison Mushroom", "effect": "Next attack prevents the enemy from attacking for several seconds."},
+    ],
+    "quirks": [
+        "Super sends target + caster to an isolated Shadow Realm (no Super/Gadget/Hyper inside)",
+    ],
+    "slug": "Cordelius",
+},
+"Crow": {
+    "class": "Assassin",
+    "attack": "Throws three long-ranged daggers in a tight cone that apply poison-DoT and reduce healing.",
+    "super": "Leaps a long distance, throwing poisoned daggers in all directions on takeoff and landing.",
+    "hyper": {"name": "Utility Knives", "effect": "Super daggers return to him after the leap, dealing damage on the way back."},
+    "stars": [
+        {"name": "Extra Toxic", "effect": "Poisoned enemies deal reduced damage."},
+        {"name": "Carrion Crow", "effect": "Deals bonus damage to enemies below a health threshold."},
+    ],
+    "gadgets": [
+        {"name": "Instapoison", "effect": "Instantly applies all remaining poison damage to poisoned enemies; gains a small shield."},
+        {"name": "Slowing Toxin", "effect": "Throws a kunai that slows, damages, and poisons the first enemy hit."},
+    ],
+    "quirks": [
+        "Attacks apply healing-reduction debuff (anti-healer)",
+        "Super is a long mobility leap that doubles as damage",
+    ],
+    "slug": "Crow",
+},
+"Damian": {
+    "class": "Tank",
+    "attack": "Power Trio — first two attacks are piercing punches, the third is an explosive kick that marks enemies and sets them on fire.",
+    "super": "Mosh Pit — leaps a long distance and creates a mosh-pit zone on landing that knocks enemies into speakers for repeated damage.",
+    "hyper": {"name": "Jump in the Fire", "effect": "Super sets the ground on fire on landing, burning enemies who walk on it."},
+    "stars": [
+        {"name": "Crowdkill", "effect": "Knocking an enemy into a wall stuns them briefly."},
+        {"name": "Vulgar Display Of Punch", "effect": "Fist is flaming during Super, burning enemies hit."},
+    ],
+    "gadgets": [
+        {"name": "Spiritual Healing", "effect": "Throws a mic; first ally to pick it up is healed."},
+        {"name": "Wall Of Sound", "effect": "Summons a wall of indestructible amps for a short duration."},
+    ],
+    "quirks": [
+        "Attack rotates through a 3-hit combo (piercing punches then explosive kick)",
+        "Super traps enemies in a mosh pit that bounces them off walls",
+    ],
+    "slug": "Damian",
+},
+"Darryl": {
+    "class": "Tank",
+    "attack": "Fires two waves of ten close-range shotgun shells from dual barrels, dealing massive damage at point-blank.",
+    "super": "Barrel Roll — rolls a long distance damaging enemies and bouncing off walls; gains a damage-reduction shield while rolling. Two charges available.",
+    "hyper": {"name": "Barrel o' Bullets", "effect": "Super additionally fires pellets in all directions around him while rolling."},
+    "stars": [
+        {"name": "Steel Hoops", "effect": "Damage taken is reduced for a short window after Super ends."},
+        {"name": "Rolling Reload", "effect": "Doubles reload speed for a few seconds after using Super."},
+    ],
+    "gadgets": [
+        {"name": "Recoiling Rotator", "effect": "Spins in place spraying pellets in all directions."},
+        {"name": "Tar Barrel", "effect": "Creates a slowing tar puddle around himself."},
+    ],
+    "quirks": [
+        "Super auto-charges over time (trait)",
+        "Two stockable Super charges",
+        "Super bounces off walls",
+    ],
+    "slug": "Darryl",
+},
+"Doug": {
+    "class": "Support",
+    "attack": "Splashes the ground around him, damaging enemies and healing allies in a self-centered radius.",
+    "super": "Plants a hot dog at his location; if an ally is defeated within range of it, they respawn at the hot dog instead of base.",
+    "hyper": {"name": "Free Toppings", "effect": "Super hot dog now makes allies mirror Doug's attacks."},
+    "stars": [
+        {"name": "Fast Food", "effect": "Heals to full health when reviving an ally."},
+        {"name": "Self Service", "effect": "Heals himself when he attacks."},
+    ],
+    "gadgets": [
+        {"name": "Double Sausage", "effect": "Next attack only heals (no damage), but heals double."},
+        {"name": "Extra Mustard", "effect": "Next attack only damages (no heal), but deals double damage."},
+    ],
+    "quirks": [
+        "Super grants ally REVIVE — unique mechanic",
+        "Attack heals allies AND damages enemies in same swing",
+        "Super charges by healing (trait)",
+    ],
+    "slug": "Doug",
+},
+"Draco": {
+    "class": "Tank",
+    "attack": "Thrusts his lance forward, piercing enemies and dealing more damage at maximum range.",
+    "super": "Mounts his dragon, transforming into an alternate form with new attacks; stays mounted until defeated.",
+    "hyper": {"name": "Fire and Flames", "effect": "Dragon-form attack has more range and ignites a wider area."},
+    "stars": [
+        {"name": "Expose", "effect": "Periodically, next lance stab marks enemies, amplifying damage they take."},
+        {"name": "Shredding", "effect": "Heals on activating Super."},
+    ],
+    "gadgets": [
+        {"name": "Upper Cut", "effect": "Next lance throws enemies into the air briefly."},
+        {"name": "Last Stand", "effect": "Cannot fall below 1 HP for a short window."},
+    ],
+    "quirks": [
+        "Alt-form Brawler: foot soldier + dragon-mounted",
+        "Damage increases with range (inverse falloff)",
+        "Super charges from damage taken (trait)",
+    ],
+    "slug": "Draco",
+},
+"Dynamike": {
+    "class": "Artillery",
+    "attack": "Lobs two sticks of dynamite over walls that explode in a medium radius, dealing high damage.",
+    "super": "Throws a large TNT barrel that explodes in a large radius, destroying obstacles and knocking enemies back.",
+    "hyper": {"name": "Boomer", "effect": "Super spawns eight smaller bombs around the main explosion."},
+    "stars": [
+        {"name": "Dyna-Jump", "effect": "Can ride the blast of his own dynamite to jump over obstacles."},
+        {"name": "Demolition", "effect": "Increases Super damage substantially."},
+    ],
+    "gadgets": [
+        {"name": "Fidget Spinner", "effect": "Spins with a speed boost while throwing dynamite in a ring around himself."},
+        {"name": "Satchel Charge", "effect": "Next attack stuns enemies briefly."},
+    ],
+    "quirks": [
+        "Attacks lob over walls",
+        "Star Power enables a self-launch jump (Dyna-Jump)",
+        "Attack/Super projectiles bounce off walls",
+    ],
+    "slug": "Dynamike",
+},
+"Edgar": {
+    "class": "Assassin",
+    "attack": "Two short, fast piercing punches that heal Edgar for a portion of damage dealt.",
+    "super": "Vault — leaps a long distance over walls toward a target location, gaining a temporary speed boost on landing.",
+    "hyper": {"name": "Outburst", "effect": "After using Super, his Super-charge rate and reload speed are significantly increased."},
+    "stars": [
+        {"name": "Hard Landing", "effect": "Super deals area damage on landing."},
+        {"name": "Fisticuffs", "effect": "Receives more healing from the damage he deals."},
+    ],
+    "gadgets": [
+        {"name": "Lets Fly", "effect": "Throws a scarf that pulls him to the nearest Brawler or wall."},
+        {"name": "Hardcore", "effect": "Grants a decaying shield."},
+    ],
+    "quirks": [
+        "Heals on every attack hit (life-steal)",
+        "Super auto-charges over time (trait)",
+        "Attack pierces multiple targets",
+    ],
+    "slug": "Edgar",
+},
+"El Primo": {
+    "class": "Tank",
+    "attack": "Throws four close-range flurry of punches.",
+    "super": "Flying Elbow Drop — leaps to a target area, dealing damage and knockback on landing, destroying walls.",
+    "hyper": {"name": "Gravity Leap", "effect": "Super pulls enemies hit toward him and reveals bushes/invisible enemies in landing zone."},
+    "stars": [
+        {"name": "El Fuego", "effect": "Enemies caught by Super burn for damage over time."},
+        {"name": "Meteor Rush", "effect": "Gains a speed boost after using Super."},
+    ],
+    "gadgets": [
+        {"name": "Suplex Supplement", "effect": "Grabs the closest enemy and flips them over his shoulders."},
+        {"name": "Asteroid Belt", "effect": "Summons a meteor on the nearest enemy that damages and destroys walls."},
+    ],
+    "quirks": [
+        "Super is a long jump (wall-skipping mobility)",
+        "Second-highest HP in the game",
+        "Super charges from damage taken (trait)",
+        "Attack pierces multiple targets",
+    ],
+    "slug": "El_Primo",
+},
+"Emz": {
+    "class": "Controller",
+    "attack": "Sprays hairspray in a wide cone that deals damage over time; the center stream deals the most damage.",
+    "super": "Releases a large damaging cloud in a self-centered radius that slows enemies and damages them over time.",
+    "hyper": {"name": "Overhyped Haze", "effect": "Super pushes nearby enemies away from her and sends a wave of spray around her."},
+    "stars": [
+        {"name": "Bad Karma", "effect": "Each tick of attack damage on the same target increases."},
+        {"name": "Hype", "effect": "Heals over time while enemies are inside her Super cloud."},
+    ],
+    "gadgets": [
+        {"name": "Friendzoner", "effect": "Pushes enemies back with a hairspray blast."},
+        {"name": "Acid Spray", "effect": "Next attack passes through walls."},
+    ],
+    "quirks": [
+        "Attack is a damage-over-time spray (not a single hit)",
+        "Attack projectile pierces",
+    ],
+    "slug": "Emz",
+},
+"Eve": {
+    "class": "Damage Dealer",
+    "attack": "Fires three eggs of increasing size at long range; the largest egg deals the most damage.",
+    "super": "Drops a nest egg that hatches into three hatchlings; hatchlings chase down and poison the nearest enemies.",
+    "hyper": {"name": "Generations", "effect": "Nest egg spawns a hatchling every second while it remains alive (plus the original brood)."},
+    "stars": [
+        {"name": "Unnatural Order", "effect": "Reverses attack order — largest egg fires first."},
+        {"name": "Happy Surprise", "effect": "Periodically the biggest egg spawns a hatchling on hit."},
+    ],
+    "gadgets": [
+        {"name": "Gotta Go", "effect": "Jumps away, leaving a hatchling behind."},
+        {"name": "Motherly Love", "effect": "Next Super's hatchlings heal allies instead of damaging enemies."},
+    ],
+    "quirks": [
+        "Three-shot ramping damage attack",
+        "Super spawns persistent spawnable units (hatchlings)",
+    ],
+    "slug": "Eve",
+},
+"Fang": {
+    "class": "Assassin",
+    "attack": "Kicks his shoe forward; if it doesn't hit an enemy at close range, it travels a longer distance dealing less damage.",
+    "super": "Sneak Ahead — flying kick that bounces between up to four enemies in range, dealing damage to each.",
+    "hyper": {"name": "Dragon Kick", "effect": "Super passes through walls and drops popcorn pieces along the way."},
+    "stars": [
+        {"name": "Fresh Kicks", "effect": "Instantly recharges Super if it kills an enemy."},
+        {"name": "Divine Soles", "effect": "Periodically reduces damage from the next enemy hit."},
+    ],
+    "gadgets": [
+        {"name": "Corn-Fu", "effect": "Throws popcorn around him that pops with damage on contact."},
+        {"name": "Roundhouse Kick", "effect": "Spins, stunning nearby enemies briefly."},
+    ],
+    "quirks": [
+        "Attack range adapts: short range high damage, long range lower damage",
+        "Super chains between multiple enemies (kill chain)",
+    ],
+    "slug": "Fang",
+},
+"Finx": {
+    "class": "Controller",
+    "attack": "Fires three parallel long-ranged projectiles — center deals more damage than the side projectiles.",
+    "super": "Time Warp — places a zone that speeds up Finx's and allies' projectiles inside it and slows enemies' projectiles.",
+    "hyper": {"name": "Temporal Traveling", "effect": "Spawns a second Time Warp zone that follows Finx around."},
+    "stars": [
+        {"name": "Hieroglyph Halt", "effect": "Enemies hit by attack have reduced reload speed."},
+        {"name": "Primer", "effect": "Hits with speed-boosted projectiles extend Super duration."},
+    ],
+    "gadgets": [
+        {"name": "Back To The Finxture", "effect": "Marks his current position; teleports back there a few seconds later with the ammo he had then."},
+        {"name": "No Escape", "effect": "Next attack freezes enemies — they can't act but are also damage-immune."},
+    ],
+    "quirks": [
+        "Super alters projectile speeds (zone affects both teams asymmetrically)",
+        "Gadget rewinds him to past position + state",
+    ],
+    "slug": "Finx",
+},
+"Frank": {
+    "class": "Tank",
+    "attack": "Swings his hammer with a wind-up delay (delay shrinks as HP drops), sending a piercing shockwave.",
+    "super": "Larger, longer-ranged shockwave that destroys obstacles and stuns enemies it hits — with a longer wind-up.",
+    "hyper": {"name": "Seismic Smash", "effect": "Super hits all enemies in a circular area around him instead of in a line."},
+    "stars": [
+        {"name": "Power Grab", "effect": "Defeating an enemy temporarily boosts his damage."},
+        {"name": "Sponge", "effect": "Permanently increases maximum health."},
+    ],
+    "gadgets": [
+        {"name": "Active Noise Canceling", "effect": "Becomes immune to stuns/slows/knockbacks; fires a damaging soundwave."},
+        {"name": "Irresistible Attraction", "effect": "Long-range attack that pulls enemies toward him."},
+    ],
+    "quirks": [
+        "Attack has a wind-up delay (telegraphed)",
+        "Wind-up shrinks at lower HP (rewards aggressive play)",
+        "Super charges from damage taken (trait)",
+        "Attack pierces multiple targets",
+    ],
+    "slug": "Frank",
+},
+"Gale": {
+    "class": "Controller",
+    "attack": "Long-ranged waves of damaging snowballs in a slight spread.",
+    "super": "Polar Vortex — wide gust of wind that knocks all enemies back significantly.",
+    "hyper": {"name": "Blizzard", "effect": "Super width is increased and a second gust of wind/snow is added."},
+    "stars": [
+        {"name": "Blustery Blow", "effect": "Super stuns enemies briefly if they are pushed into a wall."},
+        {"name": "Freezing Snow", "effect": "Attack snowballs slow enemies on hit."},
+    ],
+    "gadgets": [
+        {"name": "Spring Ejector", "effect": "Drops a bounce pad that launches anyone (friend or foe) who steps on it."},
+        {"name": "Twister", "effect": "Creates a tornado wall that enemies cannot pass through."},
+    ],
+    "quirks": [
+        "Super is a long-range knockback (positional control, not damage burst)",
+        "Super projectile pierces",
+    ],
+    "slug": "Gale",
+},
+"Gene": {
+    "class": "Controller",
+    "attack": "Smoke ball that travels forward and splits into a fan after a fixed range.",
+    "super": "Magic Hand — extends a giant hand that grabs the first enemy hit and pulls them back to Gene's position.",
+    "hyper": {"name": "Hyper Hands", "effect": "Super now fires three hands simultaneously."},
+    "stars": [
+        {"name": "Magic Puffs", "effect": "Heals all friendly Brawlers around him over time."},
+        {"name": "Spirit Slap", "effect": "Magic Hand deals damage on hit (not just pull)."},
+    ],
+    "gadgets": [
+        {"name": "Lamp Blowout", "effect": "Pushes all nearby enemies back and heals himself slightly."},
+        {"name": "Vengeful Spirits", "effect": "Fires homing missiles at all visible enemies."},
+    ],
+    "quirks": [
+        "Attack splits into multiple projectiles after a range threshold",
+        "Super is a single-target hard CC (pull)",
+    ],
+    "slug": "Gene",
+},
+"Gigi": {
+    "class": "Damage Dealer",
+    "attack": "Briefly sent into a continuous spin, gaining speed and damaging enemies she gets close to.",
+    "super": "Teleports to a target after a short delay, dealing damage to enemies when she returns to her original position.",
+    "hyper": {"name": "Shadow Puppet Reveal", "effect": "Hypercharged Super deals instant damage on teleport landing."},
+    "stars": [
+        {"name": "Plie Protection", "effect": "Super-charge rate increases when she avoids damage for a few seconds."},
+        {"name": "A Helping Hand", "effect": "Super heals her after the charge-up window."},
+    ],
+    "gadgets": [
+        {"name": "Longer Strings", "effect": "Increases her Super-charging trait area."},
+        {"name": "Disappearing Act", "effect": "Creates an invisibility tent for herself and allies inside it."},
+    ],
+    "quirks": [
+        "Attack IS a spin self-AoE (no projectile)",
+        "Super is a delayed teleport-and-return",
+        "Super charges passively from enemy projectiles near her (trait)",
+    ],
+    "slug": "Gigi",
+},
+"Glowy": {
+    "class": "Support",
+    "attack": "Fires a glow beam that creates a tether — damaging enemies it sticks to and healing allies it sticks to; one of each can be active.",
+    "super": "Creep from the Deep — wide cone fear effect that briefly causes enemies to flee and disables their attacks.",
+    "hyper": None,
+    "stars": [
+        {"name": "Biotic Ecosystem", "effect": "While tethered to an enemy AND ally simultaneously, enemy damage drops and ally damage increases."},
+        {"name": "Parasitism", "effect": "Tethering to an enemy heals Glowy for a portion of damage dealt."},
+    ],
+    "gadgets": [
+        {"name": "Slippery Savior", "effect": "Dashes in a direction, healing himself and nearby allies on arrival."},
+        {"name": "More Lumens", "effect": "Temporarily doubles tether damage / healing rate."},
+    ],
+    "quirks": [
+        "Tether mechanic — one ally + one enemy linked simultaneously",
+        "Super is a fear effect (unique CC: enemies run away)",
+    ],
+    "slug": "Glowy",
+},
+"Gray": {
+    "class": "Support",
+    "attack": "Long-ranged finger-pistol shot.",
+    "super": "Dimensional Doors — places two portals; any ally (or himself) who steps on one teleports to the other after a brief delay.",
+    "hyper": {"name": "Another Dimension", "effect": "Whoever uses his teleporters gains a shield; second portal pair can co-exist with the first."},
+    "stars": [
+        {"name": "Fake Injury", "effect": "When at full HP, the next damage taken is reduced."},
+        {"name": "New Perspective", "effect": "Allies who use his portals heal a percentage of max HP."},
+    ],
+    "gadgets": [
+        {"name": "Walking Cane", "effect": "Next attack pulls enemy back slightly."},
+        {"name": "Grand Piano", "effect": "Drops a piano on the attack target's location, destroying walls and knocking back."},
+    ],
+    "quirks": [
+        "Super is a TEAM teleporter — works for any ally, not just himself",
+    ],
+    "slug": "Gray",
+},
+"Griff": {
+    "class": "Damage Dealer",
+    "attack": "Fires three waves of three coins each in a wide cone.",
+    "super": "Throws five banknotes that travel forward and return; they deal more damage the further they fly.",
+    "hyper": {"name": "Tax Rebate", "effect": "Super passes through walls and pierces; a second wave of bills returns after a delay."},
+    "stars": [
+        {"name": "Keep The Change", "effect": "Attack gets a fourth wave of coins and slightly wider spread."},
+        {"name": "Business Resilience", "effect": "Periodically heals a portion of missing HP."},
+    ],
+    "gadgets": [
+        {"name": "Piggy Bank", "effect": "Throws a piggy bank that explodes after a delay, destroying obstacles."},
+        {"name": "Coin Shower", "effect": "Showers coins on a target area dealing damage over time."},
+    ],
+    "quirks": [
+        "Coin-toss attack — 3×3 cone pattern (curtain of damage)",
+        "Super projectile pierces and damages on outbound + return",
+    ],
+    "slug": "Griff",
+},
+"Grom": {
+    "class": "Artillery",
+    "attack": "Throws his walkie-talkie over walls that explodes in a cross-pattern blast on contact.",
+    "super": "Larger TNT-style explosive that bursts into four projectiles in a cross pattern, destroying obstacles and knocking back.",
+    "hyper": {"name": "Grom Bomb Goes Boom!", "effect": "Super bounces in place then explodes again into another cross pattern."},
+    "stars": [
+        {"name": "Foot Patrol", "effect": "Gains movement speed while Super is charged."},
+        {"name": "X-Factor", "effect": "Cross-split projectiles deal more damage at longer travel distances."},
+    ],
+    "gadgets": [
+        {"name": "Watchtower", "effect": "Drops a watchtower that grants bush-vision to nearby allies."},
+        {"name": "Radio Check", "effect": "Next attack throws three walkie-talkies in succession."},
+    ],
+    "quirks": [
+        "Cross-pattern explosion (not radial)",
+        "Lobs over walls",
+    ],
+    "slug": "Grom",
+},
+"Gus": {
+    "class": "Support",
+    "attack": "Throws a long-ranged balloon; a charge bar fills as he hits enemies, and a full bar makes his next attack spawn a healing spirit.",
+    "super": "Grants himself or a teammate a decaying shield while pushing all nearby enemies back.",
+    "hyper": {"name": "Spooky Pop", "effect": "Super shoots spirits in all directions when self-targeted, or spirals around allies when targeted on them."},
+    "stars": [
+        {"name": "Health Bonanza", "effect": "Doubles healing from his spawned spirits."},
+        {"name": "Spirit Animal", "effect": "Recipient of his Super temporarily gains a damage boost."},
+    ],
+    "gadgets": [
+        {"name": "Kooky Popper", "effect": "Detonates all active spirits, damaging nearby enemies."},
+        {"name": "Soul Switcher", "effect": "Trades current HP for instant Super-bar progress."},
+    ],
+    "quirks": [
+        "Attack charge meter spawns persistent pickup spirits (heal pads)",
+        "Super grants ally shields with knockback utility",
+    ],
+    "slug": "Gus",
+},
+"Hank": {
+    "class": "Tank",
+    "attack": "Inflates a water balloon that grows in size and damage while held; releases as a single large area-of-effect explosion.",
+    "super": "Fires torpedoes in all directions while healing a portion of missing HP.",
+    "hyper": {"name": "Homing Fish-iles", "effect": "Super torpedoes home in on nearby enemies."},
+    "stars": [
+        {"name": "Its Gonna Blow", "effect": "Gains movement speed while balloon is heavily charged."},
+        {"name": "Take Cover", "effect": "Reduces damage taken while standing near a wall."},
+    ],
+    "gadgets": [
+        {"name": "Water Balloons", "effect": "Next attack slows enemies on hit."},
+        {"name": "Barricade", "effect": "Temporarily reduces damage taken."},
+    ],
+    "quirks": [
+        "Attack charges while held (variable range and damage)",
+        "Super heals + 360-degree torpedo barrage",
+        "Super charges from damage taken (trait)",
+    ],
+    "slug": "Hank",
+},
+"Jacky": {
+    "class": "Tank",
+    "attack": "Smashes the ground with her jackhammer, damaging all enemies in a self-centered radius (no aim required).",
+    "super": "Holey Moley — burrows underground and pulls all enemies in a radius toward her location, briefly preventing them from acting.",
+    "hyper": {"name": "Seismic Event", "effect": "Enemies hit by her Super are slowed."},
+    "stars": [
+        {"name": "Counter Crush", "effect": "Converts a portion of incoming damage into a Groundbreaker counterattack."},
+        {"name": "Hardy Hard Hat", "effect": "Permanently reduces all damage taken."},
+    ],
+    "gadgets": [
+        {"name": "Pneumatic Booster", "effect": "Briefly moves faster."},
+        {"name": "Rebuild", "effect": "Reconstructs walls/bushes in a small radius around her."},
+    ],
+    "quirks": [
+        "Attack is a self-centered AoE (no projectile)",
+        "Super is a pull (hard CC)",
+        "Gadget can rebuild destroyed walls — unique terrain interaction",
+    ],
+    "slug": "Jacky",
+},
+"Jae-Yong": {
+    "class": "Support",
+    "attack": "Alternates modes: in work mode, drops slipstreams that speed up allies who walk over them; in party mode, lobs bottles that damage enemies and heal allies.",
+    "super": "Mix It Up — switches between work and party modes while either boosting nearby allies' speed (work) or instantly healing them (party).",
+    "hyper": {"name": "Encore", "effect": "Doubles up super effects on the active mode."},
+    "stars": [
+        {"name": "The Crowd Goes Mild", "effect": "Movement speed scales with number of nearby teammates."},
+        {"name": "Extra High Note", "effect": "Attack damage scales per target pierced."},
+    ],
+    "gadgets": [
+        {"name": "Weekend Warrior", "effect": "Self-AoE damage; temporarily switches mode and boosts damage."},
+        {"name": "Time For A Slow Song", "effect": "Self-AoE slow; switches mode and makes attacks apply slow."},
+    ],
+    "quirks": [
+        "Alt-mode brawler (work vs. party) — Super swaps modes",
+        "Attack projectile pierces",
+    ],
+    "slug": "Jae-yong",
+},
+"Janet": {
+    "class": "Marksman",
+    "attack": "High Note — fires a music note that focuses (narrows + extends range) the longer the attack button is held; wide and short by default.",
+    "super": "Crescendo — jetpacks into the air, becoming invulnerable to direct damage while attacking enemies from above.",
+    "hyper": {"name": "Magnum Opus", "effect": "Super lets her be controlled more easily in the air, with bonus stats."},
+    "stars": [
+        {"name": "Stage View", "effect": "Reveals enemies in bushes while she's in the air."},
+        {"name": "Vocal Warm Up", "effect": "Attack focuses faster."},
+    ],
+    "gadgets": [
+        {"name": "Drop The Bass", "effect": "Deploys a speaker that damages enemies in its radius until destroyed."},
+        {"name": "Backstage Pass", "effect": "Next attack also pushes her backward (over walls if held)."},
+    ],
+    "quirks": [
+        "Attack focus mechanic — range/spread varies with charge",
+        "Super grants invulnerability (airborne)",
+        "Attack projectile pierces",
+    ],
+    "slug": "Janet",
+},
+"Jessie": {
+    "class": "Damage Dealer",
+    "attack": "Long-ranged electric orb that bounces between nearby enemies for reduced damage per bounce.",
+    "super": "Deploys Scrappy, a turret that auto-fires at the nearest enemy with moderate health and damage.",
+    "hyper": {"name": "Scrappy 2.0", "effect": "Next turret has more health and more damage."},
+    "stars": [
+        {"name": "Energize", "effect": "Can heal her turret by hitting it with her attacks."},
+        {"name": "Shocky", "effect": "Turret now fires bouncing energy orbs instead of straight shots."},
+    ],
+    "gadgets": [
+        {"name": "Spark Plug", "effect": "Turret emits a shockwave that slows nearby enemies."},
+        {"name": "Recoil Spring", "effect": "Turret attack speed doubled for a few seconds."},
+    ],
+    "quirks": [
+        "Attack chains between enemies",
+        "Super spawns a persistent turret",
+    ],
+    "slug": "Jessie",
+},
+"Juju": {
+    "class": "Artillery",
+    "attack": "Lobs a voodoo toy that explodes on impact; the effect depends on the terrain Juju is standing on (more damage on ground, more range in bush, slows in water).",
+    "super": "Spawns Gris-Gris, a voodoo doll that fires needles at enemies and stays on the map.",
+    "hyper": {"name": "Bokor", "effect": "Gris-Gris gains health, speed, damage and needle size."},
+    "stars": [
+        {"name": "Guarded Gris-Gris", "effect": "Gris-Gris spawns with a shield."},
+        {"name": "Numbing Needles", "effect": "Gris-Gris's needles slow on hit."},
+    ],
+    "gadgets": [
+        {"name": "Voodoo Chile", "effect": "Next attack combines all three terrain buffs."},
+        {"name": "Elementalist", "effect": "Self-buff based on terrain (ground = shield, bush = invisibility, water = speed)."},
+    ],
+    "quirks": [
+        "Terrain-dependent attacks/effects (ground/bush/water)",
+        "Super spawns a persistent damage-dealing pet",
+    ],
+    "slug": "Juju",
+},
+"Kaze": {
+    "class": "Assassin",
+    "attack": "Has two aspects — Geisha dashes a short distance and strikes the nearest target (hitting a Strike Spot doubles damage); Ninja throws two knives that deal more damage at close range.",
+    "super": "Geisha summons a Fan Storm vortex zone; Ninja teleports to mark targets and detonates them on the next attack.",
+    "hyper": {"name": "Ancient Energy", "effect": "Geisha Super damages enemies over time; Ninja Super dashes faster and instantly detonates marks."},
+    "stars": [
+        {"name": "Advanced Techniques", "effect": "Geisha: Strike-Spot hits slow enemies. Ninja: detonating marks damages nearby enemies."},
+        {"name": "Gratuity Included", "effect": "Geisha: Fan Storm removes ammo from enemies inside. Ninja: gadgets last longer."},
+    ],
+    "gadgets": [
+        {"name": "Gracious Host", "effect": "Switching to Ninja gives speed boost; switching to Geisha heals."},
+        {"name": "Hensojutsu", "effect": "Switching to Ninja grants brief invisibility; switching to Geisha dashes forward."},
+    ],
+    "quirks": [
+        "First Ultra-Legendary brawler",
+        "Two aspects (Geisha melee / Ninja ranged) with totally different mechanics",
+        "Geisha attack is a dash with directional 'Strike Spot' (positional buff)",
+    ],
+    "slug": "Kaze",
+},
+"Kenji": {
+    "class": "Assassin",
+    "attack": "Alternates between two attacks — first a forward dash dealing low damage, then a wide close-range katana swing dealing moderate damage.",
+    "super": "Slashimi — lobs a fish over walls, disappears, and reappears at the landing point performing a cross-pattern slash that splash-damages enemies.",
+    "hyper": {"name": "Sake Bomb", "effect": "Super gains additional slashes and a wider area."},
+    "stars": [
+        {"name": "Studied The Blade", "effect": "Super slashes have longer range."},
+        {"name": "Nigiri Nemesis", "effect": "After avoiding damage, gains a shield against the next enemy attack."},
+    ],
+    "gadgets": [
+        {"name": "Dashi Dash", "effect": "Next several attacks all dash forward (skip the wide-swing alternation)."},
+        {"name": "Hosomaki Healing", "effect": "Instantly heals a portion of recently lost health."},
+    ],
+    "quirks": [
+        "Attack alternates dash + slash",
+        "Super disappears him and re-appears at landing point (positional teleport)",
+        "Heals on attack hit (trait)",
+    ],
+    "slug": "Kenji",
+},
+"Kit": {
+    "class": "Support",
+    "attack": "Short-range claw swipe in a wide cone hitting multiple enemies.",
+    "super": "Jumps at a target — on enemies, deals damage and stuns; on allies, attaches to them, healing them and throwing exploding hairballs from atop.",
+    "hyper": {"name": "Making Biscuits", "effect": "Attached form gains extended range and Super on enemies stuns them."},
+    "stars": [
+        {"name": "Power Hungry", "effect": "More Power Cube benefits from each pickup."},
+        {"name": "Overly Attached", "effect": "Attaches to allies for longer."},
+    ],
+    "gadgets": [
+        {"name": "Cardboard Box", "effect": "Becomes invisible in a box; doubles Super-charge rate while inside."},
+        {"name": "Cheeseburger", "effect": "Heals himself and the attached ally."},
+    ],
+    "quirks": [
+        "Super has two modes — enemy target damages, ally target attaches/heals",
+        "Attached mode is essentially a second form Kit rides on a teammate",
+        "Power Cube interaction (Showdown-relevant)",
+    ],
+    "slug": "Kit",
+},
+"Larry & Lawrie": {
+    "class": "Artillery",
+    "attack": "Larry lobs a bundle of tickets at long range — first explodes in a small radius, then explodes again in a larger radius (double-tap damage).",
+    "super": "Spawns his twin brother Lawrie, a controlled spawn with his own attacks (waves of plug projectiles in cones).",
+    "hyper": {"name": "The Three-Bot Problem", "effect": "Super spawns a second, beefier Lawrie alongside the first."},
+    "stars": [
+        {"name": "Protocol Protect", "effect": "Some damage Larry takes is redirected to Lawrie instead."},
+        {"name": "Protocol Assist", "effect": "Lawrie's damage reloads ammo for Larry."},
+    ],
+    "gadgets": [
+        {"name": "Order Swap", "effect": "Larry and Lawrie swap their attacks."},
+        {"name": "Order Fall Back", "effect": "Both dash to each other, healing on contact."},
+    ],
+    "quirks": [
+        "Twin-brawler kit — Lawrie is a persistent spawnable ally",
+        "Attack double-explodes (two damage hits per shot)",
+    ],
+    "slug": "Larry_%26_Lawrie",
+},
+"Leon": {
+    "class": "Assassin",
+    "attack": "Flicks four Spinner Blades in a narrow cone; sweeps left-to-right and deals more damage up close.",
+    "super": "Smoke Bomb — makes Leon invisible for several seconds; visibility breaks briefly when he attacks, picks up gems, or when enemies are within close range.",
+    "hyper": {"name": "Limbo", "effect": "Stays invisible even while attacking during the Hypercharge duration."},
+    "stars": [
+        {"name": "Smoke Trails", "effect": "Gains a movement-speed boost while invisible."},
+        {"name": "Invisiheal", "effect": "Heals over time while his Super is active."},
+    ],
+    "gadgets": [
+        {"name": "Clone Projector", "effect": "Creates a decoy that attacks enemies for low damage."},
+        {"name": "Lollipop Drop", "effect": "Places a lollipop zone that grants invisibility to allies inside."},
+    ],
+    "quirks": [
+        "Stealth mechanic — actual invisibility, not bush hiding",
+        "Enemies within 4 tiles can see his outline",
+    ],
+    "slug": "Leon",
+},
+"Lily": {
+    "class": "Assassin",
+    "attack": "Short-range thorn jabs in a quick close-range hit.",
+    "super": "Flourish — fires a large fruit; on hitting an enemy Brawler, teleports Lily directly behind them, damaging them on arrival.",
+    "hyper": {"name": "Germinate", "effect": "Super bounces off walls and isolates her and the hit target in the Shadow Realm briefly."},
+    "stars": [
+        {"name": "Spiky", "effect": "Next attack after teleport deals bonus damage."},
+        {"name": "Vigilance", "effect": "Gains speed while an enemy is in her trait area."},
+    ],
+    "gadgets": [
+        {"name": "Vanish", "effect": "Temporarily moves to the Shadow Realm (untargetable)."},
+        {"name": "Repot", "effect": "Next Super lobs over obstacles; teleports her to landing point."},
+    ],
+    "quirks": [
+        "Super is a teleport-to-target on hit (Shaco-style flank)",
+        "Super charges passively when enemies are near her (trait)",
+        "Attack projectile pierces",
+    ],
+    "slug": "Lily",
+},
+"Lola": {
+    "class": "Damage Dealer",
+    "attack": "Fires six jewels in a tight long-range pattern.",
+    "super": "Summons her Ego, a clone that mirrors her movement and attacks — same direction and timing, but lower stats.",
+    "hyper": {"name": "Inflated Ego", "effect": "Ego gains more health and damage during Hypercharge."},
+    "stars": [
+        {"name": "Improvise", "effect": "Gains extra damage when down to her last ammo."},
+        {"name": "Sealed With A Kiss", "effect": "Ego's attacks heal allies for a portion of damage dealt."},
+    ],
+    "gadgets": [
+        {"name": "Freeze Frame", "effect": "Ego freezes in place but gains a shield (still attacks/changes direction)."},
+        {"name": "Stunt Double", "effect": "Switches places with Ego; both heal a portion of HP."},
+    ],
+    "quirks": [
+        "Super spawns a mirror clone — same attack as Lola, half stats",
+        "Clone charges Super at half rate compared to Lola",
+    ],
+    "slug": "Lola",
+},
+"Lou": {
+    "class": "Controller",
+    "attack": "Throws snow cones that apply Frost to enemies; filling the Frost meter stuns them.",
+    "super": "Can-Do — creates a large ice rink that slows enemies who walk on it.",
+    "hyper": {"name": "Slushie Storm", "effect": "Super additionally stuns nearby enemies on placement."},
+    "stars": [
+        {"name": "Supercool", "effect": "Enemies in his Super area fill their Frost meter faster."},
+        {"name": "Hypothermia", "effect": "Frosted enemies deal reduced damage."},
+    ],
+    "gadgets": [
+        {"name": "Ice Block", "effect": "Becomes immobile but invulnerable for a short duration."},
+        {"name": "Cryo Syrup", "effect": "Instantly fills the Frost meter of enemies in his Super."},
+    ],
+    "quirks": [
+        "Frost meter mechanic — multi-hit stun setup",
+        "Super is a slowing terrain zone",
+    ],
+    "slug": "Lou",
+},
+"Lumi": {
+    "class": "Damage Dealer",
+    "attack": "Throws a morning star forward; with both maces thrown, the third attack recalls them to her, damaging enemies on the return path and slowing them.",
+    "super": "Blast Beat — creates three increasingly large explosive areas (the biggest stuns).",
+    "hyper": {"name": "Drum Solo", "effect": "Adds one more explosion on each side of the largest one (total of five explosions)."},
+    "stars": [
+        {"name": "42% Burnt", "effect": "Super leaves a fire patch on the largest explosion area."},
+        {"name": "Half-Time", "effect": "Recalled maces slow enemies longer."},
+    ],
+    "gadgets": [
+        {"name": "Hit The Lights", "effect": "Ignites fire around her on-ground maces."},
+        {"name": "Grim And Frostbitten", "effect": "Creates an icy slow zone around her on-ground maces."},
+    ],
+    "quirks": [
+        "Attack has throw/recall cycle (two outbound + one recall pattern)",
+        "Super is a sequential multi-explosion (size escalation)",
+        "Attack/Super projectiles pierce",
+    ],
+    "slug": "Lumi",
+},
+"Maisie": {
+    "class": "Marksman",
+    "attack": "Pressure Rocket — fires a cloud that starts slow and accelerates the further it travels (sweet spot mechanic).",
+    "super": "Wide shockwave that knocks all enemies in a self-centered radius back and damages them.",
+    "hyper": {"name": "Aftermath", "effect": "Super fires main-attack rockets in all directions around her."},
+    "stars": [
+        {"name": "Pinpoint Precision", "effect": "Pressure Rocket deals more damage at max range."},
+        {"name": "Tremors", "effect": "Super shockwave also slows hit enemies."},
+    ],
+    "gadgets": [
+        {"name": "Disengage", "effect": "Dashes a few tiles back while stunning nearby enemies."},
+        {"name": "Finish Them", "effect": "Instantly reloads ammo and next attack deals bonus damage based on target's missing HP."},
+    ],
+    "quirks": [
+        "Attack speeds up with travel distance (sweet-spot range)",
+        "Super is a self-centered knockback",
+    ],
+    "slug": "Maisie",
+},
+"Mandy": {
+    "class": "Marksman",
+    "attack": "Fires a candy projectile from her dispenser; holding still charges a Focus bar that extends her range and projectile speed.",
+    "super": "Sugar blast — extremely long-ranged piercing beam that travels through obstacles.",
+    "hyper": {"name": "Sugar for All!", "effect": "Super fires two additional angled projectiles to the left and right."},
+    "stars": [
+        {"name": "In My Sights", "effect": "Attack speed increases while Focused."},
+        {"name": "Hard Candy", "effect": "Grants a shield while Focused."},
+    ],
+    "gadgets": [
+        {"name": "Caramelize", "effect": "Next attack slows on hit."},
+        {"name": "Cookie Crumbs", "effect": "Next attack pierces walls and enemies."},
+    ],
+    "quirks": [
+        "Stand-still Focus mechanic (range and speed boost)",
+        "Super passes through walls",
+    ],
+    "slug": "Mandy",
+},
+"Max": {
+    "class": "Support",
+    "attack": "Rapidly fires four long-ranged projectiles in a slight spread per ammo use.",
+    "super": "Run N Gun — temporarily boosts her own and nearby allies' movement speed.",
+    "hyper": {"name": "Unlimited Energy", "effect": "Speed boost from Super is sustained longer; she gains additional speed."},
+    "stars": [
+        {"name": "Super Charged", "effect": "Super passively charges while she moves."},
+        {"name": "Run N Gun", "effect": "Reloads faster while moving."},
+    ],
+    "gadgets": [
+        {"name": "Phase Shifter", "effect": "Dashes forward, immune to damage during the dash."},
+        {"name": "Sneaky Sneakers", "effect": "After a delay, teleports back to a marked location with the HP she had then."},
+    ],
+    "quirks": [
+        "Super charges from movement (not damage)",
+        "Movement-centric kit",
+    ],
+    "slug": "Max",
+},
+"Meeple": {
+    "class": "Controller",
+    "attack": "Fires pawn projectiles that slightly home in on enemies.",
+    "super": "Throws a giant d20 die that creates a zone where Meeple and allies can attack THROUGH obstacles.",
+    "hyper": {"name": "The Last Rulebender", "effect": "Super zone is larger and lets Meeple and allies walk through obstacles and water."},
+    "stars": [
+        {"name": "Do Not Pass Go", "effect": "Bonus damage when shots travel through environment in Super zone."},
+        {"name": "Rule Bending", "effect": "Allies in Super zone gain reload speed."},
+    ],
+    "gadgets": [
+        {"name": "Mansions Of Meeple", "effect": "Next attack spawns dice towers in a wall pattern, trapping/damaging enemies inside."},
+        {"name": "Ragequit", "effect": "Stun and knockback nearby enemies (effect scales inversely with current HP)."},
+    ],
+    "quirks": [
+        "Super grants 'shoot through walls' to allies (terrain bypass)",
+        "Attacks home in slightly",
+    ],
+    "slug": "Meeple",
+},
+"Meg": {
+    "class": "Damage Dealer",
+    "attack": "Fires two quick bolts in a slight spread.",
+    "super": "Transforms into Mecha — a much tankier alt-form with new bolt attacks and a sweeping Super.",
+    "hyper": {"name": "Tungsten Toughness", "effect": "Mecha-form Super range increases, or post-Mecha shield is granted."},
+    "stars": [
+        {"name": "Force Field", "effect": "When Mecha is destroyed, Meg gains a damage-reduction shield."},
+        {"name": "Heavy Metal", "effect": "Mecha explodes on destruction, damaging and knocking back nearby enemies."},
+    ],
+    "gadgets": [
+        {"name": "Jolting Volts", "effect": "Heals the Mecha while it's active."},
+        {"name": "Toolbox", "effect": "Drops a toolbox boosting nearby allies' reload speed until destroyed."},
+    ],
+    "quirks": [
+        "Alt-form Brawler (foot vs. Mecha)",
+        "Lowest base HP in the game — but Mecha is huge",
+    ],
+    "slug": "Meg",
+},
+"Melodie": {
+    "class": "Assassin",
+    "attack": "Long-ranged note projectile that does low direct damage; on hit, spawns a note orbiting Melodie that deals high damage to enemies who touch it.",
+    "super": "Three sequential dashes that can each be used individually.",
+    "hyper": {"name": "Flash Mob", "effect": "Each Super dash also spawns an orbiting note."},
+    "stars": [
+        {"name": "Fast Beats", "effect": "Movement speed scales with the number of notes orbiting her."},
+        {"name": "Extended Mix", "effect": "Notes last longer before vanishing."},
+    ],
+    "gadgets": [
+        {"name": "Perfect Pitch", "effect": "Orbit speed and radius increase temporarily."},
+        {"name": "Interlude", "effect": "Grants a shield scaling with active notes."},
+    ],
+    "quirks": [
+        "Persistent orbiting projectiles (collide with enemies)",
+        "Super is a 3-charge dash",
+    ],
+    "slug": "Melodie",
+},
+"Mico": {
+    "class": "Assassin",
+    "attack": "Mic Boom — jumps forward a short distance, then deals area damage on landing (invulnerable mid-air).",
+    "super": "Out of Frame — longer leap that deals damage and knockback on landing.",
+    "hyper": {"name": "Sound Check", "effect": "Super stuns enemies briefly on landing."},
+    "stars": [
+        {"name": "Monkey Business", "effect": "Periodically, next attack removes ammo from enemies hit and refunds it."},
+        {"name": "Record Smash", "effect": "Deals bonus damage to non-Brawler targets."},
+    ],
+    "gadgets": [
+        {"name": "Clipping Scream", "effect": "Long-range scream slows and damages the nearest enemy."},
+        {"name": "Presto", "effect": "Next jump has extended range."},
+    ],
+    "quirks": [
+        "Attack IS a jump (no projectile)",
+        "Invulnerable while airborne mid-attack",
+    ],
+    "slug": "Mico",
+},
+"Mina": {
+    "class": "Assassin",
+    "attack": "Three-stage combo — Attack 1 is long range narrow, Attack 2 medium/medium, Attack 3 is short range wide cone; resets if she doesn't keep attacking.",
+    "super": "Furacao 3000 — fires a hurricane that damages enemies and launches them into the air (briefly stunning).",
+    "hyper": {"name": "Wind Up", "effect": "Super becomes wider and lasts longer."},
+    "stars": [
+        {"name": "Zum Zum Zum", "effect": "Third combo attack heals her on damage dealt."},
+        {"name": "Blown Away", "effect": "Super roots enemies on top of the launch effect."},
+    ],
+    "gadgets": [
+        {"name": "Windmill", "effect": "Creates a wind wall that blocks projectiles."},
+        {"name": "Capo-What?", "effect": "Next Super recharges instantly if it hits."},
+    ],
+    "quirks": [
+        "Attack rotates through a fixed 3-stage combo (timing-based)",
+        "Super launches enemies airborne",
+    ],
+    "slug": "Mina",
+},
+"Moe": {
+    "class": "Damage Dealer",
+    "attack": "Throws a rock that shatters on impact into four smaller stones in cross directions, then each fragment shatters again on second impact.",
+    "super": "Drills underground transforming into Driller form; surfaces in a target direction, knocking back enemies. In Driller form, he attacks with a continuous short-range drill.",
+    "hyper": {"name": "Foul Play", "effect": "Driller form moves faster and deals more damage."},
+    "stars": [
+        {"name": "Skipping Stones", "effect": "Normal-form attack fragments one additional time."},
+        {"name": "Speeding Ticket", "effect": "Driller form moves faster."},
+    ],
+    "gadgets": [
+        {"name": "Dodgy Digging", "effect": "Temporarily increases Super-charge rate."},
+        {"name": "Rat Race", "effect": "Driller form dashes forward destroying walls."},
+    ],
+    "quirks": [
+        "Attack fragments multiple times (shotgun-like spread from one shot)",
+        "Alt-form Brawler (above ground / Driller)",
+    ],
+    "slug": "Moe",
+},
+"Mortis": {
+    "class": "Assassin",
+    "attack": "Dashes forward swinging his shovel, damaging enemies in his path; after a wait, his next dash gets significantly longer range.",
+    "super": "Sends a swarm of bats forward through walls, damaging the first enemy hit and healing Mortis for the full damage dealt.",
+    "hyper": {"name": "Blood Boomerang", "effect": "Super bats return to him after going forward, dealing a second wave of damage and healing."},
+    "stars": [
+        {"name": "Creepy Harvest", "effect": "Heals to a portion of max HP on each enemy Brawler defeated."},
+        {"name": "Coiled Snake", "effect": "Longer-dash recharge time is reduced."},
+    ],
+    "gadgets": [
+        {"name": "Combo Spinner", "effect": "Spins his shovel instantly damaging nearby enemies."},
+        {"name": "Creature Of The Night", "effect": "Turns into bats, becoming untargetable and passing over walls."},
+    ],
+    "quirks": [
+        "Attack IS a dash (no projectile)",
+        "Charged-up long dash after waiting",
+        "Super passes through walls and heals on hit (life-steal Super)",
+    ],
+    "slug": "Mortis",
+},
+"Mr. P": {
+    "class": "Controller",
+    "attack": "Throws a suitcase that bounces on impact (over walls/enemies), dealing area damage on landing.",
+    "super": "Deploys a home base that periodically spawns robo-porters which follow enemies and attack them.",
+    "hyper": {"name": "Super Porters! Assemble!", "effect": "Home base has more health, porters are faster/tougher, and up to two are active at once."},
+    "stars": [
+        {"name": "Handle With Care", "effect": "Periodically, next suitcase deals more damage after bouncing."},
+        {"name": "Revolving Door", "effect": "Home-base porters have more health and damage."},
+    ],
+    "gadgets": [
+        {"name": "Service Bell", "effect": "Buffs current porter's HP and damage."},
+        {"name": "Porter Reinforcements", "effect": "Next attack spawns a weak porter at the attack's endpoint."},
+    ],
+    "quirks": [
+        "Attack bounces over obstacles (range extender)",
+        "Super spawns persistent recurring spawnable units",
+    ],
+    "slug": "Mr._P",
+},
+"Najia": {
+    "class": "Controller",
+    "attack": "Throws a jar with a paper snake inside that can be redirected mid-flight; deals poison damage over time on hit.",
+    "super": "Damage Noodles — lobs three jars that release snakes which chase down and poison nearby enemies.",
+    "hyper": {"name": "Asp Strike", "effect": "Super snakes are larger and more aggressive."},
+    "stars": [
+        {"name": "Poisonous Protector", "effect": "Brawlers defeated while poisoned spawn a snake on their tile."},
+        {"name": "Venomous", "effect": "Poison damage scales with target's current HP percentage."},
+    ],
+    "gadgets": [
+        {"name": "Poison Puddles", "effect": "Currently-poisoned enemies leave behind poison puddles."},
+        {"name": "Najia Jar", "effect": "Hides inside a vase; on destruction, knocks back nearby enemies."},
+    ],
+    "quirks": [
+        "Attack projectile can be steered mid-flight (curve aim)",
+        "Poison-based DoT kit",
+    ],
+    "slug": "Najia",
+},
+"Nani": {
+    "class": "Marksman",
+    "attack": "Three light orbs fired in a diamond pattern that converge at a specific range.",
+    "super": "Detaches Peep, a drone she manually steers; explodes on enemy contact for huge damage and destroys walls.",
+    "hyper": {"name": "Big Peep", "effect": "Peep grows larger and deals more damage as it travels."},
+    "stars": [
+        {"name": "Autofocus", "effect": "Peep gains bonus damage based on travel distance."},
+        {"name": "Tempered Steel", "effect": "Damage-reduction shield while Peep is active."},
+    ],
+    "gadgets": [
+        {"name": "Warpin Time", "effect": "Teleports to Peep's location and ends the Super."},
+        {"name": "Return To Sender", "effect": "Reflects the next incoming projectile as a counterattack."},
+    ],
+    "quirks": [
+        "Super detaches a player-controlled drone (Peep)",
+        "Attack converges at a sweet-spot range",
+    ],
+    "slug": "Nani",
+},
+"Nita": {
+    "class": "Damage Dealer",
+    "attack": "Rupture — sends a piercing shockwave forward that hits multiple enemies in its path.",
+    "super": "Summons Bruce, a bear with high HP that auto-attacks the nearest enemy in melee.",
+    "hyper": {"name": "Hyperbearing", "effect": "Next bear has more health and moves faster."},
+    "stars": [
+        {"name": "Bear With Me", "effect": "Hitting an enemy heals Bruce; Bruce hitting an enemy heals Nita."},
+        {"name": "Hyper Bear", "effect": "Bruce attacks faster."},
+    ],
+    "gadgets": [
+        {"name": "Bear Paws", "effect": "Bruce slams the ground, stunning nearby enemies."},
+        {"name": "Faux Fur", "effect": "Bruce gains a shield for a short duration."},
+    ],
+    "quirks": [
+        "Attack pierces multiple targets",
+        "Super spawns a controllable-by-AI persistent pet (Bruce)",
+    ],
+    "slug": "Nita",
+},
+"Ollie": {
+    "class": "Controller",
+    "attack": "Soundwave in a narrow cone that pierces all targets.",
+    "super": "Dashes forward creating a soundwave that damages and hypnotizes enemies — hypnotized enemies walk toward Ollie and can't act.",
+    "hyper": {"name": "All Time High", "effect": "Super hypnotizes longer and damages more."},
+    "stars": [
+        {"name": "Kick Push", "effect": "Gains speed while near walls."},
+        {"name": "Renegade", "effect": "Decaying shield after Super dash."},
+    ],
+    "gadgets": [
+        {"name": "Regulate", "effect": "Jumps and hypnotizes enemies in a circle on landing."},
+        {"name": "All Eyez On Me", "effect": "Next attack hypnotizes enemies hit."},
+    ],
+    "quirks": [
+        "Super has a hypnotize CC — pulls enemies toward him and disables them",
+        "Super charges from damage taken (trait)",
+        "Attack projectile pierces",
+    ],
+    "slug": "Ollie",
+},
+"Otis": {
+    "class": "Controller",
+    "attack": "Shoots three paint blobs in a slight spread.",
+    "super": "Silent Seabed — fires his starfish Cil that attaches to an enemy and silences them (no Super/Gadget/attack) for a duration while damaging them.",
+    "hyper": {"name": "Silent Stunner", "effect": "Super additionally stuns enemies for a duration on impact."},
+    "stars": [
+        {"name": "Stencil Glue", "effect": "Increases Super silence duration."},
+        {"name": "Ink Refills", "effect": "Attack fires four projectiles instead of three."},
+    ],
+    "gadgets": [
+        {"name": "Dormant Star", "effect": "Next Super stays on the ground if it misses, triggering on enemy proximity."},
+        {"name": "Phat Splatter", "effect": "Next attack creates an ink puddle that damages over time."},
+    ],
+    "quirks": [
+        "Super applies SILENCE (unique disable: can't attack/Super/gadget)",
+    ],
+    "slug": "Otis",
+},
+"Pam": {
+    "class": "Support",
+    "attack": "Sprays a wide burst of scrap metal in a sweeping cone.",
+    "super": "Deploys a healing turret that heals her and allies inside its radius continuously.",
+    "hyper": {"name": "Mama's Love", "effect": "Super turret also grants a decaying shield to anyone inside."},
+    "stars": [
+        {"name": "Mamas Hug", "effect": "Attacks hitting enemies heal Pam and nearby allies a small amount."},
+        {"name": "Mamas Squeeze", "effect": "Healing turret also damages enemies inside its radius."},
+    ],
+    "gadgets": [
+        {"name": "Pulse Modulator", "effect": "Turret emits a healing pulse to nearby allies."},
+        {"name": "Scrapsucker", "effect": "Next attack removes enemy ammo and reloads Pam's."},
+    ],
+    "quirks": [
+        "Super spawns a persistent healing turret",
+        "Attack heals on hit through Star Power",
+    ],
+    "slug": "Pam",
+},
+"Pearl": {
+    "class": "Damage Dealer",
+    "attack": "Sprays a spread-out burst of cookies in a sweeping pattern; damage scales with her Heat meter (depletes as she fires).",
+    "super": "Pyrolitic Smash — wide self-centered shockwave that destroys obstacles and deals heavy damage.",
+    "hyper": {"name": "Pyrolitic", "effect": "Super leaves a burning area behind that ignites enemies who touch it."},
+    "stars": [
+        {"name": "Heat Retention", "effect": "Super consumes less Heat when used."},
+        {"name": "Heat Shield", "effect": "Reduces damage taken while Heat is high."},
+    ],
+    "gadgets": [
+        {"name": "Overcooked", "effect": "Next attack fires burning cookies that DoT enemies."},
+        {"name": "Made With Love", "effect": "Next attack heals allies it passes (skips enemies)."},
+    ],
+    "quirks": [
+        "Heat meter — damage scales with how charged her oven is",
+        "Heat refills over time, drains on attacks",
+    ],
+    "slug": "Pearl",
+},
+"Penny": {
+    "class": "Artillery",
+    "attack": "Fires a pouch of gold that bursts on impact into a splash of coins (multi-target splash).",
+    "super": "Deploys a Mortar Cannon — a long-ranged turret that lobs cannonballs at high damage and sets the ground on fire briefly.",
+    "hyper": {"name": "New Lobber", "effect": "Mortar grows larger and lobs two cannonballs per shot."},
+    "stars": [
+        {"name": "Heavy Coffers", "effect": "Attack splash spreads wider on hit."},
+        {"name": "Master Blaster", "effect": "Mortar damages nearby enemies on landing and knocks them back."},
+    ],
+    "gadgets": [
+        {"name": "Salty Barrel", "effect": "Drops a barrel that blocks enemy projectiles."},
+        {"name": "Trusty Spyglass", "effect": "Mortar fires once at every visible enemy in range."},
+    ],
+    "quirks": [
+        "Attack splashes after hitting (creates secondary damage cone)",
+        "Super spawns a persistent mortar",
+    ],
+    "slug": "Penny",
+},
+"Pierce": {
+    "class": "Marksman",
+    "attack": "Fires water that drops a shell on the ground when it hits a target; picking up the shell triggers an automatic follow-up shot through obstacles.",
+    "super": "Marks all targets in a radius after a delay, then automatically fires homing projectiles at them.",
+    "hyper": {"name": "Second Wave", "effect": "Super fires a second weaker wave of homing projectiles."},
+    "stars": [
+        {"name": "Mission Swimpossible", "effect": "His last-ammo shot slows enemies hit."},
+        {"name": "Slip N Snipe", "effect": "Movement-speed boost on collecting a shell."},
+    ],
+    "gadgets": [
+        {"name": "Bottomless Mags", "effect": "Reloads ammo and drops a shell next to him."},
+        {"name": "You Only Brawl Twice", "effect": "Absorbs shells for shield value and pushes back enemies."},
+    ],
+    "quirks": [
+        "Two-stage attack — hit drops a shell, picking it up fires automatic homing shot",
+        "Super has homing projectiles",
+    ],
+    "slug": "Pierce",
+},
+"Piper": {
+    "class": "Marksman",
+    "attack": "Fires a very long-ranged bullet from her umbrella that deals more damage the further it travels.",
+    "super": "Pops grenades at her feet then jumps a long distance away, dealing damage at her takeoff point.",
+    "hyper": {"name": "Boppin'", "effect": "Super pops more grenades and travels further while destroying terrain."},
+    "stars": [
+        {"name": "Ambush", "effect": "Bonus damage at max range when firing from a bush."},
+        {"name": "Snappy Sniping", "effect": "Hitting an enemy reloads an ammo instantly."},
+    ],
+    "gadgets": [
+        {"name": "Auto Aimer", "effect": "Fires a defensive shot at the closest enemy, pushing them back."},
+        {"name": "Homemade Recipe", "effect": "Next attack homes in on enemies."},
+    ],
+    "quirks": [
+        "Damage scales with travel distance (sniper falloff inverse)",
+        "Super doubles as escape mobility",
+    ],
+    "slug": "Piper",
+},
+"Poco": {
+    "class": "Support",
+    "attack": "Plays his guitarrón, sending damaging musical notes in a wide cone.",
+    "super": "Encore — wider, faster healing wave that heals himself and all allies it passes through.",
+    "hyper": {"name": "Medic's Melody", "effect": "Super overheals allies with a decaying shield."},
+    "stars": [
+        {"name": "Da Capo", "effect": "Attack notes also heal allies they hit."},
+        {"name": "Screeching Solo", "effect": "Super also damages enemies it hits."},
+    ],
+    "gadgets": [
+        {"name": "Tuning Fork", "effect": "Heals self and nearby allies in a self-centered radius."},
+        {"name": "Protective Tunes", "effect": "Cleanses status effects on allies in a large radius and grants immunity."},
+    ],
+    "quirks": [
+        "Super HEALS allies (no damage by default)",
+        "Star Power lets attack heal allies (dual-purpose)",
+        "Attack projectile pierces",
+    ],
+    "slug": "Poco",
+},
+"R-T": {
+    "class": "Damage Dealer",
+    "attack": "Fires a single projectile that marks an enemy on hit; any subsequent damage on the marked enemy consumes the mark for bonus damage.",
+    "super": "Splits R-T into two — his legs are left behind, both halves move and attack independently (short-range marking attacks) with increased mobility.",
+    "hyper": {"name": "360-Degree Surveillance", "effect": "Small radars revolve around both halves during alt-form, each dealing damage."},
+    "stars": [
+        {"name": "Quick Maths", "effect": "Marks last longer."},
+        {"name": "Recording", "effect": "Both halves take reduced damage while split."},
+    ],
+    "gadgets": [
+        {"name": "Out Of Line", "effect": "Instantly charges Super."},
+        {"name": "Hacks", "effect": "Instantly triggers all active marks on all enemies."},
+    ],
+    "quirks": [
+        "Mark-then-burst mechanic on attack",
+        "Super splits him in two — multiple simultaneous active forms",
+    ],
+    "slug": "R-T",
+},
+"Rico": {
+    "class": "Damage Dealer",
+    "attack": "Long-ranged bullets that bounce off walls and continue traveling.",
+    "super": "Bouncy Bullets — fires a piercing long-range burst that bounces off walls.",
+    "hyper": {"name": "Trick Shot King", "effect": "Super projectiles bounce significantly further."},
+    "stars": [
+        {"name": "Super Bouncy", "effect": "Attack and Super bullets deal bonus damage after their first bounce."},
+        {"name": "Robo Retreat", "effect": "Moves faster when at low health."},
+    ],
+    "gadgets": [
+        {"name": "Multiball Launcher", "effect": "Blasts bouncing bullets in all directions around him."},
+        {"name": "Bouncy Castle", "effect": "Next attack heals him per bullet bounce."},
+    ],
+    "quirks": [
+        "Attack AND Super bounce off walls (creative angle setups)",
+        "Super pierces multiple targets",
+    ],
+    "slug": "Rico",
+},
+"Rosa": {
+    "class": "Tank",
+    "attack": "Three short-ranged punches from her boxing gloves.",
+    "super": "Gains a significant damage-reduction shield (tough-vine skin) for several seconds.",
+    "hyper": {"name": "Grasping Roots", "effect": "Super creates a slow zone around her for the duration."},
+    "stars": [
+        {"name": "Plant Life", "effect": "Heals over time while inside a bush."},
+        {"name": "Thorny Gloves", "effect": "Attack damage boosted while Super is active."},
+    ],
+    "gadgets": [
+        {"name": "Grow Light", "effect": "Spawns bushes instantly around her."},
+        {"name": "Unfriendly Bushes", "effect": "Damages and slows all enemies hiding in bushes."},
+    ],
+    "quirks": [
+        "Super grants raw damage reduction (no offensive component)",
+        "Super charges from damage taken (trait)",
+        "Heals in bushes; can spawn bushes",
+        "Attack projectile pierces",
+    ],
+    "slug": "Rosa",
+},
+"Ruffs": {
+    "class": "Support",
+    "attack": "Two parallel laser blasts that bounce off walls.",
+    "super": "Calls a supply drop from the sky that damages enemies and leaves a power-up that buffs ally damage and HP on pickup.",
+    "hyper": {"name": "The Goodest Boy", "effect": "Super damage increased; instantly charges all allies' Hypercharges."},
+    "stars": [
+        {"name": "Air Superiority", "effect": "Super destroys obstacles and deals more damage."},
+        {"name": "Field Promotion", "effect": "Allies near Ruffs gain increased max HP continuously."},
+    ],
+    "gadgets": [
+        {"name": "Take Cover", "effect": "Drops three sandbags as cover."},
+        {"name": "Air Support", "effect": "Calls a missile barrage near the closest enemy."},
+    ],
+    "quirks": [
+        "Attack projectiles bounce off walls",
+        "Super drops a power-up pickup that buffs allies",
+    ],
+    "slug": "Ruffs",
+},
+"Sam": {
+    "class": "Assassin",
+    "attack": "Two close-range punches with his Knuckle Busters; deals more damage when wearing them than when bare-fisted.",
+    "super": "Throws his Knuckle Busters or recalls them; while they're flying he loses his fists (lower attack damage) but gains speed.",
+    "hyper": {"name": "Knockout Punch", "effect": "Knuckle Busters travel faster and fully recharge his Super on a hit."},
+    "stars": [
+        {"name": "Hearty Recovery", "effect": "Heals a portion of missing HP on recalling Knuckle Busters."},
+        {"name": "Remote Recharge", "effect": "Knuckle Busters on the ground passively charge his Super if enemies are near."},
+    ],
+    "gadgets": [
+        {"name": "Magnetic Field", "effect": "On-ground Busters pull enemies in."},
+        {"name": "Pulse Repellent", "effect": "Next Super landing knocks back enemies in a pulse."},
+    ],
+    "quirks": [
+        "Two stances — with/without Knuckle Busters (different damage profiles)",
+        "Super is a throwable+recall weapon (ground-state mechanic)",
+        "Starts each match with Super already charged (trait)",
+        "Attack pierces multiple targets",
+    ],
+    "slug": "Sam",
+},
+"Sandy": {
+    "class": "Controller",
+    "attack": "Throws piercing pebbles in three clusters across a wide cone (each enemy can be hit by one cluster).",
+    "super": "Throws a star-shape that creates a sandstorm zone — Sandy and allies inside are invisible.",
+    "hyper": {"name": "Swift Winds", "effect": "Sandstorm grants speed boost to allies AND prevents enemies inside from attacking or using abilities."},
+    "stars": [
+        {"name": "Rude Sands", "effect": "Sandstorm damages enemies over time."},
+        {"name": "Healing Winds", "effect": "Sandstorm heals allies inside."},
+    ],
+    "gadgets": [
+        {"name": "Sleep Stimulator", "effect": "Falls asleep briefly and restores all HP."},
+        {"name": "Sweet Dreams", "effect": "Next attack puts enemies to sleep (wakes on damage)."},
+    ],
+    "quirks": [
+        "Super creates a team invisibility zone (concealment for whole squad)",
+        "Attack pierces multiple targets",
+    ],
+    "slug": "Sandy",
+},
+"Shade": {
+    "class": "Assassin",
+    "attack": "Hugs in a wide close-range arc, dealing double damage if the center of the swing hits.",
+    "super": "Incorporeal Form — dashes forward passing through obstacles.",
+    "hyper": {"name": "The Frightener", "effect": "All attacks during Hypercharged Super deal max (centered) damage."},
+    "stars": [
+        {"name": "Spooky Speedster", "effect": "Center-attack hits grant a movement-speed boost."},
+        {"name": "Hardened Hoodie", "effect": "Damage reduction while in Incorporeal Form."},
+    ],
+    "gadgets": [
+        {"name": "Longarms", "effect": "Next attack has extended range."},
+        {"name": "Jump Scare", "effect": "Creates a ghost ring around himself that slows nearby enemies."},
+    ],
+    "quirks": [
+        "Center-of-attack sweet-spot damage",
+        "Super passes through walls (Incorporeal)",
+        "Super charges from enemy proximity (trait); moves over water (trait)",
+    ],
+    "slug": "Shade",
+},
+"Shelly": {
+    "class": "Damage Dealer",
+    "attack": "Fires a burst of five shotgun pellets that spread in a cone — dealing maximum damage at point-blank range.",
+    "super": "Super Shell — a wider, more powerful burst of nine pellets that pierces enemies, knocks them back, and destroys obstacles.",
+    "hyper": {"name": "Double Barrel", "effect": "Super spread increases significantly and projectile count rises from 9 to 12."},
+    "stars": [
+        {"name": "Shell Shock", "effect": "Super shells slow enemies hit."},
+        {"name": "Band-Aid", "effect": "Charges a passive heal that triggers when she drops below a health threshold."},
+    ],
+    "gadgets": [
+        {"name": "Fast Forward", "effect": "Dashes a few tiles forward, instantly reloading all ammo."},
+        {"name": "Clay Pigeons", "effect": "Next three attacks have narrower spread and longer range."},
+    ],
+    "quirks": [
+        "Shotgun-cone damage falloff (close range > distance)",
+        "Super projectile pierces",
+    ],
+    "slug": "Shelly",
+},
+"Sirius": {
+    "class": "Marksman",
+    "attack": "Binary Starr — fires two simultaneous projectiles: a long-ranged Shadow Strike and a Starr Bomb that explodes in a small splash radius.",
+    "super": "Shadow Summon — deploys all the Brawler Shadows he's collected through the match; each Shadow mimics that Brawler's attack at lower stats.",
+    "hyper": {"name": "Constellation", "effect": "Shadows summoned during Hypercharge are tougher."},
+    "stars": [
+        {"name": "Dusk Runners", "effect": "Shadows move faster."},
+        {"name": "The Darkest Starr", "effect": "Each Shadow Strike hit collects two Brawler Shadows instead of one."},
+    ],
+    "gadgets": [
+        {"name": "A Starr Is Born", "effect": "Fires a projectile that spawns a Shadow on hit and slows the target."},
+        {"name": "Master Of Shadows", "effect": "Recalls Shadows to Sirius, healing them."},
+    ],
+    "quirks": [
+        "Collects 'Brawler Shadows' by hitting enemies — Super spawns mini-clones of them",
+        "Super auto-charges over time (trait)",
+        "Ultra Legendary rarity",
+    ],
+    "slug": "Sirius",
+},
+"Spike": {
+    "class": "Damage Dealer",
+    "attack": "Throws a cactus that explodes on impact, releasing spikes in all directions from the explosion center.",
+    "super": "Stick Around — lobs a thorny zone that slows and damages enemies inside for several seconds.",
+    "hyper": {"name": "Blooming Season", "effect": "Super radius is increased."},
+    "stars": [
+        {"name": "Fertilize", "effect": "Super heals Spike for a portion of damage dealt."},
+        {"name": "Curveball", "effect": "Spikes from cactus grenades curve, making them easier to hit."},
+    ],
+    "gadgets": [
+        {"name": "Popping Pincushion", "effect": "Fires a wave of needles outward (multi-shot)."},
+        {"name": "Life Plant", "effect": "Drops a healing plant; on destruction, it heals nearby allies."},
+    ],
+    "quirks": [
+        "Attack is explosion + radial spike spray (not single projectile)",
+        "Super is a persistent damage/slow zone",
+    ],
+    "slug": "Spike",
+},
+"Sprout": {
+    "class": "Artillery",
+    "attack": "Lobs a seed bomb that bounces and explodes on contact or after a fuse.",
+    "super": "Throws a Super Seed that creates a small wall hedge on landing — a temporary barrier.",
+    "hyper": {"name": "Thorns", "effect": "Hedge from Super damages enemies who touch it."},
+    "stars": [
+        {"name": "Overgrowth", "effect": "Periodically, next attack has a larger explosion radius."},
+        {"name": "Photosynthesis", "effect": "Damage-reduction shield while in bushes."},
+    ],
+    "gadgets": [
+        {"name": "Garden Mulcher", "effect": "Consumes a nearby bush tile and heals."},
+        {"name": "Transplant", "effect": "Destroys current hedge and refunds full Super."},
+    ],
+    "quirks": [
+        "Super places a temporary WALL (physical terrain modifier)",
+        "Attacks bounce off walls",
+    ],
+    "slug": "Sprout",
+},
+"Squeak": {
+    "class": "Controller",
+    "attack": "Shoots a blob of goo that sticks to enemies/obstacles then explodes after a delay.",
+    "super": "Throws a giant ball that splits into six smaller blobs which each explode after a delay (carpet bomb).",
+    "hyper": {"name": "Bouncy Blob", "effect": "Super spawns a second volley of sticky blobs after the first."},
+    "stars": [
+        {"name": "Chain Reaction", "effect": "Attack damage increases per enemy in its explosion radius."},
+        {"name": "Super Sticky", "effect": "Super blobs slow enemies on explosion."},
+    ],
+    "gadgets": [
+        {"name": "Windup", "effect": "Next attack has more range and damage."},
+        {"name": "Residue", "effect": "Next attack also reveals bushes/invisible enemies and slows."},
+    ],
+    "quirks": [
+        "Delayed-fuse explosions on attack and Super",
+        "Sticks to walls/enemies before detonation",
+    ],
+    "slug": "Squeak",
+},
+"Starr Nova": {
+    "class": "Assassin",
+    "attack": "Fires two piercing sparkles from her hair (right then left).",
+    "super": "Transforms her into her sword-wielding alt-form for a duration; the alt-form swings a sword in a close arc that heals her on hit.",
+    "hyper": {"name": "Galactic Halo", "effect": "Alt-form duration extended; more damage."},
+    "stars": [
+        {"name": "Power Level Maximum", "effect": "Alt-form damage stacks per target hit, up to a cap."},
+        {"name": "Mystical Starr Technique", "effect": "Main-form attack heals allies for a portion of damage dealt."},
+    ],
+    "gadgets": [
+        {"name": "Floaty Time", "effect": "Deploys an anti-gravity device that lets allies fly over obstacles in its area."},
+        {"name": "Shining Starr Of Friendship And Justice", "effect": "Fires an energy ball that damages and heals; she can teleport to it mid-flight."},
+    ],
+    "quirks": [
+        "Alt-form brawler — main form is ranged, alt-form is melee dash sword",
+        "Heal-on-hit in alt-form",
+    ],
+    "slug": "Starr_Nova",
+},
+"Stu": {
+    "class": "Assassin",
+    "attack": "Razzle Dazzle — fires two long-range pyrotechnics in quick succession; each hit fully charges his Super.",
+    "super": "Nitro Boost — short dash leaving a burning trail behind that damages enemies who touch it.",
+    "hyper": {"name": "Infinitro", "effect": "Super instantly recharges when used — infinite supers for the Hypercharge duration."},
+    "stars": [
+        {"name": "Zero Drag", "effect": "Super dash distance is significantly longer."},
+        {"name": "Gaso-Heal", "effect": "Heals when using Super."},
+    ],
+    "gadgets": [
+        {"name": "Speed Zone", "effect": "Drops a booster that speeds up allies in its radius."},
+        {"name": "Breakthrough", "effect": "Next Super dash destroys obstacles and sends debris that damages enemies."},
+    ],
+    "quirks": [
+        "Each successful attack fully charges his Super (rapid mobility loop)",
+        "Super charges from his attack hits (no enemy damage required to charge faster)",
+    ],
+    "slug": "Stu",
+},
+"Surge": {
+    "class": "Damage Dealer",
+    "attack": "Fires a shot of juice that splits in two perpendicular directions when it hits an enemy.",
+    "super": "Party Tricks — leaps over walls, damaging enemies on landing and upgrading himself one stage (Stage 1 speed, 2 range, 3 multi-split attacks).",
+    "hyper": {"name": "Stage 5", "effect": "Adds a fourth and fifth Super stage with even more range and shot splits."},
+    "stars": [
+        {"name": "To The Max", "effect": "Attack also splits when hitting walls."},
+        {"name": "Serve Ice Cold", "effect": "Respawns with Stage 1 upgrade already applied."},
+    ],
+    "gadgets": [
+        {"name": "Power Surge", "effect": "Overloads his circuits, advancing his stage for a few seconds."},
+        {"name": "Power Shield", "effect": "Absorbs the next damage and reloads ammo from the energy."},
+    ],
+    "quirks": [
+        "Upgrade-stage system: Super-charge advances Surge through tiered buffs",
+        "Stages reset on death by default",
+    ],
+    "slug": "Surge",
+},
+"Tara": {
+    "class": "Damage Dealer",
+    "attack": "Throws three piercing tarot cards in a tight cone.",
+    "super": "Gravity — throws a black hole that pulls all enemies in a radius inward, then explodes dealing splash damage.",
+    "hyper": {"name": "Supermassive", "effect": "Super pull radius and explosion radius both increased."},
+    "stars": [
+        {"name": "Black Portal", "effect": "Super spawns a shadowy Tara clone that chases enemies."},
+        {"name": "Healing Shade", "effect": "Super spawns a shadowy Tara that heals teammates."},
+    ],
+    "gadgets": [
+        {"name": "Psychic Enhancer", "effect": "Reveals enemies in bushes and invisible enemies for several seconds."},
+        {"name": "Support From Beyond", "effect": "Surrounds her with three weak shadows that fight for her briefly."},
+    ],
+    "quirks": [
+        "Super is a hard CC PULL (single AoE that groups enemies)",
+        "Attack pierces multiple targets",
+    ],
+    "slug": "Tara",
+},
+"Tick": {
+    "class": "Artillery",
+    "attack": "Lobs three mines over obstacles that explode on enemy contact or after a fuse delay.",
+    "super": "Detaches his head, sending it chasing the nearest enemy; the head explodes on contact, knocking back and damaging.",
+    "hyper": {"name": "Headstrong", "effect": "Head moves faster and on explosion drops six smaller mines."},
+    "stars": [
+        {"name": "Well Oiled", "effect": "Begins self-healing sooner after taking no damage."},
+        {"name": "Automa-Tick Reload", "effect": "Reload time is reduced."},
+    ],
+    "gadgets": [
+        {"name": "Mine Mania", "effect": "Next attack fires double the number of mines."},
+        {"name": "Last Hurrah", "effect": "Grants a temporary shield that explodes outward when it ends."},
+    ],
+    "quirks": [
+        "Attack mines arm on contact / fuse (proximity damage)",
+        "Super sends a controlled chase projectile (Tick's head)",
+    ],
+    "slug": "Tick",
+},
+"Trunk": {
+    "class": "Tank",
+    "attack": "Spins after a brief delay, instantly damaging enemies in a circular self-AoE and leaving ants behind that buff Trunk's speed and damage.",
+    "super": "Dashes forward leaving an ant trail that behaves like his attack ants.",
+    "hyper": {"name": "Retread", "effect": "Super's ant trail deals damage over time to enemies on it."},
+    "stars": [
+        {"name": "New Insect Overlords", "effect": "Enemies on ants deal reduced damage."},
+        {"name": "Colony Scouts", "effect": "Ants reveal hidden enemies on them."},
+    ],
+    "gadgets": [
+        {"name": "For The Queen", "effect": "Instantly spreads ants in a large area."},
+        {"name": "Worker Ants", "effect": "Heals from the first damage source taken for the next few seconds."},
+    ],
+    "quirks": [
+        "Ant-trail buff/debuff field — central kit mechanic",
+        "Super charges from damage taken (trait)",
+    ],
+    "slug": "Trunk",
+},
+"Willow": {
+    "class": "Controller",
+    "attack": "Lobs a lantern that creates a small puddle dealing damage and damage over time to enemies in it.",
+    "super": "Hex — fires a tadpole; on hitting an enemy Brawler, she takes control of them while gaining a damage-reduction shield.",
+    "hyper": {"name": "Psychic Safety", "effect": "She is immune to damage while controlling an enemy."},
+    "stars": [
+        {"name": "Love Is Blind", "effect": "Poisoned enemies have reduced reload speed."},
+        {"name": "Obsession", "effect": "Controlled enemy gains movement speed (forces them into bad positions faster)."},
+    ],
+    "gadgets": [
+        {"name": "Spellbound", "effect": "Next attack deals all its poison damage instantly."},
+        {"name": "Dive", "effect": "Becomes immobile but invulnerable briefly."},
+    ],
+    "quirks": [
+        "Super takes CONTROL of an enemy Brawler (mind control — they walk into walls/dangers)",
+        "Lobs attacks over walls",
+    ],
+    "slug": "Willow",
+},
+"Ziggy": {
+    "class": "Damage Dealer",
+    "attack": "Calls down a lightning strike on a target location (long-range pinpoint damage).",
+    "super": "Conjures a large electrical storm that travels across the map, slowing on contact with enemies caught inside.",
+    "hyper": {"name": "Storm Surge", "effect": "Storm is bigger and slows enemies more."},
+    "stars": [
+        {"name": "Thunderstruck", "effect": "Enemies hit by Super are slowed."},
+        {"name": "The Great Ziggini", "effect": "Hitting an enemy with a lightning strike boosts the next attack's damage."},
+    ],
+    "gadgets": [
+        {"name": "Electric Shuffle", "effect": "Auto-strikes nearest enemy every second for a few seconds (no ammo cost)."},
+        {"name": "Now You See Me", "effect": "Next lightning strike teleports him to its target location."},
+    ],
+    "quirks": [
+        "Top-down lightning strike attack (no projectile travel)",
+        "Super is a slow-spreading storm wave",
+    ],
+    "slug": "Ziggy",
+},
+}
+
+# ----------------------------------------------------------------------------
+# Helpers to compose each per-brawler block
+# ----------------------------------------------------------------------------
+
+def fmt_secs(s):
+    if s is None:
+        return "?"
+    return f"{s:.1f}"
+
+def fmt_tiles(v):
+    if v is None:
+        return "?"
+    return f"{v:.2f}".rstrip("0").rstrip(".") if isinstance(v, float) else str(v)
+
+def csv_stats_line(b):
+    parts = [
+        f"HP: {b['hp']}",
+        f"Speed: {b['speedTilesPerSec']:.2f} t/s",
+        f"Reload: ~{fmt_secs(b['attack'].get('reloadSec'))}s",
+        f"Ammo: {b['attack'].get('ammoCount', '?')}",
+    ]
+    return " · ".join(parts)
+
+def attack_line(b):
+    # Pull range and shape from variants
+    attack_v = next((v for v in b.get('variants', []) if v.get('label') == 'Attack'), None)
+    if not attack_v:
+        return None
+    params = attack_v.get('params', {}) or {}
+    shape = attack_v.get('shape', '')
+    a = b['attack']
+    bits = []
+    if 'rangeTiles' in params:
+        bits.append(f"{params['rangeTiles']:.2f}-tile".rstrip("0").rstrip("."))
+    if 'spreadDeg' in params:
+        bits.append(f"{int(params['spreadDeg'])}° cone")
+    if 'splashTiles' in params:
+        bits.append(f"{params['splashTiles']:.2f}-tile splash".rstrip("0").rstrip("."))
+    if a.get('damage') is not None:
+        np_ = a.get('numProjectiles', 1)
+        if np_ and np_ > 1:
+            total = a['damage'] * np_
+            bits.append(f"{a['damage']} dmg/pellet × {np_} = {total} max")
+        else:
+            bits.append(f"{a['damage']} dmg")
+    if a.get('projectile', {}).get('pierce'):
+        bits.append("pierces")
+    if a.get('projectile', {}).get('isBouncing') or a.get('projectile', {}).get('bouncePercent', 0) > 0:
+        bits.append("bounces")
+    if a.get('projectile', {}).get('indirect'):
+        bits.append("indirect")
+    return f"Attack: {', '.join(bits)}." if bits else None
+
+def super_line(b):
+    super_v = next((v for v in b.get('variants', []) if v.get('label') == 'Super'), None)
+    s = b.get('super', {}) or {}
+    bits = []
+    if super_v:
+        params = super_v.get('params', {}) or {}
+        if 'rangeTiles' in params:
+            bits.append(f"{params['rangeTiles']:.2f}-tile".rstrip("0").rstrip("."))
+        if 'spreadDeg' in params:
+            bits.append(f"{int(params['spreadDeg'])}° cone")
+        if 'splashTiles' in params:
+            bits.append(f"{params['splashTiles']:.2f}-tile splash".rstrip("0").rstrip("."))
+    if s.get('damage') is not None:
+        np_ = s.get('numProjectiles', 1)
+        if np_ and np_ > 1:
+            bits.append(f"{s['damage']} dmg × {np_}")
+        else:
+            bits.append(f"{s['damage']} dmg")
+    if s.get('projectile', {}).get('pierce'):
+        bits.append("pierces")
+    if s.get('projectile', {}).get('isBouncing') or s.get('projectile', {}).get('bouncePercent', 0) > 0:
+        bits.append("bounces")
+    if s.get('projectile', {}).get('indirect'):
+        bits.append("indirect")
+    spawns_turret = False
+    for v in b.get('variants', []):
+        if 'spawn' in v.get('skillName', '').lower() or 'pet' in v.get('skillName', '').lower():
+            spawns_turret = True
+    if not bits:
+        return "Super: —."
+    return f"Super: {', '.join(bits)}."
+
+def format_brawler_block(b, wiki_entry):
+    """Compose one ### block for a brawler."""
+    name = b['name']
+    internal = b['internalName']
+    cls = wiki_entry.get('class') or b.get('class') or '?'
+    lines = []
+    lines.append(f"### {name} ({internal}) — {cls}")
+    lines.append(f"{wiki_entry['attack']}")
+    lines.append(f"- {csv_stats_line(b)}")
+    al = attack_line(b)
+    if al:
+        lines.append(f"- {al}")
+    sl = super_line(b)
+    if sl:
+        lines.append(f"- {sl}")
+    # Super description (wiki prose)
+    lines.append(f"- **Super:** {wiki_entry['super']}")
+    # Hypercharge
+    if wiki_entry.get('hyper'):
+        hyper = wiki_entry['hyper']
+        lines.append(f"- **Hypercharge: {hyper['name']}** — {hyper['effect']}")
+    else:
+        lines.append(f"- **Hypercharge:** none.")
+    # Star powers
+    sp_parts = [f"**{sp['name']}** — {sp['effect']}" for sp in wiki_entry.get('stars', [])]
+    if sp_parts:
+        lines.append(f"- Star Powers: {' · '.join(sp_parts)}")
+    # Gadgets
+    gd_parts = [f"**{g['name']}** — {g['effect']}" for g in wiki_entry.get('gadgets', [])]
+    if gd_parts:
+        lines.append(f"- Gadgets: {' · '.join(gd_parts)}")
+    # Quirks
+    quirks = wiki_entry.get('quirks', [])
+    if quirks:
+        lines.append(f"- Quirks: " + "; ".join(quirks) + ".")
+    # Source URL
+    slug = wiki_entry.get('slug', name.replace(' ', '_'))
+    lines.append(f"*Source: brawlstars.fandom.com/wiki/{slug}*")
+    return "\n".join(lines)
+
+def format_missing_block(brawlify_entry, wiki_entry):
+    """Block for brawlers absent from CSV — use brawlify fields + wiki prose."""
+    name = brawlify_entry['name']
+    cls = wiki_entry.get('class') or '?'
+    lines = []
+    lines.append(f"### {name} — {cls}")
+    lines.append(f"_CSV mechanics N/A — kit description from wiki only._")
+    lines.append(f"{wiki_entry['attack']}")
+    lines.append(f"- **Super:** {wiki_entry['super']}")
+    if wiki_entry.get('hyper'):
+        hyper = wiki_entry['hyper']
+        lines.append(f"- **Hypercharge: {hyper['name']}** — {hyper['effect']}")
+    else:
+        lines.append(f"- **Hypercharge:** none.")
+    sp_parts = [f"**{sp['name']}** — {sp['effect']}" for sp in wiki_entry.get('stars', [])]
+    if sp_parts:
+        lines.append(f"- Star Powers: {' · '.join(sp_parts)}")
+    gd_parts = [f"**{g['name']}** — {g['effect']}" for g in wiki_entry.get('gadgets', [])]
+    if gd_parts:
+        lines.append(f"- Gadgets: {' · '.join(gd_parts)}")
+    quirks = wiki_entry.get('quirks', [])
+    if quirks:
+        lines.append(f"- Quirks: " + "; ".join(quirks) + ".")
+    slug = wiki_entry.get('slug', name.replace(' ', '_'))
+    lines.append(f"*Source: brawlstars.fandom.com/wiki/{slug}*")
+    return "\n".join(lines)
+
+# ----------------------------------------------------------------------------
+# Wiki-vs-CSV discrepancy detection
+# ----------------------------------------------------------------------------
+
+DISCREPANCIES = [
+    # Format: (brawler, field, csv_value, wiki_claim, comment)
+    ("Bull", "Super range",
+        "11 tiles (Super charge)",
+        "wiki text varies: charges in a straight line, no precise tile figure",
+        "Bull's Super dash distance — wiki describes it qualitatively but doesn't give a tile number; CSV is the authority."),
+    ("Buster", "Attack range",
+        "5.33 tiles",
+        "wiki phrasing 'cone of light' without explicit distance",
+        "No conflict, just noting wiki under-specifies."),
+    ("Edgar", "Attack range",
+        "2 tiles",
+        "'extremely short cooldown … two quick short-ranged punches'",
+        "Wiki has no tile number; consistent with CSV."),
+    ("8-Bit", "Movement speed",
+        "1.93 t/s (CSV)",
+        "wiki calls it 'slowest movement speed of any Brawler'",
+        "Consistent — 8-Bit IS the slowest. CSV confirms."),
+    ("Buzz Lightyear", "All stats",
+        "absent from CSV (event brawler)",
+        "Wiki notes Buzz Lightyear is time-limited / removed",
+        "Kit data from wiki only; brawler is no longer in active play."),
+    ("Lola", "Super (Ego)",
+        "no separate super entry in CSV",
+        "Wiki: Ego is a mirror clone with ~half stats",
+        "CSV doesn't model Ego — wiki provides the kit understanding."),
+    ("Buzz", "Super range",
+        "10 tiles",
+        "Wiki describes 'grapples to wall or enemy' with variable distance",
+        "Consistent — CSV value is the max grapple distance."),
+    ("Stu", "Super range",
+        "2.33 tiles",
+        "Wiki: 'short-range dash'",
+        "Consistent."),
+    ("Crow", "Super",
+        "no super range in CSV (jump-based)",
+        "Wiki: jumps and throws daggers on takeoff/landing",
+        "Super is mobility + radial damage, not a directional range."),
+    ("Mortis", "Super range",
+        "10 tiles",
+        "Wiki: bats 'have a long range' (qualitative)",
+        "Consistent — Super is the bat swarm direction."),
+    ("Larry & Lawrie", "All stats",
+        "absent from CSV (post-dump brawler)",
+        "wiki provides full mechanics",
+        "CSV mechanics N/A."),
+    ("Damian", "All stats",
+        "absent from CSV (post-dump brawler)",
+        "wiki provides full mechanics",
+        "CSV mechanics N/A."),
+    ("Kenji", "All stats",
+        "absent from CSV (post-dump brawler)",
+        "wiki provides full mechanics",
+        "CSV mechanics N/A."),
+    ("Melodie", "All stats",
+        "absent from CSV (post-dump brawler)",
+        "wiki provides full mechanics",
+        "CSV mechanics N/A."),
+    ("Moe", "All stats",
+        "absent from CSV (post-dump brawler)",
+        "wiki provides full mechanics",
+        "CSV mechanics N/A."),
+    ("Hank", "All stats",
+        "absent from CSV (post-dump brawler)",
+        "wiki provides full mechanics",
+        "CSV mechanics N/A."),
+    ("R-T", "All stats",
+        "absent from CSV (post-dump brawler)",
+        "wiki provides full mechanics",
+        "CSV mechanics N/A."),
+    ("Lola", "All stats",
+        "absent from CSV (event brawler)",
+        "wiki provides full mechanics including Ego clone",
+        "CSV mechanics N/A."),
+    ("Mina", "All stats",
+        "absent from CSV (post-dump brawler)",
+        "wiki provides full 3-combo attack and hurricane Super",
+        "CSV mechanics N/A."),
+    ("Starr Nova", "All stats",
+        "absent from CSV (post-dump brawler)",
+        "wiki provides full alt-form mechanics",
+        "CSV mechanics N/A."),
+    ("Najia", "All stats",
+        "absent from CSV (post-dump brawler)",
+        "wiki provides full kit",
+        "CSV mechanics N/A."),
+    ("Sirius", "All stats",
+        "absent from CSV (post-dump brawler)",
+        "wiki: Ultra Legendary, collects Brawler Shadows",
+        "CSV mechanics N/A."),
+    ("Glowy", "All stats",
+        "absent from CSV (post-dump brawler)",
+        "wiki provides tether mechanic",
+        "CSV mechanics N/A."),
+    ("Ziggy", "All stats",
+        "absent from CSV (post-dump brawler)",
+        "wiki provides lightning strike + storm",
+        "CSV mechanics N/A."),
+]
+
+# ----------------------------------------------------------------------------
+# Main
+# ----------------------------------------------------------------------------
+
+def main():
+    baked = json.loads(BAKED.read_text())['brawlers']
+    brawlify = json.loads(BRAWLIFY.read_text())['data']['list']
+    baked_by_name = {b['name']: b for b in baked}
+    brawlify_by_name = {b['name']: b for b in brawlify}
+    brawlify_names = sorted([b['name'] for b in brawlify], key=lambda n: n.lower())
+
+    # Validate WIKI coverage
+    missing_wiki = [n for n in brawlify_names if n not in WIKI]
+    if missing_wiki:
+        print("WARNING: no wiki entry for:", missing_wiki)
+
+    blocks = []
+    for name in brawlify_names:
+        wiki = WIKI.get(name)
+        if not wiki:
+            continue
+        if name in baked_by_name:
+            blocks.append(format_brawler_block(baked_by_name[name], wiki))
+        else:
+            blocks.append(format_missing_block(brawlify_by_name[name], wiki))
+
+    header = """# Brawler Kits (wiki-grounded)
+
+Per-brawler attack reference. Numeric stats (HP, range, splash, damage, reload, ammo) come from the v67.264 CSV dump (`data/brawlers.json`). Kit prose (attack/super/hypercharge/star powers/gadgets/quirks) is grounded in the [Brawl Stars Fandom wiki](https://brawlstars.fandom.com/wiki/Brawl_Stars_Wiki).
+
+- All ranges in tiles, reload in seconds. Damage is per projectile (raw CSV value, before level scaling).
+- Brawlers absent from the CSV (post-dump or event-only brawlers) are marked _CSV mechanics N/A_.
+- Cross-checked stats notes are in the "Wiki-vs-CSV discrepancies" section at the bottom.
+
+---
+
+"""
+    body = "\n\n".join(blocks)
+
+    discrepancy_section = "\n\n---\n\n## Wiki-vs-CSV discrepancies\n\n"
+    discrepancy_section += "Stats are trusted from the CSV when they differ. Most discrepancies below are wiki under-specification rather than disagreement.\n\n"
+    for d in DISCREPANCIES:
+        discrepancy_section += f"- **{d[0]}** — {d[1]}: CSV says **{d[2]}**; wiki says *{d[3]}*. {d[4]}\n"
+
+    OUT.write_text(header + body + discrepancy_section)
+    print(f"Wrote {OUT} — {len(blocks)} brawlers covered.")
+
+if __name__ == "__main__":
+    main()
