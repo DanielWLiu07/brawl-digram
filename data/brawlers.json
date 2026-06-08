@@ -174,13 +174,15 @@
         {
           "label": "Super",
           "skillName": "MagicalGirlUlti",
-          "shape": "dash",
+          "shape": "self-aoe",
           "params": {
-            "rangeTiles": 4.333333333333333
+            "splashTiles": 3.0,
+            "equip": "ulti",
+            "rangeTiles": 4.333
           },
-          "passesWalls": false,
+          "passesWalls": true,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         },
         {
           "label": "Gadget: FlyArea",
@@ -281,13 +283,15 @@
         {
           "label": "Super",
           "skillName": "GladiatorUltiArena",
-          "shape": "dash",
+          "shape": "placement",
           "params": {
+            "splashTiles": 3.0,
+            "equip": "ulti",
             "rangeTiles": 6.0
           },
-          "passesWalls": false,
+          "passesWalls": true,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         },
         {
           "label": "Gadget: Amp",
@@ -503,15 +507,15 @@
         {
           "label": "Super",
           "skillName": "ShadowdemonUltiCommand",
-          "shape": "placement",
+          "shape": "self-aoe",
           "params": {
-            "rangeTiles": 10.0,
-            "splashTiles": 0.0,
-            "equip": "ulti"
+            "splashTiles": 6.0,
+            "equip": "ulti",
+            "rangeTiles": 10.0
           },
           "passesWalls": true,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         },
         {
           "label": "Gadget: CloneBullet",
@@ -876,25 +880,27 @@
         {
           "label": "Attack",
           "skillName": "DiggerWeapon",
-          "shape": "line",
+          "shape": "placement",
           "params": {
-            "rangeTiles": 5.0,
-            "widthTiles": 0.625
+            "splashTiles": 1.5,
+            "equip": "weapon",
+            "rangeTiles": 5.0
           },
-          "passesWalls": false,
+          "passesWalls": true,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         },
         {
           "label": "Super",
           "skillName": "DiggerUlti",
-          "shape": "dash",
+          "shape": "area-follow",
           "params": {
-            "rangeTiles": 7.333333333333333
+            "splashTiles": 3.5,
+            "rangeTiles": 7.333
           },
-          "passesWalls": false,
+          "passesWalls": true,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         }
       ]
     },
@@ -1261,13 +1267,15 @@
         {
           "label": "Alt-form Super",
           "skillName": "GeishaTransformedUlti",
-          "shape": "dash",
+          "shape": "placement",
           "params": {
+            "splashTiles": 0.5,
+            "equip": "ulti",
             "rangeTiles": 9.0
           },
-          "passesWalls": false,
+          "passesWalls": true,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         }
       ]
     },
@@ -2096,14 +2104,15 @@
         {
           "label": "Super",
           "skillName": "FuryUlti",
-          "shape": "line",
+          "shape": "placement",
           "params": {
-            "rangeTiles": 13.333333333333334,
-            "widthTiles": 6.25
+            "splashTiles": 2.5,
+            "equip": "ulti",
+            "rangeTiles": 13.333
           },
-          "passesWalls": false,
+          "passesWalls": true,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         }
       ]
     },
@@ -2549,8 +2558,11 @@
         {
           "label": "Super",
           "skillName": "InsectManUlti",
-          "shape": "self-aoe",
-          "params": {},
+          "shape": "placement",
+          "params": {
+            "splashTiles": 2.5,
+            "equip": "ulti"
+          },
           "passesWalls": true,
           "isHyper": false,
           "hasOverride": true
@@ -2892,8 +2904,11 @@
         {
           "label": "Super",
           "skillName": "LeaperUlti",
-          "shape": "self-aoe",
-          "params": {},
+          "shape": "placement",
+          "params": {
+            "splashTiles": 2.0,
+            "equip": "ulti"
+          },
           "passesWalls": true,
           "isHyper": false,
           "hasOverride": true
@@ -3247,14 +3262,15 @@
         {
           "label": "Super",
           "skillName": "ReviverUlti",
-          "shape": "line",
+          "shape": "placement",
           "params": {
-            "rangeTiles": 9.333333333333334,
-            "widthTiles": 0.8333333333333334
+            "splashTiles": 2.0,
+            "equip": "ulti",
+            "rangeTiles": 9.333
           },
-          "passesWalls": false,
+          "passesWalls": true,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         }
       ]
     },
@@ -3407,13 +3423,15 @@
         {
           "label": "Attack",
           "skillName": "FishTankWeapon",
-          "shape": "area-follow",
+          "shape": "placement",
           "params": {
-            "splashTiles": 1.6666666666666667
+            "splashTiles": 1.5,
+            "equip": "weapon",
+            "rangeTiles": 3.333
           },
           "passesWalls": true,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         },
         {
           "label": "Super",
@@ -3785,14 +3803,16 @@
         {
           "label": "Hypercharged Super",
           "skillName": "BeamerOverchargedUlti",
-          "shape": "cone",
+          "shape": "cluster",
           "params": {
-            "rangeTiles": 40.0,
-            "spreadDeg": 170
+            "splashTiles": 0.4,
+            "pattern": "triangle",
+            "spacingTiles": 2.0,
+            "rangeTiles": 40.0
           },
-          "passesWalls": false,
+          "passesWalls": true,
           "isHyper": true,
-          "hasOverride": false
+          "hasOverride": true
         }
       ]
     },
@@ -3871,12 +3891,15 @@
         {
           "label": "Super",
           "skillName": "DoorManUlti",
-          "shape": null,
-          "params": {},
-          "passesWalls": false,
+          "shape": "placement",
+          "params": {
+            "splashTiles": 0.5,
+            "equip": "ulti",
+            "rangeTiles": 6.667
+          },
+          "passesWalls": true,
           "isHyper": false,
-          "unrecognized": true,
-          "reason": "unrecognized (range=20, spread=0, proj=, behavior=Portals)"
+          "hasOverride": true
         }
       ]
     },
@@ -4064,14 +4087,15 @@
         {
           "label": "Super",
           "skillName": "ShieldTankUlti",
-          "shape": "cone",
+          "shape": "placement",
           "params": {
-            "rangeTiles": 3.0,
-            "spreadDeg": 120
+            "splashTiles": 2.0,
+            "equip": "ulti",
+            "rangeTiles": 3.0
           },
-          "passesWalls": false,
+          "passesWalls": true,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         }
       ]
     },
@@ -4159,14 +4183,15 @@
         {
           "label": "Super",
           "skillName": "SoulCollectorUlti",
-          "shape": "line",
+          "shape": "self-aoe",
           "params": {
-            "rangeTiles": 9.333333333333334,
-            "widthTiles": 0.8333333333333334
+            "splashTiles": 3.0,
+            "equip": "ulti",
+            "rangeTiles": 9.333
           },
-          "passesWalls": false,
+          "passesWalls": true,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         }
       ]
     },
@@ -4441,13 +4466,15 @@
         {
           "label": "Super",
           "skillName": "CannonGirlUlti",
-          "shape": "dash",
+          "shape": "placement",
           "params": {
-            "rangeTiles": 7.333333333333333
+            "splashTiles": 2.5,
+            "equip": "ulti",
+            "rangeTiles": 7.333
           },
-          "passesWalls": false,
+          "passesWalls": true,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         }
       ]
     },
@@ -4539,15 +4566,15 @@
         {
           "label": "Super",
           "skillName": "JetpackGirlUlti",
-          "shape": "placement",
+          "shape": "self-aoe",
           "params": {
-            "rangeTiles": 2.3333333333333335,
-            "splashTiles": 1.25,
-            "equip": "ulti"
+            "splashTiles": 0.5,
+            "equip": "ulti",
+            "rangeTiles": 2.333
           },
           "passesWalls": true,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         }
       ]
     },
@@ -5307,28 +5334,30 @@
         {
           "label": "Attack",
           "skillName": "CrossBomberWeapon",
-          "shape": "placement",
+          "shape": "cluster",
           "params": {
-            "rangeTiles": 7.666666666666667,
-            "splashTiles": 6.25,
-            "equip": "weapon"
+            "splashTiles": 1.25,
+            "pattern": "plus",
+            "spacingTiles": 2.0,
+            "rangeTiles": 7.667
           },
           "passesWalls": true,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         },
         {
           "label": "Super",
           "skillName": "CrossBomberUlti",
-          "shape": "placement",
+          "shape": "cluster",
           "params": {
-            "rangeTiles": 8.333333333333334,
-            "splashTiles": 6.25,
-            "equip": "ulti"
+            "splashTiles": 1.5,
+            "pattern": "plus",
+            "spacingTiles": 2.5,
+            "rangeTiles": 8.333
           },
           "passesWalls": true,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         }
       ]
     },
@@ -6456,26 +6485,29 @@
         {
           "label": "Attack",
           "skillName": "ControllerWeapon",
-          "shape": "cone",
+          "shape": "cluster",
           "params": {
-            "rangeTiles": 8.666666666666666,
-            "spreadDeg": 50
+            "splashTiles": 0.4,
+            "pattern": "triangle",
+            "spacingTiles": 1.0,
+            "rangeTiles": 8.667
           },
-          "passesWalls": false,
+          "passesWalls": true,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         },
         {
           "label": "Super",
           "skillName": "ControllerUlti",
-          "shape": "line",
+          "shape": "placement",
           "params": {
-            "rangeTiles": 3.3333333333333335,
-            "widthTiles": 0.625
+            "splashTiles": 0.5,
+            "equip": "ulti",
+            "rangeTiles": 3.333
           },
-          "passesWalls": false,
+          "passesWalls": true,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         }
       ]
     },
@@ -6809,14 +6841,15 @@
         {
           "label": "Attack",
           "skillName": "SpawnerDudeWeapon",
-          "shape": "line",
+          "shape": "placement",
           "params": {
-            "rangeTiles": 7.0,
-            "widthTiles": 0.8333333333333334
+            "splashTiles": 1.0,
+            "equip": "weapon",
+            "rangeTiles": 7.0
           },
-          "passesWalls": false,
+          "passesWalls": true,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         },
         {
           "label": "Super",
@@ -7224,14 +7257,14 @@
         {
           "label": "Attack",
           "skillName": "ArcadeWeapon",
-          "shape": "cone",
+          "shape": "line",
           "params": {
-            "rangeTiles": 10.0,
-            "spreadDeg": 18
+            "widthTiles": 1.0,
+            "rangeTiles": 10.0
           },
           "passesWalls": false,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         },
         {
           "label": "Super",
@@ -8396,13 +8429,15 @@
         {
           "label": "Super",
           "skillName": "SniperUlti",
-          "shape": "dash",
+          "shape": "self-aoe",
           "params": {
-            "rangeTiles": 8.666666666666666
+            "splashTiles": 2.0,
+            "equip": "ulti",
+            "rangeTiles": 8.667
           },
-          "passesWalls": false,
+          "passesWalls": true,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         }
       ]
     },
@@ -9394,14 +9429,15 @@
         {
           "label": "Attack",
           "skillName": "CactusWeapon",
-          "shape": "line",
+          "shape": "placement",
           "params": {
-            "rangeTiles": 7.666666666666667,
-            "widthTiles": 0.625
+            "splashTiles": 1.5,
+            "equip": "weapon",
+            "rangeTiles": 7.667
           },
-          "passesWalls": false,
+          "passesWalls": true,
           "isHyper": false,
-          "hasOverride": false
+          "hasOverride": true
         },
         {
           "label": "Super",

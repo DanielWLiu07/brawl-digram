@@ -80,12 +80,16 @@
 <line x1="348" y1="350" x2="668" y2="350" stroke="#1e2538" stroke-width="0.5"/>
 <line x1="348" y1="370" x2="668" y2="370" stroke="#1e2538" stroke-width="0.5"/>
 <line x1="348" y1="390" x2="668" y2="390" stroke="#1e2538" stroke-width="0.5"/>
-<rect x="498.0" y="200.0" width="20.0" height="120.0" fill="white" fill-opacity="0.65"/>
+<circle cx="508.0" cy="320" r="120.0" fill="none" stroke="white" stroke-width="1.0" stroke-dasharray="4,5" stroke-opacity="0.22"/>
+<line x1="508.0" y1="320" x2="508.0" y2="209.6" stroke="white" stroke-width="1.5" stroke-dasharray="3,4" stroke-opacity="0.55"/>
+<defs><clipPath id="clip-g-Damian-1-splash"><path d="M 448.0,209.6 a 60.0,60.0 0 1,0 120.0,0 a 60.0,60.0 0 1,0 -120.0,0 Z"/></clipPath><filter id="blur-g-Damian-1-splash" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3.75"/></filter></defs>
+<g clip-path="url(#clip-g-Damian-1-splash)"><path d="M 448.0,209.6 a 60.0,60.0 0 1,0 120.0,0 a 60.0,60.0 0 1,0 -120.0,0 Z" fill="none" stroke="white" stroke-width="15.0" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Damian-1-splash)"/></g>
+<circle cx="508.0" cy="209.6" r="60.0" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95"/>
 <circle cx="508.0" cy="320" r="16" fill="white" fill-opacity="0.10"/>
 <image href="../../assets/brawlers/Damian/portrait.png" x="494.0" y="306.0" width="28" height="28"/>
 <text x="358" y="68" font-family="monospace" font-size="12" fill="#fff" font-weight="bold">Super</text>
 <text x="358" y="84" font-family="monospace" font-size="9" fill="#9ba3b8">skill: GladiatorUltiArena</text>
-<text x="358" y="97" font-family="monospace" font-size="9" fill="#9ba3b8">dash — 6.00 tiles</text><rect x="682" y="50" width="320" height="340" fill="#0f1320"/>
+<text x="358" y="97" font-family="monospace" font-size="9" fill="#9ba3b8">placement — 6.00 tile range, 3.00 tile splash</text><rect x="682" y="50" width="320" height="340" fill="#0f1320"/>
 <line x1="682" y1="50" x2="682" y2="390" stroke="#1e2538" stroke-width="0.5"/>
 <line x1="702" y1="50" x2="702" y2="390" stroke="#1e2538" stroke-width="0.5"/>
 <line x1="722" y1="50" x2="722" y2="390" stroke="#1e2538" stroke-width="0.5"/>

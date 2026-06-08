@@ -39,14 +39,22 @@
 <line x1="14" y1="350" x2="334" y2="350" stroke="#1e2538" stroke-width="0.5"/>
 <line x1="14" y1="370" x2="334" y2="370" stroke="#1e2538" stroke-width="0.5"/>
 <line x1="14" y1="390" x2="334" y2="390" stroke="#1e2538" stroke-width="0.5"/>
-<defs><clipPath id="clip-g-Nani-0"><path d="M 174.0,320 L 100.7,162.9 A 173.33333333333331,173.33333333333331 0 0,1 247.3,162.9 Z"/></clipPath><filter id="blur-g-Nani-0" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="9.53"/></filter></defs>
-<g clip-path="url(#clip-g-Nani-0)"><path d="M 174.0,320 L 100.7,162.9 A 173.33333333333331,173.33333333333331 0 0,1 247.3,162.9 Z" fill="none" stroke="white" stroke-width="38.13333333333333" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Nani-0)"/></g>
-<path d="M 174.0,320 L 100.7,162.9 A 173.33333333333331,173.33333333333331 0 0,1 247.3,162.9 Z" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95" stroke-linejoin="round"/>
+<circle cx="174.0" cy="320" r="173.34" fill="none" stroke="white" stroke-width="1.2" stroke-dasharray="4,5" stroke-opacity="0.4"/>
+<line x1="174.0" y1="320" x2="174.0" y2="146.66" stroke="white" stroke-width="1.5" stroke-dasharray="3,4" stroke-opacity="0.55"/>
+<defs><clipPath id="clip-g-Nani-0-c0"><path d="M 166.0,126.66 a 8.0,8.0 0 1,0 16.0,0 a 8.0,8.0 0 1,0 -16.0,0 Z"/></clipPath><filter id="blur-g-Nani-0-c0" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.20"/></filter></defs>
+<g clip-path="url(#clip-g-Nani-0-c0)"><path d="M 166.0,126.66 a 8.0,8.0 0 1,0 16.0,0 a 8.0,8.0 0 1,0 -16.0,0 Z" fill="none" stroke="white" stroke-width="1.76" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Nani-0-c0)"/></g>
+<circle cx="174.0" cy="126.66" r="8.0" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95"/>
+<defs><clipPath id="clip-g-Nani-0-c1"><path d="M 148.68,156.66 a 8.0,8.0 0 1,0 16.0,0 a 8.0,8.0 0 1,0 -16.0,0 Z"/></clipPath><filter id="blur-g-Nani-0-c1" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.20"/></filter></defs>
+<g clip-path="url(#clip-g-Nani-0-c1)"><path d="M 148.68,156.66 a 8.0,8.0 0 1,0 16.0,0 a 8.0,8.0 0 1,0 -16.0,0 Z" fill="none" stroke="white" stroke-width="1.76" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Nani-0-c1)"/></g>
+<circle cx="156.68" cy="156.66" r="8.0" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95"/>
+<defs><clipPath id="clip-g-Nani-0-c2"><path d="M 183.32,156.66 a 8.0,8.0 0 1,0 16.0,0 a 8.0,8.0 0 1,0 -16.0,0 Z"/></clipPath><filter id="blur-g-Nani-0-c2" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.20"/></filter></defs>
+<g clip-path="url(#clip-g-Nani-0-c2)"><path d="M 183.32,156.66 a 8.0,8.0 0 1,0 16.0,0 a 8.0,8.0 0 1,0 -16.0,0 Z" fill="none" stroke="white" stroke-width="1.76" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Nani-0-c2)"/></g>
+<circle cx="191.32" cy="156.66" r="8.0" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95"/>
 <circle cx="174.0" cy="320" r="16" fill="white" fill-opacity="0.10"/>
 <image href="../../assets/brawlers/Nani/portrait.png" x="160.0" y="306.0" width="28" height="28"/>
 <text x="24" y="68" font-family="monospace" font-size="12" fill="#fff" font-weight="bold">Attack</text>
 <text x="24" y="84" font-family="monospace" font-size="9" fill="#9ba3b8">skill: ControllerWeapon</text>
-<text x="24" y="97" font-family="monospace" font-size="9" fill="#9ba3b8">cone — 8.67 tiles, 50°</text><rect x="348" y="50" width="320" height="340" fill="#0f1320"/>
+<text x="24" y="97" font-family="monospace" font-size="9" fill="#9ba3b8">cluster (triangle) — 8.67 tile range, 0.40 tile splash × 3</text><rect x="348" y="50" width="320" height="340" fill="#0f1320"/>
 <line x1="348" y1="50" x2="348" y2="390" stroke="#1e2538" stroke-width="0.5"/>
 <line x1="368" y1="50" x2="368" y2="390" stroke="#1e2538" stroke-width="0.5"/>
 <line x1="388" y1="50" x2="388" y2="390" stroke="#1e2538" stroke-width="0.5"/>
@@ -82,10 +90,14 @@
 <line x1="348" y1="350" x2="668" y2="350" stroke="#1e2538" stroke-width="0.5"/>
 <line x1="348" y1="370" x2="668" y2="370" stroke="#1e2538" stroke-width="0.5"/>
 <line x1="348" y1="390" x2="668" y2="390" stroke="#1e2538" stroke-width="0.5"/>
-<rect x="501.75" y="253.33333333333331" width="12.5" height="66.66666666666667" fill="white" fill-opacity="0.65"/>
+<circle cx="508.0" cy="320" r="66.66" fill="none" stroke="white" stroke-width="1.0" stroke-dasharray="4,5" stroke-opacity="0.22"/>
+<line x1="508.0" y1="320" x2="508.0" y2="258.6728" stroke="white" stroke-width="1.5" stroke-dasharray="3,4" stroke-opacity="0.55"/>
+<defs><clipPath id="clip-g-Nani-1-splash"><path d="M 498.0,258.6728 a 10.0,10.0 0 1,0 20.0,0 a 10.0,10.0 0 1,0 -20.0,0 Z"/></clipPath><filter id="blur-g-Nani-1-splash" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.50"/></filter></defs>
+<g clip-path="url(#clip-g-Nani-1-splash)"><path d="M 498.0,258.6728 a 10.0,10.0 0 1,0 20.0,0 a 10.0,10.0 0 1,0 -20.0,0 Z" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Nani-1-splash)"/></g>
+<circle cx="508.0" cy="258.6728" r="10.0" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95"/>
 <circle cx="508.0" cy="320" r="16" fill="white" fill-opacity="0.10"/>
 <image href="../../assets/brawlers/Nani/portrait.png" x="494.0" y="306.0" width="28" height="28"/>
 <text x="358" y="68" font-family="monospace" font-size="12" fill="#fff" font-weight="bold">Super</text>
 <text x="358" y="84" font-family="monospace" font-size="9" fill="#9ba3b8">skill: ControllerUlti</text>
-<text x="358" y="97" font-family="monospace" font-size="9" fill="#9ba3b8">line — 3.33 tiles, ~0.6 wide</text>
+<text x="358" y="97" font-family="monospace" font-size="9" fill="#9ba3b8">placement — 3.33 tile range, 0.50 tile splash</text>
 </svg>

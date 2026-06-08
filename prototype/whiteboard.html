@@ -12,7 +12,9 @@
   h1 { font-size:16px; margin:0 0 4px; }
   .sub { font-size:11px; color:#789; margin:0 0 16px; }
   label { display:block; font-size:11px; text-transform:uppercase; letter-spacing:.04em; color:#8aa; margin:14px 0 4px; }
-  select, button { width:100%; padding:7px 8px; background:#16202f; color:#dde; border:1px solid #2a3b52; border-radius:6px; font:inherit; font-size:13px; }
+  select, button, input.filter { width:100%; padding:7px 8px; background:#16202f; color:#dde; border:1px solid #2a3b52; border-radius:6px; font:inherit; font-size:13px; }
+  input.filter { margin-bottom:4px; }
+  input.filter:focus { outline:none; border-color:#5fb0ff; }
   button { cursor:pointer; margin-top:8px; }
   button:hover { background:#1d2b40; }
   button.danger { border-color:#a33; }
@@ -47,10 +49,12 @@
   <p class="sub">validating maps.json + brawlers.json render end-to-end</p>
 
   <label>Map</label>
-  <select id="mapSel"></select>
+  <input type="search" id="mapFilter" class="filter" placeholder="filter maps…" autocomplete="off"/>
+  <select id="mapSel" size="1"></select>
 
   <label>Brawler</label>
-  <select id="brawlerSel"></select>
+  <input type="search" id="brawlerFilter" class="filter" placeholder="filter brawlers…" autocomplete="off"/>
+  <select id="brawlerSel" size="1"></select>
 
   <label>Reticle variant</label>
   <select id="variantSel"></select>
@@ -183,16 +187,40 @@ const TEAM_COLOR = { blue: 0x5fb0ff, red: 0xff6b6b };
 
 // ---- populate dropdowns ----
 const mapSel = document.getElementById("mapSel");
-Object.keys(maps).sort().forEach(name => {
-  const o = document.createElement("option");
-  o.value = name; o.textContent = name; mapSel.appendChild(o);
-});
+const mapNamesSorted = Object.keys(maps).sort();
+
+function fillMapSel(filterText) {
+  const f = (filterText || "").trim().toLowerCase();
+  const list = f ? mapNamesSorted.filter(n => n.toLowerCase().includes(f)) : mapNamesSorted;
+  const prev = mapSel.value;
+  mapSel.innerHTML = "";
+  list.forEach(name => {
+    const o = document.createElement("option");
+    o.value = name; o.textContent = name; mapSel.appendChild(o);
+  });
+  if (list.includes(prev)) mapSel.value = prev;
+  else if (list.length) loadMap(list[0]);
+}
+fillMapSel();
+document.getElementById("mapFilter").addEventListener("input", (e) => fillMapSel(e.target.value));
 const brawlerSel = document.getElementById("brawlerSel");
-brawlers.slice().sort((a,b)=>a.name.localeCompare(b.name)).forEach(b => {
-  const o = document.createElement("option");
-  o.value = b.hash; o.textContent = b.name; brawlerSel.appendChild(o);
-});
 const variantSel = document.getElementById("variantSel");
+const brawlersSorted = brawlers.slice().sort((a,b)=>a.name.localeCompare(b.name));
+
+function fillBrawlerSel(filterText) {
+  const f = (filterText || "").trim().toLowerCase();
+  const list = f ? brawlersSorted.filter(b => b.name.toLowerCase().includes(f)) : brawlersSorted;
+  const prev = brawlerSel.value;
+  brawlerSel.innerHTML = "";
+  list.forEach(b => {
+    const o = document.createElement("option");
+    o.value = b.hash; o.textContent = b.name; brawlerSel.appendChild(o);
+  });
+  if (list.some(b => b.hash === prev)) brawlerSel.value = prev;
+  else if (list.length) refreshVariants();
+}
+fillBrawlerSel();
+document.getElementById("brawlerFilter").addEventListener("input", (e) => fillBrawlerSel(e.target.value));
 
 function refreshVariants() {
   const b = brawlers.find(x => x.hash === brawlerSel.value);
@@ -223,11 +251,22 @@ function showVariantInfo() {
   const kitBox = document.getElementById("kitInfo");
   if (!kit) { kitBox.innerHTML = ""; kitBox.style.display = "none"; return; }
   kitBox.style.display = "block";
-  const isSuper = /super/i.test(v.label);
-  const prose = isSuper ? kit.super : kit.attack;
+  const label = v.label.toLowerCase();
+  let prose = "";
+  if (label.startsWith("gadget:")) {
+    const gname = v.label.slice(7).trim().toLowerCase();
+    const g = (kit.gadgets || []).find(x => x.name.toLowerCase().replace(/\s+/g, "") === gname.replace(/\s+/g, ""));
+    prose = g ? `<b>${g.name}</b> — ${g.effect}` : `<i>gadget effect not in kit data</i>`;
+  } else if (/hypercharged/.test(label) && kit.hyper) {
+    prose = `<b>${kit.hyper.name || "Hypercharge"}</b> — ${kit.hyper.effect || ""} <br><br>${/super/.test(label) ? kit.super : kit.attack}`;
+  } else if (/super/.test(label)) {
+    prose = kit.super || "";
+  } else {
+    prose = kit.attack || "";
+  }
   const quirkChips = (kit.quirks || []).map(q => `<span class="quirk">${q}</span>`).join("");
   kitBox.innerHTML = `
-    <div class="kit-prose">${prose || ""}</div>
+    <div class="kit-prose">${prose}</div>
     ${quirkChips ? `<div class="kit-quirks">${quirkChips}</div>` : ""}
   `;
 }

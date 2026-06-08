@@ -39,16 +39,28 @@
 <line x1="14" y1="350" x2="334" y2="350" stroke="#1e2538" stroke-width="0.5"/>
 <line x1="14" y1="370" x2="334" y2="370" stroke="#1e2538" stroke-width="0.5"/>
 <line x1="14" y1="390" x2="334" y2="390" stroke="#1e2538" stroke-width="0.5"/>
-<circle cx="174.0" cy="320" r="153.33333333333334" fill="none" stroke="white" stroke-width="1.0" stroke-dasharray="4,5" stroke-opacity="0.55"/>
-<line x1="174.0" y1="320" x2="174.0" y2="212.66666666666669" stroke="white" stroke-width="1.5" stroke-dasharray="3,4" stroke-opacity="0.55"/>
-<defs><clipPath id="clip-g-Grom-0-splash"><path d="M 49.0,212.66666666666669 a 125.0,125.0 0 1,0 250.0,0 a 125.0,125.0 0 1,0 -250.0,0 Z"/></clipPath><filter id="blur-g-Grom-0-splash" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="7.81"/></filter></defs>
-<g clip-path="url(#clip-g-Grom-0-splash)"><path d="M 49.0,212.66666666666669 a 125.0,125.0 0 1,0 250.0,0 a 125.0,125.0 0 1,0 -250.0,0 Z" fill="none" stroke="white" stroke-width="31.25" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Grom-0-splash)"/></g>
-<circle cx="174.0" cy="212.66666666666669" r="125.0" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95"/>
+<circle cx="174.0" cy="320" r="153.34" fill="none" stroke="white" stroke-width="1.2" stroke-dasharray="4,5" stroke-opacity="0.4"/>
+<line x1="174.0" y1="320" x2="174.0" y2="166.66" stroke="white" stroke-width="1.5" stroke-dasharray="3,4" stroke-opacity="0.55"/>
+<defs><clipPath id="clip-g-Grom-0-c0"><path d="M 149.0,166.66 a 25.0,25.0 0 1,0 50.0,0 a 25.0,25.0 0 1,0 -50.0,0 Z"/></clipPath><filter id="blur-g-Grom-0-c0" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.38"/></filter></defs>
+<g clip-path="url(#clip-g-Grom-0-c0)"><path d="M 149.0,166.66 a 25.0,25.0 0 1,0 50.0,0 a 25.0,25.0 0 1,0 -50.0,0 Z" fill="none" stroke="white" stroke-width="5.5" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Grom-0-c0)"/></g>
+<circle cx="174.0" cy="166.66" r="25.0" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95"/>
+<defs><clipPath id="clip-g-Grom-0-c1"><path d="M 149.0,126.66 a 25.0,25.0 0 1,0 50.0,0 a 25.0,25.0 0 1,0 -50.0,0 Z"/></clipPath><filter id="blur-g-Grom-0-c1" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.38"/></filter></defs>
+<g clip-path="url(#clip-g-Grom-0-c1)"><path d="M 149.0,126.66 a 25.0,25.0 0 1,0 50.0,0 a 25.0,25.0 0 1,0 -50.0,0 Z" fill="none" stroke="white" stroke-width="5.5" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Grom-0-c1)"/></g>
+<circle cx="174.0" cy="126.66" r="25.0" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95"/>
+<defs><clipPath id="clip-g-Grom-0-c2"><path d="M 149.0,206.66 a 25.0,25.0 0 1,0 50.0,0 a 25.0,25.0 0 1,0 -50.0,0 Z"/></clipPath><filter id="blur-g-Grom-0-c2" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.38"/></filter></defs>
+<g clip-path="url(#clip-g-Grom-0-c2)"><path d="M 149.0,206.66 a 25.0,25.0 0 1,0 50.0,0 a 25.0,25.0 0 1,0 -50.0,0 Z" fill="none" stroke="white" stroke-width="5.5" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Grom-0-c2)"/></g>
+<circle cx="174.0" cy="206.66" r="25.0" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95"/>
+<defs><clipPath id="clip-g-Grom-0-c3"><path d="M 109.0,166.66 a 25.0,25.0 0 1,0 50.0,0 a 25.0,25.0 0 1,0 -50.0,0 Z"/></clipPath><filter id="blur-g-Grom-0-c3" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.38"/></filter></defs>
+<g clip-path="url(#clip-g-Grom-0-c3)"><path d="M 109.0,166.66 a 25.0,25.0 0 1,0 50.0,0 a 25.0,25.0 0 1,0 -50.0,0 Z" fill="none" stroke="white" stroke-width="5.5" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Grom-0-c3)"/></g>
+<circle cx="134.0" cy="166.66" r="25.0" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95"/>
+<defs><clipPath id="clip-g-Grom-0-c4"><path d="M 189.0,166.66 a 25.0,25.0 0 1,0 50.0,0 a 25.0,25.0 0 1,0 -50.0,0 Z"/></clipPath><filter id="blur-g-Grom-0-c4" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.38"/></filter></defs>
+<g clip-path="url(#clip-g-Grom-0-c4)"><path d="M 189.0,166.66 a 25.0,25.0 0 1,0 50.0,0 a 25.0,25.0 0 1,0 -50.0,0 Z" fill="none" stroke="white" stroke-width="5.5" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Grom-0-c4)"/></g>
+<circle cx="214.0" cy="166.66" r="25.0" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95"/>
 <circle cx="174.0" cy="320" r="16" fill="white" fill-opacity="0.10"/>
 <image href="../../assets/brawlers/Grom/portrait.png" x="160.0" y="306.0" width="28" height="28"/>
 <text x="24" y="68" font-family="monospace" font-size="12" fill="#fff" font-weight="bold">Attack</text>
 <text x="24" y="84" font-family="monospace" font-size="9" fill="#9ba3b8">skill: CrossBomberWeapon</text>
-<text x="24" y="97" font-family="monospace" font-size="9" fill="#9ba3b8">placement — 7.67 tile range, 6.25 tile splash</text><rect x="348" y="50" width="320" height="340" fill="#0f1320"/>
+<text x="24" y="97" font-family="monospace" font-size="9" fill="#9ba3b8">cluster (plus) — 7.67 tile range, 1.25 tile splash × 5</text><rect x="348" y="50" width="320" height="340" fill="#0f1320"/>
 <line x1="348" y1="50" x2="348" y2="390" stroke="#1e2538" stroke-width="0.5"/>
 <line x1="368" y1="50" x2="368" y2="390" stroke="#1e2538" stroke-width="0.5"/>
 <line x1="388" y1="50" x2="388" y2="390" stroke="#1e2538" stroke-width="0.5"/>
@@ -84,14 +96,26 @@
 <line x1="348" y1="350" x2="668" y2="350" stroke="#1e2538" stroke-width="0.5"/>
 <line x1="348" y1="370" x2="668" y2="370" stroke="#1e2538" stroke-width="0.5"/>
 <line x1="348" y1="390" x2="668" y2="390" stroke="#1e2538" stroke-width="0.5"/>
-<circle cx="508.0" cy="320" r="166.66666666666669" fill="none" stroke="white" stroke-width="1.0" stroke-dasharray="4,5" stroke-opacity="0.22"/>
-<line x1="508.0" y1="320" x2="508.0" y2="166.66666666666663" stroke="white" stroke-width="1.5" stroke-dasharray="3,4" stroke-opacity="0.55"/>
-<defs><clipPath id="clip-g-Grom-1-splash"><path d="M 383.0,166.66666666666663 a 125.0,125.0 0 1,0 250.0,0 a 125.0,125.0 0 1,0 -250.0,0 Z"/></clipPath><filter id="blur-g-Grom-1-splash" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="7.81"/></filter></defs>
-<g clip-path="url(#clip-g-Grom-1-splash)"><path d="M 383.0,166.66666666666663 a 125.0,125.0 0 1,0 250.0,0 a 125.0,125.0 0 1,0 -250.0,0 Z" fill="none" stroke="white" stroke-width="31.25" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Grom-1-splash)"/></g>
-<circle cx="508.0" cy="166.66666666666663" r="125.0" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95"/>
+<circle cx="508.0" cy="320" r="166.66" fill="none" stroke="white" stroke-width="1.2" stroke-dasharray="4,5" stroke-opacity="0.4"/>
+<line x1="508.0" y1="320" x2="508.0" y2="153.34" stroke="white" stroke-width="1.5" stroke-dasharray="3,4" stroke-opacity="0.55"/>
+<defs><clipPath id="clip-g-Grom-1-c0"><path d="M 478.0,153.34 a 30.0,30.0 0 1,0 60.0,0 a 30.0,30.0 0 1,0 -60.0,0 Z"/></clipPath><filter id="blur-g-Grom-1-c0" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.65"/></filter></defs>
+<g clip-path="url(#clip-g-Grom-1-c0)"><path d="M 478.0,153.34 a 30.0,30.0 0 1,0 60.0,0 a 30.0,30.0 0 1,0 -60.0,0 Z" fill="none" stroke="white" stroke-width="6.6" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Grom-1-c0)"/></g>
+<circle cx="508.0" cy="153.34" r="30.0" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95"/>
+<defs><clipPath id="clip-g-Grom-1-c1"><path d="M 478.0,103.34 a 30.0,30.0 0 1,0 60.0,0 a 30.0,30.0 0 1,0 -60.0,0 Z"/></clipPath><filter id="blur-g-Grom-1-c1" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.65"/></filter></defs>
+<g clip-path="url(#clip-g-Grom-1-c1)"><path d="M 478.0,103.34 a 30.0,30.0 0 1,0 60.0,0 a 30.0,30.0 0 1,0 -60.0,0 Z" fill="none" stroke="white" stroke-width="6.6" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Grom-1-c1)"/></g>
+<circle cx="508.0" cy="103.34" r="30.0" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95"/>
+<defs><clipPath id="clip-g-Grom-1-c2"><path d="M 478.0,203.34 a 30.0,30.0 0 1,0 60.0,0 a 30.0,30.0 0 1,0 -60.0,0 Z"/></clipPath><filter id="blur-g-Grom-1-c2" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.65"/></filter></defs>
+<g clip-path="url(#clip-g-Grom-1-c2)"><path d="M 478.0,203.34 a 30.0,30.0 0 1,0 60.0,0 a 30.0,30.0 0 1,0 -60.0,0 Z" fill="none" stroke="white" stroke-width="6.6" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Grom-1-c2)"/></g>
+<circle cx="508.0" cy="203.34" r="30.0" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95"/>
+<defs><clipPath id="clip-g-Grom-1-c3"><path d="M 428.0,153.34 a 30.0,30.0 0 1,0 60.0,0 a 30.0,30.0 0 1,0 -60.0,0 Z"/></clipPath><filter id="blur-g-Grom-1-c3" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.65"/></filter></defs>
+<g clip-path="url(#clip-g-Grom-1-c3)"><path d="M 428.0,153.34 a 30.0,30.0 0 1,0 60.0,0 a 30.0,30.0 0 1,0 -60.0,0 Z" fill="none" stroke="white" stroke-width="6.6" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Grom-1-c3)"/></g>
+<circle cx="458.0" cy="153.34" r="30.0" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95"/>
+<defs><clipPath id="clip-g-Grom-1-c4"><path d="M 528.0,153.34 a 30.0,30.0 0 1,0 60.0,0 a 30.0,30.0 0 1,0 -60.0,0 Z"/></clipPath><filter id="blur-g-Grom-1-c4" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.65"/></filter></defs>
+<g clip-path="url(#clip-g-Grom-1-c4)"><path d="M 528.0,153.34 a 30.0,30.0 0 1,0 60.0,0 a 30.0,30.0 0 1,0 -60.0,0 Z" fill="none" stroke="white" stroke-width="6.6" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Grom-1-c4)"/></g>
+<circle cx="558.0" cy="153.34" r="30.0" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95"/>
 <circle cx="508.0" cy="320" r="16" fill="white" fill-opacity="0.10"/>
 <image href="../../assets/brawlers/Grom/portrait.png" x="494.0" y="306.0" width="28" height="28"/>
 <text x="358" y="68" font-family="monospace" font-size="12" fill="#fff" font-weight="bold">Super</text>
 <text x="358" y="84" font-family="monospace" font-size="9" fill="#9ba3b8">skill: CrossBomberUlti</text>
-<text x="358" y="97" font-family="monospace" font-size="9" fill="#9ba3b8">placement — 8.33 tile range, 6.25 tile splash</text>
+<text x="358" y="97" font-family="monospace" font-size="9" fill="#9ba3b8">cluster (plus) — 8.33 tile range, 1.50 tile splash × 5</text>
 </svg>

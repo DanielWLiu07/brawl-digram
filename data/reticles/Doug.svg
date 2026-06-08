@@ -82,10 +82,14 @@
 <line x1="348" y1="350" x2="668" y2="350" stroke="#1e2538" stroke-width="0.5"/>
 <line x1="348" y1="370" x2="668" y2="370" stroke="#1e2538" stroke-width="0.5"/>
 <line x1="348" y1="390" x2="668" y2="390" stroke="#1e2538" stroke-width="0.5"/>
-<rect x="499.6666666666667" y="133.33333333333331" width="16.666666666666668" height="186.66666666666669" fill="white" fill-opacity="0.65"/>
+<circle cx="508.0" cy="320" r="186.66" fill="none" stroke="white" stroke-width="1.0" stroke-dasharray="4,5" stroke-opacity="0.22"/>
+<line x1="508.0" y1="320" x2="508.0" y2="148.2728" stroke="white" stroke-width="1.5" stroke-dasharray="3,4" stroke-opacity="0.55"/>
+<defs><clipPath id="clip-g-Doug-1-splash"><path d="M 468.0,148.2728 a 40.0,40.0 0 1,0 80.0,0 a 40.0,40.0 0 1,0 -80.0,0 Z"/></clipPath><filter id="blur-g-Doug-1-splash" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.50"/></filter></defs>
+<g clip-path="url(#clip-g-Doug-1-splash)"><path d="M 468.0,148.2728 a 40.0,40.0 0 1,0 80.0,0 a 40.0,40.0 0 1,0 -80.0,0 Z" fill="none" stroke="white" stroke-width="10.0" stroke-opacity="0.5" stroke-linejoin="round" filter="url(#blur-g-Doug-1-splash)"/></g>
+<circle cx="508.0" cy="148.2728" r="40.0" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.95"/>
 <circle cx="508.0" cy="320" r="16" fill="white" fill-opacity="0.10"/>
 <image href="../../assets/brawlers/Doug/portrait.png" x="494.0" y="306.0" width="28" height="28"/>
 <text x="358" y="68" font-family="monospace" font-size="12" fill="#fff" font-weight="bold">Super</text>
 <text x="358" y="84" font-family="monospace" font-size="9" fill="#9ba3b8">skill: ReviverUlti</text>
-<text x="358" y="97" font-family="monospace" font-size="9" fill="#9ba3b8">line — 9.33 tiles, ~0.8 wide</text>
+<text x="358" y="97" font-family="monospace" font-size="9" fill="#9ba3b8">placement — 9.33 tile range, 2.00 tile splash</text>
 </svg>
