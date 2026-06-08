@@ -41,6 +41,14 @@
   .kit-prose { padding:8px 10px; background:#0c1422; border-left:2px solid #5fb0ff; border-radius:4px; line-height:1.5; }
   .kit-quirks { margin-top:6px; display:flex; flex-wrap:wrap; gap:4px; }
   .quirk { font-size:10px; background:#3a2d10; color:#f6c64a; padding:2px 6px; border-radius:3px; border:1px solid #6b5320; }
+  .mech { margin-top:6px; padding:8px 10px; background:#0a1c2c; border-left:2px solid #5fd; border-radius:4px; font-size:11px; line-height:1.6; color:#cde; }
+  .mech > div { margin-top:2px; }
+  .verif { display:inline-block; font-size:9px; padding:1px 5px; border-radius:3px; text-transform:uppercase; letter-spacing:.03em; margin-bottom:4px; }
+  .verif.yes { background:#0e3b2a; color:#5fd; border:1px solid #1f6f4a; }
+  .verif.partial { background:#3b2a0e; color:#f6c64a; border:1px solid #6b5320; }
+  details.stars { margin-top:8px; font-size:11px; color:#9ab; background:#0c1422; border:1px solid #1d2b40; border-radius:4px; padding:6px 10px; }
+  details.stars summary { cursor:pointer; color:#cde; }
+  details.stars > div { margin-top:6px; line-height:1.5; }
 </style>
 </head>
 <body>
@@ -133,14 +141,29 @@ const status = document.getElementById("status");
 const setStatus = (t) => { status.textContent = t; };
 
 // ---- load data ----
-const [mapsDoc, brawlersDoc, kitsDoc] = await Promise.all([
+const [mapsDoc, brawlersDoc, kitsDoc, mechanicsDoc] = await Promise.all([
   fetch("/data/maps.json").then(r => r.json()),
   fetch("/data/brawlers.json").then(r => r.json()),
   fetch("/data/kits.json").then(r => r.json()).catch(() => ({ kits: {} })),
+  fetch("/data/ability_mechanics.json").then(r => r.json()).catch(() => ({ abilities: [] })),
 ]);
 const maps = mapsDoc.maps;
 const brawlers = brawlersDoc.brawlers;
 const kits = kitsDoc.kits || {};
+
+// Index ability records by (brawlerName, type, normalizedName) for fast lookup
+const mechanicsByKey = new Map();
+const mechanicsByBrawler = new Map();
+for (const a of (mechanicsDoc.abilities || [])) {
+  const norm = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  mechanicsByKey.set(`${norm(a.brawler)}|${a.type}|${norm(a.name)}`, a);
+  if (!mechanicsByBrawler.has(a.brawler)) mechanicsByBrawler.set(a.brawler, []);
+  mechanicsByBrawler.get(a.brawler).push(a);
+}
+function findMechanic(brawlerName, type, abilityName) {
+  const norm = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  return mechanicsByKey.get(`${norm(brawlerName)}|${type}|${norm(abilityName)}`) || null;
+}
 
 // tile-class lookups from the legend
 const legendSet = (flag) => new Set(
@@ -253,22 +276,89 @@ function showVariantInfo() {
   kitBox.style.display = "block";
   const label = v.label.toLowerCase();
   let prose = "";
+  let mech = null;
   if (label.startsWith("gadget:")) {
-    const gname = v.label.slice(7).trim().toLowerCase();
-    const g = (kit.gadgets || []).find(x => x.name.toLowerCase().replace(/\s+/g, "") === gname.replace(/\s+/g, ""));
+    const gname = v.label.slice(7).trim();
+    const g = (kit.gadgets || []).find(x => x.name.toLowerCase().replace(/\s+/g, "") === gname.toLowerCase().replace(/\s+/g, ""));
     prose = g ? `<b>${g.name}</b> — ${g.effect}` : `<i>gadget effect not in kit data</i>`;
+    if (g) mech = findMechanic(b.name, "gadget", g.name);
   } else if (/hypercharged/.test(label) && kit.hyper) {
     prose = `<b>${kit.hyper.name || "Hypercharge"}</b> — ${kit.hyper.effect || ""} <br><br>${/super/.test(label) ? kit.super : kit.attack}`;
+    mech = findMechanic(b.name, "hypercharge", kit.hyper.name);
   } else if (/super/.test(label)) {
     prose = kit.super || "";
   } else {
     prose = kit.attack || "";
   }
   const quirkChips = (kit.quirks || []).map(q => `<span class="quirk">${q}</span>`).join("");
+  const mechSection = mech ? renderMechanic(mech) : "";
+  const starsSection = renderStars(b.name, kit.stars || []);
   kitBox.innerHTML = `
     <div class="kit-prose">${prose}</div>
     ${quirkChips ? `<div class="kit-quirks">${quirkChips}</div>` : ""}
+    ${mechSection}
+    ${starsSection}
   `;
+}
+
+function renderMechanic(m) {
+  const rows = [];
+  if (m.rangeMod) {
+    if (m.rangeMod.onlyOnBounce) rows.push(`<b>range</b>: +${m.rangeMod.extraTiles ?? "?"}t on wall-bounce only`);
+    else if (m.rangeMod.flat != null) rows.push(`<b>range</b>: +${m.rangeMod.flat}t flat`);
+    else if (m.rangeMod.multiplier != null) rows.push(`<b>range</b>: ×${m.rangeMod.multiplier}`);
+  }
+  if (m.shapeMod) rows.push(`<b>shape</b>: changes to ${m.shapeMod.newShape}`);
+  if (m.spreadMod) rows.push(`<b>spread</b>: ${m.spreadMod.flat != null ? "+" + m.spreadMod.flat + "°" : "×" + m.spreadMod.multiplier}`);
+  if (m.projectileMod) {
+    const pm = m.projectileMod;
+    const bits = [];
+    if (pm.bouncesOffWalls) bits.push("bounces off walls");
+    if (pm.pierces) bits.push("pierces");
+    if (pm.homing) bits.push("homing");
+    if (pm.explodes) bits.push("explodes");
+    if (pm.extraProjectiles) bits.push(`+${pm.extraProjectiles} extra projectiles`);
+    if (pm.speedMultiplier != null) bits.push(`speed ×${pm.speedMultiplier}`);
+    if (pm.splashTilesAdded != null) bits.push(`+${pm.splashTilesAdded}t splash`);
+    if (bits.length) rows.push(`<b>projectile</b>: ${bits.join(", ")}`);
+  }
+  if (m.movementMod) {
+    const mm = m.movementMod;
+    const bits = [];
+    if (mm.dashTiles) bits.push(`${mm.dashTiles}t dash`);
+    if (mm.teleport) bits.push("teleport");
+    if (mm.speedMultiplier != null) bits.push(`speed ×${mm.speedMultiplier}`);
+    if (mm.ignoresWalls) bits.push("ignores walls");
+    if (bits.length) rows.push(`<b>movement</b>: ${bits.join(", ")}`);
+  }
+  if (m.spawnsEntity) {
+    const e = m.spawnsEntity;
+    const bits = [e.entity];
+    if (e.hp) bits.push(`HP ${e.hp}`);
+    if (e.attackRangeTiles) bits.push(`range ${e.attackRangeTiles}t`);
+    if (e.lifetimeSec) bits.push(`${e.lifetimeSec}s lifetime`);
+    rows.push(`<b>spawns</b>: ${bits.join(" · ")}`);
+  }
+  if (m.statusEffects && m.statusEffects.length) {
+    const e = m.statusEffects.map(s => `${s.effect}${s.magnitude!=null?` (${s.magnitude})`:""}${s.durationSec?` ${s.durationSec}s`:""}→${s.target}`).join("; ");
+    rows.push(`<b>effects</b>: ${e}`);
+  }
+  if (!rows.length) return "";
+  const verifTag = m.csvVerified === "true"
+    ? `<span class="verif yes">CSV-verified</span>`
+    : `<span class="verif partial">partial</span>`;
+  return `<div class="mech">${verifTag}${rows.map(r => `<div>${r}</div>`).join("")}</div>`;
+}
+
+function renderStars(brawlerName, kitStars) {
+  if (!kitStars.length) return "";
+  const items = kitStars.map(s => {
+    const m = findMechanic(brawlerName, "starPower", s.name);
+    const tag = m && (m.rangeMod || m.shapeMod || m.projectileMod || m.movementMod || m.spawnsEntity || (m.statusEffects||[]).length)
+      ? ` <span class="quirk">affects reticle</span>` : "";
+    return `<div><b>${s.name}</b>: ${s.effect}${tag}</div>`;
+  }).join("");
+  return `<details class="stars"><summary>Star powers (${kitStars.length})</summary>${items}</details>`;
 }
 brawlerSel.addEventListener("change", refreshVariants);
 variantSel.addEventListener("change", showVariantInfo);
