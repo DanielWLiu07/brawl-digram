@@ -4,7 +4,7 @@ A **collaborative** Brawl Stars drafting + whiteboard tool with an agentic advis
 
 ## Layout
 
-- `data/csv_logic/` — Brawl Stars game CSVs (v67.264, ~18 MB). Source of truth for brawler/skill/projectile/card geometry. Re-pull from the [tailsjs mirror](https://github.com/tailsjs/brawl-stars-assets) for new versions.
+- `data/csv_logic/` — Brawl Stars game CSVs (v67.301, ~18 MB). Source of truth for brawler/skill/projectile/card geometry. Re-pull via `python3 data/extract_apk.py <apk-path>` from a fresh APKMirror download, or from the [tailsjs mirror](https://github.com/tailsjs/brawl-stars-assets) for community-vetted dumps.
 - `data/shelly_reticles.svg` + `data/render_shelly_reticles.py` — reticle math reference / validation.
 - `data/kb/` — pro-curated per-map knowledge base (Phase 2; doesn't exist yet).
 - `.claude/agents/` — specialized subagent definitions.
@@ -43,10 +43,10 @@ The main conversation is the **orchestrator**. Delegate concrete work to the age
 
 ## Reticle rendering (current state)
 
-- All 85 playable brawlers have generated SVGs in `data/reticles/<BrawlerHash>.svg` + an `index.html` gallery. Each shows attack / super / hyper variants (purple) / gadgets / alt-forms.
+- All 104 playable brawlers have generated SVGs in `data/reticles/<BrawlerHash>.svg` + an `index.html` gallery. Each shows attack / super / hyper variants (purple) / gadgets / alt-forms.
 - Classifier in `data/render_all_reticles.py` infers one of 9 shape primitives per skill from the CSVs: cone, line, dash, placement, wave, cluster (quincunx/plus/triangle/pair/hexagon), area-follow, self-aoe.
 - 38 per-skill overrides in `data/reticle_overrides.json` for cases where the data-driven classifier gets the shape wrong (e.g., Barley super = quincunx, Tara Black Hole = placement, Amber attack = line). Each entry has a `note` field with reasoning + source URL.
-- 20 newest brawlers (Starr-Nova, Damian, Najia, Sirius, Glowy, Ziggy, Mina, Jae-Yong, etc.) are absent — they post-date the v67.264 CSV dump.
+- Buzz Lightyear (event-only Disney collab) is the one playable brawler absent — no row in characters.csv. Every other current brawler is covered.
 - The Python renderer needs to be ported / baked into a `brawlers.json` for the frontend. That's the next concrete step.
 
 ## Visual convention for reticles

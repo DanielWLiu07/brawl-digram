@@ -685,15 +685,11 @@ def main():
     no_internal = []
 
     # Iterate Brawlify brawlers (only playable ones); look up internal name from characters.csv via ItemName
+    from build_brawlers_json import _find_char  # reuse the override-aware matcher
     for b in brawlify_brawlers:
         b_hash = b['hash']
         display = b['name']
-        # Find characters.csv row whose ItemName matches b['hash'] (case-insensitive)
-        char_row = None
-        for c in characters.values():
-            if (c.get('ItemName') or '').lower() == b_hash.lower():
-                char_row = c
-                break
+        char_row = _find_char(b_hash)
         if not char_row:
             no_internal.append(b_hash)
             continue

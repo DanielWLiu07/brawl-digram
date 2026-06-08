@@ -2,23 +2,9 @@
   "_meta": {
     "generatedFrom": "data/render_all_reticles.py + data/reticle_overrides.json",
     "csvVersion": "67.264",
-    "brawlerCount": 90,
+    "brawlerCount": 104,
     "skippedNewBrawlers": [
-      "Starr-Nova",
-      "Damian",
-      "Najia",
-      "Sirius",
-      "Glowy",
-      "Ziggy",
-      "Mina",
-      "Buzz-Lightyear",
-      "Kenji",
-      "Moe",
-      "Melodie",
-      "Larry-&-Lawrie",
-      "Hank",
-      "R-T",
-      "Lola"
+      "Buzz-Lightyear"
     ],
     "units": "All geometry in TILES (1 tile = standard Brawl Stars grid square). rangeTiles, splashTiles, widthTiles, spacingTiles are tile distances. spreadDeg is degrees. speedTilesPerSec is tiles/sec. reloadSec is seconds (converted from ms). damage is raw integer (positive=harm). See data/SCHEMA_FLOW.md for CSV unit conventions.",
     "passesWalls": "true \u2192 reticle projects over walls (placements, throwers, indirect projectiles); false \u2192 solid reticle clipped against wall tiles when rendered on a map."
@@ -103,6 +89,547 @@
           "shape": "dash",
           "params": {
             "rangeTiles": 4.0
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000105,
+      "hash": "Starr-Nova",
+      "name": "Starr Nova",
+      "internalName": "MagicalGirl",
+      "class": "Unknown",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "speedTilesPerSec": 2.733,
+      "hp": 3700,
+      "attack": {
+        "damage": 540,
+        "reloadSec": 1.4,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 50.0,
+          "radiusTiles": 0.521
+        }
+      },
+      "super": {
+        "damage": 300
+      },
+      "attackStyle": "melee",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Power Level Maximum",
+          "description": "Hitting an enemy Brawler while transformed increases your damage by ?% to a maximum of ?%."
+        },
+        {
+          "name": "Mystical Starr Technique",
+          "description": "Starr Nova's main attack also heals teammates for ?."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Floaty Time",
+          "description": "Starr Nova deploys an anti-gravity device, allowing teammates to float inside of the area!"
+        },
+        {
+          "name": "Shining Starr Of Friendship And Justice",
+          "description": "Starr Nova fires an energy ball that damages enemies and heals teammates for ?. This energy ball can also be teleported to before it hits a target!"
+        }
+      ],
+      "hypercharge": {
+        "type": "trait_star_power",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
+      "assets": {
+        "portrait": "/assets/brawlers/Starr-Nova/portrait.png",
+        "render": "/assets/brawlers/Starr-Nova/render.png",
+        "emoji": "/assets/brawlers/Starr-Nova/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "MagicalGirlWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 5.666666666666667,
+            "widthTiles": 0.8
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "MagicalGirlUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 4.333333333333333
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: FlyArea",
+          "skillName": "MagicalGirlBonusSkillFlyArea",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "splashTiles": 0.0,
+            "equip": "bonusSkill"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: Healing",
+          "skillName": "MagicalGirlBonusSkillHealing",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "widthTiles": 1.25
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000104,
+      "hash": "Damian",
+      "name": "Damian",
+      "internalName": "Gladiator",
+      "class": "Unknown",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 5600,
+      "attack": {
+        "damage": 700,
+        "reloadSec": 1.2,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 16.67,
+          "radiusTiles": 0.625
+        }
+      },
+      "super": {},
+      "attackStyle": "melee",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Crowdkill",
+          "description": "Knocking a target into a wall stuns them for ? sec."
+        },
+        {
+          "name": "Vulgar Display Of Punch",
+          "description": "Damian has a flaming fist during his Super, which burns enemies."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Spiritual Healing",
+          "description": "Damian throws his microphone to a target location. The first teammate to pick it up is healed for ? health."
+        },
+        {
+          "name": "Wall Of Sound",
+          "description": "Damian summons a temporary wall of indestructible amps!"
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": null
+      },
+      "specialMechanics": [],
+      "assets": {
+        "portrait": "/assets/brawlers/Damian/portrait.png",
+        "render": "/assets/brawlers/Damian/render.png",
+        "emoji": "/assets/brawlers/Damian/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "GladiatorWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 2.6666666666666665,
+            "widthTiles": 1.25
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "GladiatorUltiArena",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 6.0
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: Amp",
+          "skillName": "GladiatorGadgetSkillAmp",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "splashTiles": 0.0,
+            "equip": "bonusSkill"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: Wall",
+          "skillName": "GladiatorGadgetSkillWall",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "splashTiles": 1.0416666666666667,
+            "equip": "bonusSkill"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000103,
+      "hash": "Najia",
+      "name": "Najia",
+      "internalName": "Redirecter",
+      "class": "Unknown",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 3400,
+      "attack": {
+        "damage": 300,
+        "reloadSec": 0.8,
+        "ammoCount": 1,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 5.67,
+          "radiusTiles": 0.208
+        }
+      },
+      "super": {
+        "damage": 750,
+        "numProjectiles": 3,
+        "spawnedEntity": "RedirecterSnakePet",
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 3.0,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Poisonous Protector",
+          "description": "Brawlers defeated while poisoned by Najia will spawn a snake in their place."
+        },
+        {
+          "name": "Venomous",
+          "description": "Poison damage scales with the target Brawler's current percent health, dealing up to an extra ? damage when a target is at 100% health."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Poison Puddles",
+          "description": "All enemies currently poisoned by Najia will create poisonous puddles for the next ? sec."
+        },
+        {
+          "name": "Najia Jar",
+          "description": "Najia hides inside a vase. Once the vase is broken, she will knock back any nearby enemies!"
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [
+        "Attack projectile pierces through multiple enemies"
+      ],
+      "assets": {
+        "portrait": "/assets/brawlers/Najia/portrait.png",
+        "render": "/assets/brawlers/Najia/render.png",
+        "emoji": "/assets/brawlers/Najia/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "RedirecterWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 6.0,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "RedirecterUlti",
+          "shape": "wave",
+          "params": {
+            "rangeTiles": 5.333333333333333,
+            "splashTiles": 0.8333333333333334,
+            "spreadDeg": 270,
+            "count": 3,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000102,
+      "hash": "Sirius",
+      "name": "Sirius",
+      "internalName": "Shadowdemon",
+      "class": "Unknown",
+      "rarity": "Ultra Legendary",
+      "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3400,
+      "attack": {
+        "damage": 600,
+        "reloadSec": 1.6,
+        "ammoCount": 3,
+        "numProjectiles": 2,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 8.33,
+          "radiusTiles": 0.0
+        }
+      },
+      "super": {
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 96.67,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "thrower",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Dusk Runners",
+          "description": "Shadows have +?% movement speed."
+        },
+        {
+          "name": "The Darkest Starr",
+          "description": "Each hit with a Shadow Strike counts as 2 to collect Brawler Shadows, instead of 1."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "A Starr Is Born",
+          "description": "Sirius fires a projectile that summons a Shadow on hit, also slowing the hit target by ?% for ? sec."
+        },
+        {
+          "name": "Master Of Shadows",
+          "description": "Summoned Shadows return to Sirius, who heals them for ?% of their health."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "6"
+        }
+      },
+      "specialMechanics": [],
+      "assets": {
+        "portrait": "/assets/brawlers/Sirius/portrait.png",
+        "render": "/assets/brawlers/Sirius/render.png",
+        "emoji": "/assets/brawlers/Sirius/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "ShadowdemonWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "widthTiles": 0.8
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "ShadowdemonUltiCommand",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 10.0,
+            "splashTiles": 0.0,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: CloneBullet",
+          "skillName": "ShadowdemonGadgetCloneBullet",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 9.0,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000101,
+      "hash": "Glowy",
+      "name": "Glowy",
+      "internalName": "Mender",
+      "class": "Unknown",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 3900,
+      "attack": {
+        "damage": 280,
+        "reloadSec": 1.7,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 16.67,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {
+        "damage": 750,
+        "numProjectiles": 4,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 16.67,
+          "radiusTiles": 0.625
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Biotic Ecosystem",
+          "description": "If Glowy is tethered to an enemy and a teammate at the same time, it will reduce the enemy damage by x% and increase the teammate's damage by x%."
+        },
+        {
+          "name": "Parasitism",
+          "description": "Tethering to an enemy also heals Glowy for x% of the damage dealt."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Slippery Savior",
+          "description": "Glowy dashes in a target direction, healing himself and teammates for ? on arrival."
+        },
+        {
+          "name": "More Lumens",
+          "description": "Glowy supercharges his glowbeam tethers, doubling the damage/healing rate for x secs."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_attack_pattern_override",
+        "multipliers": {
+          "value": "19",
+          "value2": "14"
+        }
+      },
+      "specialMechanics": [
+        "Super projectile pierces through multiple enemies"
+      ],
+      "assets": {
+        "portrait": "/assets/brawlers/Glowy/portrait.png",
+        "render": "/assets/brawlers/Glowy/render.png",
+        "emoji": "/assets/brawlers/Glowy/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "MenderWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "MenderUlti",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 5.666666666666667,
+            "spreadDeg": 220
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Gadget: DashHeal",
+          "skillName": "MenderGadgetSkillDashHeal",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 4.333333333333333
           },
           "passesWalls": false,
           "isHyper": false,
@@ -280,6 +807,203 @@
           "passesWalls": true,
           "isHyper": false,
           "hasOverride": true
+        }
+      ]
+    },
+    {
+      "id": 16000098,
+      "hash": "Ziggy",
+      "name": "Ziggy",
+      "internalName": "Digger",
+      "class": "Unknown",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 3600,
+      "attack": {
+        "damage": 500,
+        "reloadSec": 1.5,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 9.33,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {
+        "damage": 600,
+        "spawnedEntity": "DiggerDrill"
+      },
+      "attackStyle": "melee",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Thunderstruck",
+          "description": "Brawlers damaged by Ziggy's Super are slowed by x% for x sec."
+        },
+        {
+          "name": "The Great Ziggini",
+          "description": "Hitting with a lightning strike increases the damage of the next main attack by x%."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Electric Shuffle",
+          "description": "Ziggy hits the nearest enemy with lightning strikes every second for x sec. These attacks cost no ammo."
+        },
+        {
+          "name": "Now You See Me...",
+          "description": "The next lightning strike also teleports Ziggy to the same location."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_digger",
+        "multipliers": {
+          "value": "10",
+          "value2": "300"
+        }
+      },
+      "specialMechanics": [],
+      "assets": {
+        "portrait": "/assets/brawlers/Ziggy/portrait.png",
+        "render": "/assets/brawlers/Ziggy/render.png",
+        "emoji": "/assets/brawlers/Ziggy/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "DiggerWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 5.0,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "DiggerUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 7.333333333333333
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000097,
+      "hash": "Mina",
+      "name": "Mina",
+      "internalName": "Dancer",
+      "class": "Unknown",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 3600,
+      "attack": {
+        "damage": 800,
+        "reloadSec": 1.4,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 10.0,
+          "radiusTiles": 0.312
+        }
+      },
+      "super": {
+        "damage": 1000,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 7.33,
+          "radiusTiles": 0.833
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Zum Zum Zum",
+          "description": "Mina's combo Attack 3 also heals for x% of damage done."
+        },
+        {
+          "name": "Blown Away",
+          "description": "Mina's Super also roots enemies on the spot."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Windmill",
+          "description": "Creates a wall of wind that blocks projectiles for x sec."
+        },
+        {
+          "name": "Capo-What?",
+          "description": "Mina's next Super recharges instantly if it hits."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [
+        "Super projectile pierces through multiple enemies"
+      ],
+      "assets": {
+        "portrait": "/assets/brawlers/Mina/portrait.png",
+        "render": "/assets/brawlers/Mina/render.png",
+        "emoji": "/assets/brawlers/Mina/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "DancerWeaponSingle",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 8.0,
+            "widthTiles": 0.625
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "DancerUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 7.0,
+            "widthTiles": 1.6666666666666667
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super",
+          "skillName": "DancerOverchargedUlti",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 7.0,
+            "spreadDeg": 170
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hasOverride": false
         }
       ]
     },
@@ -1197,6 +1921,193 @@
       ]
     },
     {
+      "id": 16000085,
+      "hash": "Kenji",
+      "name": "Kenji",
+      "internalName": "Samurai",
+      "class": "Assassin",
+      "rarity": "Legendary",
+      "hasHypercharge": true,
+      "speedTilesPerSec": 2.733,
+      "hp": 4000,
+      "attack": {
+        "damage": 750,
+        "reloadSec": 1.0,
+        "ammoCount": 3
+      },
+      "super": {
+        "damage": 1300,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 3.33,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "dash-attack",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Studied The Blade",
+          "description": "Slashimi's slices have x% longer range"
+        },
+        {
+          "name": "Nigiri Nemesis",
+          "description": "After avoiding damage for x seconds, gets x% damage reduction from the next enemy attack."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Dashi Dash",
+          "description": "Kenji's basic attack only uses Dash for the next x seconds."
+        },
+        {
+          "name": "Hosomaki Healing",
+          "description": "Kenji instantly heals x% of damage taken over the last x seconds."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
+      "assets": {
+        "portrait": "/assets/brawlers/Kenji/portrait.png",
+        "render": "/assets/brawlers/Kenji/render.png",
+        "emoji": "/assets/brawlers/Kenji/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "SamuraiWeaponDash",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 2.6666666666666665
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "SamuraiUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "splashTiles": 3.125,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000084,
+      "hash": "Moe",
+      "name": "Moe",
+      "internalName": "Fury",
+      "class": "Damage Dealer",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 3200,
+      "attack": {
+        "damage": 950,
+        "reloadSec": 1.8,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 96.67,
+          "radiusTiles": 0.0
+        }
+      },
+      "super": {
+        "damage": 700,
+        "reloadSec": 0.1,
+        "ammoCount": 1,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": true,
+          "isBouncing": false,
+          "speedTilesPerSec": 3.33,
+          "radiusTiles": 3.125
+        }
+      },
+      "attackStyle": "thrower",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Skipping Stones",
+          "description": "Moe's basic attacks bounce one more time. The range of the attack remains the same."
+        },
+        {
+          "name": "Speeding Ticket",
+          "description": "Moe's Driller has increased travel speed."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Dodgy Digging",
+          "description": "Moe digs up some \"borrowed\" goods, increasing his Super charge rate by x% for x seconds."
+        },
+        {
+          "name": "Rat Race",
+          "description": "Moe dashes a short distance in his Driller, destroying walls and knocking back Brawlers in the process."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [
+        "Super projectile pierces through multiple enemies"
+      ],
+      "assets": {
+        "portrait": "/assets/brawlers/Moe/portrait.png",
+        "render": "/assets/brawlers/Moe/render.png",
+        "emoji": "/assets/brawlers/Moe/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "FuryWeapon",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "splashTiles": 0.9375,
+            "equip": "weapon"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "FuryUlti",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 13.333333333333334,
+            "widthTiles": 6.25
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
       "id": 16000083,
       "hash": "Clancy",
       "name": "Clancy",
@@ -1643,6 +2554,200 @@
           "passesWalls": true,
           "isHyper": false,
           "hasOverride": true
+        }
+      ]
+    },
+    {
+      "id": 16000078,
+      "hash": "Melodie",
+      "name": "Melodie",
+      "internalName": "AxeJuggler",
+      "class": "Assassin",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 3800,
+      "attack": {
+        "damage": 460,
+        "reloadSec": 1.5,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 15.0,
+          "radiusTiles": 0.26
+        }
+      },
+      "super": {},
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Fast Beats",
+          "description": "Melodie gains x% increased movement speed from each note orbiting her."
+        },
+        {
+          "name": "Extended Mix",
+          "description": "Melodie's notes last for x% longer before vanishing."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Perfect Pitch",
+          "description": "Melodie's notes get x% increased movement speed and x% wider orbit for x seconds."
+        },
+        {
+          "name": "Interlude",
+          "description": "Melodie gains x% Shield from each note orbiting her."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_axe_juggler",
+        "multipliers": {
+          "value": "3",
+          "value2": "120"
+        }
+      },
+      "specialMechanics": [],
+      "assets": {
+        "portrait": "/assets/brawlers/Melodie/portrait.png",
+        "render": "/assets/brawlers/Melodie/render.png",
+        "emoji": "/assets/brawlers/Melodie/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "AxeJugglerWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 8.0,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "AxeJugglerUlti",
+          "shape": "dash",
+          "params": {
+            "rangeTiles": 5.333333333333333
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000077,
+      "hash": "Larry-&-Lawrie",
+      "name": "Larry & Lawrie",
+      "internalName": "Twins",
+      "class": "Artillery",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "speedTilesPerSec": 2.567,
+      "hp": 3000,
+      "attack": {
+        "damage": 700,
+        "reloadSec": 2.2,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 6.67,
+          "radiusTiles": 0.0
+        }
+      },
+      "super": {
+        "spawnedEntity": "TwinsPet",
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 3.99,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "thrower",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Protocol Protect",
+          "description": "While Lawrie is in range, transfer x% incoming damage to himself instead."
+        },
+        {
+          "name": "Protocol Assist",
+          "description": "While Lawrie is in range, reload x% of your ammo whenever he damages an enemy."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Order Swap",
+          "description": "Swap weapons with Lawrie."
+        },
+        {
+          "name": "Order Fall Back",
+          "description": "Dash towards Lawrie while Lawrie dashes towards you, healing both for x% of max health."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
+      "assets": {
+        "portrait": "/assets/brawlers/Larry-&-Lawrie/portrait.png",
+        "render": "/assets/brawlers/Larry-&-Lawrie/render.png",
+        "emoji": "/assets/brawlers/Larry-&-Lawrie/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "TwinsWeaponThrower",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 7.333333333333333,
+            "splashTiles": 0.9375,
+            "equip": "weapon"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "TwinsUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 5.0,
+            "splashTiles": 1.6666666666666667,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Hypercharged Super",
+          "skillName": "TwinsHyperUlti",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 5.0,
+            "spreadDeg": 40
+          },
+          "passesWalls": false,
+          "isHyper": true,
+          "hasOverride": false
         }
       ]
     },
@@ -2248,6 +3353,80 @@
       ]
     },
     {
+      "id": 16000069,
+      "hash": "Hank",
+      "name": "Hank",
+      "internalName": "FishTank",
+      "class": "Tank",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 5200,
+      "attack": {
+        "reloadSec": 0.25,
+        "ammoCount": 1
+      },
+      "super": {
+        "damage": 1320
+      },
+      "attackStyle": "melee",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Its Gonna Blow",
+          "description": "When Balloon Blast is charged over x%, Hank gains x% extra movement speed."
+        },
+        {
+          "name": "Take Cover",
+          "description": "Hank takes x% less damage when near a wall."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Water Balloons",
+          "description": "The next Balloon Blast also slows down enemies for x seconds."
+        },
+        {
+          "name": "Barricade",
+          "description": "Hank takes x% reduced damage for x seconds."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_fish_tank",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
+      "assets": {
+        "portrait": "/assets/brawlers/Hank/portrait.png",
+        "render": "/assets/brawlers/Hank/render.png",
+        "emoji": "/assets/brawlers/Hank/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "FishTankWeapon",
+          "shape": "area-follow",
+          "params": {
+            "splashTiles": 1.6666666666666667
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "FishTankUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
+          "isHyper": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
       "id": 16000068,
       "hash": "Maisie",
       "name": "Maisie",
@@ -2421,6 +3600,88 @@
             "widthTiles": 0.625
           },
           "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
+      "id": 16000066,
+      "hash": "R-T",
+      "name": "R-T",
+      "internalName": "Splitter",
+      "class": "Damage Dealer",
+      "rarity": "Mythic",
+      "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 4100,
+      "attack": {
+        "damage": 700,
+        "reloadSec": 1.5,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 15.0,
+          "radiusTiles": 0.104
+        }
+      },
+      "super": {},
+      "attackStyle": "sniper",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Quick Maths",
+          "description": "Marks created last x seconds longer."
+        },
+        {
+          "name": "Recording",
+          "description": "R-T and his legs take x% less damage when split."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Out Of Line",
+          "description": "Instantly charges R-T's Super."
+        },
+        {
+          "name": "Hacks",
+          "description": "Instantly trigger all active marks on all enemy Brawlers, dealing their damage."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_default",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
+      "assets": {
+        "portrait": "/assets/brawlers/R-T/portrait.png",
+        "render": "/assets/brawlers/R-T/render.png",
+        "emoji": "/assets/brawlers/R-T/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "SplitterWeapon",
+          "shape": "line",
+          "params": {
+            "rangeTiles": 10.0,
+            "widthTiles": 0.6
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "SplitterUlti",
+          "shape": "self-aoe",
+          "params": {},
+          "passesWalls": true,
           "isHyper": false,
           "hasOverride": false
         }
@@ -3473,6 +4734,102 @@
       ]
     },
     {
+      "id": 16000053,
+      "hash": "Lola",
+      "name": "Lola",
+      "internalName": "Duplicator",
+      "class": "Damage Dealer",
+      "rarity": "Epic",
+      "hasHypercharge": true,
+      "speedTilesPerSec": 2.4,
+      "hp": 4000,
+      "attack": {
+        "damage": 280,
+        "reloadSec": 1.7,
+        "ammoCount": 3,
+        "projectile": {
+          "indirect": false,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 15.0,
+          "radiusTiles": 0.208
+        }
+      },
+      "super": {
+        "spawnedEntity": "DuplicatorPet",
+        "projectile": {
+          "indirect": true,
+          "bouncePercent": 0,
+          "pierce": false,
+          "isBouncing": false,
+          "speedTilesPerSec": 3.99,
+          "radiusTiles": 0.0
+        }
+      },
+      "attackStyle": "long-range-shot",
+      "superStyle": null,
+      "starPowers": [
+        {
+          "name": "Improvise",
+          "description": "When down to her last round, Lola deals an extra x% damage."
+        },
+        {
+          "name": "Sealed With A Kiss",
+          "description": "Projectiles from Lola's Ego will heal allies that are caught in its path by x health."
+        }
+      ],
+      "gadgets": [
+        {
+          "name": "Freeze Frame",
+          "description": "Lola's Ego stops moving to strike a pose! Gaining a x% shield for x seconds."
+        },
+        {
+          "name": "Stunt Double",
+          "description": "Lola and her Ego switch locations, both recovering x health."
+        }
+      ],
+      "hypercharge": {
+        "type": "overcharge_pet_change",
+        "multipliers": {
+          "value": "1"
+        }
+      },
+      "specialMechanics": [],
+      "assets": {
+        "portrait": "/assets/brawlers/Lola/portrait.png",
+        "render": "/assets/brawlers/Lola/render.png",
+        "emoji": "/assets/brawlers/Lola/emoji.png"
+      },
+      "variants": [
+        {
+          "label": "Attack",
+          "skillName": "DuplicatorWeapon",
+          "shape": "cone",
+          "params": {
+            "rangeTiles": 9.0,
+            "spreadDeg": 30
+          },
+          "passesWalls": false,
+          "isHyper": false,
+          "hasOverride": false
+        },
+        {
+          "label": "Super",
+          "skillName": "DuplicatorUlti",
+          "shape": "placement",
+          "params": {
+            "rangeTiles": 5.0,
+            "splashTiles": 1.875,
+            "equip": "ulti"
+          },
+          "passesWalls": true,
+          "isHyper": false,
+          "hasOverride": false
+        }
+      ]
+    },
+    {
       "id": 16000052,
       "hash": "Meg",
       "name": "Meg",
@@ -3889,7 +5246,7 @@
       "speedTilesPerSec": 2.4,
       "hp": 3000,
       "attack": {
-        "damage": 1030,
+        "damage": 1040,
         "reloadSec": 2.0,
         "ammoCount": 3,
         "projectile": {
@@ -6701,7 +8058,7 @@
         }
       },
       "super": {
-        "damage": 650
+        "damage": 660
       },
       "attackStyle": "shotgun-cone",
       "superStyle": null,

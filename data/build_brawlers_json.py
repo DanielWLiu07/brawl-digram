@@ -344,11 +344,27 @@ def _normalize_for_match(s: str) -> str:
     return s.lower().replace('-', '').replace('.', '').replace(' ', '').replace('&', '')
 
 
-# Brawlify hash → characters.csv ItemName for brawlers whose display name changed
-# or where the hash contains more characters than the ItemName.
+# Brawlify hash → characters.csv ItemName. Internal names often diverge from
+# the display brand (Mortis=Undertaker, Spike=Cactus). When the loose
+# normalizer can't bridge the gap, list the explicit mapping here.
 _HASH_TO_ITEM_OVERRIDES = {
-    'Rico':     'ricochet',  # renamed from Ricochet; ItemName not updated in v67.264 CSV
-    'Jae-Yong': 'jae',       # Alternator internally; Brawlify uses full "Jae-Yong" name
+    'Rico':            'ricochet',     # renamed from Ricochet at some point
+    'Jae-Yong':        'jae',
+    'R-T':             'artie',        # Splitter internal — splits in two
+    'Mina':            'dancer',
+    'Hank':            'fishtank',
+    'Moe':             'fury',
+    'Kenji':           'samurai',
+    'Melodie':         'melody',       # AxeJuggler internal
+    'Lola':            'lolla',        # Duplicator internal
+    'Larry-&-Lawrie':  'twins',
+    'Glowy':           'mender',
+    'Najia':           'redirecter',
+    'Damian':          'gladiator',
+    'Sirius':          'shadowdemon',
+    'Starr-Nova':      'stella',       # MagicalGirl internal
+    'Ziggy':           'digger',
+    # Buzz-Lightyear is an event collab — no row in characters.csv.
 }
 
 
