@@ -141,15 +141,30 @@ const status = document.getElementById("status");
 const setStatus = (t) => { status.textContent = t; };
 
 // ---- load data ----
-const [mapsDoc, brawlersDoc, kitsDoc, mechanicsDoc] = await Promise.all([
+const [mapsDoc, brawlersDoc, kitsDoc, mechanicsDoc, tileIdxDoc] = await Promise.all([
   fetch("/data/maps.json").then(r => r.json()),
   fetch("/data/brawlers.json").then(r => r.json()),
   fetch("/data/kits.json").then(r => r.json()).catch(() => ({ kits: {} })),
   fetch("/data/ability_mechanics.json").then(r => r.json()).catch(() => ({ abilities: [] })),
+  fetch("/data/tile_sprite_index.json").then(r => r.json()).catch(() => ({ tiles: {} })),
 ]);
 const maps = mapsDoc.maps;
 const brawlers = brawlersDoc.brawlers;
 const kits = kitsDoc.kits || {};
+const tileSpriteIdx = tileIdxDoc.tiles || {};
+
+// Preload default tile sprites once so drawMap can stamp them per cell.
+const tileTextures = {};
+async function preloadTiles() {
+  const tasks = [];
+  for (const [ch, info] of Object.entries(tileSpriteIdx)) {
+    if (!info.default) continue;
+    const url = `/data/tile_sprites_official/${info.default}`;
+    tasks.push(PIXI.Assets.load(url).then(tex => { tileTextures[ch] = tex; }).catch(() => {}));
+  }
+  await Promise.all(tasks);
+}
+await preloadTiles();
 
 // Index ability records by (brawlerName, type, normalizedName) for fast lookup
 const mechanicsByKey = new Map();
@@ -417,21 +432,37 @@ function raycastTiles(fx, fy, ang, maxT) {
 function drawMap() {
   computeLayout();
   mapLayer.removeChildren();
-  const g = new PIXI.Graphics();
-  g.rect(originX, originY, cell * currentMap.width, cell * currentMap.height).fill(OPEN_BG);
+  // Open-ground backdrop
+  const bg = new PIXI.Graphics();
+  bg.rect(originX, originY, cell * currentMap.width, cell * currentMap.height).fill(OPEN_BG);
+  mapLayer.addChild(bg);
+
+  // Stamp each non-open tile. Use the SVG sprite from tileTextures when we
+  // have one; fall back to a colored rect for any tile char we haven't mapped.
+  const fallback = new PIXI.Graphics();
   currentMap.grid.forEach((row, y) => {
     for (let x = 0; x < row.length; x++) {
       if (brokenTiles.has(tk(x, y))) {
-        // cleared wall: open ground + a small rubble speck
-        g.circle(originX + (x+0.5)*cell, originY + (y+0.5)*cell, Math.max(cell*0.12, 1.5)).fill({ color: 0x4a3a28, alpha: 0.7 });
+        fallback.circle(originX + (x+0.5)*cell, originY + (y+0.5)*cell, Math.max(cell*0.12, 1.5)).fill({ color: 0x4a3a28, alpha: 0.7 });
         continue;
       }
-      const col = tileColor(row[x]);
+      const ch = row[x];
+      const tex = tileTextures[ch];
+      if (tex) {
+        const sp = new PIXI.Sprite(tex);
+        sp.x = originX + x * cell;
+        sp.y = originY + y * cell;
+        sp.width = cell;
+        sp.height = cell;
+        mapLayer.addChild(sp);
+        continue;
+      }
+      const col = tileColor(ch);
       if (col === null) continue;
-      g.rect(originX + x*cell, originY + y*cell, cell, cell).fill(col);
+      fallback.rect(originX + x*cell, originY + y*cell, cell, cell).fill(col);
     }
   });
-  mapLayer.addChild(g);
+  mapLayer.addChild(fallback);
 }
 
 function loadMap(name) {

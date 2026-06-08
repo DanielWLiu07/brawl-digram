@@ -1,0 +1,6706 @@
+{
+  "$schema": "../schemas/preset.schema.json",
+	"presetOptions": {
+		"tileTransitionSize": 2
+	},
+	"ignoreTiles": [
+		".",
+		"D",
+		"0",
+		"7",
+		"6",
+		"Q",
+		"b",
+		"r"
+	],
+	"tiles": [
+	{
+		"display": "Wall Block",
+		"tileName": "blocking1",
+		"tileCode": "M",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "wood_block.svg",
+			"sound": "wood.ogg"
+		},
+		{
+			"tileParts": {
+				"top": 512,
+				"mid": 1000,
+				"bot": 291,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "stone_block.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 234,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "ice_block.svg"
+		},
+		{
+			"tileParts": {
+				"top": 482,
+				"mid": 1000,
+				"bot": 283,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "wall_block.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 243,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "wall_block_red.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "wall_block_gray.svg"
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "metal_box.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "concrete_wall.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "sandstone_star.svg"
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "apartment.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "merch_closed.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "bandstand_wall.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "ice_wall.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "scrap_cube.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "metal_crate.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 50,
+				"right": 50
+			},
+			"asset": "haybale.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "waterpark_rock.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "wall_block_castle.svg"
+		}
+		]
+	},
+	{
+		"tileName": "blocking2",
+		"tileCode": "X",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 405,
+				"mid": 1000,
+				"bot": 280,
+				"left": 0,
+				"right": 20
+			},
+			"asset": "crystal_magenta.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "grass_block.svg"
+		},
+		{
+			"tileParts": {
+				"top": 528,
+				"mid": 1000,
+				"bot": 237,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "wood_block.svg"
+		},
+		{
+			"tileParts": {
+				"top": 405,
+				"mid": 1000,
+				"bot": 280,
+				"left": 0,
+				"right": 20
+			},
+			"asset": "crystal_red.svg"
+		},
+		{
+			"tileParts": {
+				"top": 544,
+				"mid": 1000,
+				"bot": 243,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "tires.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "tombstone.svg"
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "chest.svg"
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "yellow_block.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "sandstone_rombus.svg"
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "factory.svg"
+		},
+		{
+			"tileParts": {
+				"top": 300,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "merch_display.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "bandstand_wall_2.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "ice_wall_2.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "concrete_wall.svg"
+		},
+		{
+			"tileParts": {
+				"top": 700,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "metal_crate_2.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 50,
+				"right": 50
+			},
+			"asset": "haybale.svg"
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "waterpark_wall.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "wall_block_castle.svg"
+		}
+		]
+	},
+	{
+		"tileName": "blocking3",
+		"tileCode": "Y",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "crate.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "present_box.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "crate_orange.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "crate_red.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "orange_wall.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 50,
+				"right": 50
+			},
+			"asset": "tent.svg"
+		},
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "warehouse.svg"
+		},
+		{
+			"tileParts": {
+				"top": 400,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "merch_crate.svg"
+		},
+		{
+			"tileParts": {
+				"top": 400,
+				"mid": 1000,
+				"bot": 300,
+				"left": 50,
+				"right": 50
+			},
+			"asset": "x_box.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "crate_red_orange.svg"
+		}
+		]
+	},
+	{
+		"tileName": "blocking4",
+		"tileCode": "C",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 439,
+				"mid": 1000,
+				"bot": 266,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "barrel.svg"
+		},
+		{
+			"tileParts": {
+				"top": 528,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "present_barrel.svg"
+		},
+		{
+			"tileParts": {
+				"top": 566,
+				"mid": 1000,
+				"bot": 243,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "metal_barrel.svg"
+		},
+		{
+			"tileParts": {
+				"top": 400,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "red_barrel.svg"
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "orange_barrel.svg"
+		},
+		{
+			"tileParts": {
+				"top": 400,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "basket.svg"
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "office.svg"
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "fuel_barrel.svg"
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "waterpark_barrel.svg"
+		}
+		]
+	},
+	{
+		"tileName": "forest",
+		"tileCode": "F",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"color": "green",
+			"asset": "grass_green.svg",
+			"tileTransitions": true
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"color": "cyan",
+			"asset": "grass_cyan.svg",
+			"tileTransitions": true
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"color": "yellow",
+			"asset": "grass_yellow.svg",
+			"tileTransitions": true
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"color": "blue",
+			"asset": "grass_blue.svg",
+			"tileTransitions": true
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"color": "blue",
+			"asset": "grass_neon_blue.svg",
+			"tileTransitions": true
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"color": "blue gradient",
+			"asset": "grass_blue_fade.svg",
+			"tileTransitions": true
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"color": "green round",
+			"asset": "grass_green_round.svg",
+			"tileTransitions": true
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"color": "pink",
+			"asset": "grass_pink.svg",
+			"tileTransitions": true
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 300,
+				"left": 50,
+				"right": 50
+			},
+			"color": "forest",
+			"asset": "forest.svg",
+			"tileTransitions": true
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"color": "dull green",
+			"asset": "grass_dull.svg",
+			"tileTransitions": true
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"color": "pink round",
+			"asset": "grass_pink_round.svg",
+			"tileTransitions": true
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"color": "teal",
+			"asset": "grass_teal.svg",
+			"tileTransitions": true
+		}
+		]
+	},
+	{
+		"tileName": "respawningWall",
+		"tileCode": "T",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 527,
+				"mid": 1000,
+				"bot": 300,
+				"left": 28,
+				"right": 63
+			},
+			"asset": "cactus.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 386,
+				"mid": 1000,
+				"bot": 327,
+				"left": 7,
+				"right": 4
+			},
+			"asset": "mushroom.svg"
+		},
+		{
+			"tileParts": {
+				"top": 464,
+				"mid": 1000,
+				"bot": 136,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "tree.svg"
+		},
+		{
+			"tileParts": {
+				"top": 875,
+				"mid": 1000,
+				"bot": 331,
+				"left": 3,
+				"right": 3
+			},
+			"asset": "sapling.svg"
+		},
+		{
+			"tileParts": {
+				"top": 400,
+				"mid": 1000,
+				"bot": 300,
+				"left": 100,
+				"right": 100
+			},
+			"asset": "stump.svg"
+		},
+		{
+			"tileParts": {
+				"top": 400,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "ship_barrel.svg"
+		},
+		{
+			"tileParts": {
+				"top": 400,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "road_sign.svg"
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 300,
+				"left": 75,
+				"right": 75
+			},
+			"asset": "pot.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 50,
+				"right": 50
+			},
+			"asset": "cargo.svg"
+		},
+		{
+			"tileParts": {
+				"top": 522,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "old_tv.svg"
+		},
+		{
+			"tileParts": {
+				"top": 400,
+				"mid": 1000,
+				"bot": 300,
+				"left": 7,
+				"right": 7
+			},
+			"asset": "tree_snowless.svg"
+		},
+		{
+			"tileParts": {
+				"top": 544,
+				"mid": 1000,
+				"bot": 243,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "tires.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "computer.svg"
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": 300,
+				"left": 88,
+				"right": 88
+			},
+			"asset": "surfboard.svg"
+		},
+		{
+			"tileParts": {
+				"top": 525,
+				"mid": 1000,
+				"bot": 250,
+				"left": 43,
+				"right": 43
+			},
+			"asset": "plant_castle.svg"
+		}
+		]
+	},
+	{
+		"tileName": "blockingDestroyableWithWeapon",
+		"tileCode": "B",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 392,
+				"mid": 1000,
+				"bot": 190,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "vase.svg"
+		},
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 980,
+				"bot": 98,
+				"left": 8,
+				"right": 0
+			},
+			"asset": "skull.svg"
+		},
+		{
+			"tileParts": {
+				"top": 303,
+				"mid": 1000,
+				"bot": 91,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "present_mini.svg"
+		},
+		{
+			"tileParts": {
+				"top": 351,
+				"mid": 1000,
+				"bot": 156,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "cone.svg"
+		},
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 150,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "candles.svg"
+		},
+		{
+			"tileParts": {
+				"top": -50,
+				"mid": 1000,
+				"bot": 0,
+				"left": -50,
+				"right": 0
+			},
+			"asset": "round_shot.svg"
+		},
+		{
+			"tileParts": {
+				"top": 150,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "vending_machines.svg"
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 400,
+				"left": -50,
+				"right": -50
+			},
+			"asset": "balloon.svg"
+		},
+		{
+			"tileParts": {
+				"top": 250,
+				"mid": 1000,
+				"bot": 150,
+				"left": 75,
+				"right": 75
+			},
+			"asset": "snowballs.svg"
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 250,
+				"left": 50,
+				"right": 50
+			},
+			"asset": "alien_plant.svg"
+		},
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 975,
+				"bot": 300,
+				"left": 46,
+				"right": 46
+			},
+			"asset": "cactus_ball.svg"
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "sand_bucket.svg"
+		},
+		{
+			"tileParts": {
+				"top": -100,
+				"mid": 1000,
+				"bot": 250,
+				"left": -50,
+				"right": -50
+			},
+			"asset": "pizza_box.svg"
+		}
+		]
+	},
+	{
+		"tileName": "fence",
+		"tileCode": "N",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 127,
+				"mid": 1000,
+				"bot": 242,
+				"left": 45,
+				"right": 45
+			},
+			"asset": "fence_hor.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 601,
+				"mid": 1000,
+				"bot": 243,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "fence_ver.svg"
+		},
+		{
+			"tileParts": {
+				"top": 517,
+				"mid": 1000,
+				"bot": 243,
+				"left": 45,
+				"right": 45
+			},
+			"asset": "fence_cor.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 317,
+				"mid": 1000,
+				"bot": 243,
+				"left": 44,
+				"right": 44
+			},
+			"asset": "fence_hor_lunar.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 602,
+				"mid": 1000,
+				"bot": 243,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "fence_ver_lunar.svg"
+		},
+		{
+			"tileParts": {
+				"top": 517,
+				"mid": 1000,
+				"bot": 243,
+				"left": 45,
+				"right": 45
+			},
+			"asset": "fence_cor_lunar.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "neon_railing_hor.svg"
+		},
+		{
+			"tileParts": {
+				"top": 650,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "neon_railing_ver.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 0,
+				"left": 2,
+				"right": 0
+			},
+			"asset": "neon_railing_r.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 2
+			},
+			"asset": "neon_railing_l.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 650,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "neon_railing_t.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 440,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "neon_railing_b.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "neon_railing_tr.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "neon_railing_tl.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 650,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "neon_railing_br.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 650,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "neon_railing_bl.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 300,
+				"left": 50,
+				"right": 50
+			},
+			"asset": "fence_hor_mor.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 750,
+				"mid": 1000,
+				"bot": 300,
+				"left": -150,
+				"right": -150
+			},
+			"asset": "fence_ver_mor.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "fence_cor_mor.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "ship_railing_hor.svg"
+		},
+		{
+			"tileParts": {
+				"top": -50,
+				"mid": 1000,
+				"bot": 0,
+				"left": -150,
+				"right": 0
+			},
+			"asset": "ship_railing_ver.svg"
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "ship_railing_r.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "ship_railing_l.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": -50,
+				"mid": 1000,
+				"bot": 0,
+				"left": -150,
+				"right": 0
+			},
+			"asset": "ship_railing_b.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": -250,
+				"mid": 1000,
+				"bot": 0,
+				"left": -150,
+				"right": 0
+			},
+			"asset": "ship_railing_t.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 50,
+				"left": -150,
+				"right": 0
+			},
+			"asset": "ship_railing_tr.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 50,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "ship_railing_tl.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": 0,
+				"left": -150,
+				"right": 0
+			},
+			"asset": "ship_railing_br.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "ship_railing_bl.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 200,
+				"mid": 1000,
+				"bot": 0,
+				"left": -150,
+				"right": 0
+			},
+			"asset": "ship_railing_to.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 800,
+				"mid": 1000,
+				"bot": 300,
+				"left": 150,
+				"right": 150
+			},
+			"asset": "arcade_fence_corner.svg",
+			"orderHor": 2
+		},
+		{
+			"tileParts": {
+				"top": 400,
+				"mid": 1000,
+				"bot": 300,
+				"left": 50,
+				"right": 50
+			},
+			"asset": "arcade_fence_hor.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 0,
+				"left": -125,
+				"right": -125
+			},
+			"asset": "arcade_fence_ver.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "wall_sand_hor.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": -100,
+				"left": -150,
+				"right": -150
+			},
+			"asset": "wall_sand_ver.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "wall_sand_r.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "wall_sand_l.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": -200,
+				"left": -150,
+				"right": -150
+			},
+			"asset": "wall_sand_b.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": -100,
+				"left": -150,
+				"right": -150
+			},
+			"asset": "wall_sand_t.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 300,
+				"left": -150,
+				"right": 0
+			},
+			"asset": "wall_sand_tr.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": -150
+			},
+			"asset": "wall_sand_tl.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 1000,
+				"mid": 1000,
+				"bot": 300,
+				"left": -150,
+				"right": 0
+			},
+			"asset": "wall_sand_br.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 1000,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": -150
+			},
+			"asset": "wall_sand_bl.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 400,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "building_long_hor.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": -500,
+				"left": -150,
+				"right": -150
+			},
+			"asset": "building_long_ver.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 400,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "building_long_r.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 400,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "building_long_l.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": -200,
+				"left": -150,
+				"right": -150
+			},
+			"asset": "building_long_b.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": -500,
+				"left": -150,
+				"right": -150
+			},
+			"asset": "building_long_t.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 400,
+				"left": -150,
+				"right": 0
+			},
+			"asset": "building_long_tr.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 400,
+				"left": 0,
+				"right": -150
+			},
+			"asset": "building_long_tl.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 900,
+				"mid": 1000,
+				"bot": 400,
+				"left": -150,
+				"right": 0
+			},
+			"asset": "building_long_br.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 900,
+				"mid": 1000,
+				"bot": 400,
+				"left": 0,
+				"right": -150
+			},
+			"asset": "building_long_bl.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "gift_fence_hor.svg"
+		},
+		{
+			"tileParts": {
+				"top": -50,
+				"mid": 1000,
+				"bot": 0,
+				"left": -150,
+				"right": 0
+			},
+			"asset": "gift_fence_ver.svg"
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "gift_fence_r.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "gift_fence_l.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": -50,
+				"mid": 1000,
+				"bot": 0,
+				"left": -150,
+				"right": 0
+			},
+			"asset": "gift_fence_b.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": -250,
+				"mid": 1000,
+				"bot": 0,
+				"left": -150,
+				"right": 0
+			},
+			"asset": "gift_fence_t.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 50,
+				"left": -150,
+				"right": 0
+			},
+			"asset": "gift_fence_tr.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 50,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "gift_fence_tl.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": 0,
+				"left": -150,
+				"right": 0
+			},
+			"asset": "gift_fence_br.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "gift_fence_bl.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "wall_band_hor.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": -100,
+				"left": -150,
+				"right": -150
+			},
+			"asset": "wall_band_ver.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "wall_band_r.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "wall_band_l.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": -200,
+				"left": -150,
+				"right": -150
+			},
+			"asset": "wall_band_b.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": -100,
+				"left": -150,
+				"right": -150
+			},
+			"asset": "wall_band_t.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 300,
+				"left": -150,
+				"right": 0
+			},
+			"asset": "wall_band_tr.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": -150
+			},
+			"asset": "wall_band_tl.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 1000,
+				"mid": 1000,
+				"bot": 300,
+				"left": -150,
+				"right": 0
+			},
+			"asset": "wall_band_br.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 1000,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": -150
+			},
+			"asset": "wall_band_bl.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 300,
+				"mid": 1000,
+				"bot": 300,
+				"left": 50,
+				"right": 50
+			},
+			"asset": "fence_hor_ice.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 250,
+				"left": -200,
+				"right": -200
+			},
+			"asset": "fence_ver_ice.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 50,
+				"right": 50
+			},
+			"asset": "fence_cor_ice.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "pipe_hor.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "pipe_ver.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 100,
+				"mid": 1000,
+				"bot": 300,
+				"left": 200,
+				"right": 0
+			},
+			"asset": "pipe_r.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 100,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 200
+			},
+			"asset": "pipe_l.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 500,
+				"left": 100,
+				"right": 100
+			},
+			"asset": "pipe_b.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 100,
+				"mid": 1000,
+				"bot": 0,
+				"left": 100,
+				"right": 100
+			},
+			"asset": "pipe_t.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "pipe_tr.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "pipe_tl.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "pipe_br.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "pipe_bl.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "spacestation_wall_hor.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "spacestation_wall_ver.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 300,
+				"left": 150,
+				"right": 0
+			},
+			"asset": "spacestation_wall_r.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 150
+			},
+			"asset": "spacestation_wall_l.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "spacestation_wall_b.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 650,
+				"mid": 1000,
+				"bot": 50,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "spacestation_wall_t.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "spacestation_wall_tr.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "spacestation_wall_tl.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "spacestation_wall_br.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "spacestation_wall_bl.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 150,
+				"left": -100,
+				"right": -100
+			},
+			"asset": "waterpark_fence.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 150,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "waterpark_fence_hor.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 150,
+				"left": -100,
+				"right": 0
+			},
+			"asset": "waterpark_fence_r.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 150,
+				"left": 0,
+				"right": -100
+			},
+			"asset": "waterpark_fence_l.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 750,
+				"mid": 1000,
+				"bot": 150,
+				"left": -100,
+				"right": -100
+			},
+			"asset": "waterpark_fence_b.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 750,
+				"mid": 1000,
+				"bot": 150,
+				"left": -100,
+				"right": 0
+			},
+			"asset": "waterpark_fence_br.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 750,
+				"mid": 1000,
+				"bot": 150,
+				"left": 0,
+				"right": -100
+			},
+			"asset": "waterpark_fence_bl.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 616,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "fence_hor_castle.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 616,
+				"mid": 1000,
+				"bot": 0,
+				"left": -150,
+				"right": -150
+			},
+			"asset": "fence_ver_castle.svg"
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "fence_cor_castle.svg",
+			"orderHor": 1
+		}
+		],
+		"tileLinks": {
+			"rules": [
+			{
+				"condition": "*1****0*",
+				"requiredBiome": 23,
+				"changeTileType": 105
+			},
+			{
+				"condition": "*0****1*",
+				"requiredBiome": 23,
+				"changeTileType": 105
+			},
+			{
+				"condition": "***01***",
+				"requiredBiome": 23,
+				"changeTileType": 105
+			},
+			{
+				"condition": "***10***",
+				"requiredBiome": 23,
+				"changeTileType": 105
+			},
+			{
+				"condition": "*1****1*",
+				"requiredBiome": 23,
+				"changeTileType": 104
+			},
+			{
+				"condition": "*0****0*",
+				"requiredBiome": 23,
+				"changeTileType": 103
+			},
+			{
+				"condition": "***11***",
+				"requiredBiome": 22,
+				"changeTileType": 31
+			},
+			{
+				"condition": "*1****1*",
+				"requiredBiome": 22,
+				"changeTileType": 32
+			},
+			{
+				"condition": "*0****1*",
+				"requiredBiome": 22,
+				"changeTileType": 30
+			},
+			{
+				"condition": "*1****0*",
+				"requiredBiome": 22,
+				"changeTileType": 30
+			},
+			{
+				"condition": "***01***",
+				"requiredBiome": 22,
+				"changeTileType": 30
+			},
+			{
+				"condition": "***10***",
+				"requiredBiome": 22,
+				"changeTileType": 30
+			},
+			{
+				"condition": "***11***",
+				"requiredBiome": 21,
+				"changeTileType": 31
+			},
+			{
+				"condition": "*1****1*",
+				"requiredBiome": 21,
+				"changeTileType": 32
+			},
+			{
+				"condition": "*0****1*",
+				"requiredBiome": 21,
+				"changeTileType": 30
+			},
+			{
+				"condition": "*1****0*",
+				"requiredBiome": 21,
+				"changeTileType": 30
+			},
+			{
+				"condition": "***01***",
+				"requiredBiome": 21,
+				"changeTileType": 30
+			},
+			{
+				"condition": "***10***",
+				"requiredBiome": 21,
+				"changeTileType": 30
+			},
+			{
+				"condition": "*1*10***",
+				"requiredBiome": 20,
+				"changeTileType": 102
+			},
+			{
+				"condition": "*1*01***",
+				"requiredBiome": 20,
+				"changeTileType": 101
+			},
+			{
+				"condition": "*1*00***",
+				"requiredBiome": 20,
+				"changeTileType": 100
+			},
+			{
+				"condition": "***10***",
+				"requiredBiome": 20,
+				"changeTileType": 99
+			},
+			{
+				"condition": "***01***",
+				"requiredBiome": 20,
+				"changeTileType": 98
+			},
+			{
+				"condition": "***11***",
+				"requiredBiome": 20,
+				"changeTileType": 97
+			},
+			{
+				"condition": "********",
+				"requiredBiome": 20,
+				"changeTileType": 96
+			},
+			{
+				"condition": "***11***",
+				"requiredBiome": 18,
+				"changeTileType": 86
+			},
+			{
+				"condition": "*1****1*",
+				"requiredBiome": 18,
+				"changeTileType": 87
+			},
+			{
+				"condition": "*0*01*0*",
+				"requiredBiome": 18,
+				"changeTileType": 88
+			},
+			{
+				"condition": "*0*10*0*",
+				"requiredBiome": 18,
+				"changeTileType": 89
+			},
+			{
+				"condition": "*1*00*0*",
+				"requiredBiome": 18,
+				"changeTileType": 90
+			},
+			{
+				"condition": "*0*00*1*",
+				"requiredBiome": 18,
+				"changeTileType": 91
+			},
+			{
+				"condition": "*0*01*1*",
+				"requiredBiome": 18,
+				"changeTileType": 92
+			},
+			{
+				"condition": "*0*10*1*",
+				"requiredBiome": 18,
+				"changeTileType": 93
+			},
+			{
+				"condition": "*1*01*0*",
+				"requiredBiome": 18,
+				"changeTileType": 94
+			},
+			{
+				"condition": "*1*10*0*",
+				"requiredBiome": 18,
+				"changeTileType": 95
+			},
+			{
+				"condition": "***11***",
+				"requiredBiome": 17,
+				"changeTileType": 76
+			},
+			{
+				"condition": "*1****1*",
+				"requiredBiome": 17,
+				"changeTileType": 77
+			},
+			{
+				"condition": "*0*01*0*",
+				"requiredBiome": 17,
+				"changeTileType": 78
+			},
+			{
+				"condition": "*0*10*0*",
+				"requiredBiome": 17,
+				"changeTileType": 79
+			},
+			{
+				"condition": "*1*00*0*",
+				"requiredBiome": 17,
+				"changeTileType": 80
+			},
+			{
+				"condition": "*0*00*1*",
+				"requiredBiome": 17,
+				"changeTileType": 81
+			},
+			{
+				"condition": "*0*01*1*",
+				"requiredBiome": 17,
+				"changeTileType": 82
+			},
+			{
+				"condition": "*0*10*1*",
+				"requiredBiome": 17,
+				"changeTileType": 83
+			},
+			{
+				"condition": "*1*01*0*",
+				"requiredBiome": 17,
+				"changeTileType": 84
+			},
+			{
+				"condition": "*1*10*0*",
+				"requiredBiome": 17,
+				"changeTileType": 85
+			},
+			{
+				"condition": "*1****0*",
+				"requiredBiome": 16,
+				"changeTileType": 75
+			},
+			{
+				"condition": "*0****1*",
+				"requiredBiome": 16,
+				"changeTileType": 75
+			},
+			{
+				"condition": "***01***",
+				"requiredBiome": 16,
+				"changeTileType": 75
+			},
+			{
+				"condition": "***10***",
+				"requiredBiome": 16,
+				"changeTileType": 75
+			},
+			{
+				"condition": "*1****1*",
+				"requiredBiome": 16,
+				"changeTileType": 74
+			},
+			{
+				"condition": "*0****0*",
+				"requiredBiome": 16,
+				"changeTileType": 73
+			},
+			{
+				"condition": "***11***",
+				"requiredBiome": 15,
+				"changeTileType": 63
+			},
+			{
+				"condition": "*1****1*",
+				"requiredBiome": 15,
+				"changeTileType": 64
+			},
+			{
+				"condition": "*0*01*0*",
+				"requiredBiome": 15,
+				"changeTileType": 65
+			},
+			{
+				"condition": "*0*10*0*",
+				"requiredBiome": 15,
+				"changeTileType": 66
+			},
+			{
+				"condition": "*1*00*0*",
+				"requiredBiome": 15,
+				"changeTileType": 67
+			},
+			{
+				"condition": "*0*00*1*",
+				"requiredBiome": 15,
+				"changeTileType": 68
+			},
+			{
+				"condition": "*0*01*1*",
+				"requiredBiome": 15,
+				"changeTileType": 69
+			},
+			{
+				"condition": "*0*10*1*",
+				"requiredBiome": 15,
+				"changeTileType": 70
+			},
+			{
+				"condition": "*1*01*0*",
+				"requiredBiome": 15,
+				"changeTileType": 71
+			},
+			{
+				"condition": "*1*10*0*",
+				"requiredBiome": 15,
+				"changeTileType": 72
+			},
+			{
+				"condition": "***11***",
+				"requiredBiome": 14,
+				"changeTileType": 53
+			},
+			{
+				"condition": "*1****1*",
+				"requiredBiome": 14,
+				"changeTileType": 54
+			},
+			{
+				"condition": "*0*01*0*",
+				"requiredBiome": 14,
+				"changeTileType": 55
+			},
+			{
+				"condition": "*0*10*0*",
+				"requiredBiome": 14,
+				"changeTileType": 56
+			},
+			{
+				"condition": "*1*00*0*",
+				"requiredBiome": 14,
+				"changeTileType": 57
+			},
+			{
+				"condition": "*0*00*1*",
+				"requiredBiome": 14,
+				"changeTileType": 58
+			},
+			{
+				"condition": "*0*01*1*",
+				"requiredBiome": 14,
+				"changeTileType": 59
+			},
+			{
+				"condition": "*0*10*1*",
+				"requiredBiome": 14,
+				"changeTileType": 60
+			},
+			{
+				"condition": "*1*01*0*",
+				"requiredBiome": 14,
+				"changeTileType": 61
+			},
+			{
+				"condition": "*1*10*0*",
+				"requiredBiome": 14,
+				"changeTileType": 62
+			},
+			{
+				"condition": "***11***",
+				"requiredBiome": 13,
+				"changeTileType": 43
+			},
+			{
+				"condition": "*1****1*",
+				"requiredBiome": 13,
+				"changeTileType": 44
+			},
+			{
+				"condition": "*0*01*0*",
+				"requiredBiome": 13,
+				"changeTileType": 45
+			},
+			{
+				"condition": "*0*10*0*",
+				"requiredBiome": 13,
+				"changeTileType": 46
+			},
+			{
+				"condition": "*1*00*0*",
+				"requiredBiome": 13,
+				"changeTileType": 47
+			},
+			{
+				"condition": "*0*00*1*",
+				"requiredBiome": 13,
+				"changeTileType": 48
+			},
+			{
+				"condition": "*0*01*1*",
+				"requiredBiome": 13,
+				"changeTileType": 49
+			},
+			{
+				"condition": "*0*10*1*",
+				"requiredBiome": 13,
+				"changeTileType": 50
+			},
+			{
+				"condition": "*1*01*0*",
+				"requiredBiome": 13,
+				"changeTileType": 51
+			},
+			{
+				"condition": "*1*10*0*",
+				"requiredBiome": 13,
+				"changeTileType": 52
+			},
+			{
+				"condition": "***11***",
+				"requiredBiome": 12,
+				"changeTileType": 33
+			},
+			{
+				"condition": "*1****1*",
+				"requiredBiome": 12,
+				"changeTileType": 34
+			},
+			{
+				"condition": "*0*01*0*",
+				"requiredBiome": 12,
+				"changeTileType": 35
+			},
+			{
+				"condition": "*0*10*0*",
+				"requiredBiome": 12,
+				"changeTileType": 36
+			},
+			{
+				"condition": "*1*00*0*",
+				"requiredBiome": 12,
+				"changeTileType": 37
+			},
+			{
+				"condition": "*0*00*1*",
+				"requiredBiome": 12,
+				"changeTileType": 38
+			},
+			{
+				"condition": "*0*01*1*",
+				"requiredBiome": 12,
+				"changeTileType": 39
+			},
+			{
+				"condition": "*0*10*1*",
+				"requiredBiome": 12,
+				"changeTileType": 40
+			},
+			{
+				"condition": "*1*01*0*",
+				"requiredBiome": 12,
+				"changeTileType": 41
+			},
+			{
+				"condition": "*1*10*0*",
+				"requiredBiome": 12,
+				"changeTileType": 42
+			},
+			{
+				"condition": "***11***",
+				"requiredBiome": 11,
+				"changeTileType": 31
+			},
+			{
+				"condition": "*1****1*",
+				"requiredBiome": 11,
+				"changeTileType": 32
+			},
+			{
+				"condition": "*0****1*",
+				"requiredBiome": 11,
+				"changeTileType": 30
+			},
+			{
+				"condition": "*1****0*",
+				"requiredBiome": 11,
+				"changeTileType": 30
+			},
+			{
+				"condition": "***01***",
+				"requiredBiome": 11,
+				"changeTileType": 30
+			},
+			{
+				"condition": "***10***",
+				"requiredBiome": 11,
+				"changeTileType": 30
+			},
+			{
+				"condition": "***11***",
+				"requiredBiome": 10,
+				"changeTileType": 31
+			},
+			{
+				"condition": "*1****1*",
+				"requiredBiome": 10,
+				"changeTileType": 32
+			},
+			{
+				"condition": "*0****1*",
+				"requiredBiome": 10,
+				"changeTileType": 30
+			},
+			{
+				"condition": "*1****0*",
+				"requiredBiome": 10,
+				"changeTileType": 30
+			},
+			{
+				"condition": "***01***",
+				"requiredBiome": 10,
+				"changeTileType": 30
+			},
+			{
+				"condition": "***10***",
+				"requiredBiome": 10,
+				"changeTileType": 30
+			},
+			{
+				"condition": "*0*00010",
+				"requiredBiome": 9,
+				"changeTileType": 24
+			},
+			{
+				"condition": "*0*11*0*",
+				"requiredBiome": 9,
+				"changeTileType": 19
+			},
+			{
+				"condition": "*1*00*1*",
+				"requiredBiome": 9,
+				"changeTileType": 20
+			},
+			{
+				"condition": "*0*01*0*",
+				"requiredBiome": 9,
+				"changeTileType": 21
+			},
+			{
+				"condition": "*0*10*0*",
+				"requiredBiome": 9,
+				"changeTileType": 22
+			},
+			{
+				"condition": "*1*00*0*",
+				"requiredBiome": 9,
+				"changeTileType": 23
+			},
+			{
+				"condition": "*0*01*1*",
+				"requiredBiome": 9,
+				"changeTileType": 25
+			},
+			{
+				"condition": "*0*10*1*",
+				"requiredBiome": 9,
+				"changeTileType": 26
+			},
+			{
+				"condition": "*1*01*0*",
+				"requiredBiome": 9,
+				"changeTileType": 27
+			},
+			{
+				"condition": "*1*10*0*",
+				"requiredBiome": 9,
+				"changeTileType": 28
+			},
+			{
+				"condition": "*0*00*1*",
+				"requiredBiome": 9,
+				"changeTileType": 29
+			},
+			{
+				"condition": "***11***",
+				"requiredBiome": 8,
+				"changeTileType": 16
+			},
+			{
+				"condition": "*1****1*",
+				"requiredBiome": 8,
+				"changeTileType": 17
+			},
+			{
+				"condition": "*0****1*",
+				"requiredBiome": 8,
+				"changeTileType": 18
+			},
+			{
+				"condition": "*1****0*",
+				"requiredBiome": 8,
+				"changeTileType": 18
+			},
+			{
+				"condition": "***01***",
+				"requiredBiome": 8,
+				"changeTileType": 18
+			},
+			{
+				"condition": "***10***",
+				"requiredBiome": 8,
+				"changeTileType": 18
+			},
+			{
+				"condition": "***11***",
+				"requiredBiome": 7,
+				"changeTileType": 6
+			},
+			{
+				"condition": "*1****1*",
+				"requiredBiome": 7,
+				"changeTileType": 7
+			},
+			{
+				"condition": "*0*01*0*",
+				"requiredBiome": 7,
+				"changeTileType": 8
+			},
+			{
+				"condition": "*0*10*0*",
+				"requiredBiome": 7,
+				"changeTileType": 9
+			},
+			{
+				"condition": "*1*00*0*",
+				"requiredBiome": 7,
+				"changeTileType": 10
+			},
+			{
+				"condition": "*0*00*1*",
+				"requiredBiome": 7,
+				"changeTileType": 11
+			},
+			{
+				"condition": "*0*01*1*",
+				"requiredBiome": 7,
+				"changeTileType": 12
+			},
+			{
+				"condition": "*0*10*1*",
+				"requiredBiome": 7,
+				"changeTileType": 13
+			},
+			{
+				"condition": "*1*01*0*",
+				"requiredBiome": 7,
+				"changeTileType": 14
+			},
+			{
+				"condition": "*1*10*0*",
+				"requiredBiome": 7,
+				"changeTileType": 15
+			},
+			{
+				"condition": "*1****0*",
+				"requiredBiome": 6,
+				"changeTileType": 5
+			},
+			{
+				"condition": "*0****1*",
+				"requiredBiome": 6,
+				"changeTileType": 5
+			},
+			{
+				"condition": "***01***",
+				"requiredBiome": 6,
+				"changeTileType": 5
+			},
+			{
+				"condition": "***10***",
+				"requiredBiome": 6,
+				"changeTileType": 5
+			},
+			{
+				"condition": "*1****1*",
+				"requiredBiome": 6,
+				"changeTileType": 4
+			},
+			{
+				"condition": "*0****0*",
+				"requiredBiome": 6,
+				"changeTileType": 3
+			},
+			{
+				"condition": "*1****0*",
+				"changeTileType": 2
+			},
+			{
+				"condition": "*0****1*",
+				"changeTileType": 2
+			},
+			{
+				"condition": "***01***",
+				"changeTileType": 2
+			},
+			{
+				"condition": "***10***",
+				"changeTileType": 2
+			},
+			{
+				"condition": "*1****1*",
+				"changeTileType": 1
+			}
+			],
+			"multipleConditionsCouldApply": false,
+			"edgeCase": 1,
+			"defaults": {
+				"tileType": 0
+			}
+		}
+	},
+	{
+		"tileName": "water",
+		"tileCode": "W",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "?binary?.svg",
+			"tileTransitions": true
+		}
+		],
+		"tileLinks": {
+			"rules": [
+			{
+				"condition": "********",
+				"requiredBiome": 18,
+				"changeFolder": "alien_water"
+			},
+			{
+				"condition": "********",
+				"requiredBiome": 17,
+				"changeFolder": "green_water"
+			},
+			{
+				"condition": "********",
+				"requiredBiome": 9,
+				"changeFolder": "ship_water"
+			},
+			{
+				"condition": "********",
+				"requiredBiome": 8,
+				"changeFolder": "green_water"
+			},
+			{
+				"condition": "*0******",
+				"changeBinary": [ "0a0", "0a2" ]
+			},
+			{
+				"condition": "***0****",
+				"changeBinary": [ "0a0", "0a5" ]
+			},
+			{
+				"condition": "****0***",
+				"changeBinary": [ "0a2", "0a7" ]
+			},
+			{
+				"condition": "******0*",
+				"changeBinary": [ "0a5", "0a7" ]
+			}
+			],
+			"multipleConditionsCouldApply": true,
+			"defaults": {
+				"tileType": 0
+			},
+			"edgeCase": 2,
+			"assetFolder": "water"
+		}
+	},
+	{
+		"tileName": "player1",
+		"tileCode": "1",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 350,
+				"left": 350,
+				"right": 350
+			},
+			"asset": "player_blue.svg",
+			"order": 1
+		},
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 350,
+				"left": 350,
+				"right": 350
+			},
+			"asset": "player_gray.svg",
+			"order": 1
+		},
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 350,
+				"left": 350,
+				"right": 350
+			},
+			"asset": "player_white.svg",
+			"order": 1
+		},
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "nothing.svg"
+		}
+		]
+	},
+	{
+		"tileName": "player2",
+		"tileCode": "2",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 350,
+				"left": 350,
+				"right": 350
+			},
+			"asset": "player_red.svg",
+			"order": 1
+		},
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 350,
+				"left": 350,
+				"right": 350
+			},
+			"asset": "player_gray.svg",
+			"order": 1
+		},
+		{
+			"tileParts": {
+				"top": 2000,
+				"mid": 1000,
+				"bot": 1000,
+				"left": 1500,
+				"right": 1500
+			},
+			"asset": "player_big.svg",
+			"order": 1
+		},
+		{
+			"tileParts": {
+				"top": 2959,
+				"mid": 1000,
+				"bot": 1842,
+				"left": 2380,
+				"right": 2380
+			},
+			"asset": "player_boss.svg",
+			"order": 1
+		},
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "nothing.svg"
+		},
+		{
+			"tileParts": {
+				"top": 2200,
+				"mid": 1000,
+				"bot": 2200,
+				"left": 2200,
+				"right": 2200
+			},
+			"asset": "mega_spawn.svg",
+			"order": 1
+		},
+		{
+			"tileParts": {
+				"top": 2200,
+				"mid": 1000,
+				"bot": 2200,
+				"left": 2200,
+				"right": 2200
+			},
+			"asset": "mega_spawn_mod.svg",
+			"order": 1
+		},
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 350,
+				"left": 350,
+				"right": 350
+			},
+			"asset": "player_white.svg",
+			"order": 1
+		},
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 350,
+				"left": 350,
+				"right": 350
+			},
+			"asset": "player_green.svg",
+			"order": 1
+		}
+		]
+	},
+	{
+		"tileName": "objective",
+		"tileCode": "8",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 402,
+				"mid": 1000,
+				"bot": 481,
+				"left": 440,
+				"right": 440
+			},
+			"asset": "mine.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1171,
+				"mid": 1000,
+				"bot": 92,
+				"left": 530,
+				"right": 529
+			},
+			"asset": "vault.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 866,
+				"mid": 1000,
+				"bot": 279,
+				"left": 97,
+				"right": 97
+			},
+			"asset": "bounty_star.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1671,
+				"mid": 508,
+				"bot": 0,
+				"left": 530,
+				"right": 529
+			},
+			"asset": "vault_offset.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 349,
+				"mid": 1000,
+				"bot": 138,
+				"left": 162,
+				"right": 162
+			},
+			"asset": "brawlball.svg",
+			"order": 2
+		},
+		{
+			"tileParts": {
+				"top": 2851,
+				"mid": 1000,
+				"bot": 0,
+				"left": 2829,
+				"right": 2829
+			},
+			"asset": "goal_red.svg",
+			"order": 2
+		},
+		{
+			"tileParts": {
+				"top": 2534,
+				"mid": 1000,
+				"bot": 0,
+				"left": 2829,
+				"right": 2829
+			},
+			"asset": "goal_blue.svg",
+			"order": 2
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 600,
+				"left": 545,
+				"right": 545
+			},
+			"asset": "mine_snow.svg"
+		},
+		{
+			"tileParts": {
+				"top": 2021,
+				"mid": 1000,
+				"bot": 0,
+				"left": 411,
+				"right": 880
+			},
+			"asset": "ike_red.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 2235,
+				"mid": 1000,
+				"bot": 0,
+				"left": 873,
+				"right": 417
+			},
+			"asset": "ike_blue.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 618,
+				"mid": 1000,
+				"bot": 775,
+				"left": 436,
+				"right": 702
+			},
+			"asset": "mine_town.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 618,
+				"mid": 1000,
+				"bot": 775,
+				"left": 436,
+				"right": 702
+			},
+			"asset": "mine_retro.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 509,
+				"mid": 1000,
+				"bot": 785,
+				"left": 698,
+				"right": 608
+			},
+			"asset": "mine_mortuary.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 750,
+				"left": 450,
+				"right": 450
+			},
+			"asset": "mine_ship.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 2000,
+				"mid": 1000,
+				"bot": 0,
+				"left": 1500,
+				"right": 450
+			},
+			"asset": "flag_present_red.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 2000,
+				"mid": 1000,
+				"bot": 750,
+				"left": 1500,
+				"right": 450
+			},
+			"asset": "flag_present_blue.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 3000,
+				"mid": 1000,
+				"bot": 3000,
+				"left": 3000,
+				"right": 3000
+			},
+			"asset": "hot_zone_blue.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 250,
+				"mid": 1000,
+				"bot": 200,
+				"left": 150,
+				"right": 150
+			},
+			"asset": "soccerball.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 3600,
+				"mid": 1000,
+				"bot": -450,
+				"left": 3000,
+				"right": 3000
+			},
+			"asset": "goal_red_2.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 1600,
+				"mid": 1000,
+				"bot": 200,
+				"left": 2925,
+				"right": 2925
+			},
+			"asset": "goal_blue_2.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 750,
+				"left": 450,
+				"right": 450
+			},
+			"asset": "mine_bazaar.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 3075,
+				"mid": 1000,
+				"bot": 3075,
+				"left": 3075,
+				"right": 3075
+			},
+			"asset": "hot_zone_both.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 625,
+				"mid": 1000,
+				"bot": 775,
+				"left": 587,
+				"right": 588
+			},
+			"asset": "mine_construction.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 2100,
+				"mid": 1000,
+				"bot": -300,
+				"left": 500,
+				"right": 500
+			},
+			"asset": "bank.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 615,
+				"left": 829,
+				"right": 584
+			},
+			"asset": "mine_burst.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 521,
+				"mid": 1000,
+				"bot": 700,
+				"left": 450,
+				"right": 450
+			},
+			"asset": "mine_hatch.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 675,
+				"mid": 1000,
+				"bot": 700,
+				"left": 610,
+				"right": 610
+			},
+			"asset": "trophy_gold.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 1546,
+				"mid": 1000,
+				"bot": 1404,
+				"left": 1475,
+				"right": 1475
+			},
+			"asset": "trophy_blue.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 1546,
+				"mid": 1000,
+				"bot": 1404,
+				"left": 1475,
+				"right": 1475
+			},
+			"asset": "trophy_red.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": -100,
+				"mid": 1000,
+				"bot": 650,
+				"left": 175,
+				"right": 175
+			},
+			"asset": "volleyball.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": -100,
+				"mid": 1000,
+				"bot": 650,
+				"left": 175,
+				"right": 175
+			},
+			"asset": "basketball.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 2375,
+				"mid": 1000,
+				"bot": 375,
+				"left": 350,
+				"right": 1200
+			},
+			"asset": "basket_hoop_blue.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 2375,
+				"mid": 1000,
+				"bot": 375,
+				"left": 1200,
+				"right": 350
+			},
+			"asset": "basket_hoop_red.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 4925,
+				"mid": 1000,
+				"bot": 4925,
+				"left": -100,
+				"right": 4900
+			},
+			"asset": "basket_hoop_blue_range.svg",
+			"order": -1
+		},
+		{
+			"tileParts": {
+				"top": 4925,
+				"mid": 1000,
+				"bot": 4925,
+				"left": 4900,
+				"right": -100
+			},
+			"asset": "basket_hoop_red_range.svg",
+			"order": -1
+		},
+		{
+			"tileParts": {
+				"top": 2000,
+				"mid": 1000,
+				"bot": 2000,
+				"left": 2000,
+				"right": 2000
+			},
+			"asset": "volleyball_mod.svg",
+			"order": -1
+		},
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 200,
+				"left": 175,
+				"right": 175
+			},
+			"asset": "volleyball.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 750,
+				"left": 450,
+				"right": 450
+			},
+			"asset": "mine_castle.svg",
+			"order": 3
+		}
+		]
+	},
+	{
+		"tileName": "springpadRight",
+		"tileCode": "H",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 1117,
+				"left": 0,
+				"right": 894
+			},
+			"asset": "spring_right.svg"
+		}
+		]
+	},
+	{
+		"tileName": "springpadLeft",
+		"tileCode": "G",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 1117,
+				"left": 0,
+				"right": 894
+			},
+			"asset": "spring_left.svg"
+		}
+		]
+	},
+	{
+		"tileName": "springpadBottom",
+		"tileCode": "L",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 1117,
+				"left": 0,
+				"right": 894
+			},
+			"asset": "spring_bottom.svg"
+		}
+		]
+	},
+	{
+		"tileName": "springpadTop",
+		"tileCode": "K",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 1117,
+				"left": 0,
+				"right": 894
+			},
+			"asset": "spring_top.svg"
+		}
+		]
+	},
+	{
+		"tileName": "springpadBottomRight",
+		"tileCode": "P",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 1117,
+				"left": 0,
+				"right": 894
+			},
+			"asset": "spring_bottom_right.svg"
+		}
+		]
+	},
+	{
+		"tileName": "springpadTopLeft",
+		"tileCode": "Z",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 1117,
+				"left": 0,
+				"right": 894
+			},
+			"asset": "spring_top_left.svg"
+		}
+		]
+	},
+	{
+		"tileName": "springpadBottomLeft",
+		"tileCode": "O",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 1117,
+				"left": 0,
+				"right": 894
+			},
+			"asset": "spring_bottom_left.svg"
+		}
+		]
+	},
+	{
+		"tileName": "springpadTopRight",
+		"tileCode": "U",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 1117,
+				"left": 0,
+				"right": 894
+			},
+			"asset": "spring_top_right.svg"
+		}
+		]
+	},
+	{
+		"tileName": "ikeRange",
+		"tileCode": ",",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 12487,
+				"mid": 1000,
+				"bot": 525,
+				"left": 11650,
+				"right": 11667
+			},
+			"asset": "ike_blue_range.svg"
+		},
+		{
+			"tileParts": {
+				"top": 525,
+				"mid": 1000,
+				"bot": 12487,
+				"left": 11650,
+				"right": 11667
+			},
+			"asset": "ike_red_range.svg"
+		}
+		]
+	},
+	{
+		"tileName": "rails",
+		"tileCode": "Q",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 10343,
+				"mid": 1000,
+				"bot": 10265,
+				"left": 10097,
+				"right": 10270
+			},
+			"asset": "rails.svg"
+		}
+		]
+	},
+	{
+		"tileName": "bench1",
+		"tileCode": "E",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 438,
+				"mid": 1000,
+				"bot": 0,
+				"left": 46,
+				"right": 0
+			},
+			"asset": "bench_top_left.svg"
+		},
+		{
+			"tileParts": {
+				"top": 438,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 46
+			},
+			"asset": "bench_top_right.svg"
+		},
+		{
+			"tileParts": {
+				"top": 302,
+				"mid": 1000,
+				"bot": 0,
+				"left": 150,
+				"right": 0
+			},
+			"asset": "bench_left_top.svg"
+		},
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 243,
+				"left": 150,
+				"right": 0
+			},
+			"asset": "bench_left_bottom.svg"
+		}
+		],
+		"tileLinks": {
+			"rules": [
+			{
+				"condition": "***01***",
+				"changeTileType": 0
+			},
+			{
+				"condition": "***10***",
+				"changeTileType": 1
+			},
+			{
+				"condition": "*0****1*",
+				"changeTileType": 2
+			},
+			{
+				"condition": "*1****0*",
+				"changeTileType": 3
+			}
+			],
+			"multipleConditionsCouldApply": false,
+			"edgeCase": 0,
+			"defaults": {
+				"tileType": 1
+			}
+		}
+	},
+	{
+		"tileName": "bench2",
+		"tileCode": "A",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 400,
+				"mid": 1000,
+				"bot": 243,
+				"left": 46,
+				"right": 0
+			},
+			"asset": "bench_bottom_left.svg"
+		},
+		{
+			"tileParts": {
+				"top": 400,
+				"mid": 1000,
+				"bot": 243,
+				"left": 0,
+				"right": 46
+			},
+			"asset": "bench_bottom_right.svg"
+		},
+		{
+			"tileParts": {
+				"top": 302,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 150
+			},
+			"asset": "bench_right_top.svg"
+		},
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 243,
+				"left": 0,
+				"right": 150
+			},
+			"asset": "bench_right_bottom.svg"
+		}
+		],
+		"tileLinks": {
+			"rules": [
+			{
+				"condition": "***01***",
+				"changeTileType": 0
+			},
+			{
+				"condition": "***10***",
+				"changeTileType": 1
+			},
+			{
+				"condition": "*0****1*",
+				"changeTileType": 2
+			},
+			{
+				"condition": "*1****0*",
+				"changeTileType": 3
+			}
+			],
+			"multipleConditionsCouldApply": false,
+			"edgeCase": 0,
+			"defaults": {
+				"tileType": 1
+			}
+		}
+	},
+	{
+		"tileName": "teleporterBlue",
+		"tileCode": "c",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": -35,
+				"mid": 1000,
+				"bot": 1115,
+				"left": 41,
+				"right": 1040
+			},
+			"asset": "teleporter_blue.svg"
+		}
+		]
+	},
+	{
+		"tileName": "teleporterGreen",
+		"tileCode": "d",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": -35,
+				"mid": 1000,
+				"bot": 1115,
+				"left": 41,
+				"right": 1040
+			},
+			"asset": "teleporter_green.svg"
+		}
+		]
+	},
+	{
+		"tileName": "teleporterRed",
+		"tileCode": "e",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": -35,
+				"mid": 1000,
+				"bot": 1115,
+				"left": 41,
+				"right": 1040
+			},
+			"asset": "teleporter_red.svg"
+		}
+		]
+	},
+	{
+		"tileName": "teleporterYellow",
+		"tileCode": "f",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": -35,
+				"mid": 1000,
+				"bot": 1115,
+				"left": 41,
+				"right": 1040
+			},
+			"asset": "teleporter_yellow.svg"
+		}
+		]
+	},
+	{
+		"tileName": "ropeFence",
+		"tileCode": "a",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "rope_post.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1325,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "rope_post_t.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 500
+			},
+			"asset": "rope_post_r.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1325,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 500
+			},
+			"asset": "rope_post_tr.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "rope_post_mine.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1325,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "rope_post_mine_t.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 500
+			},
+			"asset": "rope_post_mine_r.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1325,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 500
+			},
+			"asset": "rope_post_mine_tr.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "rope_post_mortuary.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1325,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "rope_post_mortuary_t.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 500
+			},
+			"asset": "rope_post_mortuary_r.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1325,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 500
+			},
+			"asset": "rope_post_mortuary_tr.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "rope_post_giftshop.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1325,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "rope_post_giftshop_t.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 500
+			},
+			"asset": "rope_post_giftshop_r.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1325,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 500
+			},
+			"asset": "rope_post_giftshop_tr.svg"
+		},
+		{
+			"tileParts": {
+				"top": 475,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "rope_post_danger.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1200,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "rope_post_danger_t.svg"
+		},
+		{
+			"tileParts": {
+				"top": 475,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 600
+			},
+			"asset": "rope_post_danger_r.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1200,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 600
+			},
+			"asset": "rope_post_danger_tr.svg"
+		},
+		{
+			"tileParts": {
+				"top": 425,
+				"mid": 1000,
+				"bot": 100,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "rope_post_waterpark.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1200,
+				"mid": 1000,
+				"bot": 100,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "rope_post_waterpark_t.svg"
+		},
+		{
+			"tileParts": {
+				"top": 425,
+				"mid": 1000,
+				"bot": 100,
+				"left": 0,
+				"right": 475
+			},
+			"asset": "rope_post_waterpark_r.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1200,
+				"mid": 1000,
+				"bot": 100,
+				"left": 0,
+				"right": 475
+			},
+			"asset": "rope_post_waterpark_tr.svg"
+		},
+		{
+			"tileParts": {
+				"top": 850,
+				"mid": 1000,
+				"bot": -50,
+				"left": -206,
+				"right": -206
+			},
+			"asset": "power_line.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1450,
+				"mid": 1000,
+				"bot": -50,
+				"left": -206,
+				"right": -206
+			},
+			"asset": "power_line_t.svg"
+		},
+		{
+			"tileParts": {
+				"top": 850,
+				"mid": 1000,
+				"bot": -50,
+				"left": -206,
+				"right": 261
+			},
+			"asset": "power_line_r.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1450,
+				"mid": 1000,
+				"bot": -50,
+				"left": -206,
+				"right": 261
+			},
+			"asset": "power_line_tr.svg"
+		}
+		],
+		"tileLinks": {
+			"rules": [
+			{
+				"condition": "*1**1***",
+				"requiredBiome": 13,
+				"changeTileType": 27
+			},
+			{
+				"condition": "*0**1***",
+				"requiredBiome": 13,
+				"changeTileType": 26
+			},
+			{
+				"condition": "*1**0***",
+				"requiredBiome": 13,
+				"changeTileType": 25
+			},
+			{
+				"condition": "********",
+				"requiredBiome": 13,
+				"changeTileType": 24
+			},
+			{
+				"condition": "*1**1***",
+				"requiredBiome": 20,
+				"changeTileType": 23
+			},
+			{
+				"condition": "*0**1***",
+				"requiredBiome": 20,
+				"changeTileType": 22
+			},
+			{
+				"condition": "*1**0***",
+				"requiredBiome": 20,
+				"changeTileType": 21
+			},
+			{
+				"condition": "********",
+				"requiredBiome": 20,
+				"changeTileType": 20
+			},
+			{
+				"condition": "*1**1***",
+				"requiredBiome": 18,
+				"changeTileType": 19
+			},
+			{
+				"condition": "*0**1***",
+				"requiredBiome": 18,
+				"changeTileType": 18
+			},
+			{
+				"condition": "*1**0***",
+				"requiredBiome": 18,
+				"changeTileType": 17
+			},
+			{
+				"condition": "********",
+				"requiredBiome": 18,
+				"changeTileType": 16
+			},
+			{
+				"condition": "*1**1***",
+				"requiredBiome": 15,
+				"changeTileType": 15
+			},
+			{
+				"condition": "*0**1***",
+				"requiredBiome": 15,
+				"changeTileType": 14
+			},
+			{
+				"condition": "*1**0***",
+				"requiredBiome": 15,
+				"changeTileType": 13
+			},
+			{
+				"condition": "********",
+				"requiredBiome": 15,
+				"changeTileType": 12
+			},
+			{
+				"condition": "*1**1***",
+				"requiredBiome": 14,
+				"changeTileType": 15
+			},
+			{
+				"condition": "*0**1***",
+				"requiredBiome": 14,
+				"changeTileType": 14
+			},
+			{
+				"condition": "*1**0***",
+				"requiredBiome": 14,
+				"changeTileType": 13
+			},
+			{
+				"condition": "********",
+				"requiredBiome": 14,
+				"changeTileType": 12
+			},
+			{
+				"condition": "*1**1***",
+				"requiredBiome": 8,
+				"changeTileType": 11
+			},
+			{
+				"condition": "*0**1***",
+				"requiredBiome": 8,
+				"changeTileType": 10
+			},
+			{
+				"condition": "*1**0***",
+				"requiredBiome": 8,
+				"changeTileType": 9
+			},
+			{
+				"condition": "********",
+				"requiredBiome": 8,
+				"changeTileType": 8
+			},
+			{
+				"condition": "*1**1***",
+				"requiredBiome": 2,
+				"changeTileType": 7
+			},
+			{
+				"condition": "*0**1***",
+				"requiredBiome": 2,
+				"changeTileType": 6
+			},
+			{
+				"condition": "*1**0***",
+				"requiredBiome": 2,
+				"changeTileType": 5
+			},
+			{
+				"condition": "********",
+				"requiredBiome": 2,
+				"changeTileType": 4
+			},
+			{
+				"condition": "*1**1***",
+				"changeTileType": 3
+			},
+			{
+				"condition": "*0**1***",
+				"changeTileType": 2
+			},
+			{
+				"condition": "*1**0***",
+				"changeTileType": 1
+			}
+			],
+			"multipleConditionsCouldApply": false,
+			"edgeCase": 0,
+			"defaults": {
+				"tileType": 0
+			}
+		}
+	},
+	{
+		"tileName": "intervalDamage",
+		"tileCode": "v",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 225,
+				"mid": 1000,
+				"bot": 150,
+				"left": -30,
+				"right": -30
+			},
+			"asset": "spikes.svg"
+		}
+		]
+	},
+	{
+		"tileName": "damage",
+		"tileCode": "x",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 829,
+				"mid": 1000,
+				"bot": 0,
+				"left": 329,
+				"right": 329
+			},
+			"asset": "poison.svg"
+		},
+		{
+			"tileParts": {
+				"top": 829,
+				"mid": 1000,
+				"bot": 0,
+				"left": 329,
+				"right": 329
+			},
+			"asset": "poison_pink.svg"
+		}
+		]
+	},
+	{
+		"tileName": "healing",
+		"tileCode": "y",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 100,
+				"mid": 1000,
+				"bot": 1250,
+				"left": 0,
+				"right": 1000
+			},
+			"asset": "healpad.svg"
+		}
+		]
+	},
+	{
+		"tileName": "slow",
+		"tileCode": "z",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 100,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "slowpad.svg",
+			"order": -2
+		}
+		]
+	},
+	{
+		"tileName": "fast",
+		"tileCode": "w",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 100,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "speedpad.svg",
+			"order": -2
+		}
+		]
+	},
+	{
+		"tileName": "indestructible",
+		"tileCode": "I",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "indestructible.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "indestructible_bricks.svg"
+		}
+		]
+	},
+	{
+		"tileName": "powerupCrate",
+		"tileCode": "4",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "power_crate.svg"
+		}
+		]
+	},
+	{
+		"tileName": "explosive",
+		"tileCode": "q",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "tnt.svg"
+		}
+		]
+	},
+	{
+		"tileName": "siegeBolt",
+		"tileCode": "g",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 0,
+				"left": 50,
+				"right": 50
+			},
+			"asset": "bolt_0.svg",
+			"randomizer": [
+				{
+					"asset": "bolt_0.svg"
+				},
+				{
+					"asset": "bolt_1.svg"
+				},
+				{
+					"asset": "bolt_2.svg"
+				},
+				{
+					"asset": "bolt_3.svg"
+				}
+			],
+			"orderHor": 3
+		},
+		{
+			"tileParts": {
+				"top": -700,
+				"mid": 1000,
+				"bot": 400,
+				"left": 100,
+				"right": 100
+			},
+			"asset": "number_1.svg",
+			"order": 4
+		},
+		{
+			"tileParts": {
+				"top": -700,
+				"mid": 1000,
+				"bot": 400,
+				"left": 100,
+				"right": 100
+			},
+			"asset": "number_2.svg",
+			"order": 4
+		},
+		{
+			"tileParts": {
+				"top": -406,
+				"mid": 1000,
+				"bot": 450,
+				"left": -158,
+				"right": -158
+			},
+			"asset": "number_3.svg",
+			"order": 4
+		},
+		{
+			"tileParts": {
+				"top": -550,
+				"mid": 1000,
+				"bot": 550,
+				"left": 125,
+				"right": 125
+			},
+			"asset": "number_4.svg",
+			"order": 4
+		},
+		{
+			"tileParts": {
+				"top": -700,
+				"mid": 1000,
+				"bot": 400,
+				"left": 100,
+				"right": 100
+			},
+			"asset": "number_5.svg",
+			"order": 4
+		},
+		{
+			"tileParts": {
+				"top": -700,
+				"mid": 1000,
+				"bot": 400,
+				"left": 100,
+				"right": 100
+			},
+			"asset": "number_6.svg",
+			"order": 4
+		},
+		{
+			"tileParts": {
+				"top": -700,
+				"mid": 1000,
+				"bot": 400,
+				"left": 100,
+				"right": 100
+			},
+			"asset": "number_7.svg",
+			"order": 4
+		},
+		{
+			"tileParts": {
+				"top": -700,
+				"mid": 1000,
+				"bot": 400,
+				"left": 100,
+				"right": 100
+			},
+			"asset": "number_8.svg",
+			"order": 4
+		},
+		{
+			"tileParts": {
+				"top": -700,
+				"mid": 1000,
+				"bot": 400,
+				"left": 100,
+				"right": 100
+			},
+			"asset": "number_9.svg",
+			"order": 4
+		},
+		{
+			"tileParts": {
+				"top": -700,
+				"mid": 1000,
+				"bot": 400,
+				"left": 100,
+				"right": 100
+			},
+			"asset": "number_10.svg",
+			"order": 4
+		},
+		{
+			"tileParts": {
+				"top": -700,
+				"mid": 1000,
+				"bot": 400,
+				"left": 100,
+				"right": 100
+			},
+			"asset": "number_unk.svg",
+			"order": 4
+		}
+		]
+	}
+	],
+	"biomes": [
+    {
+      "name": "canyon",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 249,
+            "g": 166,
+            "b": 117
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking2",
+        "type": 2
+      }
+      ]
+    },
+    {
+      "name": "jungle",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 234,
+            "g": 180,
+            "b": 119
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking2",
+        "type": 1
+      }
+      ]
+    },
+    {
+      "name": "mine",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 96,
+            "g": 68,
+            "b": 84
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking1",
+        "type": 1
+      },
+      {
+        "tile": "forest",
+        "type": 1
+      },
+      {
+        "tile": "respawningWall",
+        "type": 1
+      },
+      {
+        "tile": "blockingDestroyableWithWeapon",
+        "type": 1
+      },
+      {
+        "tile": "ropeFence",
+        "type": 4
+      }
+      ]
+    },
+    {
+      "name": "canyon_showdown",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 249,
+            "g": 166,
+            "b": 117
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking2",
+        "type": 2
+      },
+      {
+        "tile": "forest",
+        "type": 2
+      },
+      {
+        "tile": "blockingDestroyableWithWeapon",
+        "type": 1
+      }
+      ]
+    },
+    {
+      "name": "grassfield",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 60,
+            "g": 150,
+            "b": 87
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking1",
+        "type": 0
+      },
+      {
+        "tile": "blocking2",
+        "type": 2
+      },
+      {
+        "tile": "indestructible",
+        "type": 1
+      }
+      ]
+    },
+    {
+      "name": "snowy",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 47,
+            "g": 162,
+            "b": 255
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking1",
+        "type": 2
+      },
+      {
+        "tile": "blocking2",
+        "type": 3
+      },
+      {
+        "tile": "blocking3",
+        "type": 1
+      },
+      {
+        "tile": "blocking4",
+        "type": 1
+      },
+      {
+        "tile": "forest",
+        "type": 3
+      },
+      {
+        "tile": "respawningWall",
+        "type": 2
+      },
+      {
+        "tile": "blockingDestroyableWithWeapon",
+        "type": 2
+      }
+      ]
+    },
+    {
+      "name": "town",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 148,
+            "g": 90,
+            "b": 115
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking1",
+        "type": 3
+      },
+      {
+        "tile": "blocking2",
+        "type": 2
+      },
+      {
+        "tile": "blocking3",
+        "type": 0
+      },
+      {
+        "tile": "blocking4",
+        "type": 0
+      },
+      {
+        "tile": "forest",
+        "type": 0
+      },
+      {
+        "tile": "respawningWall",
+        "type": 3
+      },
+      {
+        "tile": "blockingDestroyableWithWeapon",
+        "type": 0
+      },
+      {
+        "tile": "fence",
+        "type": 3
+      }
+      ]
+    },
+    {
+      "name": "retro",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 90,
+            "g": 66,
+            "b": 111
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking1",
+        "type": 4
+      },
+      {
+        "tile": "blocking2",
+        "type": 4
+      },
+      {
+        "tile": "blocking3",
+        "type": 2
+      },
+      {
+        "tile": "blocking4",
+        "type": 2
+      },
+      {
+        "tile": "forest",
+        "type": 4
+      },
+      {
+        "tile": "respawningWall",
+        "type": 3
+      },
+      {
+        "tile": "blockingDestroyableWithWeapon",
+        "type": 3
+      },
+      {
+        "tile": "fence",
+        "type": 3
+      }
+      ]
+    },
+    {
+      "name": "mortuary",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 74,
+            "g": 52,
+            "b": 82
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking1",
+        "type": 5
+      },
+      {
+        "tile": "blocking2",
+        "type": 5
+      },
+      {
+        "tile": "blocking3",
+        "type": 3
+      },
+      {
+        "tile": "blocking4",
+        "type": 3
+      },
+      {
+        "tile": "forest",
+        "type": 5
+      },
+      {
+        "tile": "respawningWall",
+        "type": 4
+      },
+      {
+        "tile": "blockingDestroyableWithWeapon",
+        "type": 4
+      },
+      {
+        "tile": "fence",
+        "type": 3
+      },
+      {
+        "tile": "ropeFence",
+        "type": 8
+      }
+      ]
+    },
+    {
+      "name": "darryl",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 224,
+            "g": 122,
+            "b": 89
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking1",
+        "type": 6
+      },
+      {
+        "tile": "blocking2",
+        "type": 6
+      },
+      {
+        "tile": "blocking3",
+        "type": 0
+      },
+      {
+        "tile": "blocking4",
+        "type": 0
+      },
+      {
+        "tile": "forest",
+        "type": 6
+      },
+      {
+        "tile": "respawningWall",
+        "type": 5
+      },
+      {
+        "tile": "blockingDestroyableWithWeapon",
+        "type": 5
+      },
+      {
+        "tile": "fence",
+        "type": 3
+      }
+      ]
+    },
+    {
+      "name": "arcade",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 50,
+            "g": 44,
+            "b": 79
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking1",
+        "type": 7
+      },
+      {
+        "tile": "blocking2",
+        "type": 7
+      },
+      {
+        "tile": "blocking3",
+        "type": 0
+      },
+      {
+        "tile": "blocking4",
+        "type": 4
+      },
+      {
+        "tile": "forest",
+        "type": 0
+      },
+      {
+        "tile": "respawningWall",
+        "type": 6
+      },
+      {
+        "tile": "blockingDestroyableWithWeapon",
+        "type": 3
+      },
+      {
+        "tile": "fence",
+        "type": 3
+      }
+      ]
+    },
+    {
+      "name": "galaxy_arena",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 60,
+            "g": 150,
+            "b": 87
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking1",
+        "type": 7
+      },
+      {
+        "tile": "blocking2",
+        "type": 4
+      },
+      {
+        "tile": "blocking3",
+        "type": 4
+      },
+      {
+        "tile": "blocking4",
+        "type": 2
+      },
+      {
+        "tile": "forest",
+        "type": 0
+      },
+      {
+        "tile": "respawningWall",
+        "type": 3
+      },
+      {
+        "tile": "blockingDestroyableWithWeapon",
+        "type": 5
+      },
+      {
+        "tile": "fence",
+        "type": 3
+      },
+      {
+        "tile": "indestructible",
+        "type": 1
+      }
+      ]
+    },
+    {
+      "name": "lamporium",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 188,
+            "g": 90,
+            "b": 87
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking1",
+        "type": 8
+      },
+      {
+        "tile": "blocking2",
+        "type": 8
+      },
+      {
+        "tile": "blocking3",
+        "type": 5
+      },
+      {
+        "tile": "blocking4",
+        "type": 5
+      },
+      {
+        "tile": "forest",
+        "type": 7
+      },
+      {
+        "tile": "respawningWall",
+        "type": 7
+      },
+      {
+        "tile": "blockingDestroyableWithWeapon",
+        "type": 1
+      },
+      {
+        "tile": "fence",
+        "type": 33
+      }
+      ]
+    },
+    {
+      "name": "mini",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 60,
+            "g": 62,
+            "b": 87
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking1",
+        "type": 9
+      },
+      {
+        "tile": "blocking2",
+        "type": 9
+      },
+      {
+        "tile": "blocking3",
+        "type": 6
+      },
+      {
+        "tile": "blocking4",
+        "type": 6
+      },
+      {
+        "tile": "forest",
+        "type": 8
+      },
+      {
+        "tile": "respawningWall",
+        "type": 8
+      },
+      {
+        "tile": "blockingDestroyableWithWeapon",
+        "type": 6
+      },
+      {
+        "tile": "fence",
+        "type": 43
+      },
+      {
+        "tile": "ropeFence",
+        "type": 1
+      }
+      ]
+    },
+    {
+      "name": "gift",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 133,
+            "g": 70,
+            "b": 86
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking1",
+        "type": 10
+      },
+      {
+        "tile": "blocking2",
+        "type": 10
+      },
+      {
+        "tile": "blocking3",
+        "type": 7
+      },
+      {
+        "tile": "forest",
+        "type": 9
+      },
+      {
+        "tile": "respawningWall",
+        "type": 9
+      },
+      {
+        "tile": "blockingDestroyableWithWeapon",
+        "type": 7
+      },
+      {
+        "tile": "fence",
+        "type": 53
+      },
+      {
+        "tile": "ropeFence",
+        "type": 12
+      }
+      ]
+    },
+    {
+      "name": "bandstand",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 247,
+            "g": 148,
+            "b": 100
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking1",
+        "type": 11
+      },
+      {
+        "tile": "blocking2",
+        "type": 11
+      },
+      {
+        "tile": "blocking3",
+        "type": 0
+      },
+      {
+        "tile": "blocking4",
+        "type": 3
+      },
+      {
+        "tile": "forest",
+        "type": 7
+      },
+      {
+        "tile": "respawningWall",
+        "type": 0
+      },
+      {
+        "tile": "blockingDestroyableWithWeapon",
+        "type": 0
+      },
+      {
+        "tile": "fence",
+        "type": 53
+      },
+      {
+        "tile": "ropeFence",
+        "type": 12
+      }
+      ]
+    },
+    {
+      "name": "snowtel",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 50,
+            "g": 70,
+            "b": 115
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking1",
+        "type": 12
+      },
+      {
+        "tile": "blocking2",
+        "type": 12
+      },
+      {
+        "tile": "blocking3",
+        "type": 0
+      },
+      {
+        "tile": "blocking4",
+        "type": 3
+      },
+      {
+        "tile": "forest",
+        "type": 3
+      },
+      {
+        "tile": "respawningWall",
+        "type": 10
+      },
+      {
+        "tile": "blockingDestroyableWithWeapon",
+        "type": 8
+      },
+      {
+        "tile": "fence",
+        "type": 73
+      },
+      {
+        "tile": "ropeFence",
+        "type": 12
+      }
+      ]
+    },
+    {
+      "name": "scrapyard",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 48,
+            "g": 42,
+            "b": 79
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking1",
+        "type": 13
+      },
+      {
+        "tile": "blocking2",
+        "type": 13
+      },
+      {
+        "tile": "blocking3",
+        "type": 0
+      },
+      {
+        "tile": "blocking4",
+        "type": 2
+      },
+      {
+        "tile": "forest",
+        "type": 1
+      },
+      {
+        "tile": "respawningWall",
+        "type": 11
+      },
+      {
+        "tile": "blockingDestroyableWithWeapon",
+        "type": 3
+      },
+      {
+        "tile": "fence",
+        "type": 76
+      },
+      {
+        "tile": "ropeFence",
+        "type": 16
+      }
+      ]
+    },
+    {
+      "name": "starrforce",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 28,
+            "g": 57,
+            "b": 99
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking1",
+        "type": 14
+      },
+      {
+        "tile": "blocking2",
+        "type": 14
+      },
+      {
+        "tile": "blocking3",
+        "type": 8
+      },
+      {
+        "tile": "blocking4",
+        "type": 7
+      },
+      {
+        "tile": "forest",
+        "type": 10
+      },
+      {
+        "tile": "respawningWall",
+        "type": 12
+      },
+      {
+        "tile": "blockingDestroyableWithWeapon",
+        "type": 9
+      },
+      {
+        "tile": "fence",
+        "type": 86
+      },
+      {
+        "tile": "ropeFence",
+        "type": 16
+      }
+      ]
+    },
+    {
+      "name": "actionshow",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 249,
+            "g": 166,
+            "b": 117
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking1",
+        "type": 15
+      },
+      {
+        "tile": "blocking2",
+        "type": 15
+      },
+      {
+        "tile": "forest",
+        "type": 2
+      },
+      {
+        "tile": "blockingDestroyableWithWeapon",
+        "type": 10
+      }
+      ]
+    },
+    {
+      "name": "waterpark",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 254,
+            "g": 171,
+            "b": 198
+          }
+        }
+      },
+      "defaults": [
+      {
+        "tile": "blocking1",
+        "type": 16
+      },
+      {
+        "tile": "blocking2",
+        "type": 16
+      },
+      {
+        "tile": "blocking3",
+        "type": 0
+      },
+      {
+        "tile": "blocking4",
+        "type": 8
+      },
+      {
+        "tile": "forest",
+        "type": 7
+      },
+      {
+        "tile": "respawningWall",
+        "type": 13
+      },
+      {
+        "tile": "blockingDestroyableWithWeapon",
+        "type": 11
+      }
+      ]
+    },
+		{
+      "name": "modded volleybrawl",
+      "background": {
+        "name": "VolleybrawlCustom",
+        "parameters": {}
+			},
+      "defaults": [
+      {
+        "tile": "blocking1",
+        "type": 7
+      },
+      {
+        "tile": "blocking2",
+        "type": 4
+      },
+      {
+        "tile": "blocking3",
+        "type": 4
+      },
+      {
+        "tile": "blocking4",
+        "type": 2
+      },
+      {
+        "tile": "forest",
+        "type": 0
+      },
+      {
+        "tile": "respawningWall",
+        "type": 3
+      },
+      {
+        "tile": "blockingDestroyableWithWeapon",
+        "type": 5
+      },
+      {
+        "tile": "fence",
+        "type": 3
+      },
+      {
+        "tile": "indestructible",
+        "type": 1
+      },
+			{
+				"tile": "player1",
+				"type": 1
+			},
+			{
+				"tile": "player2",
+				"type": 1
+			}
+      ]
+    },
+    {
+      "name": "modded galaxy_arena",
+      "background": {
+        "name": "GalaxyCustom",
+				"parameters": {}
+      },
+      "defaults": [
+      {
+        "tile": "blocking1",
+        "type": 7
+      },
+      {
+        "tile": "blocking2",
+        "type": 4
+      },
+      {
+        "tile": "blocking3",
+        "type": 4
+      },
+      {
+        "tile": "blocking4",
+        "type": 2
+      },
+      {
+        "tile": "forest",
+        "type": 0
+      },
+      {
+        "tile": "respawningWall",
+        "type": 3
+      },
+      {
+        "tile": "blockingDestroyableWithWeapon",
+        "type": 5
+      },
+      {
+        "tile": "fence",
+        "type": 3
+      },
+      {
+        "tile": "indestructible",
+        "type": 1
+      }
+      ]
+    },
+    {
+      "name": "castle",
+      "background": {
+        "name": "Chequerboard",
+        "parameters": {
+          "color": {
+            "r": 73,
+            "g": 68,
+            "b": 99
+          }
+        }
+      },
+			"defaults": [
+				{
+					"tile": "blocking1",
+					"type": 17
+				},
+				{
+					"tile": "blocking2",
+					"type": 17
+				},
+				{
+					"tile": "blocking3",
+					"type": 9
+				},
+				{
+					"tile": "blocking4",
+					"type": 3
+				},
+				{
+					"tile": "forest",
+					"type": 11
+				},
+				{
+					"tile": "respawningWall",
+					"type": 14
+				},
+				{
+					"tile": "blockingDestroyableWithWeapon",
+					"type": 12
+				},
+				{
+					"tile": "fence",
+					"type": 105
+				}
+			]
+		}
+  ],
+	"defaultBiome":
+	{
+		"name": "invalid biome",
+		"background": {
+			"name": "__ABSChequerboard",
+			"parameters": {
+				"color1": {
+					"r": 0,
+					"g": 0,
+					"b": 0
+				},
+				"color2": {
+					"r": 255,
+					"g": 0,
+					"b": 220
+				}
+			}
+		},
+		"defaults": [
+		{
+			"tile": "blocking1",
+			"type": 0
+		},
+		{
+			"tile": "blocking2",
+			"type": 0
+		},
+		{
+			"tile": "blocking3",
+			"type": 0
+		},
+		{
+			"tile": "blocking4",
+			"type": 0
+		},
+		{
+			"tile": "forest",
+			"type": 0
+		},
+		{
+			"tile": "respawningWall",
+			"type": 0
+		},
+		{
+			"tile": "blockingDestroyableWithWeapon",
+			"type": 0
+		},
+		{
+			"tile": "fence",
+			"type": 0
+		},
+		{
+			"tile": "water",
+			"type": 0
+		},
+		{
+			"tile": "player1",
+			"type": 0
+		},
+		{
+			"tile": "player2",
+			"type": 0
+		},
+		{
+			"tile": "objective",
+			"type": 1
+		},
+		{
+			"tile": "springpadRight",
+			"type": 0
+		},
+		{
+			"tile": "springpadLeft",
+			"type": 0
+		},
+		{
+			"tile": "springpadTop",
+			"type": 0
+		},
+		{
+			"tile": "springpadBottom",
+			"type": 0
+		},
+		{
+			"tile": "springpadTopLeft",
+			"type": 0
+		},
+		{
+			"tile": "springpadBottomRight",
+			"type": 0
+		},
+		{
+			"tile": "springpadTopRight",
+			"type": 0
+		},
+		{
+			"tile": "springpadBottomLeft",
+			"type": 0
+		},
+		{
+			"tile": "bench1",
+			"type": 0
+		},
+		{
+			"tile": "bench2",
+			"type": 0
+		},
+		{
+			"tile": "ropeFence",
+			"type": 0
+		},
+		{
+			"tile": "teleporterBlue",
+			"type": 0
+		},
+		{
+			"tile": "teleporterGreen",
+			"type": 0
+		},
+		{
+			"tile": "teleporterRed",
+			"type": 0
+		},
+		{
+			"tile": "teleporterYellow",
+			"type": 0
+		},
+		{
+			"tile": "intervalDamage",
+			"type": 0
+		},
+		{
+			"tile": "damage",
+			"type": 0
+		},
+		{
+			"tile": "healing",
+			"type": 0
+		},
+		{
+			"tile": "slow",
+			"type": 0
+		},
+		{
+			"tile": "fast",
+			"type": 0
+		},
+		{
+			"tile": "indestructible",
+			"type": 0
+		},
+		{
+			"tile": "powerupCrate",
+			"type": 0
+		},
+		{
+			"tile": "explosive",
+			"type": 0
+		},
+		{
+			"tile": "siegeBolt",
+			"type": 0
+		}
+		]
+	},
+	"gamemodes": [
+	{
+		"name": "Gem Grab",
+		"variants": {
+			"snowy": {
+				"mapModder": [
+				{
+					"tile": "objective",
+					"position": "m,m"
+				}],
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 7
+				}]
+			},
+			"town": {
+				"mapModder": [
+				{
+					"tile": "objective",
+					"position": "m,m"
+				}],
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 10
+				}]
+			},
+			"retro": {
+				"mapModder": [
+				{
+					"tile": "objective",
+					"position": "m,m"
+				}],
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 12
+				}]
+			},
+			"mortuary": {
+				"mapModder": [
+				{
+					"tile": "objective",
+					"position": "m,m"
+				}],
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 11
+				}]
+			},
+			"darryl": {
+				"mapModder": [
+				{
+					"tile": "objective",
+					"position": "m,m"
+				}],
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 13
+				}]
+			},
+			"arcade": {
+				"mapModder": [
+				{
+					"tile": "objective",
+					"position": "m,m"
+				}],
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 10
+				}]
+			},
+			"lamporium": {
+				"mapModder": [
+				{
+					"tile": "objective",
+					"position": "m,m"
+				}],
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 20
+				}]
+			},
+			"mini": {
+				"mapModder": [
+				{
+					"tile": "objective",
+					"position": "m,m"
+				}],
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 22
+				}]
+			},
+			"gift": {
+				"mapModder": [
+				{
+					"tile": "objective",
+					"position": "m,m"
+				}],
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 24
+				}]
+			},
+			"bandstand": {
+				"mapModder": [
+				{
+					"tile": "objective",
+					"position": "m,m"
+				}],
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 20
+				}]
+			},
+			"snowtel": {
+				"mapModder": [
+				{
+					"tile": "objective",
+					"position": "m,m"
+				}],
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 11
+				}]
+			},
+			"starrforce": {
+				"mapModder": [
+				{
+					"tile": "objective",
+					"position": "m,m"
+				}],
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 25
+				}]
+			},
+			"castle": {
+				"mapModder": [
+				{
+					"tile": "objective",
+					"position": "m,m"
+				}],
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 37
+				}]
+			}
+		},
+    "mapModder": [
+    {
+      "tile": "objective",
+      "position": "m,m"
+    }],
+		"overrideBiome": [
+		{
+			"tile": "objective",
+			"type": 0
+		}]
+	},
+	{
+		"name": "Heist",
+		"variants": {
+			"mini": {
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 23
+				}]
+			}
+		}
+	},
+	{
+		"name": "Bounty",
+		"overrideBiome": [
+		{
+			"tile": "objective",
+			"type": 2
+		}],
+		"mapModder": [
+		{
+			"tile": "objective",
+			"position": "m,m"
+		}]
+	},
+	{
+		"name": "Brawl Ball",
+		"variants": {
+			"galaxy_arena": {
+				"specialTiles": [
+				{
+					"tile": "objective",
+					"type": 18,
+					"position": "m,2",
+					"drawOrder": 2
+				},
+				{
+					"tile": "objective",
+					"type": 19,
+					"position": "m,-2",
+					"drawOrder": 2
+				}],
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 17
+				}],
+				"mapModder": [
+				{
+					"tile": "objective",
+					"position": "m,m"
+				}]
+			},
+			"modded galaxy_arena": {
+				"specialTiles": [
+				{
+					"tile": "objective",
+					"type": 18,
+					"position": "m,2",
+					"drawOrder": 2
+				},
+				{
+					"tile": "objective",
+					"type": 19,
+					"position": "m,-2",
+					"drawOrder": 2
+				}],
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 17
+				}],
+				"mapModder": [
+				{
+					"tile": "objective",
+					"position": "m,m"
+				}]
+			}
+		},
+		"specialTiles": [
+		{
+			"tile": "objective",
+			"type": 5,
+			"position": "m,2",
+			"drawOrder": 2
+		},
+		{
+			"tile": "objective",
+			"type": 6,
+			"position": "m,-2",
+			"drawOrder": 2
+		}],
+		"overrideBiome": [
+		{
+			"tile": "objective",
+			"type": 4
+		}],
+		"mapModder": [
+		{
+			"tile": "objective",
+			"position": "m,m"
+		}]
+	},
+	{
+		"name": "Showdown",
+		"overrideBiome": [
+		{
+			"tile": "player1",
+			"type": 1
+		},
+		{
+			"tile": "player2",
+			"type": 8
+		}
+		]
+	},
+	{
+		"name": "Solo Showdown",
+		"overrideBiome": [
+		{
+			"tile": "player1",
+			"type": 1
+		},
+		{
+			"tile": "player2",
+			"type": 4
+		}
+		]
+	},
+	{
+		"name": "Duo Showdown",
+		"overrideBiome": [
+		{
+			"tile": "player1",
+			"type": 3
+		},
+		{
+			"tile": "player2",
+			"type": 1
+		}
+		]
+	},
+	{
+		"name": "Big Game",
+		"overrideBiome": [
+		{
+			"tile": "player1",
+			"type": 1
+		},
+		{
+			"tile": "player2",
+			"type": 2
+		}
+		]
+	},
+	{
+		"name": "Robo Rumble",
+		"overrideBiome": [
+		{
+			"tile": "player1",
+			"type": 0
+		},
+		{
+			"tile": "player2",
+			"type": 4
+		}
+		]
+	},
+	{
+		"name": "Boss Fight",
+		"overrideBiome": [
+		{
+			"tile": "player1",
+			"type": 0
+		},
+		{
+			"tile": "player2",
+			"type": 3
+		}
+		]
+	},
+	{
+		"name": "Siege",
+		"overrideBiome": [
+		{
+			"tile": "objective",
+			"type": 9
+		}
+		],
+		"specialTiles": [
+		{
+			"tile": "ikeRange",
+			"type": 0,
+			"position": "m,-1",
+			"drawOrder": 1
+		},
+		{
+			"tile": "ikeRange",
+			"type": 1,
+			"position": "m,1",
+			"drawOrder": 1
+		}
+		]
+	},
+	{
+		"name": "Railed Gem Grab",
+		"specialTiles": [
+		{
+			"tile": "rails",
+			"type": 0,
+			"position": "m,m",
+			"drawOrder": 1
+		}],
+		"overrideBiome": [
+		{
+			"tile": "objective",
+			"type": 0
+		}],
+		"mapModder": [
+		{
+			"tile": "objective",
+			"position": "m,m"
+		}]
+	},
+	{
+    "name": "Takedown",
+    "overrideBiome": [
+    {
+      "tile": "player1",
+      "type": 1
+    },
+    {
+      "tile": "player2",
+      "type": 4
+    }
+    ],
+		"specialTiles": [
+    {
+      "tile": "player2",
+      "type": 3,
+      "position": "m,m",
+      "drawOrder": 2
+    }
+		]
+  },
+  {
+    "name": "Lone Star",
+		"specialTiles": [
+		{
+			"tile": "objective",
+			"type": 2,
+			"position": "m,m",
+			"drawOrder": 2
+		}]
+  },
+	{
+		"name": "Present Plunder",
+		"overrideBiome": [
+      {
+        "tile": "objective",
+        "type": 14
+      }
+    ]
+	},
+	{
+		"name": "Hot Zone",
+		"overrideBiome": [
+    {
+      "tile": "objective",
+      "type": 16
+    }
+    ]
+	},
+	{
+		"name": "Hot Zone (mod)",
+		"overrideBiome": [
+    {
+      "tile": "objective",
+      "type": 21
+    }
+    ]
+	},
+	{
+		"name": "Super City Rampage",
+		"overrideBiome": [
+		{
+			"tile": "player2",
+			"type": 5
+		}
+		]
+	},
+	{
+		"name": "Super City Rampage (mod)",
+		"overrideBiome": [
+		{
+			"tile": "player2",
+			"type": 6
+		}
+		]
+	},
+	{
+		"name": "Hold The Trophy",
+		"specialTiles": [
+		{
+			"tile": "objective",
+			"type": 26,
+			"position": "m,m",
+			"drawOrder": 2
+		}]
+	},
+	{
+		"name": "Trophy Thieves",
+		"overrideBiome": [
+		{
+			"tile": "objective",
+			"type": 28
+		}]
+	},
+	{
+		"name": "Volley Brawl",
+		"variants": {
+			"modded volleybrawl": {
+				"specialTiles": [
+				{
+					"tile": "objective",
+					"type": 35,
+					"position": "m,m",
+					"drawOrder": 1
+				},
+				{
+					"tile": "objective",
+					"type": 36,
+					"position": "m,m",
+					"drawOrder": 2
+				}],
+				"overrideBiome": [{
+					"tile": "player1",
+					"type": 2
+				},
+				{
+					"tile": "player2",
+					"type": 7
+				}]
+			}
+		},
+		"specialTiles": [
+		{
+			"tile": "objective",
+			"type": 29,
+			"position": "m,m",
+			"drawOrder": 2
+		}]
+	},
+	{
+		"name": "Basket Brawl",
+		"specialTiles": [
+		{
+			"tile": "objective",
+			"type": 30,
+			"position": "m,m",
+			"drawOrder": 2
+		},
+		{
+			"tile": "objective",
+			"type": 31,
+			"position": "l,m",
+			"drawOrder": 2
+		},
+		{
+			"tile": "objective",
+			"type": 32,
+			"position": "r,m",
+			"drawOrder": 2
+		},
+		{
+			"tile": "objective",
+			"type": 33,
+			"position": "l,m",
+			"drawOrder": 1
+		},
+		{
+			"tile": "objective",
+			"type": 34,
+			"position": "r,m",
+			"drawOrder": 1
+		}]
+	}
+	],
+	"metadata": {
+		"bolts": [
+			{
+				"tile": "siegeBolt",
+				"type": 1
+			},
+			{
+				"tile": "siegeBolt",
+				"type": 2
+			},
+			{
+				"tile": "siegeBolt",
+				"type": 3
+			},
+			{
+				"tile": "siegeBolt",
+				"type": 4
+			},
+			{
+				"tile": "siegeBolt",
+				"type": 5
+			},
+			{
+				"tile": "siegeBolt",
+				"type": 6
+			},
+			{
+				"tile": "siegeBolt",
+				"type": 7
+			},
+			{
+				"tile": "siegeBolt",
+				"type": 8
+			},
+			{
+				"tile": "siegeBolt",
+				"type": 9
+			},
+			{
+				"tile": "siegeBolt",
+				"type": 10
+			},
+			{
+				"tile": "siegeBolt",
+				"type": 11
+			}
+		]
+	},
+	"backgrounds": [
+    {
+      "name": "VolleybrawlCustom",
+      "blocks": {
+        "type": "IF",
+        "condition": {
+          "type": "<=",
+          "a": {
+            "type": "NUMBER",
+            "key": "DRAWER->CURSOR->Y"
+          },
+          "b": {
+						"type": "-",
+						"a": {
+							"type": "NUMBER",
+							"key": "MAP->SIZE->MIDDLE->Y"
+						},
+						"b": 1
+					}
+        },
+        "then": {
+          "type": "RUN",
+          "name": "Chequerboard",
+          "parameters": {
+            "color": {
+              "type": "COLOR",
+              "r": 218,
+              "g": 51,
+              "b": 63
+            }
+          }
+        },
+        "else": {
+          "type": "IF",
+          "condition": {
+            "type": ">=",
+            "a": {
+              "type": "NUMBER",
+              "key": "DRAWER->CURSOR->Y"
+            },
+						"b": {
+							"type": "+",
+							"a": {
+								"type": "NUMBER",
+								"key": "MAP->SIZE->MIDDLE->Y"
+							},
+							"b": 1
+						}
+          },
+          "then": {
+            "type": "RUN",
+            "name": "Chequerboard",
+            "parameters": {
+              "color": {
+                "type": "COLOR",
+                "r": 85,
+                "g": 99,
+                "b": 237
+              }
+            }
+          },
+          "else": {
+            "type": "RUN",
+            "name": "Chequerboard",
+            "parameters": {
+              "color": {
+                "type": "COLOR",
+                "r": 252,
+                "g": 252,
+                "b": 252
+              }
+            }
+          }
+        }
+      }
+    },
+		{
+			"name": "GalaxyCustom",
+			"blocks": {
+				"type": "IF",
+				"condition": {
+					"type": "==",
+					"a": {
+						"type": "NUMBER",
+						"key": "DRAWER->CURSOR->Y"
+					},
+					"b": {
+						"type": "NUMBER",
+						"key": "MAP->SIZE->MIDDLE->Y"
+					}
+				},
+				"then": {
+					"type": "RUN",
+					"name": "Chequerboard",
+					"parameters": {
+						"color": {
+							"type": "COLOR",
+							"r": 120,
+							"g": 188,
+							"b": 153
+						}
+					}
+				},
+				"else": {
+					"type": "IF",
+					"condition": {
+						"type": "==",
+						"a": {
+							"type": "%",
+							"a": {
+								"type": "//",
+								"a": {
+									"type": "+",
+									"a": {
+										"type": "NUMBER",
+										"key": "DRAWER->CURSOR->Y"
+									},
+									"b": 6
+								},
+								"b": 5
+							},
+							"b": 2
+						},
+						"b": 0
+					},
+					"then": {
+						"type": "RUN",
+						"name": "Chequerboard",
+						"parameters": {
+							"color": {
+								"type": "COLOR",
+								"r": 33,
+								"g": 152,
+								"b": 76
+							}
+						}
+					},
+					"else": {
+						"type": "RUN",
+						"name": "Chequerboard",
+						"parameters": {
+							"color": {
+								"type": "COLOR",
+								"r": 0,
+								"g": 135,
+								"b": 83
+							}
+						}
+					}
+				}
+			}
+		},
+		{
+      "name": "Chequerboard",
+      "parameters": [
+        {
+          "name": "color",
+          "type": "Color"
+        }
+      ],
+      "blocks": {
+        "type": "RUN",
+        "name": "__ABSChequerboard",
+        "parameters": {
+          "color1": {
+            "type": "*",
+            "a": {
+              "type": "PARAMETER",
+              "name": "color"
+            },
+            "b": 242
+          },
+          "color2": {
+            "type": "PARAMETER",
+            "name": "color"
+          }
+        }
+      }
+    },
+    {
+      "name": "__ABSChequerboard",
+      "parameters": [
+        {
+          "name": "color1",
+          "type": "Color"
+        },
+        {
+          "name": "color2",
+          "type": "Color"
+        }
+      ],
+      "blocks": {
+        "type": "IF",
+        "condition": {
+          "type": "==",
+          "a": 0,
+          "b": {
+            "type": "%",
+            "a": {
+              "type": "+",
+              "a": {
+                "type": "NUMBER",
+                "key": "DRAWER->CURSOR->X"
+              },
+              "b": {
+                "type": "%",
+                "a": {
+                  "type": "NUMBER",
+                  "key": "DRAWER->CURSOR->Y"
+                },
+                "b": 2
+              }
+            },
+            "b": 2
+          }
+        },
+        "then": {
+          "type": "RETURN",
+          "value": {
+            "type": "PARAMETER",
+            "name": "color1"
+          }
+        },
+        "else": {
+          "type": "RETURN",
+          "value": {
+            "type": "PARAMETER",
+            "name": "color2"
+          }
+        }
+      }
+    }
+	]
+}

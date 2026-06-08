@@ -1,0 +1,608 @@
+{
+  "source": "bloodwiing/BrawlMapGen presets/brawlstars.json",
+  "license": "Code: GPLv3 (bloodwiing/BrawlMapGen). Art: Supercell IP under Fan Content Policy.",
+  "ignoreTiles": [
+    ".",
+    "D",
+    "0",
+    "7",
+    "6",
+    "Q",
+    "b",
+    "r"
+  ],
+  "tiles": {
+    "M": {
+      "name": "blocking1",
+      "display": "Wall Block",
+      "assets": [
+        "wood_block.svg",
+        "stone_block.svg",
+        "ice_block.svg",
+        "wall_block.svg",
+        "wall_block_red.svg",
+        "wall_block_gray.svg",
+        "metal_box.svg",
+        "concrete_wall.svg",
+        "sandstone_star.svg",
+        "apartment.svg",
+        "merch_closed.svg",
+        "bandstand_wall.svg",
+        "ice_wall.svg",
+        "scrap_cube.svg",
+        "metal_crate.svg",
+        "haybale.svg",
+        "waterpark_rock.svg",
+        "wall_block_castle.svg"
+      ],
+      "default": "wood_block.svg"
+    },
+    "X": {
+      "name": "blocking2",
+      "display": null,
+      "assets": [
+        "crystal_magenta.svg",
+        "grass_block.svg",
+        "wood_block.svg",
+        "crystal_red.svg",
+        "tires.svg",
+        "tombstone.svg",
+        "chest.svg",
+        "yellow_block.svg",
+        "sandstone_rombus.svg",
+        "factory.svg",
+        "merch_display.svg",
+        "bandstand_wall_2.svg",
+        "ice_wall_2.svg",
+        "concrete_wall.svg",
+        "metal_crate_2.svg",
+        "haybale.svg",
+        "waterpark_wall.svg",
+        "wall_block_castle.svg"
+      ],
+      "default": "crystal_magenta.svg"
+    },
+    "Y": {
+      "name": "blocking3",
+      "display": null,
+      "assets": [
+        "crate.svg",
+        "present_box.svg",
+        "crate_orange.svg",
+        "crate_red.svg",
+        "orange_wall.svg",
+        "tent.svg",
+        "warehouse.svg",
+        "merch_crate.svg",
+        "x_box.svg",
+        "crate_red_orange.svg"
+      ],
+      "default": "crate.svg"
+    },
+    "C": {
+      "name": "blocking4",
+      "display": null,
+      "assets": [
+        "barrel.svg",
+        "present_barrel.svg",
+        "metal_barrel.svg",
+        "red_barrel.svg",
+        "orange_barrel.svg",
+        "basket.svg",
+        "office.svg",
+        "fuel_barrel.svg",
+        "waterpark_barrel.svg"
+      ],
+      "default": "barrel.svg"
+    },
+    "F": {
+      "name": "forest",
+      "display": null,
+      "assets": [
+        "grass_green.svg",
+        "grass_cyan.svg",
+        "grass_yellow.svg",
+        "grass_blue.svg",
+        "grass_neon_blue.svg",
+        "grass_blue_fade.svg",
+        "grass_green_round.svg",
+        "grass_pink.svg",
+        "forest.svg",
+        "grass_dull.svg",
+        "grass_pink_round.svg",
+        "grass_teal.svg"
+      ],
+      "default": "grass_green.svg"
+    },
+    "T": {
+      "name": "respawningWall",
+      "display": null,
+      "assets": [
+        "cactus.svg",
+        "mushroom.svg",
+        "tree.svg",
+        "sapling.svg",
+        "stump.svg",
+        "ship_barrel.svg",
+        "road_sign.svg",
+        "pot.svg",
+        "cargo.svg",
+        "old_tv.svg",
+        "tree_snowless.svg",
+        "tires.svg",
+        "computer.svg",
+        "surfboard.svg",
+        "plant_castle.svg"
+      ],
+      "default": "cactus.svg"
+    },
+    "B": {
+      "name": "blockingDestroyableWithWeapon",
+      "display": null,
+      "assets": [
+        "vase.svg",
+        "skull.svg",
+        "present_mini.svg",
+        "cone.svg",
+        "candles.svg",
+        "round_shot.svg",
+        "vending_machines.svg",
+        "balloon.svg",
+        "snowballs.svg",
+        "alien_plant.svg",
+        "cactus_ball.svg",
+        "sand_bucket.svg",
+        "pizza_box.svg"
+      ],
+      "default": "vase.svg"
+    },
+    "N": {
+      "name": "fence",
+      "display": null,
+      "assets": [
+        "fence_hor.svg",
+        "fence_ver.svg",
+        "fence_cor.svg",
+        "fence_hor_lunar.svg",
+        "fence_ver_lunar.svg",
+        "fence_cor_lunar.svg",
+        "neon_railing_hor.svg",
+        "neon_railing_ver.svg",
+        "neon_railing_r.svg",
+        "neon_railing_l.svg",
+        "neon_railing_t.svg",
+        "neon_railing_b.svg",
+        "neon_railing_tr.svg",
+        "neon_railing_tl.svg",
+        "neon_railing_br.svg",
+        "neon_railing_bl.svg",
+        "fence_hor_mor.svg",
+        "fence_ver_mor.svg",
+        "fence_cor_mor.svg",
+        "ship_railing_hor.svg",
+        "ship_railing_ver.svg",
+        "ship_railing_r.svg",
+        "ship_railing_l.svg",
+        "ship_railing_b.svg",
+        "ship_railing_t.svg",
+        "ship_railing_tr.svg",
+        "ship_railing_tl.svg",
+        "ship_railing_br.svg",
+        "ship_railing_bl.svg",
+        "ship_railing_to.svg",
+        "arcade_fence_corner.svg",
+        "arcade_fence_hor.svg",
+        "arcade_fence_ver.svg",
+        "wall_sand_hor.svg",
+        "wall_sand_ver.svg",
+        "wall_sand_r.svg",
+        "wall_sand_l.svg",
+        "wall_sand_b.svg",
+        "wall_sand_t.svg",
+        "wall_sand_tr.svg",
+        "wall_sand_tl.svg",
+        "wall_sand_br.svg",
+        "wall_sand_bl.svg",
+        "building_long_hor.svg",
+        "building_long_ver.svg",
+        "building_long_r.svg",
+        "building_long_l.svg",
+        "building_long_b.svg",
+        "building_long_t.svg",
+        "building_long_tr.svg",
+        "building_long_tl.svg",
+        "building_long_br.svg",
+        "building_long_bl.svg",
+        "gift_fence_hor.svg",
+        "gift_fence_ver.svg",
+        "gift_fence_r.svg",
+        "gift_fence_l.svg",
+        "gift_fence_b.svg",
+        "gift_fence_t.svg",
+        "gift_fence_tr.svg",
+        "gift_fence_tl.svg",
+        "gift_fence_br.svg",
+        "gift_fence_bl.svg",
+        "wall_band_hor.svg",
+        "wall_band_ver.svg",
+        "wall_band_r.svg",
+        "wall_band_l.svg",
+        "wall_band_b.svg",
+        "wall_band_t.svg",
+        "wall_band_tr.svg",
+        "wall_band_tl.svg",
+        "wall_band_br.svg",
+        "wall_band_bl.svg",
+        "fence_hor_ice.svg",
+        "fence_ver_ice.svg",
+        "fence_cor_ice.svg",
+        "pipe_hor.svg",
+        "pipe_ver.svg",
+        "pipe_r.svg",
+        "pipe_l.svg",
+        "pipe_b.svg",
+        "pipe_t.svg",
+        "pipe_tr.svg",
+        "pipe_tl.svg",
+        "pipe_br.svg",
+        "pipe_bl.svg",
+        "spacestation_wall_hor.svg",
+        "spacestation_wall_ver.svg",
+        "spacestation_wall_r.svg",
+        "spacestation_wall_l.svg",
+        "spacestation_wall_b.svg",
+        "spacestation_wall_t.svg",
+        "spacestation_wall_tr.svg",
+        "spacestation_wall_tl.svg",
+        "spacestation_wall_br.svg",
+        "spacestation_wall_bl.svg",
+        "waterpark_fence.svg",
+        "waterpark_fence_hor.svg",
+        "waterpark_fence_r.svg",
+        "waterpark_fence_l.svg",
+        "waterpark_fence_b.svg",
+        "waterpark_fence_br.svg",
+        "waterpark_fence_bl.svg",
+        "fence_hor_castle.svg",
+        "fence_ver_castle.svg",
+        "fence_cor_castle.svg"
+      ],
+      "default": "fence_hor.svg"
+    },
+    "W": {
+      "name": "water",
+      "display": null,
+      "assets": [
+        "?binary?.svg"
+      ],
+      "default": "?binary?.svg"
+    },
+    "1": {
+      "name": "player1",
+      "display": null,
+      "assets": [
+        "player_blue.svg",
+        "player_gray.svg",
+        "player_white.svg",
+        "nothing.svg"
+      ],
+      "default": "player_blue.svg"
+    },
+    "2": {
+      "name": "player2",
+      "display": null,
+      "assets": [
+        "player_red.svg",
+        "player_gray.svg",
+        "player_big.svg",
+        "player_boss.svg",
+        "nothing.svg",
+        "mega_spawn.svg",
+        "mega_spawn_mod.svg",
+        "player_white.svg",
+        "player_green.svg"
+      ],
+      "default": "player_red.svg"
+    },
+    "8": {
+      "name": "objective",
+      "display": null,
+      "assets": [
+        "mine.svg",
+        "vault.svg",
+        "bounty_star.svg",
+        "vault_offset.svg",
+        "brawlball.svg",
+        "goal_red.svg",
+        "goal_blue.svg",
+        "mine_snow.svg",
+        "ike_red.svg",
+        "ike_blue.svg",
+        "mine_town.svg",
+        "mine_retro.svg",
+        "mine_mortuary.svg",
+        "mine_ship.svg",
+        "flag_present_red.svg",
+        "flag_present_blue.svg",
+        "hot_zone_blue.svg",
+        "soccerball.svg",
+        "goal_red_2.svg",
+        "goal_blue_2.svg",
+        "mine_bazaar.svg",
+        "hot_zone_both.svg",
+        "mine_construction.svg",
+        "bank.svg",
+        "mine_burst.svg",
+        "mine_hatch.svg",
+        "trophy_gold.svg",
+        "trophy_blue.svg",
+        "trophy_red.svg",
+        "volleyball.svg",
+        "basketball.svg",
+        "basket_hoop_blue.svg",
+        "basket_hoop_red.svg",
+        "basket_hoop_blue_range.svg",
+        "basket_hoop_red_range.svg",
+        "volleyball_mod.svg",
+        "volleyball.svg",
+        "mine_castle.svg"
+      ],
+      "default": "mine.svg"
+    },
+    "H": {
+      "name": "springpadRight",
+      "display": null,
+      "assets": [
+        "spring_right.svg"
+      ],
+      "default": "spring_right.svg"
+    },
+    "G": {
+      "name": "springpadLeft",
+      "display": null,
+      "assets": [
+        "spring_left.svg"
+      ],
+      "default": "spring_left.svg"
+    },
+    "L": {
+      "name": "springpadBottom",
+      "display": null,
+      "assets": [
+        "spring_bottom.svg"
+      ],
+      "default": "spring_bottom.svg"
+    },
+    "K": {
+      "name": "springpadTop",
+      "display": null,
+      "assets": [
+        "spring_top.svg"
+      ],
+      "default": "spring_top.svg"
+    },
+    "P": {
+      "name": "springpadBottomRight",
+      "display": null,
+      "assets": [
+        "spring_bottom_right.svg"
+      ],
+      "default": "spring_bottom_right.svg"
+    },
+    "Z": {
+      "name": "springpadTopLeft",
+      "display": null,
+      "assets": [
+        "spring_top_left.svg"
+      ],
+      "default": "spring_top_left.svg"
+    },
+    "O": {
+      "name": "springpadBottomLeft",
+      "display": null,
+      "assets": [
+        "spring_bottom_left.svg"
+      ],
+      "default": "spring_bottom_left.svg"
+    },
+    "U": {
+      "name": "springpadTopRight",
+      "display": null,
+      "assets": [
+        "spring_top_right.svg"
+      ],
+      "default": "spring_top_right.svg"
+    },
+    ",": {
+      "name": "ikeRange",
+      "display": null,
+      "assets": [
+        "ike_blue_range.svg",
+        "ike_red_range.svg"
+      ],
+      "default": "ike_blue_range.svg"
+    },
+    "Q": {
+      "name": "rails",
+      "display": null,
+      "assets": [
+        "rails.svg"
+      ],
+      "default": "rails.svg"
+    },
+    "E": {
+      "name": "bench1",
+      "display": null,
+      "assets": [
+        "bench_top_left.svg",
+        "bench_top_right.svg",
+        "bench_left_top.svg",
+        "bench_left_bottom.svg"
+      ],
+      "default": "bench_top_left.svg"
+    },
+    "A": {
+      "name": "bench2",
+      "display": null,
+      "assets": [
+        "bench_bottom_left.svg",
+        "bench_bottom_right.svg",
+        "bench_right_top.svg",
+        "bench_right_bottom.svg"
+      ],
+      "default": "bench_bottom_left.svg"
+    },
+    "c": {
+      "name": "teleporterBlue",
+      "display": null,
+      "assets": [
+        "teleporter_blue.svg"
+      ],
+      "default": "teleporter_blue.svg"
+    },
+    "d": {
+      "name": "teleporterGreen",
+      "display": null,
+      "assets": [
+        "teleporter_green.svg"
+      ],
+      "default": "teleporter_green.svg"
+    },
+    "e": {
+      "name": "teleporterRed",
+      "display": null,
+      "assets": [
+        "teleporter_red.svg"
+      ],
+      "default": "teleporter_red.svg"
+    },
+    "f": {
+      "name": "teleporterYellow",
+      "display": null,
+      "assets": [
+        "teleporter_yellow.svg"
+      ],
+      "default": "teleporter_yellow.svg"
+    },
+    "a": {
+      "name": "ropeFence",
+      "display": null,
+      "assets": [
+        "rope_post.svg",
+        "rope_post_t.svg",
+        "rope_post_r.svg",
+        "rope_post_tr.svg",
+        "rope_post_mine.svg",
+        "rope_post_mine_t.svg",
+        "rope_post_mine_r.svg",
+        "rope_post_mine_tr.svg",
+        "rope_post_mortuary.svg",
+        "rope_post_mortuary_t.svg",
+        "rope_post_mortuary_r.svg",
+        "rope_post_mortuary_tr.svg",
+        "rope_post_giftshop.svg",
+        "rope_post_giftshop_t.svg",
+        "rope_post_giftshop_r.svg",
+        "rope_post_giftshop_tr.svg",
+        "rope_post_danger.svg",
+        "rope_post_danger_t.svg",
+        "rope_post_danger_r.svg",
+        "rope_post_danger_tr.svg",
+        "rope_post_waterpark.svg",
+        "rope_post_waterpark_t.svg",
+        "rope_post_waterpark_r.svg",
+        "rope_post_waterpark_tr.svg",
+        "power_line.svg",
+        "power_line_t.svg",
+        "power_line_r.svg",
+        "power_line_tr.svg"
+      ],
+      "default": "rope_post.svg"
+    },
+    "v": {
+      "name": "intervalDamage",
+      "display": null,
+      "assets": [
+        "spikes.svg"
+      ],
+      "default": "spikes.svg"
+    },
+    "x": {
+      "name": "damage",
+      "display": null,
+      "assets": [
+        "poison.svg",
+        "poison_pink.svg"
+      ],
+      "default": "poison.svg"
+    },
+    "y": {
+      "name": "healing",
+      "display": null,
+      "assets": [
+        "healpad.svg"
+      ],
+      "default": "healpad.svg"
+    },
+    "z": {
+      "name": "slow",
+      "display": null,
+      "assets": [
+        "slowpad.svg"
+      ],
+      "default": "slowpad.svg"
+    },
+    "w": {
+      "name": "fast",
+      "display": null,
+      "assets": [
+        "speedpad.svg"
+      ],
+      "default": "speedpad.svg"
+    },
+    "I": {
+      "name": "indestructible",
+      "display": null,
+      "assets": [
+        "indestructible.svg",
+        "indestructible_bricks.svg"
+      ],
+      "default": "indestructible.svg"
+    },
+    "4": {
+      "name": "powerupCrate",
+      "display": null,
+      "assets": [
+        "power_crate.svg"
+      ],
+      "default": "power_crate.svg"
+    },
+    "q": {
+      "name": "explosive",
+      "display": null,
+      "assets": [
+        "tnt.svg"
+      ],
+      "default": "tnt.svg"
+    },
+    "g": {
+      "name": "siegeBolt",
+      "display": null,
+      "assets": [
+        "bolt_0.svg",
+        "number_1.svg",
+        "number_2.svg",
+        "number_3.svg",
+        "number_4.svg",
+        "number_5.svg",
+        "number_6.svg",
+        "number_7.svg",
+        "number_8.svg",
+        "number_9.svg",
+        "number_10.svg",
+        "number_unk.svg"
+      ],
+      "default": "bolt_0.svg"
+    }
+  }
+}
