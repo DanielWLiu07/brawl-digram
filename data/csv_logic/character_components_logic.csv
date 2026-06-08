@@ -48,7 +48,7 @@
 "","","0","","","","","","","","","","",""
 "Brawler_Gladiator","Brawler_Gladiator","8","","GladiatorProjectileFire","GladiatorFire","","","GladiatorFireHitReadyVfx","","","","",""
 "","","100","","","GladiatorOverchargedUltiAreaEffect","","","GladiatorSpeedBoost","","","","",""
-"","","700","","","GladiatorUltiArenaAreaEffectVfx","","","","","","","",""
+"","","600","","","GladiatorUltiArenaAreaEffectVfx","","","","","","","",""
 "","","1000","","","","","","","","","","",""
 "","","50","","","","","","","","","","",""
 "DragonRider_MountUp","MountUp","","","","","","","DragonRiderUltiSpeed","","","","",""

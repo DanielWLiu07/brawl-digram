@@ -62,3 +62,6 @@
 ,,,"STARR_DROP_CONTAINER#MythicStar","GemOffer",1,100,
 ,,,"STARR_DROP_CONTAINER#LegendaryStar","GemOffer",1,100,
 ,,,"STARR_DROP_CONTAINER#OverchargeStar","GemOffer",1,100,
+"TestMinorRewardPool_TEST_spray_bp_steampunk",,,"TEST_spray_bp_steampunk","SprayPool",1,1,
+"TestMinorRewardPool_TEST_emoji_lny",,,"TEST_emoji_lny","EmotePool",1,1,
+"TestMinorRewardPool_TEST_player_icon_bp_wasteland",,,"TEST_player_icon_bp_wasteland","PlayerThumbnailPool",1,1,
