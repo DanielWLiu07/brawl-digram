@@ -187,6 +187,34 @@
   .verif { display:inline-block; font-size:9px; padding:1px 5px; border-radius:3px; text-transform:uppercase; letter-spacing:.03em; margin-bottom:4px; }
   .verif.yes { background:#0e3b2a; color:#5fd; border:1px solid #1f6f4a; }
   .verif.partial { background:#3b2a0e; color:#f6c64a; border:1px solid #6b5320; }
+  /* Draft tab */
+  .draft-mapline { font-size:12px; color:#cde; padding:8px 10px; background:#0c1422; border:1px solid #1d2b40; border-radius:8px; line-height:1.5; }
+  .draft-mapline b { color:#5fd3ff; }
+  .draft-row { display:grid; grid-template-columns:1fr auto; gap:6px; }
+  .draft-mini { padding:6px 10px !important; font-size:11px !important; margin-top:8px !important; width:auto !important; }
+  .slotrow { display:grid; grid-template-columns:repeat(6, 1fr); gap:4px; }
+  .dslot { aspect-ratio:1; border:2px dashed #2a3b52; border-radius:7px; background:#0a0f17; position:relative; overflow:hidden; cursor:pointer; }
+  .dslot img { width:100%; height:100%; object-fit:cover; display:block; }
+  .dslot.blue { border-color:#2c4869; } .dslot.red { border-color:#5a2c33; }
+  .dslot.filled.blue { border-style:solid; border-color:#5fb0ff; }
+  .dslot.filled.red  { border-style:solid; border-color:#ff6b6b; }
+  .dslot.next { box-shadow:0 0 0 2px #5fd3ff; border-style:solid; }
+  .dslot.ban.filled::after { content:""; position:absolute; inset:0; background:linear-gradient(45deg, transparent 44%, #e11d2daa 46%, #e11d2daa 54%, transparent 56%); }
+  .dslot .who { position:absolute; bottom:0; left:0; right:0; font-size:8px; text-align:center; color:#fff; background:#000a; padding:1px 0; pointer-events:none; }
+  .draft-turn { margin:10px 0 2px; font-size:12px; font-weight:700; color:#5fd3ff; text-align:center; }
+  .sugg { display:flex; align-items:center; gap:8px; padding:6px; border:1px solid #1d2b40; border-radius:8px; margin-top:6px; cursor:pointer; background:#0c1422; }
+  .sugg:hover { border-color:#3a5670; background:#11202f; }
+  .sugg img { width:34px; height:34px; border-radius:6px; object-fit:cover; flex:0 0 34px; }
+  .sugg .sg-main { flex:1; min-width:0; }
+  .sugg .sg-name { font-size:12px; font-weight:700; color:#e8f2fa; }
+  .sugg .sg-terms { display:flex; flex-wrap:wrap; gap:3px; margin-top:3px; }
+  .sugg .sg-score { font-size:14px; font-weight:800; color:#5fd3ff; flex:0 0 auto; }
+  .sugg .sg-score.neg { color:#f87171; }
+  .term { font-size:9px; padding:1px 5px; border-radius:3px; background:#0a0f17; border:1px solid #2a3b52; color:#9ab; white-space:nowrap; }
+  .term.pos { color:#6ee7b7; } .term.neg { color:#fca5a5; }
+  .confb { font-size:9px; padding:0 4px; border-radius:3px; border:1px solid; }
+  .confb.rule { color:#93c5fd; border-color:#1e3a5f; }
+  .confb.comm { color:#fcd34d; border-color:#6b5320; }
   details.stars { margin-top:8px; font-size:11px; color:#9ab; background:#0c1422; border:1px solid #1d2b40; border-radius:4px; padding:6px 10px; }
   details.stars summary { cursor:pointer; color:#cde; }
   details.stars > div { margin-top:6px; line-height:1.5; }
@@ -278,6 +306,7 @@
   <div class="tabs">
     <button class="tab sel" data-tab="brawlers">Brawlers</button>
     <button class="tab" data-tab="tiles">Tiles</button>
+    <button class="tab" data-tab="draft">Draft</button>
   </div>
 
   <div class="panel" id="tabBrawlers">
@@ -323,6 +352,22 @@
     <div id="paintEraser" class="erase">⌫  eraser (open ground)</div>
     <div id="tilebarList"></div>
     <div id="tileDetails"><span class="empty">hover or pick a tile…</span></div>
+  </div>
+
+  <div class="panel" id="tabDraft" hidden>
+    <div id="draftMapLine" class="draft-mapline"></div>
+    <div class="draft-row">
+      <button id="draftFirstPick" class="draft-mini">First pick: Blue</button>
+      <button id="draftReset" class="draft-mini danger">Reset</button>
+    </div>
+    <label style="margin-top:10px">Bans</label>
+    <div id="draftBans" class="slotrow"></div>
+    <label>Picks (1·2·2·1)</label>
+    <div id="draftPicks" class="slotrow"></div>
+    <div id="draftTurn" class="draft-turn"></div>
+    <input type="search" id="draftFilter" class="filter" placeholder="filter suggestions…" autocomplete="off" style="margin-top:8px"/>
+    <div id="draftSuggest"></div>
+    <p class="hint" style="font-size:10px;margin-top:10px">v0 heuristic — scores from map geometry + mode/class rules + a community counter seed. <b>No win-rate data yet.</b> Term tags: <span class="confb rule">rule</span> derived from game data/heuristics · <span class="confb comm">community</span> scraped counter lists, unverified.</p>
   </div>
 </div>
 
@@ -396,7 +441,7 @@ const status = document.getElementById("status");
 const setStatus = (t) => { status.textContent = t; };
 
 // ---- load data ----
-const [mapsDoc, brawlersDoc, kitsDoc, mechanicsDoc, tileIdxDoc, mapNameDoc, brawlifyMapsDoc, mapThemesDoc] = await Promise.all([
+const [mapsDoc, brawlersDoc, kitsDoc, mechanicsDoc, tileIdxDoc, mapNameDoc, brawlifyMapsDoc, mapThemesDoc, draftSeedDoc] = await Promise.all([
   fetch("/data/maps.json").then(r => r.json()),
   fetch("/data/brawlers.json").then(r => r.json()),
   fetch("/data/kits.json").then(r => r.json()).catch(() => ({ kits: {} })),
@@ -405,6 +450,7 @@ const [mapsDoc, brawlersDoc, kitsDoc, mechanicsDoc, tileIdxDoc, mapNameDoc, braw
   fetch("/data/map_name_map.json").then(r => r.json()).catch(() => ({ maps: {} })),
   fetch("/data/brawlify/maps.json").then(r => r.json()).catch(() => ({ data: { list: [] } })),
   fetch("/data/map_themes.json").then(r => r.json()).catch(() => ({ themes: {}, mapTheme: {}, themeToBiome: {} })),
+  fetch("/data/draft_seed.json").then(r => r.json()).catch(() => ({ edges: [] })),
 ]);
 const maps = mapsDoc.maps;
 const brawlers = brawlersDoc.brawlers;
@@ -1571,6 +1617,7 @@ function loadMap(name) {
   redraw();
   setStatus(`${mapLabel(name)} — ${currentMap.width}×${currentMap.height} tiles, ${tokens.length} tokens`);
   saveSceneSoon();
+  if (typeof renderDraft === "function") renderDraft();  // draft scores are map-dependent
 }
 
 // ---- tokens ----
@@ -2614,6 +2661,268 @@ app.renderer.on("resize", () => requestAnimationFrame(() => {
   tokens.forEach(positionSprite);
   redraw();
 }));
+
+// ---- draft advisor v0 (client-side heuristic scorer) ----
+// Scores = mode/class fit + map-geometry fit (computed live from the grid)
+// + counter edges (community seed + rules), confidence-weighted. No
+// win-rate data yet (sources blocked) — every term is labeled rule/community
+// so the output is honest about its basis. Design: docs/draft-advisor-kb-design.md.
+
+// Auto-derived brawler attributes — the "which character is a thrower"
+// layer, straight from baked CSV data, no human input.
+function attrsFor(b) {
+  const atk = b.variants.find(v => /^attack/i.test(v.label)) || b.variants[0] || {};
+  const p = atk.params || {};
+  const range = p.rangeTiles || 0;
+  const thrower = ["placement", "cluster"].includes(atk.shape) && !!atk.passesWalls;
+  return {
+    cls: (b.class && b.class !== "Unknown") ? b.class : null,
+    thrower,
+    range,
+    sniper: range >= 8.5 && !thrower,
+    shortRange: range > 0 && range <= 4.5,
+    tank: (b.hp || 0) >= 4800,
+    fast: (b.speedTilesPerSec || 0) >= 2.6,
+  };
+}
+const ATTRS = new Map(brawlers.map(b => [b.name, attrsFor(b)]));
+const BRAWLER_BY_NAME = new Map(brawlers.map(b => [b.name, b]));
+
+// Class-vs-mode priors (confidence: rule). Hand-tuned, not learned.
+const MODE_FIT = {
+  Gemgrab:     { Controller: .5, Support: .4, "Damage Dealer": .25, Marksman: .2, Artillery: .2, Assassin: -.1 },
+  Wanted:      { Marksman: .6, "Damage Dealer": .25, Artillery: .2, Controller: .1, Support: .1, Assassin: -.25, Tank: -.4 },
+  Knockout:    { Marksman: .55, Artillery: .25, "Damage Dealer": .25, Controller: .15, Support: .1, Assassin: -.15, Tank: -.25 },
+  Bankheist:   { Tank: .45, Assassin: .4, "Damage Dealer": .3, Artillery: .15, Controller: .1, Support: .1, Marksman: -.15 },
+  Laserball:   { Tank: .55, Assassin: .4, Support: .25, "Damage Dealer": .2, Controller: .1, Marksman: -.3, Artillery: -.35 },
+  BrawlBallV2: { Tank: .55, Assassin: .4, Support: .25, "Damage Dealer": .2, Controller: .1, Marksman: -.3, Artillery: -.35 },
+  AirHockey:   { Tank: .55, Assassin: .4, Support: .25, "Damage Dealer": .2, Controller: .1, Marksman: -.3, Artillery: -.35 },
+  KingOfHill:  { Controller: .55, Artillery: .35, Tank: .3, Support: .3, "Damage Dealer": .2, Assassin: -.2 },
+};
+
+// Counter edges: {a, b, delta, reason, confidence} = "b beats a".
+const CONF_W = { pro: 1.0, stats: 0.9, community: 0.6, rule: 0.4 };
+const counterEdges = (draftSeedDoc.edges || []).slice();
+// Rule-seeded edges from auto-derived attributes.
+for (const [an, a] of ATTRS) {
+  for (const [bn, b] of ATTRS) {
+    if (an === bn) continue;
+    if ((a.tank || a.shortRange) && b.thrower) {
+      counterEdges.push({ a: an, b: bn, delta: 0.2, confidence: "rule",
+        reason: "lobbed shots punish short-range brawlers from behind walls" });
+    }
+    if (a.sniper && b.cls === "Assassin" && b.fast) {
+      counterEdges.push({ a: an, b: bn, delta: 0.2, confidence: "rule",
+        reason: "fast gap-closers punish immobile long range" });
+    }
+  }
+}
+// Index: "loser|winner" → summed weighted delta + reasons.
+const edgeIdx = new Map();
+for (const e of counterEdges) {
+  const k = `${e.a}|${e.b}`;
+  const w = (CONF_W[e.confidence] ?? 0.5) * e.delta;
+  const cur = edgeIdx.get(k) || { v: 0, conf: e.confidence, reason: e.reason };
+  cur.v += w;
+  if ((CONF_W[e.confidence] ?? 0) > (CONF_W[cur.conf] ?? 0)) { cur.conf = e.confidence; cur.reason = e.reason; }
+  edgeIdx.set(k, cur);
+}
+
+// Live map geometry from the current grid (works for painted edits too).
+function mapDescriptors() {
+  let wall = 0, bush = 0, water = 0, cells = 0;
+  for (const row of currentMap.grid) {
+    for (const ch of row) {
+      cells++;
+      if (ch === "W" || ch === "V") water++;
+      else if (bushSet.has(ch)) bush++;
+      else if (blockMoveSet.has(ch)) wall++;
+    }
+  }
+  cells = Math.max(cells, 1);
+  return { wallPct: wall / cells, bushPct: bush / cells, waterPct: water / cells,
+           open: 1 - (wall + bush + water) / cells };
+}
+
+const fmtV = (v) => (v >= 0 ? "+" : "") + (Math.round(v * 100) / 100);
+
+// Score one candidate. side = team the pick is FOR; for bans, side = the
+// banning team and the score measures threat against them.
+function scoreCandidate(name, side, phase, desc) {
+  const a = ATTRS.get(name) || {};
+  const mode = currentMap.mode || "";
+  const terms = [];
+  const mf = a.cls ? ((MODE_FIT[mode] || {})[a.cls] || 0) : 0;
+  if (mf) terms.push({ t: `${a.cls} in mode`, v: mf, conf: "rule" });
+  if (a.thrower) {
+    const v = 2.6 * desc.wallPct + 0.8 * desc.bushPct - 0.45;
+    terms.push({ t: "thrower × walls", v, conf: "rule" });
+  }
+  if (a.sniper) {
+    const v = 2.0 * desc.open - 1.35;
+    terms.push({ t: "sniper × open lanes", v, conf: "rule" });
+  }
+  if (a.tank || a.shortRange) {
+    const v = 2.0 * desc.bushPct + 1.2 * desc.wallPct - 0.35;
+    terms.push({ t: "close range × cover", v, conf: "rule" });
+  }
+  const enemy = side === "blue" ? "red" : "blue";
+  if (phase === "pick") {
+    for (const en of draft.picks[enemy]) {
+      const beats = edgeIdx.get(`${en}|${name}`);            // candidate beats enemy pick
+      if (beats) terms.push({ t: `vs ${en}`, v: beats.v, conf: beats.conf, why: beats.reason });
+      const beaten = edgeIdx.get(`${name}|${en}`);           // enemy pick beats candidate
+      if (beaten) terms.push({ t: `${en} counters`, v: -beaten.v, conf: beaten.conf, why: beaten.reason });
+    }
+    // comp coverage with allies
+    const allies = draft.picks[side].map(n => ATTRS.get(n) || {});
+    if (a.tank && !allies.some(x => x.tank)) terms.push({ t: "adds tank", v: 0.25, conf: "rule" });
+    if (a.range >= 8 && !allies.some(x => x.range >= 8)) terms.push({ t: "adds range", v: 0.25, conf: "rule" });
+    if ((a.cls === "Controller" || a.cls === "Support") &&
+        !allies.some(x => x.cls === "Controller" || x.cls === "Support")) {
+      terms.push({ t: "adds control", v: 0.25, conf: "rule" });
+    }
+    if (a.cls && allies.filter(x => x.cls === a.cls).length >= 2) {
+      terms.push({ t: `3rd ${a.cls}`, v: -0.4, conf: "rule" });
+    }
+  } else {
+    // Ban: how much would this candidate hurt US if the enemy gets it.
+    for (const us of draft.picks[side]) {
+      const beats = edgeIdx.get(`${us}|${name}`);
+      if (beats) terms.push({ t: `threatens ${us}`, v: beats.v, conf: beats.conf, why: beats.reason });
+    }
+  }
+  return { name, terms, total: terms.reduce((s, x) => s + x.v, 0) };
+}
+
+// ---- draft state machine: 6 alternating bans, then 1-2-2-1 picks ----
+let draft = { firstPick: "blue", bans: { blue: [], red: [] }, picks: { blue: [], red: [] } };
+const BAN_ORDER = ["blue", "red", "blue", "red", "blue", "red"];
+function pickOrder() {
+  const f = draft.firstPick, o = f === "blue" ? "red" : "blue";
+  return [f, o, o, f, f, o];
+}
+function draftTurn() {
+  const nb = draft.bans.blue.length + draft.bans.red.length;
+  if (nb < 6) return { phase: "ban", team: BAN_ORDER[nb] };
+  const np = draft.picks.blue.length + draft.picks.red.length;
+  if (np < 6) return { phase: "pick", team: pickOrder()[np] };
+  return { phase: "done", team: null };
+}
+function draftTaken() {
+  return new Set([...draft.bans.blue, ...draft.bans.red, ...draft.picks.blue, ...draft.picks.red]);
+}
+
+function portraitUrlFor(name) {
+  const b = BRAWLER_BY_NAME.get(name);
+  return b && b.assets ? encodeURI(b.assets.portrait || b.assets.render || b.assets.emoji || "") : "";
+}
+
+function renderDraft() {
+  const host = document.getElementById("draftSuggest");
+  if (!host || !currentMap) return;
+  const desc = mapDescriptors();
+  const turn = draftTurn();
+  document.getElementById("draftMapLine").innerHTML =
+    `<b>${mapLabel(currentMap.name)}</b> · ${currentMap.mode}<br>` +
+    `walls ${(desc.wallPct*100).toFixed(0)}% · bushes ${(desc.bushPct*100).toFixed(0)}% · ` +
+    `water ${(desc.waterPct*100).toFixed(0)}% · open ${(desc.open*100).toFixed(0)}%`;
+  document.getElementById("draftFirstPick").textContent =
+    `First pick: ${draft.firstPick === "blue" ? "Blue" : "Red"}`;
+
+  // ban + pick slot rows
+  const banHost = document.getElementById("draftBans");
+  const pickHost = document.getElementById("draftPicks");
+  banHost.innerHTML = ""; pickHost.innerHTML = "";
+  const mkSlot = (team, name, kind, isNext) => {
+    const el = document.createElement("div");
+    el.className = `dslot ${kind} ${team}` + (name ? " filled" : "") + (isNext ? " next" : "");
+    if (name) {
+      const img = document.createElement("img");
+      img.src = portraitUrlFor(name); img.alt = name;
+      el.appendChild(img);
+      const who = document.createElement("div"); who.className = "who"; who.textContent = name;
+      el.appendChild(who);
+      el.title = `${name} — click to remove`;
+      el.addEventListener("click", () => {
+        const arr = draft[kind === "ban" ? "bans" : "picks"][team];
+        const i = arr.indexOf(name);
+        if (i >= 0) arr.splice(i, 1);
+        renderDraft();
+      });
+    }
+    return el;
+  };
+  BAN_ORDER.forEach((team, i) => {
+    const idx = BAN_ORDER.slice(0, i).filter(t => t === team).length;
+    banHost.appendChild(mkSlot(team, draft.bans[team][idx], "ban",
+      turn.phase === "ban" && i === draft.bans.blue.length + draft.bans.red.length));
+  });
+  pickOrder().forEach((team, i) => {
+    const idx = pickOrder().slice(0, i).filter(t => t === team).length;
+    pickHost.appendChild(mkSlot(team, draft.picks[team][idx], "pick",
+      turn.phase === "pick" && i === draft.picks.blue.length + draft.picks.red.length));
+  });
+
+  const turnEl = document.getElementById("draftTurn");
+  turnEl.textContent = turn.phase === "done" ? "Draft complete"
+    : `${turn.team === "blue" ? "🔵 Blue" : "🔴 Red"} ${turn.phase === "ban" ? "bans" : "picks"} — suggestions below`;
+  turnEl.style.color = turn.phase === "done" ? "#6ee7b7" : (turn.team === "blue" ? "#5fb0ff" : "#ff6b6b");
+
+  // suggestions
+  host.innerHTML = "";
+  if (turn.phase === "done") return;
+  const taken = draftTaken();
+  const filter = (document.getElementById("draftFilter").value || "").trim().toLowerCase();
+  let scored = brawlers
+    .filter(b => !taken.has(b.name))
+    .filter(b => !filter || b.name.toLowerCase().includes(filter))
+    .map(b => scoreCandidate(b.name, turn.team, turn.phase, desc))
+    .sort((x, y) => y.total - x.total);
+  if (!filter) scored = scored.slice(0, 8);
+  for (const s of scored.slice(0, 20)) {
+    const row = document.createElement("div");
+    row.className = "sugg";
+    const img = document.createElement("img");
+    img.src = portraitUrlFor(s.name); img.alt = s.name;
+    row.appendChild(img);
+    const main = document.createElement("div"); main.className = "sg-main";
+    const nm = document.createElement("div"); nm.className = "sg-name"; nm.textContent = s.name;
+    main.appendChild(nm);
+    const tr = document.createElement("div"); tr.className = "sg-terms";
+    for (const t of s.terms.slice(0, 4)) {
+      if (Math.abs(t.v) < 0.03) continue;
+      const chip = document.createElement("span");
+      chip.className = "term " + (t.v >= 0 ? "pos" : "neg");
+      chip.textContent = `${t.t} ${fmtV(t.v)} · ${t.conf === "community" ? "comm" : t.conf}`;
+      if (t.why) chip.title = t.why;
+      tr.appendChild(chip);
+    }
+    main.appendChild(tr);
+    row.appendChild(main);
+    const sc = document.createElement("div");
+    sc.className = "sg-score" + (s.total < 0 ? " neg" : "");
+    sc.textContent = fmtV(s.total);
+    row.appendChild(sc);
+    row.title = s.terms.map(t => `${t.t}: ${fmtV(t.v)} (${t.conf})${t.why ? " — " + t.why : ""}`).join("\n") || "no signals — neutral pick";
+    row.addEventListener("click", () => {
+      draft[turn.phase === "ban" ? "bans" : "picks"][turn.team].push(s.name);
+      document.getElementById("draftFilter").value = "";
+      renderDraft();
+    });
+    host.appendChild(row);
+  }
+}
+document.getElementById("draftFirstPick").addEventListener("click", () => {
+  draft.firstPick = draft.firstPick === "blue" ? "red" : "blue";
+  renderDraft();
+});
+document.getElementById("draftReset").addEventListener("click", () => {
+  draft = { firstPick: draft.firstPick, bans: { blue: [], red: [] }, picks: { blue: [], red: [] } };
+  renderDraft();
+});
+document.getElementById("draftFilter").addEventListener("input", renderDraft);
+document.querySelector('.tab[data-tab="draft"]').addEventListener("click", renderDraft);
 
 // ---- boot ----
 document.getElementById("pickedPortrait").src = PORTRAIT_PLACEHOLDER;
