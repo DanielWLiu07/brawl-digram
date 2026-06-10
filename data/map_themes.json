@@ -1,0 +1,2782 @@
+{
+  "source": "csv_logic/locations.csv + location_themes.csv (game data)",
+  "themes": {
+    "Retropolis": {
+      "tileSetPrefix": "retropolis_",
+      "bgColor": [
+        90,
+        66,
+        111
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Retropolis_battle",
+      "disabled": true
+    },
+    "OldTown": {
+      "tileSetPrefix": "town_",
+      "bgColor": [
+        148,
+        90,
+        115
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "BattleMusic",
+      "disabled": true
+    },
+    "OldTownLNY": {
+      "tileSetPrefix": "town_",
+      "bgColor": [
+        148,
+        90,
+        115
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Cny_levels",
+      "disabled": true
+    },
+    "OldTownTutorial": {
+      "tileSetPrefix": "town_",
+      "bgColor": [
+        148,
+        90,
+        115
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "BattleMusic",
+      "disabled": false
+    },
+    "Mine": {
+      "tileSetPrefix": "mine_",
+      "bgColor": [
+        96,
+        68,
+        84
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "BattleMusic",
+      "disabled": false
+    },
+    "MineTrainTracks": {
+      "tileSetPrefix": "mine_",
+      "bgColor": [
+        96,
+        68,
+        84
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "BattleMusic",
+      "disabled": false
+    },
+    "Warehouse": {
+      "tileSetPrefix": "town_",
+      "bgColor": [
+        148,
+        90,
+        115
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 27,
+      "mapHeight": 39,
+      "music": "BattleMusic",
+      "disabled": true
+    },
+    "Oasis": {
+      "tileSetPrefix": "oasis_",
+      "bgColor": [
+        234,
+        180,
+        119
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "BattleMusic",
+      "disabled": true
+    },
+    "OasisBeach": {
+      "tileSetPrefix": "grassfield_",
+      "bgColor": [
+        60,
+        150,
+        87
+      ],
+      "skyColor": [
+        15,
+        150,
+        223
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "BattleMusic",
+      "disabled": true
+    },
+    "Mortuary": {
+      "tileSetPrefix": "mortuary_",
+      "bgColor": [
+        74,
+        52,
+        82
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Halloween_ingame",
+      "disabled": false
+    },
+    "MortuaryHW": {
+      "tileSetPrefix": "mortuary_",
+      "bgColor": [
+        74,
+        52,
+        82
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Halloween_ingame",
+      "disabled": true
+    },
+    "MortuaryShowdown": {
+      "tileSetPrefix": "mortuary_",
+      "bgColor": [
+        74,
+        52,
+        82
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 60,
+      "mapHeight": 60,
+      "music": "Halloween_ingame",
+      "disabled": false
+    },
+    "MortuaryIslandShowdown": {
+      "tileSetPrefix": "mortuary_",
+      "bgColor": [
+        74,
+        52,
+        82
+      ],
+      "skyColor": [
+        9,
+        193,
+        62
+      ],
+      "mapWidth": 60,
+      "mapHeight": 60,
+      "music": "Halloween_ingame",
+      "disabled": false
+    },
+    "MortuaryShowdownHW": {
+      "tileSetPrefix": "mortuary_",
+      "bgColor": [
+        74,
+        52,
+        82
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 60,
+      "mapHeight": 60,
+      "music": "Halloween_ingame",
+      "disabled": true
+    },
+    "Grassfield": {
+      "tileSetPrefix": "oasis_",
+      "bgColor": [
+        60,
+        150,
+        87
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "BattleMusic",
+      "disabled": false
+    },
+    "GrassfieldBeachBall": {
+      "tileSetPrefix": "grassfield_",
+      "bgColor": [
+        60,
+        150,
+        87
+      ],
+      "skyColor": [
+        15,
+        150,
+        223
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "BattleMusic",
+      "disabled": true
+    },
+    "Default": {
+      "tileSetPrefix": "",
+      "bgColor": [
+        249,
+        166,
+        117
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "BattleMusic",
+      "disabled": false
+    },
+    "DefaultShowdown": {
+      "tileSetPrefix": "",
+      "bgColor": [
+        249,
+        166,
+        117
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 60,
+      "mapHeight": 60,
+      "music": "BattleMusic",
+      "disabled": false
+    },
+    "IslandShowdown": {
+      "tileSetPrefix": "",
+      "bgColor": [
+        249,
+        166,
+        117
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "BattleMusic",
+      "disabled": false
+    },
+    "DarrylsShip": {
+      "tileSetPrefix": "darryls_",
+      "bgColor": [
+        224,
+        122,
+        89
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Pirate_Brawl_Ingame",
+      "disabled": true
+    },
+    "DarrylsXmas": {
+      "tileSetPrefix": "darryls_",
+      "bgColor": [
+        224,
+        122,
+        89
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Pirate_Brawl_Ingame",
+      "disabled": true
+    },
+    "Arcade": {
+      "tileSetPrefix": "arcade_",
+      "bgColor": [
+        50,
+        44,
+        79
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Brawlcade_Ingame",
+      "disabled": false
+    },
+    "BBArena": {
+      "tileSetPrefix": "bbarena_",
+      "bgColor": [
+        60,
+        150,
+        87
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Footbrawl_ingame_muzak",
+      "disabled": false
+    },
+    "Bazaar": {
+      "tileSetPrefix": "bazaar_",
+      "bgColor": [
+        186,
+        92,
+        85
+      ],
+      "skyColor": [
+        148,
+        187,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Brawzaar_ingame_muzak",
+      "disabled": true
+    },
+    "Minicity": {
+      "tileSetPrefix": "minicity_",
+      "bgColor": [
+        60,
+        61,
+        87
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Monsterbrawl_ingame_muzak",
+      "disabled": true
+    },
+    "GiftShop": {
+      "tileSetPrefix": "giftshop_",
+      "bgColor": [
+        133,
+        70,
+        86
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Giftshop_Level_Music",
+      "disabled": false
+    },
+    "BandStand": {
+      "tileSetPrefix": "bandstand_",
+      "bgColor": [
+        247,
+        148,
+        100
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Poco_Band_Ingame",
+      "disabled": false
+    },
+    "BandStandHW": {
+      "tileSetPrefix": "bandstand_",
+      "bgColor": [
+        247,
+        148,
+        100
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Poco_Band_Ingame",
+      "disabled": true
+    },
+    "SnowtelXmas": {
+      "tileSetPrefix": "snowtel_",
+      "bgColor": [
+        50,
+        70,
+        115
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Snowtel_Ingame",
+      "disabled": true
+    },
+    "Snowtel": {
+      "tileSetPrefix": "snowtel_",
+      "bgColor": [
+        50,
+        70,
+        115
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Snowtel_Ingame",
+      "disabled": true
+    },
+    "Scrapyard": {
+      "tileSetPrefix": "scrapyard_",
+      "bgColor": [
+        48,
+        42,
+        79
+      ],
+      "skyColor": [
+        7,
+        26,
+        60
+      ],
+      "mapWidth": 27,
+      "mapHeight": 39,
+      "music": "Scrapyard_ingame_music",
+      "disabled": false
+    },
+    "StarrForce": {
+      "tileSetPrefix": "starrforce_",
+      "bgColor": [
+        28,
+        57,
+        99
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Space_Brawl_Ingame",
+      "disabled": true
+    },
+    "ActionShow": {
+      "tileSetPrefix": "actionshow_",
+      "bgColor": [
+        249,
+        166,
+        117
+      ],
+      "skyColor": [
+        148,
+        187,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Action_Western_Ingame",
+      "disabled": true
+    },
+    "WaterPark": {
+      "tileSetPrefix": "waterpark_",
+      "bgColor": [
+        254,
+        171,
+        198
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Summer_Brawl_Ingame_Music",
+      "disabled": true
+    },
+    "ArcadeBasket": {
+      "tileSetPrefix": "arcade_",
+      "bgColor": [
+        50,
+        44,
+        79
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Brawlcade_Ingame",
+      "disabled": true
+    },
+    "BBArenaVolley": {
+      "tileSetPrefix": "bbarena_",
+      "bgColor": [
+        60,
+        150,
+        87
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Footbrawl_ingame_muzak",
+      "disabled": false
+    },
+    "CastleCourtyard": {
+      "tileSetPrefix": "castlecourtyard_",
+      "bgColor": [
+        73,
+        68,
+        99
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Courtyard_Ingame",
+      "disabled": true
+    },
+    "Brawlywood": {
+      "tileSetPrefix": "brawlywood_",
+      "bgColor": [
+        175,
+        116,
+        135
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Brawlywood_Ingame",
+      "disabled": true
+    },
+    "FightingGame": {
+      "tileSetPrefix": "fightinggame_",
+      "bgColor": [
+        186,
+        123,
+        86
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Retro_Fight_Ingame",
+      "disabled": true
+    },
+    "Biodome": {
+      "tileSetPrefix": "biodome_",
+      "bgColor": [
+        36,
+        69,
+        126
+      ],
+      "skyColor": null,
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Biodome_Ingame",
+      "disabled": false
+    },
+    "StuntShow": {
+      "tileSetPrefix": "stuntshow_",
+      "bgColor": [
+        47,
+        44,
+        96
+      ],
+      "skyColor": [
+        15,
+        24,
+        70
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Pinstuntbrawl_Ingame",
+      "disabled": true
+    },
+    "StuntShowBB": {
+      "tileSetPrefix": "stuntshow_",
+      "bgColor": [
+        47,
+        44,
+        96
+      ],
+      "skyColor": [
+        15,
+        24,
+        70
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Pinstuntbrawl_Ingame",
+      "disabled": true
+    },
+    "DeepSea": {
+      "tileSetPrefix": "deepsea_",
+      "bgColor": [
+        55,
+        46,
+        70
+      ],
+      "skyColor": null,
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Underwater_Braw_Ingame",
+      "disabled": true
+    },
+    "RobotFactory": {
+      "tileSetPrefix": "robotfactory_",
+      "bgColor": [
+        127,
+        53,
+        83
+      ],
+      "skyColor": [
+        25,
+        25,
+        50
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Robotfactory_Ingame",
+      "disabled": true
+    },
+    "RobotFactoryShowdown": {
+      "tileSetPrefix": "robotfactory_",
+      "bgColor": [
+        127,
+        53,
+        83
+      ],
+      "skyColor": [
+        25,
+        25,
+        50
+      ],
+      "mapWidth": 60,
+      "mapHeight": 60,
+      "music": "Robotfactory_Ingame",
+      "disabled": true
+    },
+    "GhostMetro": {
+      "tileSetPrefix": "ghostmetro_",
+      "bgColor": [
+        55,
+        57,
+        112
+      ],
+      "skyColor": [
+        24,
+        27,
+        57
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Ghosttrain_Ingame",
+      "disabled": true
+    },
+    "CandyStand": {
+      "tileSetPrefix": "candystand_",
+      "bgColor": [
+        56,
+        125,
+        137
+      ],
+      "skyColor": [
+        64,
+        122,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Candyland_Ingame",
+      "disabled": true
+    },
+    "Hub": {
+      "tileSetPrefix": "hub_",
+      "bgColor": [
+        158,
+        85,
+        113
+      ],
+      "skyColor": [
+        3,
+        8,
+        58
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Lounge_Hub_Ingame",
+      "disabled": false
+    },
+    "Rooftop": {
+      "tileSetPrefix": "rooftop_",
+      "bgColor": [
+        50,
+        44,
+        79
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Brawlcade_Ingame",
+      "disabled": false
+    },
+    "RumbleJungle": {
+      "tileSetPrefix": "rumblejungle_",
+      "bgColor": [
+        111,
+        77,
+        55
+      ],
+      "skyColor": [
+        44,
+        143,
+        226
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Brawl_Jungle_Ingame",
+      "disabled": true
+    },
+    "ArcadeShowdown": {
+      "tileSetPrefix": "arcade_",
+      "bgColor": [
+        50,
+        44,
+        79
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 0,
+      "mapHeight": 0,
+      "music": "Brawlcade_Ingame",
+      "disabled": false
+    },
+    "StuntShowdown": {
+      "tileSetPrefix": "stuntshow_",
+      "bgColor": [
+        47,
+        44,
+        96
+      ],
+      "skyColor": [
+        15,
+        24,
+        70
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Pinstuntbrawl_Ingame",
+      "disabled": true
+    },
+    "StuntShowVolley": {
+      "tileSetPrefix": "stuntshow_",
+      "bgColor": [
+        47,
+        44,
+        96
+      ],
+      "skyColor": [
+        15,
+        24,
+        70
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Pinstuntbrawl_Ingame",
+      "disabled": true
+    },
+    "EnchantedForest": {
+      "tileSetPrefix": "enchantedforest_",
+      "bgColor": [
+        129,
+        31,
+        55
+      ],
+      "skyColor": [
+        24,
+        27,
+        57
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Brawl_Enchanted_Forest_Ingame",
+      "disabled": true
+    },
+    "RangerRanch": {
+      "tileSetPrefix": "rangerranch_",
+      "bgColor": [
+        249,
+        166,
+        117
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Wasteland_Ingame",
+      "disabled": true
+    },
+    "BizarreCircus": {
+      "tileSetPrefix": "bizarrecircus_",
+      "bgColor": [
+        82,
+        21,
+        83
+      ],
+      "skyColor": [
+        5,
+        8,
+        36
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Circus_Ingame",
+      "disabled": true
+    },
+    "BizarreCircusIslandShowdown": {
+      "tileSetPrefix": "bizarrecircus_",
+      "bgColor": [
+        82,
+        21,
+        83
+      ],
+      "skyColor": [
+        64,
+        185,
+        190
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Circus_Ingame",
+      "disabled": true
+    },
+    "CoinFactory": {
+      "tileSetPrefix": "coinfactory_",
+      "bgColor": [
+        127,
+        53,
+        83
+      ],
+      "skyColor": [
+        25,
+        25,
+        50
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Piggybank_Ingame",
+      "disabled": true
+    },
+    "CoinFactoryBB": {
+      "tileSetPrefix": "coinfactory_",
+      "bgColor": [
+        127,
+        53,
+        83
+      ],
+      "skyColor": [
+        25,
+        25,
+        50
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Piggybank_Ingame",
+      "disabled": true
+    },
+    "IceIslandShowdownBB": {
+      "tileSetPrefix": "iceisland_",
+      "bgColor": [
+        47,
+        62,
+        99
+      ],
+      "skyColor": [
+        24,
+        138,
+        186
+      ],
+      "mapWidth": 60,
+      "mapHeight": 60,
+      "music": "Snow_brawl",
+      "disabled": true
+    },
+    "IceIslandShowdown": {
+      "tileSetPrefix": "iceisland_",
+      "bgColor": [
+        47,
+        62,
+        99
+      ],
+      "skyColor": [
+        24,
+        138,
+        186
+      ],
+      "mapWidth": 60,
+      "mapHeight": 60,
+      "music": "Snow_brawl",
+      "disabled": true
+    },
+    "StarrToonsStudio": {
+      "tileSetPrefix": "starrtoons_",
+      "bgColor": [
+        56,
+        125,
+        137
+      ],
+      "skyColor": [
+        64,
+        122,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Brawly_Toonz_Ingame",
+      "disabled": false
+    },
+    "LoveSwamp": {
+      "tileSetPrefix": "loveswamp_",
+      "bgColor": [
+        65,
+        40,
+        98
+      ],
+      "skyColor": [
+        69,
+        27,
+        80
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Loveswamp_Ingame",
+      "disabled": true
+    },
+    "BazaarIslandShowdown": {
+      "tileSetPrefix": "bazaar_",
+      "bgColor": [
+        186,
+        92,
+        85
+      ],
+      "skyColor": [
+        148,
+        187,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Brawzaar_ingame_muzak",
+      "disabled": true
+    },
+    "MadEvilManor": {
+      "tileSetPrefix": "madevilmanor_",
+      "bgColor": [
+        35,
+        51,
+        76
+      ],
+      "skyColor": [
+        101,
+        27,
+        37
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Draco_Madevil_Ingame",
+      "disabled": false
+    },
+    "MadEvilIslandShowdown": {
+      "tileSetPrefix": "madevilmanor_",
+      "bgColor": [
+        35,
+        51,
+        76
+      ],
+      "skyColor": [
+        101,
+        27,
+        37
+      ],
+      "mapWidth": 60,
+      "mapHeight": 60,
+      "music": "Draco_Madevil_Ingame",
+      "disabled": false
+    },
+    "MadEvilDungeonShowdown": {
+      "tileSetPrefix": "madevilmanor_",
+      "bgColor": [
+        35,
+        51,
+        76
+      ],
+      "skyColor": [
+        0,
+        0,
+        0
+      ],
+      "mapWidth": 60,
+      "mapHeight": 60,
+      "music": "Draco_Madevil_Ingame",
+      "disabled": false
+    },
+    "Godzilla": {
+      "tileSetPrefix": "godzilla_",
+      "bgColor": [
+        70,
+        70,
+        80
+      ],
+      "skyColor": [
+        64,
+        122,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Godzilla_Ingame",
+      "disabled": true
+    },
+    "GodzillaIslandShowdown": {
+      "tileSetPrefix": "godzilla_",
+      "bgColor": [
+        70,
+        70,
+        80
+      ],
+      "skyColor": [
+        31,
+        151,
+        223
+      ],
+      "mapWidth": 60,
+      "mapHeight": 60,
+      "music": "Godzilla_Ingame",
+      "disabled": true
+    },
+    "MadEvilManorShowdown": {
+      "tileSetPrefix": "madevilmanor_",
+      "bgColor": [
+        35,
+        51,
+        76
+      ],
+      "skyColor": [
+        101,
+        27,
+        37
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Draco_Madevil_Ingame",
+      "disabled": false
+    },
+    "Spongebob": {
+      "tileSetPrefix": "spongebob_",
+      "bgColor": [
+        175,
+        202,
+        172
+      ],
+      "skyColor": [
+        64,
+        122,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Spongebrawl_Ingame",
+      "disabled": true
+    },
+    "SpongebobBB": {
+      "tileSetPrefix": "spongebob_",
+      "bgColor": [
+        175,
+        202,
+        172
+      ],
+      "skyColor": [
+        64,
+        122,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Spongebrawl_Ingame",
+      "disabled": true
+    },
+    "SpongebobShowdown": {
+      "tileSetPrefix": "spongebob_",
+      "bgColor": [
+        175,
+        202,
+        172
+      ],
+      "skyColor": [
+        64,
+        122,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Spongebrawl_Ingame",
+      "disabled": true
+    },
+    "SpongebobIslandShowdown": {
+      "tileSetPrefix": "spongebob_",
+      "bgColor": [
+        175,
+        202,
+        172
+      ],
+      "skyColor": [
+        64,
+        122,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Spongebrawl_Ingame",
+      "disabled": true
+    },
+    "MortuaryVolley": {
+      "tileSetPrefix": "mortuary_",
+      "bgColor": [
+        74,
+        52,
+        82
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Halloween_ingame",
+      "disabled": true
+    },
+    "OdditiesShop": {
+      "tileSetPrefix": "odditiesshop_",
+      "bgColor": [
+        89,
+        38,
+        73
+      ],
+      "skyColor": [
+        68,
+        4,
+        60
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Juju_Ingame_Music",
+      "disabled": false
+    },
+    "KatanaKingdom": {
+      "tileSetPrefix": "katanakingdom_",
+      "bgColor": [
+        89,
+        38,
+        73
+      ],
+      "skyColor": [
+        68,
+        4,
+        60
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Feudal_Japan_Ingame_Music",
+      "disabled": true
+    },
+    "KatanaKingdomShowdown": {
+      "tileSetPrefix": "katanakingdom_",
+      "bgColor": [
+        89,
+        38,
+        73
+      ],
+      "skyColor": [
+        68,
+        4,
+        60
+      ],
+      "mapWidth": 60,
+      "mapHeight": 60,
+      "music": "Feudal_Japan_Ingame_Music",
+      "disabled": true
+    },
+    "KatanaKingdomIslandShowdown": {
+      "tileSetPrefix": "katanakingdom_",
+      "bgColor": [
+        89,
+        38,
+        73
+      ],
+      "skyColor": [
+        68,
+        4,
+        60
+      ],
+      "mapWidth": 60,
+      "mapHeight": 60,
+      "music": "Feudal_Japan_Ingame_Music",
+      "disabled": true
+    },
+    "AirHockey": {
+      "tileSetPrefix": "airhockey_",
+      "bgColor": [
+        131,
+        182,
+        235
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "BattleMusic",
+      "disabled": false
+    },
+    "Skatepark": {
+      "tileSetPrefix": "skatepark_",
+      "bgColor": [
+        74,
+        52,
+        82
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Skatebeat_Ingame_Music",
+      "disabled": true
+    },
+    "Pyramidquest": {
+      "tileSetPrefix": "pyramidquest_",
+      "bgColor": [
+        110,
+        69,
+        30
+      ],
+      "skyColor": [
+        64,
+        122,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "BattleMusic",
+      "disabled": false
+    },
+    "HockeyIslandShowdownBB": {
+      "tileSetPrefix": "airhockey_",
+      "bgColor": [
+        131,
+        182,
+        235
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "BattleMusic",
+      "disabled": false
+    },
+    "TropicalIslandShowdown": {
+      "tileSetPrefix": "tropicalisland_",
+      "bgColor": [
+        75,
+        92,
+        24
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 60,
+      "mapHeight": 60,
+      "music": "BattleMusic",
+      "disabled": false
+    },
+    "TropicalIslandShowdownBB": {
+      "tileSetPrefix": "tropicalisland_",
+      "bgColor": [
+        75,
+        92,
+        24
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 60,
+      "mapHeight": 60,
+      "music": "BattleMusic",
+      "disabled": false
+    },
+    "SubwaySurfers": {
+      "tileSetPrefix": "subwaysurfers_",
+      "bgColor": [
+        197,
+        106,
+        73
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Brawlsurfers_Ingame",
+      "disabled": true
+    },
+    "SubwaySurfersShowdown": {
+      "tileSetPrefix": "subwaysurfers_",
+      "bgColor": [
+        197,
+        106,
+        73
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Brawlsurfers_Ingame",
+      "disabled": true
+    },
+    "StrangerThings": {
+      "tileSetPrefix": "strangerthings_",
+      "bgColor": [
+        83,
+        61,
+        113
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Stranger_Brawl_Ingame_01",
+      "disabled": true
+    },
+    "StrangerThingsIslandLabShowdown": {
+      "tileSetPrefix": "strangerthingslab_",
+      "bgColor": [
+        95,
+        123,
+        115
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Stranger_Brawl_Ingame_02",
+      "disabled": true
+    },
+    "StrangerThingsIslandForestShowdown": {
+      "tileSetPrefix": "strangerthingsforest_",
+      "bgColor": [
+        10,
+        56,
+        87
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Stranger_Brawl_Ingame_01",
+      "disabled": true
+    },
+    "StrangerThingsIslandLairShowdown": {
+      "tileSetPrefix": "strangerthingslair_",
+      "bgColor": [
+        121,
+        52,
+        68
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Stranger_Brawl_Ingame_03",
+      "disabled": true
+    },
+    "StrangerThingsLabShowdown": {
+      "tileSetPrefix": "strangerthingslab_",
+      "bgColor": [
+        95,
+        123,
+        115
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Stranger_Brawl_Ingame_02",
+      "disabled": true
+    },
+    "StrangerThingsForestShowdown": {
+      "tileSetPrefix": "strangerthingsforest_",
+      "bgColor": [
+        10,
+        56,
+        87
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Stranger_Brawl_Ingame_01",
+      "disabled": true
+    },
+    "StrangerThingsLairShowdown": {
+      "tileSetPrefix": "strangerthingslair_",
+      "bgColor": [
+        121,
+        52,
+        68
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Stranger_Brawl_Ingame_03",
+      "disabled": true
+    },
+    "SeaMonsters": {
+      "tileSetPrefix": "seamonsters_",
+      "bgColor": [
+        42,
+        39,
+        88
+      ],
+      "skyColor": [
+        30,
+        22,
+        44
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Glowbert_Ingame",
+      "disabled": true
+    },
+    "LoveSwampShowdown": {
+      "tileSetPrefix": "loveswamp_",
+      "bgColor": [
+        65,
+        40,
+        98
+      ],
+      "skyColor": [
+        69,
+        27,
+        80
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Loveswamp_Ingame",
+      "disabled": true
+    },
+    "LoveSwampIslandShowdown": {
+      "tileSetPrefix": "loveswamp_",
+      "bgColor": [
+        65,
+        40,
+        98
+      ],
+      "skyColor": [
+        69,
+        27,
+        80
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Loveswamp_Ingame",
+      "disabled": true
+    },
+    "StarrToonsStudioShowdown": {
+      "tileSetPrefix": "starrtoons_",
+      "bgColor": [
+        56,
+        125,
+        137
+      ],
+      "skyColor": [
+        64,
+        122,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Brawly_Toonz_Ingame",
+      "disabled": false
+    },
+    "StarrToonsStudioIslandShowdown": {
+      "tileSetPrefix": "starrtoons_",
+      "bgColor": [
+        56,
+        125,
+        137
+      ],
+      "skyColor": [
+        64,
+        122,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Brawly_Toonz_Ingame",
+      "disabled": false
+    },
+    "PyramidquestShowdown": {
+      "tileSetPrefix": "pyramidquest_",
+      "bgColor": [
+        110,
+        69,
+        30
+      ],
+      "skyColor": [
+        64,
+        122,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "BattleMusic",
+      "disabled": false
+    },
+    "PyramidquestIslandShowdown": {
+      "tileSetPrefix": "pyramidquest_",
+      "bgColor": [
+        110,
+        69,
+        30
+      ],
+      "skyColor": [
+        64,
+        122,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "BattleMusic",
+      "disabled": false
+    },
+    "BBArenaAdidas": {
+      "tileSetPrefix": "bbarena_",
+      "bgColor": [
+        60,
+        150,
+        87
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "Footbrawl_ingame_muzak",
+      "disabled": false
+    },
+    "ScrapyardShowdown": {
+      "tileSetPrefix": "scrapyard_",
+      "bgColor": [
+        48,
+        42,
+        79
+      ],
+      "skyColor": [
+        7,
+        26,
+        60
+      ],
+      "mapWidth": 60,
+      "mapHeight": 60,
+      "music": "Scrapyard_ingame_music",
+      "disabled": false
+    },
+    "SBGrassfield": {
+      "tileSetPrefix": "oasis_",
+      "bgColor": [
+        60,
+        150,
+        87
+      ],
+      "skyColor": [
+        69,
+        136,
+        255
+      ],
+      "mapWidth": 21,
+      "mapHeight": 33,
+      "music": "BattleMusic",
+      "disabled": false
+    }
+  },
+  "mapTheme": {
+    "Wanted_1": "Default",
+    "Wanted_3": "Default",
+    "Gemgrab_3": "Default",
+    "Gemgrab_2": "Default",
+    "Wanted_6": "Default",
+    "Wanted_7": "Arcade",
+    "Wanted_2": "Default",
+    "Gemgrab_1": "Mine",
+    "Gemgrab_5": "Mine",
+    "Gemgrab_4": "Default",
+    "Survival_1": "MadEvilManorShowdown",
+    "Survival_2": "MortuaryShowdown",
+    "Survival_3": "DefaultShowdown",
+    "Survival_4": "ArcadeShowdown",
+    "Bankheist_1": "Default",
+    "Bankheist_2": "Default",
+    "Bankheist_3": "Hub",
+    "Tutorial": "OldTownTutorial",
+    "BossFight_1": "Default",
+    "Wanted_8": "MadEvilManor",
+    "Bankheist_4": "Default",
+    "Laserball_1": "Grassfield",
+    "Laserball_2": "Grassfield",
+    "Laserball_3": "BBArena",
+    "Coop_1": "Default",
+    "Survival_7": "MadEvilManorShowdown",
+    "Coop_2": "Default",
+    "BossFight_2": "Default",
+    "Gemgrab_8": "Default",
+    "Survival_5": "ArcadeShowdown",
+    "Survival_6": "DefaultShowdown",
+    "Coop_3": "DefaultShowdown",
+    "Gemgrab_7": "Default",
+    "Gemgrab_10": "Default",
+    "Bankheist_5": "Default",
+    "Survival_8": "IslandShowdown",
+    "Bankheist_6": "Default",
+    "Gemgrab_11": "Default",
+    "Bankheist_7": "Default",
+    "Laserball_4": "BBArena",
+    "Laserball_6": "Grassfield",
+    "Laserball_7": "Grassfield",
+    "Bankheist_8": "Pyramidquest",
+    "Wanted_9": "Default",
+    "Survival_12": "MortuaryShowdown",
+    "Raid_1": "DefaultShowdown",
+    "Gemgrab_9": "Default",
+    "BossFight_3": "Default",
+    "BossFight_4": "Mine",
+    "Raid_2": "DefaultShowdown",
+    "Coop_4": "DefaultShowdown",
+    "Bankheist_9": "Default",
+    "Bankheist_10": "Default",
+    "Bankheist_11": "Default",
+    "Bankheist_12": "Biodome",
+    "Bankheist_13": "Default",
+    "Wanted_10": "Default",
+    "Wanted_11": "Default",
+    "Wanted_12": "Default",
+    "Wanted_13": "Hub",
+    "Wanted_14": "BandStand",
+    "Gemgrab_5_LNY": "Default",
+    "Gemgrab_4_LNY": "Default",
+    "Laserball_8": "BBArena",
+    "Survival_10": "DefaultShowdown",
+    "Survival_13": "DefaultShowdown",
+    "Siege_1": "Scrapyard",
+    "Siege_2": "Scrapyard",
+    "Siege_3": "Scrapyard",
+    "CRoyale": "Default",
+    "Survival_14": "MortuaryShowdown",
+    "Survival_15": "MortuaryShowdown",
+    "Survival_16": "DefaultShowdown",
+    "Survival_17": "DefaultShowdown",
+    "Survival_18": "DefaultShowdown",
+    "Gemgrab_12": "Default",
+    "Gemgrab_13": "Default",
+    "Gemgrab_15": "Default",
+    "Gemgrab_16": "MadEvilManor",
+    "Gemgrab_17": "Default",
+    "Gemgrab_18": "Default",
+    "Laserball_9": "BBArena",
+    "Biggame_1": "DefaultShowdown",
+    "Biggame_2": "DefaultShowdown",
+    "Training": "OldTownTutorial",
+    "Gemgrab_19": "MineTrainTracks",
+    "Survival_19": "DefaultShowdown",
+    "Survival_20": "DefaultShowdown",
+    "Siege_4": "Scrapyard",
+    "Siege_5": "Scrapyard",
+    "Siege_6": "Scrapyard",
+    "Siege_7": "Scrapyard",
+    "Siege_8": "Scrapyard",
+    "Laserball_10": "BBArena",
+    "Raid_4": "DefaultShowdown",
+    "Laserball_11": "Grassfield",
+    "Survival_21": "DefaultShowdown",
+    "Bankheist_14": "GiftShop",
+    "Bankheist_15": "Default",
+    "Gemgrab_20": "Default",
+    "Gemgrab_21": "Default",
+    "Siege_9": "Scrapyard",
+    "Siege_10": "Scrapyard",
+    "Laserball_12": "Grassfield",
+    "Laserball_13": "BBArena",
+    "Bankheist_16": "Default",
+    "Bankheist_17": "Default",
+    "Gemgrab_22": "Default",
+    "Gemgrab_23": "Default",
+    "Wanted_15": "Default",
+    "Wanted_16": "Default",
+    "Bankheist_18": "Default",
+    "Survival_22": "DefaultShowdown",
+    "Survival_23": "DefaultShowdown",
+    "Survival_24": "DefaultShowdown",
+    "Gemgrab_24": "Default",
+    "Wanted_17": "Default",
+    "Laserball_14": "Grassfield",
+    "Laserball_15": "Grassfield",
+    "Laserball_16": "Grassfield",
+    "Laserball_17": "Grassfield",
+    "Laserball_18": "Grassfield",
+    "Survival_25": "DefaultShowdown",
+    "BossRace_1": "DefaultShowdown",
+    "BossRace_2": "DefaultShowdown",
+    "BossRace_3": "DefaultShowdown",
+    "BossRace_4": "DefaultShowdown",
+    "BossRace_5": "IslandShowdown",
+    "BossRace_6": "DefaultShowdown",
+    "BossRace_7": "DefaultShowdown",
+    "Solobounty_2": "DefaultShowdown",
+    "Solobounty_3": "DefaultShowdown",
+    "Solobounty_4": "DefaultShowdown",
+    "Solobounty_5": "DefaultShowdown",
+    "Solobounty_6": "DefaultShowdown",
+    "Solobounty_7": "DefaultShowdown",
+    "Solobounty_8": "DefaultShowdown",
+    "BossRace_8": "DefaultShowdown",
+    "BossRace_9": "DefaultShowdown",
+    "BossRace_10": "DefaultShowdown",
+    "BossRace_11": "DefaultShowdown",
+    "BossRace_12": "DefaultShowdown",
+    "BossRace_13": "DefaultShowdown",
+    "BossRace_14": "DefaultShowdown",
+    "Survival_33": "DefaultShowdown",
+    "Solobounty_1": "DefaultShowdown",
+    "CaptureTheFlag_2": "Default",
+    "CaptureTheFlag_3": "Default",
+    "CaptureTheFlag_4": "Default",
+    "CaptureTheFlag_5": "Default",
+    "CaptureTheFlag_6": "Default",
+    "CaptureTheFlag_7": "Default",
+    "CaptureTheFlag_8": "Default",
+    "Gemgrab_25": "Default",
+    "Gemgrab_26": "Default",
+    "Gemgrab_27": "Default",
+    "Gemgrab_28": "Default",
+    "Gemgrab_29": "Default",
+    "Gemgrab_30": "Default",
+    "Gemgrab_31": "Default",
+    "Bankheist_19": "Default",
+    "Bankheist_20": "Default",
+    "Wanted_18": "Default",
+    "Wanted_19": "Default",
+    "Survival_26": "DefaultShowdown",
+    "Survival_27": "DefaultShowdown",
+    "Survival_28": "DefaultShowdown",
+    "Survival_29": "DefaultShowdown",
+    "Survival_30": "ArcadeShowdown",
+    "Survival_31": "DefaultShowdown",
+    "Survival_32": "DefaultShowdown",
+    "Laserball_19": "BBArena",
+    "Laserball_20": "BBArena",
+    "Laserball_21": "BBArena",
+    "Laserball_22": "BBArena",
+    "Laserball_23": "BBArena",
+    "Laserball_24": "BBArena",
+    "Laserball_25": "BBArena",
+    "KingOfHill_1": "Default",
+    "KingOfHill_2": "Default",
+    "KingOfHill_3": "Default",
+    "KingOfHill_4": "Default",
+    "KingOfHill_5": "Default",
+    "KingOfHill_6": "Default",
+    "KingOfHill_7": "Default",
+    "Laserball_26": "BBArena",
+    "Laserball_27": "Grassfield",
+    "Laserball_28": "BBArena",
+    "Laserball_29": "Grassfield",
+    "Laserball_30": "BBArena",
+    "Survival_34": "DefaultShowdown",
+    "Siege_15": "Scrapyard",
+    "Siege_16": "Scrapyard",
+    "Siege_17": "Scrapyard",
+    "Wanted_27": "Default",
+    "Wanted_28": "Default",
+    "Bankheist_27": "Default",
+    "Bankheist_28": "Default",
+    "RaidTownCrush_1": "Default",
+    "Survival_45": "DefaultShowdown",
+    "Survival_47": "DefaultShowdown",
+    "Survival_49": "MortuaryShowdown",
+    "Survival_50": "DefaultShowdown",
+    "Survival_51": "DefaultShowdown",
+    "Survival_52": "DefaultShowdown",
+    "Survival_53": "DefaultShowdown",
+    "Survival_54": "DefaultShowdown",
+    "Survival_46": "DefaultShowdown",
+    "KingOfHill_8": "Default",
+    "KingOfHill_9": "Default",
+    "KingOfHill_10": "Default",
+    "KingOfHill_11": "Default",
+    "KingOfHill_12": "Scrapyard",
+    "KingOfHill_13": "Arcade",
+    "KingOfHill_14": "Default",
+    "Wanted_29": "Pyramidquest",
+    "Gemgrab_32": "Default",
+    "Gemgrab_33": "Default",
+    "Gemgrab_34": "Default",
+    "KingOfHill_15F": "Default",
+    "KingOfHill_16F": "MadEvilManor",
+    "Wanted_30": "Default",
+    "Bankheist_29": "Default",
+    "KingOfHill_17": "Default",
+    "KingOfHill_18": "Default",
+    "KingOfHill_20F": "Biodome",
+    "Coop_5": "DefaultShowdown",
+    "Coop_6": "DefaultShowdown",
+    "BossFight_5": "Default",
+    "BossFight_6": "Default",
+    "Raid_5": "DefaultShowdown",
+    "Raid_6": "DefaultShowdown",
+    "Gemgrab_35": "Default",
+    "CaptureTheFlag_9": "Default",
+    "CaptureTheFlag_10": "Default",
+    "CaptureTheFlag_11": "Default",
+    "CaptureTheFlag_12": "Default",
+    "CaptureTheFlag_13": "Default",
+    "CaptureTheFlag_14": "Default",
+    "CaptureTheFlag_15": "Default",
+    "Siege_19": "Scrapyard",
+    "Wanted_20": "Default",
+    "Laserball_31": "Grassfield",
+    "Laserball_32": "Grassfield",
+    "Laserball_33": "Grassfield",
+    "Laserball_34": "BBArena",
+    "Laserball_35": "Grassfield",
+    "Laserball_36": "Grassfield",
+    "Gemgrab_36": "Arcade",
+    "Gemgrab_37": "Default",
+    "Gemgrab_38": "Default",
+    "Bankheist_21": "Default",
+    "Bankheist_22": "Default",
+    "KingOfHill_21": "Default",
+    "KingOfHill_22": "Default",
+    "KingOfHill_23": "Default",
+    "KingOfHill_24": "Default",
+    "Survival_55": "DefaultShowdown",
+    "Knockout_1": "Default",
+    "Knockout_2": "Default",
+    "Knockout_3": "Default",
+    "Knockout_4": "Default",
+    "Knockout_5": "Default",
+    "Knockout_6": "Default",
+    "Knockout_7": "Default",
+    "Knockout_8": "Default",
+    "Knockout_9": "StarrToonsStudio",
+    "Knockout_10": "Default",
+    "Dribble_06": "Default",
+    "Dribble_07": "Default",
+    "Dribble_08": "Default",
+    "Dribble_09": "Default",
+    "Dribble_10": "Default",
+    "Dribble_11": "Default",
+    "Dribble_12": "Default",
+    "VolleyBrawl_1": "BBArenaVolley",
+    "VolleyBrawl_2": "BBArenaVolley",
+    "VolleyBrawl_3": "BBArenaVolley",
+    "VolleyBrawl_4": "BBArenaVolley",
+    "VolleyBrawl_5": "BBArenaVolley",
+    "VolleyBrawl_6": "BBArenaVolley",
+    "VolleyBrawl_7": "BBArenaVolley",
+    "BasketBrawl_1": "Rooftop",
+    "BasketBrawl_2": "Rooftop",
+    "BasketBrawl_3": "Rooftop",
+    "BasketBrawl_4": "Rooftop",
+    "BasketBrawl_5": "Rooftop",
+    "BasketBrawl_6": "Rooftop",
+    "BasketBrawl_7": "Rooftop",
+    "Survival_56": "DefaultShowdown",
+    "Survival_58": "DefaultShowdown",
+    "Survival_59": "DefaultShowdown",
+    "Survival_60": "DefaultShowdown",
+    "Survival_61": "DefaultShowdown",
+    "Survival_62": "DefaultShowdown",
+    "Gemgrab_39": "Default",
+    "Gemgrab_40": "Default",
+    "Gemgrab_41": "Default",
+    "Gemgrab_42": "Default",
+    "Gemgrab_43": "Default",
+    "Gemgrab_44": "Default",
+    "Laserball_37": "Grassfield",
+    "Laserball_38": "Grassfield",
+    "Laserball_39": "Grassfield",
+    "Laserball_40": "Grassfield",
+    "Laserball_41": "Grassfield",
+    "Laserball_42": "Grassfield",
+    "Laserball_43": "Grassfield",
+    "Bankheist_23": "Default",
+    "Bankheist_24": "Default",
+    "Bankheist_25": "Default",
+    "Bankheist_26": "Default",
+    "KingOfHill_25": "Default",
+    "KingOfHill_26": "Default",
+    "KingOfHill_27": "Default",
+    "KingOfHill_28": "Default",
+    "Wanted_21": "Default",
+    "Wanted_22": "Default",
+    "Siege_20": "Scrapyard",
+    "Siege_21": "Scrapyard",
+    "Knockout_11": "Default",
+    "Knockout_12": "Pyramidquest",
+    "Survival_63": "DefaultShowdown",
+    "Survival_64": "DefaultShowdown",
+    "Survival_65": "DefaultShowdown",
+    "Survival_69": "DefaultShowdown",
+    "Knockout_13": "Default",
+    "Knockout_14": "Default",
+    "Knockout_15": "MadEvilManor",
+    "Bankheist_30": "Default",
+    "Bankheist_31": "Default",
+    "Bankheist_32": "Default",
+    "Wanted_23": "Default",
+    "Wanted_24": "Default",
+    "Wanted_25": "Default",
+    "Siege_22": "Scrapyard",
+    "Siege_23": "Scrapyard",
+    "Siege_24": "Scrapyard",
+    "KingOfHill_29": "Default",
+    "KingOfHill_30": "Default",
+    "KingOfHill_31": "Default",
+    "Laserball_44": "BBArena",
+    "Laserball_45": "BBArena",
+    "Laserball_46": "BBArena",
+    "Gemgrab_45": "Default",
+    "Gemgrab_46": "Default",
+    "Gemgrab_47": "Default",
+    "TagTeam_1": "BandStand",
+    "TagTeam_2": "Scrapyard",
+    "TagTeam_3": "MadEvilManor",
+    "TagTeam_4": "Default",
+    "TagTeam_5": "Biodome",
+    "TagTeam_6": "Default",
+    "TagTeam_7": "Default",
+    "TagTeam_8": "Default",
+    "TagTeam_9": "Default",
+    "TagTeam_10": "Pyramidquest",
+    "TagTeam_11": "Default",
+    "TagTeam_12": "Default",
+    "Deathmatch_1": "Default",
+    "Payload_1": "Default",
+    "Payload_2": "Default",
+    "Payload_3": "Default",
+    "Payload_4": "Default",
+    "Deathmatch_2": "Default",
+    "Deathmatch_3": "Default",
+    "Deathmatch_4": "Default",
+    "Deathmatch_5": "Default",
+    "Deathmatch_6": "Default",
+    "Deathmatch_7": "Default",
+    "Gemgrab_48": "Default",
+    "Survival_Tutorial": "TropicalIslandShowdown",
+    "Payload_5": "Default",
+    "Payload_6": "Default",
+    "Payload_7": "Default",
+    "Payload_8": "Default",
+    "Payload_9": "Default",
+    "Payload_10": "Default",
+    "Payload_11": "Default",
+    "Payload_12": "Default",
+    "Payload_13": "Default",
+    "Payload_14": "Default",
+    "Payload_15": "Default",
+    "Gemgrab_49": "Scrapyard",
+    "Laserball_47": "BBArena",
+    "Knockout_16": "Default",
+    "Knockout_17": "Biodome",
+    "KingOfHill_32": "Default",
+    "Laserball_48": "BBArena",
+    "Gemgrab_50": "Default",
+    "Gemgrab_51": "Default",
+    "Survival_70": "DefaultShowdown",
+    "Invasion_1": "Default",
+    "Invasion_2": "Default",
+    "Invasion_3": "Default",
+    "Invasion_4": "Default",
+    "Invasion_5": "Default",
+    "Invasion_6": "Default",
+    "Invasion_7": "Default",
+    "Invasion_8": "Default",
+    "Invasion_9": "Default",
+    "Invasion_10": "Default",
+    "Invasion_11": "Default",
+    "Invasion_12": "Default",
+    "Invasion_13": "Default",
+    "Invasion_14": "Default",
+    "Invasion_15": "Default",
+    "Invasion_16": "Default",
+    "KingOfHill_33": "Scrapyard",
+    "Knockout_18": "Mortuary",
+    "Knockout_19": "Default",
+    "Bankheist_33": "Default",
+    "Laserball_49": "Grassfield",
+    "Laserball_50": "Grassfield",
+    "Laserball_51": "Grassfield",
+    "Laserball_52": "Grassfield",
+    "Survival_71": "DefaultShowdown",
+    "Survival_72": "DefaultShowdown",
+    "Survival_73": "DefaultShowdown",
+    "DeathmatchFFA_1": "DefaultShowdown",
+    "DeathmatchFFA_2": "DefaultShowdown",
+    "DeathmatchFFA_3": "DefaultShowdown",
+    "DeathmatchFFA_4": "DefaultShowdown",
+    "DeathmatchFFA_5": "DefaultShowdown",
+    "DeathmatchFFA_6": "DefaultShowdown",
+    "DeathmatchFFA_7": "DefaultShowdown",
+    "Laserball_441": "Grassfield",
+    "Laserball_442": "Grassfield",
+    "Knockout_441": "Default",
+    "Knockout_442": "Scrapyard",
+    "Bankheist_441": "Default",
+    "Bankheist_442": "Default",
+    "Gemgrab_441": "Default",
+    "Gemgrab_442": "Default",
+    "Wanted_441": "GiftShop",
+    "Wanted_442": "Scrapyard",
+    "KingOfHill_441": "Default",
+    "KingOfHill_442": "Default",
+    "Survival_441": "DefaultShowdown",
+    "Survival_442": "DefaultShowdown",
+    "LastStand_1": "DefaultShowdown",
+    "LastStand_2": "DefaultShowdown",
+    "LastStand_3": "DefaultShowdown",
+    "LastStand_4": "DefaultShowdown",
+    "LastStand_5": "DefaultShowdown",
+    "LastStand_6": "DefaultShowdown",
+    "ReachExit_1": "DefaultShowdown",
+    "Gemgrab_471": "Default",
+    "TagTeam_471": "Default",
+    "TagTeam_472": "Default",
+    "TagTeam_473": "Hub",
+    "TagTeam_474": "Default",
+    "TagTeam_475": "Default",
+    "TagTeam_476": "Default",
+    "TagTeam_477": "Default",
+    "Wanted_481": "Default",
+    "Gemgrab_481": "Default",
+    "Wanted_482": "Default",
+    "Bankheist_481": "Default",
+    "KingOfHill_481": "Default",
+    "Knockout_481": "Arcade",
+    "Survival_481": "DefaultShowdown",
+    "Gemgrab_482": "Default",
+    "Wanted_483": "Default",
+    "Bankheist_482": "Default",
+    "KingOfHill_482": "Default",
+    "Knockout_482": "Default",
+    "Survival_482": "DefaultShowdown",
+    "Laserball_481": "Grassfield",
+    "Laserball_482": "Grassfield",
+    "TagTeam_481": "Default",
+    "TagTeam_482": "Default",
+    "TagTeam_483": "Default",
+    "TagTeam_484": "Default",
+    "BasketBrawl_481": "Rooftop",
+    "BasketBrawl_482": "Rooftop",
+    "BasketBrawl_483": "Rooftop",
+    "BasketBrawl_484": "Rooftop",
+    "VolleyBrawl_491": "BBArenaVolley",
+    "VolleyBrawl_492": "BBArenaVolley",
+    "VolleyBrawl_493": "BBArenaVolley",
+    "VolleyBrawl_494": "BBArenaVolley",
+    "VolleyBrawl_495": "BBArenaVolley",
+    "TagTeam_491": "Default",
+    "TagTeam_492": "Default",
+    "TagTeam_493": "Default",
+    "TagTeam_494": "Default",
+    "TagTeam_495": "Default",
+    "Payload_16": "Default",
+    "Payload_17": "Default",
+    "Payload_18": "Default",
+    "Payload_19": "Default",
+    "Payload_20": "Default",
+    "Payload_21": "Default",
+    "Payload_501": "Default",
+    "Payload_502": "Default",
+    "Payload_503": "Default",
+    "Payload_504": "Default",
+    "BossRace_501": "DefaultShowdown",
+    "BossRace_502": "DefaultShowdown",
+    "BossRace_503": "DefaultShowdown",
+    "BossRace_504": "DefaultShowdown",
+    "Deathmatch_511": "Default",
+    "Deathmatch_512": "Hub",
+    "Laserball_511": "BBArena",
+    "Gemgrab_511": "Default",
+    "Gemgrab_512": "Default",
+    "Laserball5v5_1_noIce": "TropicalIslandShowdownBB",
+    "Laserball5v5_2_noIce": "TropicalIslandShowdownBB",
+    "Laserball5v5_3_noIce": "TropicalIslandShowdownBB",
+    "GemGrab5v5_1_noIce": "TropicalIslandShowdown",
+    "GemGrab5v5_2": "TropicalIslandShowdown",
+    "GemGrab5v5_2m_1_noIce": "TropicalIslandShowdown",
+    "GemGrab5v5_2m_2": "TropicalIslandShowdown",
+    "Wipeout5v5_1_noIce": "TropicalIslandShowdown",
+    "Wipeout5v5_2_noIce": "TropicalIslandShowdown",
+    "Wipeout5v5_3_noIce": "TropicalIslandShowdown",
+    "Gemgrab_521": "Default",
+    "Gemgrab_522": "Default",
+    "KingOfHill_521": "Default",
+    "KingOfHill_522": "Default",
+    "Laserball_521": "Grassfield",
+    "Laserball_522": "Grassfield",
+    "Knockout_521": "Default",
+    "Knockout_522": "Default",
+    "Bankheist_521": "Default",
+    "Bankheist_522": "Default",
+    "Survival_521": "DefaultShowdown",
+    "Survival_522": "DefaultShowdown",
+    "Laserball_531": "Grassfield",
+    "Laserball_532": "Grassfield",
+    "Laserball_533": "Grassfield",
+    "Laserball_534": "Grassfield",
+    "Bankheist_531": "Default",
+    "Gemgrab_531": "Default",
+    "Gemgrab_532": "Default",
+    "Knockout_531": "Default",
+    "KingOfHill_531": "Default",
+    "KingOfHill_532": "Default",
+    "Deathmatch_531": "Default",
+    "Survival_531": "DefaultShowdown",
+    "SoloExtraction_1": "IslandShowdown",
+    "SoloExtraction_2": "IslandShowdown",
+    "SoloExtraction_3": "IslandShowdown",
+    "Knockout5v5_1": "IslandShowdown",
+    "Survival_541": "ArcadeShowdown",
+    "Knockout_541": "Mine",
+    "Laserball_541": "BBArena",
+    "Survival_542": "DefaultShowdown",
+    "Laserball5v5_4": "TropicalIslandShowdownBB",
+    "Wipeout5v5_4": "IslandShowdown",
+    "GemGrab5v5_2m_3": "IslandShowdown",
+    "Survival_543": "DefaultShowdown",
+    "Survival_544": "DefaultShowdown",
+    "Godzilla_1": "DefaultShowdown",
+    "SoloExtraction_4": "IslandShowdown",
+    "Knockout5v5_2": "TropicalIslandShowdown",
+    "Godzilla_2": "IslandShowdown",
+    "Godzilla_3": "IslandShowdown",
+    "Survival_551": "DefaultShowdown",
+    "Knockout_551": "Default",
+    "Knockout_552": "Pyramidquest",
+    "TagTeam_551": "Default",
+    "Wipeout_511": "Default",
+    "Godzilla_4": "IslandShowdown",
+    "Knockout5v5_3": "IslandShowdown",
+    "PaintBall_1": "Scrapyard",
+    "PaintBall_2": "Scrapyard",
+    "PaintBall_3": "Scrapyard",
+    "SoulCollector_1": "StarrToonsStudio",
+    "PaintBall_4": "StarrToonsStudio",
+    "PaintBall_5": "StarrToonsStudio",
+    "PaintBall_6": "Default",
+    "PaintBall_7": "Default",
+    "PaintBall_8": "Default",
+    "Wanted_561": "Default",
+    "Wanted_562": "Default",
+    "Laserball_561": "Grassfield",
+    "Laserball_562": "Grassfield",
+    "Gemgrab_561": "Default",
+    "Gemgrab_562": "Default",
+    "Bankheist_561": "Default",
+    "Bankheist_562": "Default",
+    "KingOfHill_561": "Default",
+    "KingOfHill_562": "Default",
+    "Knockout_561": "Default",
+    "Knockout_562": "Default",
+    "Knockout_563": "Default",
+    "Knockout_564": "Default",
+    "Survival_561": "DefaultShowdown",
+    "Survival_562": "DefaultShowdown",
+    "Deathmatch_561": "Default",
+    "Deathmatch_562": "Default",
+    "SurvivalTrio_571": "DefaultShowdown",
+    "SurvivalTrio_572": "Default",
+    "SurvivalTrio_573": "DefaultShowdown",
+    "SurvivalTrio_574": "DefaultShowdown",
+    "SurvivalTrio_575": "Default",
+    "SurvivalTrio_576": "DefaultShowdown",
+    "SurvivalTrio_577": "DefaultShowdown",
+    "JellyCatch_571": "Default",
+    "JellyCatch_572": "Default",
+    "JellyCatch_573": "Default",
+    "JellyCatch_574": "Default",
+    "JellyCatch_575": "Default",
+    "JellyCatch_576": "Default",
+    "JellyCatch_577": "Default",
+    "Laserball_571": "Grassfield",
+    "Deathmatch_571": "Default",
+    "Gemgrab_571": "Default",
+    "Wanted_571": "Default",
+    "KingOfHill_571": "Default",
+    "Bankheist_571": "Default",
+    "Survival_571": "DefaultShowdown",
+    "Knockout_571": "Default",
+    "SurvivalLimbo_1": "DefaultShowdown",
+    "KnockoutLimbo_1": "Default",
+    "SoulCollector_2": "Pyramidquest",
+    "SoulCollector_3": "StarrToonsStudio",
+    "SoulCollector_4": "Pyramidquest",
+    "SoulCollector_5": "StarrToonsStudio",
+    "SoulCollector_6": "Pyramidquest",
+    "SiegeSmall_1": "StarrToonsStudio",
+    "SiegeSmall_2": "Pyramidquest",
+    "SiegeSmall_3": "StarrToonsStudio",
+    "SiegeSmall_4": "Pyramidquest",
+    "SiegeSmall_5": "StarrToonsStudio",
+    "SiegeSmall_6": "Pyramidquest",
+    "SiegeSmall_7": "StarrToonsStudio",
+    "SiegeSmall_8": "Pyramidquest",
+    "TagTeam_581": "Biodome",
+    "TagTeam_582": "Default",
+    "TagTeam_583": "Default",
+    "TagTeam_584": "Default",
+    "TagTeam_585": "Default",
+    "TagTeam_586": "Default",
+    "TagTeam_587": "Default",
+    "TagTeam_588": "Default",
+    "KingOfHill_581": "Default",
+    "KingOfHill_582": "Default",
+    "Gemgrab_581": "Default",
+    "Gemgrab_582": "Default",
+    "Knockout_581": "Default",
+    "Laserball_581": "BBArena",
+    "Laserball_582": "Grassfield",
+    "Bankheist_581": "Default",
+    "AirHockey_1": "AirHockey",
+    "AirHockey_2": "AirHockey",
+    "AirHockey_3": "AirHockey",
+    "AirHockey_4": "AirHockey",
+    "AirHockey_5": "AirHockey",
+    "AirHockey_6": "AirHockey",
+    "PayloadSingle_1": "Mine",
+    "M_1": "TropicalIslandShowdown",
+    "GemGrab2v2_1": "Default",
+    "GemGrab2v2_2": "Default",
+    "Laserball2v2_1": "BBArena",
+    "Laserball2v2_2": "Grassfield",
+    "KingOfHill2v2_1": "Default",
+    "KingOfHill2v2_2": "Default",
+    "Knockout2v2_1": "Mine",
+    "Knockout2v2_2": "Default",
+    "BasketBrawl2v2_1": "Rooftop",
+    "BasketBrawl2v2_2": "Rooftop",
+    "GemGrab2v2_3": "Default",
+    "GemGrab2v2_4": "Default",
+    "GemGrab2v2_5": "Default",
+    "Laserball2v2_3": "BBArena",
+    "Laserball2v2_4": "Grassfield",
+    "PayloadSingle2v2_1": "Mine",
+    "PayloadSingle2v2_2": "Mine",
+    "PayloadSingle_2": "Mine",
+    "PayloadSingle_3": "Mine",
+    "PayloadSingle_4": "Mine",
+    "KingOfHill_591": "Default",
+    "KingOfHill_592": "Default",
+    "Gemgrab_591": "Default",
+    "Gemgrab_592": "Mine",
+    "Knockout_591": "Hub",
+    "Knockout_592": "Default",
+    "Laserball_591": "BBArena",
+    "Laserball_592": "BBArena",
+    "Bankheist_591": "Default",
+    "Bankheist_592": "Default",
+    "Knockout2v2_3": "Mine",
+    "Knockout2v2_4": "Default",
+    "Laserball2v2_5": "BBArena",
+    "Laserball2v2_6": "Grassfield",
+    "KingOfHill2v2_3": "Default",
+    "KingOfHill2v2_4": "Default",
+    "BasketBrawl2v2_3": "Rooftop",
+    "BasketBrawl2v2_4": "Rooftop",
+    "Knockout_593": "Default",
+    "Knockout_594": "Default",
+    "Knockout_595": "Default",
+    "Knockout_596": "Default",
+    "Bankheist_593": "StarrToonsStudio",
+    "PayloadSingle2v2_3": "Mine",
+    "AirHockey2v2_1": "AirHockey",
+    "GemGrab2v2_6": "Default",
+    "AirHockey2v2_2": "AirHockey",
+    "AirHockey2v2_3": "AirHockey",
+    "PayloadSingle_5": "Mine",
+    "PayloadSingle_6": "Mine",
+    "AirHockey2v2_4": "AirHockey",
+    "UNO_1": "Hub",
+    "BrawlBall_5v5_701": "TropicalIslandShowdownBB",
+    "TreasureHunt_1": "Pyramidquest",
+    "UNO_2": "Hub",
+    "UNO_3": "Hub",
+    "TreasureHunt_2": "Biodome",
+    "TreasureHunt_3": "Pyramidquest",
+    "TreasureHunt_4": "Biodome",
+    "TreasureHunt_5": "Pyramidquest",
+    "TreasureHunt_6": "Biodome",
+    "BrawlBall_5v5_702": "TropicalIslandShowdownBB",
+    "Wipeout_5v5_701": "MadEvilIslandShowdown",
+    "Wipeout_5v5_703": "TropicalIslandShowdown",
+    "TreasureHunt_7": "Pyramidquest",
+    "AirHockey_5v5_701": "HockeyIslandShowdownBB",
+    "KingOfHill_601": "Default",
+    "KingOfHill_602": "BandStand",
+    "Laserball_601": "BBArena",
+    "Laserball_602": "Grassfield",
+    "Knockout_601": "Default",
+    "Gemgrab_601": "Biodome",
+    "Gemgrab_602": "BandStand",
+    "Bankheist_601": "Pyramidquest",
+    "TagTeam_601": "Biodome",
+    "Wanted_601": "Mine",
+    "Deathmatch_601": "Default",
+    "Survival_604": "MadEvilManorShowdown",
+    "Survival_605": "ScrapyardShowdown",
+    "Survival_606": "PyramidquestShowdown",
+    "Survival_607": "MortuaryShowdown",
+    "Survival_608": "MortuaryShowdown",
+    "Survival_609": "ScrapyardShowdown",
+    "Survival_610": "DefaultShowdown",
+    "Survival_611": "DefaultShowdown",
+    "Survival_612": "ArcadeShowdown",
+    "BrawlBall_5v5_703": "TropicalIslandShowdownBB",
+    "Wipeout_5v5_704": "TropicalIslandShowdown",
+    "Wipeout_5v5_705": "PyramidquestIslandShowdown",
+    "Wipeout_5v5_706": "DefaultShowdown",
+    "GemGrab5v5_701": "TropicalIslandShowdown",
+    "GemGrab5v5_702": "TropicalIslandShowdown",
+    "GemGrab5v5_703": "MadEvilIslandShowdown",
+    "Survival_613": "MortuaryShowdown",
+    "Survival_601": "ArcadeShowdown",
+    "Survival_602": "ScrapyardShowdown",
+    "Survival_603": "MortuaryShowdown",
+    "M_3": "TropicalIslandShowdown",
+    "M_4": "DefaultShowdown",
+    "KingHunt_1": "Default",
+    "M_5": "MadEvilIslandShowdown",
+    "M_6": "TropicalIslandShowdown",
+    "KingHuntShowdown_1": "TropicalIslandShowdown",
+    "KingHuntShowdown_2": "TropicalIslandShowdown",
+    "SamuraiSmash5v5_1": "TropicalIslandShowdown",
+    "SamuraiSmash5v5_2": "TropicalIslandShowdown",
+    "MegaBoss_1": "TropicalIslandShowdown",
+    "SamuraiSmash5v5_3": "TropicalIslandShowdown",
+    "SamuraiSmash3v3_1": "MortuaryShowdown",
+    "SamuraiSmash3v3_2": "MortuaryShowdown",
+    "SamuraiSmash3v3_3": "TropicalIslandShowdown",
+    "SamuraiSmash3v3_M1": "TropicalIslandShowdown",
+    "SamuraiSmash5v5_M1": "MortuaryShowdown",
+    "SamuraiSmash3v3_M2": "TropicalIslandShowdown",
+    "SamuraiSmash5v5_M2": "TropicalIslandShowdown",
+    "Survival_6101": "PyramidquestShowdown",
+    "Survival_6102": "PyramidquestShowdown",
+    "Knockout_6101": "Scrapyard",
+    "Knockout_6102": "Hub",
+    "Laserball_6101": "BBArena",
+    "Laserball_6102": "Grassfield",
+    "KingOfHill_6101": "OdditiesShop",
+    "KingOfHill_6102": "Hub",
+    "Bankheist_6101": "Arcade",
+    "Bankheist_6102": "Biodome",
+    "Gemgrab_6101": "OdditiesShop",
+    "Gemgrab_6102": "Pyramidquest",
+    "MegaBoss_2": "TropicalIslandShowdown",
+    "Dodgeball_M2": "Biodome",
+    "CaptureTheFlag_16": "Pyramidquest",
+    "CaptureTheFlag_17": "Hub",
+    "Dodgeball_2": "GiftShop",
+    "Dodgeball_M1": "StarrToonsStudio",
+    "AirHockey_5v5_702": "HockeyIslandShowdownBB",
+    "AirHockey_5v5_703": "HockeyIslandShowdownBB",
+    "CaptureTheFlag_18": "StarrToonsStudio",
+    "CaptureTheFlag_19": "Pyramidquest",
+    "Dodgeball_4": "Scrapyard",
+    "Dodgeball_5": "Hub",
+    "Dodgeball_6": "Mortuary",
+    "AirHockey_5v5_704": "HockeyIslandShowdownBB",
+    "TrailRun_1": "DefaultShowdown",
+    "BrawlBall5v5_6201": "TropicalIslandShowdownBB",
+    "BrawlBall5v5_6202": "TropicalIslandShowdownBB",
+    "GemGrab5v5_6201": "MortuaryIslandShowdown",
+    "GemGrab5v5_6202": "StarrToonsStudioIslandShowdown",
+    "Knockout5v5_6201": "TropicalIslandShowdown",
+    "Knockout5v5_6202": "MortuaryIslandShowdown",
+    "Wipeout5v5_6201": "StarrToonsStudioIslandShowdown",
+    "Wipeout5v5_6202": "MortuaryIslandShowdown",
+    "Gemgrab_6201": "BandStand",
+    "Gemgrab_6202": "GiftShop",
+    "Laserball_6201": "Grassfield",
+    "Laserball_6202": "BBArena",
+    "Deathmatch_6201": "OdditiesShop",
+    "Deathmatch_6202": "Mortuary",
+    "KingOfHill_6201": "StarrToonsStudio",
+    "Knockout_6201": "Biodome",
+    "Knockout_6202": "BandStand",
+    "TagTeam_6201": "Arcade",
+    "TagTeam_6202": "MadEvilManor",
+    "Bankheist_6201": "Mortuary",
+    "Bankheist_6202": "Mine",
+    "moba_m1": "TropicalIslandShowdown",
+    "moba_m2": "MortuaryIslandShowdown",
+    "moba_m3": "TropicalIslandShowdown",
+    "Wanted_6201": "OdditiesShop",
+    "CaptureTheFlag_20": "StarrToonsStudio",
+    "TrailRun_2": "DefaultShowdown",
+    "TrailRun_3": "DefaultShowdown",
+    "TrailRun_M1": "DefaultShowdown",
+    "TrailRun_M2": "DefaultShowdown",
+    "TrailRun_M3": "DefaultShowdown",
+    "Map1_3lane": "Hub",
+    "Map3_Portals": "Hub",
+    "Map2_maze": "Hub",
+    "Map4_Waterways": "Hub",
+    "Mega_RT_1": "ArcadeShowdown",
+    "Mega_Rico_1": "TropicalIslandShowdown",
+    "Mega_Crow_1": "ArcadeShowdown",
+    "Mega_Tick_1": "TropicalIslandShowdown",
+    "Mega_Spike_1": "DefaultShowdown",
+    "Mega_GhostKenji_1": "TropicalIslandShowdown",
+    "Map5_TwoLanes": "Hub",
+    "TrailRun_M4": "DefaultShowdown",
+    "Dodgeball_M3": "MadEvilManor",
+    "Survival_631": "DefaultShowdown",
+    "Survival_632": "MortuaryShowdown",
+    "Gemgrab_631": "StarrToonsStudio",
+    "Gemgrab_632": "StarrToonsStudio",
+    "KingOfHill_631": "GiftShop",
+    "KingOfHill_632": "OdditiesShop",
+    "Laserball_631": "Grassfield",
+    "Laserball_632": "BBArena",
+    "Knockout_631": "Mortuary",
+    "Knockout_632": "MadEvilManor",
+    "TagTeam_631": "StarrToonsStudio",
+    "Bankheist_631": "MadEvilManor",
+    "Bankheist_632": "OdditiesShop",
+    "Knockout5v5_631": "MadEvilIslandShowdown",
+    "Knockout5v5_632": "StarrToonsStudioIslandShowdown",
+    "Knockout5v5_633": "PyramidquestIslandShowdown",
+    "Deathmatch_631": "Pyramidquest",
+    "Deathmatch_632": "MadEvilManor",
+    "Deathmatch_633": "Scrapyard",
+    "Deathmatch_634": "Hub",
+    "Wipeout4x3_i_1": "MortuaryIslandShowdown",
+    "Wipeout4x3_i_2": "MortuaryIslandShowdown",
+    "Wipeout4x3_3": "MortuaryIslandShowdown",
+    "MegaBossFrank_1": "MortuaryShowdown",
+    "MegaBossVecna_1": "MortuaryShowdown",
+    "Survival_641": "ArcadeShowdown",
+    "Survival_642": "ArcadeShowdown",
+    "Survival_643": "MortuaryShowdown",
+    "Survival_644": "StarrToonsStudioShowdown",
+    "Gemgrab_641": "Hub",
+    "Survival_645": "MadEvilManorShowdown",
+    "KingOfHill_641": "Mine",
+    "KingOfHill_642": "Mortuary",
+    "Knockout_641": "MadEvilManor",
+    "GemGrab4x3_i_M4": "TropicalIslandShowdown",
+    "GemGrab4x3_i_M1": "MortuaryIslandShowdown",
+    "GemGrab4x3_i_M2": "MadEvilIslandShowdown",
+    "Survival_Art_Test": "DefaultShowdown",
+    "Survival_Art_Test_B": "DefaultShowdown",
+    "GemGrab4x3_i_M3": "TropicalIslandShowdown",
+    "Wipeout4x3_i_4": "TropicalIslandShowdown",
+    "Dodgeball2v2_1": "StarrToonsStudio",
+    "Dodgeball2v2_2": "StarrToonsStudio",
+    "MegaBossSqueak_2v1_1": "TropicalIslandShowdown",
+    "MegaBossShade_2v1_1": "TropicalIslandShowdown",
+    "MegaBossAngelo_2v1_1": "TropicalIslandShowdown",
+    "MegaBossRico_2v1_1": "TropicalIslandShowdown",
+    "Dodgeball2v2_3": "StarrToonsStudio",
+    "Bombheist_1": "Scrapyard",
+    "Bombheist_2": "BandStand",
+    "Dodgeball2v2_4": "StarrToonsStudio",
+    "Bombheist_m1": "Hub",
+    "Bombheist_m2": "OdditiesShop",
+    "Bombheist_m3": "MadEvilManor",
+    "Knockout5v5_651": "TropicalIslandShowdown",
+    "Deathmatch_651": "BandStand",
+    "Deathmatch_652": "StarrToonsStudio",
+    "KingOfHill_651": "Hub",
+    "KingOfHill_652": "Pyramidquest",
+    "Laserball_651": "BBArena",
+    "Laserball_652": "Grassfield",
+    "Bankheist_651": "BandStand",
+    "Bankheist_652": "StarrToonsStudio",
+    "Gemgrab_651": "Pyramidquest",
+    "Gemgrab_652": "MadEvilManor",
+    "Knockout_651": "StarrToonsStudio",
+    "TagTeam_651": "GiftShop",
+    "Wanted_651": "StarrToonsStudio",
+    "Wanted_652": "Pyramidquest",
+    "AirHockey_651": "AirHockey",
+    "AirHockey_652": "AirHockey",
+    "Knockout_652": "Pyramidquest",
+    "Survival_651": "ArcadeShowdown",
+    "MegaBossMaisie_1": "MadEvilDungeonShowdown",
+    "MegaBossNita_1": "MortuaryShowdown",
+    "MegaBossGrom_1": "MadEvilDungeonShowdown",
+    "MegaBossGriff_1": "MadEvilDungeonShowdown",
+    "MegaBossCrow_2": "MadEvilDungeonShowdown",
+    "ShadowSmash_1": "MortuaryIslandShowdown",
+    "ShadowSmash_2": "MortuaryIslandShowdown",
+    "ShadowSmash_3": "MortuaryIslandShowdown",
+    "ShadowSmash_4": "MortuaryIslandShowdown",
+    "TreasureHunt_661": "Pyramidquest",
+    "TreasureHunt_662": "Biodome",
+    "TreasureHunt_663": "Pyramidquest",
+    "TreasureHunt_664": "Biodome",
+    "Deathmatch_661": "Mortuary",
+    "Deathmatch_662": "Biodome",
+    "KingOfHill_661": "StarrToonsStudio",
+    "KingOfHill_662": "Biodome",
+    "Laserball_661": "BBArena",
+    "Laserball_662": "BBArena",
+    "Bankheist_661": "Scrapyard",
+    "Bankheist_662": "Hub",
+    "Gemgrab_661": "Hub",
+    "Gemgrab_662": "Mortuary",
+    "Knockout_661": "OdditiesShop",
+    "Knockout_662": "BandStand",
+    "TagTeam_661": "Mortuary",
+    "Survival_661": "MadEvilManorShowdown",
+    "Survival_662": "StarrToonsStudioShowdown",
+    "Wanted_661": "Biodome",
+    "Wanted_662": "MadEvilManor",
+    "AirHockey_661": "AirHockey",
+    "AirHockey_662": "AirHockey",
+    "ShadowSmash5v5_1": "MortuaryIslandShowdown",
+    "ShadowSmash5v5_2": "MortuaryIslandShowdown",
+    "ShadowSmash5v5_3": "MortuaryIslandShowdown",
+    "ShadowSmash5v5_4": "MortuaryIslandShowdown",
+    "LargeSurvivalSolo_1": "MadEvilManorShowdown",
+    "BrawlBallV2_1": "BBArenaAdidas",
+    "BrawlBallV2_2": "SBGrassfield",
+    "BrawlBallV2_3": "BBArenaAdidas",
+    "BrawlBallV2_M4": "SBGrassfield",
+    "MegaBossFinx_1": "PyramidquestIslandShowdown",
+    "MegaBossColette_1": "MadEvilDungeonShowdown",
+    "BrawlBallV2_M1": "SBGrassfield",
+    "BrawlBallV2_M2": "BBArenaAdidas",
+    "BrawlBallV2_M3": "SBGrassfield",
+    "SuperHockey_1": "AirHockey",
+    "Moba_671": "PyramidquestIslandShowdown",
+    "Moba_672": "PyramidquestIslandShowdown",
+    "BrawlBallV2_M8": "BBArenaAdidas",
+    "Deathmatch_671": "MadEvilManor",
+    "Bankheist_671": "Scrapyard",
+    "Gemgrab_671": "Pyramidquest",
+    "Knockout_671": "OdditiesShop",
+    "AirHockey_671": "AirHockey",
+    "AirHockey_672": "AirHockey"
+  },
+  "themeToBiome": {
+    "Default": "grassfield",
+    "DefaultShowdown": "grassfield",
+    "Grassfield": "grassfield",
+    "Hub": "grassfield",
+    "BBArena": "grassfield",
+    "AirHockey": "grassfield",
+    "AirHockey2v2": "grassfield",
+    "Biodome": "grassfield",
+    "Arcade": "arcade",
+    "ArcadeShowdown": "arcade",
+    "Mine": "mine",
+    "MineTrainTracks": "mine",
+    "Mortuary": "mortuary",
+    "MortuaryShowdown": "mortuary",
+    "MortuaryIslandShowdown": "mortuary",
+    "MadEvilManor": "mortuary",
+    "MadEvilManorShowdown": "mortuary",
+    "MadEvilDungeonShowdown": "mortuary",
+    "MadEvilIslandShowdown": "mortuary",
+    "Bandstand": "bandstand",
+    "Snowtel": "snowtel",
+    "Scrapyard": "scrapyard",
+    "ScrapyardShowdown": "scrapyard",
+    "CoinFactory": "scrapyard",
+    "CoinFactoryBB": "scrapyard",
+    "GiftShop": "gift",
+    "Pyramidquest": "canyon",
+    "PyramidquestShowdown": "canyon",
+    "PyramidquestIslandShowdown": "canyon",
+    "StarrToonsStudio": "starrforce",
+    "StarrToonsStudioShowdown": "starrforce",
+    "StarrToonsStudioIslandShowdown": "starrforce",
+    "TropicalIslandShowdown": "waterpark",
+    "TropicalIslandShowdownBB": "waterpark",
+    "IslandShowdown": "grassfield",
+    "OdditiesShop": "town",
+    "Retropolis": "retro",
+    "Castle": "castle",
+    "Darryl": "darryl",
+    "Snowy": "snowy",
+    "Town": "town",
+    "Lamporium": "lamporium",
+    "Jungle": "jungle",
+    "ActionShow": "actionshow"
+  }
+}

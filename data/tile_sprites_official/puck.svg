@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Custom asset (not from BrawlMapGen): flat air-hockey puck, top-down
+       with a slight side wall to match the tile art's 3/4 perspective. -->
+  <ellipse cx="50" cy="62" rx="36" ry="28" fill="#000000" opacity="0.25"/>
+  <path d="M14 42 a36 28 0 0 0 72 0 l0 14 a36 28 0 0 1 -72 0 z" fill="#16202b"/>
+  <ellipse cx="50" cy="56" rx="36" ry="28" fill="#16202b"/>
+  <ellipse cx="50" cy="42" rx="36" ry="28" fill="#37485a"/>
+  <ellipse cx="50" cy="42" rx="25" ry="19" fill="#24323f"/>
+  <ellipse cx="40" cy="34" rx="10" ry="6" fill="#4d6175" opacity="0.85"/>
+</svg>

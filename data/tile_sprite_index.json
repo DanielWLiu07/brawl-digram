@@ -1,608 +1,5914 @@
 {
-  "source": "bloodwiing/BrawlMapGen presets/brawlstars.json",
-  "license": "Code: GPLv3 (bloodwiing/BrawlMapGen). Art: Supercell IP under Fan Content Policy.",
-  "ignoreTiles": [
-    ".",
-    "D",
-    "0",
-    "7",
-    "6",
-    "Q",
-    "b",
-    "r"
-  ],
-  "tiles": {
-    "M": {
-      "name": "blocking1",
-      "display": "Wall Block",
-      "assets": [
-        "wood_block.svg",
-        "stone_block.svg",
-        "ice_block.svg",
-        "wall_block.svg",
-        "wall_block_red.svg",
-        "wall_block_gray.svg",
-        "metal_box.svg",
-        "concrete_wall.svg",
-        "sandstone_star.svg",
-        "apartment.svg",
-        "merch_closed.svg",
-        "bandstand_wall.svg",
-        "ice_wall.svg",
-        "scrap_cube.svg",
-        "metal_crate.svg",
-        "haybale.svg",
-        "waterpark_rock.svg",
-        "wall_block_castle.svg"
-      ],
-      "default": "wood_block.svg"
+ "source": "bloodwiing/BrawlMapGen presets/brawlstars.json",
+ "license": "Code: GPLv3 (bloodwiing/BrawlMapGen). Art: Supercell IP under Fan Content Policy.",
+ "ignoreTiles": [
+  ".",
+  "D",
+  "0",
+  "7",
+  "6",
+  "Q",
+  "b",
+  "r"
+ ],
+ "indicatorTiles": [
+  "J",
+  "V"
+ ],
+ "tiles": {
+  "M": {
+   "name": "blocking1",
+   "display": "Wall Block",
+   "variants": [
+    {
+     "asset": "wood_block.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 250,
+      "left": 0,
+      "right": 0
+     }
     },
-    "X": {
-      "name": "blocking2",
-      "display": null,
-      "assets": [
-        "crystal_magenta.svg",
-        "grass_block.svg",
-        "wood_block.svg",
-        "crystal_red.svg",
-        "tires.svg",
-        "tombstone.svg",
-        "chest.svg",
-        "yellow_block.svg",
-        "sandstone_rombus.svg",
-        "factory.svg",
-        "merch_display.svg",
-        "bandstand_wall_2.svg",
-        "ice_wall_2.svg",
-        "concrete_wall.svg",
-        "metal_crate_2.svg",
-        "haybale.svg",
-        "waterpark_wall.svg",
-        "wall_block_castle.svg"
-      ],
-      "default": "crystal_magenta.svg"
+    {
+     "asset": "stone_block.svg",
+     "parts": {
+      "top": 512,
+      "mid": 1000,
+      "bot": 291,
+      "left": 0,
+      "right": 0
+     }
     },
-    "Y": {
-      "name": "blocking3",
-      "display": null,
-      "assets": [
-        "crate.svg",
-        "present_box.svg",
-        "crate_orange.svg",
-        "crate_red.svg",
-        "orange_wall.svg",
-        "tent.svg",
-        "warehouse.svg",
-        "merch_crate.svg",
-        "x_box.svg",
-        "crate_red_orange.svg"
-      ],
-      "default": "crate.svg"
+    {
+     "asset": "ice_block.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 234,
+      "left": 0,
+      "right": 0
+     }
     },
-    "C": {
-      "name": "blocking4",
-      "display": null,
-      "assets": [
-        "barrel.svg",
-        "present_barrel.svg",
-        "metal_barrel.svg",
-        "red_barrel.svg",
-        "orange_barrel.svg",
-        "basket.svg",
-        "office.svg",
-        "fuel_barrel.svg",
-        "waterpark_barrel.svg"
-      ],
-      "default": "barrel.svg"
+    {
+     "asset": "wall_block.svg",
+     "parts": {
+      "top": 482,
+      "mid": 1000,
+      "bot": 283,
+      "left": 0,
+      "right": 0
+     }
     },
-    "F": {
-      "name": "forest",
-      "display": null,
-      "assets": [
-        "grass_green.svg",
-        "grass_cyan.svg",
-        "grass_yellow.svg",
-        "grass_blue.svg",
-        "grass_neon_blue.svg",
-        "grass_blue_fade.svg",
-        "grass_green_round.svg",
-        "grass_pink.svg",
-        "forest.svg",
-        "grass_dull.svg",
-        "grass_pink_round.svg",
-        "grass_teal.svg"
-      ],
-      "default": "grass_green.svg"
+    {
+     "asset": "wall_block_red.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 243,
+      "left": 0,
+      "right": 0
+     }
     },
-    "T": {
-      "name": "respawningWall",
-      "display": null,
-      "assets": [
-        "cactus.svg",
-        "mushroom.svg",
-        "tree.svg",
-        "sapling.svg",
-        "stump.svg",
-        "ship_barrel.svg",
-        "road_sign.svg",
-        "pot.svg",
-        "cargo.svg",
-        "old_tv.svg",
-        "tree_snowless.svg",
-        "tires.svg",
-        "computer.svg",
-        "surfboard.svg",
-        "plant_castle.svg"
-      ],
-      "default": "cactus.svg"
+    {
+     "asset": "wall_block_gray.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
     },
-    "B": {
-      "name": "blockingDestroyableWithWeapon",
-      "display": null,
-      "assets": [
-        "vase.svg",
-        "skull.svg",
-        "present_mini.svg",
-        "cone.svg",
-        "candles.svg",
-        "round_shot.svg",
-        "vending_machines.svg",
-        "balloon.svg",
-        "snowballs.svg",
-        "alien_plant.svg",
-        "cactus_ball.svg",
-        "sand_bucket.svg",
-        "pizza_box.svg"
-      ],
-      "default": "vase.svg"
+    {
+     "asset": "metal_box.svg",
+     "parts": {
+      "top": 600,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
     },
-    "N": {
-      "name": "fence",
-      "display": null,
-      "assets": [
-        "fence_hor.svg",
-        "fence_ver.svg",
-        "fence_cor.svg",
-        "fence_hor_lunar.svg",
-        "fence_ver_lunar.svg",
-        "fence_cor_lunar.svg",
-        "neon_railing_hor.svg",
-        "neon_railing_ver.svg",
-        "neon_railing_r.svg",
-        "neon_railing_l.svg",
-        "neon_railing_t.svg",
-        "neon_railing_b.svg",
-        "neon_railing_tr.svg",
-        "neon_railing_tl.svg",
-        "neon_railing_br.svg",
-        "neon_railing_bl.svg",
-        "fence_hor_mor.svg",
-        "fence_ver_mor.svg",
-        "fence_cor_mor.svg",
-        "ship_railing_hor.svg",
-        "ship_railing_ver.svg",
-        "ship_railing_r.svg",
-        "ship_railing_l.svg",
-        "ship_railing_b.svg",
-        "ship_railing_t.svg",
-        "ship_railing_tr.svg",
-        "ship_railing_tl.svg",
-        "ship_railing_br.svg",
-        "ship_railing_bl.svg",
-        "ship_railing_to.svg",
-        "arcade_fence_corner.svg",
-        "arcade_fence_hor.svg",
-        "arcade_fence_ver.svg",
-        "wall_sand_hor.svg",
-        "wall_sand_ver.svg",
-        "wall_sand_r.svg",
-        "wall_sand_l.svg",
-        "wall_sand_b.svg",
-        "wall_sand_t.svg",
-        "wall_sand_tr.svg",
-        "wall_sand_tl.svg",
-        "wall_sand_br.svg",
-        "wall_sand_bl.svg",
-        "building_long_hor.svg",
-        "building_long_ver.svg",
-        "building_long_r.svg",
-        "building_long_l.svg",
-        "building_long_b.svg",
-        "building_long_t.svg",
-        "building_long_tr.svg",
-        "building_long_tl.svg",
-        "building_long_br.svg",
-        "building_long_bl.svg",
-        "gift_fence_hor.svg",
-        "gift_fence_ver.svg",
-        "gift_fence_r.svg",
-        "gift_fence_l.svg",
-        "gift_fence_b.svg",
-        "gift_fence_t.svg",
-        "gift_fence_tr.svg",
-        "gift_fence_tl.svg",
-        "gift_fence_br.svg",
-        "gift_fence_bl.svg",
-        "wall_band_hor.svg",
-        "wall_band_ver.svg",
-        "wall_band_r.svg",
-        "wall_band_l.svg",
-        "wall_band_b.svg",
-        "wall_band_t.svg",
-        "wall_band_tr.svg",
-        "wall_band_tl.svg",
-        "wall_band_br.svg",
-        "wall_band_bl.svg",
-        "fence_hor_ice.svg",
-        "fence_ver_ice.svg",
-        "fence_cor_ice.svg",
-        "pipe_hor.svg",
-        "pipe_ver.svg",
-        "pipe_r.svg",
-        "pipe_l.svg",
-        "pipe_b.svg",
-        "pipe_t.svg",
-        "pipe_tr.svg",
-        "pipe_tl.svg",
-        "pipe_br.svg",
-        "pipe_bl.svg",
-        "spacestation_wall_hor.svg",
-        "spacestation_wall_ver.svg",
-        "spacestation_wall_r.svg",
-        "spacestation_wall_l.svg",
-        "spacestation_wall_b.svg",
-        "spacestation_wall_t.svg",
-        "spacestation_wall_tr.svg",
-        "spacestation_wall_tl.svg",
-        "spacestation_wall_br.svg",
-        "spacestation_wall_bl.svg",
-        "waterpark_fence.svg",
-        "waterpark_fence_hor.svg",
-        "waterpark_fence_r.svg",
-        "waterpark_fence_l.svg",
-        "waterpark_fence_b.svg",
-        "waterpark_fence_br.svg",
-        "waterpark_fence_bl.svg",
-        "fence_hor_castle.svg",
-        "fence_ver_castle.svg",
-        "fence_cor_castle.svg"
-      ],
-      "default": "fence_hor.svg"
+    {
+     "asset": "concrete_wall.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
     },
-    "W": {
-      "name": "water",
-      "display": null,
-      "assets": [
-        "?binary?.svg"
-      ],
-      "default": "?binary?.svg"
+    {
+     "asset": "sandstone_star.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
     },
-    "1": {
-      "name": "player1",
-      "display": null,
-      "assets": [
-        "player_blue.svg",
-        "player_gray.svg",
-        "player_white.svg",
-        "nothing.svg"
-      ],
-      "default": "player_blue.svg"
+    {
+     "asset": "apartment.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
     },
-    "2": {
-      "name": "player2",
-      "display": null,
-      "assets": [
-        "player_red.svg",
-        "player_gray.svg",
-        "player_big.svg",
-        "player_boss.svg",
-        "nothing.svg",
-        "mega_spawn.svg",
-        "mega_spawn_mod.svg",
-        "player_white.svg",
-        "player_green.svg"
-      ],
-      "default": "player_red.svg"
+    {
+     "asset": "merch_closed.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
     },
-    "8": {
-      "name": "objective",
-      "display": null,
-      "assets": [
-        "mine.svg",
-        "vault.svg",
-        "bounty_star.svg",
-        "vault_offset.svg",
-        "brawlball.svg",
-        "goal_red.svg",
-        "goal_blue.svg",
-        "mine_snow.svg",
-        "ike_red.svg",
-        "ike_blue.svg",
-        "mine_town.svg",
-        "mine_retro.svg",
-        "mine_mortuary.svg",
-        "mine_ship.svg",
-        "flag_present_red.svg",
-        "flag_present_blue.svg",
-        "hot_zone_blue.svg",
-        "soccerball.svg",
-        "goal_red_2.svg",
-        "goal_blue_2.svg",
-        "mine_bazaar.svg",
-        "hot_zone_both.svg",
-        "mine_construction.svg",
-        "bank.svg",
-        "mine_burst.svg",
-        "mine_hatch.svg",
-        "trophy_gold.svg",
-        "trophy_blue.svg",
-        "trophy_red.svg",
-        "volleyball.svg",
-        "basketball.svg",
-        "basket_hoop_blue.svg",
-        "basket_hoop_red.svg",
-        "basket_hoop_blue_range.svg",
-        "basket_hoop_red_range.svg",
-        "volleyball_mod.svg",
-        "volleyball.svg",
-        "mine_castle.svg"
-      ],
-      "default": "mine.svg"
+    {
+     "asset": "bandstand_wall.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
     },
-    "H": {
-      "name": "springpadRight",
-      "display": null,
-      "assets": [
-        "spring_right.svg"
-      ],
-      "default": "spring_right.svg"
+    {
+     "asset": "ice_wall.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
     },
-    "G": {
-      "name": "springpadLeft",
-      "display": null,
-      "assets": [
-        "spring_left.svg"
-      ],
-      "default": "spring_left.svg"
+    {
+     "asset": "scrap_cube.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
     },
-    "L": {
-      "name": "springpadBottom",
-      "display": null,
-      "assets": [
-        "spring_bottom.svg"
-      ],
-      "default": "spring_bottom.svg"
+    {
+     "asset": "metal_crate.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
     },
-    "K": {
-      "name": "springpadTop",
-      "display": null,
-      "assets": [
-        "spring_top.svg"
-      ],
-      "default": "spring_top.svg"
+    {
+     "asset": "haybale.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 50,
+      "right": 50
+     }
     },
-    "P": {
-      "name": "springpadBottomRight",
-      "display": null,
-      "assets": [
-        "spring_bottom_right.svg"
-      ],
-      "default": "spring_bottom_right.svg"
+    {
+     "asset": "waterpark_rock.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
     },
-    "Z": {
-      "name": "springpadTopLeft",
-      "display": null,
-      "assets": [
-        "spring_top_left.svg"
-      ],
-      "default": "spring_top_left.svg"
-    },
-    "O": {
-      "name": "springpadBottomLeft",
-      "display": null,
-      "assets": [
-        "spring_bottom_left.svg"
-      ],
-      "default": "spring_bottom_left.svg"
-    },
-    "U": {
-      "name": "springpadTopRight",
-      "display": null,
-      "assets": [
-        "spring_top_right.svg"
-      ],
-      "default": "spring_top_right.svg"
-    },
-    ",": {
-      "name": "ikeRange",
-      "display": null,
-      "assets": [
-        "ike_blue_range.svg",
-        "ike_red_range.svg"
-      ],
-      "default": "ike_blue_range.svg"
-    },
-    "Q": {
-      "name": "rails",
-      "display": null,
-      "assets": [
-        "rails.svg"
-      ],
-      "default": "rails.svg"
-    },
-    "E": {
-      "name": "bench1",
-      "display": null,
-      "assets": [
-        "bench_top_left.svg",
-        "bench_top_right.svg",
-        "bench_left_top.svg",
-        "bench_left_bottom.svg"
-      ],
-      "default": "bench_top_left.svg"
-    },
-    "A": {
-      "name": "bench2",
-      "display": null,
-      "assets": [
-        "bench_bottom_left.svg",
-        "bench_bottom_right.svg",
-        "bench_right_top.svg",
-        "bench_right_bottom.svg"
-      ],
-      "default": "bench_bottom_left.svg"
-    },
-    "c": {
-      "name": "teleporterBlue",
-      "display": null,
-      "assets": [
-        "teleporter_blue.svg"
-      ],
-      "default": "teleporter_blue.svg"
-    },
-    "d": {
-      "name": "teleporterGreen",
-      "display": null,
-      "assets": [
-        "teleporter_green.svg"
-      ],
-      "default": "teleporter_green.svg"
-    },
-    "e": {
-      "name": "teleporterRed",
-      "display": null,
-      "assets": [
-        "teleporter_red.svg"
-      ],
-      "default": "teleporter_red.svg"
-    },
-    "f": {
-      "name": "teleporterYellow",
-      "display": null,
-      "assets": [
-        "teleporter_yellow.svg"
-      ],
-      "default": "teleporter_yellow.svg"
-    },
-    "a": {
-      "name": "ropeFence",
-      "display": null,
-      "assets": [
-        "rope_post.svg",
-        "rope_post_t.svg",
-        "rope_post_r.svg",
-        "rope_post_tr.svg",
-        "rope_post_mine.svg",
-        "rope_post_mine_t.svg",
-        "rope_post_mine_r.svg",
-        "rope_post_mine_tr.svg",
-        "rope_post_mortuary.svg",
-        "rope_post_mortuary_t.svg",
-        "rope_post_mortuary_r.svg",
-        "rope_post_mortuary_tr.svg",
-        "rope_post_giftshop.svg",
-        "rope_post_giftshop_t.svg",
-        "rope_post_giftshop_r.svg",
-        "rope_post_giftshop_tr.svg",
-        "rope_post_danger.svg",
-        "rope_post_danger_t.svg",
-        "rope_post_danger_r.svg",
-        "rope_post_danger_tr.svg",
-        "rope_post_waterpark.svg",
-        "rope_post_waterpark_t.svg",
-        "rope_post_waterpark_r.svg",
-        "rope_post_waterpark_tr.svg",
-        "power_line.svg",
-        "power_line_t.svg",
-        "power_line_r.svg",
-        "power_line_tr.svg"
-      ],
-      "default": "rope_post.svg"
-    },
-    "v": {
-      "name": "intervalDamage",
-      "display": null,
-      "assets": [
-        "spikes.svg"
-      ],
-      "default": "spikes.svg"
-    },
-    "x": {
-      "name": "damage",
-      "display": null,
-      "assets": [
-        "poison.svg",
-        "poison_pink.svg"
-      ],
-      "default": "poison.svg"
-    },
-    "y": {
-      "name": "healing",
-      "display": null,
-      "assets": [
-        "healpad.svg"
-      ],
-      "default": "healpad.svg"
-    },
-    "z": {
-      "name": "slow",
-      "display": null,
-      "assets": [
-        "slowpad.svg"
-      ],
-      "default": "slowpad.svg"
-    },
-    "w": {
-      "name": "fast",
-      "display": null,
-      "assets": [
-        "speedpad.svg"
-      ],
-      "default": "speedpad.svg"
-    },
-    "I": {
-      "name": "indestructible",
-      "display": null,
-      "assets": [
-        "indestructible.svg",
-        "indestructible_bricks.svg"
-      ],
-      "default": "indestructible.svg"
-    },
-    "4": {
-      "name": "powerupCrate",
-      "display": null,
-      "assets": [
-        "power_crate.svg"
-      ],
-      "default": "power_crate.svg"
-    },
-    "q": {
-      "name": "explosive",
-      "display": null,
-      "assets": [
-        "tnt.svg"
-      ],
-      "default": "tnt.svg"
-    },
-    "g": {
-      "name": "siegeBolt",
-      "display": null,
-      "assets": [
-        "bolt_0.svg",
-        "number_1.svg",
-        "number_2.svg",
-        "number_3.svg",
-        "number_4.svg",
-        "number_5.svg",
-        "number_6.svg",
-        "number_7.svg",
-        "number_8.svg",
-        "number_9.svg",
-        "number_10.svg",
-        "number_unk.svg"
-      ],
-      "default": "bolt_0.svg"
+    {
+     "asset": "wall_block_castle.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 250,
+      "left": 0,
+      "right": 0
+     }
     }
+   ],
+   "default": {
+    "asset": "wood_block.svg",
+    "parts": {
+     "top": 500,
+     "mid": 1000,
+     "bot": 250,
+     "left": 0,
+     "right": 0
+    }
+   }
+  },
+  "X": {
+   "name": "blocking2",
+   "display": null,
+   "variants": [
+    {
+     "asset": "crystal_magenta.svg",
+     "parts": {
+      "top": 405,
+      "mid": 1000,
+      "bot": 280,
+      "left": 0,
+      "right": 20
+     }
+    },
+    {
+     "asset": "grass_block.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "wood_block.svg",
+     "parts": {
+      "top": 528,
+      "mid": 1000,
+      "bot": 237,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "crystal_red.svg",
+     "parts": {
+      "top": 405,
+      "mid": 1000,
+      "bot": 280,
+      "left": 0,
+      "right": 20
+     }
+    },
+    {
+     "asset": "tires.svg",
+     "parts": {
+      "top": 544,
+      "mid": 1000,
+      "bot": 243,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "tombstone.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "chest.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "yellow_block.svg",
+     "parts": {
+      "top": 450,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "sandstone_rombus.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "factory.svg",
+     "parts": {
+      "top": 600,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "merch_display.svg",
+     "parts": {
+      "top": 300,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "bandstand_wall_2.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "ice_wall_2.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "concrete_wall.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "metal_crate_2.svg",
+     "parts": {
+      "top": 700,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "haybale.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 50,
+      "right": 50
+     }
+    },
+    {
+     "asset": "waterpark_wall.svg",
+     "parts": {
+      "top": 450,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "wall_block_castle.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 250,
+      "left": 0,
+      "right": 0
+     }
+    }
+   ],
+   "default": {
+    "asset": "crystal_magenta.svg",
+    "parts": {
+     "top": 405,
+     "mid": 1000,
+     "bot": 280,
+     "left": 0,
+     "right": 20
+    }
+   }
+  },
+  "Y": {
+   "name": "blocking3",
+   "display": null,
+   "variants": [
+    {
+     "asset": "crate.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "present_box.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "crate_orange.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "crate_red.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "orange_wall.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "tent.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 50,
+      "right": 50
+     }
+    },
+    {
+     "asset": "warehouse.svg",
+     "parts": {
+      "top": 350,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "merch_crate.svg",
+     "parts": {
+      "top": 400,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "x_box.svg",
+     "parts": {
+      "top": 400,
+      "mid": 1000,
+      "bot": 300,
+      "left": 50,
+      "right": 50
+     }
+    },
+    {
+     "asset": "crate_red_orange.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 250,
+      "left": 0,
+      "right": 0
+     }
+    }
+   ],
+   "default": {
+    "asset": "crate.svg",
+    "parts": {
+     "top": 500,
+     "mid": 1000,
+     "bot": 300,
+     "left": 0,
+     "right": 0
+    }
+   }
+  },
+  "C": {
+   "name": "blocking4",
+   "display": null,
+   "variants": [
+    {
+     "asset": "barrel.svg",
+     "parts": {
+      "top": 439,
+      "mid": 1000,
+      "bot": 266,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "present_barrel.svg",
+     "parts": {
+      "top": 528,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "metal_barrel.svg",
+     "parts": {
+      "top": 566,
+      "mid": 1000,
+      "bot": 243,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "red_barrel.svg",
+     "parts": {
+      "top": 400,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "orange_barrel.svg",
+     "parts": {
+      "top": 600,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "basket.svg",
+     "parts": {
+      "top": 400,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "office.svg",
+     "parts": {
+      "top": 600,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "fuel_barrel.svg",
+     "parts": {
+      "top": 600,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "waterpark_barrel.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    }
+   ],
+   "default": {
+    "asset": "barrel.svg",
+    "parts": {
+     "top": 439,
+     "mid": 1000,
+     "bot": 266,
+     "left": 0,
+     "right": 0
+    }
+   }
+  },
+  "F": {
+   "name": "forest",
+   "display": null,
+   "variants": [
+    {
+     "asset": "grass_green.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "grass_cyan.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "grass_yellow.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "grass_blue.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "grass_neon_blue.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "grass_blue_fade.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "grass_green_round.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "grass_pink.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "forest.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 300,
+      "left": 50,
+      "right": 50
+     }
+    },
+    {
+     "asset": "grass_dull.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "grass_pink_round.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "grass_teal.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 250,
+      "left": 0,
+      "right": 0
+     }
+    }
+   ],
+   "default": {
+    "asset": "grass_green.svg",
+    "parts": {
+     "top": 500,
+     "mid": 1000,
+     "bot": 300,
+     "left": 0,
+     "right": 0
+    }
+   }
+  },
+  "T": {
+   "name": "respawningWall",
+   "display": null,
+   "variants": [
+    {
+     "asset": "cactus.svg",
+     "parts": {
+      "top": 527,
+      "mid": 1000,
+      "bot": 300,
+      "left": 28,
+      "right": 63
+     }
+    },
+    {
+     "asset": "mushroom.svg",
+     "parts": {
+      "top": 386,
+      "mid": 1000,
+      "bot": 327,
+      "left": 7,
+      "right": 4
+     }
+    },
+    {
+     "asset": "tree.svg",
+     "parts": {
+      "top": 464,
+      "mid": 1000,
+      "bot": 136,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "sapling.svg",
+     "parts": {
+      "top": 875,
+      "mid": 1000,
+      "bot": 331,
+      "left": 3,
+      "right": 3
+     }
+    },
+    {
+     "asset": "stump.svg",
+     "parts": {
+      "top": 400,
+      "mid": 1000,
+      "bot": 300,
+      "left": 100,
+      "right": 100
+     }
+    },
+    {
+     "asset": "ship_barrel.svg",
+     "parts": {
+      "top": 400,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "road_sign.svg",
+     "parts": {
+      "top": 400,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "pot.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 300,
+      "left": 75,
+      "right": 75
+     }
+    },
+    {
+     "asset": "cargo.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 50,
+      "right": 50
+     }
+    },
+    {
+     "asset": "old_tv.svg",
+     "parts": {
+      "top": 522,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "tree_snowless.svg",
+     "parts": {
+      "top": 400,
+      "mid": 1000,
+      "bot": 300,
+      "left": 7,
+      "right": 7
+     }
+    },
+    {
+     "asset": "tires.svg",
+     "parts": {
+      "top": 544,
+      "mid": 1000,
+      "bot": 243,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "computer.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "surfboard.svg",
+     "parts": {
+      "top": 600,
+      "mid": 1000,
+      "bot": 300,
+      "left": 88,
+      "right": 88
+     }
+    },
+    {
+     "asset": "plant_castle.svg",
+     "parts": {
+      "top": 525,
+      "mid": 1000,
+      "bot": 250,
+      "left": 43,
+      "right": 43
+     }
+    }
+   ],
+   "default": {
+    "asset": "cactus.svg",
+    "parts": {
+     "top": 527,
+     "mid": 1000,
+     "bot": 300,
+     "left": 28,
+     "right": 63
+    }
+   }
+  },
+  "B": {
+   "name": "blockingDestroyableWithWeapon",
+   "display": null,
+   "variants": [
+    {
+     "asset": "vase.svg",
+     "parts": {
+      "top": 392,
+      "mid": 1000,
+      "bot": 190,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "skull.svg",
+     "parts": {
+      "top": 0,
+      "mid": 980,
+      "bot": 98,
+      "left": 8,
+      "right": 0
+     }
+    },
+    {
+     "asset": "present_mini.svg",
+     "parts": {
+      "top": 303,
+      "mid": 1000,
+      "bot": 91,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "cone.svg",
+     "parts": {
+      "top": 351,
+      "mid": 1000,
+      "bot": 156,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "candles.svg",
+     "parts": {
+      "top": 350,
+      "mid": 1000,
+      "bot": 150,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "round_shot.svg",
+     "parts": {
+      "top": -50,
+      "mid": 1000,
+      "bot": 0,
+      "left": -50,
+      "right": 0
+     }
+    },
+    {
+     "asset": "vending_machines.svg",
+     "parts": {
+      "top": 150,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "balloon.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 400,
+      "left": -50,
+      "right": -50
+     }
+    },
+    {
+     "asset": "snowballs.svg",
+     "parts": {
+      "top": 250,
+      "mid": 1000,
+      "bot": 150,
+      "left": 75,
+      "right": 75
+     }
+    },
+    {
+     "asset": "alien_plant.svg",
+     "parts": {
+      "top": 450,
+      "mid": 1000,
+      "bot": 250,
+      "left": 50,
+      "right": 50
+     }
+    },
+    {
+     "asset": "cactus_ball.svg",
+     "parts": {
+      "top": 0,
+      "mid": 975,
+      "bot": 300,
+      "left": 46,
+      "right": 46
+     }
+    },
+    {
+     "asset": "sand_bucket.svg",
+     "parts": {
+      "top": 450,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "pizza_box.svg",
+     "parts": {
+      "top": -100,
+      "mid": 1000,
+      "bot": 250,
+      "left": -50,
+      "right": -50
+     }
+    }
+   ],
+   "default": {
+    "asset": "vase.svg",
+    "parts": {
+     "top": 392,
+     "mid": 1000,
+     "bot": 190,
+     "left": 0,
+     "right": 0
+    }
+   }
+  },
+  "N": {
+   "name": "fence",
+   "display": null,
+   "variants": [
+    {
+     "asset": "fence_hor.svg",
+     "parts": {
+      "top": 127,
+      "mid": 1000,
+      "bot": 242,
+      "left": 45,
+      "right": 45
+     }
+    },
+    {
+     "asset": "fence_ver.svg",
+     "parts": {
+      "top": 601,
+      "mid": 1000,
+      "bot": 243,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "fence_cor.svg",
+     "parts": {
+      "top": 517,
+      "mid": 1000,
+      "bot": 243,
+      "left": 45,
+      "right": 45
+     }
+    },
+    {
+     "asset": "fence_hor_lunar.svg",
+     "parts": {
+      "top": 317,
+      "mid": 1000,
+      "bot": 243,
+      "left": 44,
+      "right": 44
+     }
+    },
+    {
+     "asset": "fence_ver_lunar.svg",
+     "parts": {
+      "top": 602,
+      "mid": 1000,
+      "bot": 243,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "fence_cor_lunar.svg",
+     "parts": {
+      "top": 517,
+      "mid": 1000,
+      "bot": 243,
+      "left": 45,
+      "right": 45
+     }
+    },
+    {
+     "asset": "neon_railing_hor.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "neon_railing_ver.svg",
+     "parts": {
+      "top": 650,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "neon_railing_r.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 0,
+      "left": 2,
+      "right": 0
+     }
+    },
+    {
+     "asset": "neon_railing_l.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 2
+     }
+    },
+    {
+     "asset": "neon_railing_t.svg",
+     "parts": {
+      "top": 650,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "neon_railing_b.svg",
+     "parts": {
+      "top": 440,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "neon_railing_tr.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "neon_railing_tl.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "neon_railing_br.svg",
+     "parts": {
+      "top": 650,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "neon_railing_bl.svg",
+     "parts": {
+      "top": 650,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "fence_hor_mor.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 300,
+      "left": 50,
+      "right": 50
+     }
+    },
+    {
+     "asset": "fence_ver_mor.svg",
+     "parts": {
+      "top": 750,
+      "mid": 1000,
+      "bot": 300,
+      "left": -150,
+      "right": -150
+     }
+    },
+    {
+     "asset": "fence_cor_mor.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "ship_railing_hor.svg",
+     "parts": {
+      "top": 450,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "ship_railing_ver.svg",
+     "parts": {
+      "top": -50,
+      "mid": 1000,
+      "bot": 0,
+      "left": -150,
+      "right": 0
+     }
+    },
+    {
+     "asset": "ship_railing_r.svg",
+     "parts": {
+      "top": 450,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "ship_railing_l.svg",
+     "parts": {
+      "top": 450,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "ship_railing_b.svg",
+     "parts": {
+      "top": -50,
+      "mid": 1000,
+      "bot": 0,
+      "left": -150,
+      "right": 0
+     }
+    },
+    {
+     "asset": "ship_railing_t.svg",
+     "parts": {
+      "top": -250,
+      "mid": 1000,
+      "bot": 0,
+      "left": -150,
+      "right": 0
+     }
+    },
+    {
+     "asset": "ship_railing_tr.svg",
+     "parts": {
+      "top": 450,
+      "mid": 1000,
+      "bot": 50,
+      "left": -150,
+      "right": 0
+     }
+    },
+    {
+     "asset": "ship_railing_tl.svg",
+     "parts": {
+      "top": 450,
+      "mid": 1000,
+      "bot": 50,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "ship_railing_br.svg",
+     "parts": {
+      "top": 600,
+      "mid": 1000,
+      "bot": 0,
+      "left": -150,
+      "right": 0
+     }
+    },
+    {
+     "asset": "ship_railing_bl.svg",
+     "parts": {
+      "top": 600,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "ship_railing_to.svg",
+     "parts": {
+      "top": 200,
+      "mid": 1000,
+      "bot": 0,
+      "left": -150,
+      "right": 0
+     }
+    },
+    {
+     "asset": "arcade_fence_corner.svg",
+     "parts": {
+      "top": 800,
+      "mid": 1000,
+      "bot": 300,
+      "left": 150,
+      "right": 150
+     }
+    },
+    {
+     "asset": "arcade_fence_hor.svg",
+     "parts": {
+      "top": 400,
+      "mid": 1000,
+      "bot": 300,
+      "left": 50,
+      "right": 50
+     }
+    },
+    {
+     "asset": "arcade_fence_ver.svg",
+     "parts": {
+      "top": 450,
+      "mid": 1000,
+      "bot": 0,
+      "left": -125,
+      "right": -125
+     }
+    },
+    {
+     "asset": "wall_sand_hor.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "wall_sand_ver.svg",
+     "parts": {
+      "top": 600,
+      "mid": 1000,
+      "bot": -100,
+      "left": -150,
+      "right": -150
+     }
+    },
+    {
+     "asset": "wall_sand_r.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "wall_sand_l.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "wall_sand_b.svg",
+     "parts": {
+      "top": 600,
+      "mid": 1000,
+      "bot": -200,
+      "left": -150,
+      "right": -150
+     }
+    },
+    {
+     "asset": "wall_sand_t.svg",
+     "parts": {
+      "top": 600,
+      "mid": 1000,
+      "bot": -100,
+      "left": -150,
+      "right": -150
+     }
+    },
+    {
+     "asset": "wall_sand_tr.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 300,
+      "left": -150,
+      "right": 0
+     }
+    },
+    {
+     "asset": "wall_sand_tl.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": -150
+     }
+    },
+    {
+     "asset": "wall_sand_br.svg",
+     "parts": {
+      "top": 1000,
+      "mid": 1000,
+      "bot": 300,
+      "left": -150,
+      "right": 0
+     }
+    },
+    {
+     "asset": "wall_sand_bl.svg",
+     "parts": {
+      "top": 1000,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": -150
+     }
+    },
+    {
+     "asset": "building_long_hor.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 400,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "building_long_ver.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": -500,
+      "left": -150,
+      "right": -150
+     }
+    },
+    {
+     "asset": "building_long_r.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 400,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "building_long_l.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 400,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "building_long_b.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": -200,
+      "left": -150,
+      "right": -150
+     }
+    },
+    {
+     "asset": "building_long_t.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": -500,
+      "left": -150,
+      "right": -150
+     }
+    },
+    {
+     "asset": "building_long_tr.svg",
+     "parts": {
+      "top": 450,
+      "mid": 1000,
+      "bot": 400,
+      "left": -150,
+      "right": 0
+     }
+    },
+    {
+     "asset": "building_long_tl.svg",
+     "parts": {
+      "top": 450,
+      "mid": 1000,
+      "bot": 400,
+      "left": 0,
+      "right": -150
+     }
+    },
+    {
+     "asset": "building_long_br.svg",
+     "parts": {
+      "top": 900,
+      "mid": 1000,
+      "bot": 400,
+      "left": -150,
+      "right": 0
+     }
+    },
+    {
+     "asset": "building_long_bl.svg",
+     "parts": {
+      "top": 900,
+      "mid": 1000,
+      "bot": 400,
+      "left": 0,
+      "right": -150
+     }
+    },
+    {
+     "asset": "gift_fence_hor.svg",
+     "parts": {
+      "top": 450,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "gift_fence_ver.svg",
+     "parts": {
+      "top": -50,
+      "mid": 1000,
+      "bot": 0,
+      "left": -150,
+      "right": 0
+     }
+    },
+    {
+     "asset": "gift_fence_r.svg",
+     "parts": {
+      "top": 450,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "gift_fence_l.svg",
+     "parts": {
+      "top": 450,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "gift_fence_b.svg",
+     "parts": {
+      "top": -50,
+      "mid": 1000,
+      "bot": 0,
+      "left": -150,
+      "right": 0
+     }
+    },
+    {
+     "asset": "gift_fence_t.svg",
+     "parts": {
+      "top": -250,
+      "mid": 1000,
+      "bot": 0,
+      "left": -150,
+      "right": 0
+     }
+    },
+    {
+     "asset": "gift_fence_tr.svg",
+     "parts": {
+      "top": 450,
+      "mid": 1000,
+      "bot": 50,
+      "left": -150,
+      "right": 0
+     }
+    },
+    {
+     "asset": "gift_fence_tl.svg",
+     "parts": {
+      "top": 450,
+      "mid": 1000,
+      "bot": 50,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "gift_fence_br.svg",
+     "parts": {
+      "top": 600,
+      "mid": 1000,
+      "bot": 0,
+      "left": -150,
+      "right": 0
+     }
+    },
+    {
+     "asset": "gift_fence_bl.svg",
+     "parts": {
+      "top": 600,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "wall_band_hor.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "wall_band_ver.svg",
+     "parts": {
+      "top": 600,
+      "mid": 1000,
+      "bot": -100,
+      "left": -150,
+      "right": -150
+     }
+    },
+    {
+     "asset": "wall_band_r.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "wall_band_l.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "wall_band_b.svg",
+     "parts": {
+      "top": 600,
+      "mid": 1000,
+      "bot": -200,
+      "left": -150,
+      "right": -150
+     }
+    },
+    {
+     "asset": "wall_band_t.svg",
+     "parts": {
+      "top": 600,
+      "mid": 1000,
+      "bot": -100,
+      "left": -150,
+      "right": -150
+     }
+    },
+    {
+     "asset": "wall_band_tr.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 300,
+      "left": -150,
+      "right": 0
+     }
+    },
+    {
+     "asset": "wall_band_tl.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": -150
+     }
+    },
+    {
+     "asset": "wall_band_br.svg",
+     "parts": {
+      "top": 1000,
+      "mid": 1000,
+      "bot": 300,
+      "left": -150,
+      "right": 0
+     }
+    },
+    {
+     "asset": "wall_band_bl.svg",
+     "parts": {
+      "top": 1000,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": -150
+     }
+    },
+    {
+     "asset": "fence_hor_ice.svg",
+     "parts": {
+      "top": 300,
+      "mid": 1000,
+      "bot": 300,
+      "left": 50,
+      "right": 50
+     }
+    },
+    {
+     "asset": "fence_ver_ice.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 250,
+      "left": -200,
+      "right": -200
+     }
+    },
+    {
+     "asset": "fence_cor_ice.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 50,
+      "right": 50
+     }
+    },
+    {
+     "asset": "pipe_hor.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "pipe_ver.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "pipe_r.svg",
+     "parts": {
+      "top": 100,
+      "mid": 1000,
+      "bot": 300,
+      "left": 200,
+      "right": 0
+     }
+    },
+    {
+     "asset": "pipe_l.svg",
+     "parts": {
+      "top": 100,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 200
+     }
+    },
+    {
+     "asset": "pipe_b.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 500,
+      "left": 100,
+      "right": 100
+     }
+    },
+    {
+     "asset": "pipe_t.svg",
+     "parts": {
+      "top": 100,
+      "mid": 1000,
+      "bot": 0,
+      "left": 100,
+      "right": 100
+     }
+    },
+    {
+     "asset": "pipe_tr.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "pipe_tl.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "pipe_br.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "pipe_bl.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "spacestation_wall_hor.svg",
+     "parts": {
+      "top": 350,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "spacestation_wall_ver.svg",
+     "parts": {
+      "top": 600,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "spacestation_wall_r.svg",
+     "parts": {
+      "top": 350,
+      "mid": 1000,
+      "bot": 300,
+      "left": 150,
+      "right": 0
+     }
+    },
+    {
+     "asset": "spacestation_wall_l.svg",
+     "parts": {
+      "top": 350,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 150
+     }
+    },
+    {
+     "asset": "spacestation_wall_b.svg",
+     "parts": {
+      "top": 600,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "spacestation_wall_t.svg",
+     "parts": {
+      "top": 650,
+      "mid": 1000,
+      "bot": 50,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "spacestation_wall_tr.svg",
+     "parts": {
+      "top": 350,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "spacestation_wall_tl.svg",
+     "parts": {
+      "top": 350,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "spacestation_wall_br.svg",
+     "parts": {
+      "top": 600,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "spacestation_wall_bl.svg",
+     "parts": {
+      "top": 600,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "waterpark_fence.svg",
+     "parts": {
+      "top": 350,
+      "mid": 1000,
+      "bot": 150,
+      "left": -100,
+      "right": -100
+     }
+    },
+    {
+     "asset": "waterpark_fence_hor.svg",
+     "parts": {
+      "top": 350,
+      "mid": 1000,
+      "bot": 150,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "waterpark_fence_r.svg",
+     "parts": {
+      "top": 350,
+      "mid": 1000,
+      "bot": 150,
+      "left": -100,
+      "right": 0
+     }
+    },
+    {
+     "asset": "waterpark_fence_l.svg",
+     "parts": {
+      "top": 350,
+      "mid": 1000,
+      "bot": 150,
+      "left": 0,
+      "right": -100
+     }
+    },
+    {
+     "asset": "waterpark_fence_b.svg",
+     "parts": {
+      "top": 750,
+      "mid": 1000,
+      "bot": 150,
+      "left": -100,
+      "right": -100
+     }
+    },
+    {
+     "asset": "waterpark_fence_br.svg",
+     "parts": {
+      "top": 750,
+      "mid": 1000,
+      "bot": 150,
+      "left": -100,
+      "right": 0
+     }
+    },
+    {
+     "asset": "waterpark_fence_bl.svg",
+     "parts": {
+      "top": 750,
+      "mid": 1000,
+      "bot": 150,
+      "left": 0,
+      "right": -100
+     }
+    },
+    {
+     "asset": "fence_hor_castle.svg",
+     "parts": {
+      "top": 616,
+      "mid": 1000,
+      "bot": 250,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "fence_ver_castle.svg",
+     "parts": {
+      "top": 616,
+      "mid": 1000,
+      "bot": 0,
+      "left": -150,
+      "right": -150
+     }
+    },
+    {
+     "asset": "fence_cor_castle.svg",
+     "parts": {
+      "top": 550,
+      "mid": 1000,
+      "bot": 250,
+      "left": 0,
+      "right": 0
+     }
+    }
+   ],
+   "default": {
+    "asset": "fence_hor.svg",
+    "parts": {
+     "top": 127,
+     "mid": 1000,
+     "bot": 242,
+     "left": 45,
+     "right": 45
+    }
+   },
+   "tileLinks": {
+    "rules": [
+     {
+      "condition": "*1****0*",
+      "requiredBiome": 23,
+      "changeTileType": 105
+     },
+     {
+      "condition": "*0****1*",
+      "requiredBiome": 23,
+      "changeTileType": 105
+     },
+     {
+      "condition": "***01***",
+      "requiredBiome": 23,
+      "changeTileType": 105
+     },
+     {
+      "condition": "***10***",
+      "requiredBiome": 23,
+      "changeTileType": 105
+     },
+     {
+      "condition": "*1****1*",
+      "requiredBiome": 23,
+      "changeTileType": 104
+     },
+     {
+      "condition": "*0****0*",
+      "requiredBiome": 23,
+      "changeTileType": 103
+     },
+     {
+      "condition": "***11***",
+      "requiredBiome": 22,
+      "changeTileType": 31
+     },
+     {
+      "condition": "*1****1*",
+      "requiredBiome": 22,
+      "changeTileType": 32
+     },
+     {
+      "condition": "*0****1*",
+      "requiredBiome": 22,
+      "changeTileType": 30
+     },
+     {
+      "condition": "*1****0*",
+      "requiredBiome": 22,
+      "changeTileType": 30
+     },
+     {
+      "condition": "***01***",
+      "requiredBiome": 22,
+      "changeTileType": 30
+     },
+     {
+      "condition": "***10***",
+      "requiredBiome": 22,
+      "changeTileType": 30
+     },
+     {
+      "condition": "***11***",
+      "requiredBiome": 21,
+      "changeTileType": 31
+     },
+     {
+      "condition": "*1****1*",
+      "requiredBiome": 21,
+      "changeTileType": 32
+     },
+     {
+      "condition": "*0****1*",
+      "requiredBiome": 21,
+      "changeTileType": 30
+     },
+     {
+      "condition": "*1****0*",
+      "requiredBiome": 21,
+      "changeTileType": 30
+     },
+     {
+      "condition": "***01***",
+      "requiredBiome": 21,
+      "changeTileType": 30
+     },
+     {
+      "condition": "***10***",
+      "requiredBiome": 21,
+      "changeTileType": 30
+     },
+     {
+      "condition": "*1*10***",
+      "requiredBiome": 20,
+      "changeTileType": 102
+     },
+     {
+      "condition": "*1*01***",
+      "requiredBiome": 20,
+      "changeTileType": 101
+     },
+     {
+      "condition": "*1*00***",
+      "requiredBiome": 20,
+      "changeTileType": 100
+     },
+     {
+      "condition": "***10***",
+      "requiredBiome": 20,
+      "changeTileType": 99
+     },
+     {
+      "condition": "***01***",
+      "requiredBiome": 20,
+      "changeTileType": 98
+     },
+     {
+      "condition": "***11***",
+      "requiredBiome": 20,
+      "changeTileType": 97
+     },
+     {
+      "condition": "********",
+      "requiredBiome": 20,
+      "changeTileType": 96
+     },
+     {
+      "condition": "***11***",
+      "requiredBiome": 18,
+      "changeTileType": 86
+     },
+     {
+      "condition": "*1****1*",
+      "requiredBiome": 18,
+      "changeTileType": 87
+     },
+     {
+      "condition": "*0*01*0*",
+      "requiredBiome": 18,
+      "changeTileType": 88
+     },
+     {
+      "condition": "*0*10*0*",
+      "requiredBiome": 18,
+      "changeTileType": 89
+     },
+     {
+      "condition": "*1*00*0*",
+      "requiredBiome": 18,
+      "changeTileType": 90
+     },
+     {
+      "condition": "*0*00*1*",
+      "requiredBiome": 18,
+      "changeTileType": 91
+     },
+     {
+      "condition": "*0*01*1*",
+      "requiredBiome": 18,
+      "changeTileType": 92
+     },
+     {
+      "condition": "*0*10*1*",
+      "requiredBiome": 18,
+      "changeTileType": 93
+     },
+     {
+      "condition": "*1*01*0*",
+      "requiredBiome": 18,
+      "changeTileType": 94
+     },
+     {
+      "condition": "*1*10*0*",
+      "requiredBiome": 18,
+      "changeTileType": 95
+     },
+     {
+      "condition": "***11***",
+      "requiredBiome": 17,
+      "changeTileType": 76
+     },
+     {
+      "condition": "*1****1*",
+      "requiredBiome": 17,
+      "changeTileType": 77
+     },
+     {
+      "condition": "*0*01*0*",
+      "requiredBiome": 17,
+      "changeTileType": 78
+     },
+     {
+      "condition": "*0*10*0*",
+      "requiredBiome": 17,
+      "changeTileType": 79
+     },
+     {
+      "condition": "*1*00*0*",
+      "requiredBiome": 17,
+      "changeTileType": 80
+     },
+     {
+      "condition": "*0*00*1*",
+      "requiredBiome": 17,
+      "changeTileType": 81
+     },
+     {
+      "condition": "*0*01*1*",
+      "requiredBiome": 17,
+      "changeTileType": 82
+     },
+     {
+      "condition": "*0*10*1*",
+      "requiredBiome": 17,
+      "changeTileType": 83
+     },
+     {
+      "condition": "*1*01*0*",
+      "requiredBiome": 17,
+      "changeTileType": 84
+     },
+     {
+      "condition": "*1*10*0*",
+      "requiredBiome": 17,
+      "changeTileType": 85
+     },
+     {
+      "condition": "*1****0*",
+      "requiredBiome": 16,
+      "changeTileType": 75
+     },
+     {
+      "condition": "*0****1*",
+      "requiredBiome": 16,
+      "changeTileType": 75
+     },
+     {
+      "condition": "***01***",
+      "requiredBiome": 16,
+      "changeTileType": 75
+     },
+     {
+      "condition": "***10***",
+      "requiredBiome": 16,
+      "changeTileType": 75
+     },
+     {
+      "condition": "*1****1*",
+      "requiredBiome": 16,
+      "changeTileType": 74
+     },
+     {
+      "condition": "*0****0*",
+      "requiredBiome": 16,
+      "changeTileType": 73
+     },
+     {
+      "condition": "***11***",
+      "requiredBiome": 15,
+      "changeTileType": 63
+     },
+     {
+      "condition": "*1****1*",
+      "requiredBiome": 15,
+      "changeTileType": 64
+     },
+     {
+      "condition": "*0*01*0*",
+      "requiredBiome": 15,
+      "changeTileType": 65
+     },
+     {
+      "condition": "*0*10*0*",
+      "requiredBiome": 15,
+      "changeTileType": 66
+     },
+     {
+      "condition": "*1*00*0*",
+      "requiredBiome": 15,
+      "changeTileType": 67
+     },
+     {
+      "condition": "*0*00*1*",
+      "requiredBiome": 15,
+      "changeTileType": 68
+     },
+     {
+      "condition": "*0*01*1*",
+      "requiredBiome": 15,
+      "changeTileType": 69
+     },
+     {
+      "condition": "*0*10*1*",
+      "requiredBiome": 15,
+      "changeTileType": 70
+     },
+     {
+      "condition": "*1*01*0*",
+      "requiredBiome": 15,
+      "changeTileType": 71
+     },
+     {
+      "condition": "*1*10*0*",
+      "requiredBiome": 15,
+      "changeTileType": 72
+     },
+     {
+      "condition": "***11***",
+      "requiredBiome": 14,
+      "changeTileType": 53
+     },
+     {
+      "condition": "*1****1*",
+      "requiredBiome": 14,
+      "changeTileType": 54
+     },
+     {
+      "condition": "*0*01*0*",
+      "requiredBiome": 14,
+      "changeTileType": 55
+     },
+     {
+      "condition": "*0*10*0*",
+      "requiredBiome": 14,
+      "changeTileType": 56
+     },
+     {
+      "condition": "*1*00*0*",
+      "requiredBiome": 14,
+      "changeTileType": 57
+     },
+     {
+      "condition": "*0*00*1*",
+      "requiredBiome": 14,
+      "changeTileType": 58
+     },
+     {
+      "condition": "*0*01*1*",
+      "requiredBiome": 14,
+      "changeTileType": 59
+     },
+     {
+      "condition": "*0*10*1*",
+      "requiredBiome": 14,
+      "changeTileType": 60
+     },
+     {
+      "condition": "*1*01*0*",
+      "requiredBiome": 14,
+      "changeTileType": 61
+     },
+     {
+      "condition": "*1*10*0*",
+      "requiredBiome": 14,
+      "changeTileType": 62
+     },
+     {
+      "condition": "***11***",
+      "requiredBiome": 13,
+      "changeTileType": 43
+     },
+     {
+      "condition": "*1****1*",
+      "requiredBiome": 13,
+      "changeTileType": 44
+     },
+     {
+      "condition": "*0*01*0*",
+      "requiredBiome": 13,
+      "changeTileType": 45
+     },
+     {
+      "condition": "*0*10*0*",
+      "requiredBiome": 13,
+      "changeTileType": 46
+     },
+     {
+      "condition": "*1*00*0*",
+      "requiredBiome": 13,
+      "changeTileType": 47
+     },
+     {
+      "condition": "*0*00*1*",
+      "requiredBiome": 13,
+      "changeTileType": 48
+     },
+     {
+      "condition": "*0*01*1*",
+      "requiredBiome": 13,
+      "changeTileType": 49
+     },
+     {
+      "condition": "*0*10*1*",
+      "requiredBiome": 13,
+      "changeTileType": 50
+     },
+     {
+      "condition": "*1*01*0*",
+      "requiredBiome": 13,
+      "changeTileType": 51
+     },
+     {
+      "condition": "*1*10*0*",
+      "requiredBiome": 13,
+      "changeTileType": 52
+     },
+     {
+      "condition": "***11***",
+      "requiredBiome": 12,
+      "changeTileType": 33
+     },
+     {
+      "condition": "*1****1*",
+      "requiredBiome": 12,
+      "changeTileType": 34
+     },
+     {
+      "condition": "*0*01*0*",
+      "requiredBiome": 12,
+      "changeTileType": 35
+     },
+     {
+      "condition": "*0*10*0*",
+      "requiredBiome": 12,
+      "changeTileType": 36
+     },
+     {
+      "condition": "*1*00*0*",
+      "requiredBiome": 12,
+      "changeTileType": 37
+     },
+     {
+      "condition": "*0*00*1*",
+      "requiredBiome": 12,
+      "changeTileType": 38
+     },
+     {
+      "condition": "*0*01*1*",
+      "requiredBiome": 12,
+      "changeTileType": 39
+     },
+     {
+      "condition": "*0*10*1*",
+      "requiredBiome": 12,
+      "changeTileType": 40
+     },
+     {
+      "condition": "*1*01*0*",
+      "requiredBiome": 12,
+      "changeTileType": 41
+     },
+     {
+      "condition": "*1*10*0*",
+      "requiredBiome": 12,
+      "changeTileType": 42
+     },
+     {
+      "condition": "***11***",
+      "requiredBiome": 11,
+      "changeTileType": 31
+     },
+     {
+      "condition": "*1****1*",
+      "requiredBiome": 11,
+      "changeTileType": 32
+     },
+     {
+      "condition": "*0****1*",
+      "requiredBiome": 11,
+      "changeTileType": 30
+     },
+     {
+      "condition": "*1****0*",
+      "requiredBiome": 11,
+      "changeTileType": 30
+     },
+     {
+      "condition": "***01***",
+      "requiredBiome": 11,
+      "changeTileType": 30
+     },
+     {
+      "condition": "***10***",
+      "requiredBiome": 11,
+      "changeTileType": 30
+     },
+     {
+      "condition": "***11***",
+      "requiredBiome": 10,
+      "changeTileType": 31
+     },
+     {
+      "condition": "*1****1*",
+      "requiredBiome": 10,
+      "changeTileType": 32
+     },
+     {
+      "condition": "*0****1*",
+      "requiredBiome": 10,
+      "changeTileType": 30
+     },
+     {
+      "condition": "*1****0*",
+      "requiredBiome": 10,
+      "changeTileType": 30
+     },
+     {
+      "condition": "***01***",
+      "requiredBiome": 10,
+      "changeTileType": 30
+     },
+     {
+      "condition": "***10***",
+      "requiredBiome": 10,
+      "changeTileType": 30
+     },
+     {
+      "condition": "*0*00010",
+      "requiredBiome": 9,
+      "changeTileType": 24
+     },
+     {
+      "condition": "*0*11*0*",
+      "requiredBiome": 9,
+      "changeTileType": 19
+     },
+     {
+      "condition": "*1*00*1*",
+      "requiredBiome": 9,
+      "changeTileType": 20
+     },
+     {
+      "condition": "*0*01*0*",
+      "requiredBiome": 9,
+      "changeTileType": 21
+     },
+     {
+      "condition": "*0*10*0*",
+      "requiredBiome": 9,
+      "changeTileType": 22
+     },
+     {
+      "condition": "*1*00*0*",
+      "requiredBiome": 9,
+      "changeTileType": 23
+     },
+     {
+      "condition": "*0*01*1*",
+      "requiredBiome": 9,
+      "changeTileType": 25
+     },
+     {
+      "condition": "*0*10*1*",
+      "requiredBiome": 9,
+      "changeTileType": 26
+     },
+     {
+      "condition": "*1*01*0*",
+      "requiredBiome": 9,
+      "changeTileType": 27
+     },
+     {
+      "condition": "*1*10*0*",
+      "requiredBiome": 9,
+      "changeTileType": 28
+     },
+     {
+      "condition": "*0*00*1*",
+      "requiredBiome": 9,
+      "changeTileType": 29
+     },
+     {
+      "condition": "***11***",
+      "requiredBiome": 8,
+      "changeTileType": 16
+     },
+     {
+      "condition": "*1****1*",
+      "requiredBiome": 8,
+      "changeTileType": 17
+     },
+     {
+      "condition": "*0****1*",
+      "requiredBiome": 8,
+      "changeTileType": 18
+     },
+     {
+      "condition": "*1****0*",
+      "requiredBiome": 8,
+      "changeTileType": 18
+     },
+     {
+      "condition": "***01***",
+      "requiredBiome": 8,
+      "changeTileType": 18
+     },
+     {
+      "condition": "***10***",
+      "requiredBiome": 8,
+      "changeTileType": 18
+     },
+     {
+      "condition": "***11***",
+      "requiredBiome": 7,
+      "changeTileType": 6
+     },
+     {
+      "condition": "*1****1*",
+      "requiredBiome": 7,
+      "changeTileType": 7
+     },
+     {
+      "condition": "*0*01*0*",
+      "requiredBiome": 7,
+      "changeTileType": 8
+     },
+     {
+      "condition": "*0*10*0*",
+      "requiredBiome": 7,
+      "changeTileType": 9
+     },
+     {
+      "condition": "*1*00*0*",
+      "requiredBiome": 7,
+      "changeTileType": 10
+     },
+     {
+      "condition": "*0*00*1*",
+      "requiredBiome": 7,
+      "changeTileType": 11
+     },
+     {
+      "condition": "*0*01*1*",
+      "requiredBiome": 7,
+      "changeTileType": 12
+     },
+     {
+      "condition": "*0*10*1*",
+      "requiredBiome": 7,
+      "changeTileType": 13
+     },
+     {
+      "condition": "*1*01*0*",
+      "requiredBiome": 7,
+      "changeTileType": 14
+     },
+     {
+      "condition": "*1*10*0*",
+      "requiredBiome": 7,
+      "changeTileType": 15
+     },
+     {
+      "condition": "*1****0*",
+      "requiredBiome": 6,
+      "changeTileType": 5
+     },
+     {
+      "condition": "*0****1*",
+      "requiredBiome": 6,
+      "changeTileType": 5
+     },
+     {
+      "condition": "***01***",
+      "requiredBiome": 6,
+      "changeTileType": 5
+     },
+     {
+      "condition": "***10***",
+      "requiredBiome": 6,
+      "changeTileType": 5
+     },
+     {
+      "condition": "*1****1*",
+      "requiredBiome": 6,
+      "changeTileType": 4
+     },
+     {
+      "condition": "*0****0*",
+      "requiredBiome": 6,
+      "changeTileType": 3
+     },
+     {
+      "condition": "*1****0*",
+      "changeTileType": 2
+     },
+     {
+      "condition": "*0****1*",
+      "changeTileType": 2
+     },
+     {
+      "condition": "***01***",
+      "changeTileType": 2
+     },
+     {
+      "condition": "***10***",
+      "changeTileType": 2
+     },
+     {
+      "condition": "*1****1*",
+      "changeTileType": 1
+     }
+    ],
+    "multipleConditionsCouldApply": false,
+    "edgeCase": 1,
+    "defaults": {
+     "tileType": 0
+    }
+   }
+  },
+  "W": {
+   "name": "water",
+   "display": null,
+   "variants": [
+    {
+     "asset": "?binary?.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    }
+   ],
+   "default": {
+    "asset": "?binary?.svg",
+    "parts": {
+     "top": 0,
+     "mid": 1000,
+     "bot": 0,
+     "left": 0,
+     "right": 0
+    }
+   },
+   "tileLinks": {
+    "rules": [
+     {
+      "condition": "********",
+      "requiredBiome": 18,
+      "changeFolder": "alien_water"
+     },
+     {
+      "condition": "********",
+      "requiredBiome": 17,
+      "changeFolder": "green_water"
+     },
+     {
+      "condition": "********",
+      "requiredBiome": 9,
+      "changeFolder": "ship_water"
+     },
+     {
+      "condition": "********",
+      "requiredBiome": 8,
+      "changeFolder": "green_water"
+     },
+     {
+      "condition": "*0******",
+      "changeBinary": [
+       "0a0",
+       "0a2"
+      ]
+     },
+     {
+      "condition": "***0****",
+      "changeBinary": [
+       "0a0",
+       "0a5"
+      ]
+     },
+     {
+      "condition": "****0***",
+      "changeBinary": [
+       "0a2",
+       "0a7"
+      ]
+     },
+     {
+      "condition": "******0*",
+      "changeBinary": [
+       "0a5",
+       "0a7"
+      ]
+     }
+    ],
+    "multipleConditionsCouldApply": true,
+    "defaults": {
+     "tileType": 0
+    },
+    "edgeCase": 2,
+    "assetFolder": "water"
+   }
+  },
+  "1": {
+   "name": "player1",
+   "display": null,
+   "variants": [
+    {
+     "asset": "player_blue.svg",
+     "parts": {
+      "top": 350,
+      "mid": 1000,
+      "bot": 350,
+      "left": 350,
+      "right": 350
+     }
+    },
+    {
+     "asset": "player_gray.svg",
+     "parts": {
+      "top": 350,
+      "mid": 1000,
+      "bot": 350,
+      "left": 350,
+      "right": 350
+     }
+    },
+    {
+     "asset": "player_white.svg",
+     "parts": {
+      "top": 350,
+      "mid": 1000,
+      "bot": 350,
+      "left": 350,
+      "right": 350
+     }
+    },
+    {
+     "asset": "nothing.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    }
+   ],
+   "default": {
+    "asset": "player_blue.svg",
+    "parts": {
+     "top": 350,
+     "mid": 1000,
+     "bot": 350,
+     "left": 350,
+     "right": 350
+    }
+   }
+  },
+  "2": {
+   "name": "player2",
+   "display": null,
+   "variants": [
+    {
+     "asset": "player_red.svg",
+     "parts": {
+      "top": 350,
+      "mid": 1000,
+      "bot": 350,
+      "left": 350,
+      "right": 350
+     }
+    },
+    {
+     "asset": "player_gray.svg",
+     "parts": {
+      "top": 350,
+      "mid": 1000,
+      "bot": 350,
+      "left": 350,
+      "right": 350
+     }
+    },
+    {
+     "asset": "player_big.svg",
+     "parts": {
+      "top": 2000,
+      "mid": 1000,
+      "bot": 1000,
+      "left": 1500,
+      "right": 1500
+     }
+    },
+    {
+     "asset": "player_boss.svg",
+     "parts": {
+      "top": 2959,
+      "mid": 1000,
+      "bot": 1842,
+      "left": 2380,
+      "right": 2380
+     }
+    },
+    {
+     "asset": "nothing.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "mega_spawn.svg",
+     "parts": {
+      "top": 2200,
+      "mid": 1000,
+      "bot": 2200,
+      "left": 2200,
+      "right": 2200
+     }
+    },
+    {
+     "asset": "mega_spawn_mod.svg",
+     "parts": {
+      "top": 2200,
+      "mid": 1000,
+      "bot": 2200,
+      "left": 2200,
+      "right": 2200
+     }
+    },
+    {
+     "asset": "player_white.svg",
+     "parts": {
+      "top": 350,
+      "mid": 1000,
+      "bot": 350,
+      "left": 350,
+      "right": 350
+     }
+    },
+    {
+     "asset": "player_green.svg",
+     "parts": {
+      "top": 350,
+      "mid": 1000,
+      "bot": 350,
+      "left": 350,
+      "right": 350
+     }
+    }
+   ],
+   "default": {
+    "asset": "player_red.svg",
+    "parts": {
+     "top": 350,
+     "mid": 1000,
+     "bot": 350,
+     "left": 350,
+     "right": 350
+    }
+   }
+  },
+  "8": {
+   "name": "objective",
+   "display": null,
+   "variants": [
+    {
+     "asset": "mine.svg",
+     "parts": {
+      "top": 402,
+      "mid": 1000,
+      "bot": 481,
+      "left": 440,
+      "right": 440
+     }
+    },
+    {
+     "asset": "vault.svg",
+     "parts": {
+      "top": 1171,
+      "mid": 1000,
+      "bot": 92,
+      "left": 530,
+      "right": 529
+     }
+    },
+    {
+     "asset": "bounty_star.svg",
+     "parts": {
+      "top": 866,
+      "mid": 1000,
+      "bot": 279,
+      "left": 97,
+      "right": 97
+     }
+    },
+    {
+     "asset": "vault_offset.svg",
+     "parts": {
+      "top": 1671,
+      "mid": 508,
+      "bot": 0,
+      "left": 530,
+      "right": 529
+     }
+    },
+    {
+     "asset": "brawlball.svg",
+     "parts": {
+      "top": 349,
+      "mid": 1000,
+      "bot": 138,
+      "left": 162,
+      "right": 162
+     }
+    },
+    {
+     "asset": "goal_red.svg",
+     "parts": {
+      "top": 2851,
+      "mid": 1000,
+      "bot": 0,
+      "left": 2829,
+      "right": 2829
+     }
+    },
+    {
+     "asset": "goal_blue.svg",
+     "parts": {
+      "top": 2534,
+      "mid": 1000,
+      "bot": 0,
+      "left": 2829,
+      "right": 2829
+     }
+    },
+    {
+     "asset": "mine_snow.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 600,
+      "left": 545,
+      "right": 545
+     }
+    },
+    {
+     "asset": "ike_red.svg",
+     "parts": {
+      "top": 2021,
+      "mid": 1000,
+      "bot": 0,
+      "left": 411,
+      "right": 880
+     }
+    },
+    {
+     "asset": "ike_blue.svg",
+     "parts": {
+      "top": 2235,
+      "mid": 1000,
+      "bot": 0,
+      "left": 873,
+      "right": 417
+     }
+    },
+    {
+     "asset": "mine_town.svg",
+     "parts": {
+      "top": 618,
+      "mid": 1000,
+      "bot": 775,
+      "left": 436,
+      "right": 702
+     }
+    },
+    {
+     "asset": "mine_retro.svg",
+     "parts": {
+      "top": 618,
+      "mid": 1000,
+      "bot": 775,
+      "left": 436,
+      "right": 702
+     }
+    },
+    {
+     "asset": "mine_mortuary.svg",
+     "parts": {
+      "top": 509,
+      "mid": 1000,
+      "bot": 785,
+      "left": 698,
+      "right": 608
+     }
+    },
+    {
+     "asset": "mine_ship.svg",
+     "parts": {
+      "top": 450,
+      "mid": 1000,
+      "bot": 750,
+      "left": 450,
+      "right": 450
+     }
+    },
+    {
+     "asset": "flag_present_red.svg",
+     "parts": {
+      "top": 2000,
+      "mid": 1000,
+      "bot": 0,
+      "left": 1500,
+      "right": 450
+     }
+    },
+    {
+     "asset": "flag_present_blue.svg",
+     "parts": {
+      "top": 2000,
+      "mid": 1000,
+      "bot": 750,
+      "left": 1500,
+      "right": 450
+     }
+    },
+    {
+     "asset": "hot_zone_blue.svg",
+     "parts": {
+      "top": 3000,
+      "mid": 1000,
+      "bot": 3000,
+      "left": 3000,
+      "right": 3000
+     }
+    },
+    {
+     "asset": "soccerball.svg",
+     "parts": {
+      "top": 250,
+      "mid": 1000,
+      "bot": 200,
+      "left": 150,
+      "right": 150
+     }
+    },
+    {
+     "asset": "goal_red_2.svg",
+     "parts": {
+      "top": 3600,
+      "mid": 1000,
+      "bot": -450,
+      "left": 3000,
+      "right": 3000
+     }
+    },
+    {
+     "asset": "goal_blue_2.svg",
+     "parts": {
+      "top": 1600,
+      "mid": 1000,
+      "bot": 200,
+      "left": 2925,
+      "right": 2925
+     }
+    },
+    {
+     "asset": "mine_bazaar.svg",
+     "parts": {
+      "top": 450,
+      "mid": 1000,
+      "bot": 750,
+      "left": 450,
+      "right": 450
+     }
+    },
+    {
+     "asset": "hot_zone_both.svg",
+     "parts": {
+      "top": 3075,
+      "mid": 1000,
+      "bot": 3075,
+      "left": 3075,
+      "right": 3075
+     }
+    },
+    {
+     "asset": "mine_construction.svg",
+     "parts": {
+      "top": 625,
+      "mid": 1000,
+      "bot": 775,
+      "left": 587,
+      "right": 588
+     }
+    },
+    {
+     "asset": "bank.svg",
+     "parts": {
+      "top": 2100,
+      "mid": 1000,
+      "bot": -300,
+      "left": 500,
+      "right": 500
+     }
+    },
+    {
+     "asset": "mine_burst.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 615,
+      "left": 829,
+      "right": 584
+     }
+    },
+    {
+     "asset": "mine_hatch.svg",
+     "parts": {
+      "top": 521,
+      "mid": 1000,
+      "bot": 700,
+      "left": 450,
+      "right": 450
+     }
+    },
+    {
+     "asset": "trophy_gold.svg",
+     "parts": {
+      "top": 675,
+      "mid": 1000,
+      "bot": 700,
+      "left": 610,
+      "right": 610
+     }
+    },
+    {
+     "asset": "trophy_blue.svg",
+     "parts": {
+      "top": 1546,
+      "mid": 1000,
+      "bot": 1404,
+      "left": 1475,
+      "right": 1475
+     }
+    },
+    {
+     "asset": "trophy_red.svg",
+     "parts": {
+      "top": 1546,
+      "mid": 1000,
+      "bot": 1404,
+      "left": 1475,
+      "right": 1475
+     }
+    },
+    {
+     "asset": "volleyball.svg",
+     "parts": {
+      "top": -100,
+      "mid": 1000,
+      "bot": 650,
+      "left": 175,
+      "right": 175
+     }
+    },
+    {
+     "asset": "basketball.svg",
+     "parts": {
+      "top": -100,
+      "mid": 1000,
+      "bot": 650,
+      "left": 175,
+      "right": 175
+     }
+    },
+    {
+     "asset": "basket_hoop_blue.svg",
+     "parts": {
+      "top": 2375,
+      "mid": 1000,
+      "bot": 375,
+      "left": 350,
+      "right": 1200
+     }
+    },
+    {
+     "asset": "basket_hoop_red.svg",
+     "parts": {
+      "top": 2375,
+      "mid": 1000,
+      "bot": 375,
+      "left": 1200,
+      "right": 350
+     }
+    },
+    {
+     "asset": "basket_hoop_blue_range.svg",
+     "parts": {
+      "top": 4925,
+      "mid": 1000,
+      "bot": 4925,
+      "left": -100,
+      "right": 4900
+     }
+    },
+    {
+     "asset": "basket_hoop_red_range.svg",
+     "parts": {
+      "top": 4925,
+      "mid": 1000,
+      "bot": 4925,
+      "left": 4900,
+      "right": -100
+     }
+    },
+    {
+     "asset": "volleyball_mod.svg",
+     "parts": {
+      "top": 2000,
+      "mid": 1000,
+      "bot": 2000,
+      "left": 2000,
+      "right": 2000
+     }
+    },
+    {
+     "asset": "volleyball.svg",
+     "parts": {
+      "top": 350,
+      "mid": 1000,
+      "bot": 200,
+      "left": 175,
+      "right": 175
+     }
+    },
+    {
+     "asset": "mine_castle.svg",
+     "parts": {
+      "top": 450,
+      "mid": 1000,
+      "bot": 750,
+      "left": 450,
+      "right": 450
+     }
+    },
+    {
+     "asset": "puck.svg",
+     "parts": {
+      "top": 250,
+      "mid": 1000,
+      "bot": 200,
+      "left": 150,
+      "right": 150
+     }
+    }
+   ],
+   "default": {
+    "asset": "mine.svg",
+    "parts": {
+     "top": 402,
+     "mid": 1000,
+     "bot": 481,
+     "left": 440,
+     "right": 440
+    }
+   }
+  },
+  "H": {
+   "name": "springpadRight",
+   "display": null,
+   "variants": [
+    {
+     "asset": "spring_right.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 1117,
+      "left": 0,
+      "right": 894
+     }
+    }
+   ],
+   "default": {
+    "asset": "spring_right.svg",
+    "parts": {
+     "top": 0,
+     "mid": 1000,
+     "bot": 1117,
+     "left": 0,
+     "right": 894
+    }
+   }
+  },
+  "G": {
+   "name": "springpadLeft",
+   "display": null,
+   "variants": [
+    {
+     "asset": "spring_left.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 1117,
+      "left": 0,
+      "right": 894
+     }
+    }
+   ],
+   "default": {
+    "asset": "spring_left.svg",
+    "parts": {
+     "top": 0,
+     "mid": 1000,
+     "bot": 1117,
+     "left": 0,
+     "right": 894
+    }
+   }
+  },
+  "L": {
+   "name": "springpadBottom",
+   "display": null,
+   "variants": [
+    {
+     "asset": "spring_bottom.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 1117,
+      "left": 0,
+      "right": 894
+     }
+    }
+   ],
+   "default": {
+    "asset": "spring_bottom.svg",
+    "parts": {
+     "top": 0,
+     "mid": 1000,
+     "bot": 1117,
+     "left": 0,
+     "right": 894
+    }
+   }
+  },
+  "K": {
+   "name": "springpadTop",
+   "display": null,
+   "variants": [
+    {
+     "asset": "spring_top.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 1117,
+      "left": 0,
+      "right": 894
+     }
+    }
+   ],
+   "default": {
+    "asset": "spring_top.svg",
+    "parts": {
+     "top": 0,
+     "mid": 1000,
+     "bot": 1117,
+     "left": 0,
+     "right": 894
+    }
+   }
+  },
+  "P": {
+   "name": "springpadBottomRight",
+   "display": null,
+   "variants": [
+    {
+     "asset": "spring_bottom_right.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 1117,
+      "left": 0,
+      "right": 894
+     }
+    }
+   ],
+   "default": {
+    "asset": "spring_bottom_right.svg",
+    "parts": {
+     "top": 0,
+     "mid": 1000,
+     "bot": 1117,
+     "left": 0,
+     "right": 894
+    }
+   }
+  },
+  "Z": {
+   "name": "springpadTopLeft",
+   "display": null,
+   "variants": [
+    {
+     "asset": "spring_top_left.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 1117,
+      "left": 0,
+      "right": 894
+     }
+    }
+   ],
+   "default": {
+    "asset": "spring_top_left.svg",
+    "parts": {
+     "top": 0,
+     "mid": 1000,
+     "bot": 1117,
+     "left": 0,
+     "right": 894
+    }
+   }
+  },
+  "O": {
+   "name": "springpadBottomLeft",
+   "display": null,
+   "variants": [
+    {
+     "asset": "spring_bottom_left.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 1117,
+      "left": 0,
+      "right": 894
+     }
+    }
+   ],
+   "default": {
+    "asset": "spring_bottom_left.svg",
+    "parts": {
+     "top": 0,
+     "mid": 1000,
+     "bot": 1117,
+     "left": 0,
+     "right": 894
+    }
+   }
+  },
+  "U": {
+   "name": "springpadTopRight",
+   "display": null,
+   "variants": [
+    {
+     "asset": "spring_top_right.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 1117,
+      "left": 0,
+      "right": 894
+     }
+    }
+   ],
+   "default": {
+    "asset": "spring_top_right.svg",
+    "parts": {
+     "top": 0,
+     "mid": 1000,
+     "bot": 1117,
+     "left": 0,
+     "right": 894
+    }
+   }
+  },
+  ",": {
+   "name": "ikeRange",
+   "display": null,
+   "variants": [
+    {
+     "asset": "ike_blue_range.svg",
+     "parts": {
+      "top": 12487,
+      "mid": 1000,
+      "bot": 525,
+      "left": 11650,
+      "right": 11667
+     }
+    },
+    {
+     "asset": "ike_red_range.svg",
+     "parts": {
+      "top": 525,
+      "mid": 1000,
+      "bot": 12487,
+      "left": 11650,
+      "right": 11667
+     }
+    }
+   ],
+   "default": {
+    "asset": "ike_blue_range.svg",
+    "parts": {
+     "top": 12487,
+     "mid": 1000,
+     "bot": 525,
+     "left": 11650,
+     "right": 11667
+    }
+   }
+  },
+  "Q": {
+   "name": "rails",
+   "display": null,
+   "variants": [
+    {
+     "asset": "rails.svg",
+     "parts": {
+      "top": 10343,
+      "mid": 1000,
+      "bot": 10265,
+      "left": 10097,
+      "right": 10270
+     }
+    }
+   ],
+   "default": {
+    "asset": "rails.svg",
+    "parts": {
+     "top": 10343,
+     "mid": 1000,
+     "bot": 10265,
+     "left": 10097,
+     "right": 10270
+    }
+   }
+  },
+  "E": {
+   "name": "bench1",
+   "display": null,
+   "variants": [
+    {
+     "asset": "bench_top_left.svg",
+     "parts": {
+      "top": 438,
+      "mid": 1000,
+      "bot": 0,
+      "left": 46,
+      "right": 0
+     }
+    },
+    {
+     "asset": "bench_top_right.svg",
+     "parts": {
+      "top": 438,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 46
+     }
+    },
+    {
+     "asset": "bench_left_top.svg",
+     "parts": {
+      "top": 302,
+      "mid": 1000,
+      "bot": 0,
+      "left": 150,
+      "right": 0
+     }
+    },
+    {
+     "asset": "bench_left_bottom.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 243,
+      "left": 150,
+      "right": 0
+     }
+    }
+   ],
+   "default": {
+    "asset": "bench_top_left.svg",
+    "parts": {
+     "top": 438,
+     "mid": 1000,
+     "bot": 0,
+     "left": 46,
+     "right": 0
+    }
+   },
+   "tileLinks": {
+    "rules": [
+     {
+      "condition": "***01***",
+      "changeTileType": 0
+     },
+     {
+      "condition": "***10***",
+      "changeTileType": 1
+     },
+     {
+      "condition": "*0****1*",
+      "changeTileType": 2
+     },
+     {
+      "condition": "*1****0*",
+      "changeTileType": 3
+     }
+    ],
+    "multipleConditionsCouldApply": false,
+    "edgeCase": 0,
+    "defaults": {
+     "tileType": 1
+    }
+   }
+  },
+  "A": {
+   "name": "bench2",
+   "display": null,
+   "variants": [
+    {
+     "asset": "bench_bottom_left.svg",
+     "parts": {
+      "top": 400,
+      "mid": 1000,
+      "bot": 243,
+      "left": 46,
+      "right": 0
+     }
+    },
+    {
+     "asset": "bench_bottom_right.svg",
+     "parts": {
+      "top": 400,
+      "mid": 1000,
+      "bot": 243,
+      "left": 0,
+      "right": 46
+     }
+    },
+    {
+     "asset": "bench_right_top.svg",
+     "parts": {
+      "top": 302,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 150
+     }
+    },
+    {
+     "asset": "bench_right_bottom.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 243,
+      "left": 0,
+      "right": 150
+     }
+    }
+   ],
+   "default": {
+    "asset": "bench_bottom_left.svg",
+    "parts": {
+     "top": 400,
+     "mid": 1000,
+     "bot": 243,
+     "left": 46,
+     "right": 0
+    }
+   },
+   "tileLinks": {
+    "rules": [
+     {
+      "condition": "***01***",
+      "changeTileType": 0
+     },
+     {
+      "condition": "***10***",
+      "changeTileType": 1
+     },
+     {
+      "condition": "*0****1*",
+      "changeTileType": 2
+     },
+     {
+      "condition": "*1****0*",
+      "changeTileType": 3
+     }
+    ],
+    "multipleConditionsCouldApply": false,
+    "edgeCase": 0,
+    "defaults": {
+     "tileType": 1
+    }
+   }
+  },
+  "c": {
+   "name": "teleporterBlue",
+   "display": null,
+   "variants": [
+    {
+     "asset": "teleporter_blue.svg",
+     "parts": {
+      "top": -35,
+      "mid": 1000,
+      "bot": 1115,
+      "left": 41,
+      "right": 1040
+     }
+    }
+   ],
+   "default": {
+    "asset": "teleporter_blue.svg",
+    "parts": {
+     "top": -35,
+     "mid": 1000,
+     "bot": 1115,
+     "left": 41,
+     "right": 1040
+    }
+   }
+  },
+  "d": {
+   "name": "teleporterGreen",
+   "display": null,
+   "variants": [
+    {
+     "asset": "teleporter_green.svg",
+     "parts": {
+      "top": -35,
+      "mid": 1000,
+      "bot": 1115,
+      "left": 41,
+      "right": 1040
+     }
+    }
+   ],
+   "default": {
+    "asset": "teleporter_green.svg",
+    "parts": {
+     "top": -35,
+     "mid": 1000,
+     "bot": 1115,
+     "left": 41,
+     "right": 1040
+    }
+   }
+  },
+  "e": {
+   "name": "teleporterRed",
+   "display": null,
+   "variants": [
+    {
+     "asset": "teleporter_red.svg",
+     "parts": {
+      "top": -35,
+      "mid": 1000,
+      "bot": 1115,
+      "left": 41,
+      "right": 1040
+     }
+    }
+   ],
+   "default": {
+    "asset": "teleporter_red.svg",
+    "parts": {
+     "top": -35,
+     "mid": 1000,
+     "bot": 1115,
+     "left": 41,
+     "right": 1040
+    }
+   }
+  },
+  "f": {
+   "name": "teleporterYellow",
+   "display": null,
+   "variants": [
+    {
+     "asset": "teleporter_yellow.svg",
+     "parts": {
+      "top": -35,
+      "mid": 1000,
+      "bot": 1115,
+      "left": 41,
+      "right": 1040
+     }
+    }
+   ],
+   "default": {
+    "asset": "teleporter_yellow.svg",
+    "parts": {
+     "top": -35,
+     "mid": 1000,
+     "bot": 1115,
+     "left": 41,
+     "right": 1040
+    }
+   }
+  },
+  "a": {
+   "name": "ropeFence",
+   "display": null,
+   "variants": [
+    {
+     "asset": "rope_post.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "rope_post_t.svg",
+     "parts": {
+      "top": 1325,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "rope_post_r.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 500
+     }
+    },
+    {
+     "asset": "rope_post_tr.svg",
+     "parts": {
+      "top": 1325,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 500
+     }
+    },
+    {
+     "asset": "rope_post_mine.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "rope_post_mine_t.svg",
+     "parts": {
+      "top": 1325,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "rope_post_mine_r.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 500
+     }
+    },
+    {
+     "asset": "rope_post_mine_tr.svg",
+     "parts": {
+      "top": 1325,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 500
+     }
+    },
+    {
+     "asset": "rope_post_mortuary.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "rope_post_mortuary_t.svg",
+     "parts": {
+      "top": 1325,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "rope_post_mortuary_r.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 500
+     }
+    },
+    {
+     "asset": "rope_post_mortuary_tr.svg",
+     "parts": {
+      "top": 1325,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 500
+     }
+    },
+    {
+     "asset": "rope_post_giftshop.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "rope_post_giftshop_t.svg",
+     "parts": {
+      "top": 1325,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "rope_post_giftshop_r.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 500
+     }
+    },
+    {
+     "asset": "rope_post_giftshop_tr.svg",
+     "parts": {
+      "top": 1325,
+      "mid": 1000,
+      "bot": 300,
+      "left": 0,
+      "right": 500
+     }
+    },
+    {
+     "asset": "rope_post_danger.svg",
+     "parts": {
+      "top": 475,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "rope_post_danger_t.svg",
+     "parts": {
+      "top": 1200,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "rope_post_danger_r.svg",
+     "parts": {
+      "top": 475,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 600
+     }
+    },
+    {
+     "asset": "rope_post_danger_tr.svg",
+     "parts": {
+      "top": 1200,
+      "mid": 1000,
+      "bot": 0,
+      "left": 0,
+      "right": 600
+     }
+    },
+    {
+     "asset": "rope_post_waterpark.svg",
+     "parts": {
+      "top": 425,
+      "mid": 1000,
+      "bot": 100,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "rope_post_waterpark_t.svg",
+     "parts": {
+      "top": 1200,
+      "mid": 1000,
+      "bot": 100,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "rope_post_waterpark_r.svg",
+     "parts": {
+      "top": 425,
+      "mid": 1000,
+      "bot": 100,
+      "left": 0,
+      "right": 475
+     }
+    },
+    {
+     "asset": "rope_post_waterpark_tr.svg",
+     "parts": {
+      "top": 1200,
+      "mid": 1000,
+      "bot": 100,
+      "left": 0,
+      "right": 475
+     }
+    },
+    {
+     "asset": "power_line.svg",
+     "parts": {
+      "top": 850,
+      "mid": 1000,
+      "bot": -50,
+      "left": -206,
+      "right": -206
+     }
+    },
+    {
+     "asset": "power_line_t.svg",
+     "parts": {
+      "top": 1450,
+      "mid": 1000,
+      "bot": -50,
+      "left": -206,
+      "right": -206
+     }
+    },
+    {
+     "asset": "power_line_r.svg",
+     "parts": {
+      "top": 850,
+      "mid": 1000,
+      "bot": -50,
+      "left": -206,
+      "right": 261
+     }
+    },
+    {
+     "asset": "power_line_tr.svg",
+     "parts": {
+      "top": 1450,
+      "mid": 1000,
+      "bot": -50,
+      "left": -206,
+      "right": 261
+     }
+    }
+   ],
+   "default": {
+    "asset": "rope_post.svg",
+    "parts": {
+     "top": 500,
+     "mid": 1000,
+     "bot": 300,
+     "left": 0,
+     "right": 0
+    }
+   },
+   "tileLinks": {
+    "rules": [
+     {
+      "condition": "*1**1***",
+      "requiredBiome": 13,
+      "changeTileType": 27
+     },
+     {
+      "condition": "*0**1***",
+      "requiredBiome": 13,
+      "changeTileType": 26
+     },
+     {
+      "condition": "*1**0***",
+      "requiredBiome": 13,
+      "changeTileType": 25
+     },
+     {
+      "condition": "********",
+      "requiredBiome": 13,
+      "changeTileType": 24
+     },
+     {
+      "condition": "*1**1***",
+      "requiredBiome": 20,
+      "changeTileType": 23
+     },
+     {
+      "condition": "*0**1***",
+      "requiredBiome": 20,
+      "changeTileType": 22
+     },
+     {
+      "condition": "*1**0***",
+      "requiredBiome": 20,
+      "changeTileType": 21
+     },
+     {
+      "condition": "********",
+      "requiredBiome": 20,
+      "changeTileType": 20
+     },
+     {
+      "condition": "*1**1***",
+      "requiredBiome": 18,
+      "changeTileType": 19
+     },
+     {
+      "condition": "*0**1***",
+      "requiredBiome": 18,
+      "changeTileType": 18
+     },
+     {
+      "condition": "*1**0***",
+      "requiredBiome": 18,
+      "changeTileType": 17
+     },
+     {
+      "condition": "********",
+      "requiredBiome": 18,
+      "changeTileType": 16
+     },
+     {
+      "condition": "*1**1***",
+      "requiredBiome": 15,
+      "changeTileType": 15
+     },
+     {
+      "condition": "*0**1***",
+      "requiredBiome": 15,
+      "changeTileType": 14
+     },
+     {
+      "condition": "*1**0***",
+      "requiredBiome": 15,
+      "changeTileType": 13
+     },
+     {
+      "condition": "********",
+      "requiredBiome": 15,
+      "changeTileType": 12
+     },
+     {
+      "condition": "*1**1***",
+      "requiredBiome": 14,
+      "changeTileType": 15
+     },
+     {
+      "condition": "*0**1***",
+      "requiredBiome": 14,
+      "changeTileType": 14
+     },
+     {
+      "condition": "*1**0***",
+      "requiredBiome": 14,
+      "changeTileType": 13
+     },
+     {
+      "condition": "********",
+      "requiredBiome": 14,
+      "changeTileType": 12
+     },
+     {
+      "condition": "*1**1***",
+      "requiredBiome": 8,
+      "changeTileType": 11
+     },
+     {
+      "condition": "*0**1***",
+      "requiredBiome": 8,
+      "changeTileType": 10
+     },
+     {
+      "condition": "*1**0***",
+      "requiredBiome": 8,
+      "changeTileType": 9
+     },
+     {
+      "condition": "********",
+      "requiredBiome": 8,
+      "changeTileType": 8
+     },
+     {
+      "condition": "*1**1***",
+      "requiredBiome": 2,
+      "changeTileType": 7
+     },
+     {
+      "condition": "*0**1***",
+      "requiredBiome": 2,
+      "changeTileType": 6
+     },
+     {
+      "condition": "*1**0***",
+      "requiredBiome": 2,
+      "changeTileType": 5
+     },
+     {
+      "condition": "********",
+      "requiredBiome": 2,
+      "changeTileType": 4
+     },
+     {
+      "condition": "*1**1***",
+      "changeTileType": 3
+     },
+     {
+      "condition": "*0**1***",
+      "changeTileType": 2
+     },
+     {
+      "condition": "*1**0***",
+      "changeTileType": 1
+     }
+    ],
+    "multipleConditionsCouldApply": false,
+    "edgeCase": 0,
+    "defaults": {
+     "tileType": 0
+    }
+   }
+  },
+  "v": {
+   "name": "intervalDamage",
+   "display": null,
+   "variants": [
+    {
+     "asset": "spikes.svg",
+     "parts": {
+      "top": 225,
+      "mid": 1000,
+      "bot": 150,
+      "left": -30,
+      "right": -30
+     }
+    }
+   ],
+   "default": {
+    "asset": "spikes.svg",
+    "parts": {
+     "top": 225,
+     "mid": 1000,
+     "bot": 150,
+     "left": -30,
+     "right": -30
+    }
+   }
+  },
+  "x": {
+   "name": "damage",
+   "display": null,
+   "variants": [
+    {
+     "asset": "poison.svg",
+     "parts": {
+      "top": 829,
+      "mid": 1000,
+      "bot": 0,
+      "left": 329,
+      "right": 329
+     }
+    },
+    {
+     "asset": "poison_pink.svg",
+     "parts": {
+      "top": 829,
+      "mid": 1000,
+      "bot": 0,
+      "left": 329,
+      "right": 329
+     }
+    }
+   ],
+   "default": {
+    "asset": "poison.svg",
+    "parts": {
+     "top": 829,
+     "mid": 1000,
+     "bot": 0,
+     "left": 329,
+     "right": 329
+    }
+   }
+  },
+  "y": {
+   "name": "healing",
+   "display": null,
+   "variants": [
+    {
+     "asset": "healpad.svg",
+     "parts": {
+      "top": 100,
+      "mid": 1000,
+      "bot": 1250,
+      "left": 0,
+      "right": 1000
+     }
+    }
+   ],
+   "default": {
+    "asset": "healpad.svg",
+    "parts": {
+     "top": 100,
+     "mid": 1000,
+     "bot": 1250,
+     "left": 0,
+     "right": 1000
+    }
+   }
+  },
+  "z": {
+   "name": "slow",
+   "display": null,
+   "variants": [
+    {
+     "asset": "slowpad.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 100,
+      "left": 0,
+      "right": 0
+     }
+    }
+   ],
+   "default": {
+    "asset": "slowpad.svg",
+    "parts": {
+     "top": 0,
+     "mid": 1000,
+     "bot": 100,
+     "left": 0,
+     "right": 0
+    }
+   }
+  },
+  "w": {
+   "name": "fast",
+   "display": null,
+   "variants": [
+    {
+     "asset": "speedpad.svg",
+     "parts": {
+      "top": 0,
+      "mid": 1000,
+      "bot": 100,
+      "left": 0,
+      "right": 0
+     }
+    }
+   ],
+   "default": {
+    "asset": "speedpad.svg",
+    "parts": {
+     "top": 0,
+     "mid": 1000,
+     "bot": 100,
+     "left": 0,
+     "right": 0
+    }
+   }
+  },
+  "I": {
+   "name": "indestructible",
+   "display": null,
+   "variants": [
+    {
+     "asset": "indestructible.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 250,
+      "left": 0,
+      "right": 0
+     }
+    },
+    {
+     "asset": "indestructible_bricks.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 250,
+      "left": 0,
+      "right": 0
+     }
+    }
+   ],
+   "default": {
+    "asset": "indestructible.svg",
+    "parts": {
+     "top": 500,
+     "mid": 1000,
+     "bot": 250,
+     "left": 0,
+     "right": 0
+    }
+   }
+  },
+  "4": {
+   "name": "powerupCrate",
+   "display": null,
+   "variants": [
+    {
+     "asset": "power_crate.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 250,
+      "left": 0,
+      "right": 0
+     }
+    }
+   ],
+   "default": {
+    "asset": "power_crate.svg",
+    "parts": {
+     "top": 500,
+     "mid": 1000,
+     "bot": 250,
+     "left": 0,
+     "right": 0
+    }
+   }
+  },
+  "q": {
+   "name": "explosive",
+   "display": null,
+   "variants": [
+    {
+     "asset": "tnt.svg",
+     "parts": {
+      "top": 500,
+      "mid": 1000,
+      "bot": 250,
+      "left": 0,
+      "right": 0
+     }
+    }
+   ],
+   "default": {
+    "asset": "tnt.svg",
+    "parts": {
+     "top": 500,
+     "mid": 1000,
+     "bot": 250,
+     "left": 0,
+     "right": 0
+    }
+   }
+  },
+  "g": {
+   "name": "siegeBolt",
+   "display": null,
+   "variants": [
+    {
+     "asset": "bolt_0.svg",
+     "parts": {
+      "top": 350,
+      "mid": 1000,
+      "bot": 0,
+      "left": 50,
+      "right": 50
+     }
+    },
+    {
+     "asset": "number_1.svg",
+     "parts": {
+      "top": -700,
+      "mid": 1000,
+      "bot": 400,
+      "left": 100,
+      "right": 100
+     }
+    },
+    {
+     "asset": "number_2.svg",
+     "parts": {
+      "top": -700,
+      "mid": 1000,
+      "bot": 400,
+      "left": 100,
+      "right": 100
+     }
+    },
+    {
+     "asset": "number_3.svg",
+     "parts": {
+      "top": -406,
+      "mid": 1000,
+      "bot": 450,
+      "left": -158,
+      "right": -158
+     }
+    },
+    {
+     "asset": "number_4.svg",
+     "parts": {
+      "top": -550,
+      "mid": 1000,
+      "bot": 550,
+      "left": 125,
+      "right": 125
+     }
+    },
+    {
+     "asset": "number_5.svg",
+     "parts": {
+      "top": -700,
+      "mid": 1000,
+      "bot": 400,
+      "left": 100,
+      "right": 100
+     }
+    },
+    {
+     "asset": "number_6.svg",
+     "parts": {
+      "top": -700,
+      "mid": 1000,
+      "bot": 400,
+      "left": 100,
+      "right": 100
+     }
+    },
+    {
+     "asset": "number_7.svg",
+     "parts": {
+      "top": -700,
+      "mid": 1000,
+      "bot": 400,
+      "left": 100,
+      "right": 100
+     }
+    },
+    {
+     "asset": "number_8.svg",
+     "parts": {
+      "top": -700,
+      "mid": 1000,
+      "bot": 400,
+      "left": 100,
+      "right": 100
+     }
+    },
+    {
+     "asset": "number_9.svg",
+     "parts": {
+      "top": -700,
+      "mid": 1000,
+      "bot": 400,
+      "left": 100,
+      "right": 100
+     }
+    },
+    {
+     "asset": "number_10.svg",
+     "parts": {
+      "top": -700,
+      "mid": 1000,
+      "bot": 400,
+      "left": 100,
+      "right": 100
+     }
+    },
+    {
+     "asset": "number_unk.svg",
+     "parts": {
+      "top": -700,
+      "mid": 1000,
+      "bot": 400,
+      "left": 100,
+      "right": 100
+     }
+    }
+   ],
+   "default": {
+    "asset": "bolt_0.svg",
+    "parts": {
+     "top": 350,
+     "mid": 1000,
+     "bot": 0,
+     "left": 50,
+     "right": 50
+    }
+   }
   }
+ },
+ "biomes": {
+  "canyon": {
+   "blocking2": 2
+  },
+  "jungle": {
+   "blocking2": 1
+  },
+  "mine": {
+   "blocking1": 1,
+   "forest": 1,
+   "respawningWall": 1,
+   "blockingDestroyableWithWeapon": 1,
+   "ropeFence": 4
+  },
+  "canyon_showdown": {
+   "blocking2": 2,
+   "forest": 2,
+   "blockingDestroyableWithWeapon": 1
+  },
+  "grassfield": {
+   "blocking1": 0,
+   "blocking2": 2,
+   "indestructible": 1
+  },
+  "snowy": {
+   "blocking1": 2,
+   "blocking2": 3,
+   "blocking3": 1,
+   "blocking4": 1,
+   "forest": 3,
+   "respawningWall": 2,
+   "blockingDestroyableWithWeapon": 2
+  },
+  "town": {
+   "blocking1": 3,
+   "blocking2": 2,
+   "blocking3": 0,
+   "blocking4": 0,
+   "forest": 0,
+   "respawningWall": 3,
+   "blockingDestroyableWithWeapon": 0,
+   "fence": 3
+  },
+  "retro": {
+   "blocking1": 4,
+   "blocking2": 4,
+   "blocking3": 2,
+   "blocking4": 2,
+   "forest": 4,
+   "respawningWall": 3,
+   "blockingDestroyableWithWeapon": 3,
+   "fence": 3
+  },
+  "mortuary": {
+   "blocking1": 5,
+   "blocking2": 5,
+   "blocking3": 3,
+   "blocking4": 3,
+   "forest": 5,
+   "respawningWall": 4,
+   "blockingDestroyableWithWeapon": 4,
+   "fence": 3,
+   "ropeFence": 8
+  },
+  "darryl": {
+   "blocking1": 6,
+   "blocking2": 6,
+   "blocking3": 0,
+   "blocking4": 0,
+   "forest": 6,
+   "respawningWall": 5,
+   "blockingDestroyableWithWeapon": 5,
+   "fence": 3
+  },
+  "arcade": {
+   "blocking1": 7,
+   "blocking2": 7,
+   "blocking3": 0,
+   "blocking4": 4,
+   "forest": 0,
+   "respawningWall": 6,
+   "blockingDestroyableWithWeapon": 3,
+   "fence": 3
+  },
+  "galaxy_arena": {
+   "blocking1": 7,
+   "blocking2": 4,
+   "blocking3": 4,
+   "blocking4": 2,
+   "forest": 0,
+   "respawningWall": 3,
+   "blockingDestroyableWithWeapon": 5,
+   "fence": 3,
+   "indestructible": 1
+  },
+  "lamporium": {
+   "blocking1": 8,
+   "blocking2": 8,
+   "blocking3": 5,
+   "blocking4": 5,
+   "forest": 7,
+   "respawningWall": 7,
+   "blockingDestroyableWithWeapon": 1,
+   "fence": 33
+  },
+  "mini": {
+   "blocking1": 9,
+   "blocking2": 9,
+   "blocking3": 6,
+   "blocking4": 6,
+   "forest": 8,
+   "respawningWall": 8,
+   "blockingDestroyableWithWeapon": 6,
+   "fence": 43,
+   "ropeFence": 1
+  },
+  "gift": {
+   "blocking1": 10,
+   "blocking2": 10,
+   "blocking3": 7,
+   "forest": 9,
+   "respawningWall": 9,
+   "blockingDestroyableWithWeapon": 7,
+   "fence": 53,
+   "ropeFence": 12
+  },
+  "bandstand": {
+   "blocking1": 11,
+   "blocking2": 11,
+   "blocking3": 0,
+   "blocking4": 3,
+   "forest": 7,
+   "respawningWall": 0,
+   "blockingDestroyableWithWeapon": 0,
+   "fence": 53,
+   "ropeFence": 12
+  },
+  "snowtel": {
+   "blocking1": 12,
+   "blocking2": 12,
+   "blocking3": 0,
+   "blocking4": 3,
+   "forest": 3,
+   "respawningWall": 10,
+   "blockingDestroyableWithWeapon": 8,
+   "fence": 73,
+   "ropeFence": 12
+  },
+  "scrapyard": {
+   "blocking1": 13,
+   "blocking2": 13,
+   "blocking3": 0,
+   "blocking4": 2,
+   "forest": 1,
+   "respawningWall": 11,
+   "blockingDestroyableWithWeapon": 3,
+   "fence": 76,
+   "ropeFence": 16
+  },
+  "starrforce": {
+   "blocking1": 14,
+   "blocking2": 14,
+   "blocking3": 8,
+   "blocking4": 7,
+   "forest": 10,
+   "respawningWall": 12,
+   "blockingDestroyableWithWeapon": 9,
+   "fence": 86,
+   "ropeFence": 16
+  },
+  "actionshow": {
+   "blocking1": 15,
+   "blocking2": 15,
+   "forest": 2,
+   "blockingDestroyableWithWeapon": 10
+  },
+  "waterpark": {
+   "blocking1": 16,
+   "blocking2": 16,
+   "blocking3": 0,
+   "blocking4": 8,
+   "forest": 7,
+   "respawningWall": 13,
+   "blockingDestroyableWithWeapon": 11
+  },
+  "modded volleybrawl": {
+   "blocking1": 7,
+   "blocking2": 4,
+   "blocking3": 4,
+   "blocking4": 2,
+   "forest": 0,
+   "respawningWall": 3,
+   "blockingDestroyableWithWeapon": 5,
+   "fence": 3,
+   "indestructible": 1,
+   "player1": 1,
+   "player2": 1
+  },
+  "modded galaxy_arena": {
+   "blocking1": 7,
+   "blocking2": 4,
+   "blocking3": 4,
+   "blocking4": 2,
+   "forest": 0,
+   "respawningWall": 3,
+   "blockingDestroyableWithWeapon": 5,
+   "fence": 3,
+   "indestructible": 1
+  },
+  "castle": {
+   "blocking1": 17,
+   "blocking2": 17,
+   "blocking3": 9,
+   "blocking4": 3,
+   "forest": 11,
+   "respawningWall": 14,
+   "blockingDestroyableWithWeapon": 12,
+   "fence": 105
+  }
+ },
+ "defaultBiome": {
+  "blocking1": 0,
+  "blocking2": 0,
+  "blocking3": 0,
+  "blocking4": 0,
+  "forest": 0,
+  "respawningWall": 0,
+  "blockingDestroyableWithWeapon": 0,
+  "fence": 0,
+  "water": 0,
+  "player1": 0,
+  "player2": 0,
+  "objective": 1,
+  "springpadRight": 0,
+  "springpadLeft": 0,
+  "springpadTop": 0,
+  "springpadBottom": 0,
+  "springpadTopLeft": 0,
+  "springpadBottomRight": 0,
+  "springpadTopRight": 0,
+  "springpadBottomLeft": 0,
+  "bench1": 0,
+  "bench2": 0,
+  "ropeFence": 0,
+  "teleporterBlue": 0,
+  "teleporterGreen": 0,
+  "teleporterRed": 0,
+  "teleporterYellow": 0,
+  "intervalDamage": 0,
+  "damage": 0,
+  "healing": 0,
+  "slow": 0,
+  "fast": 0,
+  "indestructible": 0,
+  "powerupCrate": 0,
+  "explosive": 0,
+  "siegeBolt": 0
+ },
+ "allAssets": [
+  "00000000.svg",
+  "00000010.svg",
+  "00001000.svg",
+  "00001010.svg",
+  "00001011.svg",
+  "00010000.svg",
+  "00010010.svg",
+  "00010110.svg",
+  "00011000.svg",
+  "00011010.svg",
+  "00011011.svg",
+  "00011110.svg",
+  "00011111.svg",
+  "01000000.svg",
+  "01000010.svg",
+  "01001000.svg",
+  "01001010.svg",
+  "01001011.svg",
+  "01010000.svg",
+  "01010010.svg",
+  "01010110.svg",
+  "01011000.svg",
+  "01011010.svg",
+  "01011011.svg",
+  "01011110.svg",
+  "01011111.svg",
+  "01101000.svg",
+  "01101010.svg",
+  "01101011.svg",
+  "01111000.svg",
+  "01111010.svg",
+  "01111011.svg",
+  "01111110.svg",
+  "01111111.svg",
+  "11010000.svg",
+  "11010010.svg",
+  "11010110.svg",
+  "11011000.svg",
+  "11011010.svg",
+  "11011011.svg",
+  "11011110.svg",
+  "11011111.svg",
+  "11111000.svg",
+  "11111010.svg",
+  "11111011.svg",
+  "11111110.svg",
+  "11111111.svg",
+  "alien_plant.svg",
+  "apartment.svg",
+  "arcade_fence_corner.svg",
+  "arcade_fence_hor.svg",
+  "arcade_fence_ver.svg",
+  "balloon.svg",
+  "bandstand_wall.svg",
+  "bandstand_wall_2.svg",
+  "bank.svg",
+  "barrel.svg",
+  "basket.svg",
+  "basket_hoop_blue.svg",
+  "basket_hoop_blue_range.svg",
+  "basket_hoop_red.svg",
+  "basket_hoop_red_range.svg",
+  "basketball.svg",
+  "bench_bottom_left.svg",
+  "bench_bottom_right.svg",
+  "bench_left_bottom.svg",
+  "bench_left_top.svg",
+  "bench_right_bottom.svg",
+  "bench_right_top.svg",
+  "bench_top_left.svg",
+  "bench_top_right.svg",
+  "bolt_0.svg",
+  "bolt_1.svg",
+  "bolt_2.svg",
+  "bolt_3.svg",
+  "bounty_star.svg",
+  "brawlball.svg",
+  "building_long_b.svg",
+  "building_long_bl.svg",
+  "building_long_br.svg",
+  "building_long_hor.svg",
+  "building_long_l.svg",
+  "building_long_r.svg",
+  "building_long_t.svg",
+  "building_long_tl.svg",
+  "building_long_tr.svg",
+  "building_long_ver.svg",
+  "cactus.svg",
+  "cactus_ball.svg",
+  "candles.svg",
+  "cargo.svg",
+  "chest.svg",
+  "computer.svg",
+  "concrete_wall.svg",
+  "cone.svg",
+  "crate.svg",
+  "crate_orange.svg",
+  "crate_red.svg",
+  "crate_red_orange.svg",
+  "crystal_magenta.svg",
+  "crystal_red.svg",
+  "factory.svg",
+  "fence_cor.svg",
+  "fence_cor_castle.svg",
+  "fence_cor_ice.svg",
+  "fence_cor_lunar.svg",
+  "fence_cor_mor.svg",
+  "fence_hor.svg",
+  "fence_hor_castle.svg",
+  "fence_hor_ice.svg",
+  "fence_hor_lunar.svg",
+  "fence_hor_mor.svg",
+  "fence_ver.svg",
+  "fence_ver_castle.svg",
+  "fence_ver_ice.svg",
+  "fence_ver_lunar.svg",
+  "fence_ver_mor.svg",
+  "flag_present_blue.svg",
+  "flag_present_red.svg",
+  "forest.svg",
+  "fuel_barrel.svg",
+  "gift_fence_b.svg",
+  "gift_fence_bl.svg",
+  "gift_fence_br.svg",
+  "gift_fence_hor.svg",
+  "gift_fence_l.svg",
+  "gift_fence_r.svg",
+  "gift_fence_t.svg",
+  "gift_fence_tl.svg",
+  "gift_fence_tr.svg",
+  "gift_fence_ver.svg",
+  "goal_blue.svg",
+  "goal_blue_2.svg",
+  "goal_red.svg",
+  "goal_red_2.svg",
+  "grass_block.svg",
+  "grass_blue.svg",
+  "grass_blue_fade.svg",
+  "grass_cyan.svg",
+  "grass_dull.svg",
+  "grass_green.svg",
+  "grass_green_round.svg",
+  "grass_neon_blue.svg",
+  "grass_pink.svg",
+  "grass_pink_round.svg",
+  "grass_teal.svg",
+  "grass_yellow.svg",
+  "haybale.svg",
+  "healpad.svg",
+  "hot_zone_blue.svg",
+  "hot_zone_both.svg",
+  "ice_block.svg",
+  "ice_wall.svg",
+  "ice_wall_2.svg",
+  "ike_blue.svg",
+  "ike_blue_range.svg",
+  "ike_red.svg",
+  "ike_red_range.svg",
+  "indestructible.svg",
+  "indestructible_bricks.svg",
+  "mega_spawn.svg",
+  "mega_spawn_mod.svg",
+  "merch_closed.svg",
+  "merch_crate.svg",
+  "merch_display.svg",
+  "metal_barrel.svg",
+  "metal_box.svg",
+  "metal_crate.svg",
+  "metal_crate_2.svg",
+  "mine.svg",
+  "mine_bazaar.svg",
+  "mine_burst.svg",
+  "mine_castle.svg",
+  "mine_construction.svg",
+  "mine_hatch.svg",
+  "mine_mortuary.svg",
+  "mine_retro.svg",
+  "mine_ship.svg",
+  "mine_snow.svg",
+  "mine_town.svg",
+  "mushroom.svg",
+  "neon_railing_b.svg",
+  "neon_railing_bl.svg",
+  "neon_railing_br.svg",
+  "neon_railing_hor.svg",
+  "neon_railing_l.svg",
+  "neon_railing_r.svg",
+  "neon_railing_t.svg",
+  "neon_railing_tl.svg",
+  "neon_railing_tr.svg",
+  "neon_railing_ver.svg",
+  "nothing.svg",
+  "office.svg",
+  "old_tv.svg",
+  "orange_barrel.svg",
+  "orange_wall.svg",
+  "pipe_b.svg",
+  "pipe_bl.svg",
+  "pipe_br.svg",
+  "pipe_hor.svg",
+  "pipe_l.svg",
+  "pipe_r.svg",
+  "pipe_t.svg",
+  "pipe_tl.svg",
+  "pipe_tr.svg",
+  "pipe_ver.svg",
+  "pizza_box.svg",
+  "plant_castle.svg",
+  "player_big.svg",
+  "player_blue.svg",
+  "player_boss.svg",
+  "player_gray.svg",
+  "player_green.svg",
+  "player_red.svg",
+  "player_white.svg",
+  "poison.svg",
+  "poison_pink.svg",
+  "pot.svg",
+  "power_crate.svg",
+  "power_line.svg",
+  "power_line_r.svg",
+  "power_line_t.svg",
+  "power_line_tr.svg",
+  "present_barrel.svg",
+  "present_box.svg",
+  "present_mini.svg",
+  "rails.svg",
+  "red_barrel.svg",
+  "road_sign.svg",
+  "rope_post.svg",
+  "rope_post_danger.svg",
+  "rope_post_danger_r.svg",
+  "rope_post_danger_t.svg",
+  "rope_post_danger_tr.svg",
+  "rope_post_giftshop.svg",
+  "rope_post_giftshop_r.svg",
+  "rope_post_giftshop_t.svg",
+  "rope_post_giftshop_tr.svg",
+  "rope_post_mine.svg",
+  "rope_post_mine_r.svg",
+  "rope_post_mine_t.svg",
+  "rope_post_mine_tr.svg",
+  "rope_post_mortuary.svg",
+  "rope_post_mortuary_r.svg",
+  "rope_post_mortuary_t.svg",
+  "rope_post_mortuary_tr.svg",
+  "rope_post_r.svg",
+  "rope_post_t.svg",
+  "rope_post_tr.svg",
+  "rope_post_waterpark.svg",
+  "rope_post_waterpark_r.svg",
+  "rope_post_waterpark_t.svg",
+  "rope_post_waterpark_tr.svg",
+  "round_shot.svg",
+  "sand_bucket.svg",
+  "sandstone_rombus.svg",
+  "sandstone_star.svg",
+  "sapling.svg",
+  "scrap_cube.svg",
+  "ship_barrel.svg",
+  "ship_railing_b.svg",
+  "ship_railing_bl.svg",
+  "ship_railing_br.svg",
+  "ship_railing_hor.svg",
+  "ship_railing_l.svg",
+  "ship_railing_r.svg",
+  "ship_railing_t.svg",
+  "ship_railing_tl.svg",
+  "ship_railing_to.svg",
+  "ship_railing_tr.svg",
+  "ship_railing_ver.svg",
+  "skull.svg",
+  "slowpad.svg",
+  "snowballs.svg",
+  "soccerball.svg",
+  "spacestation_wall_b.svg",
+  "spacestation_wall_bl.svg",
+  "spacestation_wall_br.svg",
+  "spacestation_wall_hor.svg",
+  "spacestation_wall_l.svg",
+  "spacestation_wall_r.svg",
+  "spacestation_wall_t.svg",
+  "spacestation_wall_tl.svg",
+  "spacestation_wall_tr.svg",
+  "spacestation_wall_ver.svg",
+  "speedpad.svg",
+  "spikes.svg",
+  "spring_bottom.svg",
+  "spring_bottom_left.svg",
+  "spring_bottom_right.svg",
+  "spring_left.svg",
+  "spring_right.svg",
+  "spring_top.svg",
+  "spring_top_left.svg",
+  "spring_top_right.svg",
+  "stone_block.svg",
+  "stump.svg",
+  "surfboard.svg",
+  "teleporter_blue.svg",
+  "teleporter_green.svg",
+  "teleporter_red.svg",
+  "teleporter_yellow.svg",
+  "tent.svg",
+  "tires.svg",
+  "tnt.svg",
+  "tombstone.svg",
+  "tree.svg",
+  "tree_snowless.svg",
+  "trophy_blue.svg",
+  "trophy_gold.svg",
+  "trophy_red.svg",
+  "vase.svg",
+  "vault.svg",
+  "vault_offset.svg",
+  "vending_machines.svg",
+  "volleyball.svg",
+  "volleyball_mod.svg",
+  "wall_band_b.svg",
+  "wall_band_bl.svg",
+  "wall_band_br.svg",
+  "wall_band_hor.svg",
+  "wall_band_l.svg",
+  "wall_band_r.svg",
+  "wall_band_t.svg",
+  "wall_band_tl.svg",
+  "wall_band_tr.svg",
+  "wall_band_ver.svg",
+  "wall_block.svg",
+  "wall_block_castle.svg",
+  "wall_block_gray.svg",
+  "wall_block_red.svg",
+  "wall_sand_b.svg",
+  "wall_sand_bl.svg",
+  "wall_sand_br.svg",
+  "wall_sand_hor.svg",
+  "wall_sand_l.svg",
+  "wall_sand_r.svg",
+  "wall_sand_t.svg",
+  "wall_sand_tl.svg",
+  "wall_sand_tr.svg",
+  "wall_sand_ver.svg",
+  "warehouse.svg",
+  "watepark_fence_br.svg",
+  "waterpark_barrel.svg",
+  "waterpark_fence.svg",
+  "waterpark_fence_b.svg",
+  "waterpark_fence_bl.svg",
+  "waterpark_fence_br.svg",
+  "waterpark_fence_hor.svg",
+  "waterpark_fence_l.svg",
+  "waterpark_fence_r.svg",
+  "waterpark_rock.svg",
+  "waterpark_wall.svg",
+  "wood_block.svg",
+  "x_box.svg",
+  "yellow_block.svg",
+  "puck.svg"
+ ],
+ "gamemodeOverrides": {
+  "Gemgrab": {
+   "objective": 0
+  },
+  "GemGrab5v5": {
+   "objective": 0
+  },
+  "GemGrab2v2": {
+   "objective": 0
+  },
+  "GemGrab4x3": {
+   "objective": 0
+  },
+  "TrioGemgrab": {
+   "objective": 0
+  },
+  "Wanted": {
+   "objective": 2
+  },
+  "BrawlBall": {
+   "objective": 17
+  },
+  "BrawlBallV2": {
+   "objective": 17
+  },
+  "BrawlBall5v5": {
+   "objective": 17
+  },
+  "Survival": {
+   "player1": 1,
+   "player2": 4
+  },
+  "SurvivalTrio": {
+   "player1": 1,
+   "player2": 8
+  },
+  "DuoSurvival": {
+   "player1": 3,
+   "player2": 1
+  },
+  "Biggame": {
+   "player1": 1,
+   "player2": 2
+  },
+  "Invasion": {
+   "player1": 0,
+   "player2": 4
+  },
+  "BossFight": {
+   "player1": 0,
+   "player2": 3
+  },
+  "Siege": {
+   "objective": 9
+  },
+  "SiegeSmall": {
+   "objective": 9
+  },
+  "GemGrabRail": {
+   "objective": 0
+  },
+  "KingHunt": {
+   "player1": 1,
+   "player2": 4
+  },
+  "KingHuntShowdown": {
+   "player1": 1,
+   "player2": 4
+  },
+  "TreasureHunt": {
+   "objective": 14
+  },
+  "KingOfHill": {
+   "objective": 21
+  },
+  "KingOfHill2v2": {
+   "objective": 16
+  },
+  "Godzilla": {
+   "player2": 5
+  },
+  "MegaBoss": {
+   "player2": 5
+  },
+  "Wipeout": {
+   "objective": 28
+  },
+  "Wipeout5v5": {
+   "objective": 28
+  },
+  "Wipeout4x3": {
+   "objective": 28
+  }
+ },
+ "gamemodeBiomeOverrides": {
+  "Gemgrab": {
+   "snowy": {
+    "objective": 7
+   },
+   "town": {
+    "objective": 10
+   },
+   "retro": {
+    "objective": 12
+   },
+   "mortuary": {
+    "objective": 11
+   },
+   "darryl": {
+    "objective": 13
+   },
+   "arcade": {
+    "objective": 10
+   },
+   "lamporium": {
+    "objective": 20
+   },
+   "mini": {
+    "objective": 22
+   },
+   "gift": {
+    "objective": 24
+   },
+   "bandstand": {
+    "objective": 20
+   },
+   "snowtel": {
+    "objective": 11
+   },
+   "starrforce": {
+    "objective": 25
+   },
+   "castle": {
+    "objective": 37
+   }
+  },
+  "GemGrab5v5": {
+   "snowy": {
+    "objective": 7
+   },
+   "town": {
+    "objective": 10
+   },
+   "retro": {
+    "objective": 12
+   },
+   "mortuary": {
+    "objective": 11
+   },
+   "darryl": {
+    "objective": 13
+   },
+   "arcade": {
+    "objective": 10
+   },
+   "lamporium": {
+    "objective": 20
+   },
+   "mini": {
+    "objective": 22
+   },
+   "gift": {
+    "objective": 24
+   },
+   "bandstand": {
+    "objective": 20
+   },
+   "snowtel": {
+    "objective": 11
+   },
+   "starrforce": {
+    "objective": 25
+   },
+   "castle": {
+    "objective": 37
+   }
+  },
+  "GemGrab2v2": {
+   "snowy": {
+    "objective": 7
+   },
+   "town": {
+    "objective": 10
+   },
+   "retro": {
+    "objective": 12
+   },
+   "mortuary": {
+    "objective": 11
+   },
+   "darryl": {
+    "objective": 13
+   },
+   "arcade": {
+    "objective": 10
+   },
+   "lamporium": {
+    "objective": 20
+   },
+   "mini": {
+    "objective": 22
+   },
+   "gift": {
+    "objective": 24
+   },
+   "bandstand": {
+    "objective": 20
+   },
+   "snowtel": {
+    "objective": 11
+   },
+   "starrforce": {
+    "objective": 25
+   },
+   "castle": {
+    "objective": 37
+   }
+  },
+  "GemGrab4x3": {
+   "snowy": {
+    "objective": 7
+   },
+   "town": {
+    "objective": 10
+   },
+   "retro": {
+    "objective": 12
+   },
+   "mortuary": {
+    "objective": 11
+   },
+   "darryl": {
+    "objective": 13
+   },
+   "arcade": {
+    "objective": 10
+   },
+   "lamporium": {
+    "objective": 20
+   },
+   "mini": {
+    "objective": 22
+   },
+   "gift": {
+    "objective": 24
+   },
+   "bandstand": {
+    "objective": 20
+   },
+   "snowtel": {
+    "objective": 11
+   },
+   "starrforce": {
+    "objective": 25
+   },
+   "castle": {
+    "objective": 37
+   }
+  },
+  "TrioGemgrab": {
+   "snowy": {
+    "objective": 7
+   },
+   "town": {
+    "objective": 10
+   },
+   "retro": {
+    "objective": 12
+   },
+   "mortuary": {
+    "objective": 11
+   },
+   "darryl": {
+    "objective": 13
+   },
+   "arcade": {
+    "objective": 10
+   },
+   "lamporium": {
+    "objective": 20
+   },
+   "mini": {
+    "objective": 22
+   },
+   "gift": {
+    "objective": 24
+   },
+   "bandstand": {
+    "objective": 20
+   },
+   "snowtel": {
+    "objective": 11
+   },
+   "starrforce": {
+    "objective": 25
+   },
+   "castle": {
+    "objective": 37
+   }
+  },
+  "Bankheist": {
+   "mini": {
+    "objective": 23
+   }
+  },
+  "Bombheist": {
+   "mini": {
+    "objective": 23
+   }
+  },
+  "BrawlBall": {
+   "galaxy_arena": {
+    "objective": 17
+   },
+   "modded galaxy_arena": {
+    "objective": 17
+   }
+  },
+  "BrawlBallV2": {
+   "galaxy_arena": {
+    "objective": 17
+   },
+   "modded galaxy_arena": {
+    "objective": 17
+   }
+  },
+  "BrawlBall5v5": {
+   "galaxy_arena": {
+    "objective": 17
+   },
+   "modded galaxy_arena": {
+    "objective": 17
+   }
+  },
+  "VolleyBrawl": {
+   "modded volleybrawl": {
+    "player1": 2,
+    "player2": 7
+   }
+  }
+ },
+ "modeOverrides": {
+  "Bankheist": {
+   "objective": 1
+  },
+  "Bombheist": {
+   "objective": 1
+  },
+  "Wanted": {
+   "objective": 2
+  },
+  "Solobounty": {
+   "objective": 2
+  },
+  "Deathmatch": {
+   "objective": 2
+  },
+  "DeathmatchFFA": {
+   "objective": 2
+  },
+  "BrawlBall": {
+   "objective": 17
+  },
+  "BrawlBallV2": {
+   "objective": 17
+  },
+  "BrawlBall5v5": {
+   "objective": 17
+  },
+  "Dribble": {
+   "objective": 17
+  },
+  "Laserball": {
+   "objective": 17
+  },
+  "Laserball2v2": {
+   "objective": 17
+  },
+  "Laserball5v5": {
+   "objective": 17
+  },
+  "AirHockey": {
+   "objective": 38
+  },
+  "AirHockey2v2": {
+   "objective": 38
+  },
+  "SuperHockey": {
+   "objective": 38
+  },
+  "Gemgrab": {
+   "objective": 0
+  },
+  "GemGrab5v5": {
+   "objective": 0
+  },
+  "GemGrab2v2": {
+   "objective": 0
+  },
+  "GemGrab4x3": {
+   "objective": 0
+  },
+  "TrioGemgrab": {
+   "objective": 0
+  },
+  "KingOfHill": {
+   "objective": 16
+  },
+  "KingOfHill2v2": {
+   "objective": 16
+  },
+  "VolleyBrawl": {
+   "objective": 29
+  },
+  "BasketBrawl": {
+   "objective": 30
+  },
+  "BasketBrawl2v2": {
+   "objective": 30
+  }
+ }
 }
