@@ -7,27 +7,163 @@
   :root { color-scheme: dark; }
   * { box-sizing: border-box; }
   body { margin:0; font-family:-apple-system,system-ui,sans-serif; background:#0a0f17; color:#dde; display:flex; height:100vh; overflow:hidden; }
-  #sidebar { width:280px; flex:0 0 280px; background:#0e1623; border-right:1px solid #223; padding:16px; overflow-y:auto; }
-  #stage-wrap { flex:1; display:flex; align-items:center; justify-content:center; position:relative; }
-  h1 { font-size:16px; margin:0 0 4px; }
-  .sub { font-size:11px; color:#789; margin:0 0 16px; }
-  label { display:block; font-size:11px; text-transform:uppercase; letter-spacing:.04em; color:#8aa; margin:14px 0 4px; }
-  select, button, input.filter { width:100%; padding:7px 8px; background:#16202f; color:#dde; border:1px solid #2a3b52; border-radius:6px; font:inherit; font-size:13px; }
+  #sidebar { width:240px; flex:0 0 240px; background:#0e1623; border-right:1px solid #223; padding:16px; overflow-y:auto; }
+  #stage-wrap { flex:1; display:flex; align-items:center; justify-content:center; position:relative; min-width:0;
+                background:radial-gradient(1100px 700px at 50% 42%, #111c2e 0%, #0a0f17 72%); }
+  /* HTML vector map: tile <img> elements are absolute-positioned per tileParts.
+     Sits BEHIND the PIXI canvas (which is transparent above). pointer-events:none
+     so all clicks pass through to PIXI. */
+  #mapHtml { position:absolute; inset:0; pointer-events:none; overflow:hidden; }
+  /* Soft frame around the play area so the map reads as a board, not a
+     texture dump. No overflow:hidden — tile sprites overhang their cells. */
+  #mapGrid { position:absolute; border-radius:8px; box-shadow:0 14px 60px #000d, 0 0 0 1px #ffffff14; }
+  #mapGrid .tile-sprite { user-select:none; pointer-events:none; }
+  #mapGrid .tile-sprite svg { display:block; width:100%; height:100%; }
+  /* Out-of-bounds / non-enterable cells (Brawl Ball goal flanks etc.):
+     dark fill + diagonal hatching so they instantly read as "can't go".
+     The old pale gray wash read as fog, not as a wall. */
+  #mapGrid .indicator { position:absolute; background-color:#0c121bb3;
+    background-image:repeating-linear-gradient(45deg, transparent 0 7px, #000000a6 7px 14px); }
+  #mapGrid .color { position:absolute; }
+  /* paint-mode hover hologram: cloned SVG with all fills/strokes recolored
+     cyan, semi-transparent, with a glow. Sized + positioned exactly like
+     the real tile would be if you clicked. */
+  #hoverGhost { position:absolute; pointer-events:none; opacity:.55; display:none; filter:drop-shadow(0 0 4px #5fd3ff); z-index:9999; }
+  #hoverGhost svg { display:block; width:100%; height:100%; }
+  /* Brawler place-mode hologram. Cyan-ringed portrait circle at the
+     hover cell. Reticle preview is drawn separately in PIXI hoverLayer. */
+  #placeGhost { position:absolute; pointer-events:none; display:none; z-index:9999; border-radius:2px; overflow:hidden; border:2px solid #5fd3ff; background:#0a0f17cc; }
+  #placeGhost img { width:100%; height:100%; display:block; object-fit:cover; opacity:.85; }
+  #stage-wrap > canvas { position:absolute; inset:0; }
+  /* HTML token overlay: sits above PIXI canvas. Layer is pointer-events:none
+     so clicks pass through to PIXI (for map painting), but individual tokens
+     re-enable pointer-events for drag. Native browser scaling → always sharp. */
+  /* Tokens above PIXI canvas. HTML pointer-events handle drag. Reticles end
+     up under tokens but reticle stroke/glow is bright enough to read through. */
+  #tokenLayerHtml { position:absolute; inset:0; pointer-events:none; overflow:hidden; z-index:5; }
+  /* Tokens show the SQUARE portrait art as-is (per Daniel: no circular crop,
+     no ring/glow). Team indicator = a thin border, nothing decorative. */
+  #tokenLayerHtml .tok { position:absolute; pointer-events:auto; cursor:grab; user-select:none; -webkit-user-drag:none; transform:translate(-50%, -50%); filter:drop-shadow(0 2px 3px #0008); }
+  #tokenLayerHtml .tok.dragging { cursor:grabbing; }
+  #tokenLayerHtml .tok img { display:block; width:100%; height:100%; object-fit:cover; border-radius:2px; background:#0a0f17; user-select:none; -webkit-user-drag:none; pointer-events:none; }
+  #tokenLayerHtml .tok .tok-frame { position:absolute; inset:0; border:2px solid currentColor; border-radius:2px; pointer-events:none; }
+  #tokenLayerHtml .tok.sel .tok-frame { outline:1.5px solid #fffd; }
+  #tokenLayerHtml .tok .tok-label { position:absolute; left:50%; top:100%; transform:translateX(-50%); margin-top:4px; font:600 10px system-ui; color:#fff; background:#0a0f17d9; border:1px solid #ffffff22; border-radius:8px; padding:1px 7px 2px; white-space:nowrap; pointer-events:none; }
+  #tokenLayerHtml .tok .tok-badge { position:absolute; top:-3px; right:-3px; width:15px; height:15px; border-radius:50%; background:currentColor; color:#000; font:bold 9px system-ui; display:flex; align-items:center; justify-content:center; pointer-events:none; box-shadow:0 1px 3px #0009; }
+  #tokenLayerHtml .tok.team-blue { color:#5fb0ff; }
+  #tokenLayerHtml .tok.team-red  { color:#ff6b6b; }
+  #tokenLayerHtml .tok.projectile { color:#5fd3ff; }
+  #tokenLayerHtml .tok.projectile img { opacity:.92; }
+  @keyframes tokDrop { from { scale:1.5; opacity:0; } to { scale:1; opacity:1; } }
+  #tokenLayerHtml .tok.drop { animation:tokDrop .16s ease-out; }
+  /* Mode banner — sticky at top of map area, color-coded by active mode. */
+  #modeBanner { position:absolute; top:12px; left:50%; transform:translateX(-50%); padding:7px 16px; border-radius:20px; font:600 11px system-ui; letter-spacing:.08em; text-transform:uppercase; pointer-events:none; z-index:10; background:#0a0f17cc; backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); border:1px solid; transition:all .12s; }
+  #modeBanner.character  { color:#fde047; border-color:#fde04766; box-shadow:0 0 12px #fde04733; }
+  #modeBanner.projectile { color:#5fd3ff; border-color:#5fd3ff66; box-shadow:0 0 12px #5fd3ff33; }
+  #modeBanner.paint      { color:#a78bfa; border-color:#a78bfa66; box-shadow:0 0 12px #a78bfa33; }
+  #modeBanner.wallbreak  { color:#f6c64a; border-color:#f6c64a66; box-shadow:0 0 12px #f6c64a33; }
+  #modeBanner.idle       { color:#456; border-color:#1d2b40; }
+  #tilebar { width:300px; flex:0 0 300px; background:#0e1623; border-left:1px solid #223; padding:0; overflow-y:auto; font-size:11px; }
+  #tilebar h2 { margin:0 0 8px; font-size:13px; color:#cde; }
+  /* Tab strip */
+  .tabs { display:flex; gap:0; position:sticky; top:0; background:#0a0f17; border-bottom:1px solid #1d2b40; z-index:10; }
+  .tab { flex:1; padding:12px 8px !important; background:transparent !important; border:none !important; border-bottom:2px solid transparent !important; color:#789 !important; font-size:12px !important; font-weight:600; cursor:pointer; border-radius:0 !important; margin:0 !important; letter-spacing:.04em; text-transform:uppercase; }
+  .tab:hover { color:#cde !important; background:#13202f !important; }
+  .tab.sel { color:#5fd3ff !important; border-bottom-color:#5fd3ff !important; }
+  .panel { padding:14px; }
+  .panel[hidden] { display:none; }
+  .panel-head { margin:0 0 8px; font-size:13px; color:#cde; }
+  .panel-head .picked { color:#cde; font-weight:600; }
+  /* Sticky picked-brawler card. Lives at the top of the Brawlers tab and
+     stays visible while the brawler list scrolls. */
+  #pickedCard { position:sticky; top:43px; background:linear-gradient(180deg, #13263a, #0e1a28); border:1px solid #24405e; border-radius:10px; padding:12px; margin-bottom:10px; z-index:5; box-shadow:0 6px 18px #000a; }
+  #pickedCard .pc-head { display:flex; gap:11px; align-items:center; }
+  #pickedCard #pickedPortrait { width:62px; height:62px; border-radius:12px; object-fit:cover; background:#0a0f17; border:2px solid #2c4869; flex:0 0 62px; box-shadow:0 3px 8px #0008; }
+  #pickedCard .pc-meta { flex:1; min-width:0; }
+  #pickedCard .pc-name { color:#e8f2fa; font-weight:800; font-size:15px; line-height:1.2; }
+  #pickedCard .pc-stats { display:flex; gap:4px; margin-top:4px; flex-wrap:wrap; font-size:10px; }
+  #pickedCard .pc-stats .stat { background:#0a0f17; border:1px solid #1d2b40; border-radius:3px; padding:1px 5px; color:#9ab; }
+  #pickedCard .pc-stats .stat b { color:#cde; font-weight:700; }
+  #pickedCard #variantRow { margin-top:10px; }
+  #pickedCard .teamrow { margin-top:8px; }
+  #pickedCard #placeBtn { margin-top:6px; padding:10px 8px; font-size:13px; font-weight:600; }
+  /* Character vs Projectile mode toggle */
+  .modeToggle { display:grid; grid-template-columns:1fr 1fr; gap:4px; margin-top:8px; }
+  .mode { padding:8px 4px !important; margin:0 !important; font-size:11px !important; }
+  .mode.sel { border-color:#5fd3ff; color:#5fd3ff; background:#0d2533; }
+  /* Compact icon grid — 4 cols, click to select, tooltip = full name+stats. */
+  #tilebarList { display:grid; grid-template-columns:repeat(5, 1fr); gap:4px; }
+  #tilebar .tile { aspect-ratio:1; background:#0a0f17; border:1px solid #1d2b40; border-radius:5px; cursor:pointer; display:flex; align-items:center; justify-content:center; overflow:hidden; position:relative; padding:4px; transition:transform .08s; }
+  #tilebar .tile:hover { border-color:#3a5670; transform:scale(1.06); z-index:2; }
+  #tilebar .tile.sel { border-color:#5fd3ff; box-shadow:0 0 0 1px #5fd3ff; background:#0c1f2a; }
+  #tilebar .tile .thumb { width:100%; height:100%; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  #tilebar .tile .thumb img,
+  #tilebar .tile .thumb svg { max-width:100%; max-height:100%; image-rendering:auto; }
+  #tilebar .tile .code { position:absolute; top:1px; left:3px; color:#5fd; font-weight:bold; font-size:9px; text-shadow:0 0 3px #000, 0 0 3px #000; pointer-events:none; }
+  #tilebar .tile .meta { display:none; }
+  #tilebar .erase { padding:8px 6px; margin-bottom:8px; border-radius:6px; cursor:pointer; text-align:center; font-size:11px; color:#9ab; border:1px solid #2a3b52; }
+  #tilebar .erase:hover { background:#13202f; }
+  #tilebar .erase.sel { border-color:#5fd; background:#163148; color:#cde; }
+  /* Stats box for the currently selected tile */
+  #tileDetails { margin-top:10px; padding:8px 10px; background:#0c1422; border:1px solid #1d2b40; border-radius:6px; font-size:10px; color:#9ab; line-height:1.5; min-height:1em; }
+  #tileDetails b { color:#cde; }
+  #tileDetails .empty { color:#456; font-style:italic; }
+  h1 { font-size:18px; margin:0 0 3px; font-weight:800; letter-spacing:.01em; }
+  h1 .brand-dot { color:#5fd3ff; }
+  .sub { font-size:11px; color:#789; margin:0 0 18px; line-height:1.4; }
+  label { display:block; font-size:10px; text-transform:uppercase; letter-spacing:.08em; color:#7a93ad; margin:16px 0 5px; font-weight:600; }
+  select, button, input.filter { width:100%; padding:8px 9px; background:#141f30; color:#dde; border:1px solid #283c57; border-radius:8px; font:inherit; font-size:13px; transition:background .12s, border-color .12s; }
   input.filter { margin-bottom:4px; }
-  input.filter:focus { outline:none; border-color:#5fb0ff; }
+  input.filter:focus { outline:none; border-color:#5fb0ff; background:#16243a; }
   button { cursor:pointer; margin-top:8px; }
-  button:hover { background:#1d2b40; }
-  button.danger { border-color:#a33; }
+  button:hover { background:#1d2c45; border-color:#3a5680; }
+  button.danger { border-color:#7c2d36; color:#f3a6ad; }
+  button.danger:hover { background:#2b1216; border-color:#a33; }
   .hint { font-size:11px; color:#678; margin-top:14px; line-height:1.5; }
   .legend { margin-top:16px; font-size:11px; }
   .legend div { display:flex; align-items:center; gap:6px; margin:3px 0; }
   .sw { width:12px; height:12px; border-radius:2px; display:inline-block; }
+  /* Ability icon grid — replaces text chips. Each button = a square icon
+     with a color-coded ring per type (attack/super/gadget/hyper/star). */
+  #variantRow { display:grid; grid-template-columns:repeat(4, 1fr); gap:5px; margin-top:6px; }
+  /* Chip uses explicit aspect-ratio via padding-bottom trick — reliable
+     even with absolute children. Icon centered absolutely. */
+  #variantRow .vchip { position:relative; padding-bottom:100%; overflow:hidden; border-radius:7px; border:2px solid; background:#0a0f17; cursor:pointer; box-sizing:border-box; }
+  #variantRow .vchip:hover { filter:brightness(1.18); }
+  #variantRow .vchip.sel { box-shadow:0 0 0 2px currentColor inset, 0 0 8px currentColor; }
+  #variantRow .vchip img,
+  #variantRow .vchip svg { position:absolute; top:12%; left:15%; width:70%; height:55%; display:block; object-fit:contain; pointer-events:none; color:currentColor; }
+  #variantRow .vchip .lbl { position:absolute; bottom:3px; left:0; right:0; font-size:9px; font-weight:700; text-align:center; line-height:1; letter-spacing:.04em; pointer-events:none; text-shadow:0 0 3px #000, 0 0 3px #000; color:#fff; }
+  #variantRow .vchip.t-attack { color:#5fb0ff; border-color:#2c4869; background:linear-gradient(160deg, #0c1f33, #0a0f17); }
+  #variantRow .vchip.t-super  { color:#fbbf24; border-color:#6b5320; background:linear-gradient(160deg, #3a2d10, #0a0f17); }
+  #variantRow .vchip.t-gadget { color:#34d399; border-color:#1f6b4a; background:linear-gradient(160deg, #0c2820, #0a0f17); }
+  #variantRow .vchip.t-hyper  { color:#c084fc; border-color:#5a2c80; background:linear-gradient(160deg, #2a1438, #0a0f17); }
+  #variantRow .vchip.t-star   { color:#f59e0b; border-color:#7c5a1a; background:linear-gradient(160deg, #3a2810, #0a0f17); }
+  #variantRow .vchip.t-other  { color:#94a3b8; border-color:#2a3b52; }
+  /* Brawler portrait grid — 4 cols at ~60px each so the portrait shows
+     clearly. object-fit:contain prevents the rounded-square headshot from
+     being cropped at the edges. */
+  /* Brawler portrait grid — STRICT no-overlap. Each cell is a square
+     (aspect-ratio:1) with overflow:hidden. Portrait img is absolutely
+     positioned within its cell, so it cannot bleed outside. Hover uses
+     brightness + border highlight (NOT transform:scale, which used to
+     visually overflow into the next row). */
+  #brawlerGrid { display:grid; grid-template-columns:repeat(4, 1fr); gap:5px; margin-top:6px; padding:5px; background:#0c1422; border-radius:8px; border:1px solid #1d2b40; }
+  /* Cell height is driven by the IMG (static, aspect-ratio:1 — reliable
+     vs aspect-ratio:1 on the cell which collapsed when img was absolute). */
+  #brawlerGrid .b { position:relative; overflow:hidden; background:#0a0f17; border:2px solid #1d2b40; border-radius:9px; cursor:pointer; display:block; transition:border-color .1s, filter .1s; }
+  #brawlerGrid .b:hover { border-color:#3a5670; filter:brightness(1.15); }
+  #brawlerGrid .b.sel { border-color:#5fd3ff; box-shadow:0 0 0 1px #5fd3ff inset; }
+  #brawlerGrid .b img { display:block; width:100%; height:auto; aspect-ratio:1/1; object-fit:cover; pointer-events:none; }
+  #brawlerGrid .b.miss { aspect-ratio:1/1; display:flex; align-items:center; justify-content:center; color:#789; font-size:10px; text-align:center; padding:4px; word-break:break-word; line-height:1.15; background:#1a1f28; }
+  #brawlerGrid .b .nm { position:absolute; bottom:0; left:0; right:0; font-size:9px; color:#fff; background:linear-gradient(transparent, #000d 60%); padding:10px 3px 3px; text-align:center; line-height:1.1; pointer-events:none; opacity:0; transition:opacity .12s; }
+  #brawlerGrid .b:hover .nm { opacity:1; }
   #placed { margin-top:8px; font-size:12px; }
   #placed .row { display:flex; justify-content:space-between; align-items:center; padding:4px 6px; border-radius:4px; cursor:pointer; }
   #placed .row:hover { background:#16202f; }
   #placed .row.sel { background:#1d3a52; }
   #placed .row button { width:auto; margin:0; padding:2px 6px; font-size:11px; }
-  #status { position:absolute; bottom:10px; left:10px; font-size:11px; color:#567; background:#0009; padding:4px 8px; border-radius:4px; }
+  #status { position:absolute; bottom:12px; left:50%; transform:translateX(-50%); font:500 11px system-ui; color:#7a93ad; background:#0a0f17d9; border:1px solid #1d2b40; padding:5px 13px; border-radius:20px; white-space:nowrap; }
   .info { font-size:11px; color:#9ab; margin-top:6px; line-height:1.5; background:#0c1422; border:1px solid #1d2b40; border-radius:6px; padding:6px 8px; min-height:1.2em; }
   .info b { color:#cde; }
   .teamrow { display:flex; gap:8px; }
@@ -37,6 +173,11 @@
   label input { vertical-align:middle; margin-right:4px; }
   label.chk { text-transform:none; letter-spacing:0; color:#cde; font-size:12px; margin:6px 0; }
   #wallBreakBtn.on { border-color:#f6c64a; color:#f6c64a; }
+  #placeBtn.armed { border-color:#5fd3ff; color:#5fd3ff; background:#0d2533; box-shadow:0 0 8px #5fd3ff66; }
+  /* Overlay toggle buttons */
+  .overlayrow { display:grid; grid-template-columns:1fr 1fr 1fr; gap:4px; margin-top:4px; }
+  .ovr { padding:8px 4px !important; margin-top:0 !important; font-size:11px !important; }
+  .ovr.on { border-color:#5fd3ff; color:#5fd3ff; background:#0d2533; }
   .kit { font-size:12px; color:#cde; margin-top:6px; }
   .kit-prose { padding:8px 10px; background:#0c1422; border-left:2px solid #5fb0ff; border-radius:4px; line-height:1.5; }
   .kit-quirks { margin-top:6px; display:flex; flex-wrap:wrap; gap:4px; }
@@ -53,35 +194,26 @@
 </head>
 <body>
 <div id="sidebar">
-  <h1>whiteboard prototype</h1>
-  <p class="sub">validating maps.json + brawlers.json render end-to-end</p>
+  <h1>brawl<span class="brand-dot">·</span>digram</h1>
+  <p class="sub">collaborative Brawl Stars whiteboard</p>
 
   <label>Map</label>
   <input type="search" id="mapFilter" class="filter" placeholder="filter maps…" autocomplete="off"/>
   <select id="mapSel" size="1"></select>
 
-  <label>Brawler</label>
-  <input type="search" id="brawlerFilter" class="filter" placeholder="filter brawlers…" autocomplete="off"/>
-  <select id="brawlerSel" size="1"></select>
-
-  <label>Reticle variant</label>
-  <select id="variantSel"></select>
-  <div id="variantInfo" class="info"></div>
-  <div id="kitInfo" class="kit"></div>
-
-  <label>Team</label>
-  <div class="teamrow">
-    <button id="teamBlue" class="team sel">Blue</button>
-    <button id="teamRed" class="team">Red</button>
-  </div>
-
-  <button id="placeBtn">Click map to place →</button>
-  <button id="clearBtn" class="danger">Clear all tokens</button>
-
   <label>Overlays</label>
-  <label class="chk"><input type="checkbox" id="showAll"/> Show all reticles</label>
-  <label class="chk"><input type="checkbox" id="showVision"/> Vision (bushes + line of sight)</label>
+  <div class="overlayrow">
+    <button id="showAllBtn" class="ovr">All reticles</button>
+    <button id="showVisionBtn" class="ovr">Vision</button>
+    <button id="showMovementBtn" class="ovr">Movement</button>
+  </div>
+  <input type="checkbox" id="showAll" hidden/>
+  <input type="checkbox" id="showVision" hidden/>
+  <input type="checkbox" id="showMovement" hidden/>
   <div id="visionRow" style="display:none">
+    <label>Camera viewport: <span id="viewWVal">21</span> × <span id="viewHVal">12</span> tiles</label>
+    <input type="range" id="viewW" min="12" max="28" step="0.5" value="21" style="width:100%"/>
+    <input type="range" id="viewH" min="8" max="20" step="0.5" value="12" style="width:100%"/>
     <label>Bush reveal: <span id="revealVal">2</span> tiles</label>
     <input type="range" id="revealRadius" min="1" max="6" step="0.5" value="2" style="width:100%"/>
     <select id="visionPreset" style="margin-top:6px">
@@ -89,7 +221,6 @@
       <option value="4">Bo · Circling Eagle (+bush vision)</option>
     </select>
   </div>
-  <label class="chk"><input type="checkbox" id="showMovement"/> Movement range</label>
   <div id="moveRow" style="display:none">
     <label>Time window: <span id="moveVal">2</span> s</label>
     <input type="range" id="moveSeconds" min="0.5" max="6" step="0.5" value="2" style="width:100%"/>
@@ -98,33 +229,157 @@
 
   <button id="wallBreakBtn">Break walls: off</button>
 
-  <label>Placed tokens</label>
-  <div id="placed"></div>
+  <details style="margin-top:14px;font-size:11px"><summary style="cursor:pointer;color:#9ab">Advanced</summary>
+    <label>Token size: <span id="tokenSizeVal">1.7</span>×</label>
+    <input type="range" id="tokenSize" min="0.8" max="2.4" step="0.1" value="1.7" style="width:100%"/>
+    <label>Tile render mode</label>
+    <select id="renderModeSel">
+      <option value="vector">Vector SVG (recommended)</option>
+      <option value="colors">Flat colors (debug)</option>
+    </select>
+    <label>Biome override</label>
+    <select id="biomeSel">
+      <option value="grassfield">Grassfield (default green)</option>
+      <option value="canyon">Canyon (desert tan)</option>
+      <option value="jungle">Jungle (sandy)</option>
+      <option value="snowy">Snowy (icy blue)</option>
+      <option value="mine">Mine (purple-grey)</option>
+      <option value="mortuary">Mortuary (dark purple)</option>
+      <option value="town">Town (pink-mauve)</option>
+      <option value="retro">Retro (purple)</option>
+      <option value="darryl">Darryl Pirate (orange)</option>
+      <option value="arcade">Arcade (dark blue)</option>
+      <option value="snowtel">Snowtel (cold blue)</option>
+      <option value="waterpark">Waterpark (pink)</option>
+      <option value="castle">Castle (deep purple)</option>
+      <option value="starrforce">Starr Force (navy)</option>
+      <option value="bandstand">Bandstand (orange)</option>
+      <option value="scrapyard">Scrapyard (dark)</option>
+      <option value="lamporium">Lamporium (red)</option>
+      <option value="actionshow">Action Show (orange)</option>
+      <option value="gift">Gift (red)</option>
+      <option value="mini">Mini (navy)</option>
+    </select>
+  </details>
 
-  <div class="legend">
-    <label>Tile legend</label>
-    <div><span class="sw" style="background:#2c1d12"></span> wall</div>
-    <div><span class="sw" style="background:#1f6f3a"></span> bush</div>
-    <div><span class="sw" style="background:#2870c0"></span> water</div>
-    <div><span class="sw" style="background:#6b4a26"></span> fence</div>
-    <div><span class="sw" style="background:#1f7ad6"></span> / <span class="sw" style="background:#e63946"></span> spawns</div>
-  </div>
-
-  <p class="hint">Pick a brawler + variant, click "place", then click the map. Select a token and move the mouse to aim. Direct-fire reticles (cone/line/dash) are clipped by walls; throwers (Dynamike, Barley…) land wherever you point, clamped to their max-range ring. Movement range is that brawler's speed × the time window, flood-filled around walls. Drag a token to reposition.</p>
+  <p class="hint" style="font-size:10px;color:#567;margin-top:14px">Pick brawler → click map to place → move mouse to aim → click to lock. Click a selected token to re-aim it. Drag to reposition. Esc backs out of any mode. ⌘Z undoes. Your scene autosaves.</p>
 </div>
 
-<div id="stage-wrap"></div>
+<div id="stage-wrap">
+  <div id="mapHtml"><div id="mapGrid"></div></div>
+  <div id="tokenLayerHtml"></div>
+  <div id="hoverGhost"></div>
+  <div id="placeGhost"><img alt=""/></div>
+  <div id="modeBanner"></div>
+</div>
 <div id="status">loading…</div>
+
+<div id="tilebar">
+  <div class="tabs">
+    <button class="tab sel" data-tab="brawlers">Brawlers</button>
+    <button class="tab" data-tab="tiles">Tiles</button>
+  </div>
+
+  <div class="panel" id="tabBrawlers">
+    <!-- Sticky card at top: always shows who's picked + abilities + place btn. -->
+    <div id="pickedCard">
+      <div class="pc-head">
+        <img id="pickedPortrait" alt=""/>
+        <div class="pc-meta">
+          <div id="brawlerNameLabel" class="pc-name">pick a brawler →</div>
+          <div id="brawlerStats" class="pc-stats"></div>
+        </div>
+      </div>
+      <div id="variantRow"></div>
+      <select id="variantSel" hidden></select>
+      <div id="variantInfo" class="info"></div>
+      <div class="modeToggle">
+        <button id="modeCharBtn" class="mode sel" data-mode="character">👤 Character</button>
+        <button id="modeProjBtn" class="mode" data-mode="projectile">⚔ Projectile</button>
+      </div>
+      <div class="teamrow">
+        <button id="teamBlue" class="team sel">Blue team</button>
+        <button id="teamRed"  class="team">Red team</button>
+      </div>
+      <button id="placeBtn">Pick a brawler first</button>
+    </div>
+
+    <input type="search" id="brawlerFilter" class="filter" placeholder="filter brawlers…" autocomplete="off" style="margin-top:8px"/>
+    <div id="brawlerGrid"></div>
+    <select id="brawlerSel" hidden></select>
+
+    <details id="kitDetails" style="margin-top:10px"><summary style="cursor:pointer;font-size:11px;color:#9ab">Ability details</summary>
+      <div id="kitInfo" class="kit"></div>
+    </details>
+
+    <details style="margin-top:8px" open><summary style="cursor:pointer;font-size:11px;color:#9ab">Placed tokens</summary>
+      <div id="placed"></div>
+      <button id="clearBtn" class="danger" style="margin-top:6px">Clear all tokens</button>
+    </details>
+  </div>
+
+  <div class="panel" id="tabTiles" hidden>
+    <div class="hint" style="margin:0 0 10px; color:#789; font-size:11px;">Click a tile, then click/drag on the map to paint.</div>
+    <div id="paintEraser" class="erase">⌫  eraser (open ground)</div>
+    <div id="tilebarList"></div>
+    <div id="tileDetails"><span class="empty">hover or pick a tile…</span></div>
+  </div>
+</div>
 
 <script type="module">
 import * as PIXI from "https://cdn.jsdelivr.net/npm/pixi.js@8.6.6/dist/pixi.min.mjs";
 
+// 38 distinct colors covering every tile char. Thematic groupings (walls =
+// brown, water = blue, etc.) but every code has its OWN hex — no overlap.
 const TILE_COLOR = {
-  M:0x2c1d12, X:0x3c2a1a, Y:0xc08a3a, C:0xa36028, I:0x1a1a1a,
-  F:0x1f6f3a, R:0x256b34, W:0x2870c0, T:0x7a5a3a, B:0xd97a4c,
-  N:0x6b4a26, J:0x1a1a1a, V:0x2870c0, E:0x5a3a1a, a:0xa07840,
-  b:0x5e5e5e, o:0xe8e8e8, x:0xd62828, z:0x3aa3c0, w:0xf4c430,
-  v:0xa02828, S:0xf0f4f8, q:0xa4def5, "1":0x1f7ad6, "2":0xe63946, c:0xf7d340,
+  // Walls / blocks (4 — browns/dark)
+  M: 0x8b4513,   // wood block — saddle brown
+  X: 0xc026d3,   // crystal — magenta
+  I: 0x111827,   // indestructible — near black
+  T: 0x4a7c2e,   // respawn wall (cactus) — olive
+  // Crates / barrels (3 — orange family)
+  Y: 0xd97706,   // crate — amber
+  C: 0xb45309,   // barrel — dark amber
+  B: 0xea580c,   // vase (destroyable) — orange-red
+  // Bushes (1)
+  F: 0x166534,   // forest — dark green
+  // Fences / benches / rope (4 — tan family)
+  N: 0x92400e,   // fence — saddle brown
+  E: 0x78350f,   // bench1 — dark amber
+  A: 0xa16207,   // bench2 — yellow-brown
+  a: 0xc2825c,   // rope fence — rose-brown
+  // Water (1)
+  W: 0x2563eb,   // water — true blue
+  // Spawns / objectives / power-ups (4)
+  "1": 0x3b82f6, // player1 — bright blue
+  "2": 0xef4444, // player2 — red
+  "8": 0xfacc15, // objective — gold
+  "4": 0xf97316, // power-up crate — pumpkin
+  // Springpads (8 — teal/cyan family, each a distinct shade)
+  H: 0x14b8a6,   // right — teal
+  G: 0x0d9488,   // left — dark teal
+  L: 0x06b6d4,   // bottom — cyan
+  K: 0x0891b2,   // top — dark cyan
+  P: 0x0ea5e9,   // bottom-right — sky
+  Z: 0x38bdf8,   // top-left — light sky
+  O: 0x67e8f9,   // bottom-left — pale cyan
+  U: 0x2dd4bf,   // top-right — mint
+  // Teleporters (4 — match their SVG names)
+  c: 0x60a5fa,   // teleporter blue
+  d: 0x4ade80,   // teleporter green
+  e: 0xf472b6,   // teleporter red (actually pink-magenta)
+  f: 0xfde047,   // teleporter yellow
+  // Movement / damage pads (5)
+  y: 0x86efac,   // healing — mint green
+  w: 0xfbbf24,   // fast — amber
+  z: 0x5eead4,   // slow — turquoise
+  x: 0xdc2626,   // damage — red-orange
+  v: 0x991b1b,   // interval damage — dark red
+  // Misc / mode-specific (5)
+  q: 0xfb7185,   // explosive (TNT) — rose
+  g: 0xeab308,   // siege bolt — mustard
+  ",": 0xfb923c, // ike range — orange
+  Q: 0x6b7280,   // rails — slate grey
 };
 const OPEN_BG = 0x7fb56a;
 const RET_WHITE = 0xffffff;
@@ -141,30 +396,358 @@ const status = document.getElementById("status");
 const setStatus = (t) => { status.textContent = t; };
 
 // ---- load data ----
-const [mapsDoc, brawlersDoc, kitsDoc, mechanicsDoc, tileIdxDoc] = await Promise.all([
+const [mapsDoc, brawlersDoc, kitsDoc, mechanicsDoc, tileIdxDoc, mapNameDoc, brawlifyMapsDoc, mapThemesDoc] = await Promise.all([
   fetch("/data/maps.json").then(r => r.json()),
   fetch("/data/brawlers.json").then(r => r.json()),
   fetch("/data/kits.json").then(r => r.json()).catch(() => ({ kits: {} })),
   fetch("/data/ability_mechanics.json").then(r => r.json()).catch(() => ({ abilities: [] })),
   fetch("/data/tile_sprite_index.json").then(r => r.json()).catch(() => ({ tiles: {} })),
+  fetch("/data/map_name_map.json").then(r => r.json()).catch(() => ({ maps: {} })),
+  fetch("/data/brawlify/maps.json").then(r => r.json()).catch(() => ({ data: { list: [] } })),
+  fetch("/data/map_themes.json").then(r => r.json()).catch(() => ({ themes: {}, mapTheme: {}, themeToBiome: {} })),
 ]);
 const maps = mapsDoc.maps;
 const brawlers = brawlersDoc.brawlers;
 const kits = kitsDoc.kits || {};
 const tileSpriteIdx = tileIdxDoc.tiles || {};
+const tileBiomeVariants = tileIdxDoc.biomes || {};
+const tileDefaultBiomeVariants = tileIdxDoc.defaultBiome || {};
+const tileGamemodeOverrides = tileIdxDoc.gamemodeOverrides || {};
+const tileGamemodeBiomeOverrides = tileIdxDoc.gamemodeBiomeOverrides || {};
+const tileModeOverrides = tileIdxDoc.modeOverrides || {};
+const indicatorTilesSet = new Set(tileIdxDoc.indicatorTiles || []);
+const ignoreTilesSet = new Set(tileIdxDoc.ignoreTiles || []);
 
-// Preload default tile sprites once so drawMap can stamp them per cell.
-const tileTextures = {};
+// 8-neighbor scan order matching BrawlMapGen's tileLinks `condition` strings.
+// Position: 0=NW, 1=N, 2=NE, 3=W, 4=E, 5=SW, 6=S, 7=SE — i.e. row-major over
+// the 3×3 with the center skipped. Returns 1 when neighbor is the same tile
+// char as `ch`, 0 otherwise (out-of-bounds counts as 0).
+const NEIGHBOR_DIRS = [[-1,-1],[0,-1],[1,-1],[-1,0],[1,0],[-1,1],[0,1],[1,1]];
+function neighborMaskFor(tx, ty, ch) {
+  let s = "";
+  for (const [dx, dy] of NEIGHBOR_DIRS) s += (charAtTile(tx + dx, ty + dy) === ch ? "1" : "0");
+  return s;
+}
+function conditionMatches(cond, mask) {
+  for (let i = 0; i < 8; i++) if (cond[i] !== "*" && cond[i] !== mask[i]) return false;
+  return true;
+}
+// Apply BrawlMapGen's changeBinary corrections: entries like "0a0" mean
+// "force position 0 to 0" (corners only count if both adjacent cardinals
+// also match — standard Wang-tile logic).
+function applyChangeBinary(mask, changeBinary) {
+  let m = mask;
+  for (const cb of changeBinary) {
+    const setTo = cb[0]; // "0" or "1"
+    const pos = parseInt(cb.slice(-1), 10);
+    if (!Number.isNaN(pos) && pos >= 0 && pos < 8) {
+      m = m.substring(0, pos) + setTo + m.substring(pos + 1);
+    }
+  }
+  return m;
+}
+// Resolve a variant via BrawlMapGen autotile rules. Returns null if no rule
+// matches (caller should fall back to pickVariant). Handles two rule kinds:
+//   - changeTileType: pick variants[N]
+//   - changeBinary: build a binary asset name like "00010110.svg"
+// Multiple rules can apply (multipleConditionsCouldApply); the binary type
+// accumulates corrections, the type-change picks first match.
+function resolveAutotileVariant(tx, ty, ch) {
+  const info = tileSpriteIdx[ch];
+  if (!info || !info.tileLinks || !info.tileLinks.rules) return null;
+  const mask0 = neighborMaskFor(tx, ty, ch);
+  const rules = info.tileLinks.rules;
+  const multi = info.tileLinks.multipleConditionsCouldApply;
+  let binaryMask = mask0;
+  let binaryAppliedAny = false;
+  for (const rule of rules) {
+    if (rule.requiredBiome != null) continue; // skip biome-specific rules (need biome int map)
+    if (!conditionMatches(rule.condition, mask0)) continue;
+    if (rule.changeTileType != null) {
+      const v = info.variants[rule.changeTileType];
+      if (v) return v;
+      if (!multi) break;
+    }
+    if (rule.changeBinary) {
+      binaryMask = applyChangeBinary(binaryMask, rule.changeBinary);
+      binaryAppliedAny = true;
+    }
+  }
+  if (binaryAppliedAny) {
+    const asset = `${binaryMask}.svg`;
+    // Only use the binary-mask asset if it actually loaded — otherwise the
+    // tile rendered as an empty wrapper (invisible wall). Fall back to the
+    // biome-default variant via the caller's pickVariant path.
+    if (svgNodeCache.has(asset)) {
+      return { asset, parts: { top: 0, mid: 1000, bot: 0, left: 0, right: 0 } };
+    }
+  }
+  return null;
+}
+
+// Variant resolution pipeline — highest-priority pick wins.
+//   1. Mode + biome combo (BrawlMapGen gamemodes[].variants[biome].overrideBiome)
+//   2. Mode-only override     (BrawlMapGen gamemodes[].overrideBiome)
+//   3. Manual mode override   (modes BrawlMapGen doesn't cover, e.g. Laserball)
+//   4. Biome variant default  (BrawlMapGen biomes[].defaults)
+//   5. defaultBiome variant
+//   6. Variant 0
+function pickVariant(tileCode) {
+  const info = tileSpriteIdx[tileCode];
+  if (!info || !info.variants || !info.variants.length) return null;
+  const tileName = info.name;
+  const mode = currentMap && currentMap.mode;
+  let idx;
+  // 1. mode+biome combo
+  idx = ((tileGamemodeBiomeOverrides[mode] || {})[currentBiome] || {})[tileName];
+  // 2. mode override (auth: BrawlMapGen gamemodes)
+  if (idx == null) idx = (tileGamemodeOverrides[mode] || {})[tileName];
+  // 3. manual mode override (Laserball, AirHockey, etc.)
+  if (idx == null) idx = (tileModeOverrides[mode] || {})[tileName];
+  // 4. biome default
+  if (idx == null) idx = (tileBiomeVariants[currentBiome] || {})[tileName];
+  // 5. defaultBiome
+  if (idx == null) idx = tileDefaultBiomeVariants[tileName];
+  // 6. variant 0
+  if (idx == null) idx = 0;
+  return info.variants[Math.min(idx, info.variants.length - 1)] || info.variants[0];
+}
+
+// Internal CSV name → Brawlify display name lookup (e.g. Gemgrab_42 → "Hard Rock Mine").
+// map_name_map.json keys by Brawlify hash → internal; invert it, then resolve
+// hash → name from the Brawlify catalog.
+const _bfNameByHash = Object.fromEntries((brawlifyMapsDoc.data?.list || []).map(m => [m.hash, m.name]));
+const internalToDisplay = {};
+for (const [bfHash, internalName] of Object.entries(mapNameDoc.maps || {})) {
+  if (_bfNameByHash[bfHash]) internalToDisplay[internalName] = _bfNameByHash[bfHash];
+}
+function mapLabel(name) {
+  const disp = internalToDisplay[name];
+  return disp ? `${disp}  (${name})` : name;
+}
+
+// Open-ground chequerboard, BrawlMapGen-faithful. Grassfield (the default
+// green biome most ranked maps use) base is rgb(60, 150, 87). color1 = color
+// × 242/255 (slightly darker), 1×1 alternation per cell.
+const BIOME_BG = {
+  grassfield: [60, 150, 87],
+  canyon:     [249, 166, 117],   // desert
+  jungle:     [234, 180, 119],
+  mine:       [96, 68, 84],
+  snowy:      [47, 162, 255],
+  town:       [148, 90, 115],
+  retro:      [90, 66, 111],
+  mortuary:   [74, 52, 82],
+  darryl:     [224, 122, 89],
+  arcade:     [50, 44, 79],
+  lamporium:  [188, 90, 87],
+  mini:       [60, 62, 87],
+  gift:       [133, 70, 86],
+  bandstand:  [247, 148, 100],
+  snowtel:    [50, 70, 115],
+  scrapyard:  [48, 42, 79],
+  starrforce: [28, 57, 99],
+  actionshow: [249, 166, 117],
+  waterpark:  [254, 171, 198],
+  castle:     [73, 68, 99],
+};
+let currentBiome = "grassfield";
+let renderMode = "vector";  // "vector" (HTML <img> SVGs sized by tileParts) | "colors" (debug)
+function shadeForBiome(name) {
+  const rgb = BIOME_BG[name] || BIOME_BG.grassfield;
+  const dark = rgb.map(v => Math.round(v * 242 / 255));
+  const pack = ([r,g,b]) => (r<<16) | (g<<8) | b;
+  return [pack(rgb), pack(dark)];
+}
+let GRASS_LIGHT, GRASS_DARK;
+[GRASS_LIGHT, GRASS_DARK] = shadeForBiome("grassfield");
+
+// Internal name → full Brawlify entry, for biome auto-pick on map switch.
+const _bfMapByHash = Object.fromEntries((brawlifyMapsDoc.data?.list || []).map(m => [m.hash, m]));
+const internalToBfMap = {};
+for (const [bfHash, internalName] of Object.entries(mapNameDoc.maps || {})) {
+  if (_bfMapByHash[bfHash]) internalToBfMap[internalName] = _bfMapByHash[bfHash];
+}
+const ENV_TO_BIOME = {
+  Default: "grassfield", Defaultshowdown: "grassfield",
+  Grassfield: "grassfield", Sbgrassfield: "grassfield", Hub: "grassfield",
+  Arcade: "arcade", Rooftop: "arcade", Arcadeshowdown: "arcade",
+  Mine: "mine", Minetraintracks: "mine",
+  Mortuary: "mortuary", Mortuaryshowdown: "mortuary", Mortuaryislandshowdown: "mortuary",
+  Madevilmanor: "mortuary", Madevilmanorshowdown: "mortuary",
+  Madevildungeonshowdown: "mortuary", Madevilislandshowdown: "mortuary",
+  Bandstand: "bandstand", Snowtel: "snowtel",
+  Scrapyard: "scrapyard", Scrapyardshowdown: "scrapyard",
+  Coinfactory: "scrapyard", Coinfactorybb: "scrapyard",
+  Giftshop: "gift",
+  Pyramidquest: "canyon", Pyramidquestshowdown: "canyon", Pyramidquestislandshowdown: "canyon",
+  Starrtoonsstudio: "starrforce", Starrtoonsstudioshowdown: "starrforce",
+  Starrtoonsstudioislandshowdown: "starrforce",
+  Tropicalislandshowdown: "waterpark", Tropicalislandshowdownbb: "waterpark",
+  Airhockey: "grassfield", Bbarena: "grassfield",
+  Bbarenaadidas: "grassfield", Bbarenavolley: "grassfield",
+  Biodome: "grassfield", Hockeyislandshowdownbb: "grassfield",
+  Islandshowdown: "grassfield",
+  Odditiesshop: "town",
+};
+function biomeForInternal(internalName) {
+  // PRIMARY: authoritative theme from csv_logic/locations.csv
+  const themeName = (mapThemesDoc.mapTheme || {})[internalName];
+  if (themeName) {
+    const biome = (mapThemesDoc.themeToBiome || {})[themeName];
+    if (biome) return biome;
+  }
+  // FALLBACK: Brawlify environment heuristic (covers some maps the CSV doesn't)
+  const envName = internalToBfMap[internalName]?.environment?.name;
+  return ENV_TO_BIOME[envName] || "grassfield";
+}
+
+// Authoritative BG color from csv_logic/location_themes.csv MapPreviewBGColor*
+// fields. Falls back to BIOME_BG approximation if no CSV entry.
+function bgColorsForInternal(internalName) {
+  const themeName = (mapThemesDoc.mapTheme || {})[internalName];
+  const t = themeName && (mapThemesDoc.themes || {})[themeName];
+  const rgb = t?.bgColor;
+  if (rgb && rgb.every(v => typeof v === "number")) {
+    const pack = ([r,g,b]) => (r<<16) | (g<<8) | b;
+    const dark = rgb.map(v => Math.round(v * 242 / 255));
+    return [pack(rgb), pack(dark), themeName];
+  }
+  // Fallback: approximate BIOME_BG palette
+  const biome = biomeForInternal(internalName);
+  const [lt, dk] = shadeForBiome(biome);
+  return [lt, dk, biome];
+}
+
+// Tile SVGs are rendered INLINE (not via <img>). Safari's <img> SVG renderer
+// rejects ~200 of the 356 tile SVGs because they reference an undefined
+// filter (`filter:url(#filter1957)`) inherited from BrawlMapGen's source.
+// Inline SVG injection bypasses the strict <img> path — we fetch each
+// SVG once, sanitize it (strip dead filter refs + mm widths), parse into
+// a DOM node, and cache. stampTile clones the cached node per tile, which
+// is much faster than re-parsing HTML each time.
+const svgNodeCache = new Map(); // asset → SVGElement (cached parsed root)
+
+function sanitizeSvg(text) {
+  // Strip mm width/height from the root <svg> so the browser sizes by the
+  // wrapping div instead of the original 0.26mm intrinsic size.
+  text = text.replace(/(<svg\b[^>]*?)\swidth\s*=\s*"[^"]*mm"/i, "$1");
+  text = text.replace(/(<svg\b[^>]*?)\sheight\s*=\s*"[^"]*mm"/i, "$1");
+  // Strip `filter:url(#XYZ)` references whose ID isn't defined in this SVG —
+  // these inherit from BrawlMapGen's source and prevent rendering entirely.
+  const refs = [...text.matchAll(/filter\s*:\s*url\(#([^)]+)\)/g)].map(m => m[1]);
+  const ids = new Set([...text.matchAll(/\bid\s*=\s*"([^"]+)"/g)].map(m => m[1]));
+  for (const ref of new Set(refs)) {
+    if (ids.has(ref)) continue;
+    const re = new RegExp(`filter\\s*:\\s*url\\(#${ref.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\)\\s*;?`, "g");
+    text = text.replace(re, "");
+  }
+  return text;
+}
+
+function parseSvg(text) {
+  const doc = new DOMParser().parseFromString(text, "image/svg+xml");
+  const root = doc.documentElement;
+  if (root.nodeName.toLowerCase() === "parsererror" || root.querySelector("parsererror")) {
+    return null;
+  }
+  // Defensive: ensure no width/height attrs survived sanitization
+  root.removeAttribute("width");
+  root.removeAttribute("height");
+  return root;
+}
+
 async function preloadTiles() {
+  // Fetch every .svg on disk (variants + autotile binary names like
+  // "00010110.svg" + lunar fence variants etc.) so neighbor-aware lookups
+  // never miss. ~356 files, ~5-20 KB each, parallel.
+  const seen = new Set(tileIdxDoc.allAssets || []);
+  // Also belt-and-braces include enumerated variants (no-op normally).
+  for (const info of Object.values(tileSpriteIdx)) {
+    for (const v of info.variants) seen.add(v.asset);
+  }
   const tasks = [];
-  for (const [ch, info] of Object.entries(tileSpriteIdx)) {
-    if (!info.default) continue;
-    const url = `/data/tile_sprites_official/${info.default}`;
-    tasks.push(PIXI.Assets.load(url).then(tex => { tileTextures[ch] = tex; }).catch(() => {}));
+  for (const asset of seen) {
+    if (!asset || asset.startsWith("?")) continue; // skip "?binary?.svg" placeholder
+    if (asset.startsWith("number_")) continue;     // spawn-number sprites were never extracted — skip the 404s
+    tasks.push(
+      fetch(`/data/tile_sprites_official/${asset}`)
+        .then(r => r.ok ? r.text() : null)
+        .then(t => { if (t) { const n = parseSvg(sanitizeSvg(t)); if (n) svgNodeCache.set(asset, n); } })
+        .catch(err => console.warn(`tile fetch failed: ${asset}`, err))
+    );
   }
   await Promise.all(tasks);
+  console.log(`preloaded + parsed ${svgNodeCache.size} / ${seen.size} tile SVGs`);
+  fillTilebar();
 }
-await preloadTiles();
+
+const tileDetailsEl = document.getElementById("tileDetails");
+function renderTileDetails(ch) {
+  if (!ch || ch === ".") { tileDetailsEl.innerHTML = `<span class="empty">eraser → paints open ground</span>`; return; }
+  const info = tileSpriteIdx[ch];
+  if (!info) { tileDetailsEl.innerHTML = `<span class="empty">tile ${ch} — no info</span>`; return; }
+  const p = info.default.parts;
+  const widthCells  = (p.left + 1000 + p.right) / 1000;
+  const heightCells = (p.top  + 1000 + p.bot)   / 1000;
+  tileDetailsEl.innerHTML =
+    `<b>${ch === " " ? "·" : ch}</b> · <b>${info.display || info.name}</b><br>` +
+    `${widthCells.toFixed(2)}×${heightCells.toFixed(2)} cells · ${info.variants.length} variant${info.variants.length === 1 ? "" : "s"}`;
+}
+function fillTilebar() {
+  const host = document.getElementById("tilebarList");
+  if (!host) return;
+  host.innerHTML = "";
+  const entries = Object.entries(tileSpriteIdx).sort();
+  for (const [ch, info] of entries) {
+    if (!info.default) continue;
+    const tile = document.createElement("div");
+    tile.className = "tile";
+    tile.dataset.code = ch;
+    tile.title = `${ch === " " ? "·" : ch} — ${info.display || info.name}`;
+    const code = document.createElement("span"); code.className = "code"; code.textContent = ch === " " ? "·" : ch;
+    const thumb = document.createElement("div"); thumb.className = "thumb";
+    const node = svgNodeCache.get(info.default.asset);
+    if (node) {
+      const clone = node.cloneNode(true);
+      clone.style.maxWidth = "100%"; clone.style.maxHeight = "100%"; clone.style.display = "block";
+      thumb.appendChild(clone);
+    }
+    tile.append(code, thumb);
+    tile.addEventListener("click", () => selectPaintTile(ch));
+    tile.addEventListener("mouseenter", () => renderTileDetails(ch));
+    tile.addEventListener("mouseleave", () => renderTileDetails(paintTileCode));
+    host.appendChild(tile);
+  }
+}
+
+function selectPaintTile(code) {
+  paintTileCode = (paintTileCode === code) ? null : code;
+  if (paintTileCode == null) { hoverLayer.removeChildren(); hideHoverGhost(); }
+  renderTileDetails(paintTileCode);
+  // Visual selection
+  document.querySelectorAll("#tilebar .tile").forEach(el =>
+    el.classList.toggle("sel", el.dataset.code === paintTileCode));
+  document.getElementById("paintEraser").classList.toggle("sel", paintTileCode === ".");
+  // Paint mode is mutually exclusive with wall-break and aiming.
+  if (paintTileCode) { setWallBreak(false); aimingId = null; }
+  // Always re-derive place state — picking a tile disables place, releasing
+  // re-enables it.
+  refreshPlaceState();
+}
+document.getElementById("paintEraser").addEventListener("click", () => selectPaintTile("."));
+
+function paintCell(tx, ty) {
+  if (!currentMap || paintTileCode == null) return;
+  if (tx < 0 || ty < 0 || tx >= currentMap.width || ty >= currentMap.height) return;
+  const row = currentMap.grid[ty];
+  if (row[tx] === paintTileCode) return;
+  // Pad row to width if needed (some CSV rows are shorter than declared width)
+  const padded = row.padEnd(currentMap.width, ".");
+  currentMap.grid[ty] = padded.substring(0, tx) + paintTileCode + padded.substring(tx + 1);
+  refreshCells(tx, ty);   // incremental — full drawMap() per cell froze drag-painting
+  saveSceneSoon();
+}
 
 // Index ability records by (brawlerName, type, normalizedName) for fast lookup
 const mechanicsByKey = new Map();
@@ -194,16 +777,26 @@ let brokenTiles = new Set();
 const tk = (tx, ty) => `${tx},${ty}`;
 
 // ---- pixi app ----
+// Transparent canvas — the HTML #mapGrid layer underneath provides the BG
+// chequerboard and all tile sprites. PIXI is just the overlay for tokens,
+// reticles, vision, and paint-mode hover indicators.
 const wrap = document.getElementById("stage-wrap");
+const mapHtml = document.getElementById("mapHtml");
+const mapGrid = document.getElementById("mapGrid");
+const hoverGhost = document.getElementById("hoverGhost");
 const app = new PIXI.Application();
-await app.init({ background: 0x0a0f17, antialias: true, resizeTo: wrap });
+await app.init({ backgroundAlpha: 0, antialias: true, resizeTo: wrap });
 wrap.appendChild(app.canvas);
+await preloadTiles();
 
 const mapLayer = new PIXI.Container();
+mapLayer.sortableChildren = true;           // Y-sort tile sprites by zIndex (painter's algo) without serial awaits
 const overlayLayer = new PIXI.Container();   // bush highlight, vision, movement
 const reticleLayer = new PIXI.Container();
 const tokenLayer = new PIXI.Container();
-app.stage.addChild(mapLayer, overlayLayer, reticleLayer, tokenLayer);
+const hoverLayer = new PIXI.Container();     // paint-mode cell highlight (always on top)
+hoverLayer.eventMode = "none";              // never absorb clicks
+app.stage.addChild(mapLayer, overlayLayer, reticleLayer, tokenLayer, hoverLayer);
 
 // ---- state ----
 let currentMap = null;     // {grid,width,height}
@@ -211,68 +804,368 @@ let cell = 16, originX = 0, originY = 0;
 let tokens = [];           // {id, brawler, variant, tx, ty, angle, sprite}
 let selectedId = null;
 let placing = false;
+// What the next map-click drops. "character" = brawler token (or spawn if
+// the variant is a spawn-super). "projectile" = a standalone reticle (cone,
+// line, splash) frozen at the click point — no brawler token attached.
+let placeMode = "character";
+// Toggle armed state for placement. Picking a brawler/variant arms it
+// automatically; placing a token disarms (one-shot). Painting / wall-break
+// mode also disarm.
+// `placing` is fully derived: place mode is active any time a brawler is
+// picked AND no tile is selected for paint AND wall-break is off. Esc
+// clears the brawler selection, which is the disarm. The placeBtn is a
+// passive status indicator (not clickable).
+function refreshPlaceState() {
+  placing = !!brawlerSel.value && paintTileCode == null && !wallBreakMode;
+  // Update the mode banner over the map so the user can see at a glance
+  // what the next click will do.
+  const banner = document.getElementById("modeBanner");
+  if (banner) {
+    const b = brawlers.find(x => x.hash === brawlerSel.value);
+    const aimTok = aimingId != null ? tokens.find(x => x.id === aimingId) : null;
+    if (aimTok) {
+      banner.className = "projectile";
+      banner.textContent = `🎯 Aiming ${aimTok.brawler.name} — click to lock`;
+    } else if (paintTileCode != null) {
+      banner.className = "paint";
+      banner.textContent = paintTileCode === "." ? "⌫ Eraser" : `Paint · ${paintTileCode}`;
+    } else if (wallBreakMode) {
+      banner.className = "wallbreak";
+      banner.textContent = "💥 Break walls";
+    } else if (placing && b) {
+      if (placeMode === "projectile") {
+        const vi = parseInt(variantSel.value, 10) || 0;
+        const v = b.variants[vi];
+        banner.className = "projectile";
+        banner.textContent = `⚔ ${b.name} · ${v ? v.label : "attack"}`;
+      } else {
+        banner.className = "character";
+        banner.textContent = `👤 ${b.name}`;
+      }
+    } else {
+      banner.className = "idle";
+      banner.textContent = "Pick a brawler →";
+    }
+  }
+  const btn = document.getElementById("placeBtn");
+  if (!btn) return;
+  const b = brawlers.find(x => x.hash === brawlerSel.value);
+  btn.classList.toggle("armed", placing);
+  if (placing && b) {
+    if (placeMode === "projectile") {
+      const vi = parseInt(variantSel.value, 10) || 0;
+      const v = b.variants[vi];
+      btn.textContent = `→ Click map to drop ${b.name}'s ${v ? v.label : "attack"}`;
+    } else {
+      btn.textContent = `→ Click map to drop ${b.name}`;
+    }
+  } else if (b) {
+    btn.textContent = `Exit paint/wall mode to place ${b.name}`;
+  } else {
+    btn.textContent = "Pick a brawler ↑";
+  }
+  if (!placing) {
+    if (typeof hidePlaceGhost === "function") hidePlaceGhost();
+    if (hoverLayer && hoverLayer.removeChildren) hoverLayer.removeChildren();
+  }
+}
 let nextId = 1;
 let draggingId = null;
+// Token whose reticle follows the cursor. Set right after placing a token
+// (or by re-clicking a selected token); the next map click LOCKS the angle
+// instead of dropping another token. null = no live aiming.
+let aimingId = null;
 let placingTeam = "blue";
 let showAllReticles = false;
 let showVision = false;
 let showMovement = false;
 let wallBreakMode = false;
+let paintTileCode = null;   // single char to paint when clicking a cell, or "." for eraser
 let moveSeconds = 2;    // movement window; reach = brawler speed × this
 let revealRadius = 2;   // how close you must be to see into a bush (tiles)
+// In-game phone camera viewport, in tiles. ~21×12 approximates a 16:9 phone
+// (a 10-tile sniper shot stays just on-screen horizontally). The camera
+// clamps at map edges, so the rect is clamped too. User-tunable sliders.
+let viewW = 21, viewH = 12;
 const DEFAULT_SPEED = 2.4;  // tiles/sec fallback if a brawler has no speed stat
 const TEAM_COLOR = { blue: 0x5fb0ff, red: 0xff6b6b };
 
 // ---- populate dropdowns ----
 const mapSel = document.getElementById("mapSel");
-const mapNamesSorted = Object.keys(maps).sort();
+// Maps WITH a Brawlify display name (the recognizable / mostly-ranked ones)
+// sort first by that name; the long tail of internal-only names follows.
+const mapSortKey = (n) => internalToDisplay[n]
+  ? "0" + internalToDisplay[n].toLowerCase()
+  : "1" + n.toLowerCase();
+const mapNamesSorted = Object.keys(maps).sort((a, b) =>
+  mapSortKey(a) < mapSortKey(b) ? -1 : 1);
 
 function fillMapSel(filterText) {
   const f = (filterText || "").trim().toLowerCase();
-  const list = f ? mapNamesSorted.filter(n => n.toLowerCase().includes(f)) : mapNamesSorted;
+  // Filter against BOTH the internal name and the display name
+  const list = f
+    ? mapNamesSorted.filter(n => n.toLowerCase().includes(f) || (internalToDisplay[n] || "").toLowerCase().includes(f))
+    : mapNamesSorted;
   const prev = mapSel.value;
   mapSel.innerHTML = "";
   list.forEach(name => {
     const o = document.createElement("option");
-    o.value = name; o.textContent = name; mapSel.appendChild(o);
+    o.value = name; o.textContent = mapLabel(name); mapSel.appendChild(o);
   });
+  // NEVER auto-load while typing — only Enter or picking from the list
+  // loads (each keystroke used to trigger a full map rebuild).
   if (list.includes(prev)) mapSel.value = prev;
-  else if (list.length) loadMap(list[0]);
 }
 fillMapSel();
-document.getElementById("mapFilter").addEventListener("input", (e) => fillMapSel(e.target.value));
+const mapFilterEl = document.getElementById("mapFilter");
+mapFilterEl.addEventListener("input", (e) => fillMapSel(e.target.value));
+mapFilterEl.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && mapSel.options.length) {
+    mapSel.value = mapSel.options[0].value;
+    pushHistory();
+    loadMap(mapSel.value);
+  }
+});
+// Pin Grass Knot (Laserball_6101 → "Grass Knot") as the default selection.
+// The actual load happens once, at boot.
+const PIN_MAP = "Laserball_6101";
+if (maps[PIN_MAP]) mapSel.value = PIN_MAP;
 const brawlerSel = document.getElementById("brawlerSel");
 const variantSel = document.getElementById("variantSel");
 const brawlersSorted = brawlers.slice().sort((a,b)=>a.name.localeCompare(b.name));
 
+// Inline SVG icons for ability types — declared BEFORE fillBrawlerSel runs
+// (which triggers selectBrawlerByHash → refreshVariants → variantClassify,
+// which reads these consts). Previously declared further down and broke
+// boot silently via TDZ.
+const ABILITY_ICONS = {
+  attack: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/><line x1="12" y1="2.5" x2="12" y2="5.5"/><line x1="12" y1="18.5" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5.5" y2="12"/><line x1="18.5" y1="12" x2="21.5" y2="12"/></svg>`,
+  super:  `<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2.5 14.6,9.3 22,9.7 16.2,14.4 18.2,21.5 12,17.5 5.8,21.5 7.8,14.4 2,9.7 9.4,9.3"/></svg>`,
+  hyper:  `<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M13.5 2 L4 14 L11 14 L10 22 L20 10 L13 10 Z"/></svg>`,
+  gadget: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"/></svg>`,
+  star:   `<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"><polygon points="12,2.5 14.6,9.3 22,9.7 16.2,14.4 18.2,21.5 12,17.5 5.8,21.5 7.8,14.4 2,9.7 9.4,9.3"/></svg>`,
+};
+function slugifyAbilityName(name) {
+  return (name || "").trim().split(/\s+/).join("-");
+}
+
+// Brawler grid: portraits, click to select. Hidden <select> still holds the
+// canonical value so the rest of the wiring (refreshVariants, kit lookup,
+// placeToken) stays unchanged.
+const brawlerGrid = document.getElementById("brawlerGrid");
+const brawlerNameLabel = document.getElementById("brawlerNameLabel");
+function selectBrawlerByHash(hash) {
+  brawlerSel.innerHTML = "";
+  const o = document.createElement("option");
+  o.value = hash; o.textContent = hash; brawlerSel.appendChild(o);
+  brawlerSel.value = hash;
+  brawlerGrid.querySelectorAll(".b").forEach(el =>
+    el.classList.toggle("sel", el.dataset.hash === hash));
+  const b = brawlers.find(x => x.hash === hash);
+  if (b && brawlerNameLabel) brawlerNameLabel.textContent = b.name;
+  const portrait = document.getElementById("pickedPortrait");
+  if (portrait && b && b.assets) {
+    // portrait.png is the real in-game art (200px headshot) — best quality.
+    // Fall back render → emoji → silhouette for brawlers missing files.
+    const url = b.assets.portrait || b.assets.render || b.assets.emoji;
+    if (url) portrait.src = encodeURI(url);
+    portrait.onerror = () => {
+      const next = portrait.src.includes("portrait") ? (b.assets.render || b.assets.emoji)
+                 : portrait.src.includes("render") ? b.assets.emoji
+                 : null;
+      if (next) portrait.src = encodeURI(next);
+      else portrait.src = PORTRAIT_PLACEHOLDER;
+    };
+  }
+  const stats = document.getElementById("brawlerStats");
+  if (stats && b) {
+    const chips = [];
+    if (b.hp) chips.push(`<span class="stat"><b>${b.hp}</b> hp</span>`);
+    if (b.speedTilesPerSec) chips.push(`<span class="stat"><b>${b.speedTilesPerSec}</b> t/s</span>`);
+    if (b.class) chips.push(`<span class="stat">${b.class}</span>`);
+    if (b.rarity) chips.push(`<span class="stat">${b.rarity}</span>`);
+    if (b.hasHypercharge) chips.push(`<span class="stat" style="color:#c084fc">hyper</span>`);
+    stats.innerHTML = chips.join("");
+  }
+  refreshVariants();
+}
 function fillBrawlerSel(filterText) {
   const f = (filterText || "").trim().toLowerCase();
   const list = f ? brawlersSorted.filter(b => b.name.toLowerCase().includes(f)) : brawlersSorted;
+  brawlerGrid.innerHTML = "";
   const prev = brawlerSel.value;
-  brawlerSel.innerHTML = "";
   list.forEach(b => {
-    const o = document.createElement("option");
-    o.value = b.hash; o.textContent = b.name; brawlerSel.appendChild(o);
+    const tile = document.createElement("div");
+    tile.className = "b";
+    tile.dataset.hash = b.hash;
+    tile.title = b.name;
+    // portrait.png (official 200px art) everywhere — picker, picked card,
+    // and map tokens all match. Fallback chain portrait → render → emoji.
+    const portraitSrc = b.assets && b.assets.portrait;
+    const renderSrc   = b.assets && b.assets.render;
+    const emojiSrc    = b.assets && b.assets.emoji;
+    const firstSrc = portraitSrc || renderSrc || emojiSrc;
+    if (firstSrc) {
+      const img = document.createElement("img");
+      img.src = encodeURI(firstSrc);
+      img.alt = b.name;
+      img.loading = "lazy";
+      img.onerror = () => {
+        if (img.src.includes("portrait") && renderSrc) { img.src = encodeURI(renderSrc); return; }
+        if (img.src.includes("render") && emojiSrc) { img.src = encodeURI(emojiSrc); return; }
+        tile.classList.add("miss"); tile.textContent = b.name;
+      };
+      tile.appendChild(img);
+      const nm = document.createElement("span");
+      nm.className = "nm";
+      nm.textContent = b.name;
+      tile.appendChild(nm);
+    } else {
+      tile.classList.add("miss");
+      tile.textContent = b.name;
+    }
+    tile.addEventListener("click", () => selectBrawlerByHash(b.hash));
+    brawlerGrid.appendChild(tile);
   });
-  if (list.some(b => b.hash === prev)) brawlerSel.value = prev;
-  else if (list.length) refreshVariants();
+  // Preserve previous selection if it survived the filter. NEVER auto-pick:
+  // a selected brawler arms placement, so auto-picking at boot meant every
+  // stray map click dropped a token before the user chose anything.
+  if (prev && list.some(b => b.hash === prev)) selectBrawlerByHash(prev);
+  else if (prev) clearBrawlerSelection();
+}
+// Neutral-state silhouette for the picked card (instead of a broken <img>).
+const PORTRAIT_PLACEHOLDER = "data:image/svg+xml;utf8," + encodeURIComponent(
+  "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>" +
+  "<rect width='64' height='64' fill='#0d1726'/>" +
+  "<circle cx='32' cy='25' r='11' fill='#23364f'/>" +
+  "<path d='M10 58c3-13 12-19 22-19s19 6 22 19z' fill='#23364f'/></svg>");
+
+// Deselect → neutral mode. Map clicks do nothing destructive until the user
+// explicitly picks a brawler (Esc returns here).
+function clearBrawlerSelection() {
+  brawlerSel.innerHTML = "";
+  brawlerGrid.querySelectorAll(".b").forEach(el => el.classList.remove("sel"));
+  if (brawlerNameLabel) brawlerNameLabel.textContent = "pick a brawler →";
+  const portrait = document.getElementById("pickedPortrait");
+  if (portrait) { portrait.onerror = null; portrait.src = PORTRAIT_PLACEHOLDER; }
+  document.getElementById("brawlerStats").innerHTML = "";
+  variantSel.innerHTML = "";
+  document.getElementById("variantRow").innerHTML = "";
+  document.getElementById("variantInfo").innerHTML = "";
+  const kitBox = document.getElementById("kitInfo");
+  if (kitBox) { kitBox.innerHTML = ""; kitBox.style.display = "none"; }
+  refreshPlaceState();
 }
 fillBrawlerSel();
 document.getElementById("brawlerFilter").addEventListener("input", (e) => fillBrawlerSel(e.target.value));
 
+// Tab switcher — click a tab to show its panel, hide the other. Pick the
+// matching mode-of-operation (brawler tab → place mode, tiles tab → paint
+// mode is implied by clicking a tile in that panel).
+document.querySelectorAll("#tilebar .tab").forEach(tab => {
+  tab.addEventListener("click", () => {
+    const target = tab.dataset.tab;
+    document.querySelectorAll("#tilebar .tab").forEach(t =>
+      t.classList.toggle("sel", t === tab));
+    document.querySelectorAll("#tilebar .panel").forEach(p =>
+      p.hidden = (p.id !== "tab" + target.charAt(0).toUpperCase() + target.slice(1)));
+    // Switching tabs cancels the mode owned by the other tab.
+    if (target === "brawlers") {
+      if (paintTileCode != null) { paintTileCode = null; hideHoverGhost(); hoverLayer.removeChildren(); document.querySelectorAll("#tilebar .tile, #tilebar .erase").forEach(el => el.classList.remove("sel")); renderTileDetails(null); }
+    } else {
+      refreshPlaceState();
+    }
+  });
+});
+
+// (ABILITY_ICONS / slugifyAbilityName moved earlier to avoid TDZ — they
+// were declared after fillBrawlerSel() ran and broke selection silently.)
+// Classify a variant label, return { cls, short, icon } where icon is
+// either inline SVG (string) or an image URL (gadget/star uses real asset).
+function variantClassify(label, brawler, gadgetOrd = -1) {
+  const l = label.toLowerCase();
+  // Derive the asset dir from the (sanitized) portrait path — brawler.name
+  // can contain '&'/'.' that the on-disk slug doesn't ("Larry & Lawrie").
+  const base = (brawler.assets && brawler.assets.portrait || "").replace(/\/portrait\.png$/, "")
+    || `/assets/brawlers/${brawler.name}`;
+  if (/hypercharg/.test(l)) {
+    return { cls: "t-hyper", short: "HYPER", icon: ABILITY_ICONS.hyper };
+  }
+  if (l.startsWith("gadget:")) {
+    const internal = label.slice(7).trim();
+    // Variant labels carry INTERNAL skill names ("Reload"); icon files and
+    // kits use display names ("Speedloader"). Gadget variants and the
+    // brawler's gadgets list share CSV order, so map by ordinal.
+    const display = (gadgetOrd >= 0 && (brawler.gadgets || [])[gadgetOrd]?.name) || internal;
+    return {
+      cls: "t-gadget",
+      short: "GAD",
+      iconUrl: `${base}/gadgets/${slugifyAbilityName(display)}.png`,
+      fallbackIcon: ABILITY_ICONS.gadget,
+      hoverText: display,
+    };
+  }
+  if (l.startsWith("starpower:") || l.startsWith("star:") || l.startsWith("star power:")) {
+    const name = label.split(":").slice(1).join(":").trim();
+    return {
+      cls: "t-star",
+      short: "STAR",
+      iconUrl: `${base}/star-powers/${slugifyAbilityName(name)}.png`,
+      fallbackIcon: ABILITY_ICONS.star,
+      hoverText: name,
+    };
+  }
+  if (/super/.test(l)) return { cls: "t-super",  short: "SUPER", icon: ABILITY_ICONS.super };
+  if (/attack/.test(l)) return { cls: "t-attack", short: "ATK",   icon: ABILITY_ICONS.attack };
+  return { cls: "t-other", short: label, icon: ABILITY_ICONS.attack };
+}
 function refreshVariants() {
   const b = brawlers.find(x => x.hash === brawlerSel.value);
+  if (!b) { refreshPlaceState(); return; }   // neutral mode — nothing picked yet
   variantSel.innerHTML = "";
+  const row = document.getElementById("variantRow");
+  row.innerHTML = "";
+  let gadgetOrd = 0;
   b.variants.forEach((v, i) => {
     const o = document.createElement("option");
     o.value = i; o.textContent = `${v.label} (${v.shape})`;
     variantSel.appendChild(o);
+    const isGadget = v.label.toLowerCase().startsWith("gadget:");
+    const meta = variantClassify(v.label, b, isGadget ? gadgetOrd++ : -1);
+    const chip = document.createElement("div");
+    chip.className = `vchip ${meta.cls}`;
+    chip.dataset.idx = i;
+    chip.title = `${v.label}${meta.hoverText ? " · " + meta.hoverText : ""} · ${v.shape}`;
+    if (meta.iconUrl) {
+      const img = document.createElement("img");
+      img.src = meta.iconUrl;
+      img.alt = meta.hoverText || meta.short;
+      img.onerror = () => { img.remove(); chip.insertAdjacentHTML("afterbegin", meta.fallbackIcon || meta.icon); };
+      chip.appendChild(img);
+    } else if (meta.icon) {
+      chip.insertAdjacentHTML("afterbegin", meta.icon);
+    }
+    const lbl = document.createElement("span");
+    lbl.className = "lbl";
+    lbl.textContent = meta.short;
+    chip.appendChild(lbl);
+    chip.addEventListener("click", () => selectVariant(i));
+    row.appendChild(chip);
   });
+  selectVariant(0);
+}
+function selectVariant(i) {
+  variantSel.value = i;
+  document.querySelectorAll("#variantRow .vchip").forEach(c =>
+    c.classList.toggle("sel", parseInt(c.dataset.idx, 10) === i));
   showVariantInfo();
+  // Picking a variant arms placement automatically (placing is derived).
+  refreshPlaceState();
 }
 function fmt(n) { return Math.round(n * 100) / 100; }
 function showVariantInfo() {
   const b = brawlers.find(x => x.hash === brawlerSel.value);
+  if (!b) return;
   const vi = parseInt(variantSel.value, 10) || 0;
   const v = b.variants[vi];
   const p = v.params || {};
@@ -294,8 +1187,14 @@ function showVariantInfo() {
   let mech = null;
   if (label.startsWith("gadget:")) {
     const gname = v.label.slice(7).trim();
-    const g = (kit.gadgets || []).find(x => x.name.toLowerCase().replace(/\s+/g, "") === gname.toLowerCase().replace(/\s+/g, ""));
-    prose = g ? `<b>${g.name}</b> — ${g.effect}` : `<i>gadget effect not in kit data</i>`;
+    let g = (kit.gadgets || []).find(x => x.name.toLowerCase().replace(/\s+/g, "") === gname.toLowerCase().replace(/\s+/g, ""));
+    if (!g) {
+      // Internal skill name ("Reload") didn't match a display name
+      // ("Speedloader") — fall back to gadget ordinal (shared CSV order).
+      const ord = b.variants.slice(0, vi + 1).filter(x => x.label.toLowerCase().startsWith("gadget:")).length - 1;
+      g = (kit.gadgets || [])[ord] || (b.gadgets || [])[ord] || null;
+    }
+    prose = g ? `<b>${g.name}</b> — ${g.effect || g.description || ""}` : `<i>gadget effect not in kit data</i>`;
     if (g) mech = findMechanic(b.name, "gadget", g.name);
   } else if (/hypercharged/.test(label) && kit.hyper) {
     prose = `<b>${kit.hyper.name || "Hypercharge"}</b> — ${kit.hyper.effect || ""} <br><br>${/super/.test(label) ? kit.super : kit.attack}`;
@@ -381,11 +1280,14 @@ variantSel.addEventListener("change", showVariantInfo);
 // ---- geometry helpers ----
 function computeLayout() {
   const vw = app.screen.width, vh = app.screen.height;
-  const pad = 24;
-  cell = Math.floor(Math.min((vw - pad*2) / currentMap.width, (vh - pad*2) / currentMap.height));
+  // Reserve headroom for the mode banner and footroom for the status pill —
+  // both float over the stage and were covering the top/bottom map rows
+  // (e.g. Heist's red spawn pads at row 0 were hidden under the banner).
+  const padX = 24, padTop = 48, padBottom = 38;
+  cell = Math.floor(Math.min((vw - padX*2) / currentMap.width, (vh - padTop - padBottom) / currentMap.height));
   cell = Math.max(cell, 6);
   originX = Math.round((vw - cell * currentMap.width) / 2);
-  originY = Math.round((vh - cell * currentMap.height) / 2);
+  originY = Math.round(padTop + ((vh - padTop - padBottom) - cell * currentMap.height) / 2);
 }
 const tileCenterPx = (tx, ty) => [originX + (tx + 0.5) * cell, originY + (ty + 0.5) * cell];
 function pxToTile(px, py) {
@@ -429,44 +1331,235 @@ function raycastTiles(fx, fy, ang, maxT) {
 }
 
 // ---- draw map ----
+// HTML vector pipeline. Each tile = an absolutely-positioned <img> in
+// #mapGrid. tileParts (1000ths-of-a-cell) is authoritative for both the
+// sprite's footprint AND where it anchors relative to the painted cell:
+//   widthCells  = (left + 1000 + right) / 1000
+//   heightCells = (top  + 1000 + bot)   / 1000
+//   spriteX = paintedCellX − (left / 1000) × cell
+//   spriteY = paintedCellY − (top  / 1000) × cell
+// Multi-cell sprites (springpads, teleporters, players) naturally extend
+// past their painted cell with no squishing. Z-ordering via CSS z-index =
+// ty so lower-row overhangs cover higher-row sprite bodies.
+
+// 2×2 SVG chequerboard pattern used as the #mapGrid background. CSS
+// background-size scales it to (2*cell × 2*cell) so each square = 1 cell.
+function chequerBgUrl(lightHex, darkHex) {
+  const toHex = h => "#" + h.toString(16).padStart(6, "0");
+  const lt = toHex(lightHex), dk = toHex(darkHex);
+  const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 2' shape-rendering='crispEdges'>` +
+              `<rect width='1' height='1' fill='${lt}'/>` +
+              `<rect x='1' y='1' width='1' height='1' fill='${lt}'/>` +
+              `<rect x='1' width='1' height='1' fill='${dk}'/>` +
+              `<rect y='1' width='1' height='1' fill='${dk}'/></svg>`;
+  return `url("data:image/svg+xml;utf8,${encodeURIComponent(svg)}")`;
+}
+function colorHex(int) { return "#" + int.toString(16).padStart(6, "0"); }
+
+// Per-cell element registry, so painting can re-render ONE cell (plus its
+// autotile neighbors) instead of rebuilding the whole grid. Before this,
+// every painted cell triggered a full drawMap() — a single drag-painted row
+// took ~9 seconds of DOM churn.
+const cellEls = new Map();              // "x,y" → element stamped for that cell
+const debrisG = new PIXI.Graphics();    // broken-wall markers (PIXI, dynamic)
+
+function drawDebris() {
+  debrisG.clear();
+  for (const key of brokenTiles) {
+    const [x, y] = key.split(",").map(Number);
+    debrisG.circle(originX + (x+0.5)*cell, originY + (y+0.5)*cell, Math.max(cell*0.12, 1.5))
+           .fill({ color: 0x4a3a28, alpha: 0.7 });
+  }
+}
+
+function colorCellDiv(x, y, col, cls) {
+  const sq = document.createElement("div");
+  sq.className = cls;
+  if (col != null) sq.style.background = colorHex(col);
+  sq.style.left = (x * cell) + "px";
+  sq.style.top  = (y * cell) + "px";
+  sq.style.width  = cell + "px";
+  sq.style.height = cell + "px";
+  sq.style.zIndex = y;
+  mapGrid.appendChild(sq);
+  return sq;
+}
+
+// Tile chars whose meaning is MODE-SPECIFIC. Rendering them globally put
+// siege furniture on non-siege maps (Daniel's report: siege bolt/IKE visible
+// in Brawl Ball). 'g' = siege bolt, ',' = IKE range — Siege only.
+const SIEGE_ONLY_TILES = new Set(["g", ","]);
+const SIEGE_MODES = /^Siege/;
+const BALL_MODES = /^(Laserball|AirHockey|BrawlBall|Dribble|SuperHockey)/;
+// '6' / '7' mark the goal mouths in ball modes (BrawlMapGen draws goals as
+// special tiles instead). In other modes digits are extra 5v5 spawn slots.
+function goalVariantFor(ch) {
+  const t8 = tileSpriteIdx["8"];
+  if (!t8) return null;
+  const want = ch === "7" ? "goal_red.svg" : "goal_blue.svg";
+  return t8.variants.find(v => v.asset === want) || null;
+}
+
+function renderCell(x, y) {
+  const key = tk(x, y);
+  const old = cellEls.get(key);
+  if (old) { old.remove(); cellEls.delete(key); }
+  if (brokenTiles.has(key)) return;          // debris layer marks it
+  const ch = (currentMap.grid[y] || "")[x];
+  if (ch == null) return;
+  const mode = currentMap.mode || "";
+  // Siege-only furniture: hide outside Siege rather than show wrong objects.
+  if (SIEGE_ONLY_TILES.has(ch) && !SIEGE_MODES.test(mode)) return;
+  const isBall = BALL_MODES.test(mode);
+  if ((ch === "6" || ch === "7") && isBall) {
+    // One goal sprite per goal line, stamped at the median marker so the
+    // goal is centered on the mouth ("….7.7.7.…" → middle 7).
+    const row = currentMap.grid[y] || "";
+    const xs = [];
+    for (let i = 0; i < row.length; i++) if (row[i] === ch) xs.push(i);
+    if (x !== xs[Math.floor((xs.length - 1) / 2)]) return;
+    const gv = goalVariantFor(ch);
+    if (gv && svgNodeCache.has(gv.asset)) {
+      // Both goal sprites hang UPWARD from their anchor (parts.top ≈ 2.85
+      // cells, bot 0). The top goal line sits at y=0, so anchor it 2 rows
+      // into the field (BrawlMapGen anchors top goals at "m,2") — otherwise
+      // the art lands entirely off-grid and the goal is invisible.
+      const el = stampTile(x, ch === "7" ? y + 2 : y, gv);
+      if (el) cellEls.set(key, el);
+    }
+    return;
+  }
+  // Extra spawn slots ('0','3','5', plus '6'/'7' outside ball modes): team
+  // assignment unknown → neutral gray pad (was: invisible or a red square).
+  if ("035".includes(ch) || (ch === "6" || ch === "7")) {
+    const p1 = tileSpriteIdx["1"];
+    if (p1 && svgNodeCache.has("player_gray.svg")) {
+      const el = stampTile(x, y, { asset: "player_gray.svg", parts: p1.variants[0].parts });
+      if (el) cellEls.set(key, el);
+    }
+    return;
+  }
+  // Ignored tiles: positional markers with no visual. Skip.
+  if (ignoreTilesSet.has(ch)) return;
+  // Indicator tiles (J / V): structural barriers with no in-game sprite.
+  if (indicatorTilesSet.has(ch)) {
+    const el = colorCellDiv(x, y, null, "indicator");
+    // Phase the hatch pattern to the grid origin so adjacent cells merge
+    // into one seamless hatched region instead of showing per-cell seams.
+    el.style.backgroundPosition = `${-x * cell}px ${-y * cell}px`;
+    cellEls.set(key, el);
+    return;
+  }
+  if (renderMode === "colors") {
+    const col = tileColor(ch);
+    if (col !== null) cellEls.set(key, colorCellDiv(x, y, col, "color"));
+    return;
+  }
+  // Autotile (water binary, bench orientation, fence connections) first;
+  // fall back to biome-default variant if no rule matches.
+  const variant = resolveAutotileVariant(x, y, ch) || pickVariant(ch);
+  if (variant) {
+    const el = stampTile(x, y, variant);
+    if (el) cellEls.set(key, el);
+    return;
+  }
+  // No SVG variant — fall back to a colored cell (rare).
+  const col = tileColor(ch);
+  if (col !== null) cellEls.set(key, colorCellDiv(x, y, col, "color"));
+}
+
+// Re-render a cell and its 8 neighbors (autotile masks only reach 1 cell).
+function refreshCells(cx, cy) {
+  for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) {
+    const x = cx + dx, y = cy + dy;
+    if (x < 0 || y < 0 || y >= currentMap.height || x >= currentMap.width) continue;
+    renderCell(x, y);
+  }
+  drawDebris();
+}
+
 function drawMap() {
   computeLayout();
   mapLayer.removeChildren();
-  // Open-ground backdrop
-  const bg = new PIXI.Graphics();
-  bg.rect(originX, originY, cell * currentMap.width, cell * currentMap.height).fill(OPEN_BG);
-  mapLayer.addChild(bg);
+  mapGrid.innerHTML = "";
+  cellEls.clear();
 
-  // Stamp each non-open tile. Use the SVG sprite from tileTextures when we
-  // have one; fall back to a colored rect for any tile char we haven't mapped.
-  const fallback = new PIXI.Graphics();
-  currentMap.grid.forEach((row, y) => {
-    for (let x = 0; x < row.length; x++) {
-      if (brokenTiles.has(tk(x, y))) {
-        fallback.circle(originX + (x+0.5)*cell, originY + (y+0.5)*cell, Math.max(cell*0.12, 1.5)).fill({ color: 0x4a3a28, alpha: 0.7 });
-        continue;
-      }
-      const ch = row[x];
-      const tex = tileTextures[ch];
-      if (tex) {
-        const sp = new PIXI.Sprite(tex);
-        sp.x = originX + x * cell;
-        sp.y = originY + y * cell;
-        sp.width = cell;
-        sp.height = cell;
-        mapLayer.addChild(sp);
-        continue;
-      }
-      const col = tileColor(ch);
-      if (col === null) continue;
-      fallback.rect(originX + x*cell, originY + y*cell, cell, cell).fill(col);
+  const W = currentMap.width, H = currentMap.height;
+  // Position the inner grid container exactly where the map sits in stage-wrap.
+  // All children (tile imgs) are positioned relative to this container at
+  // pixel coordinates `tx*cell, ty*cell` — no need to add originX/Y per tile.
+  mapGrid.style.left = originX + "px";
+  mapGrid.style.top  = originY + "px";
+  mapGrid.style.width  = (W * cell) + "px";
+  mapGrid.style.height = (H * cell) + "px";
+  mapGrid.style.backgroundImage = chequerBgUrl(GRASS_LIGHT, GRASS_DARK);
+  mapGrid.style.backgroundSize = `${2*cell}px ${2*cell}px`;
+  mapGrid.style.backgroundPosition = "0 0";
+  // backgroundColor as a safety net in case the SVG fails — uses the light
+  // shade so a load failure still looks roughly right.
+  mapGrid.style.backgroundColor = colorHex(GRASS_LIGHT);
+
+  for (let y = 0; y < H; y++) {
+    const row = currentMap.grid[y];
+    for (let x = 0; x < row.length; x++) renderCell(x, y);
+  }
+  // Many Gem Grab / Bounty / ball grids carry NO '8' tile — the game spawns
+  // the objective implicitly at map center (BrawlMapGen mapModder "m,m").
+  // Without this, those maps render with no gem mine / bounty star / ball.
+  const CENTER_OBJ_MODES = /^(Gemgrab|GemGrab|TrioGemgrab|Wanted|Solobounty|BrawlBall|Laserball|AirHockey|Dribble|SuperHockey)/;
+  if (CENTER_OBJ_MODES.test(currentMap.mode || "") && !currentMap.grid.some(r => r.includes("8"))) {
+    const v = pickVariant("8");
+    if (v && svgNodeCache.has(v.asset)) {
+      const cy = Math.floor(H / 2);
+      const el = stampTile(Math.floor(W / 2), cy, v);
+      if (el) { el.style.zIndex = cy; cellEls.set("synthObjective", el); }
     }
-  });
-  mapLayer.addChild(fallback);
+  }
+  drawDebris();
+  debrisG.zIndex = 0;
+  mapLayer.addChild(debrisG);   // removeChildren() above detached it
+}
+
+// One tile sprite. tileParts is THE authority — both for sprite footprint
+// and for where the sprite anchors relative to the painted cell. Inline-SVG
+// approach: clone the cached parsed SVG node into a positioned wrapper div.
+function stampTile(tx, ty, variant) {
+  const p = variant.parts;
+  const widthCells  = (p.left + 1000 + p.right) / 1000;
+  const heightCells = (p.top  + 1000 + p.bot)   / 1000;
+  const wrap = document.createElement("div");
+  wrap.className = "tile-sprite";
+  wrap.style.position = "absolute";
+  wrap.style.left = (tx * cell - (p.left / 1000) * cell) + "px";
+  wrap.style.top  = (ty * cell - (p.top  / 1000) * cell) + "px";
+  wrap.style.width  = (widthCells  * cell) + "px";
+  wrap.style.height = (heightCells * cell) + "px";
+  wrap.style.zIndex = ty;
+  const node = svgNodeCache.get(variant.asset);
+  if (node) {
+    const clone = node.cloneNode(true);
+    clone.style.width = "100%";
+    clone.style.height = "100%";
+    clone.style.display = "block";
+    wrap.appendChild(clone);
+  }
+  mapGrid.appendChild(wrap);
+  return wrap;
 }
 
 function loadMap(name) {
-  currentMap = maps[name];
+  const src = maps[name];
+  currentMap = { ...src, grid: src.grid.slice(), name };
+  // CSV-authoritative theme + exact BG color (no approximation).
+  const [light, dark, themeKey] = bgColorsForInternal(name);
+  GRASS_LIGHT = light;
+  GRASS_DARK = dark;
+  const biome = biomeForInternal(name);
+  if (biome !== currentBiome) {
+    currentBiome = biome;
+    const sel = document.getElementById("biomeSel");
+    if (sel && sel.querySelector(`option[value="${biome}"]`)) sel.value = biome;
+  }
   drawMap();
   // keep tokens inside the new map's bounds
   brokenTiles = new Set();
@@ -476,96 +1569,226 @@ function loadMap(name) {
     positionSprite(t);
   });
   redraw();
-  setStatus(`${name} — ${currentMap.width}×${currentMap.height} tiles, ${tokens.length} tokens`);
+  setStatus(`${mapLabel(name)} — ${currentMap.width}×${currentMap.height} tiles, ${tokens.length} tokens`);
+  saveSceneSoon();
 }
 
 // ---- tokens ----
-async function placeToken(tx, ty) {
-  const b = brawlers.find(x => x.hash === brawlerSel.value);
-  const vi = parseInt(variantSel.value, 10) || 0;
-  const id = nextId++;
-  let texture;
-  try { texture = await PIXI.Assets.load(b.assets.portrait); }
-  catch { texture = null; }
-  const sprite = new PIXI.Container();
-  const ring = new PIXI.Graphics();
-  sprite.addChild(ring);
-  if (texture) {
-    const img = new PIXI.Sprite(texture);
-    img.anchor.set(0.5);
-    sprite.addChild(img);
-    sprite._img = img;
-  }
-  sprite._ring = ring;
-  sprite.eventMode = "static";
-  sprite.cursor = "grab";
-  tokenLayer.addChild(sprite);
-
-  const label = new PIXI.Text({
-    text: b.name,
-    style: { fontFamily: "system-ui", fontSize: 11, fill: 0xffffff, stroke: { color: 0x000000, width: 3 } },
+// Pre-resize a raster image to a target size via canvas (browser's high-
+// quality smoothing) and wrap as a PIXI texture. Cached per URL+size so a
+// brawler placed twice doesn't refetch/redraw.
+const _resizedTexCache = new Map();
+function loadResizedTexture(url, size) {
+  const key = `${url}@${size}`;
+  if (_resizedTexCache.has(key)) return _resizedTexCache.get(key);
+  const p = new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.onload = () => {
+      const c = document.createElement("canvas");
+      c.width = c.height = size;
+      const ctx = c.getContext("2d");
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = "high";
+      // Letterbox-fit (contain) so non-square renders aren't stretched.
+      const r = Math.min(size / img.naturalWidth, size / img.naturalHeight);
+      const w = img.naturalWidth * r, h = img.naturalHeight * r;
+      ctx.drawImage(img, (size - w) / 2, (size - h) / 2, w, h);
+      const tex = PIXI.Texture.from(c);
+      if (tex.source) {
+        tex.source.scaleMode = "linear";
+        tex.source.autoGenerateMipmaps = true;
+        if (typeof tex.source.update === "function") tex.source.update();
+      }
+      resolve(tex);
+    };
+    img.onerror = () => reject(new Error(`image load failed: ${url}`));
+    img.src = url;
   });
-  label.anchor.set(0.5, 0);
-  sprite.addChild(label);
-  sprite._label = label;
+  _resizedTexCache.set(key, p);
+  return p;
+}
+// Brawlers whose super deploys a persistent entity (turret, bear, etc.).
+// When you place using their "Super" variant, we drop a SPAWN token (showing
+// the entity's owner portrait + a type badge) instead of duplicating the
+// brawler. Sourced from kits.json super descriptions + per-brawler knowledge.
+const SPAWN_ENTITIES = {
+  "Jessie":         { entity: "Scrappy",       badge: "T", color: 0x10b981, attackRangeTiles: 7,  hp: 1900 },
+  "Pam":            { entity: "Healing Turret",badge: "H", color: 0xfbbf24, healRangeTiles: 4,    hp: 2400 },
+  "Penny":          { entity: "Mortar",        badge: "T", color: 0xef4444, attackRangeTiles: 9,  hp: 2400 },
+  "8-Bit":          { entity: "Damage Turret", badge: "+", color: 0xf59e0b, buffRangeTiles: 6,    hp: 1800 },
+  "Nita":           { entity: "Bruce",         badge: "B", color: 0xa16207, attackRangeTiles: 1,  hp: 3000 },
+  "Mr. P":          { entity: "Home Base",     badge: "B", color: 0xa78bfa, hp: 3600 },
+  "Juju":           { entity: "Gris-gris",     badge: "T", color: 0xd97706, attackRangeTiles: 7,  hp: 1600 },
+  "Larry & Lawrie": { entity: "Lawrie",        badge: "M", color: 0x60a5fa, attackRangeTiles: 8,  hp: 2200 },
+  "Doug":           { entity: "Hot Dog",       badge: "R", color: 0xfdba74, hp: 1200 },
+  "Bo":             { entity: "Bo Totem",      badge: "+", color: 0xfde047, buffRangeTiles: 5,    hp: 1000, gadget: true },
+};
+function spawnSpecFor(brawlerName, variantLabel) {
+  // Super-spawn: brawler's "Super" variant when they're in the map.
+  if (/super/i.test(variantLabel) && SPAWN_ENTITIES[brawlerName] && !SPAWN_ENTITIES[brawlerName].gadget) {
+    return SPAWN_ENTITIES[brawlerName];
+  }
+  // Gadget-spawn (e.g., Bo's Super Totem gadget). Only when the variant
+  // label matches a known gadget. Skip for now — keeps scope small.
+  return null;
+}
 
-  const tok = { id, brawler: b, variant: b.variants[vi], variantIdx: vi, tx, ty, angle: -Math.PI/2, team: placingTeam, sprite };
+const tokenLayerHtml = document.getElementById("tokenLayerHtml");
+let TOKEN_SIZE_MULT = 1.7;  // user-controllable via Advanced slider
+
+// Build a token (HTML <img> visual + state entry) from plain data — the
+// single path used by interactive placement, undo restore, and autosave
+// restore. `d`: {hash, variantIdx, tx, ty, angle, team, kind?, reachTiles?}.
+function createTokenFromData(d) {
+  const b = brawlers.find(x => x.hash === d.hash);
+  if (!b) return null;
+  const variant = b.variants[d.variantIdx] || b.variants[0];
+  if (!variant) return null;
+  const isProjectile = d.kind === "projectile";
+  const spawnSpec = isProjectile ? null : spawnSpecFor(b.name, variant.label);
+  const isSpawn = !!spawnSpec;
+  const id = nextId++;
+  const portraitUrl = b.assets && b.assets.portrait;
+  const renderUrl   = b.assets && b.assets.render;
+  const emojiUrl    = b.assets && b.assets.emoji;
+  const firstUrl    = portraitUrl || renderUrl || emojiUrl;
+
+  const el = document.createElement("div");
+  el.className = `tok team-${d.team}` + (isProjectile ? " projectile" : isSpawn ? " spawn" : "");
+  el.dataset.tokId = String(id);
+  if (isSpawn) el.style.color = "#" + spawnSpec.color.toString(16).padStart(6, "0");
+
+  const img = document.createElement("img");
+  img.src = firstUrl ? encodeURI(firstUrl) : "";
+  img.alt = b.name;
+  img.draggable = false;
+  img.onerror = () => {
+    if (img.src.includes("portrait") && renderUrl) { img.src = encodeURI(renderUrl); return; }
+    if (img.src.includes("render") && emojiUrl) { img.src = encodeURI(emojiUrl); return; }
+  };
+  el.appendChild(img);
+
+  const frame = document.createElement("div");
+  frame.className = "tok-frame";
+  el.appendChild(frame);
+
+  const labelEl = document.createElement("div");
+  labelEl.className = "tok-label";
+  if (isProjectile) { labelEl.textContent = `${b.name} · ${variant.label}`; labelEl.style.color = "#5fd3ff"; }
+  else if (isSpawn) { labelEl.textContent = `${b.name}'s ${spawnSpec.entity}`; labelEl.style.color = "#fde047"; }
+  else labelEl.textContent = b.name;
+  el.appendChild(labelEl);
+
+  if (isSpawn && spawnSpec.badge) {
+    const badge = document.createElement("div");
+    badge.className = "tok-badge";
+    badge.textContent = spawnSpec.badge;
+    el.appendChild(badge);
+  }
+
+  tokenLayerHtml.appendChild(el);
+
+  const tok = {
+    id, brawler: b, variant, variantIdx: d.variantIdx, tx: d.tx, ty: d.ty,
+    angle: d.angle ?? -Math.PI / 2, team: d.team, el,
+    kind: isProjectile ? "projectile" : (isSpawn ? "spawn" : "brawler"),
+    spawnSpec, spawnColor: spawnSpec ? spawnSpec.color : null,
+    spawnBadge: spawnSpec ? spawnSpec.badge : null,
+    reachTiles: d.reachTiles ?? null,
+  };
   tokens.push(tok);
-  enableDrag(tok);
+  enableHtmlDrag(tok);
   positionSprite(tok);
-  selectToken(id);
+  return tok;
+}
+
+function placeToken(tx, ty, mx, my) {
+  const b = brawlers.find(x => x.hash === brawlerSel.value);
+  if (!b) return;
+  const vi = parseInt(variantSel.value, 10) || 0;
+  // Initial angle: toward the cursor for projectiles, up for characters —
+  // either way live aiming takes over immediately after placement.
+  let angle = -Math.PI / 2;
+  if (placeMode === "projectile" && mx != null && my != null) {
+    const cellCx = originX + (tx + 0.5) * cell;
+    const cellCy = originY + (ty + 0.5) * cell;
+    angle = Math.atan2(my - cellCy, mx - cellCx);
+  }
+  const tok = createTokenFromData({
+    hash: b.hash, variantIdx: vi, tx, ty, angle, team: placingTeam,
+    kind: placeMode === "projectile" ? "projectile" : undefined,
+  });
+  if (!tok) return;
+  tok.el.classList.add("drop");   // one-shot scale-in animation
+  selectToken(tok.id);
+  aimingId = tok.id;        // reticle follows cursor; next click locks it
   renderPlacedList();
+  saveSceneSoon();
 }
 
 function positionSprite(t) {
+  if (!t.el) return;
+  const isSpawn = t.kind === "spawn";
+  const isProjectile = t.kind === "projectile";
+  // Projectile icons render smaller — just an identifier at origin since
+  // the actual visual (reticle) extends across many cells.
+  const mult = isProjectile ? 0.6 : (isSpawn ? 0.78 : 1);
+  const sizePx = Math.round(cell * TOKEN_SIZE_MULT * mult);
   const [px, py] = tileCenterPx(t.tx, t.ty);
-  t.sprite.x = px; t.sprite.y = py;
-  const r = Math.max(cell * 0.55, 10);
-  const ring = t.sprite._ring;
-  const teamCol = TEAM_COLOR[t.team] || 0xffffff;
-  const selected = t.id === selectedId;
-  ring.clear();
-  ring.circle(0, 0, r).fill({ color: 0x0a0f17, alpha: 0.6 });
-  ring.circle(0, 0, r).stroke({ width: selected ? 3 : 2, color: teamCol, alpha: selected ? 1 : 0.85 });
-  if (selected) ring.circle(0, 0, r + 3).stroke({ width: 1.5, color: 0xffffff, alpha: 0.8 });
-  if (t.sprite._label) t.sprite._label.position.set(0, r + 2);
-  if (t.sprite._img) {
-    const img = t.sprite._img;
-    const scale = (r * 1.7) / Math.max(img.texture.width, img.texture.height);
-    img.scale.set(scale);
-    // circular mask
-    if (!t.sprite._mask) {
-      const m = new PIXI.Graphics();
-      t.sprite.addChild(m);
-      img.mask = m;
-      t.sprite._mask = m;
-    }
-    t.sprite._mask.clear();
-    t.sprite._mask.circle(0, 0, r - 1).fill(0xffffff);
-  }
+  t.el.style.left = px + "px";
+  t.el.style.top  = py + "px";
+  t.el.style.width  = sizePx + "px";
+  t.el.style.height = sizePx + "px";
+  // z-index by row so lower tokens overlap upper ones naturally.
+  t.el.style.zIndex = String(1000 + t.ty * 2 + (t.id === selectedId ? 1 : 0));
+  t.el.classList.toggle("sel", t.id === selectedId);
 }
 
-function enableDrag(t) {
-  let dragging = false;
-  t.sprite.on("pointerdown", (e) => {
+// Drag for HTML tokens — pointer capture for smooth tracking even when the
+// cursor moves off the token element.
+function enableHtmlDrag(t) {
+  let dragging = false, moved = false, wasSelected = false, sx = 0, sy = 0;
+  t.el.addEventListener("pointerdown", (e) => {
     e.stopPropagation();
+    e.preventDefault();
+    wasSelected = (selectedId === t.id);
     selectToken(t.id);
     dragging = true;
+    moved = false;
+    sx = e.clientX; sy = e.clientY;
     draggingId = t.id;
-    t.sprite.cursor = "grabbing";
+    t.el.classList.add("dragging");
+    t.el.setPointerCapture(e.pointerId);
   });
-  app.stage.on("pointermove", (e) => {
+  t.el.addEventListener("pointermove", (e) => {
     if (!dragging) return;
-    const p = e.global;
-    const { tx, ty } = pxToTile(p.x, p.y);
+    // 4px dead zone separates "click" from "drag" so a clean click can
+    // re-enter aim mode instead of nudging the token.
+    if (!moved && Math.hypot(e.clientX - sx, e.clientY - sy) <= 4) return;
+    if (!moved) { moved = true; pushHistory(); }
+    const rect = wrap.getBoundingClientRect();
+    const localX = e.clientX - rect.left, localY = e.clientY - rect.top;
+    const { tx, ty } = pxToTile(localX, localY);
     t.tx = Math.max(0, Math.min(currentMap.width - 1, Math.round(tx)));
     t.ty = Math.max(0, Math.min(currentMap.height - 1, Math.round(ty)));
     positionSprite(t);
     redraw();
   });
-  const endDrag = () => { dragging = false; if (draggingId === t.id) draggingId = null; t.sprite.cursor = "grab"; };
-  app.stage.on("pointerup", endDrag);
-  app.stage.on("pointerupoutside", endDrag);
+  const endDrag = (e) => {
+    if (!dragging) return;
+    dragging = false;
+    if (draggingId === t.id) draggingId = null;
+    t.el.classList.remove("dragging");
+    if (e && t.el.releasePointerCapture) {
+      try { t.el.releasePointerCapture(e.pointerId); } catch {}
+    }
+    if (moved) saveSceneSoon();
+    // Clean click on an already-selected token → re-aim its reticle.
+    else if (wasSelected && aimingId !== t.id) { aimingId = t.id; refreshPlaceState(); }
+  };
+  t.el.addEventListener("pointerup", endDrag);
+  t.el.addEventListener("pointercancel", endDrag);
 }
 
 function selectToken(id) {
@@ -578,11 +1801,87 @@ function selectToken(id) {
 function removeToken(id) {
   const i = tokens.findIndex(t => t.id === id);
   if (i < 0) return;
-  tokenLayer.removeChild(tokens[i].sprite);
+  const t = tokens[i];
+  if (t.el && t.el.parentNode) t.el.parentNode.removeChild(t.el);
+  if (t.sprite && t.sprite.parent) t.sprite.parent.removeChild(t.sprite);
   tokens.splice(i, 1);
+  if (aimingId === id) aimingId = null;
   if (selectedId === id) selectedId = tokens.length ? tokens[0].id : null;
-  drawReticles();
+  redraw();   // reticles AND overlays — vision/movement shading went stale otherwise
   renderPlacedList();
+}
+
+// ---- scene snapshot / undo / autosave ----
+// Whole-scene state as plain data: the basis for ⌘Z undo, localStorage
+// autosave, and (later) the Y.js document shape.
+function serializeTokens() {
+  return tokens.map(t => ({
+    hash: t.brawler.hash, variantIdx: t.variantIdx, tx: t.tx, ty: t.ty,
+    angle: t.angle, team: t.team, kind: t.kind === "projectile" ? "projectile" : undefined,
+    reachTiles: t.reachTiles ?? null,
+  }));
+}
+function snapshotScene() {
+  return {
+    map: currentMap.name, grid: currentMap.grid.slice(),
+    broken: [...brokenTiles], tokens: serializeTokens(),
+  };
+}
+function restoreTokens(arr) {
+  aimingId = null;
+  draggingId = null;
+  for (const t of tokens) if (t.el && t.el.parentNode) t.el.parentNode.removeChild(t.el);
+  tokens = [];
+  for (const d of arr) createTokenFromData(d);
+  selectedId = tokens.length ? tokens[tokens.length - 1].id : null;
+}
+function applyScene(snap) {
+  if (!snap || !snap.map || !maps[snap.map]) return false;
+  if (!currentMap || snap.map !== currentMap.name) {
+    const src = maps[snap.map];
+    currentMap = { ...src, grid: src.grid.slice(), name: snap.map };
+    // If an active filter hides this map, clear it so the dropdown can't
+    // display a map other than the one actually loaded.
+    if (!mapSel.querySelector(`option[value="${snap.map}"]`)) {
+      mapFilterEl.value = "";
+      fillMapSel();
+    }
+    if (mapSel.querySelector(`option[value="${snap.map}"]`)) mapSel.value = snap.map;
+    const [light, dark] = bgColorsForInternal(snap.map);
+    GRASS_LIGHT = light; GRASS_DARK = dark;
+    currentBiome = biomeForInternal(snap.map);
+  }
+  currentMap.grid = snap.grid.slice();
+  brokenTiles = new Set(snap.broken || []);
+  restoreTokens(snap.tokens || []);
+  drawMap();
+  tokens.forEach(positionSprite);
+  redraw();
+  renderPlacedList();
+  refreshPlaceState();
+  setStatus(`${mapLabel(currentMap.name)} — ${currentMap.width}×${currentMap.height} tiles, ${tokens.length} tokens`);
+  return true;
+}
+const undoStack = [];
+function pushHistory() {
+  if (!currentMap) return;
+  undoStack.push(snapshotScene());
+  if (undoStack.length > 100) undoStack.shift();
+}
+function undo() {
+  const snap = undoStack.pop();
+  if (!snap) { setStatus("nothing to undo"); return; }
+  applyScene(snap);
+  saveSceneSoon();
+}
+const SCENE_KEY = "wb_scene_v1";
+let _saveTimer = null;
+function saveSceneSoon() {
+  if (!currentMap) return;
+  clearTimeout(_saveTimer);
+  _saveTimer = setTimeout(() => {
+    try { localStorage.setItem(SCENE_KEY, JSON.stringify(snapshotScene())); } catch {}
+  }, 250);
 }
 
 function renderPlacedList() {
@@ -592,10 +1891,14 @@ function renderPlacedList() {
     const row = document.createElement("div");
     row.className = "row" + (t.id === selectedId ? " sel" : "");
     const label = document.createElement("span");
-    label.textContent = `${t.brawler.name} · ${t.variant.label}`;
+    if (t.kind === "spawn" && t.spawnSpec) {
+      label.innerHTML = `<span style="color:${"#"+t.spawnSpec.color.toString(16).padStart(6,"0")}">●</span> ${t.brawler.name}'s ${t.spawnSpec.entity}`;
+    } else {
+      label.textContent = `${t.brawler.name} · ${t.variant.label}`;
+    }
     const del = document.createElement("button");
     del.textContent = "✕";
-    del.onclick = (e) => { e.stopPropagation(); removeToken(t.id); };
+    del.onclick = (e) => { e.stopPropagation(); pushHistory(); removeToken(t.id); saveSceneSoon(); };
     row.appendChild(label); row.appendChild(del);
     row.onclick = () => selectToken(t.id);
     el.appendChild(row);
@@ -605,12 +1908,49 @@ function renderPlacedList() {
 // ---- reticle drawing ----
 function redraw() { drawOverlays(); drawReticles(); }
 
+// The in-game camera is a rectangle centered on the player, clamped so it
+// never shows past the map edges. "What can this brawler see" = this rect
+// ∩ line-of-sight — NOT an arbitrary radius.
+function viewportRectFor(t) {
+  const mw = currentMap.width, mh = currentMap.height;
+  const w = Math.min(viewW, mw), h = Math.min(viewH, mh);
+  const cx = Math.max(w / 2, Math.min(mw - w / 2, t.tx + 0.5));
+  const cy = Math.max(h / 2, Math.min(mh - h / 2, t.ty + 0.5));
+  return { x: originX + (cx - w / 2) * cell, y: originY + (cy - h / 2) * cell,
+           w: w * cell, h: h * cell };
+}
+
 function drawOverlays() {
   overlayLayer.removeChildren();
   if (!currentMap) return;
   const t = tokens.find(x => x.id === selectedId);
 
   if (showVision) {
+    // Container for the sight visuals; when a token is selected it is
+    // masked to the camera viewport (you can't see past your own screen,
+    // no matter the line of sight).
+    let visHost = overlayLayer;
+    if (t) {
+      const vp = viewportRectFor(t);
+      const mx = originX, my = originY;
+      const mw = currentMap.width * cell, mh = currentMap.height * cell;
+      // Dim everything outside the phone screen.
+      const dim = new PIXI.Graphics();
+      dim.rect(mx, my, mw, Math.max(0, vp.y - my))
+         .rect(mx, vp.y, Math.max(0, vp.x - mx), vp.h)
+         .rect(vp.x + vp.w, vp.y, Math.max(0, mx + mw - vp.x - vp.w), vp.h)
+         .rect(mx, vp.y + vp.h, mw, Math.max(0, my + mh - vp.y - vp.h))
+         .fill({ color: 0x000000, alpha: 0.45 });
+      overlayLayer.addChild(dim);
+      const frame = new PIXI.Graphics();
+      frame.rect(vp.x, vp.y, vp.w, vp.h).stroke({ width: 2, color: 0xffffff, alpha: 0.8 });
+      overlayLayer.addChild(frame);
+      const maskG = new PIXI.Graphics();
+      maskG.rect(vp.x, vp.y, vp.w, vp.h).fill(0xffffff);
+      visHost = new PIXI.Container();
+      visHost.mask = maskG;
+      overlayLayer.addChild(maskG, visHost);
+    }
     // bush tiles: revealed (you can see in) if within reveal radius of the
     // selected token, otherwise concealed. Matches the in-game rule that you
     // only spot enemies in a bush once you're close.
@@ -625,24 +1965,26 @@ function drawOverlays() {
     });
     concealed.fill({ color: 0x1f6f3a, alpha: 0.45 });
     revealed.fill({ color: 0xf6e05e, alpha: 0.4 });
-    overlayLayer.addChild(concealed, revealed);
+    visHost.addChild(concealed, revealed);
     if (t) {
-      drawVisionPolygon(t);
+      drawVisionPolygon(t, visHost);
       // reveal-radius ring
       const [cx, cy] = tileCenterPx(t.tx, t.ty);
       const rg = new PIXI.Graphics();
       rg.circle(cx, cy, revealRadius * cell).stroke({ width: 1, color: 0xf6e05e, alpha: 0.4 });
-      overlayLayer.addChild(rg);
+      visHost.addChild(rg);
     }
   }
   if (showMovement && t) drawMovementReach(t);
 }
 
-// what the selected token can see: 360° ray fan, blocked by walls, stops at bushes
-function drawVisionPolygon(t) {
+// what the selected token can see: 360° ray fan, blocked by walls, stops at
+// bushes. Ray length covers the viewport's diagonal; the host container's
+// viewport mask does the final screen-area clipping.
+function drawVisionPolygon(t, host = overlayLayer) {
   const [cx, cy] = tileCenterPx(t.tx, t.ty);
   const fx = t.tx + 0.5, fy = t.ty + 0.5;
-  const maxV = 12, N = 160;
+  const maxV = Math.hypot(viewW, viewH) / 2 + 1, N = 160;
   const pts = [];
   for (let i = 0; i < N; i++) {
     const a = (i / N) * Math.PI * 2;
@@ -652,7 +1994,7 @@ function drawVisionPolygon(t) {
   const g = new PIXI.Graphics();
   g.poly(pts).fill({ color: 0xfff2c0, alpha: 0.16 });
   g.poly(pts).stroke({ width: 1, color: 0xfff2c0, alpha: 0.35 });
-  overlayLayer.addChild(g);
+  host.addChild(g);
 }
 function raycastSight(fx, fy, ang, maxT) {
   const step = 0.08, dx = Math.cos(ang), dy = Math.sin(ang);
@@ -708,7 +2050,10 @@ function movementReach(t, budget) {
     for (const [dx, dy, c] of dirs) {
       const nx = x + dx, ny = y + dy, nd = d + c;
       if (nd > budget || subBlocked(nx, ny)) continue;
-      if (dx && dy && subBlocked(x + dx, y) && subBlocked(x, y + dy)) continue; // no corner-cut
+      // No corner-cutting: a diagonal step is illegal if EITHER orthogonal
+      // neighbor is blocked (was &&, which let paths slip through the
+      // diagonal seam where two wall corners touch).
+      if (dx && dy && (subBlocked(x + dx, y) || subBlocked(x, y + dy))) continue;
       const ni = idx(nx, ny);
       if (nd < dist[ni]) { dist[ni] = nd; heap.push([nd, nx, ny]); }
     }
@@ -722,11 +2067,21 @@ function drawMovementReach(t) {
   const col = TEAM_COLOR[t.team] || 0xffffff;
   const g = new PIXI.Graphics();
   const sc = cell / SUB;
+  const inReach = (x, y) => x >= 0 && y >= 0 && x < W && y < H && dist[y * W + x] <= budget;
   for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
-    if (dist[y * W + x] <= budget) g.rect(originX + x*sc, originY + y*sc, sc + 0.5, sc + 0.5);
+    if (inReach(x, y)) g.rect(originX + x*sc, originY + y*sc, sc + 0.5, sc + 0.5);
   }
-  g.fill({ color: col, alpha: 0.18 });
-  overlayLayer.addChild(g);
+  g.fill({ color: col, alpha: 0.22 });
+  // Bright rim on boundary subcells so the reachable region reads as a hard
+  // edge against walls instead of a soft blob.
+  const rim = new PIXI.Graphics();
+  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
+    if (inReach(x, y) && (!inReach(x+1, y) || !inReach(x-1, y) || !inReach(x, y+1) || !inReach(x, y-1))) {
+      rim.rect(originX + x*sc, originY + y*sc, sc + 0.5, sc + 0.5);
+    }
+  }
+  rim.fill({ color: col, alpha: 0.65 });
+  overlayLayer.addChild(g, rim);
   const info = document.getElementById("moveCalc");
   if (info) info.textContent = `${t.brawler.name}: ${speed} t/s × ${moveSeconds}s = ${Math.round(budget*10)/10} tiles`;
 }
@@ -734,19 +2089,36 @@ function drawMovementReach(t) {
 function drawReticles() {
   reticleLayer.removeChildren();
   const sel = tokens.find(x => x.id === selectedId);
+  // Projectile tokens always show their reticle (that's their whole point).
+  tokens.forEach(t => {
+    if (t.kind === "projectile" && t !== sel) drawOneReticle(t, false);
+  });
   if (showAllReticles) {
-    tokens.forEach(t => { if (t !== sel) drawOneReticle(t, true); });
+    tokens.forEach(t => { if (t !== sel && t.kind !== "projectile") drawOneReticle(t, true); });
   }
   if (sel) drawOneReticle(sel, false);
 }
 
-function drawOneReticle(t, dim) {
+function drawOneReticle(t, dim, layer = reticleLayer, colorOverride = null) {
   const g = new PIXI.Graphics();
   g.alpha = dim ? 0.4 : 1;
-  reticleLayer.addChild(g);
+  layer.addChild(g);
   const [cx, cy] = tileCenterPx(t.tx, t.ty);
   const fx = t.tx + 0.5, fy = t.ty + 0.5;            // token center, tile space
-  const color = t.variant.isHyper ? RET_HYPER : RET_WHITE;
+  // Spawn-entity tokens (turrets, bears, etc.): render their own range
+  // circle instead of the owning brawler's attack reticle. Color uses the
+  // spawn's signature color so multiple spawns are distinguishable.
+  if (t.kind === "spawn" && t.spawnSpec) {
+    const s = t.spawnSpec;
+    const col = colorOverride != null ? colorOverride : (s.color || 0xfde047);
+    const range = s.attackRangeTiles || s.healRangeTiles || s.buffRangeTiles;
+    if (range) {
+      g.circle(cx, cy, range * cell).fill({ color: col, alpha: 0.08 });
+      g.circle(cx, cy, range * cell).stroke({ width: 2, color: col, alpha: 0.7 });
+    }
+    return;
+  }
+  const color = colorOverride != null ? colorOverride : (t.variant.isHyper ? RET_HYPER : RET_WHITE);
   const p = t.variant.params || {};
   const ang = t.angle;
   const passes = t.variant.passesWalls;
@@ -764,15 +2136,15 @@ function drawOneReticle(t, dim) {
         const reach = passes ? rangeT : raycastTiles(fx, fy, a, rangeT);
         pts.push(cx + Math.cos(a) * R(reach), cy + Math.sin(a) * R(reach));
       }
-      g.poly(pts).fill({ color, alpha: 0.28 });
-      g.poly(pts).stroke({ width: 2, color, alpha: 0.7 });
+      g.poly(pts).fill({ color, alpha: 0.4 });
+      g.poly(pts).stroke({ width: 2.5, color, alpha: 0.95 });
       break;
     }
     case "line":
     case "dash": {
       const rangeT = passes ? p.rangeTiles : raycastTiles(fx, fy, ang, p.rangeTiles || 6);
       const w = R(p.widthTiles || (t.variant.shape === "dash" ? 0.8 : 0.6));
-      drawRotRect(g, cx, cy, ang, R(rangeT), w, color, t.variant.shape === "dash" ? 0.22 : 0.5);
+      drawRotRect(g, cx, cy, ang, R(rangeT), w, color, t.variant.shape === "dash" ? 0.35 : 0.6);
       break;
     }
     case "placement":
@@ -810,13 +2182,13 @@ function drawOneReticle(t, dim) {
   }
 }
 
-function splash(g, x, y, r, color, fillA = 0.25, strokeA = 0.7) {
+function splash(g, x, y, r, color, fillA = 0.35, strokeA = 0.9) {
   g.circle(x, y, r).fill({ color, alpha: fillA });
-  g.circle(x, y, r).stroke({ width: 2, color, alpha: strokeA });
+  g.circle(x, y, r).stroke({ width: 2.5, color, alpha: strokeA });
 }
 
 function drawMaxRangeRing(g, cx, cy, r, color) {
-  g.circle(cx, cy, r).stroke({ width: 1, color, alpha: 0.25 });
+  g.circle(cx, cy, r).stroke({ width: 1.5, color, alpha: 0.45 });
 }
 
 // cluster splash offsets in tile space, [alongThrow, perpThrow], oriented later
@@ -858,10 +2230,196 @@ function dottedLine(g, x1, y1, x2, y2, color) {
 // ---- interaction ----
 app.stage.eventMode = "static";
 app.stage.hitArea = app.screen;
+// Drag-paint with Bresenham interpolation so fast cursor movements between
+// pointermove events still hit every cell along the line, no gaps.
+let paintDragging = false;
+let lastPaintCell = null;
+function paintLine(x0, y0, x1, y1) {
+  let dx = Math.abs(x1 - x0), sx = x0 < x1 ? 1 : -1;
+  let dy = -Math.abs(y1 - y0), sy = y0 < y1 ? 1 : -1;
+  let err = dx + dy;
+  for (;;) {
+    paintCell(x0, y0);
+    if (x0 === x1 && y0 === y1) break;
+    const e2 = 2 * err;
+    if (e2 >= dy) { err += dy; x0 += sx; }
+    if (e2 <= dx) { err += dx; y0 += sy; }
+  }
+}
+app.stage.on("pointerdown", (e) => {
+  if (paintTileCode != null) {
+    pushHistory();              // one undo entry per stroke, not per cell
+    paintDragging = true;
+    const { tx, ty } = pxToTile(e.global.x, e.global.y);
+    const ix = Math.round(tx), iy = Math.round(ty);
+    paintCell(ix, iy);
+    lastPaintCell = { x: ix, y: iy };
+  }
+});
+app.stage.on("pointerup",        () => { paintDragging = false; lastPaintCell = null; });
+app.stage.on("pointerupoutside", () => { paintDragging = false; lastPaintCell = null; });
 app.stage.on("pointermove", (e) => {
-  if (draggingId) return;
-  const t = tokens.find(x => x.id === selectedId);
-  if (!t) return;
+  if (paintDragging && paintTileCode != null) {
+    const { tx, ty } = pxToTile(e.global.x, e.global.y);
+    const ix = Math.round(tx), iy = Math.round(ty);
+    if (lastPaintCell && (ix !== lastPaintCell.x || iy !== lastPaintCell.y)) {
+      paintLine(lastPaintCell.x, lastPaintCell.y, ix, iy);
+    } else {
+      paintCell(ix, iy);
+    }
+    lastPaintCell = { x: ix, y: iy };
+  }
+  // Paint-mode hover indicator: outline the cell the next click will hit.
+  if (paintTileCode != null && currentMap) {
+    const { tx, ty } = pxToTile(e.global.x, e.global.y);
+    const ix = Math.round(tx), iy = Math.round(ty);
+    drawPaintHover(ix, iy);
+  }
+  // Place-mode hover: portrait ghost + reticle preview at hover cell.
+  if (placing && currentMap) {
+    const { tx, ty } = pxToTile(e.global.x, e.global.y);
+    const ix = Math.round(tx), iy = Math.round(ty);
+    drawPlaceHover(ix, iy, e.global.x, e.global.y);
+  }
+});
+// Recolor every fill/stroke in a cloned SVG to cyan so it reads as a
+// hologram preview. Handles both attribute form (fill="#xxx") and inline
+// style (style="fill:#xxx"). Leaves "none" alone so hollow shapes stay hollow.
+const GHOST_COLOR = "#5fd3ff";
+function makeBlueGhost(node) {
+  const clone = node.cloneNode(true);
+  clone.querySelectorAll("*").forEach(el => {
+    const f = el.getAttribute("fill");
+    if (f && f !== "none") el.setAttribute("fill", GHOST_COLOR);
+    const s = el.getAttribute("stroke");
+    if (s && s !== "none") el.setAttribute("stroke", GHOST_COLOR);
+    const style = el.getAttribute("style");
+    if (style) {
+      const updated = style
+        .replace(/fill\s*:\s*(?!none)[^;]+/gi, `fill:${GHOST_COLOR}`)
+        .replace(/stroke\s*:\s*(?!none)[^;]+/gi, `stroke:${GHOST_COLOR}`);
+      el.setAttribute("style", updated);
+    }
+  });
+  // Force a fill on the root in case all inner shapes use "currentColor"
+  clone.style.color = GHOST_COLOR;
+  return clone;
+}
+
+function hideHoverGhost() {
+  hoverGhost.style.display = "none";
+  hoverGhost.innerHTML = "";
+}
+
+// Brawler place-mode blueprint hologram. Cyan portrait circle at the hover
+// cell + cyan reticle preview (cone/line/ring) aimed at the cursor so the
+// user can see attack reach BEFORE clicking. Shown only while `placing`.
+const placeGhost = document.getElementById("placeGhost");
+function hidePlaceGhost() {
+  placeGhost.style.display = "none";
+}
+function drawPlaceHover(ix, iy, mx, my) {
+  // No next-token ghost while aiming — the live reticle is the preview.
+  if (!placing || !currentMap || aimingId != null) { hidePlaceGhost(); hoverLayer.removeChildren(); return; }
+  if (ix < 0 || iy < 0 || ix >= currentMap.width || iy >= currentMap.height) {
+    hidePlaceGhost(); hoverLayer.removeChildren(); return;
+  }
+  hoverLayer.removeChildren();
+  // Ghost + outline take the PLACING TEAM's color so you always know which
+  // side the next token joins.
+  const teamHexInt = placingTeam === "red" ? 0xff6b6b : 0x5fb0ff;
+  const teamHex    = placingTeam === "red" ? "#ff6b6b" : "#5fb0ff";
+  // 1×1 cell outline
+  const cellG = new PIXI.Graphics();
+  cellG.rect(originX + ix*cell, originY + iy*cell, cell, cell)
+       .stroke({ width: 2, color: teamHexInt, alpha: 0.9 });
+  hoverLayer.addChild(cellG);
+  // Portrait ghost (HTML, easier than PIXI texture loading here)
+  const b = brawlers.find(x => x.hash === brawlerSel.value);
+  if (b && b.assets && b.assets.portrait) {
+    const r = Math.max(cell * 0.55, 12);
+    placeGhost.style.left = (originX + (ix + 0.5) * cell - r) + "px";
+    placeGhost.style.top  = (originY + (iy + 0.5) * cell - r) + "px";
+    placeGhost.style.width  = (r * 2) + "px";
+    placeGhost.style.height = (r * 2) + "px";
+    placeGhost.style.borderColor = teamHex;
+    const img = placeGhost.querySelector("img");
+    if (img.src !== b.assets.portrait) img.src = b.assets.portrait;
+    placeGhost.style.display = "block";
+  } else {
+    hidePlaceGhost();
+  }
+  // Reticle preview ONLY in projectile mode. Character mode shows just the
+  // portrait ghost — placing the character doesn't drop a reticle.
+  if (b && placeMode === "projectile") {
+    const vi = parseInt(variantSel.value, 10) || 0;
+    const v = b.variants[vi];
+    if (v) {
+      const cellCx = originX + (ix + 0.5) * cell;
+      const cellCy = originY + (iy + 0.5) * cell;
+      const ang = Math.atan2((my ?? cellCy) - cellCy, (mx ?? cellCx + 1) - cellCx);
+      const spawnSpec = spawnSpecFor(b.name, v.label);
+      const fakeTok = {
+        id: -1, tx: ix, ty: iy, angle: ang, variant: v, brawler: b,
+        team: placingTeam, reachTiles: null,
+        kind: spawnSpec ? "spawn" : "brawler",
+        spawnSpec,
+      };
+      drawOneReticle(fakeTok, true, hoverLayer, teamHexInt);
+    }
+  }
+}
+
+function drawPaintHover(ix, iy) {
+  hoverLayer.removeChildren();
+  if (ix < 0 || iy < 0 || !currentMap || ix >= currentMap.width || iy >= currentMap.height) {
+    hideHoverGhost();
+    return;
+  }
+  // 1×1 anchor outline (the cell you'd actually click — even for multi-cell
+  // sprites where the ghost extends past). Stays in PIXI hoverLayer.
+  const g = new PIXI.Graphics();
+  g.rect(originX + ix*cell, originY + iy*cell, cell, cell)
+    .stroke({ width: 2, color: 0x5fd3ff, alpha: 0.9 });
+  hoverLayer.addChild(g);
+
+  // Sprite hologram — positioned + sized exactly as it would be if placed.
+  // Eraser ("." ) just shows the anchor outline.
+  if (paintTileCode == null || paintTileCode === ".") { hideHoverGhost(); return; }
+  if (indicatorTilesSet.has(paintTileCode)) {
+    // Indicator tiles: gray cell preview, no SVG involved.
+    hoverGhost.innerHTML = "";
+    hoverGhost.style.left = (originX + ix * cell) + "px";
+    hoverGhost.style.top  = (originY + iy * cell) + "px";
+    hoverGhost.style.width  = cell + "px";
+    hoverGhost.style.height = cell + "px";
+    hoverGhost.style.background = "#5fd3ff";
+    hoverGhost.style.display = "block";
+    return;
+  }
+  hoverGhost.style.background = "transparent";
+  const variant = pickVariant(paintTileCode);
+  if (!variant) { hideHoverGhost(); return; }
+  const node = svgNodeCache.get(variant.asset);
+  if (!node) { hideHoverGhost(); return; }
+  const p = variant.parts;
+  const widthCells  = (p.left + 1000 + p.right) / 1000;
+  const heightCells = (p.top  + 1000 + p.bot)   / 1000;
+  hoverGhost.style.left = (originX + ix * cell - (p.left / 1000) * cell) + "px";
+  hoverGhost.style.top  = (originY + iy * cell - (p.top  / 1000) * cell) + "px";
+  hoverGhost.style.width  = (widthCells  * cell) + "px";
+  hoverGhost.style.height = (heightCells * cell) + "px";
+  hoverGhost.innerHTML = "";
+  hoverGhost.appendChild(makeBlueGhost(node));
+  hoverGhost.style.display = "block";
+}
+// Live aiming: ONLY the token in `aimingId` follows the cursor. Previously
+// the SELECTED token re-aimed on every mouse move forever, so drifting the
+// cursor toward the sidebar dragged the reticle along with it.
+app.stage.on("pointermove", (e) => {
+  if (draggingId || aimingId == null) return;
+  const t = tokens.find(x => x.id === aimingId);
+  if (!t) { aimingId = null; return; }
   const [cx, cy] = tileCenterPx(t.tx, t.ty);
   t.angle = Math.atan2(e.global.y - cy, e.global.x - cx);
   t.reachTiles = Math.hypot(e.global.x - cx, e.global.y - cy) / cell;
@@ -872,29 +2430,70 @@ app.stage.on("pointertap", (e) => {
   const ix = Math.round(tx), iy = Math.round(ty);
   if (ix < 0 || iy < 0 || ix >= currentMap.width || iy >= currentMap.height) return;
 
+  if (paintTileCode != null) {
+    paintCell(ix, iy);
+    return;
+  }
   if (wallBreakMode) {
     const ch = currentMap.grid[iy]?.[ix];
     if (ch && destructSet.has(ch)) {
+      pushHistory();
       const key = tk(ix, iy);
       if (brokenTiles.has(key)) brokenTiles.delete(key); else brokenTiles.add(key);
-      drawMap();
+      refreshCells(ix, iy);   // incremental — re-stamp cell + neighbors only
       redraw();
+      saveSceneSoon();
     }
     return;
   }
+  // A click while aiming LOCKS the reticle angle — it does not drop another
+  // token. The following click places the next one.
+  if (aimingId != null) {
+    aimingId = null;
+    refreshPlaceState();
+    return;
+  }
   if (placing) {
-    placeToken(ix, iy);
-    placing = false;
-    document.getElementById("placeBtn").textContent = "Click map to place →";
+    pushHistory();
+    placeToken(ix, iy, e.global.x, e.global.y);
+    refreshPlaceState();
+    return;
+  }
+  // Neutral mode: clicking empty map just deselects.
+  if (selectedId != null) {
+    selectedId = null;
+    tokens.forEach(positionSprite);
+    redraw();
+    renderPlacedList();
   }
 });
 
-document.getElementById("placeBtn").addEventListener("click", () => {
-  placing = !placing;
-  document.getElementById("placeBtn").textContent = placing ? "…now click the map" : "Click map to place →";
+// placeBtn is now a passive status indicator — clicking it does nothing
+// (placement is implicit when a brawler is picked).
+document.getElementById("placeBtn").addEventListener("click", () => {});
+// Token size slider — re-positions all character/spawn tokens on change.
+const tokenSizeSlider = document.getElementById("tokenSize");
+if (tokenSizeSlider) {
+  tokenSizeSlider.addEventListener("input", (e) => {
+    TOKEN_SIZE_MULT = parseFloat(e.target.value);
+    document.getElementById("tokenSizeVal").textContent = TOKEN_SIZE_MULT.toFixed(1);
+    tokens.forEach(positionSprite);
+  });
+}
+// Character / Projectile mode toggle — affects what the next map click drops.
+document.querySelectorAll(".modeToggle .mode").forEach(btn => {
+  btn.addEventListener("click", () => {
+    placeMode = btn.dataset.mode;
+    document.querySelectorAll(".modeToggle .mode").forEach(b =>
+      b.classList.toggle("sel", b === btn));
+    refreshPlaceState();
+  });
 });
 document.getElementById("clearBtn").addEventListener("click", () => {
+  if (!tokens.length) return;
+  pushHistory();
   tokens.slice().forEach(t => removeToken(t.id));
+  saveSceneSoon();
 });
 
 function setTeam(team) {
@@ -904,6 +2503,20 @@ function setTeam(team) {
 }
 document.getElementById("teamBlue").addEventListener("click", () => setTeam("blue"));
 document.getElementById("teamRed").addEventListener("click", () => setTeam("red"));
+// Overlay button → hidden checkbox bridge. Buttons toggle their .on class
+// + flip the checkbox + fire change so the existing handlers fire once.
+function bindOverlayBtn(btnId, cbId) {
+  const btn = document.getElementById(btnId);
+  const cb  = document.getElementById(cbId);
+  btn.addEventListener("click", () => {
+    cb.checked = !cb.checked;
+    btn.classList.toggle("on", cb.checked);
+    cb.dispatchEvent(new Event("change"));
+  });
+}
+bindOverlayBtn("showAllBtn",      "showAll");
+bindOverlayBtn("showVisionBtn",   "showVision");
+bindOverlayBtn("showMovementBtn", "showMovement");
 document.getElementById("showAll").addEventListener("change", (e) => {
   showAllReticles = e.target.checked;
   drawReticles();
@@ -911,6 +2524,16 @@ document.getElementById("showAll").addEventListener("change", (e) => {
 document.getElementById("showVision").addEventListener("change", (e) => {
   showVision = e.target.checked;
   document.getElementById("visionRow").style.display = showVision ? "block" : "none";
+  redraw();
+});
+document.getElementById("viewW").addEventListener("input", (e) => {
+  viewW = parseFloat(e.target.value);
+  document.getElementById("viewWVal").textContent = viewW;
+  redraw();
+});
+document.getElementById("viewH").addEventListener("input", (e) => {
+  viewH = parseFloat(e.target.value);
+  document.getElementById("viewHVal").textContent = viewH;
   redraw();
 });
 const revealSlider = document.getElementById("revealRadius");
@@ -935,31 +2558,72 @@ document.getElementById("moveSeconds").addEventListener("input", (e) => {
   document.getElementById("moveVal").textContent = moveSeconds;
   redraw();
 });
-document.getElementById("wallBreakBtn").addEventListener("click", (e) => {
-  wallBreakMode = !wallBreakMode;
-  e.target.classList.toggle("on", wallBreakMode);
-  e.target.textContent = wallBreakMode ? "Break walls: ON (click a wall)" : "Break walls: off";
-  if (wallBreakMode) { placing = false; document.getElementById("placeBtn").textContent = "Click map to place →"; }
-});
+function setWallBreak(on) {
+  wallBreakMode = on;
+  const btn = document.getElementById("wallBreakBtn");
+  btn.classList.toggle("on", on);
+  btn.textContent = on ? "Break walls: ON (click a wall)" : "Break walls: off";
+  refreshPlaceState();
+}
+document.getElementById("wallBreakBtn").addEventListener("click", () => setWallBreak(!wallBreakMode));
 
 window.addEventListener("keydown", (e) => {
   if (e.target.tagName === "SELECT" || e.target.tagName === "INPUT") return;
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "z" && !e.shiftKey) {
+    e.preventDefault();
+    undo();
+    return;
+  }
   if ((e.key === "Backspace" || e.key === "Delete") && selectedId != null) {
     e.preventDefault();
+    pushHistory();
     removeToken(selectedId);
+    saveSceneSoon();
   } else if (e.key === "Escape") {
-    placing = false;
-    document.getElementById("placeBtn").textContent = "Click map to place →";
+    // Back out one layer at a time: aim → paint → wall-break → armed
+    // brawler → token selection.
+    if (aimingId != null) { aimingId = null; refreshPlaceState(); }
+    else if (paintTileCode != null) selectPaintTile(paintTileCode);  // same code → toggles off
+    else if (wallBreakMode) setWallBreak(false);
+    else if (brawlerSel.value) clearBrawlerSelection();
+    else if (selectedId != null) {
+      selectedId = null;
+      tokens.forEach(positionSprite);
+      redraw();
+      renderPlacedList();
+    }
   }
 });
 
-mapSel.addEventListener("change", () => loadMap(mapSel.value));
-window.addEventListener("resize", () => { if (currentMap) { drawMap(); tokens.forEach(positionSprite); drawReticles(); } });
+mapSel.addEventListener("change", () => { pushHistory(); loadMap(mapSel.value); });
+document.getElementById("biomeSel").addEventListener("change", (e) => {
+  currentBiome = e.target.value;
+  [GRASS_LIGHT, GRASS_DARK] = shadeForBiome(currentBiome);
+  if (currentMap) drawMap();
+});
+document.getElementById("renderModeSel").addEventListener("change", (e) => {
+  renderMode = e.target.value;
+  if (currentMap) drawMap();
+});
+// PIXI's resizeTo updates app.screen on its own RAF tick — listen to the
+// renderer's resize event (post-update) instead of window resize, which
+// fired with STALE dimensions and left the map overflowing the viewport.
+app.renderer.on("resize", () => requestAnimationFrame(() => {
+  if (!currentMap) return;
+  drawMap();
+  tokens.forEach(positionSprite);
+  redraw();
+}));
 
 // ---- boot ----
+document.getElementById("pickedPortrait").src = PORTRAIT_PLACEHOLDER;
 refreshVariants();
-loadMap(mapSel.value);
-setStatus(`ready · ${Object.keys(maps).length} maps · ${brawlers.length} brawlers`);
+// Restore the autosaved scene (map + painted tiles + tokens + broken walls)
+// so a reload doesn't wipe the user's work.
+let restoredScene = null;
+try { restoredScene = JSON.parse(localStorage.getItem(SCENE_KEY) || "null"); } catch {}
+if (!(restoredScene && applyScene(restoredScene))) loadMap(mapSel.value || mapNamesSorted[0]);
+setStatus(`ready · ${Object.keys(maps).length} maps · ${brawlers.length} brawlers${restoredScene ? " · scene restored" : ""}`);
 </script>
 </body>
 </html>
