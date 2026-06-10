@@ -492,10 +492,12 @@ def build_brawler_entry(b):
         'gadgets': gadgets,
         'hypercharge': hypercharge,
         'specialMechanics': special_mechanics,
+        # Same filesystem-safe slug as download_assets.safe() — the raw
+        # Brawlify hash can contain '&' etc. (Larry-&-Lawrie → Larry---Lawrie).
         'assets': {
-            'portrait': f'/assets/brawlers/{b_hash}/portrait.png',
-            'render':   f'/assets/brawlers/{b_hash}/render.png',
-            'emoji':    f'/assets/brawlers/{b_hash}/emoji.png',
+            'portrait': f'/assets/brawlers/{re.sub(r"[^\\w\\-]+", "-", b_hash).strip("-")}/portrait.png',
+            'render':   f'/assets/brawlers/{re.sub(r"[^\\w\\-]+", "-", b_hash).strip("-")}/render.png',
+            'emoji':    f'/assets/brawlers/{re.sub(r"[^\\w\\-]+", "-", b_hash).strip("-")}/emoji.png',
         },
         'variants': variants_json,
     }

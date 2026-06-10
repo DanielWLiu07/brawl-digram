@@ -2718,9 +2718,9 @@
       },
       "specialMechanics": [],
       "assets": {
-        "portrait": "/assets/brawlers/Larry-&-Lawrie/portrait.png",
-        "render": "/assets/brawlers/Larry-&-Lawrie/render.png",
-        "emoji": "/assets/brawlers/Larry-&-Lawrie/emoji.png"
+        "portrait": "/assets/brawlers/Larry---Lawrie/portrait.png",
+        "render": "/assets/brawlers/Larry---Lawrie/render.png",
+        "emoji": "/assets/brawlers/Larry---Lawrie/emoji.png"
       },
       "variants": [
         {
