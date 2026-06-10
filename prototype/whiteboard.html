@@ -187,6 +187,15 @@
   .verif { display:inline-block; font-size:9px; padding:1px 5px; border-radius:3px; text-transform:uppercase; letter-spacing:.03em; margin-bottom:4px; }
   .verif.yes { background:#0e3b2a; color:#5fd; border:1px solid #1f6f4a; }
   .verif.partial { background:#3b2a0e; color:#f6c64a; border:1px solid #6b5320; }
+  /* Map maker */
+  .tilecat { font-size:10px; text-transform:uppercase; letter-spacing:.07em; color:#7a93ad; font-weight:700; margin:10px 0 4px; grid-column:1 / -1; }
+  #customList { margin-top:8px; }
+  #customList .crow { display:flex; justify-content:space-between; align-items:center; font-size:11px; color:#cde; padding:4px 6px; border:1px solid #1d2b40; border-radius:6px; margin-top:4px; cursor:pointer; }
+  #customList .crow:hover { background:#13202f; }
+  #customList .crow button { width:auto; padding:1px 7px; margin:0; font-size:11px; }
+  #mapWarnings { margin-top:8px; font-size:10px; line-height:1.6; }
+  #mapWarnings .warn { color:#fcd34d; }
+  #mapWarnings .ok { color:#6ee7b7; }
   /* Draft tab */
   .draft-mapline { font-size:12px; color:#cde; padding:8px 10px; background:#0c1422; border:1px solid #1d2b40; border-radius:8px; line-height:1.5; }
   .draft-mapline b { color:#5fd3ff; }
@@ -348,10 +357,24 @@
   </div>
 
   <div class="panel" id="tabTiles" hidden>
-    <div class="hint" style="margin:0 0 10px; color:#789; font-size:11px;">Click a tile, then click/drag on the map to paint.</div>
+    <div class="hint" style="margin:0 0 10px; color:#789; font-size:11px;">Click a tile, then click/drag to paint. <b>Right-drag erases.</b> ⌘Z undo · ⇧⌘Z redo.</div>
     <div id="paintEraser" class="erase">⌫  eraser (open ground)</div>
     <div id="tilebarList"></div>
     <div id="tileDetails"><span class="empty">hover or pick a tile…</span></div>
+    <details style="margin-top:12px" open><summary style="cursor:pointer;font-size:11px;color:#9ab">Custom map tools</summary>
+      <div class="draft-row">
+        <button id="newMapBtn" class="draft-mini">New blank map…</button>
+        <button id="resizeMapBtn" class="draft-mini">Resize…</button>
+      </div>
+      <div class="draft-row">
+        <button id="saveMapBtn" class="draft-mini">Save as custom…</button>
+        <button id="exportMapBtn" class="draft-mini">Export JSON</button>
+      </div>
+      <button id="importMapBtn" class="draft-mini" style="width:100% !important">Import JSON…</button>
+      <input type="file" id="importMapFile" hidden accept=".json,application/json"/>
+      <div id="customList"></div>
+      <div id="mapWarnings"></div>
+    </details>
   </div>
 
   <div class="panel" id="tabDraft" hidden>
@@ -572,6 +595,17 @@ function mapLabel(name) {
   return disp ? `${disp}  (${name})` : name;
 }
 
+// Custom user maps (map maker). Registered into maps{} BEFORE the map list
+// is built so they ride every existing path (select, filter, loadMap, draft
+// geometry). Display name "★ <name>" sorts them to the top with the named maps.
+const CUSTOM_KEY = "wb_custom_maps_v1";
+let customMaps = {};
+try { customMaps = JSON.parse(localStorage.getItem(CUSTOM_KEY) || "{}"); } catch {}
+for (const [nm, m] of Object.entries(customMaps)) {
+  maps[`Custom_${nm}`] = m;
+  internalToDisplay[`Custom_${nm}`] = `★ ${nm}`;
+}
+
 // Open-ground chequerboard, BrawlMapGen-faithful. Grassfield (the default
 // green biome most ranked maps use) base is rgb(60, 150, 87). color1 = color
 // × 242/255 (slightly darker), 1×1 alternation per cell.
@@ -725,7 +759,7 @@ async function preloadTiles() {
   }
   await Promise.all(tasks);
   console.log(`preloaded + parsed ${svgNodeCache.size} / ${seen.size} tile SVGs`);
-  fillTilebar();
+  // fillTilebar happens in loadMap/applyScene — previews are map-dependent.
 }
 
 const tileDetailsEl = document.getElementById("tileDetails");
@@ -740,20 +774,34 @@ function renderTileDetails(ch) {
     `<b>${ch === " " ? "·" : ch}</b> · <b>${info.display || info.name}</b><br>` +
     `${widthCells.toFixed(2)}×${heightCells.toFixed(2)} cells · ${info.variants.length} variant${info.variants.length === 1 ? "" : "s"}`;
 }
+// Palette grouped by what the tile DOES, not by char code — the flat
+// alphabetical grid made finding the objective/spawn tiles a hunt.
+const TILE_CATEGORIES = [
+  ["Blocks & walls", ["M", "X", "Y", "C", "B", "I", "T", "N", "a", "E", "A"]],
+  ["Terrain", ["F", "W"]],
+  ["Spawns & objectives", ["1", "2", "8", "4"]],
+  ["Jump pads", ["H", "G", "L", "K", "P", "Z", "O", "U"]],
+  ["Teleporters", ["c", "d", "e", "f"]],
+  ["Floor pads & special", ["y", "w", "z", "x", "v", "q", "Q", ",", "g"]],
+];
 function fillTilebar() {
   const host = document.getElementById("tilebarList");
   if (!host) return;
   host.innerHTML = "";
-  const entries = Object.entries(tileSpriteIdx).sort();
-  for (const [ch, info] of entries) {
-    if (!info.default) continue;
+  const mkTile = (ch, info) => {
     const tile = document.createElement("div");
     tile.className = "tile";
     tile.dataset.code = ch;
     tile.title = `${ch === " " ? "·" : ch} — ${info.display || info.name}`;
     const code = document.createElement("span"); code.className = "code"; code.textContent = ch === " " ? "·" : ch;
     const thumb = document.createElement("div"); thumb.className = "thumb";
-    const node = svgNodeCache.get(info.default.asset);
+    // Preview the variant the CURRENT map's mode/biome would paint (so '8'
+    // shows a ball on ball maps, a safe on Heist, etc.).
+    const variant = pickVariant(ch) || info.default;
+    let node = variant && svgNodeCache.get(variant.asset);
+    // Water's default is an autotile placeholder with no asset — preview the
+    // isolated-water sprite (all-neighbors-empty binary) instead of a blank.
+    if (!node && ch === "W") node = svgNodeCache.get("00000000.svg");
     if (node) {
       const clone = node.cloneNode(true);
       clone.style.maxWidth = "100%"; clone.style.maxHeight = "100%"; clone.style.display = "block";
@@ -763,8 +811,30 @@ function fillTilebar() {
     tile.addEventListener("click", () => selectPaintTile(ch));
     tile.addEventListener("mouseenter", () => renderTileDetails(ch));
     tile.addEventListener("mouseleave", () => renderTileDetails(paintTileCode));
-    host.appendChild(tile);
+    return tile;
+  };
+  const placed = new Set();
+  for (const [label, chars] of TILE_CATEGORIES) {
+    const avail = chars.filter(ch => tileSpriteIdx[ch] && tileSpriteIdx[ch].default);
+    if (!avail.length) continue;
+    const h = document.createElement("div");
+    h.className = "tilecat";
+    h.textContent = label;
+    host.appendChild(h);
+    for (const ch of avail) { host.appendChild(mkTile(ch, tileSpriteIdx[ch])); placed.add(ch); }
   }
+  const rest = Object.entries(tileSpriteIdx)
+    .filter(([ch, info]) => !placed.has(ch) && info.default).sort();
+  if (rest.length) {
+    const h = document.createElement("div");
+    h.className = "tilecat";
+    h.textContent = "Other";
+    host.appendChild(h);
+    for (const [ch, info] of rest) host.appendChild(mkTile(ch, info));
+  }
+  // Rebuilds (e.g. on map switch for mode-correct previews) keep the selection.
+  host.querySelectorAll(".tile").forEach(el =>
+    el.classList.toggle("sel", el.dataset.code === paintTileCode));
 }
 
 function selectPaintTile(code) {
@@ -783,16 +853,25 @@ function selectPaintTile(code) {
 }
 document.getElementById("paintEraser").addEventListener("click", () => selectPaintTile("."));
 
-function paintCell(tx, ty) {
-  if (!currentMap || paintTileCode == null) return;
+// Code actually painted this stroke — right-button strokes erase ('.').
+let paintStrokeCode = null;
+function paintCell(tx, ty, code = paintStrokeCode ?? paintTileCode) {
+  if (!currentMap || code == null) return;
   if (tx < 0 || ty < 0 || tx >= currentMap.width || ty >= currentMap.height) return;
   const row = currentMap.grid[ty];
-  if (row[tx] === paintTileCode) return;
+  if (row[tx] === code) return;
   // Pad row to width if needed (some CSV rows are shorter than declared width)
   const padded = row.padEnd(currentMap.width, ".");
-  currentMap.grid[ty] = padded.substring(0, tx) + paintTileCode + padded.substring(tx + 1);
+  currentMap.grid[ty] = padded.substring(0, tx) + code + padded.substring(tx + 1);
   refreshCells(tx, ty);   // incremental — full drawMap() per cell froze drag-painting
   saveSceneSoon();
+  schedulePaintSideEffects();
+}
+// Validation + draft geometry re-score, debounced so drag strokes pay once.
+let _paintFxTimer = null;
+function schedulePaintSideEffects() {
+  clearTimeout(_paintFxTimer);
+  _paintFxTimer = setTimeout(() => { validateMap(); renderDraft(); }, 250);
 }
 
 // Index ability records by (brawlerName, type, normalizedName) for fast lookup
@@ -943,8 +1022,12 @@ const mapSel = document.getElementById("mapSel");
 const mapSortKey = (n) => internalToDisplay[n]
   ? "0" + internalToDisplay[n].toLowerCase()
   : "1" + n.toLowerCase();
-const mapNamesSorted = Object.keys(maps).sort((a, b) =>
+let mapNamesSorted = Object.keys(maps).sort((a, b) =>
   mapSortKey(a) < mapSortKey(b) ? -1 : 1);
+function rebuildMapNames() {
+  mapNamesSorted = Object.keys(maps).sort((a, b) => mapSortKey(a) < mapSortKey(b) ? -1 : 1);
+  fillMapSel(document.getElementById("mapFilter").value);
+}
 
 function fillMapSel(filterText) {
   const f = (filterText || "").trim().toLowerCase();
@@ -1618,6 +1701,8 @@ function loadMap(name) {
   setStatus(`${mapLabel(name)} — ${currentMap.width}×${currentMap.height} tiles, ${tokens.length} tokens`);
   saveSceneSoon();
   if (typeof renderDraft === "function") renderDraft();  // draft scores are map-dependent
+  if (typeof validateMap === "function") validateMap();
+  fillTilebar();   // palette previews are mode/biome-dependent ('8' = ball vs safe)
 }
 
 // ---- tokens ----
@@ -1906,18 +1991,31 @@ function applyScene(snap) {
   redraw();
   renderPlacedList();
   refreshPlaceState();
+  fillTilebar();
+  if (typeof validateMap === "function") validateMap();
+  if (typeof renderDraft === "function") renderDraft();
   setStatus(`${mapLabel(currentMap.name)} — ${currentMap.width}×${currentMap.height} tiles, ${tokens.length} tokens`);
   return true;
 }
 const undoStack = [];
+const redoStack = [];
 function pushHistory() {
   if (!currentMap) return;
   undoStack.push(snapshotScene());
   if (undoStack.length > 100) undoStack.shift();
+  redoStack.length = 0;   // a new action invalidates the redo branch
 }
 function undo() {
   const snap = undoStack.pop();
   if (!snap) { setStatus("nothing to undo"); return; }
+  redoStack.push(snapshotScene());
+  applyScene(snap);
+  saveSceneSoon();
+}
+function redo() {
+  const snap = redoStack.pop();
+  if (!snap) { setStatus("nothing to redo"); return; }
+  undoStack.push(snapshotScene());
   applyScene(snap);
   saveSceneSoon();
 }
@@ -2293,18 +2391,36 @@ function paintLine(x0, y0, x1, y1) {
     if (e2 <= dx) { err += dx; y0 += sy; }
   }
 }
+function beginPaintStroke(gx, gy, erase) {
+  if (paintTileCode == null || paintDragging) return;
+  pushHistory();              // one undo entry per stroke, not per cell
+  paintDragging = true;
+  // Right-button stroke erases instead of painting the selected tile.
+  paintStrokeCode = erase ? "." : paintTileCode;
+  const { tx, ty } = pxToTile(gx, gy);
+  const ix = Math.round(tx), iy = Math.round(ty);
+  paintCell(ix, iy);
+  lastPaintCell = { x: ix, y: iy };
+}
+function endPaintStroke() { paintDragging = false; lastPaintCell = null; paintStrokeCode = null; }
 app.stage.on("pointerdown", (e) => {
-  if (paintTileCode != null) {
-    pushHistory();              // one undo entry per stroke, not per cell
-    paintDragging = true;
-    const { tx, ty } = pxToTile(e.global.x, e.global.y);
-    const ix = Math.round(tx), iy = Math.round(ty);
-    paintCell(ix, iy);
-    lastPaintCell = { x: ix, y: iy };
-  }
+  // Right-button strokes belong to the DOM erase handler below — PIXI's
+  // pointerdown fires first and would claim the stroke as a paint no-op.
+  const btn = e.nativeEvent ? e.nativeEvent.button : e.button;
+  if (btn === 2) return;
+  beginPaintStroke(e.global.x, e.global.y, false);
 });
-app.stage.on("pointerup",        () => { paintDragging = false; lastPaintCell = null; });
-app.stage.on("pointerupoutside", () => { paintDragging = false; lastPaintCell = null; });
+app.stage.on("pointerup",        endPaintStroke);
+app.stage.on("pointerupoutside", endPaintStroke);
+// Right-button erase, handled at the DOM level — PIXI maps right-button
+// input to its own event family and delivery proved unreliable.
+app.canvas.addEventListener("pointerdown", (e) => {
+  if (e.button !== 2) return;
+  const rect = wrap.getBoundingClientRect();
+  beginPaintStroke(e.clientX - rect.left, e.clientY - rect.top, true);
+});
+window.addEventListener("pointerup", (e) => { if (e.button === 2) endPaintStroke(); });
+wrap.addEventListener("contextmenu", (e) => e.preventDefault());
 app.stage.on("pointermove", (e) => {
   if (paintDragging && paintTileCode != null) {
     const { tx, ty } = pxToTile(e.global.x, e.global.y);
@@ -2473,6 +2589,10 @@ app.stage.on("pointermove", (e) => {
   drawReticles();
 });
 app.stage.on("pointertap", (e) => {
+  // Right-button taps belong to the erase stroke (handled at pointerdown);
+  // without this guard the tap fired afterwards and REPAINTED the cell.
+  const btn = e.nativeEvent ? e.nativeEvent.button : e.button;
+  if (btn === 2) return;
   const { tx, ty } = pxToTile(e.global.x, e.global.y);
   const ix = Math.round(tx), iy = Math.round(ty);
   if (ix < 0 || iy < 0 || ix >= currentMap.width || iy >= currentMap.height) return;
@@ -2621,6 +2741,28 @@ window.addEventListener("keydown", (e) => {
     undo();
     return;
   }
+  if (((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "z" && e.shiftKey) ||
+      (e.ctrlKey && e.key.toLowerCase() === "y")) {
+    e.preventDefault();
+    redo();
+    return;
+  }
+  const ARROW = { ArrowUp: [0, -1], ArrowDown: [0, 1], ArrowLeft: [-1, 0], ArrowRight: [1, 0] }[e.key];
+  if (ARROW && selectedId != null && currentMap) {
+    e.preventDefault();
+    const t = tokens.find(x => x.id === selectedId);
+    if (t) {
+      // throttle history so holding an arrow is one undo step, not fifty
+      if (!window._lastNudge || Date.now() - window._lastNudge > 1500) pushHistory();
+      window._lastNudge = Date.now();
+      t.tx = Math.max(0, Math.min(currentMap.width - 1, t.tx + ARROW[0]));
+      t.ty = Math.max(0, Math.min(currentMap.height - 1, t.ty + ARROW[1]));
+      positionSprite(t);
+      redraw();
+      saveSceneSoon();
+    }
+    return;
+  }
   if ((e.key === "Backspace" || e.key === "Delete") && selectedId != null) {
     e.preventDefault();
     pushHistory();
@@ -2661,6 +2803,193 @@ app.renderer.on("resize", () => requestAnimationFrame(() => {
   tokens.forEach(positionSprite);
   redraw();
 }));
+
+// ---- map maker tools ----
+function persistCustomMaps() {
+  try { localStorage.setItem(CUSTOM_KEY, JSON.stringify(customMaps)); } catch {}
+}
+function registerCustom(name) {
+  maps[`Custom_${name}`] = customMaps[name];
+  internalToDisplay[`Custom_${name}`] = `★ ${name}`;
+  rebuildMapNames();
+  renderCustomList();
+}
+function saveCustom(name, m) {
+  customMaps[name] = m;
+  persistCustomMaps();
+  registerCustom(name);
+}
+function renderCustomList() {
+  const host = document.getElementById("customList");
+  if (!host) return;
+  host.innerHTML = "";
+  for (const name of Object.keys(customMaps).sort()) {
+    const row = document.createElement("div");
+    row.className = "crow";
+    const label = document.createElement("span");
+    label.textContent = `★ ${name} (${customMaps[name].width}×${customMaps[name].height})`;
+    row.appendChild(label);
+    const del = document.createElement("button");
+    del.textContent = "✕";
+    del.addEventListener("click", (e) => {
+      e.stopPropagation();
+      delete customMaps[name];
+      delete maps[`Custom_${name}`];
+      delete internalToDisplay[`Custom_${name}`];
+      persistCustomMaps();
+      rebuildMapNames();
+      renderCustomList();
+    });
+    row.appendChild(del);
+    row.addEventListener("click", () => {
+      mapSel.value = `Custom_${name}`;
+      pushHistory();
+      loadMap(`Custom_${name}`);
+    });
+    host.appendChild(row);
+  }
+}
+function promptSize(def) {
+  const raw = prompt("Map size (width x height, tiles):", def);
+  if (!raw) return null;
+  const m = raw.toLowerCase().match(/(\d+)\s*[x×,\s]\s*(\d+)/);
+  if (!m) return null;
+  const w = Math.max(5, Math.min(80, parseInt(m[1], 10)));
+  const h = Math.max(5, Math.min(80, parseInt(m[2], 10)));
+  return { w, h };
+}
+document.getElementById("newMapBtn").addEventListener("click", () => {
+  const size = promptSize("21x33");
+  if (!size) return;
+  let n = 1;
+  while (customMaps[`Untitled ${n}`]) n++;
+  const name = `Untitled ${n}`;
+  // Inherit the current mode — it drives objective sprites + draft scoring.
+  saveCustom(name, {
+    width: size.w, height: size.h, mode: currentMap?.mode || "Gemgrab",
+    grid: Array.from({ length: size.h }, () => ".".repeat(size.w)),
+  });
+  mapSel.value = `Custom_${name}`;
+  pushHistory();
+  loadMap(`Custom_${name}`);
+});
+document.getElementById("resizeMapBtn").addEventListener("click", () => {
+  if (!currentMap) return;
+  const size = promptSize(`${currentMap.width}x${currentMap.height}`);
+  if (!size) return;
+  pushHistory();
+  const grid = [];
+  for (let y = 0; y < size.h; y++) {
+    const row = (currentMap.grid[y] || "").padEnd(size.w, ".").slice(0, size.w);
+    grid.push(row);
+  }
+  currentMap.width = size.w;
+  currentMap.height = size.h;
+  currentMap.grid = grid;
+  tokens.forEach(t => {
+    t.tx = Math.min(t.tx, size.w - 1);
+    t.ty = Math.min(t.ty, size.h - 1);
+  });
+  drawMap();
+  tokens.forEach(positionSprite);
+  redraw();
+  saveSceneSoon();
+  validateMap();
+  renderDraft();
+});
+document.getElementById("saveMapBtn").addEventListener("click", () => {
+  if (!currentMap) return;
+  const def = currentMap.name?.startsWith("Custom_") ? currentMap.name.slice(7) : "";
+  const name = (prompt("Save current layout as:", def) || "").trim();
+  if (!name) return;
+  saveCustom(name, {
+    width: currentMap.width, height: currentMap.height,
+    mode: currentMap.mode, grid: currentMap.grid.slice(),
+  });
+  mapSel.value = `Custom_${name}`;
+  currentMap.name = `Custom_${name}`;
+  setStatus(`saved ★ ${name}`);
+});
+document.getElementById("exportMapBtn").addEventListener("click", () => {
+  if (!currentMap) return;
+  const data = {
+    name: currentMap.name?.startsWith("Custom_") ? currentMap.name.slice(7) : currentMap.name,
+    width: currentMap.width, height: currentMap.height,
+    mode: currentMap.mode, grid: currentMap.grid.slice(),
+  };
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 1)], { type: "application/json" }));
+  a.download = `${(data.name || "map").replace(/[^\w-]+/g, "_")}.brawlmap.json`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+});
+document.getElementById("importMapBtn").addEventListener("click", () =>
+  document.getElementById("importMapFile").click());
+document.getElementById("importMapFile").addEventListener("change", async (e) => {
+  const file = e.target.files[0];
+  e.target.value = "";
+  if (!file) return;
+  try {
+    const data = JSON.parse(await file.text());
+    if (!Array.isArray(data.grid) || !data.width || !data.height) throw new Error("bad format");
+    let name = (data.name || "Imported").toString().slice(0, 40);
+    while (customMaps[name]) name += "*";
+    saveCustom(name, {
+      width: data.width, height: data.height,
+      mode: data.mode || "Gemgrab",
+      grid: data.grid.map(r => String(r).padEnd(data.width, ".").slice(0, data.width)),
+    });
+    mapSel.value = `Custom_${name}`;
+    pushHistory();
+    loadMap(`Custom_${name}`);
+  } catch (err) {
+    setStatus(`import failed: ${err.message}`);
+  }
+});
+
+// Layout validation — cheap sanity warnings, recomputed after paint strokes.
+function validateMap() {
+  const host = document.getElementById("mapWarnings");
+  if (!host || !currentMap) return;
+  const warns = [];
+  const g = currentMap.grid;
+  const has = (ch) => g.some(r => r.includes(ch));
+  if (!has("1")) warns.push("no Blue spawn pads ('1')");
+  if (!has("2")) warns.push("no Red spawn pads ('2')");
+  const mode = currentMap.mode || "";
+  if (/^(Bankheist|KingOfHill)/.test(mode) && !has("8")) {
+    warns.push(`${mode} maps need explicit objectives ('8')`);
+  }
+  // Reachability: BFS over walkable tiles from a Blue spawn must reach Red.
+  if (has("1") && has("2")) {
+    let start = null;
+    outer: for (let y = 0; y < g.length; y++) {
+      for (let x = 0; x < g[y].length; x++) if (g[y][x] === "1") { start = [x, y]; break outer; }
+    }
+    const seen = new Set([start.join(",")]);
+    const queue = [start];
+    let reachedRed = false;
+    while (queue.length && !reachedRed) {
+      const [x, y] = queue.shift();
+      for (const [dx, dy] of [[1,0],[-1,0],[0,1],[0,-1]]) {
+        const nx = x + dx, ny = y + dy;
+        if (nx < 0 || ny < 0 || ny >= currentMap.height || nx >= currentMap.width) continue;
+        const key = `${nx},${ny}`;
+        if (seen.has(key)) continue;
+        const ch = (g[ny] || "")[nx];
+        if (ch == null || blockMoveSet.has(ch)) continue;
+        if (ch === "2") { reachedRed = true; break; }
+        seen.add(key);
+        queue.push([nx, ny]);
+      }
+    }
+    if (!reachedRed) warns.push("Red spawns unreachable from Blue — walls/water split the map");
+  }
+  host.innerHTML = warns.length
+    ? warns.map(w => `<div class="warn">⚠ ${w}</div>`).join("")
+    : `<div class="ok">✓ layout OK — spawns present and connected</div>`;
+}
+renderCustomList();
 
 // ---- draft advisor v0 (client-side heuristic scorer) ----
 // Scores = mode/class fit + map-geometry fit (computed live from the grid)
@@ -2785,6 +3114,19 @@ function scoreCandidate(name, side, phase, desc) {
     if (a.cls && allies.filter(x => x.cls === a.cls).length >= 2) {
       terms.push({ t: `3rd ${a.cls}`, v: -0.4, conf: "rule" });
     }
+    // class-pair synergies with already-picked allies
+    for (const al of draft.picks[side]) {
+      const b = ATTRS.get(al) || {};
+      if ((a.tank && b.cls === "Support") || (a.cls === "Support" && b.tank)) {
+        terms.push({ t: `pairs w/ ${al}`, v: 0.2, conf: "rule", why: "tank + support sustain core" });
+      }
+      if (a.thrower && b.tank) {
+        terms.push({ t: `pairs w/ ${al}`, v: 0.15, conf: "rule", why: "frontline lets the thrower zone freely" });
+      }
+      if (a.thrower && b.thrower) {
+        terms.push({ t: "double thrower", v: -0.2, conf: "rule", why: "two lobbers fold to a direct rush" });
+      }
+    }
   } else {
     // Ban: how much would this candidate hurt US if the enemy gets it.
     for (const us of draft.picks[side]) {
@@ -2871,7 +3213,14 @@ function renderDraft() {
 
   // suggestions
   host.innerHTML = "";
-  if (turn.phase === "done") return;
+  if (turn.phase === "done") {
+    const done = document.createElement("div");
+    done.className = "draft-mapline";
+    done.style.marginTop = "8px";
+    done.innerHTML = `Blue: <b>${draft.picks.blue.join(", ")}</b><br>Red: <b>${draft.picks.red.join(", ")}</b>`;
+    host.appendChild(done);
+    return;
+  }
   const taken = draftTaken();
   const filter = (document.getElementById("draftFilter").value || "").trim().toLowerCase();
   let scored = brawlers
