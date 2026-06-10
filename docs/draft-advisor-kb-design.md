@@ -130,3 +130,22 @@ shell over SpenLC's sheet; DraftStars/brawl-ai keep embeddings + DBs
 off-repo). Reusable pattern only: self-collect from the official API.
 
 **Pick-order**: still absent from every public source — Phase 3 gate stands.
+
+## 7. v1 stats-source plan (per-map win rates)
+
+Decision deferred by Daniel; recommended order when v1 starts:
+
+1. **Self-collection via the official battle-log API** (the proven path —
+   DraftStars and brawl-ai both did this): backend cron walks a seed set of
+   high-trophy player tags (leaderboards endpoint → top players per country),
+   pulls `/players/{tag}/battlelog` (25 most recent battles each), dedupes by
+   battleTime+teams, and aggregates wins per (map, mode, brawler). Bayesian
+   smoothing toward the global brawler mean (brawltime.ninja's approach) so
+   low-sample (map, brawler) cells don't produce junk. Weekly snapshots keyed
+   by patchVersion drop straight into the scorer as a `stats`-confidence term.
+   Effort: one collector script + SQLite, runs on the existing Fly.io box.
+2. **Parallel asks, zero engineering:** Brawlify Discord (their public map
+   endpoint has the fields but serves empty arrays) and schneefux/brawltime
+   (one-person project, non-commercial data-share is a reasonable ask).
+3. **Not chosen:** scraping brawltime's rendered pages — fragile, ToS-gray,
+   and inferior to either path above.
