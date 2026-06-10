@@ -1,0 +1,23 @@
+<!doctype html>
+<html><head><title>SVG fix test</title>
+<style>body{background:#0a0f17;color:#fff;font-family:monospace;margin:20px}
+.row{display:flex;gap:20px;margin:20px 0}
+.col{padding:10px;border:1px solid #444}
+.col img{width:120px;height:120px;display:block;background:repeating-conic-gradient(#1a1f28 0% 25%, #20262f 0% 50%) 50% / 12px 12px}
+h3{margin:4px 0}
+</style></head>
+<body>
+<h2>Compare original (mm-units) vs stripped-mm</h2>
+<div class="row">
+  <div class="col"><h3>grass_green ORIG</h3><img src="/data/tile_sprites_official/grass_green.svg"/></div>
+  <div class="col"><h3>grass_green FIXED</h3><img src="/prototype/grass_green_fixed.svg"/></div>
+</div>
+<div class="row">
+  <div class="col"><h3>wood_block ORIG</h3><img src="/data/tile_sprites_official/wood_block.svg"/></div>
+  <div class="col"><h3>wood_block FIXED</h3><img src="/prototype/wood_block_fixed.svg"/></div>
+</div>
+<div class="row">
+  <div class="col"><h3>crate ORIG</h3><img src="/data/tile_sprites_official/crate.svg"/></div>
+  <div class="col"><h3>crate FIXED</h3><img src="/prototype/crate_fixed.svg"/></div>
+</div>
+</body></html>

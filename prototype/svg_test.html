@@ -1,0 +1,45 @@
+<!doctype html>
+<html><head><title>SVG test — all tiles</title>
+<style>
+  body{background:#0a0f17;color:#fff;font-family:monospace;margin:20px}
+  h2{margin-top:30px}
+  .grid{display:grid;grid-template-columns:repeat(8,1fr);gap:12px}
+  .tile{border:1px solid #444;padding:6px;text-align:center;font-size:10px;background:#0e1623}
+  .tile img{display:block;width:60px;height:60px;object-fit:contain;background:repeating-conic-gradient(#1a1f28 0% 25%, #20262f 0% 50%) 50% / 8px 8px;margin:0 auto}
+  .tile.broken{border-color:#f00;background:#3a1010}
+  .tile.broken::after{content:" ❌";color:#f88}
+</style>
+</head>
+<body>
+<h2>Every tile-default SVG (mark a tile "broken" by hovering — note which look unrecognizable)</h2>
+<div id="grid" class="grid"></div>
+<script>
+fetch("/data/tile_sprite_index.json").then(r=>r.json()).then(idx=>{
+  const grid=document.getElementById("grid");
+  const tiles=Object.entries(idx.tiles).sort();
+  for (const [ch,info] of tiles) {
+    if (!info.default) continue;
+    const d=document.createElement("div");
+    d.className="tile";
+    d.dataset.asset=info.default.asset;
+    d.innerHTML=`<img src="/data/tile_sprites_official/${info.default.asset}" onerror="this.parentElement.classList.add('broken');this.parentElement.dataset.err='1'"/>
+                 <div><b>${ch===' '?'·':ch}</b> ${info.name}</div>
+                 <div style="color:#789">${info.default.asset}</div>`;
+    grid.appendChild(d);
+  }
+  // After load, log broken count
+  setTimeout(()=>{
+    const broken=document.querySelectorAll(".tile.broken");
+    const total=document.querySelectorAll(".tile").length;
+    document.title=`SVG test — ${broken.length}/${total} broken`;
+    document.querySelector("h2").textContent=`${broken.length} broken / ${total} total — broken tiles in RED`;
+    if (broken.length) {
+      const list=document.createElement("pre");
+      list.style.cssText="color:#f88;font-size:14px;padding:10px;background:#0e1623";
+      list.textContent="BROKEN: "+Array.from(broken).map(b=>b.dataset.asset).join(", ");
+      document.body.insertBefore(list, document.getElementById("grid"));
+    }
+  }, 1500);
+});
+</script>
+</body></html>

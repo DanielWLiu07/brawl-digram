@@ -1,0 +1,38 @@
+<!doctype html>
+<html><head><title>SVG rendering methods test</title>
+<style>
+body{background:#0a0f17;color:#fff;font-family:monospace;margin:20px}
+.row{display:flex;gap:15px;margin:15px 0;align-items:center}
+.col{padding:8px;border:1px solid #444;text-align:center;font-size:11px;background:#0e1623}
+.col > .demo{width:80px;height:80px;background:repeating-conic-gradient(#1a1f28 0% 25%, #20262f 0% 50%) 50% / 10px 10px;display:flex;align-items:center;justify-content:center}
+.col img{max-width:100%;max-height:100%;display:block}
+.col object{width:100%;height:100%;display:block}
+.bg{width:100%;height:100%;background-repeat:no-repeat;background-position:center;background-size:contain}
+.inline-svg svg{width:100%;height:100%;display:block}
+</style></head>
+<body>
+<h2>Try 4 ways to render the same SVG</h2>
+<p>For each known-broken file, compare: &lt;img&gt; / &lt;object&gt; / CSS background / inline &lt;svg&gt;</p>
+<div id="rows"></div>
+<script>
+const BROKEN = ["grass_green.svg", "wood_block.svg", "crate.svg", "vase.svg", "barrel.svg", "spikes.svg"];
+async function build() {
+  const host = document.getElementById("rows");
+  for (const asset of BROKEN) {
+    const url = `/data/tile_sprites_official/${asset}`;
+    let inlineText = "";
+    try { inlineText = await fetch(url).then(r => r.text()); } catch {}
+    const row = document.createElement("div");
+    row.className = "row";
+    row.innerHTML = `
+      <div style="width:120px"><b>${asset}</b></div>
+      <div class="col"><div class="demo"><img src="${url}"/></div><div>&lt;img&gt;</div></div>
+      <div class="col"><div class="demo"><object data="${url}" type="image/svg+xml"></object></div><div>&lt;object&gt;</div></div>
+      <div class="col"><div class="demo"><div class="bg" style="background-image:url('${url}')"></div></div><div>CSS bg</div></div>
+      <div class="col inline-svg"><div class="demo">${inlineText}</div><div>inline</div></div>
+    `;
+    host.appendChild(row);
+  }
+}
+build();
+</script></body></html>
