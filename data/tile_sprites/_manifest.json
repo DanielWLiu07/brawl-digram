@@ -1,0 +1,1403 @@
+{
+  "source": "level_tex_0_886x1792.png",
+  "atlas_width": 886,
+  "atlas_height": 1792,
+  "method": "alpha>128 mask, distance-transform + watershed, peak min_distance=40, threshold_abs=12",
+  "sprites": [
+    {
+      "name": "tile_000_393x324.png",
+      "atlas_x": 0,
+      "atlas_y": 0,
+      "width": 393,
+      "height": 324,
+      "label": 1,
+      "pixels": 74266
+    },
+    {
+      "name": "tile_001_186x336.png",
+      "atlas_x": 700,
+      "atlas_y": 224,
+      "width": 186,
+      "height": 336,
+      "label": 2,
+      "pixels": 53670
+    },
+    {
+      "name": "tile_002_196x265.png",
+      "atlas_x": 375,
+      "atlas_y": 1,
+      "width": 196,
+      "height": 265,
+      "label": 3,
+      "pixels": 32261
+    },
+    {
+      "name": "tile_003_196x265.png",
+      "atlas_x": 571,
+      "atlas_y": 1,
+      "width": 196,
+      "height": 265,
+      "label": 4,
+      "pixels": 32199
+    },
+    {
+      "name": "tile_004_71x159.png",
+      "atlas_x": 0,
+      "atlas_y": 1631,
+      "width": 71,
+      "height": 159,
+      "label": 5,
+      "pixels": 6572
+    },
+    {
+      "name": "tile_005_139x139.png",
+      "atlas_x": 91,
+      "atlas_y": 347,
+      "width": 139,
+      "height": 139,
+      "label": 6,
+      "pixels": 15235
+    },
+    {
+      "name": "tile_006_206x195.png",
+      "atlas_x": 182,
+      "atlas_y": 1597,
+      "width": 206,
+      "height": 195,
+      "label": 7,
+      "pixels": 24991
+    },
+    {
+      "name": "tile_007_330x192.png",
+      "atlas_x": 0,
+      "atlas_y": 1485,
+      "width": 330,
+      "height": 192,
+      "label": 8,
+      "pixels": 29782
+    },
+    {
+      "name": "tile_008_85x100.png",
+      "atlas_x": 1,
+      "atlas_y": 0,
+      "width": 85,
+      "height": 100,
+      "label": 9,
+      "pixels": 5817
+    },
+    {
+      "name": "tile_009_85x103.png",
+      "atlas_x": 493,
+      "atlas_y": 502,
+      "width": 85,
+      "height": 103,
+      "label": 10,
+      "pixels": 5837
+    },
+    {
+      "name": "tile_010_108x120.png",
+      "atlas_x": 462,
+      "atlas_y": 1672,
+      "width": 108,
+      "height": 120,
+      "label": 11,
+      "pixels": 9519
+    },
+    {
+      "name": "tile_011_112x128.png",
+      "atlas_x": 36,
+      "atlas_y": 1664,
+      "width": 112,
+      "height": 128,
+      "label": 12,
+      "pixels": 9544
+    },
+    {
+      "name": "tile_012_120x238.png",
+      "atlas_x": 766,
+      "atlas_y": 1546,
+      "width": 120,
+      "height": 238,
+      "label": 13,
+      "pixels": 14436
+    },
+    {
+      "name": "tile_013_105x188.png",
+      "atlas_x": 75,
+      "atlas_y": 1096,
+      "width": 105,
+      "height": 188,
+      "label": 14,
+      "pixels": 13886
+    },
+    {
+      "name": "tile_014_45x78.png",
+      "atlas_x": 0,
+      "atlas_y": 1556,
+      "width": 45,
+      "height": 78,
+      "label": 15,
+      "pixels": 2588
+    },
+    {
+      "name": "tile_015_147x147.png",
+      "atlas_x": 231,
+      "atlas_y": 414,
+      "width": 147,
+      "height": 147,
+      "label": 16,
+      "pixels": 15355
+    },
+    {
+      "name": "tile_016_114x116.png",
+      "atlas_x": 87,
+      "atlas_y": 490,
+      "width": 114,
+      "height": 116,
+      "label": 17,
+      "pixels": 9201
+    },
+    {
+      "name": "tile_017_128x114.png",
+      "atlas_x": 361,
+      "atlas_y": 494,
+      "width": 128,
+      "height": 114,
+      "label": 18,
+      "pixels": 9428
+    },
+    {
+      "name": "tile_018_155x130.png",
+      "atlas_x": 587,
+      "atlas_y": 1555,
+      "width": 155,
+      "height": 130,
+      "label": 19,
+      "pixels": 13255
+    },
+    {
+      "name": "tile_019_66x76.png",
+      "atlas_x": 378,
+      "atlas_y": 414,
+      "width": 66,
+      "height": 76,
+      "label": 20,
+      "pixels": 4170
+    },
+    {
+      "name": "tile_020_101x369.png",
+      "atlas_x": 0,
+      "atlas_y": 343,
+      "width": 101,
+      "height": 369,
+      "label": 21,
+      "pixels": 15099
+    },
+    {
+      "name": "tile_021_81x132.png",
+      "atlas_x": 358,
+      "atlas_y": 1652,
+      "width": 81,
+      "height": 132,
+      "label": 22,
+      "pixels": 7152
+    },
+    {
+      "name": "tile_022_68x70.png",
+      "atlas_x": 87,
+      "atlas_y": 604,
+      "width": 68,
+      "height": 70,
+      "label": 23,
+      "pixels": 3704
+    },
+    {
+      "name": "tile_023_78x78.png",
+      "atlas_x": 586,
+      "atlas_y": 538,
+      "width": 78,
+      "height": 78,
+      "label": 24,
+      "pixels": 4787
+    },
+    {
+      "name": "tile_024_73x75.png",
+      "atlas_x": 670,
+      "atlas_y": 584,
+      "width": 73,
+      "height": 75,
+      "label": 25,
+      "pixels": 4083
+    },
+    {
+      "name": "tile_025_54x103.png",
+      "atlas_x": 411,
+      "atlas_y": 1670,
+      "width": 54,
+      "height": 103,
+      "label": 26,
+      "pixels": 4159
+    },
+    {
+      "name": "tile_026_125x208.png",
+      "atlas_x": 0,
+      "atlas_y": 1117,
+      "width": 125,
+      "height": 208,
+      "label": 27,
+      "pixels": 14831
+    },
+    {
+      "name": "tile_027_100x125.png",
+      "atlas_x": 127,
+      "atlas_y": 1658,
+      "width": 100,
+      "height": 125,
+      "label": 28,
+      "pixels": 7670
+    },
+    {
+      "name": "tile_028_99x189.png",
+      "atlas_x": 787,
+      "atlas_y": 1393,
+      "width": 99,
+      "height": 189,
+      "label": 29,
+      "pixels": 9649
+    },
+    {
+      "name": "tile_029_198x158.png",
+      "atlas_x": 424,
+      "atlas_y": 1034,
+      "width": 198,
+      "height": 158,
+      "label": 30,
+      "pixels": 17705
+    },
+    {
+      "name": "tile_030_78x78.png",
+      "atlas_x": 201,
+      "atlas_y": 560,
+      "width": 78,
+      "height": 78,
+      "label": 31,
+      "pixels": 4870
+    },
+    {
+      "name": "tile_031_191x118.png",
+      "atlas_x": 587,
+      "atlas_y": 1671,
+      "width": 191,
+      "height": 118,
+      "label": 32,
+      "pixels": 11401
+    },
+    {
+      "name": "tile_032_62x103.png",
+      "atlas_x": 265,
+      "atlas_y": 648,
+      "width": 62,
+      "height": 103,
+      "label": 33,
+      "pixels": 3878
+    },
+    {
+      "name": "tile_033_95x50.png",
+      "atlas_x": 44,
+      "atlas_y": 726,
+      "width": 95,
+      "height": 50,
+      "label": 34,
+      "pixels": 3118
+    },
+    {
+      "name": "tile_034_162x191.png",
+      "atlas_x": 386,
+      "atlas_y": 1158,
+      "width": 162,
+      "height": 191,
+      "label": 35,
+      "pixels": 14851
+    },
+    {
+      "name": "tile_035_165x131.png",
+      "atlas_x": 277,
+      "atlas_y": 721,
+      "width": 165,
+      "height": 131,
+      "label": 36,
+      "pixels": 8735
+    },
+    {
+      "name": "tile_036_54x91.png",
+      "atlas_x": 155,
+      "atlas_y": 610,
+      "width": 54,
+      "height": 91,
+      "label": 37,
+      "pixels": 3016
+    },
+    {
+      "name": "tile_037_53x63.png",
+      "atlas_x": 208,
+      "atlas_y": 642,
+      "width": 53,
+      "height": 63,
+      "label": 38,
+      "pixels": 2333
+    },
+    {
+      "name": "tile_038_124x119.png",
+      "atlas_x": 237,
+      "atlas_y": 1401,
+      "width": 124,
+      "height": 119,
+      "label": 39,
+      "pixels": 5866
+    },
+    {
+      "name": "tile_039_53x56.png",
+      "atlas_x": 657,
+      "atlas_y": 659,
+      "width": 53,
+      "height": 56,
+      "label": 40,
+      "pixels": 1757
+    },
+    {
+      "name": "tile_040_44x61.png",
+      "atlas_x": 743,
+      "atlas_y": 580,
+      "width": 44,
+      "height": 61,
+      "label": 41,
+      "pixels": 2336
+    },
+    {
+      "name": "tile_041_47x64.png",
+      "atlas_x": 610,
+      "atlas_y": 624,
+      "width": 47,
+      "height": 64,
+      "label": 42,
+      "pixels": 2129
+    },
+    {
+      "name": "tile_042_59x63.png",
+      "atlas_x": 546,
+      "atlas_y": 608,
+      "width": 59,
+      "height": 63,
+      "label": 43,
+      "pixels": 1869
+    },
+    {
+      "name": "tile_043_40x58.png",
+      "atlas_x": 238,
+      "atlas_y": 347,
+      "width": 40,
+      "height": 58,
+      "label": 44,
+      "pixels": 2073
+    },
+    {
+      "name": "tile_044_56x105.png",
+      "atlas_x": 482,
+      "atlas_y": 665,
+      "width": 56,
+      "height": 105,
+      "label": 45,
+      "pixels": 3335
+    },
+    {
+      "name": "tile_045_141x112.png",
+      "atlas_x": 206,
+      "atlas_y": 925,
+      "width": 141,
+      "height": 112,
+      "label": 46,
+      "pixels": 7676
+    },
+    {
+      "name": "tile_046_50x61.png",
+      "atlas_x": 529,
+      "atlas_y": 720,
+      "width": 50,
+      "height": 61,
+      "label": 47,
+      "pixels": 1681
+    },
+    {
+      "name": "tile_047_156x285.png",
+      "atlas_x": 730,
+      "atlas_y": 1044,
+      "width": 156,
+      "height": 285,
+      "label": 48,
+      "pixels": 20521
+    },
+    {
+      "name": "tile_048_64x47.png",
+      "atlas_x": 578,
+      "atlas_y": 735,
+      "width": 64,
+      "height": 47,
+      "label": 49,
+      "pixels": 2076
+    },
+    {
+      "name": "tile_049_48x71.png",
+      "atlas_x": 137,
+      "atlas_y": 726,
+      "width": 48,
+      "height": 71,
+      "label": 50,
+      "pixels": 2336
+    },
+    {
+      "name": "tile_050_42x56.png",
+      "atlas_x": 0,
+      "atlas_y": 676,
+      "width": 42,
+      "height": 56,
+      "label": 51,
+      "pixels": 1846
+    },
+    {
+      "name": "tile_051_77x46.png",
+      "atlas_x": 805,
+      "atlas_y": 766,
+      "width": 77,
+      "height": 46,
+      "label": 52,
+      "pixels": 2304
+    },
+    {
+      "name": "tile_052_211x274.png",
+      "atlas_x": 153,
+      "atlas_y": 1026,
+      "width": 211,
+      "height": 274,
+      "label": 53,
+      "pixels": 27811
+    },
+    {
+      "name": "tile_053_37x37.png",
+      "atlas_x": 675,
+      "atlas_y": 772,
+      "width": 37,
+      "height": 37,
+      "label": 54,
+      "pixels": 1107
+    },
+    {
+      "name": "tile_054_105x82.png",
+      "atlas_x": 414,
+      "atlas_y": 1139,
+      "width": 105,
+      "height": 82,
+      "label": 55,
+      "pixels": 5889
+    },
+    {
+      "name": "tile_055_111x125.png",
+      "atlas_x": 343,
+      "atlas_y": 200,
+      "width": 111,
+      "height": 125,
+      "label": 56,
+      "pixels": 3457
+    },
+    {
+      "name": "tile_056_49x46.png",
+      "atlas_x": 755,
+      "atlas_y": 718,
+      "width": 49,
+      "height": 46,
+      "label": 57,
+      "pixels": 1377
+    },
+    {
+      "name": "tile_057_72x46.png",
+      "atlas_x": 624,
+      "atlas_y": 719,
+      "width": 72,
+      "height": 46,
+      "label": 58,
+      "pixels": 1657
+    },
+    {
+      "name": "tile_058_49x46.png",
+      "atlas_x": 804,
+      "atlas_y": 720,
+      "width": 49,
+      "height": 46,
+      "label": 59,
+      "pixels": 1384
+    },
+    {
+      "name": "tile_059_47x46.png",
+      "atlas_x": 435,
+      "atlas_y": 721,
+      "width": 47,
+      "height": 46,
+      "label": 60,
+      "pixels": 1371
+    },
+    {
+      "name": "tile_060_66x183.png",
+      "atlas_x": 363,
+      "atlas_y": 1008,
+      "width": 66,
+      "height": 183,
+      "label": 61,
+      "pixels": 8216
+    },
+    {
+      "name": "tile_061_44x44.png",
+      "atlas_x": 453,
+      "atlas_y": 770,
+      "width": 44,
+      "height": 44,
+      "label": 62,
+      "pixels": 1188
+    },
+    {
+      "name": "tile_062_44x44.png",
+      "atlas_x": 497,
+      "atlas_y": 770,
+      "width": 44,
+      "height": 44,
+      "label": 63,
+      "pixels": 1188
+    },
+    {
+      "name": "tile_063_44x45.png",
+      "atlas_x": 39,
+      "atlas_y": 769,
+      "width": 44,
+      "height": 45,
+      "label": 64,
+      "pixels": 1184
+    },
+    {
+      "name": "tile_064_45x43.png",
+      "atlas_x": 82,
+      "atlas_y": 776,
+      "width": 45,
+      "height": 43,
+      "label": 65,
+      "pixels": 1188
+    },
+    {
+      "name": "tile_065_43x45.png",
+      "atlas_x": 184,
+      "atlas_y": 750,
+      "width": 43,
+      "height": 45,
+      "label": 67,
+      "pixels": 1382
+    },
+    {
+      "name": "tile_066_98x99.png",
+      "atlas_x": 203,
+      "atlas_y": 797,
+      "width": 98,
+      "height": 99,
+      "label": 68,
+      "pixels": 4208
+    },
+    {
+      "name": "tile_067_153x113.png",
+      "atlas_x": 137,
+      "atlas_y": 841,
+      "width": 153,
+      "height": 113,
+      "label": 69,
+      "pixels": 6304
+    },
+    {
+      "name": "tile_068_74x145.png",
+      "atlas_x": 622,
+      "atlas_y": 935,
+      "width": 74,
+      "height": 145,
+      "label": 70,
+      "pixels": 4557
+    },
+    {
+      "name": "tile_069_133x141.png",
+      "atlas_x": 750,
+      "atlas_y": 1260,
+      "width": 133,
+      "height": 141,
+      "label": 71,
+      "pixels": 10640
+    },
+    {
+      "name": "tile_070_75x139.png",
+      "atlas_x": 610,
+      "atlas_y": 1049,
+      "width": 75,
+      "height": 139,
+      "label": 72,
+      "pixels": 5223
+    },
+    {
+      "name": "tile_071_79x44.png",
+      "atlas_x": 244,
+      "atlas_y": 1004,
+      "width": 79,
+      "height": 44,
+      "label": 73,
+      "pixels": 2521
+    },
+    {
+      "name": "tile_072_53x51.png",
+      "atlas_x": 327,
+      "atlas_y": 670,
+      "width": 53,
+      "height": 51,
+      "label": 74,
+      "pixels": 1485
+    },
+    {
+      "name": "tile_073_96x46.png",
+      "atlas_x": 127,
+      "atlas_y": 795,
+      "width": 96,
+      "height": 46,
+      "label": 75,
+      "pixels": 2510
+    },
+    {
+      "name": "tile_074_48x46.png",
+      "atlas_x": 767,
+      "atlas_y": 668,
+      "width": 48,
+      "height": 46,
+      "label": 76,
+      "pixels": 1260
+    },
+    {
+      "name": "tile_075_102x72.png",
+      "atlas_x": 0,
+      "atlas_y": 1059,
+      "width": 102,
+      "height": 72,
+      "label": 77,
+      "pixels": 3858
+    },
+    {
+      "name": "tile_076_105x59.png",
+      "atlas_x": 269,
+      "atlas_y": 610,
+      "width": 105,
+      "height": 59,
+      "label": 78,
+      "pixels": 2903
+    },
+    {
+      "name": "tile_077_73x122.png",
+      "atlas_x": 796,
+      "atlas_y": 857,
+      "width": 73,
+      "height": 122,
+      "label": 79,
+      "pixels": 4183
+    },
+    {
+      "name": "tile_078_63x38.png",
+      "atlas_x": 0,
+      "atlas_y": 305,
+      "width": 63,
+      "height": 38,
+      "label": 80,
+      "pixels": 1589
+    },
+    {
+      "name": "tile_079_34x101.png",
+      "atlas_x": 667,
+      "atlas_y": 399,
+      "width": 34,
+      "height": 101,
+      "label": 81,
+      "pixels": 2595
+    },
+    {
+      "name": "tile_080_95x105.png",
+      "atlas_x": 791,
+      "atlas_y": 573,
+      "width": 95,
+      "height": 105,
+      "label": 82,
+      "pixels": 5726
+    },
+    {
+      "name": "tile_081_45x49.png",
+      "atlas_x": 542,
+      "atlas_y": 671,
+      "width": 45,
+      "height": 49,
+      "label": 83,
+      "pixels": 1248
+    },
+    {
+      "name": "tile_082_47x49.png",
+      "atlas_x": 65,
+      "atlas_y": 674,
+      "width": 47,
+      "height": 49,
+      "label": 84,
+      "pixels": 1250
+    },
+    {
+      "name": "tile_083_68x113.png",
+      "atlas_x": 710,
+      "atlas_y": 1184,
+      "width": 68,
+      "height": 113,
+      "label": 85,
+      "pixels": 4565
+    },
+    {
+      "name": "tile_084_81x178.png",
+      "atlas_x": 309,
+      "atlas_y": 1188,
+      "width": 81,
+      "height": 178,
+      "label": 86,
+      "pixels": 8629
+    },
+    {
+      "name": "tile_085_93x119.png",
+      "atlas_x": 569,
+      "atlas_y": 1281,
+      "width": 93,
+      "height": 119,
+      "label": 87,
+      "pixels": 4327
+    },
+    {
+      "name": "tile_086_79x74.png",
+      "atlas_x": 464,
+      "atlas_y": 591,
+      "width": 79,
+      "height": 74,
+      "label": 88,
+      "pixels": 2833
+    },
+    {
+      "name": "tile_087_52x52.png",
+      "atlas_x": 435,
+      "atlas_y": 665,
+      "width": 52,
+      "height": 52,
+      "label": 89,
+      "pixels": 1515
+    },
+    {
+      "name": "tile_088_97x117.png",
+      "atlas_x": 477,
+      "atlas_y": 1452,
+      "width": 97,
+      "height": 117,
+      "label": 90,
+      "pixels": 6623
+    },
+    {
+      "name": "tile_089_77x183.png",
+      "atlas_x": 661,
+      "atlas_y": 1042,
+      "width": 77,
+      "height": 183,
+      "label": 91,
+      "pixels": 8485
+    },
+    {
+      "name": "tile_090_45x48.png",
+      "atlas_x": 384,
+      "atlas_y": 670,
+      "width": 45,
+      "height": 48,
+      "label": 92,
+      "pixels": 1242
+    },
+    {
+      "name": "tile_091_67x47.png",
+      "atlas_x": 819,
+      "atlas_y": 668,
+      "width": 67,
+      "height": 47,
+      "label": 93,
+      "pixels": 1782
+    },
+    {
+      "name": "tile_092_40x40.png",
+      "atlas_x": 755,
+      "atlas_y": 810,
+      "width": 40,
+      "height": 40,
+      "label": 94,
+      "pixels": 1005
+    },
+    {
+      "name": "tile_093_86x125.png",
+      "atlas_x": 476,
+      "atlas_y": 814,
+      "width": 86,
+      "height": 125,
+      "label": 95,
+      "pixels": 4490
+    },
+    {
+      "name": "tile_094_138x150.png",
+      "atlas_x": 496,
+      "atlas_y": 937,
+      "width": 138,
+      "height": 150,
+      "label": 96,
+      "pixels": 9582
+    },
+    {
+      "name": "tile_095_118x138.png",
+      "atlas_x": 544,
+      "atlas_y": 1159,
+      "width": 118,
+      "height": 138,
+      "label": 97,
+      "pixels": 9710
+    },
+    {
+      "name": "tile_096_64x66.png",
+      "atlas_x": 205,
+      "atlas_y": 1292,
+      "width": 64,
+      "height": 66,
+      "label": 98,
+      "pixels": 2892
+    },
+    {
+      "name": "tile_097_52x95.png",
+      "atlas_x": 559,
+      "atlas_y": 1696,
+      "width": 52,
+      "height": 95,
+      "label": 99,
+      "pixels": 2327
+    },
+    {
+      "name": "tile_098_43x37.png",
+      "atlas_x": 624,
+      "atlas_y": 769,
+      "width": 43,
+      "height": 37,
+      "label": 100,
+      "pixels": 1198
+    },
+    {
+      "name": "tile_099_46x40.png",
+      "atlas_x": 25,
+      "atlas_y": 969,
+      "width": 46,
+      "height": 40,
+      "label": 101,
+      "pixels": 1618
+    },
+    {
+      "name": "tile_100_103x181.png",
+      "atlas_x": 284,
+      "atlas_y": 974,
+      "width": 103,
+      "height": 181,
+      "label": 103,
+      "pixels": 9896
+    },
+    {
+      "name": "tile_101_79x106.png",
+      "atlas_x": 652,
+      "atlas_y": 864,
+      "width": 79,
+      "height": 106,
+      "label": 104,
+      "pixels": 3183
+    },
+    {
+      "name": "tile_102_133x122.png",
+      "atlas_x": 457,
+      "atlas_y": 1566,
+      "width": 133,
+      "height": 122,
+      "label": 105,
+      "pixels": 8409
+    },
+    {
+      "name": "tile_103_46x46.png",
+      "atlas_x": 231,
+      "atlas_y": 751,
+      "width": 46,
+      "height": 46,
+      "label": 106,
+      "pixels": 1515
+    },
+    {
+      "name": "tile_104_106x130.png",
+      "atlas_x": 695,
+      "atlas_y": 764,
+      "width": 106,
+      "height": 130,
+      "label": 107,
+      "pixels": 5022
+    },
+    {
+      "name": "tile_105_77x107.png",
+      "atlas_x": 24,
+      "atlas_y": 898,
+      "width": 77,
+      "height": 107,
+      "label": 108,
+      "pixels": 3135
+    },
+    {
+      "name": "tile_106_105x73.png",
+      "atlas_x": 413,
+      "atlas_y": 1294,
+      "width": 105,
+      "height": 73,
+      "label": 109,
+      "pixels": 4699
+    },
+    {
+      "name": "tile_107_66x71.png",
+      "atlas_x": 543,
+      "atlas_y": 867,
+      "width": 66,
+      "height": 71,
+      "label": 110,
+      "pixels": 2473
+    },
+    {
+      "name": "tile_108_147x80.png",
+      "atlas_x": 354,
+      "atlas_y": 1337,
+      "width": 147,
+      "height": 80,
+      "label": 111,
+      "pixels": 5476
+    },
+    {
+      "name": "tile_109_127x113.png",
+      "atlas_x": 201,
+      "atlas_y": 1348,
+      "width": 127,
+      "height": 113,
+      "label": 112,
+      "pixels": 7342
+    },
+    {
+      "name": "tile_110_102x77.png",
+      "atlas_x": 600,
+      "atlas_y": 1500,
+      "width": 102,
+      "height": 77,
+      "label": 113,
+      "pixels": 3145
+    },
+    {
+      "name": "tile_111_64x106.png",
+      "atlas_x": 405,
+      "atlas_y": 1548,
+      "width": 64,
+      "height": 106,
+      "label": 114,
+      "pixels": 5066
+    },
+    {
+      "name": "tile_112_51x51.png",
+      "atlas_x": 700,
+      "atlas_y": 713,
+      "width": 51,
+      "height": 51,
+      "label": 115,
+      "pixels": 1536
+    },
+    {
+      "name": "tile_113_104x146.png",
+      "atlas_x": 649,
+      "atlas_y": 1222,
+      "width": 104,
+      "height": 146,
+      "label": 116,
+      "pixels": 7528
+    },
+    {
+      "name": "tile_114_85x86.png",
+      "atlas_x": 517,
+      "atlas_y": 1562,
+      "width": 85,
+      "height": 86,
+      "label": 117,
+      "pixels": 4709
+    },
+    {
+      "name": "tile_115_102x178.png",
+      "atlas_x": 718,
+      "atlas_y": 1592,
+      "width": 102,
+      "height": 178,
+      "label": 118,
+      "pixels": 10382
+    },
+    {
+      "name": "tile_116_39x158.png",
+      "atlas_x": 0,
+      "atlas_y": 732,
+      "width": 39,
+      "height": 158,
+      "label": 119,
+      "pixels": 3302
+    },
+    {
+      "name": "tile_117_104x70.png",
+      "atlas_x": 25,
+      "atlas_y": 1005,
+      "width": 104,
+      "height": 70,
+      "label": 120,
+      "pixels": 3762
+    },
+    {
+      "name": "tile_118_105x81.png",
+      "atlas_x": 77,
+      "atlas_y": 1025,
+      "width": 105,
+      "height": 81,
+      "label": 121,
+      "pixels": 5006
+    },
+    {
+      "name": "tile_119_180x207.png",
+      "atlas_x": 256,
+      "atlas_y": 1421,
+      "width": 180,
+      "height": 207,
+      "label": 122,
+      "pixels": 14508
+    },
+    {
+      "name": "tile_120_57x45.png",
+      "atlas_x": 609,
+      "atlas_y": 886,
+      "width": 57,
+      "height": 45,
+      "label": 123,
+      "pixels": 1874
+    },
+    {
+      "name": "tile_121_59x77.png",
+      "atlas_x": 300,
+      "atlas_y": 851,
+      "width": 59,
+      "height": 77,
+      "label": 124,
+      "pixels": 2324
+    },
+    {
+      "name": "tile_122_44x74.png",
+      "atlas_x": 752,
+      "atlas_y": 850,
+      "width": 44,
+      "height": 74,
+      "label": 125,
+      "pixels": 2119
+    },
+    {
+      "name": "tile_123_49x46.png",
+      "atlas_x": 99,
+      "atlas_y": 975,
+      "width": 49,
+      "height": 46,
+      "label": 126,
+      "pixels": 1598
+    },
+    {
+      "name": "tile_124_149x229.png",
+      "atlas_x": 676,
+      "atlas_y": 928,
+      "width": 149,
+      "height": 229,
+      "label": 127,
+      "pixels": 14203
+    },
+    {
+      "name": "tile_125_100x94.png",
+      "atlas_x": 649,
+      "atlas_y": 1329,
+      "width": 100,
+      "height": 94,
+      "label": 128,
+      "pixels": 3929
+    },
+    {
+      "name": "tile_126_69x71.png",
+      "atlas_x": 283,
+      "atlas_y": 1331,
+      "width": 69,
+      "height": 71,
+      "label": 129,
+      "pixels": 2542
+    },
+    {
+      "name": "tile_127_157x131.png",
+      "atlas_x": 21,
+      "atlas_y": 1375,
+      "width": 157,
+      "height": 131,
+      "label": 130,
+      "pixels": 9600
+    },
+    {
+      "name": "tile_128_58x132.png",
+      "atlas_x": 828,
+      "atlas_y": 931,
+      "width": 58,
+      "height": 132,
+      "label": 131,
+      "pixels": 4114
+    },
+    {
+      "name": "tile_129_58x86.png",
+      "atlas_x": 120,
+      "atlas_y": 1474,
+      "width": 58,
+      "height": 86,
+      "label": 132,
+      "pixels": 2875
+    },
+    {
+      "name": "tile_130_65x40.png",
+      "atlas_x": 381,
+      "atlas_y": 970,
+      "width": 65,
+      "height": 40,
+      "label": 133,
+      "pixels": 1732
+    },
+    {
+      "name": "tile_131_94x41.png",
+      "atlas_x": 519,
+      "atlas_y": 826,
+      "width": 94,
+      "height": 41,
+      "label": 134,
+      "pixels": 2108
+    },
+    {
+      "name": "tile_132_53x56.png",
+      "atlas_x": 429,
+      "atlas_y": 1494,
+      "width": 53,
+      "height": 56,
+      "label": 135,
+      "pixels": 2196
+    },
+    {
+      "name": "tile_133_108x86.png",
+      "atlas_x": 45,
+      "atlas_y": 1308,
+      "width": 108,
+      "height": 86,
+      "label": 136,
+      "pixels": 4387
+    },
+    {
+      "name": "tile_134_127x171.png",
+      "atlas_x": 37,
+      "atlas_y": 814,
+      "width": 127,
+      "height": 171,
+      "label": 137,
+      "pixels": 6642
+    },
+    {
+      "name": "tile_135_132x156.png",
+      "atlas_x": 123,
+      "atlas_y": 1354,
+      "width": 132,
+      "height": 156,
+      "label": 138,
+      "pixels": 6369
+    },
+    {
+      "name": "tile_136_150x221.png",
+      "atlas_x": 736,
+      "atlas_y": 0,
+      "width": 150,
+      "height": 221,
+      "label": 140,
+      "pixels": 12271
+    },
+    {
+      "name": "tile_137_75x98.png",
+      "atlas_x": 262,
+      "atlas_y": 1260,
+      "width": 75,
+      "height": 98,
+      "label": 141,
+      "pixels": 3813
+    },
+    {
+      "name": "tile_138_89x201.png",
+      "atlas_x": 513,
+      "atlas_y": 1265,
+      "width": 89,
+      "height": 201,
+      "label": 142,
+      "pixels": 8464
+    },
+    {
+      "name": "tile_139_62x66.png",
+      "atlas_x": 588,
+      "atlas_y": 1430,
+      "width": 62,
+      "height": 66,
+      "label": 143,
+      "pixels": 2740
+    },
+    {
+      "name": "tile_140_95x101.png",
+      "atlas_x": 553,
+      "atlas_y": 1491,
+      "width": 95,
+      "height": 101,
+      "label": 144,
+      "pixels": 4421
+    },
+    {
+      "name": "tile_141_83x67.png",
+      "atlas_x": 287,
+      "atlas_y": 561,
+      "width": 83,
+      "height": 67,
+      "label": 145,
+      "pixels": 2823
+    },
+    {
+      "name": "tile_142_104x72.png",
+      "atlas_x": 410,
+      "atlas_y": 1364,
+      "width": 104,
+      "height": 72,
+      "label": 146,
+      "pixels": 3419
+    },
+    {
+      "name": "tile_143_60x96.png",
+      "atlas_x": 640,
+      "atlas_y": 1423,
+      "width": 60,
+      "height": 96,
+      "label": 147,
+      "pixels": 2881
+    },
+    {
+      "name": "tile_144_35x60.png",
+      "atlas_x": 0,
+      "atlas_y": 100,
+      "width": 35,
+      "height": 60,
+      "label": 149,
+      "pixels": 1173
+    },
+    {
+      "name": "tile_145_62x59.png",
+      "atlas_x": 430,
+      "atlas_y": 1436,
+      "width": 62,
+      "height": 59,
+      "label": 150,
+      "pixels": 2722
+    },
+    {
+      "name": "tile_146_57x120.png",
+      "atlas_x": 419,
+      "atlas_y": 852,
+      "width": 57,
+      "height": 120,
+      "label": 151,
+      "pixels": 2999
+    },
+    {
+      "name": "tile_147_101x80.png",
+      "atlas_x": 103,
+      "atlas_y": 1276,
+      "width": 101,
+      "height": 80,
+      "label": 152,
+      "pixels": 3585
+    },
+    {
+      "name": "tile_148_52x42.png",
+      "atlas_x": 380,
+      "atlas_y": 718,
+      "width": 52,
+      "height": 42,
+      "label": 153,
+      "pixels": 1203
+    },
+    {
+      "name": "tile_149_77x139.png",
+      "atlas_x": 342,
+      "atlas_y": 835,
+      "width": 77,
+      "height": 139,
+      "label": 154,
+      "pixels": 4298
+    },
+    {
+      "name": "tile_150_56x99.png",
+      "atlas_x": 594,
+      "atlas_y": 1327,
+      "width": 56,
+      "height": 99,
+      "label": 157,
+      "pixels": 2775
+    },
+    {
+      "name": "tile_151_53x112.png",
+      "atlas_x": 0,
+      "atlas_y": 1329,
+      "width": 53,
+      "height": 112,
+      "label": 158,
+      "pixels": 2722
+    },
+    {
+      "name": "tile_152_83x43.png",
+      "atlas_x": 749,
+      "atlas_y": 1395,
+      "width": 83,
+      "height": 43,
+      "label": 159,
+      "pixels": 2068
+    },
+    {
+      "name": "tile_153_82x68.png",
+      "atlas_x": 677,
+      "atlas_y": 1401,
+      "width": 82,
+      "height": 68,
+      "label": 160,
+      "pixels": 2344
+    },
+    {
+      "name": "tile_154_74x134.png",
+      "atlas_x": 730,
+      "atlas_y": 1429,
+      "width": 74,
+      "height": 134,
+      "label": 161,
+      "pixels": 3645
+    }
+  ]
+}

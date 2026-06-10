@@ -29,3 +29,7 @@ build/
 
 # Logs
 *.log
+
+# Raw APK texture dumps (500MB+) — keep the extraction OUTPUT (data/tile_sprites/), not the source dumps
+data/sc_textures/
+logs/

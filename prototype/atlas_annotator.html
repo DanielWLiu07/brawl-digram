@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>atlas annotator · brawl-digram</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin:0; font-family:-apple-system,system-ui,sans-serif; background:#0a0f17; color:#dde; display:flex; height:100vh; overflow:hidden; }
+  #side { width:300px; flex:0 0 300px; padding:14px; background:#0e1623; border-right:1px solid #233; overflow-y:auto; }
+  #stage { flex:1; overflow:auto; position:relative; padding:16px; background:#0a0f17 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><rect width="20" height="20" fill="%23111"/><rect width="10" height="10" fill="%23161616"/><rect x="10" y="10" width="10" height="10" fill="%23161616"/></svg>') 0 0; }
+  h1 { margin:0 0 4px; font-size:15px; }
+  .hint { font-size:11px; color:#789; line-height:1.5; margin:0 0 12px; }
+  label { display:block; font-size:11px; text-transform:uppercase; letter-spacing:.04em; color:#8aa; margin:10px 0 4px; }
+  select, input, button { width:100%; padding:6px 8px; background:#16202f; color:#dde; border:1px solid #2a3b52; border-radius:5px; font:inherit; font-size:12px; box-sizing:border-box; }
+  button { cursor:pointer; }
+  button.primary { background:#5fd; color:#001; border-color:#5fd; font-weight:bold; }
+  button.danger { border-color:#a33; }
+  #rectList { margin-top:8px; max-height:35vh; overflow-y:auto; }
+  #rectList .row { display:flex; gap:6px; align-items:center; padding:5px 6px; border-radius:4px; font-size:11px; }
+  #rectList .row:hover { background:#13202f; }
+  #rectList .row.sel { background:#1d3a52; }
+  #rectList .row .nm { flex:1; }
+  #rectList .row .coord { color:#789; font-size:10px; }
+  #rectList .row button { width:auto; padding:1px 5px; font-size:10px; background:transparent; border:0; color:#a55; }
+  #atlas-wrap { position:relative; display:inline-block; }
+  #atlas-wrap img { display:block; image-rendering:pixelated; }
+  #overlay { position:absolute; inset:0; pointer-events:none; }
+  #overlay .rect { position:absolute; border:1px solid #5fd; background:rgba(95,213,255,0.18); }
+  #overlay .rect.sel { border-color:#f6c64a; background:rgba(246,198,74,0.25); }
+  #overlay .label { position:absolute; transform:translateY(-100%); font-size:10px; color:#5fd; background:#0a0f17cc; padding:1px 4px; border-radius:2px; white-space:nowrap; }
+  #drawing { position:absolute; border:1px dashed #5fd; background:rgba(95,213,255,0.1); pointer-events:none; }
+  pre.out { background:#000; padding:10px; border-radius:5px; max-height:30vh; overflow:auto; font-size:10px; margin-top:8px; color:#cde; }
+</style>
+</head><body>
+
+<div id="side">
+  <h1>atlas annotator</h1>
+  <p class="hint"><b>Drag</b> a box around each sprite on the atlas. Type a name and press Enter. Selections persist in localStorage. Export the list as JSON → I run a crop script that produces one PNG per box.</p>
+
+  <label>Atlas (under data/sc_textures/)</label>
+  <select id="atlasSel"></select>
+
+  <label>New rectangle name</label>
+  <input id="nameInput" placeholder="(draw first, then name)" autocomplete="off"/>
+
+  <label>Rectangles</label>
+  <div id="rectList"></div>
+
+  <button class="primary" id="exportBtn">Copy JSON</button>
+  <button class="danger" id="clearBtn">Clear all</button>
+  <pre class="out" id="out" hidden></pre>
+</div>
+
+<div id="stage">
+  <div id="atlas-wrap">
+    <img id="atlas" alt=""/>
+    <div id="overlay"></div>
+    <div id="drawing" hidden></div>
+  </div>
+</div>
+
+<script>
+const STORE_PREFIX = "brawl-digram-annot-";
+const atlasSel = document.getElementById("atlasSel");
+const nameInput = document.getElementById("nameInput");
+const rectList = document.getElementById("rectList");
+const atlas = document.getElementById("atlas");
+const overlay = document.getElementById("overlay");
+const drawing = document.getElementById("drawing");
+
+let rects = [];      // {name, x, y, w, h}
+let selectedId = null;
+let nextId = 1;
+let currentAtlas = null;
+
+const storeKey = () => STORE_PREFIX + (currentAtlas || "_");
+const load = () => { try { return JSON.parse(localStorage.getItem(storeKey())) || []; } catch { return []; } };
+const save = () => localStorage.setItem(storeKey(), JSON.stringify(rects));
+
+// Build atlas list — let me fetch a known one to start
+async function loadAtlasList() {
+  // We don't have a directory listing endpoint; ask the user to know the filename,
+  // OR hardcode the common ones. For now: pre-populate with extracted tile atlases.
+  const known = ["level_0_886x1792.png", "level_1_443x896.png",
+                 "characters_0_2048x2048.png", "ui_0_2048x2048.png"];
+  for (const f of known) {
+    const ok = await fetch(`/data/sc_textures/${f}`, {method:"HEAD"}).then(r => r.ok).catch(()=>false);
+    if (ok) {
+      const o = document.createElement("option");
+      o.value = f; o.textContent = f;
+      atlasSel.appendChild(o);
+    }
+  }
+  // If none known matched, try fetching a manifest-style endpoint
+  if (!atlasSel.children.length) {
+    // Fallback: scan a hardcoded probable name from the level.sc extraction
+    const o = document.createElement("option");
+    o.value = "level_0_886x1792.png";
+    o.textContent = "level_0_886x1792.png (default)";
+    atlasSel.appendChild(o);
+  }
+  selectAtlas(atlasSel.value);
+}
+
+function selectAtlas(name) {
+  currentAtlas = name;
+  atlas.src = `/data/sc_textures/${name}`;
+  atlas.onload = () => {
+    rects = load();
+    nextId = rects.reduce((m, r) => Math.max(m, r.id || 0), 0) + 1;
+    selectedId = null;
+    renderRects();
+  };
+}
+
+atlasSel.addEventListener("change", () => selectAtlas(atlasSel.value));
+
+// Rect rendering
+function renderRects() {
+  overlay.innerHTML = "";
+  rectList.innerHTML = "";
+  for (const r of rects) {
+    const el = document.createElement("div");
+    el.className = "rect" + (r.id === selectedId ? " sel" : "");
+    el.style.cssText = `left:${r.x}px;top:${r.y}px;width:${r.w}px;height:${r.h}px`;
+    overlay.appendChild(el);
+    if (r.name) {
+      const lab = document.createElement("div");
+      lab.className = "label";
+      lab.style.cssText = `left:${r.x}px;top:${r.y}px`;
+      lab.textContent = r.name;
+      overlay.appendChild(lab);
+    }
+    // List row
+    const row = document.createElement("div");
+    row.className = "row" + (r.id === selectedId ? " sel" : "");
+    row.innerHTML = `<span class="nm">${r.name || "<unnamed>"}</span>
+                     <span class="coord">@${r.x},${r.y} ${r.w}×${r.h}</span>
+                     <button data-id="${r.id}">✕</button>`;
+    row.addEventListener("click", (e) => {
+      if (e.target.tagName === "BUTTON") {
+        rects = rects.filter(x => x.id !== r.id);
+        save(); renderRects(); return;
+      }
+      selectedId = r.id;
+      nameInput.value = r.name || "";
+      nameInput.focus();
+      renderRects();
+    });
+    rectList.appendChild(row);
+  }
+}
+
+// Drag-to-draw
+let dragging = null;  // {startX, startY}
+atlas.addEventListener("mousedown", (e) => {
+  const rect = atlas.getBoundingClientRect();
+  dragging = { startX: e.clientX - rect.left, startY: e.clientY - rect.top };
+});
+window.addEventListener("mousemove", (e) => {
+  if (!dragging) return;
+  const rect = atlas.getBoundingClientRect();
+  const x = Math.min(dragging.startX, e.clientX - rect.left);
+  const y = Math.min(dragging.startY, e.clientY - rect.top);
+  const w = Math.abs(e.clientX - rect.left - dragging.startX);
+  const h = Math.abs(e.clientY - rect.top - dragging.startY);
+  drawing.style.cssText = `left:${x}px;top:${y}px;width:${w}px;height:${h}px`;
+  drawing.hidden = w < 3 || h < 3;
+});
+window.addEventListener("mouseup", (e) => {
+  if (!dragging) return;
+  const rect = atlas.getBoundingClientRect();
+  const x = Math.round(Math.min(dragging.startX, e.clientX - rect.left));
+  const y = Math.round(Math.min(dragging.startY, e.clientY - rect.top));
+  const w = Math.round(Math.abs(e.clientX - rect.left - dragging.startX));
+  const h = Math.round(Math.abs(e.clientY - rect.top - dragging.startY));
+  drawing.hidden = true;
+  dragging = null;
+  if (w >= 5 && h >= 5) {
+    const id = nextId++;
+    rects.push({ id, name: "", x, y, w, h });
+    selectedId = id;
+    nameInput.value = "";
+    nameInput.focus();
+    save();
+    renderRects();
+  }
+});
+
+nameInput.addEventListener("keydown", (e) => {
+  if (e.key !== "Enter") return;
+  const r = rects.find(x => x.id === selectedId);
+  if (!r) return;
+  r.name = nameInput.value.trim();
+  save();
+  renderRects();
+  nameInput.select();
+});
+
+document.getElementById("exportBtn").addEventListener("click", () => {
+  const payload = { atlas: currentAtlas, rects: rects.map(r => ({ name: r.name, x: r.x, y: r.y, w: r.w, h: r.h })) };
+  const text = JSON.stringify(payload, null, 2);
+  navigator.clipboard.writeText(text).catch(() => {});
+  const out = document.getElementById("out");
+  out.hidden = false; out.textContent = text;
+});
+document.getElementById("clearBtn").addEventListener("click", () => {
+  if (confirm("Clear all rectangles for this atlas?")) {
+    rects = []; save(); renderRects();
+  }
+});
+
+loadAtlasList();
+</script>
+</body></html>
