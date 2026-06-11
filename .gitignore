@@ -33,3 +33,6 @@ build/
 # Raw APK texture dumps (500MB+) — keep the extraction OUTPUT (data/tile_sprites/), not the source dumps
 data/sc_textures/
 logs/
+
+# Liquipedia raw wikitext cache (regenerable via data/fetch_liquipedia_drafts.py)
+data/liquipedia_cache/
