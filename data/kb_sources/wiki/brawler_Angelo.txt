@@ -1,0 +1,30 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Angelo
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+== Tips ==
+===Game Modes and Maps===
+* Angelo, like other shooters, is very effective in open maps. In modes like [[Bounty]], [[Wipeout]], and [[Takedown]], Angelo is able to shoot from afar and deal devastating damage with their attacks and Super. This makes them a viable pick in such modes with suitable maps.
+* Angelo's Trait to walk on water makes them a good choice on maps with a lot of water. Similar to [[Eve]], they are able to evade some damage on water (i.e. short-ranged Brawlers), and combined with their Flow Star Power, their ability to dodge shots is greatly increased.
+
+===Recommended Build===
+* Angelo's Stinging Flight Gadget can be used in a variety of situations: to escape from tanks and assassins, to get close to throwers or enemies on low-health, or cross a certain area. This makes it a viable option most of the time.
+* Master Fletcher can be used as a surprise attack to enemies hiding behind walls. However, the use of this Gadget is limited and doesn't provide as much value as Stinging Flight in most cases.
+* Empower can greatly increase Angelo's survivability and stability in combat. Combined with their Hypercharge, they are able to heal themself constantly and deal increased damage to enemies. This makes it valuable in games where there is no healer in the team or when their second Star Power is ineffective.
+* Although Flow has a use case in maps with large areas of water such as [[Canal Grande]], it is usually heavily outclassed by the consistency and effectiveness of the healing from Empower.
+
+===Strategies===
+*When the enemy walks in a zig-zag pattern to dodge Angelo's shots, consistent damage is more important than dealing high damage, so firing shots charged at about 45% to 55% will help keep their damage output consistent and prevent enemies from healing.
+*When facing enemies with low health, Angelo can get closer to make sure their fully charged shot hits to defeat the enemy. It is not always necessary to stay very far since their health is fairly high when compared with other marksman Brawlers.
+*To help teammates finish off enemies, you may get close to enemies to fire their fully charged shot and jump away using their Stinging Flight Gadget.
+*When facing an enemy Angelo, walk in a zig-zag pattern with sudden stops so that the enemy will be less likely to hit you.
+*When approaching a target, don't aim directly at them as they may anticipate the direction of your shot. As such, try to either aim backwards before snapping forwards or spin about, with the latter being effective at keeping teams of enemies on edge.
+*When using the Master Fletcher Gadget, fully charge your shot, and then activate the Gadget right before releasing the shot, as this can catch many people off guard, which makes it very hard to dodge.
+*In [[Heist]], you can use a Stinging Flight Gadget to go on to the safe, and then use a Super which will deal 8000 damage, which can be game-changing in close games.
+
+=== Other ===
+
+* Angelo's attack does not have to be fully charged to deal significant damage. Charging it up to around 70% will be sufficient enough to threaten enemies in order to stay at long range.
+* As Angelo's fully charged shot can deal high damage and even defeat Brawlers with one shot (especially paired with the Super), you should pay attention to when their shot changes in color in order to dodge effectively.
+* Angelo can leave their Super's area of effect for a very small amount of time and still have poisoned arrows. Same thing for when the duration ends.
+* During the [[Godzilla Egg Breakers Event|Mutation]] event, Angelo could shoot three arrows at once, and hitting a fully charged shot at point blank can do devastating damage.

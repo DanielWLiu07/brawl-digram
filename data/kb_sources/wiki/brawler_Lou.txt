@@ -1,0 +1,34 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Lou
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+=== Game Modes and Maps ===
+
+* Lou's Frost can freeze the enemy team, in which when playing certain 3v3 modes like [[Gem Grab]], it can give Lou and his team an advantage. In Gem Grab, he can freeze the enemy Gem Carrier, and the Gem Carrier will be prone to defeat. With his Super (on the Gem mine) and his Supercool Star Power, it will become riskier for the enemy team to collect Gems while allowing Lou and his allies to collect Gems with ease because enemies are more vulnerable to being stunned and defeated while on the Gem mine.
+*His Super can completely cover zones in [[Hot Zone]]. He can use this to his and team's advantage as enemies can't enter the hot zones without slowing down and being quickly defeated with ease from Lou and his teammates.
+*Lou can be powerful in [[Brawl Ball]]/[[Basket Brawl]]/[[Trophy Thieves]]/[[Hold the Trophy]] because his attack stuns enemies, making them drop the ball/trophy with 3 shots. His Super can be used to deny access to the ball/trophy, hampering enemies from retrieving it due to them slipping if they attempt to do so.
+*In Special Events such as [[Boss Fight]], [[Robo Rumble]] or [[Super City Rampage]], similarly to [[Bibi]], Lou can apply Frost and stun the robots/Boss/Mega Monster and cancel out an attack being performed, and with Lou's fast reload speed and unload speed, he can do this consistently. With his Super, he can also slow the respective enemies down, as it'll struggle to move or launch an attack. These few extra seconds from stunning the Boss can affect the outcome of the match drastically.
+**It's also a good strategy to save your ammo for the Boss's lasers and charges in Boss Fight, an angry Mega Monster in Super City Rampage, or when your teammate is in danger of being defeated by either of the above enemies. You can use your Supercool Star Power and Cryo Syrup Gadget as well to get a quick stun on the Boss/monster. In any case, this allows your teammates to heal up and get back to the fight. However, try not to wait too long for the right moment to stun the Boss/Monster as, with all ammo reloaded, you will be wasting valuable time you can be using dealing extra damage to the enemy, and every second is crucial in these game modes.
+*Lou is also useful in [[Siege]], as the stunning method also works when defending or offending. He can stun the enemy Siege Robot and prevent it from moving. He can also stun the enemy IKE, allowing teammates to destroy the IKE with ease. In addition, on maps that have obstacles in the middle lane of the IKE zone, Lou's Super can be used to trap the Siege Robot in the obstacle until his Super runs out.
+*Despite his stuns being ineffective against the Boss, Lou is still decent in [[Big Game]] as a Hunter because he can keep dealing damage to the Boss with his long range, fast reload speed, Super, and reliable damage. He is more useful as the Big Boss, as he can repeatedly stun the Hunters and prevent them from attacking him. He can also use his Super to slow down grouped-up enemies. Coupled with his fast reload speed, his attacks, and his Super, he can prove devastating to the Hunters.
+
+=== Recommended Build ===
+
+* Lou should use his Ice Block Gadget mainly to avoid high-damaging projectiles, like the Supers of [[Nani]], [[Tick]], [[Mandy]], and [[Dynamike]], or the potentially deadly long-range projectiles of the Boss in Boss Fight if Lou or his teammates are low on health and need to escape, or if Lou is the last teammate alive, and not to use it with low-damaging projectiles or melee attacks, because he is immobile during the Gadget's usage.
+*Lou's Ice Block Gadget can also be used very effectively against ambushers like heavyweights such as [[Bull]], [[El Primo]], and [[Darryl]], and assassins such as [[Leon]], [[Buzz]], and [[Edgar]], because these Brawlers rely on their burst damage and will therefore unload their attacks very quickly and at once. When you are ambushed by such Brawlers, use your Gadget the moment they start attacking. They will waste all their ammo on you while you take no damage, and if the Brawler doesn't reload very fast (which is most of such Brawlers except El Primo, Frank, Bibi, [[Nita]], [[Rosa]], [[Draco]], and Edgar), you will have an ammo advantage to quickly defeat them or stun them so that you can escape.
+*Lou's Frost is already devastating to enemies because it stuns them, but with his Cryo Syrup Gadget and Hypothermia Star Power, Lou can make his Super more deadly as Cryo Syrup can either freeze them instantly, leaving them vulnerable to Lou or teammates, or to increase their Frost high enough such that Hypothermia's damage debuff is significant.
+*Lou's Hypothermia Star Power reduces damage dealt by frozen enemies. This also works on Boss Fight Robots, and Big Game Bosses, effectively increasing his team's survivability.
+*Using Lou's Ice Block gadget is little to none use when facing stun attacks such as [[Frank]]'s and Buzz's Super, [[Dynamike]]'s Satchel Charge Gadget, [[Fang]]'s Roundhouse Kick Gadget, and [[Bo]]'s Snare a Bear Star Power as it stuns you afterwards.
+
+=== Strategies ===
+
+* When escaping an enemy Lou's Super, if possible, it's almost always better to turn lightly, up to 90 degrees, instead of making a U-turn as the deceleration would be limited by Lou's Super.
+
+=== Other ===
+*Since his Super makes enemies slow down and makes maneuvering harder, enemies will attempt to escape by moving in the same direction, which makes attacks easier to hit and enemy movement to be predictable. With his Supercool Star Power, this is better justified and is more frivolous to enemies, because if they're stacked with the attacks and Super, they'll be quickly stunned and defeated, not to mention they'll also have trouble maneuvering. Additively, the more speed a Brawler has, the more struggle they have changing directions in Lou's Super. This makes Lou an ideal counter to speedy Brawlers like tanks, assassins, and [[Max]].
+*Lou has a great synergy with Edgar and other close-ranged Brawlers. Lou can stun and slow the enemies with his attack and Super (more effective with his Supercool Star Power), and the respective close-ranged Brawler can jump onto or ambush the affected enemies and quickly defeat them.
+*Lou can stun enemies easily with 3 shots, which is useful in [[Showdown]], [[Duo Showdown]], [[Bounty]], or [[Lone Star]], because he can quickly defeat enemies or quickly escape if he's in danger.
+*When fighting Brawlers such as Edgar or El Primo, try to get at least 1/3 of the gauge filled up considering you use Ice Block as soon as Edgar or El Primo jumps, that way Lou's slow unleash speed can freeze the enemy whole.
+{{Clr}}

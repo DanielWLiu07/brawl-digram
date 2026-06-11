@@ -1,0 +1,16 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Pierce
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+* Pierce's unique mechanics reward consistency in hitting your shots. As such, play conservatively until you get your Super, which will allow you to get lots of shells that allow for a much more aggressive playstyle. 
+** Alternatively, you can play a much more aggressive and close-ranged role to secure shots more easily, though keep in mind that despite his relatively high DPS, Pierce lacks the health to deal with typical aggressive Brawlers.
+*Collect the shells (or use Bottomless Mags Gadget) just after you use the last ammo so the shell gives you the yellow ammo that deals a lot more damage, which increases their effectiveness.
+*Pierce's fairly low damage when compared to other Marksmen and his high-risk-high-reward playstyle mean that he tends to be outmatched by other snipers in long-ranged maps. As such, play him in medium-ranged maps, where he's able to bully shorter-ranged brawlers that appear there more often.
+*Sometimes, it's more effective to keep only one ammo in Pierce's clip so that he can deal bonus damage. This is especially so when he's using his Mission: Swimpossible Star Power, which is one of his only ways to defend himself against aggressive Brawlers.
+*If you're fighting aggressive Brawlers, keep a cache of shells near you at all times: when approached, walk into the cache to overwhelm your attacker with shots. Keep in mind that the shells have to be renewed frequently since they despawn after some amount of time.
+*Pay attention to where you're standing: Pierce's shells may sometimes drop behind walls - the direction the shells drop is random. It might make it a hassle for him to pick them up and often cost him precious time.
+*When fighting against Pierce with a Brawler that possesses area control abilities, lay hazards near any shells near him: as Pierce is very reliant on these shells, most players will often risk picking up the shells. For Pierce players, be aware of your surroundings and avoid recklessly picking up shells especially on low health, since Pierce doesn't have much to begin with.
+*Ironically, Pierce doesn't really have any proper piercing attacks in his kit, as his shell projectiles disappear upon hitting their chosen target. As such, make it your priority to target spawner Brawlers as their pets can make you waste ammo and prevent you from loading shells, as well as shield their owners by making the attacks target them.
+*Pierce's shots drop shells when hitting base bots in brawl arena, allowing him to clear them very efficiently.

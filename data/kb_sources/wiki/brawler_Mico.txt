@@ -1,0 +1,21 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Mico
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips ==
+*Use your jumps sparingly. Mico's reload speed is very slow, so avoid wasting too much ammo while using your attack for mobility. Try not to burst down all your ammo, and instead time your attacks with those of your target's.
+*To optimise the usage of Clipping Scream Gadget, jump directly onto opponents before using it, ensuring that all 3 projectiles hit. While this Gadget's slow should buy you time to escape, ensure to keep at least 1 ammo to escape.
+*You can also use Mico's Clipping Scream to slow down melee Brawlers trying to chase you down, allowing you to not have to use his main attack to jump away.
+*When engaging other Micos, it may be better to auto-aim right on top of them to deal damage. This is because many Mico confrontations will likely result in both parties trying to attack each other simultaneously and as such, it may be better to dodge at the last second and attack your opponent.
+*Keep in mind that Mico's Super slows down as it locks on, so try to corner Brawlers you target before you strike.
+* Mico's health is not extremely high and the 1 second delay to execute his Super leaves him vulnerable to defeat. As such, take advantage of the 6 second delay and use your Super behind cover before tracking your target.
+*Thanks to Mico's long airtime during his Super, he can use it similarly to [[Janet]]'s Super in Gem Grab, escaping from opponents during the countdown as well as recovering in the air.
+*When engaging assassins, ensure you have at least one ammo to disengage. This is because, Mico lacks any real options for dealing high burst damage or recovering health, meaning that without his Clipping Scream Gadget, Mico cannot escape effectively and will likely be defeated.
+*Thanks to Mico's small damage radius, train to anticipate enemy movement, corner enemies into smaller bundles or use a more ambush-oriented fighting style. The latter style is best paired with his Monkey Business Star Power as it prevents Brawlers with slow reload from fighting back, especially after confronting other Brawlers.
+*Thanks to the long time in the air that Mico's Super possesses, using the Hypercharge and immediately using your Super would cause the Hypercharge to be wasted. The Hypercharged Super is less impactful in relation to other Hypercharges, so using the Hypercharge as a pure stat buff for attacks is a good idea. Landing on an opponent, and then activating Hypercharge to quickly defeat them is a good strategy.
+*Unlike other Brawlers with similar attack-boosting bars, Mico's Monkey Business bar recharges regardless of whether he’s attacking or not. As such, it’s recommended for Mico players to attack as soon as possible their bar is full, allowing for possible team wipes when Mico recharges during his attack.
+*Mico's attack damage is done a frame before the jump ends, making him immune to immediate damage retaliation from the likes of [[Jacky]]'s Counter Crush, [[Nani]]'s Return to Sender, or [[Meg]]'s Heavy Metal Star Power. This applies to knockbacks as well, meaning Mico can damage enemies attempting to hide inside [[Gale]]'s Twister Gadget.
+*Similar to [[Buzz]]'s Reserve Buoy Gadget, Presto can be used as a kill confirm option to counteract Mico's short range more effectively than Clipping Scream due to Mico's main attack dealing more damage. Unlike most Gadgets that buff a Brawlers main attack however, Presto does not show a Gadget symbol above him, making it a great surprise option at practically any time.
+*Using the Record Smash Star Power, Mico can deal immense amounts of damage to the [[Heist]] safe and Power Cube boxes.
+*If you are going to use Monkey Business Star Power, use one attack just before the bar fills so you can approach the enemy and activate your ammo stealing ability, which makes up the ammo you used to approach the enemy. Alternatively, you can use Presto Gadget.
+*Don't go against enemies that can deal constant damage with very fast unload speed such as [[Carl]] or [[Gigi]], because they deal damage whenever someone is near them using their Super and attack respectively, so it's impossible to dodge their attacks using the jumping feature because they will damage whenever Mico is on the ground.

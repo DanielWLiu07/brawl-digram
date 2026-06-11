@@ -1,0 +1,13 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Sirius
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+* If you are playing [[Brawl Ball]], use the Super to kick the ball since it recharges very quickly. Keep in mind that you need at least one active Shadow to be able to use the Super.
+* Try to use Sirius' Hypercharge when three Shadows are saved to create three powerful Shadows, as the Hypercharge only take effect on the shadows summoned within its duration.
+* Use Sirius' Master of Shadows Gadget when you get ambushed, so you will have many Shadows to defend against the surprise attack.
+* [[Janet]] Shadows don't know how to charge an attack, so try to avoid collecting Shadows from her, by attacking a different opponent when the next attack collects a Shadow. 
+* When playing in bushy maps, you may stack up to six Shadows by directing them to your spawn location. Then use his Master of Shadows Gadget to perform a surprise attack when opponents get close.
+* When using Sirius' Super, be mindful of splash damage like [[Nita]], [[Tara]], [[Carl]], [[Emz]], or [[Penny]] as they can still damage Sirius and destroy the Shadows in just a few hits. Penny and Emz in particular are very dangerous for Sirius, as their splash attack can wipe out his Shadows and even take out Sirius himself if he's using them as shields.
+* Sirius' lackluster HP and relatively low damage make him weak in 1-on-1 situations, so try to tag along with teammates instead of going alone when collecting Shadows.

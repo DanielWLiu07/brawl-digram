@@ -1,0 +1,31 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Melodie
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+=== Game Modes and Maps ===
+*Melodie in [[Brawl Ball]] is able to deal damage when she has the ball. Since her damage output with her monster notes is where the majority of the damage comes from, she is extremely viable for Brawl Ball.
+*Melodie can dribble/pass the ball in Brawl Ball and Basket Brawl even more effectively than [[Mortis]] or [[Kenji]] since she uses her Super instead of her ammo to dash, which allows her to bring the ball across the map in a few seconds.
+*Try not to play maps where there are a lot of water and walls because they can easily interrupt the Super dash.
+*The Super dashes' extremely long total length allows her to conduct a surprise attack against the opponent's [[Heist]] safe because she can approach it very quickly from a far distance.
+
+=== Recommended Build ===
+
+* The Interlude Gadget is more often the more useful Gadget because Melodie's playstyle involves dashing to the opponent with notes where having a shield is more beneficial.
+** In those cases, the Perfect Pitch Gadget often goes against the playstyle. After approaching the enemies, the enemies will likely to be close to her and making the notes further away will make it harder to hit the enemies.
+** Bear in mind that the shield from the Interlude Gadget decays quite quickly, so it's often a good idea to use the Shield Gear for additional protection.
+*The Hypercharge can increase the damage output of one rotation of the notes by almost 30%. It also doubles the effectiveness of Interlude Gadget and Fast Beats Star Power as there are twice as many notes. All of these boosts are very helpful to win many interactions.
+**Do not rely on the Hypercharge notes themselves for the damage as they aren't a major source of damage. It's important to couple them with regular notes to reap the best value out of them. As such, try to activate the Hypercharge once she has three regular notes.
+
+=== Strategies ===
+
+* When hitting enemies with Melodie's notes, it is better to walk around the Brawler in a counterclockwise motion to increase the number of hits per unit time. This is even easier to perform with the Fast Beats Star Power.
+* When approaching enemies that fire projectile(s) in a line as an attack (e.g. [[Piper]], [[Mandy]], [[Bonnie]]), try not to dash in a straight line because the enemies can autoaim and land a hit easily. Instead, try to dash in a slight zig-zag pattern to avoid the shots better.
+* When engaging in head-to-head combat, it's usually better to keep a distance, land three shots to get three notes, and then dash back into the enemies. This way, she can start the combat by unlocking full damage potential.
+* When going against an enemy that can do area scan damage (e.g. [[Maisie]]'s and [[Frank]]'s Super), Melodie can use the Super to first dash away from the enemy to avoid that attack and then dash back in.
+* When you are very close to an enemy, try to dash in such a way that she passes through the point that is next to the enemy so the notes have a chance to hit them while you are dashing.
+
+=== Other ===
+
+* Melodie's notes spawn from out of her not to the side of her, meaning at point blank her note can deal damage even if it's not in the notes rotation.

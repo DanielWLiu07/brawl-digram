@@ -1,0 +1,26 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Carl
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+*Carl's Super and Flying Hook Gadget can be used to get possession of the ball in [[Brawl Ball]] or [[Basket Brawl]] quicker than anyone else can. However, Carl cannot pick up the ball while using his Super.
+
+===Recommended Build===
+*Carl's Heat Ejector Gadget can be used to block the path of incoming enemies in events such as Brawl Ball. It can also be paired with his Super to secure a lot of damage to the safe in Heist.
+*An effective tactic is to use Carl's Flying Hook Gadget to get close to an enemy and then use your Super on them. This almost always will require his Protective Pirouette Star Power as most Brawlers have the means to defeat you, and can defeat almost all Brawlers except those with high health, with Protective Pirouette equipped.
+*Carl's Flying Hook Gadget is useful for joining to action and retreating in events like Showdown, [[Gem Grab]], and [[Siege]], further helped by allowing him to travel over lakes and rope fences to a certain extent. It is also an excellent tool to counter defenseless Brawlers at close-quarters like [[Piper]], especially if paired with his Super. It can also be used to escape from danger such as if you're ambushed (i.e. by [[Shelly]], [[Bull]], [[Darryl]], [[Fang]], [[El Primo]], [[Buzz]], [[Edgar]], [[Rosa]], [[Griff]], [[Spike]], or [[Leon]]).
+
+===Strategies===
+*When Carl's pickaxe returns, it can go through walls and obstacles. This can be crucial when opponents only need one more hit to be defeated but are hiding behind a wall. He can take advantage of this by throwing his pickaxe and moving towards the enemy behind the wall before it returns allowing it to get an indirect hit.
+*When Carl's pickaxe hits an obstacle, it bounces off and returns, allowing Carl to to throw it again faster. He can utilize this mechanic by pushing enemy Brawlers near a wall. Because his pickaxe will return faster after it hits the wall, Carl can do bursts of damage quickly, especially with his Power Throw Star Power, and he can utilize this to break Power Cube crates in [[Showdown]]. This can be highly effective in [[Heist]] where Carl can utilize walls near the enemy safe to deal consistent and quick damage.
+*Carl's Flying Hook Gadget can be used with [[Meeple]] and [[Finx]]'s Supers; using the Gadget through Meeple's Super area lets him travel through walls (though not stay in them), and using the Gadget through Finx's super makes his movement faster.
+
+===Other===
+*Carl's Super does a lot of damage but at a short range. Be sure to get close to an enemy Brawler to maximize its damage, but it is advisable to avoid short-ranged Brawlers who deal damage quicker than Carl can.
+*When using Carl's Super offensively, make sure to pay attention to his Super's mechanics. Carl's Super doesn't have a shield like [[Rosa]]'s Super does, making him more likely to get burst down by enemies. However, if he has his Protective Pirouette Star Power, he can partially protect himself during one, though it's still never recommended to go near close-ranged Brawlers like [[Bull]], [[Darryl]], [[Shelly]], [[Buzz]], or [[El Primo]] with his Super to deal damage to them as they all deal great damage at close range, have high health and can use their Supers to interrupt or escape from Carl's Super.
+*Carl can't use his main attack while using his Super, but he can still use his Super while his pickaxe is still flying.
+*Keep in mind that the pickaxe's returning ability may pose a disadvantage when attacking while traveling inside bushes. This gives the opponents ample time to perform prediction shots.
+*Carl's Super makes him have one of the fastest movement speeds in the game. Use this to escape (especially helpful with the Protective Pirouette Star Power as it lets him survive more shots) or to reach low-health enemies.
+*Carl's Super can be interrupted by knockback, pull, or stun effects such as [[Frank]], [[Shelly]], [[Gene]], [[Jacky]], [[Tick]], [[Buzz]], and [[Cordelius]]' Supers, [[El Primo]]'s Super or his Suplex Supplement Gadget, [[Bibi]]'s Home Run attack, [[Fang]]'s Roundhouse Kick Gadget, [[Bo]]'s Snare a Bear Star Power, and [[Emz]]'s Friendzoner Gadget. Avoid using his Super offensively against Brawlers like these who can easily cancel his Super.
+*Carl can have multiple pickaxes at the same time if some of them were in an opponent Finx's Super.

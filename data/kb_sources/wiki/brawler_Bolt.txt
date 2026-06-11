@@ -1,0 +1,21 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Bolt
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+=== Game Mode and Maps ===
+
+=== Recommended Build ===
+
+* Bouncy Ball can be used to finish 1 vs. 1 interactions or escape by going over a wall. However, ensure you can definitely win the interaction or escape, because you will be very vulnerable.
+* Toss Up would only be best if you know your enemies cannot stop you, however the extra speed from Unstoppaball would be more preferred to allow better super cycling.
+
+=== Strategies ===
+
+* Bolt is very slow without his speed and it is needed to charge the Super.
+* Bolt relies entirely on his own speed, so make sure you don't run into walls or make turns that are too sharp or you will lose all your speed.
+** When you need to make a sharp turn, use your Super so the speed boost from the Super mitigates the speed loss from the sharp turn.
+
+=== Other ===
+* You can heal as long as you don't use your main attack, so don't stop moving.

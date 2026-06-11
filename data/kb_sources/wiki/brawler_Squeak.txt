@@ -1,0 +1,35 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Squeak
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+===Game Modes and Maps===
+
+* Squeak is strong in modes and maps that require area control. The area of effect of his attack and Super makes him ideal for blocking key chokepoints of the map, which can be very effective in modes like [[Brawl Ball]] and [[Gem Grab]]. He also discourages enemies from teaming up and can be used to counter tanks at a reasonable range. However, his lack of burst damage renders him somewhat useless at close range against assassins or Brawlers with high-burst damage.
+* Squeak is ideal for modes like [[Heist]] and [[Siege]] despite his below-average attack damage, because his Super can deal incredible amounts of damage, similar to [[Spike]]'s attack or [[Crow]], [[Hank]], [[Shelly]], and [[Clancy]]'s Super. His Super charge rate is also quick (4 hits), allowing him to frequently Super the safe and deal high damage. Its wide area potential also allows it to sweep bushes, but its delay requires timing skills.
+* When playing Squeak in [[Duo Showdown]], keep a teammate with high close-ranged burst damage like [[Buzz]], Spike, Bull, [[Shelly]], Edgar, [[Leon]], [[Griff]], El Primo, or [[Darryl]] to cover up Squeak's weakness at close-quarters combat.
+* Squeak is unable to deal immediate burst damage due to his delayed attack and below-average damage, so in [[Brawl Ball]], he struggles to defend his goal and prevent enemies from scoring, not to mention his lack of any abilities that make the enemy drop the Ball, such as knockbacks, pulls, or stuns. If you choose to play Squeak in Brawl Ball, make sure to close off choke points with your lingering attack and stay alive for your team. It is best to close off areas and force your enemies to take a longer route in order to get to the ball.
+
+===Recommended Build===
+
+*Squeak's Windup Gadget combined with his Chain Reaction can greatly increase his damage and allow him to do team wipeouts due to his area of effect. It can also be used to catch up with an enemy who is out of range or escaping on low health.
+*Squeak's Windup Gadget should be used with care, since the range of the attack makes you unable to see where the attack will hit. However, if you need to quickly deal damage to the IKE turret in Siege, you can utilize this to guarantee a hit on the IKE turret without having to dive in to the IKE's range. This very useful to gain the lead during the last few seconds of a match.
+**Due to the modified attack's long range, you can also use his Windup Gadget to apply pressure on another lane on the map while covering one lane. This is really good in helping your teammates even if you're taking on your own fight.
+*Instead of using Squeak's Windup Gadget to get a hopeful snipe across the map, use it instead to finish off enemies that are barely outside of your attack range. More often than not, you will not always need to use all of the added range, but only a little extra of it to get that crucial kill. It can, however, be used at the beginning of the game or after a goal is scored in Brawl Ball to create some amount of area denial early on, or to maximise the usage of Squeak's multiple-target damage to weaken the enemy team and charge up more of your Super. This is, however, only possible in Brawl Ball due to the players spawning closer to each other than usual, at the beginning of the match or after a goal is scored.
+*Squeak's Chain Reaction Star Power is useful for enemies who are grouped up, which occurs only in certain situations. If you aim your attack correctly towards the grouped-up enemies, it can guarantee an extra 10% damage for each enemy.
+*In most maps with many choke points, Squeak's Residue Gadget can be very strong against enemies. His Gadget can slow enemies down while you and your teammates can defeat them easily.
+
+===Strategies===
+*Squeak's attacks and his Super can be used to safeguard specific areas to prevent Brawlers from entering by firing them at such areas ensuring that they get damaged by going there. For example, you can throw blombs at Gems in [[Gem Grab]]. Similarly, his Super and attack can be used to completely close off lanes and/or weaken enemies who are in your lane (more effectively with his slowing Star Power) to secure control of your lane. His attack's delay,  large radius and sticky effect coupled with his Super's area denial makes him an ideal control and lane defense Brawler.
+*Squeak can be used to discourage enemies from using teleporters. If you see a teleporter light up after its cooldown, try throwing your Sticky Blombs to the teleporter so that enemies take damage the moment they exit it, or avoid teleporting if they know there's a blob at their destination.
+*While Squeak's Super can cover a good chunk of the map, the bombs don't have a large range and experienced players can deter it. Aim it like [[Tick]]'s attack to prevent enemies from entering a point.
+*Due to his special attack projectile and the radius of damage, you'll be able to detect bush-camping enemies after you've hit them once. After that, you can continue to attack your enemies. However, some high-burst damage Brawlers like Spike, [[Edgar]], Buzz, [[El Primo]], Griff, Leon, [[Nani]], [[Emz]], Shelly, Darryl, or [[Bull]] could pop out of bushes and eliminate you easily due to Squeak's attack delay, so you need to check bushes more frequently or stay in an open area.
+*If you throw your Super directly onto an enemy, most, if not all of the blobs will attach to them, dealing massive damage after a short delay. This can be used to weaken a brawler, allowing your teammates to finish them off. It also charges your super by a significant amount, allowing you to repeatedly chain your Super. Practice aiming Squeak's Super directly onto an enemy and planning a precise hit on moving targets for proficiency in using Squeak's Super in this way.
+*When playing against Squeak, try to learn his super pattern so you can avoid getting hit. The blombs tend to burst out in an almost straight asterisk (*) shape.
+
+=== Other ===
+
+* When playing as Squeak, don't shoot all of your blombs at one go unless it is entirely necessary. It is much better to place them carefully so that your enemy is forced to walk in to your teammates' fire.
+* Keep in mind that Squeak's sticky blobs can stick to almost every obstacle and target. This can have plenty of unique and unpredictable outcomes, such as attaching Sticky Blombs to minecarts in [[Minecart Madness]] so they travel to enemies and (along with the minecart's 2000 damage) knock them out, should they become trapped, or attaching it to spawnables such as [[Pam]]'s Healing Station or [[8-Bit]]'s Damage Booster to prevent enemies from going near them.
+* Since Squeak has a delayed attack, there is a chance that your opponent could defeat you first, so you should maintain distancing from enemies, especially heavyweights and assassins, who can easily defy the delayed and slow-reloading attack. This still works effectively because Squeak is ideal at keeping control and keeping your opponents away.

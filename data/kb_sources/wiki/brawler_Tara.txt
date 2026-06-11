@@ -1,0 +1,32 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Tara
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+=== Game Modes and Maps ===
+
+* In [[Showdown]], a strategy that can be used is to hide in a bush. After a while, find two enemy Brawlers fighting each other and strike. Use her Super to gather them together and finish them off with her main attack.
+* Tara can be effective in Brawl Ball if she has her Super after a goal has been scored, as she can take out the whole enemy team when they are clustered together at the start of a round. Her Super can also be used to drag in enemies in front of the enemy goal, potentially destroying enemy cover and setting up an opportunity to score.
+* Tara's Black Portal Star Power shadow has very low health, but has a good damage output, can run extremely fast, and can detect Brawlers hiding in bushes, making it more of a scouting tool rather than an offensive Star Power. It can also be a valuable offensive attack on the Heist safe.
+* In Brawl Ball, surprise enemies by using the destruction radius at the center of her Super to break a hole in the wall in most maps. This feature of her Super is especially useful if her teammates are long-ranged Brawlers or Brawlers with high spread, as freeing up the map allows them to control larger areas and be more effective when pressuring the enemy team.
+
+=== Recommended Build ===
+
+* Tara's Healing Shade shadow has very low health, but a decent amount of range and a high amount of healing. As long as enemies are kept away from the shadow, it can provide lots of extra health for your team. However, this might put you at a disadvantage on maps where bush concealment is crucial since the shadow will produce healing effects that reveal your location to enemies.
+**If Tara has her Healing Shade Star Power and her teammate(s) are low on health, it's better to throw a portal away from enemies so that Tara's shadow can heal longer. Throwing the portal into a crowd of people is always a great technique, but the shadow will get taken out much faster. Decide how to use her Super based on the situation, if you have this Star Power.
+*Tara's Psychic Enhancer Gadget is great in maps with lots of bushes, like [[Snake Prairie]] and [[Cavern Churn]]. It works better with teammates like [[Shelly]], [[Bull]], [[Leon]], [[El Primo]], [[Spike]], [[Griff]], [[Buzz]], or [[Darryl]], who can creep up on enemies in bushes exposed by Tara’s Gadget whilst being entirely concealed.
+*Tara's Support from Beyond Gadget is very useful in Heist. If all three shadows attack, they can deal incredibly high amounts of damage to the safe as long as no other enemy is in range, the shadow summoned from her Black Portal Star Power can add some extra damage.
+**You can also use Tara's Support from Beyond Gadget to tank shots from single target Brawlers such as [[Piper]], [[Belle]], Mandy, [[Maisie]], [[Angelo]], or [[Bea]].
+
+=== Strategies ===
+
+* When being pursued by fast Brawlers like [[Max]], tanks, or assassins, it is wise to throw Tara's Super behind them, pulling them away from you so that you can escape. If being chased by a low-health Brawler, you can then surprise them by unloading all three of your attacks quickly, as Tara deals reasonably high damage at close range. Don't try this with high health brawlers as Tara does not have enough damage and does not reload fast enough to kill them before they kill you. Instead, chip away at their health from a range, using your Super to pull them near you to finish them off.
+
+=== Other ===
+*Her main attack can be really useful when many rival Brawlers are gathered in a small area since it not only deals damage to more than one enemy but helps to build up her Super faster.
+*Once Tara's Super is charged, try to pull in as many enemies as possible, attacking them while they are being pulled in. Hitting enough Brawlers allows her to quickly charge another Super.
+**Try to use Tara's Super when near teammates to maximize the chance of a team wipe as well. Doing so will open up huge opportunities especially in game modes such as [[Brawl Ball]], [[Heist]], [[Gem Grab]], and [[Duo Showdown]].
+*It is crucial to conserve Tara’s ammo before using her Super. Because enemies are drawn towards the middle of her Super, they will not be able to attack for a short period; letting Tara use attacks on her opponents without being attacked. Also, bear in mind that her ammunition reload speed is rather slow, so allow extra time to pass if her ammo is exhausted and she is about to spring an attack.
+*Tara's Super is very useful if paired with other Supers, such as [[Dynamike]], [[Frank]], El Primo, [[Squeak]], [[Mandy]], Shelly, [[Barley]], [[Carl]], Griff, Spike, [[Colt]]. [[Rico]], or [[Pearl]]'s Super. Tara can draw enemies together with her Super so that her teammate can hit multiple enemies with theirs. These combos can deal a massive amount of damage and wipe out the enemy team.
+*If there are a cluster of Power Cubes, find a bush nearby and use it as bait. Wait until an enemy comes to collect them, then use Tara's Super to delay them from reaching the Power Cubes. When you collect the Power Cubes, finish them off with her main attack.

@@ -1,0 +1,14 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Chester
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+*If you forget how many bells Chester's next attack will fire, look at the attack spread. The 1-bell stage has a rectangular hitbox similar to most single-projectile attacks, while the other stages have cone-shaped hitboxes with varying sizes of spread.
+*Consider getting close to enemies when using his 3/4 bells attack. If you have difficulty approaching, try using his Candy Beans Gadget or his Jawbreaker Super. When you are fighting against assassins, by having 3-4-1 sequences you can deal a massive burst of damage in a very short time which is enough to kill most assassins with 3-4 bells. When you are having a close combat with Tanks 2-3-4 sequence is recommended to maximize damage deal to enemies.
+*Even though enemies might know what Super you have, his Candy Popper Super is effective at distancing enemies near your spawn, while not pushing them too far back to hit only one bell from Chester's attack.
+*At the start of the game, shoot one bell so that Chester will have his second, third, and fourth bells waiting. With Chester's next bells, you will be able to kill most Brawlers. 
+*He is a very viable option in [[Knockout]], very versatile and can come back from a 1v3 situation with his Supers.
+*The best setup for Chester is the Candy Beans Gadget and his Single Bell 'O' Mania Star Power, and it's recommended to have the Gadget Cooldown and Shield Gears equipped in order to get 5-second buffs every ~13 seconds, which is extremely useful in modes such as [[Brawl Ball]].
+*When using the Candy Beans Gadget, try to use it before combating to gain a massive advantage by having buffs or even healing from enemies' damage.
+*Always have a plan for each of the Supers you might get so that even if your Spicy Dice cannot get the Super you wanted you will still know what to do with it. All attacking Supers besides Jawbreaker can be useful for teamwipes, especially when multiple enemies are affected by the Super it can recharge very quickly.
+*He is also a very good last pick in [[Ranked]] if you are unsure of how to combat the synergy of the enemy team. However, don't pick him against multiple sharpshooters on an open map, as he has poor damage at far range.

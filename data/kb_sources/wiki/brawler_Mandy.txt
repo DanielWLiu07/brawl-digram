@@ -1,0 +1,42 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Mandy
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+*In [[Heist]], you can charge up her Super to attack straight your enemy safe and Brawlers at the same time. On [[Safe Zone]], when you have charged your Super, you can shoot it down the middle of the map and damage the Safe and enemy Brawlers. 
+**Mandy is able to deal a lot of damage to her enemies' safe by aligning herself to her team's safe and aiming her Super towards her enemies' safe. Additionally, her piercing capabilities allow her to dispatch crowds of defenders, or at least force them to disperse.
+*Mandy's best game modes are modes where every kill matters, i.e. in [[Knockout]], [[Bounty]] and [[Wipeout]]. Since she can use her high damage output from a very long distance, she can take down enemies without the risk of dying.
+*While she lacks a high health pool or any knockback/pullback utilities, Mandy is a good defensive option for [[Volley Brawl]] as her range increases when she stands still, allowing her to defend the landing site of the volleyball more efficiently, especially coupled with her Hard Candy Star Power. Her Caramelize Gadget can also be used to slow down the opposing team, preventing them from reaching the volleyball's landing site in time, and her Super can be used effectively to force the opposing team to scatter or defeat anybody at the volleyball's landing site.
+*While Mandy is very effective at picking off fleeing opponents in Bounty, keep in mind that she is very vulnerable to assassins and the like. Thus, keep close to teammates with knockback/anti-aggression abilities, seeing as the both of you can burst any advancing assassins down.
+*Mandy is significantly more effective in maps in 5v5 Events. Their larger size allows her to align horizontally within the map, to make better use of her high range attacks, especially during her Focused states, without her point of view being blocked from the screen. 
+*Mandy is a surprisingly good Brawler in [[Brawl Arena]], as the vertically extended maps allow her free reign of most alleys in the game mode. Her damage also scales very well, allowing her to two-shot most Brawlers at Arena XP levels 10+.
+*In [[Knockout]], try to hold on to your Super at the end of a round because most Knockout maps have specific points where she can use her Super and reliably hit 1-2 enemies every time.
+
+===Recommended Build===
+*In maps with more walls or walls that can provide decent cover for offensive Brawlers, Mandy should pick Cookie Crumbs as her Gadget to snipe enemies hiding from her. Conversely, on maps with little cover or highly exposed choke points, Mandy can use her Caramelize Gadget to slow down enemy advances or make picking them off easier.
+*As Mandy's projectile speed is rather lackluster, it's generally recommended for her to utilize the In My Sights Star Power as it allows her to snipe approaching Brawlers more easily, as well as better hold her own against other sniper Brawlers.
+*The Damage Gear is recommended for Mandy to use, seeing as she can retreat when on low health and retaliate from afar.
+*Shield gear is also very helpful considering her lack of abilities to protect herself from aggro Brawlers. It also lets her survive an extra hit from other ranged Brawlers like [[Bea]], [[Gus]], [[Belle]], [[Maisie]], [[Charlie]], [[Carl]], [[R-T]], [[Gray]], [[Byron]], and [[Janet]].
+*Mandy can actually make good use of the Vision Gear as she will be able to reliably pursue retreating targets when they hide in bushes, additionally helping teammates to track them down.
+
+===Strategies===
+*A trick you can learn with Mandy is: when Mandy stands still, the moment her focus bar is charged, quickly fire a shot and immediately retreat. This can be more useful with her In My Sights Star Power, and is a good tactic when used in conjunction with either of her gadgets and the Damage [[Gears|Gear]]. This is useful when you are at low health but still want to maintain control of the map.
+*Pay attention to the very edge of your screen: fired bullets will allow you to spot Brawlers that lie just out of your view and their trajectory, allowing you to snipe them down while they can't see you. You can also observe the movement and aiming of your teammates to estimate the position and trajectory of the Brawlers they’re currently fighting.
+*Try looking at the map before playing. This allows you to build a sense of the potential chokepoints and places where you can fire your Super.
+
+===Other===
+*Don't stay Focused for too long as it will leave you vulnerable to enemy attacks. Hide in bushes or behind walls to protect yourself.
+*You can use your Caramelize Gadget and be able to easily auto-aim your Super to hit an enemy.
+*Hold onto her Cookie Crumbs Gadget unless it is to finish off a Brawler who is hiding behind walls, get the last hit for Super, or to hit multiple enemies-  you could need to snipe someone behind a wall at any time.
+*Beware of [[Buster]]'s Super, as her attacks and Super get absorbed by it. Her attack will be converted into a counter projectile, but not her Super.
+*Use her Super in a bush or off-screen so that enemies won't suspect it. Point it at choke-points across the map where enemies would frequently camp at, like the small bushes in [[Riverside]] and the small gap near the wall in [[Out in the Open]]. On the latter map, firing your Super immediately on respawn will nearly guarantee you a hit on the opposing team if you respawn in the middle.
+*Do make sure not to waste Mandy's ammo. Even though her reload speed is better than many sharpshooters, do note that she has no escape tactics besides her Caramelize Gadget, which won't work in point-blank range. She also doesn't have a lot of health, so the only way is to use her attacks and/or Super for defense.
+*When playing against Mandy, be sure to be spread out and avoid choke points as Mandy's superior range means she can easily snipe anybody approaching a choke point and can team wipe fairly easily if her Super is charged.
+**Additionally, try to avoid forming straight lines with your teammates as Mandy can recharge her Super in two Super hits, allowing her to chain off the both of you.
+**When on low health against a Mandy with her Super, try to avoid hiding behind walls to recover as a skilled player will be able to remember where you're hiding and be able to snipe you. Moving in a serpentine motion will also minimise the chances of Mandy sniping you from across the map. 
+**If you’re hiding in a bush, take note of where the opposing Mandy is standing and stand in a corner away from the diagonal line formed by her shot. This should force her to abandon her chase, especially if you’re an aggressive Brawler, seeing as she’ll be forced to go closer or reposition, allowing you to escape or retaliate.
+*As Mandy lacks any defensive abilities that are effective at close range and has a lackluster unload speed, be sure to pick off assassins or tanks first, ensuring to check bushes from a safe distance or with your Cookie Crumbs Gadget.
+*Owing to her fairly slow projectile speed and reliance on her Focus ability, Mandy, despite her long range and high damage output, should take up a defensive role in most teams, lagging slightly behind to use her superior range to deter enemy Brawlers. Additionally, her Super can easily shut down any enemy last-ditch charges or at least, make them easier for her teammates to pick off.
+
+{{Clr}}

@@ -464,7 +464,7 @@ const status = document.getElementById("status");
 const setStatus = (t) => { status.textContent = t; };
 
 // ---- load data ----
-const [mapsDoc, brawlersDoc, kitsDoc, mechanicsDoc, tileIdxDoc, mapNameDoc, brawlifyMapsDoc, mapThemesDoc, draftSeedDoc, draftAiDoc] = await Promise.all([
+const [mapsDoc, brawlersDoc, kitsDoc, mechanicsDoc, tileIdxDoc, mapNameDoc, brawlifyMapsDoc, mapThemesDoc, draftSeedDoc, draftAiDoc, kbMatrixDoc] = await Promise.all([
   fetch("/data/maps.json").then(r => r.json()),
   fetch("/data/brawlers.json").then(r => r.json()),
   fetch("/data/kits.json").then(r => r.json()).catch(() => ({ kits: {} })),
@@ -475,6 +475,7 @@ const [mapsDoc, brawlersDoc, kitsDoc, mechanicsDoc, tileIdxDoc, mapNameDoc, braw
   fetch("/data/map_themes.json").then(r => r.json()).catch(() => ({ themes: {}, mapTheme: {}, themeToBiome: {} })),
   fetch("/data/draft_seed.json").then(r => r.json()).catch(() => ({ edges: [] })),
   fetch("/data/draft_ai.json").then(r => r.json()).catch(() => null),
+  fetch("/data/kb/matrix.json").then(r => r.json()).catch(() => ({ edges: [] })),
 ]);
 const maps = mapsDoc.maps;
 const brawlers = brawlersDoc.brawlers;
@@ -3035,8 +3036,14 @@ const MODE_FIT = {
 };
 
 // Counter edges: {a, b, delta, reason, confidence} = "b beats a".
-const CONF_W = { pro: 1.0, stats: 0.9, community: 0.6, rule: 0.4 };
+const CONF_W = { pro: 1.0, stats: 0.9, community: 0.6, "llm-draft": 0.5, rule: 0.4 };
 const counterEdges = (draftSeedDoc.edges || []).slice();
+// KB matrix edges (LLM-drafted from mined text, stats-cross-checked, pending
+// pro review) — kb schema uses deltaRating; normalize to the seed shape.
+for (const e of (kbMatrixDoc.edges || [])) {
+  counterEdges.push({ a: e.a, b: e.b, delta: e.deltaRating,
+    confidence: e.confidence || "llm-draft", reason: e.reason });
+}
 // Rule-seeded edges from auto-derived attributes.
 for (const [an, a] of ATTRS) {
   for (const [bn, b] of ATTRS) {
@@ -3425,7 +3432,7 @@ function renderDraft() {
       if (Math.abs(t.v) < 0.03) continue;
       const chip = document.createElement("span");
       chip.className = "term " + (t.v >= 0 ? "pos" : "neg");
-      chip.textContent = `${t.t} ${fmtV(t.v)} · ${t.conf === "community" ? "comm" : t.conf}`;
+      chip.textContent = `${t.t} ${fmtV(t.v)} · ${t.conf === "community" ? "comm" : t.conf === "llm-draft" ? "draft" : t.conf}`;
       if (t.why) chip.title = t.why;
       tr.appendChild(chip);
     }

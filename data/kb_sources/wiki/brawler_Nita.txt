@@ -1,0 +1,28 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Nita
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+*Bruce is particularly effective in [[Heist]], as you can launch the bear over enemies and obstacles to target the safe. Additionally, Nita's Hyper Bear Star Power greatly enhances her effectiveness in this game mode.
+*Utilize Nita's Super to strengthen an aggressive push in [[Gem Grab]], helping your team seize control of the gem mine. The bear can absorb damage for your team, depleting the enemy's ammo, or it can be used to weaken opponents, making it an invaluable asset in battle.
+*In [[Brawl Arena]], with the Bear with Me Star Power equipped, you can launch Bruce towards a bot without it detecting the bear. This allows Bruce to swipe at the bot, and therefore healing Nita infinitely.
+
+===Recommended Build===
+*Faux Fur's shield greatly increases Bear with Me's effectiveness. In Heist, using it with her Hyper Bear Star Power may be more favorable. In general, only use Hyper Bear in non-Heist modes when she is using Bear Paws. Bear with Me provides more consistent value in these cases.
+*Nita’s Bear Paws Gadget can come into great effect if you have her Hyper Bear Star Power. Nita will be able to stun enemies and charge her Super again extremely fast, which can be useful against high-health Brawlers. However, it also works with her Bear with Me Star Power, allowing the bear to catch up to enemies and heal Nita more.
+
+===Strategies===
+*Nita's bear can effectively prevent the enemy he is chasing from healing up. The enemy will either have to attack, stopping or preventing natural healing, or get damaged, out of which the enemy will most likely choose the former. This can be used to pressure a weakened Gem carrier or other crucial opponent into getting easily defeated by Nita and her team.
+*Bruce can also detect Brawlers hidden in bushes and pursue them. This can help Nita and her teammates locate hiding enemy Brawlers, effectively making it a scouting tool.
+*Nita's Super can be thrown over walls, so it can come in handy for dealing with enemies that are hiding behind one. You can use the Bear Paws Gadget in these situations too to get more value off of Bruce and potentially defeat the enemies hiding behind a wall.
+
+===Other===
+*Nita's attack can hit multiple enemies from a fair distance away. Take advantage of this when enemies gather close together.
+*Bruce has moderately high health, allowing Nita to create her own tank. The bear distracts enemies and absorbs fire, protecting Nita and giving her a chance to deal damage.
+*Since Nita's Super is a thrown projectile, it will summon Bruce quicker if thrown toward an area closer to Nita. This is convenient when you are being attacked by a shotgun-wielding Brawler such as [[Shelly]], [[Darryl]], or [[Bull]] since the bear can tank the projectiles, allowing Nita to escape and counterattack.
+*Nita's bear has a very short attack range, so it is best if supported or used in an enclosed area where the enemy will be unable to get past the bear.
+*Nita can use her Super to spawn the bear on a launch pad to ambush unsuspecting enemy Brawlers. 
+*Avoid hiding behind her bear when facing a [[Penny]], [[Belle]], [[Brock]], [[Emz]], [[Squeak]], or [[Jessie]] since the splash or bounce attack will have a devastating effect on Nita.
+*When facing a Brawler with non-piercing attacks, place Bruce a few tiles in front of you to make them waste their ammo on Bruce, during which you and Bruce can effectively finish them off.
+*When facing an enemy [[Frank]], always have the Bear Paws Gadget ready to cancel Frank’s Super when he’s about to stun you, Bruce, and your teammates. This will not only cancel Frank’s Super in the process, therefore defusing it, but also give ample time for teammates to defeat Frank.

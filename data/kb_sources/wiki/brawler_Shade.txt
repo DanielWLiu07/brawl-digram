@@ -1,0 +1,19 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Shade
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+=== Game Modes and Maps ===
+* Shade is viable in most of [[Brawl Arena]] as its Radius trait is fully functional on bots. This allows for consistent Super cycling.
+** Especially, [[The Smackdome]] favors Shade heavily due to the wide distribution of unbreakable walls. On the other hand, [[Kaiju Lake]], with its relatively open terrain, tends to be one of Shade's weaker maps.
+* It also has a niche on [[Parallel Plays]] in [[Hot Zone]] as a result of its ability to reach beyond walls. Its Super also makes Shade hard to attack if used into a wall. However, it might struggle initially against other ranged options on this map because of its lack of range, such as [[Sirius]], if Shade is unable to charge a Super.
+* In a light of its ability to attack through obstacles and its short range, Shade is terrifically durable in closed maps with a lot of walls as it can stay behind walls from time to time to elude from most enemies' attacks while consistently attacking them without being touched.
+
+=== Recommended Build ===
+* Longarms is the better Gadget to use all the time, as it helps fix Shade's biggest weakness - lack of range - and allows you to charge your Super faster from a safe distance. Jump Scare's radius is very small, and enemies within the range of the slow are likely close enough that you can chase and hit them without it anyways.
+*  Hardened Hoodie is usually the preferred Star Power to use, as it provides additional protection to Shade when it needs it most. The speed boost from Spooky Speedster is nice, however, and can be used if you are confident in hitting the center attack.
+*Shield and Damage Gears are the best gears for Shade overall, although Speed Gear could be used on more bushy maps to exaggerate Shade's already fast speed.
+
+=== Other ===
+* The best way to use Shade's Super is to pressure enemies by dashing into and hiding in a wall nearby them. Most enemies are unable to hit Shade for as long as it stands in the wall, allowing you to freely damage and push them back. However, be wary of enemies that can outrange you and still hit you, namely throwers (except [[Sprout]] and [[Grom]]), [[Mr. P]], [[Hank]], [[Doug]], [[Trunk]], [[Brock]], [[Mico]], and [[Jacky]].
+* When attacking through walls, make sure to monitor Shade's remaining Super duration, as if it ends in a bad position, Shade may be pushed into the enemies you were just attacking, essentially guaranteeing death. As your Super ends, make sure you either use it again (if you were able to charge it) or retreat to safety.

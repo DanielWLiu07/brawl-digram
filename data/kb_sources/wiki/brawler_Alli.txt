@@ -1,0 +1,19 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Alli
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+*Keep in mind that Alli can only jump when in bushes or underwater, making most jumps a one-way trip. As such, be careful of which target you select, as you may not be able to escape if things get hairy.
+*Alli's attack gimmick allows her to jump over enemy attacks, making her useful against burst assassins such as [[Edgar]] and [[Kenji]] who tend to unload all their ammo at once. As such, when playing against her with these Brawlers, try to conserve ammo as Alli's reload speed afterwards is incredibly slow and allows for easy retaliation.
+*Alli's slow reload speed prevents her from dealing with hordes of enemies or escaping from them. Thus, she excels in the beginning of modes such as [[Solo Showdown]], where she can target weaker Brawlers before teaming occurs or they begin to gather more [[Showdown|Power Cubes]].
+**If possible, try to reload outside of bushes or water as reload speed is slower while in these regions.
+*In game modes such as [[Gem Grab]], try to linger nearer to the opposing side of the field. Opponents will often try to retreat back there when on low health, allowing her to ambush them quickly and efficiently.
+*As Alli's dash range is reliant on her speed, try to equip the Speed Gear to boost it even further.
+*In a pinch, Alli's Super can be used for an extra burst of damage against bulkier targets. This should only be used in desperate circumstances however, as she's heavily reliant on it to approach future targets thanks to her movement speed being slower than most other Assassins. 
+*Pay attention to Alli's Enrage counter: the counter decreasing means the enemy has begun healing, while the counter running out means that the threshold has been crossed already.
+*Try to use your Super when the enemy team is huddled up together: the burst damage will allow you to take them all down quickly or at least make the cleanup much easier for your teammates.
+*If you are using the Feed the Gators Gadget, try to hit multiple enemies and attack while the Super damage bonus is active so that your healing amount is increased.
+*Use your Cold Blooded Gadget in conjunction with your Super, especially when enemies flee or you've just respawned in. This allows you to close the distance much faster and get back into the fray.
+*Ideally, attack Brawlers that are currently in bushes or in water. These situations allow you to dodge projectiles and deal damage faster, and, in a pinch, quickly leap out of a tough situation.
+*Try and stay near a wall that is next to either a patch of grass or water. This is her best battle-ground and allows her to play around with her jumps better.
+*Owing to her worse than usual reload and unload speed, every bit of Alli's ammo is precious, so try not to autoaim unless absolutely sure your attacks will hit.

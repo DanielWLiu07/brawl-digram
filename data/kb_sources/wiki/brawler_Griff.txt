@@ -1,0 +1,31 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Griff
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+*Griff's attack and Super’s high damage output coupled with his reasonable reload speed make him viable in [[Heist]]. Griff's Keep The Change Star Power greatly increases his damage, making it a lot more punishing for opponents to leave him alone with the Safe. His Piggy Bank Gadget is useful in defense and offense to knock enemies away from the team’s Safe or to deal extra damage to the enemy safe, and can additionally be used to destroy walls and make it easier for your team to reach the enemy Safe.
+*Griff has high damage potential high-close, making it easy for him to open Boxes and defeat Tanks and Assassins in [[Showdown]]. His Business Resilience Star Power additionally helps him survive longer during fights.
+*Griff is a good pick in [[Brawl Ball]], as he is able to open maps to score easy goals with his Piggy Bank Gadget. His high damage output additionally helps him defeat opponents who are carrying the ball easily.
+*Griff is good in [[Basket Brawl]], as the tighter nature of the maps make his Super a lot easier to hit and recharge. His Piggy Bank Gadget is additionally able to break the walls commonly found around the map.
+*Griff is a good pick in [[Hot Zone]], and has various abilities that help him in the mode. His Super can cover the whole zone and deny access to the enemy team, and his Piggy Bank Gadget can open walls to either make access to the zone easier to your team, or destroy any hiding spots for the enemies while your team attacks them from the Zone, and his Coin Shower Gadget can help take control of the zone. Additionally, his Keep the Change Star Power makes it easier to hit enemies within the zone, and his Business Resilience Star Power allows him to stay on the zone for longer while under enemy fire. 
+
+===Recommended Build===
+*Griff's Keep the Change Star Power offers him more protection against close-ranged Brawlers as it deals more damage at close range. Griff’s Super can be combined with his attack to defend against those Brawlers.
+*Griff’s Business Resilience Star Power will heal you even when you’re attacking or taking damage. You can use this to heal while fighting, which makes it more difficult for enemies to defeat you, or to heal while working towards a mode objective as enemies will be attacking you while doing so.
+*Griff's Piggy Bank Gadget can be very useful at breaking walls in maps, making him a great supportive option alongside long-range Brawlers such as [[Brock]], [[Colt]], [[8-Bit]], [[Nani]], [[Pearl]], and [[Rico]]. This is especially useful in [[Brawl Ball]], where opening the opposing side's walls can allow for the ball to be scored easier.
+*Griff's Coin Shower Gadget can be useful for taking control of the Zone in [[Hot Zone]], or for dealing damage while you're unable to directly attack the Safe or the Turrets in [[Heist]] and [[Brawl Arena]].
+*Though Griff's Keep the Change Star Power increases his damage per ammo, it actually decreases his DPS as it takes longer for him to finish his attack, making it easier to miss projectiles. It additionally delays his ammo reload, limiting its viability.
+*Griff's Piggy Bank Gadget is also helpful for area control, as it will limit where the enemy can move for a few seconds if Griff doesn't hit it. It makes it easier to predict the opponents' movements and as a consequence, it makes it easier to aim and hit shots.
+
+===Strategies===
+*If enemies are hiding and taking cover behind obstacles, you can use his Piggy Bank Gadget to destroy the obstacles and burst them down afterwards.
+*If an assassin, such as [[Edgar]] or [[Mortis]] is approaching you, dropping your Piggy Bank Gadget and shooting it will push them back and deal damage to them, making it easier to avoid and defeat them.
+
+===Other===
+*Although Griff can hit more banknotes with his Super at close range, the Super deals less damage at close range which results in less Super charge. Prioritize his Super on farther enemies to deal more damage, recharge more of his Super, and give a sufficient amount of time to reposition himself so that the banknotes hit enemies while they’re returning.
+*Griff struggles in long-ranged combat due to his slow unload speed. His attack does deal high damage, but its full potential requires Griff to be at close range. However, Griff can still be effective at long-ranged combat if he attacks enemies at the tip of his range, where he can hit most of or all of the coins.
+*Griff's Super can force enemies out of where it travelled. You can use this for area denial such as blocking off the zones in [[Hot Zone]], the Gem mine in [[Gem Grab]], or the Bolt spawns in [[Siege]].
+*Griff’s Super has high burst damage regardless of range. Because of this, his Super can be used in a lot of situations such as using it to devastate enemies directly, keeping close-ranged enemies away from you, or to quickly defeat enemy Gem carriers in Gem Grab. Griff's Super is still active even if he is defeated, dealing a little more damage and allowing for some Super recharge after being defeated.
+*Try to hit at least 2 or more opponents with his Super, as this will give Griff back more of his Super, and put most Brawlers into a range in which they can be finished off with Griff's main attack or another Super. This is rather easy to do due to the long range and wide spread of Griff's Super.
+*Despite his high damage, Griff's slow unload speed may betray him if he's attempting to ambush opponents. To succesfully defeat opponents in an ambush, Griff would ideally have or be close to a charged Super, as it deals more damage than his main attack up close, and shoots quicker as well.

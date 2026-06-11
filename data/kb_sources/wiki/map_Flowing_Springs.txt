@@ -1,0 +1,15 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Flowing_Springs
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+*Until Mar. 2026, there are 5 brawlers that can walk on water, all being very suitable for this map. 
+**The top choice is [[Angelo]], who has a very long attack range and a very fast moving speed. Equipped with his second star power that makes him move even faster, he can easily shoot at enemies while efficiently dodging their attacks on the water. 
+**Following [[Angelo]] is [[Eve]], who also has a considerable range of attack and can use water to control the map. Besides, most players will choose long-ranged brawlers such as [[Piper]], [[Mandy]], [[Nani]], etc., and [[Eve]]'s super will be very effective at consuming your enemies' ammo (snipers usually have slow reload speed, and [[Eve]] is a special counter against [[Angelo]]). 
+**A third choice is [[Juju]], who can also easily move across the river and hide in the bushes to increase her attack range. Her spawning super is also annoying for enemies. 
+**Finally there are [[R-T]] (head-mode) and [[Shade]], who can also be useful on the map, but requires the player to be super good at dodging enemies' attacks, as they have shorter attack ranges and cannot deal damage when afar ([[R-T]]'s walking mode can shoot long-ranged attacks but can't move on water).
+*[[Brock]] is very effective on this map due to his long-range attacks and Super, which can destroy walls and bushes, preventing enemies from hiding. His regular attack deals splash damage, allowing him to hit multiple enemies who are close together. His Gadgets are also quite handy—Rocket Laces helps if you're low on health, while Rocket Fuel boosts your offensive capabilities. Since Brock has relatively low health, it’s important to stay behind your teammates when you're not at full health.
+*[[Piper]], [[Nani]], and [[Colt]] an also be useful for their long-ranged sniping and the ability to break walls and obstacles with their Supers, clearing the area for the three and their teammates.
+*[[Leon]] can be a useful pick due to his mobility, which allows him to get close to his enemies and poke them to charge his powerful Super. His high burst damage at short-range also allows him to ambush enemies that come near him while he's in a bush, or hiding with his Super.
+*Because of the nature of the map, where the walls push teams closer to the river in the middle, mid-ranged Brawlers and even controllers can work is great picks to counter snipers.
+*The [[Darryl]], [[Edgar]], [[Bull]] and [[Kit]] comp is viable in this map as both Darryl and Bull can use the water to extend their Supers and reach the enemies faster.

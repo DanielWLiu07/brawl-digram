@@ -1,0 +1,5 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Opening_Move
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==

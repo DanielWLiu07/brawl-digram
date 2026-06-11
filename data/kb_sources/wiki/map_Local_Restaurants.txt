@@ -1,0 +1,8 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Local_Restaurants
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+* Brawlers like [[Shelly]], [[Buzz]], [[Darryl]], [[Rosa]], [[Leon]], [[El Primo]], [[Spike]], [[Mico]], [[Griff]], [[Kit]], [[Ash]], [[Edgar]], [[Nani]], [[Fang]], [[Cordelius]], [[Crow]], and [[Bull]] can utilize the narrow pathways and obstacles to ambush opponents, taking advantage of the map's design to engage enemies at close range.
+* Brawlers such as [[Poco]], [[Sandy]], [[Frank]], [[Barley]], [[Doug]], [[Carl]], [[Berry]], [[Emz]], [[Penny]], [[Dynamike]], [[Tick]], [[Brock]], [[Amber]], [[Pam]], [[Hank]], [[Byron]], and [[Jacky]] can provide healing and area control, supporting teammates by sustaining their health and applying consistent pressure on the enemy team.

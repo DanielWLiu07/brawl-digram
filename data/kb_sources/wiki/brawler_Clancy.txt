@@ -1,0 +1,13 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Clancy
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+*Because of the large spread of Clancy's Super, it is best to move back and forth while using it. This will allow more consistent hits on the enemy
+*Clancy is almost useless at the start of the match, as his low damage and mobility at Stage 1 heavily hinders his performance, so it's best to immediately aim for Stage 2 right at the start.
+**At Stage 2, Clancy becomes much better thanks to the second attack projectile, which makes it easier to get to Stage 3. Around this point, Clancy should also have his Super, which can be combined with the Snappy Shooting Gadget for an almost instant Stage 3 upgrade against assassins or tanks.
+**At Stage 3, Clancy is almost unstoppable, with his fast movement speed and devastating Super damage allowing him to control wide areas without dying himself.
+*In [[Heist]], Clancy potentially deal a quarter of the safe's health with a single Super at Stage 3. This makes him an extremely dangerous Brawler to be left alone with the safe, but due to the spread of his Super attack, it is important to go to point-blank range to hit every shot. However, this can be dangerous for Clancy due to his rather low health pool and the usual selection of Brawlers in this gamemode being ones with high DPS, which means he could be prevent from even getting close to the safe without dying.
+*If you decide to equip the Snappy Shooting Gadget, it is recommended to use it while you have full ammo for the most efficiency, as if you were to activate it while you're still reloading or have no ammo at all, its duration will be wasted. It is also a good decision to use it at the start of the game, so you can do more damage later in the game.
+*Clancy cannot adjust the direction of his Super once activated, making it possible to waste a large chunk of the salvo if an enemy gets behind him. Make sure to track enemy movement during your Super and instantly readjust if you find yourself in front of the enemy.
+**Alternatively, you can also use it mid-range away from your enemy, as then you will be less likely to miss and still guarantee at least 70% of your Super's maximum damage.

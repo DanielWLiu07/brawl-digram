@@ -1,0 +1,8 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Trunk
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+*Trunk's short range limits their offensive capabilities, but they have enough range to attack enemies that are at most a tile behind walls, which they can use to their advantage by attacking enemies behind walls. This strictly limits throwers, such as [[Barley]], [[Dynamike]], [[Berry]], [[Willow]], etc. who can otherwise take cover behind walls.
+*Trunk can use their main attack to get a brief speed boost, which is especially helpful if an enemy is trying to run away.
+*Trunk's Colony Scouts Star Power should generally be used only in bushy maps like [[Cavern Churn]] or [[Feast or Famine]], where it'll greatly improve their performance.

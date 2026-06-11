@@ -1,0 +1,27 @@
+{
+ "name": "Melodie",
+ "notes": [
+  {
+   "text": "Premier Brawl Ball pick: Super-based dashes carry the ball across the map in seconds without spending ammo, dribbling better than Mortis or Kenji.",
+   "tags": ["Ball"], "confidence": "llm-draft",
+   "source": "https://brawlstars.fandom.com/wiki/Melodie"
+  },
+  {
+   "text": "Avoid maps heavy in water and walls — they interrupt the Super dash chain.",
+   "tags": ["map-fit"], "confidence": "llm-draft",
+   "source": "https://brawlstars.fandom.com/wiki/Melodie"
+  },
+  {
+   "text": "Heist threat: the full dash chain crosses the map to the safe from far range.",
+   "tags": ["Bankheist"], "confidence": "llm-draft",
+   "source": "https://brawlstars.fandom.com/wiki/Melodie"
+  },
+  {
+   "text": "Engage pattern: poke to three notes first, then dash in with full damage rotation; keep one dash in reserve to exit area-scan Supers (Maisie, Frank).",
+   "tags": ["micro"], "confidence": "llm-draft",
+   "source": "https://brawlstars.fandom.com/wiki/Melodie"
+  }
+ ],
+ "patchVersion": "67.301",
+ "lastVerified": "2026-06-10"
+}

@@ -1,0 +1,20 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Cordelius
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+*While Cordelius' Super is a powerful offensive tool, entering the Shadow Realm also leaves him unaware of his surroundings. Thus, if you find yourself on low health in the Shadow Realm, try to go to a more secluded place to retreat so that enemy Brawlers can't ambush you when your Super ends.
+*Thanks to his enhanced speed in the Shadow Realm, Cordelius can use his Super to "teleport" to other ends of the map unseen by enemy Brawlers, making him useful for getting to objective zones such as the [[Heist|Heist Safe]] or [[Hot Zone]].
+*If you can consistently charge your Super, Cordelius is a great pick in [[Gem Grab]]. He can send a random enemy to the shadow realm and ambush the enemy gem carrier by predicting their location. Keep in mind that this leaves your team vulnerable to the enemy.
+**Note that this strategy isn't necessarily exclusive to Gem Grab.
+*In a pinch, Cordelius' Super coupled with his Mushroom Kingdom Star Power can be used as a last-minute resort to heal, allowing him to slip past enemy Brawlers undetected while grabbing mushrooms to heal.
+*Thanks to his Trait and Super, Cordelius is well suited to guard places where enemy standoffs tend to occur, where he can camp behind a wall and charge his Super before using it and chasing the enemy Brawler away.
+*While Cordelius' Super prevents enemies from using Gadgets or their Supers, do note that Brawlers with Gadgets that modify their attacks retain the effects when transported to the Shadow Realm, making them more of a hassle to deal with.
+**However, although his Poison Mushroom Gadget cannot be activated in the Shadow Realm, if Cordelius activates the Gadget before entering the Shadow Realm, his next attack will still preserve the Gadget's effect even in the Shadow Realm.
+*Cordelius' Super can be used as an emergency escape if he is low on health, and his enhanced speed helps him outpace the enemy he sent to the Shadow Realm and heal before his Super ends. This can be more effective with his Mushroom Kingdom Star Power.
+*Cordelius can remove an enemy instantly, which is useful in [[Brawl Ball]]. For example, you can use the Super at the goalkeeper while kicking the ball into the goal.
+**Be careful however, as you won't be able to defend your goal either.
+*Multiple Brawlers can be in the Shadow Realm at the same time. This can be helpful when a teammate is transported by an opposing Cordelius.
+**Keep in mind that if one of the two Brawlers that entered the Shadow Realm together is defeated by a third party, the other one will still remain there until defeated or until their time is out.
+**Furthermore, it's advised for one not to send another Cordelius to the Shadow Realm as all Cordeliuses present will receive buffs no matter whose Super they were affected by, essentially negating any advantage you'd have.
+*Thanks to his unique kit and strengths, Cordelius functions best as a counter to other assassins and tanks, being weak to long-ranged and more agile Brawlers in return. As such, in modes such as [[Ranked]], be sure to pick Cordelius only as a counter to the enemy team's Brawlers and not as a leading offensive Brawler, seeing as he struggles to lead charges with his middling range and fairly low HP.

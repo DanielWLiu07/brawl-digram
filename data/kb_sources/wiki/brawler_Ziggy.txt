@@ -1,0 +1,10 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Ziggy
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+*Apart from his Now You See Me... Gadget, Ziggy has no escape or defensive options whatsoever. As such, try to stick near teammates that can defend you or stay in the backlines as crowd control. 
+*Ziggy's Super is an incredibly powerful source of crowd control but can be easily dodged by moving out of its trajectory. As such, aim it at choke points where opponents are forced to go in. The same can be said of his regular attack.
+*When an opponent is pursuing you, lead them around and aim slightly in front of or behind yourself, depending on their speed. That way you will be able to reliably hit them.
+*Do not auto-aim with main attack. The main attack has long delay and auto-aiming makes harder to hit enemies, since the projectile appear on the center of Brawler.
+*For escaping aggressive Brawlers with the Now You See Me... Gadget, always activate it before your opponent reaches you. This is because unlike most defensive Gadgets, Ziggy's Gadget requires some time to activate (on account of his attack delay), leaving him vulnerable to high burst Brawlers or Brawlers with stunning capabilities like [[Bull]], [[Buzz]], [[Frank]], or [[Fang]].

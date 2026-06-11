@@ -1,0 +1,7 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Super_Center
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+* The puck travels very far, so be sure to use the walls to your advantage, so that you can hit some crazy angled shots to confuse your opponents.

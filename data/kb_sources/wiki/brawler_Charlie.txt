@@ -1,0 +1,14 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Charlie
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+*When an enemy Brawler is in a cocoon, [[Penny]] can either splash onto your or onto her teammate, which can get the enemy out of the cocoon faster. Because of this, when facing a Penny in Duo Showdown or 3v3, it is better to not be close to the cocoon.
+*The cocoon can be used for a teammate like [[Shelly]], [[Griff]], [[Spike]], or [[Leon]] to catch up and wait for the enemy to be released. After that, the teammate can quickly burst and kill the enemy.
+*Since Charlie's attack comes back after hitting one target, it is more reliable to use auto-aim than [[Carl]]. 
+*Charlie's Super can cancel out any Super, so when a Brawler like [[Bull]], [[Buzz]], [[Fang]], [[Kit]], [[Berry]], [[El Primo]], [[Crow]], [[Surge]], or [[Chuck]] is attempting to come towards you/your team, you can use her Super to save you and/or your teammates from harm.
+**Using the Super when someone is chasing you also gives you time to heal up.
+*Charlie's Spiders Gadget can be used to follow enemies that are hiding in bushes. It can also be used to tank shots from single target Brawlers such as [[Piper]], [[Nani]], [[Bea]], [[8-Bit]], [[Colt]], [[Pam]], or [[Mandy]].
+*Charlie's Super can be used in [[Gem Grab]] to disarm the Gem carrier, which makes them drop the Gems. In [[Brawl Ball]], her Super is handy, as she can disarm the ball carrier.
+*Since Charlie's ammo reloads after her yo-yo returns, she attacks much quicker at close range. This makes her an effective counter to short range Brawlers like [[Mortis]], [[Kenji]], [[Buzz]], [[Lily]], [[Ash]], [[Draco]], [[Mico]], [[Shade]], [[Bibi]], or [[Edgar]], If the enemy is a longer range Brawler, using her Super can allow her to close the distance on them and do very high damage to them once they escape.
+*Charlie's Hypercharge can spawn 3 spiders even if the Super doesn't hit the target, so use it at long range.

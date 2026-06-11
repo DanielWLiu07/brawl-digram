@@ -1,0 +1,7 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Satomi_Springs
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+* If you are playing as [[Rosa]], you can use the bush generating Gadget to connect the bushes to allow for surprise attacks near the opponent spawning region

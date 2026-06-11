@@ -1,0 +1,8 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Gigi
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+=== Strategies ===
+* Attempt to charge your Super by dodging attacks from Brawlers who attack with more projectiles in one attack, such as [[8-Bit]], [[Griff]], [[Lola]], and [[Colt]], as more projectiles will enter the radius and charge your Super faster.

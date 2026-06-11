@@ -1,0 +1,21 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Berry
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Games Modes and Maps===
+*Berry is perfect for [[Hot Zone]], or for controlling the center of the map in any mode. If you cover a large area with his long-lasting attacks, it will both prevent enemies from advancing into it, and create a space of constant healing for Berry's team.
+**With tanks like [[Hank]], [[Draco]], [[El Primo]], [[Rosa]], and [[Frank]] on his team, Berry can ensure that they stay alive longer in the zone by providing constant healing using his attacks, Super, and Friendship Is Great Gadget. This helps to extend your time in the zone and contribute more to the objective.
+
+===Recommended Build===
+*Both of Berry's Gadgets are useful. Friendship Is Great can be very useful in providing spontaneous healing to his teammates. This can be valuable in modes like [[Hot Zone]]. Healthy Additives, combined with his Making a Mess Star Power, allows Berry to deal more than 20% of the opposing team's safe's health with a single attack in [[Heist]]. It also allows him to keep control of a certain area longer.
+*In terms of Star Powers, Floor is Fine is almost always better, as it covers one of Berry's main weaknesses for essentially the entire match, as all Berry has to do to maintain its effects is occasionally throw a puddle under himself.  Making a Mess can be good to help finish off retreating Brawlers, but the opportunities to get value from it are few and far between.
+
+===Strategies===
+*Throwing Berry's ice cream on an existing puddle will only lengthen the puddle's duration without inflicting any extra damage (or healing), besides the initial hit. Because of this, throwing all your puddles in the same spot is a waste of ammo. It is best to spread out your attacks and focus on area denial.
+*Similarly to [[Stu]], when Berry's Super is auto-aimed, he will dash in the direction that he's facing, making this a useful way to quickly escape certain situations, or engage to an oblivious enemy.
+*Berry's ice cream puddles from his Hypercharged Super are counted as different puddles from his normal attacks. This means that he can stack his normal attack with his Hypercharged Super, allowing for double the damage and healing ticks.
+
+=== Other ===
+
+* Berry's attacks may seem similar to [[Barley]]'s, but you should not use them in the same way, because they have fundamental differences. Berry is better at covering a large area for a long time, dealing lasting damage over time, but does not have Barley's ability to deal stacked damage.

@@ -1,0 +1,26 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Gray
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+=== Game Mode and Maps ===
+
+* In Solo [[Showdown]], you should save your Super as a last resort when you need to escape from a tight situation. The Super activation is instant and unlike regular teleportation gates, enemies can't use the dimensional door.
+* In [[Heist]], Gray can put his Super near the enemies' safe, so that teammates can quickly teleport to the safe to do damage and/or quickly escape from defending enemies. With his Hypercharge, where his teammates can gain an additional 1000 shield, he can deal more damage before being defeated by an enemy. With 2 pairs of doors, teammates can easily reach the enemy Heist safe very quickly after respawning.
+**This can be devastating to the enemies' safe when used by teammates such as [[Griff]], [[Leon]], Shelly, [[Buzz]], Darryl, [[Clancy]], [[Amber]], El Primo, Nani, [[Emz]], [[8-Bit]], Bull, and [[Spike]], as they can quickly melt the enemies' safe at close range. Enemies will be pressured to defend against teleporting enemies that approach their safe quicker than usual.
+
+=== Recommended Build ===
+
+* Using a Shield [[Gears|Gear]] on Gray and his Fake Injury Star Power together is a good idea, since Gray will always have full health as long as his Gear's shield is up, meaning all hits he takes will stay reduced by 50% until he takes a hit without the shield up.
+
+=== Strategies ===
+
+* His attack reload is slow and his bullets are delayed, so it is best to aim your attacks rather than auto aiming.
+* By using his Walking Cane Gadget, Gray can finish off low health brawlers hiding behind walls, or can even disarm enemies holding the ball in [[Brawl Ball]].
+* Gray's Super can easily finish artilleries who cannot closely combat against Brawlers easily or enemies that are on low health. However, try to accumulate 2 or 3 ammos before doing that so you don't give the enemy time to escape while you are reloading your ammo.
+* Be wary when using his Super because Gray can accidentally teleport in front of a high damaging Brawler such as [[Darryl]], [[Colt]], [[Fang]], [[Doug]], 8-Bit, [[Shelly]], [[Nani]], Buzz, [[Brock]], [[Bibi]], Leon, [[El Primo]], Spike, [[Frank]], Griff, or [[Bull]]. This can be prevented by manually aiming his Super away from close range Brawlers.
+* Teleporting while pulling an enemy with Gray's Walking Cane Gadget can allow the pull range to be extended to Gray's initial position before teleporting, allowing the player to bring high-focus targets, like a Gem carrier, closer to your team.
+
+=== Other ===
+*While camping near Gray's teleporters is a viable strategy to ambush him or his teammates, do note that if you stand too close to one, they will begin to glow similarly to when they are being activated, betraying your location. Also, note that there is a delay between using the portals.

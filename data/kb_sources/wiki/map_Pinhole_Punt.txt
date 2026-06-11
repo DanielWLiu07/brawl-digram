@@ -1,0 +1,12 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Pinhole_Punt
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+*Brawlers should stay by the side bushes of the top section and wait for an attack if they know they aren't able to push through and score a goal.
+*You and teammates can hide into one of the six bush 2-by-3 bush clusters nearest either your goal or the enemy goal, though this defensive maneuver should only be carried out if the enemy is pushing vertically.
+*Recommended Brawlers on this map are medium-ranged Brawlers as well as a few long-ranged ones such as [[Bea]], [[Mandy]], [[Brock]], [[Nani]], [[Colt]], and [[Belle]], as well as their extreme counters, which are high-damaging heavyweights. Close-ranged Brawlers with relatively low health such as [[Edgar]], [[Mico]], [[Kit]], and [[Mortis]] are hindered by Brawlers that out-range them as well as scouting Brawlers, but can find temporary shelter inside the bush clusters if necessary.
+*[[Tara]]'s Super can act as a wall breaker and be used to heavily damage/kill heavyweights stalling by the opposite side of walls.
+*[[Pam]] can act as pseudo-heavyweight on this map when necessary, but she should overall should focus on blocking Brawlers from entering the center bush border. Any place near a bush is decent Super placement on this map; however, it should be no more or less than one tile away from walls.
+*If your teammate isn't a support such as [[Poco]], [[Byron]], or [[Pam]] to help check the entire center bush border, [[Emz]] can check equally as well (and damages even better due to her lingering damage).
+*If perfectly positioned directly in the center tile, [[Rosa]] can use her Grow Light Gadget to fill the center of this map. She can also connect the smaller bush clusters, though only connect these bushes if the enemy team has a low damage output and your team mainly consist of close-range heavyweights.

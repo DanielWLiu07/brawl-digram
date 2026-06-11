@@ -1,0 +1,21 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Meeple
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+=== Game Modes and Maps ===
+
+* Meeple shines in modes like [[Knockout]] and [[Bounty]] that lack assassins, much like other marksmen. However, Meeple is unable to compete with characters like [[Piper]], [[Brock]], [[Nani]], [[Colt]], Rico, [[Amber]], [[Lou]], [[R-T]], and [[Mandy]] on completely open maps, so opt for maps with both short and long sightlines where Meeple can get immense value off their Super, such as [[Layer Bake]].
+* When playing Meeple in modes like [[Brawl Hockey]] and [[Brawl Ball]], if you have the ball/puck, line yourself up at the goal, shoot the ball/puck, and then use his Ragequit Gadget. This stuns all enemies in a large radius, and you get a free goal. This is more effective if you absorb a bit of damage first, as the Gadget will stun for a longer duration.
+
+=== Recommended Build ===
+
+* Try to use the Mansions of Meeple Gadget only when all or most members of the enemy team are close together. This will allow maximum effect on the enemy team. This strategy is best used with a [[Dynamike]], [[Barley]], [[Tick]], [[Larry & Lawrie]], or any other thrower in your team.
+**The Mansions of Meeple Gadget can also be used with a [[Rico]] teammate. If Rico uses his Super (especially with his Hypercharge) within the Gadget's walls, his attacks will repeatedly bounce within the walls and deal significant damage.
+*When playing in modes such as [[Gem Grab]] or [[Brawl Ball]], use the Ragequit Gadget as a trump card to turn the tables. For example, in Gem Grab, if Meeple is on low health and is being pursued by multiple Brawlers, using Ragequit at this point would give Meeple some time to escape and/or heal. Alternatively, Meeple can use the stun duration to finish them off.
+* Do Not Pass Go is better for greedy Supers, where Meeple uses it for themselves to secure kills. On the other hand, Rule Bending is great when sharing it with teammates to maximize the reload buff, and it is also less dependent on high concentrations of walls.
+* Ragequit can be used with the Damage Gear. Meeple can lose enough health for the Gear to activate and then use their Gadget for a quick kill.
+* As Meeple's Gadgets are very powerful, you can use the Gadget Cooldown Gear in order to use them more often. This is more useful with the Ragequit Gadget as it is the only way Meeple can defend themself against an enemy at close range.
+
+=== Other ===

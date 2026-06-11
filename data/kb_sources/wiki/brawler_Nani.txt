@@ -1,0 +1,28 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Nani
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+*Because of the large spread of her attack, Nani is best used in very open maps. Playing her in open maps would minimize any collisions of the projectiles hitting a wall that would decrease her damage. In addition, open maps minimize any accidental cases of Nani's Super being wasted on a wall.
+*Nani's high damage per ammo makes her an excellent choice in [[Heist]]. Unlike [[Spike]], [[Griff]], and [[Leon]], she can utilize her attacks from a distance to hit the safe, allowing her to play more safely.
+
+===Recommended Build===
+*Nani's Warpin' Time Gadget can be used to reach the enemy safe in [[Heist]], enemy's territory in [[Trophy Thieves]], and the Ball in [[Brawl Ball]] more quickly.
+*Do not use the Return To Sender Gadget when you are using the Tempered Steel Star Power especially when it is activated, as the Star Power would decrease the amount of the damage Nani receives, the effectiveness of the Gadget will be reduced significantly.
+*Try not to activate her Return To Sender Gadget when you are near to a Brawler which shoots multiple low damage projectiles, such as [[Colt]], [[Rico]], [[Pearl]], Pam, [[8-Bit]], [[Lola]], etc. You will only return a little bit of damage to the enemy Brawler if you use this Gadget against an enemy like this. Only use it when you're going to take one-time high damage, such as [[Brock]]'s rocket, [[Mandy]], [[Tick]], and [[Dynamike]]'s Super, another Nani's Super, a far-ranged [[Piper]]'s bullet, a supercharged [[Bea]]'s shot, or a fully charged [[Angelo]]'s arrow. This requires some practice and fast reflexes but if utilized well, it can be game-changing. If you can't properly apply Nani's Return to Sender Gadget in adequate time, you can use it as a temporary 80% shield for one projectile.
+*Tempered Steel is extremely strong in [[Super City Rampage]] and [[Siege]] as she can take a lot of hits from the Mega Monster or robot, and she can take even more when a Brawler like [[Pam]], [[Poco]], [[Doug]], [[Berry]], or [[Byron]] is healing her.
+*Tempered Steel essentially quintuples her health, allowing her to escape or hide when coupled with Warpin' Time, such as in [[Big Game]]. Overall, Nani's Super puts her in a very vulnerable position, but the shield provides enough value to deter enemies. Not bursting Nani down completely during its duration allows her to potentially two-shot enemies near her without fear of repercussions.
+
+===Strategies===
+*Nani, having very high damage per attack if all orbs hit, and a similarly high damaging Super that can also knock back enemies who get too close, is a very effective tank counter. To make use of this ability, the best way to kill tanks, especially heavyweights, is to maintain a medium range of around 4-5 tiles from the enemy, which allows Nani to hit her shots easier without giving the enemy time to dodge them, while also staying just out of the range of their high damaging attacks. If they get close enough to you, use your Super to knock them back and deal extra damage. Don't be afraid to get close to them, however, if they are low on health, as you can find it hard to kill a skilled dodger at a range.
+*Because of Nani's unique attack pattern, her shots can be fired at enemies camping behind walls, although normally only 1 of the 3 orbs will hit an enemy. If possible, you can use the unique diamond path of the two outer orbs to hit an enemy behind a wall.
+*To hit enemies accurately with Nani, try to lead your shots slightly ahead of them, meaning if they're walking away from you, you'd shoot slightly above them.
+
+===Other===
+*Only auto-aim Nani's attack if the enemy is running directly in front you or if the enemy is standing still; otherwise it will most likely miss. Always try to manually aim your main attack when using Nani.
+*Pay attention to enemies with canceling capabilities like knockback, pull, and stun. If Nani is moved from Peep's original casting spot, Peep will disappear. Also note that Peep can't be directly destroyed; however, it can be interrupted by walls, immunity bubbles, pets, etc. When using Nani's Super, wait for the target to either lose their shield or use their pet when going against an enemy with any of these.
+*Before using Nani's Super, hide away from any enemies, preferably in bushes, then use her Super. Never use Nani's Super when she's in the middle of a battle, as it leaves Nani vulnerable to enemy attacks. Although this weakness can be alleviated with Nani's Star Power Tempered Steel to shield her, Nani is still vulnerable to being knocked back or stunned which will cause her Super to disappear without exploding.
+*Unless within close range of an enemy Brawler, never auto-aim your Super because of the fact that it goes towards the nearest enemy. The direction it will go in may cause you to struggle to control Peep. Try to manually aim your Super so that it starts off in the direction that you want it to go, then control Peep with your movement joystick.
+*You can use Nani's Super as an additional attack when you are in close-quarters with a short-ranged Brawler. This can be very useful as hitting enemies with Peep deals damage and knocks back, allowing you to escape or defeat them from a distance.
+*Be careful when activating Nani's Hypercharged Super as while it allows you to hit enemies more easily, it also increases the chances of Peep hitting obstacles. Only use this when the map is very open with almost no walls for you to get an easier hit on the enemy.

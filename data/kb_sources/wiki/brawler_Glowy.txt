@@ -1,0 +1,11 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Glowy
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+=== Game Modes and Maps ===
+
+=== Recommended Build ===
+
+=== Other ===

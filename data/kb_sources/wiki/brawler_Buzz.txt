@@ -1,0 +1,30 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Buzz
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+*Buzz's mechanics make him viable in [[Heist]]. He can grapple onto the enemy safe and stun nearby defenders, eliminate them, and proceed to deal large amounts of damage to the safe continuously since his reload speed is fast. He can also use the stun from his Super to defeat attackers onto his team's safe, and his above-average health allows for more survivability while attacking the safe, in which low-health Brawlers are commonly used in this mode.
+*In [[Brawl Ball]] Overtime, if you stun the enemy who is holding the ball with your Super, then use Buzz's Reserve Buoy Gadget, grab the ball then shoot it into the goal. All while the enemy is stunned. If you want to do this easier, use Buzz's Star Power Tougher Torpedo.
+
+===Recommended Build===
+*The main build you are going to want is with Buzz's Reserve Buoy Gadget, and his Eyes Sharp Star Power.
+**Buzz's Reserve Buoy Gadget is effective for emergency situations such as escaping without having a Super. It can also be used offensively by using it to catch up to enemies faster or by using it as a Super at the beginning of a match.
+**When playing more open maps against enemies that outrange you, his Eyes Sharp Star Power gives more value as it's easier for Buzz to charge his Super.
+**Buzz can use his Reserve Buoy Gadget to quickly move onto lower health Brawlers, as the stun isn't always necessary to finish them.
+**X-Ray-Shades is useful in bushy maps as it reveals a large area of bushes, so it is recommended to use X-Ray-Shades only in maps with a lot of bushes and use Reserve Buoy everywhere else.
+**Tougher Torpedo can be used to take down Tanks as it doubles the minimum stun duration to 1 second, but Eyes Sharp is generally better in other matchups because it gives Buzz's Super charge a bigger area without enemies knowing they're charging your Super for you.
+
+===Other===
+*In order to hit all 5 shots, Buzz must either move clockwise around the enemy or attack at point-blank range. The latter, while easier to do, is riskier due to certain Brawlers like [[Spike]], [[Bull]], [[Leon]], [[Shelly]], [[Griff]], [[Nani]], [[El Primo]], and [[Darryl]] outmatching Buzz in point-blank combat.
+*Generally, try to auto-aim your Super most of the time unless the enemy is far away from you. His Super is fast, but if there is an enemy moving sideways from a far distance, it is best not to use your Super onto the enemy as they most likely can outrange you.
+*If an enemy is fleeing and is out of Buzz's range, he can use his Super to quickly catch up to the enemy and stun them, giving him the chance to finish them off.
+*Buzz isn't immune to damage or when he's traveling to a grappled target, so grappling an enemy when Buzz is on low health is risky. Additionally, if he is stunned, pulled, or knocked back while grappling, his Super is interrupted. However, if other enemies aren't nearby, you can still defeat the grappled enemy as the stun duration is long enough for you to defeat them with Buzz's high damage before the stun wears off.
+*Since Buzz's Super stuns in a short radius around him once he finishes traveling to the buoy's location, it's better to grapple onto a wall near an enemy rather than grapple the enemy since hitting Buzz's Super on a moving target is difficult. This can ensure that he can at least travel near the enemy's location.
+*When you face off against another Buzz and both of you Super, whoever Supers the second gets their stun. Ex: If you stun after your enemy has stunned you, you stun the other Buzz and can defeat him easily.
+*If a Buzz grapples you to stun, grapple to a nearby wall so the opponent Buzz will be dragged to the wall and the stun will be cancelled.
+*Buzz's Super allows him to play offensive because his health is above-average and his Super, if grappled from a long distance, can allow him to defeat even tanks like Bull, El Primo, or Darryl with his Super, which is usually difficult for Brawlers with lower health than tanks. Buzz can simply camp behind walls, inside bushes, or otherwise at a concealed or hard-to-reach location from the enemy and charge his Super in the process, then once he gets his Super, he can grapple onto and defeat enemies.
+*His Trait charges his Super in 15 seconds with a single enemy inside the radius. If it's the beginning of a match and your Reserve Buoy Gadget isn't enough to secure a defeat due to the absence of the stun, you can simply use obstacles that enemies are hiding behind to passively charge your Super.
+*Since his Trait still charges his Super on invisible or bush-camping enemies, he can use it as a scouting tool for bush-filled areas or maps like [[Snake Prairie]]. His Eyes Sharp Star Power allows him to better scout enemies because it extends his Trait radius. He can also use his X-Ray Shades gadget for better scouting. However, he is less preferred over better scouting Brawlers such as [[Tara]], [[Bo]], and [[Grom]].
+*If you're facing close-ranged Brawlers in which his Super or Trait aren't necessary, it's best to use his Tougher Torpedo Star Power to extend the stun duration at close range and ensure knocking them out, although it's harder to recharge your Super to escape from other enemies once you've defeated the close-ranged enemies.
+*Buzz can stun and defeat multiple enemies if they're grouped up with his Super and his wide, high-damaging attack. His slow unload speed makes Buzz vulnerable after his second attack but another Super allows him to defeat them

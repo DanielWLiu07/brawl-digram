@@ -1,0 +1,26 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Jessie
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+*Jessie is amazing in [[Big Game]] when she is the Big Brawler because she can use her Super to defend herself which also has 20% more health and damage. Her damage and reload speed increase, which along with her bouncing shots and turret make her a very decent Big Brawler in this mode.
+*In [[Heist]], Jessie's turret can be placed in front of their safe to help defend against enemies by shielding the safe and by dealing damage. Likewise, it can also be used offensively against the enemy safe with the help of her Recoil Spring Gadget to multiply the turrets damage output.
+**Her Energize Star Power helps keep the turret survive for longer and extend Jessie's range by bouncing her attacks. Meanwhile, her Shocky Star Power will allow Jessie's turret's attacks to bounce off and potentially hit more enemies, who could either be defenders on the enemy side or attackers on your safe.
+**Be wary of [[Penny]] when placing her turret to defend, as otherwise she may be able to use the turret to potentially triple her damage onto the safe.
+
+===Recommended Build===
+*Jessie's Spark Plug Gadget is incredibly useful for taking down enemies. It can hit enemies through walls in a radius around the turret. After enemies are slowed down, Jessie can attack the enemy easily, and the turret can hit all shots while the enemy is slowed. Jessie can also use it to defend from heavyweights and assassins.
+*Jessie's Recoil Spring Gadget, although capable of providing a lot of value, only excels when taking out stationary targets, enemy turrets, or non-dodging spawnables. It works best with her Shocky Star Power, forcing enemies to take damage as they attempt to defend.
+*When using Jessie's Energize Star power, place her turret near an important chokepoint on the map and keep shooting at the turret to heal it while enemies are near it. This will continuously heal her turret while it deals damage, and her regular attacks can also deal damage to the enemies too.
+
+===Strategies===
+*Turret placement is one of the most important skills with Jessie. When facing short-ranged Brawlers, place it out in the open so that they are forced to take attacks from it as they attempt to destroy it. When facing long-ranged Brawlers, place it next to their walls, but on her team's side of the wall so they have to walk around the wall to attack it and take damage. When facing throwers, throw it over the wall that they are hiding behind to do some damage to them and force them to use their attacks on the turret.
+*Jessie's turret deals small but noticeable damage that racks up quickly. Unfortunately, it can be easily avoided by running perpendicular along its attack direction. Prevent enemies from dodging effectively by placing the turret in a place where it can cover a linear area.
+*The bounce mechanic of Jessie's attack can quickly cripple entire teams. Lock down choke-points or linear sections of the map to punish grouped up enemies by dealing considerable damage to them and rapidly charging your Super and Hypercharge.
+
+===Other===
+*After hitting a target, Jessie's attack always bounces towards the nearest enemy that hasn't already been hit. This can be used to determine enemy positions, even if they are out of range or hiding in bushes, or invisible such as [[Leon]], [[Sandy]], or [[Kit]].
+*Jessie's turret can deal considerable damage if ignored, making it an excellent way to distract enemies if they attempt to destroy it. By the time they do destroy it, you are likely to have a fully or mostly charged Super that is ready to be used whenever you wish.
+*While in a bush, Jessie's turret is invisible to enemies unless they are also in the bush and right next to it. Enemies right next to it in a bush are so visible by Jessie and her teammates. However, just like a Brawler, the turret will become visible while attacking or taking damage.
+*Jessie can charge her Super very quickly. 6 hits (or 2 perfect shots hitting 3 enemies by bouncing) is enough to charge her Super without any pre-existing charge.

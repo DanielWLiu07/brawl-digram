@@ -1,0 +1,13 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Kit
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+*Kit's Super is best used in team game modes, where he can attach to an ally and deal massive damage with his attack, while also healing himself.
+*Do not jump on an enemy if they have their teammates near them. Instead, use the Super on isolated enemies to allow your teammates to finish them off, or onto low health enemies to defeat them.
+*Kit is a decent choice in [[Showdown]] as while he lacks in damage output and health, he has a lot of mobility and map control to make up for it. His Power Hungry Star Power is an excellent choice for Showdown as every two Power Cubes he obtains counts as three, so he gets more powerful quicker than others. He works better in [[Duo Showdown]] as he can heal his teammates, control and damage his enemies while being invulnerable, and acquire double Power Cube buffs. His Cardboard Box Gadget is also useful, as it allows him to speed up his Super charge rate, sneak up on enemies, or flee from enemies.
+*Be aware that Kit's Super will be cancelled if used on enemies currently moving during their Super such as [[Buzz]], [[Fang]], [[Chuck]], [[Berry]], [[Darryl]], or [[Bull]], with Kit even being pulled along and suffering the aftereffects of the Super. As such, try not to target such Brawlers when they're in situations where they are anticipating using their Super, granting you the element of surprise.
+*If Kit is attached to a teammate when a round resets, he will have his Super when the next round begins. This allows Kit to use his yarn ball attack to guarantee a takedown without worrying about wasting his Super.
+
+===Strategies===
+*Kit is powerful with tanks such as [[Draco]], [[Frank]], [[Hank]], [[El Primo]], [[Bull]], or [[Darryl]] as Kit can instantly heal a good amount of health with his Cheeseburger Gadget and do a good amount of damage when attached. Kit can also heal a good amount of HP overtime to the attached teammate.

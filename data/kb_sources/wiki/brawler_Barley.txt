@@ -1,0 +1,29 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Barley
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+*Barley can be effective in [[Heist]], if used correctly. Barley's Super has an incredibly long range, allowing it to safely deal damage to the Heist safe. Since the safe is a stationary target, it’ll take both ticks of damage from his main attack as well as all four ticks from his Super. This is very effective when spawn-camping or supporting a rush attack, allowing you to stack Supers together.
+*Barley is a great [[Siege]] Brawler mainly because he’s a control Brawler, excellent at area denial. He can force the enemies back with his long-lasting attacks and Super so that his team can retrieve the Bolts. When playing Barley in Siege, try to stay alive when your Siege Bot spawns. Barley is usually the primary damage dealer to the IKE. Additionally, Barley's Super has an extremely long range, making it able to reach the IKE without entering its range.
+*Barley is a menace in [[Duo Showdown]] if he is paired with a heavyweight. You can follow your teammate around and use Barley's attack to damage enemies while the tank finishes them off. The same applies to Power Cubes; if there are multiple boxes near your spawn, you can use your attacks to break them by stacking their damage.
+
+===Recommended Build===
+*Barley's Sticky Syrup Mixer Gadget can be more useful than one would assume. It can be used when defending a goal in [[Brawl Ball]] and can discourage tanks from chasing you. Surprisingly, you can use this to bush-camp with Barley. Hide in a bush, and when an enemy walks by, use your Sticky Syrup Mixer Gadget to slow them and burst them down. If done correctly, this either takes out the enemy or deals tremendous amounts of damage, forcing them to retreat. Barley's Sticky Syrup Mixer Gadget is especially useful against tanks and close-ranged assassins since it usually slows them down enough to where Barley can outrange and deal a large amount of damage to them.
+**When enemies are behind a wall, Barley can use his Sticky Syrup Mixer Gadget to slow them down. Then, he can follow up with three attacks to take them out. This close-range strategy works even better with bushes, where his damage is surprisingly high.
+*His Medical Use Star Power is more map-dependent, best used in game modes where controlling the field is more important than eliminating enemy Brawlers. This includes events such as Gem Grab, Heist, and Siege. Medical Use increases his survivability, allowing you to continuously attack instead of retreating, and giving up ground to heal up. This Star Power can be paired with his Herbal Tonic Gadget to provide healing when there aren't other healers on your team.
+*Barley's Extra Noxious Star Power allows Barley's attacks to deal more damage. This makes Barley to become a more aggressive Brawler, especially from behind walls. This Star Power enables Barley to become very strong on modes like Heist and Siege.
+
+===Strategies===
+*Like most other throwers, aiming two attacks at an enemy, two on either side of them, will force them to move up or down, potentially making it easier to separate them from their allies. They can also choose to move into the attacks and force them to take damage from Barley's attacks.
+*Combining Barley's Super with [[Spike]] or [[Lou]]'s can deal huge damage to enemies trapped by both. Spike and Lou's Super slows the enemy's movement speed and deal damage, hindering them from escaping while Barley's Super deals massive damage.
+*Barley's attack can be used for area control, deeming it effective to discourage enemy movement through certain choke points or paths. Take advantage of this to keep enemies out of critical areas of the map, such as the Gem mine in [[Gem Grab]], the zones in [[Hot Zone]], or the Bolts in Siege.
+*It is extremely important to recognize that your Super's spread gets bigger, not the actual bottles, the further away you are from it. This also means that the top, bottom, and sides may not be covered. If you want to concentrate your attack onto a chokepoint or area, like Hot Zone or Heist, it is recommended to shrink it a little to cover efficiently, and if you want to generalize an area with multiple targets to walk backwards while using it.
+*Barley's Super can be interrupted during casting. Try to avoid this, as you might as well just have lobbed your basic attacks.
+*Barley is surprisingly good in tight areas with a few blocks in between, as attacks are almost guaranteed to 2-hit, and your Stick Syrup Gadget can confirm the kill.
+
+===Other===
+*Like [[Berry]], [[Willow]], and other throwers, his attacks can be lobbed over obstacles. It’s recommended to attack from behind walls where the enemies can’t hit you as easily than if you’re out in the open. It is even better to attack from behind unbreakable walls where enemies cannot destroy your cover.
+*Barley's Super can deal massive amounts of damage if an enemy is unable to quickly escape from the liquid. Try to aim the Super to have it land within the enemy standing in the middle of it or trapped against a wall, and use your Sticky Syrup Mixer Gadget to prolong and maximize your damage output.
+*Auto-aiming with Barley often causes you to miss your shot or only deal 1 tick of damage. Because Barley's attacks last for two ticks, if you aim the shot in front of where an enemy will head, you’ll either hinder their movement or cause them to take two ticks of damage.
+*If an enemy is hit with the first tick of the first puddle of Barley's Super, remains standing on the liquid, and is hit with the last tick of the last puddle, the Super can deal five ticks of damage instead of four.

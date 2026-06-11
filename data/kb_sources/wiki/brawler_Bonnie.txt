@@ -1,0 +1,27 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Bonnie
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+=== Game Modes and Maps ===
+
+* Bonnie can be good in [[Heist]] or [[Siege]], as once she has her Super charged, she can use it to jump on the safe or the IKE turret and unleash all three ammo, dealing some 12440 damage to the target. This can take out about 25% of the IKE turret's health before she's knocked down by it in Siege, and she can stay in the fight longer with healers like [[Pam]], [[Byron]], [[Doug]], [[Berry]], or [[Poco]].
+
+=== Recommended Build ===
+
+* Speed and Damage are two fitting Gears for Bonnie. Speed can help provide extra agility in her Cannon form and can help Bonnie close in on enemies in her close range form. Damage, on the other hand, helps her deal extra damage in her cannon form, seeing how much health she has in her Clyde form, and helps her deal a lot of extra damage in her close range Bonnie form, since she acts like an assassin.
+* Super Charge and Health Gears are very strong Gears for Bonnie, because in her cannon form she can get her Super in 4 hits instead of 5, and she can also get her Hypercharge in 10 hits instead of 11. Health Gear pairs well witu Bonnie because she has a lot of health fot a Marksman, and although she has less health in her alternate form, she can still get her health back faster.
+* Easily the better build, Black Powder Star Power and Sugar Rush Gadget make up for Bonnie's movement weakness immensely, being almost essential to playing the usually slow yet assassin-like Brawler. This is mainly because Wisdom Tooth, which never hits and deals almost no damage, and Crash Test, where Bonnie is almost never in launched form due to Super recharge, have zero niche or main usage.
+* Due to the spammable nature of the Sugar Rush Gadget, Bonnie can make excellent use of the Gadget Cooldown Gear. Being able to activate it more frequently will ensure that Bonnie is in her boosted state for more time within the match. However, this Gear is less useful with her Crash Test Gadget, as there will not be any situations where it can be useful to be activated repeatedly.
+
+=== Strategies ===
+
+=== Other ===
+*In Bonnie's cannon form, she can pressure enemies due to her long attack range and high health. In her alternate form, Bonnie can pick off enemy Brawlers with her high burst damage. But since she has a short range in her alternate form, her Super with her Black Powder Star Power allows her to get close to enemies. Try not to rush into a group of enemies in Bonnie's alternate form, as despite having a very fast movement speed, her short range and moderately low health makes it risky to run away from or towards enemy Brawlers, who could easily corner or outrange her.
+*In her Bonnie form, Bonnie has very slow reload speed and short range, so it is a bad idea to waste ammo to "tag" or intimidate an opponent if you are under attack.
+*Bonnie's attacks are similar to [[Bo]]'s attacks. Bonnie shoots three bombs from left to right, so you can take advantage of this to control the spread of the bombs. If you want to concentrate fire in a small area, move left while firing, allowing more arrows to hit a single target. For an attack with more spread, move right. The space between each bomb will be increased, giving the attack a wider spread.
+*Even though it seems counter-intuitive, Bonnie should transform into cannon form even if she is currently fighting someone. She can continue charging her Super to escape, heals a bit to gain an edge, and with her Sugar Rush gadget, she can quickly out-distance the attacker.
+* Use the Cannon form if you're fighting against long-range enemies, as it gives you a long range and high health. Conversely, it is better to use the alternate form when fighting short-range enemies, as they usually have high health and the alternate form does a lot of damage. If they hit you, you can quickly escape because of her high movement speed.
+
+{{Clr}}

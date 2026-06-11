@@ -1,0 +1,16 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Meg
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+*Meg is a dependable damage dealer when in her Mecha, making her particularly effective at dealing damage to the [[Heist]] safe or applying pressure in [[Duels]]. However, her reload speed and movement speed are reduced while in the Mecha. As a result, it’s advisable to avoid chasing down enemies in modes like [[Bounty]] or [[Knockout]].
+*Meg is an agile poker without her Mecha because of her fast movement speed and fast unload speed, but with it, she becomes a devastating fighter and control asset as she can deal high damage in large areas with her attack and secondary Super.
+*There's a slight delay before Meg hops into her Mecha, and her Super can be cancelled if she dies, gets knocked back, or gets stunned. Make sure to activate her Super where you'll be safe from attacking enemies.
+*In [[Brawl Ball]], Meg can be very viable as a defense to oncoming opponents with the ball as her Mecha has a lot of health and can be used to significantly damage opponents. She can take enemy fire and provide some area denial to help the ball carrier score an easy goal.
+*In [[Showdown]], Meg can be a force to be reckoned with due to her starting in her much stronger Mecha form. Combined with her Jolting Volts Gadget, Meg can duel even longer range Brawlers due to the Mecha's high health. However, Meg becomes much weaker after it is destroyed. Prioritize picking up Power Cubes and use her Force Field Star Power to increase Meg's survivability outside her Mecha.
+*When the various upgrades the Mecha gives Meg are needed more than usual, using Meg's Jolting Volts Gadget can keep Meg in her Mecha significantly longer against long range Brawlers that can prevent it from healing. This is useful in Heist because Meg will have a very low impact on the health of the Safe in her standard form, but can deal substantial damage onto the safe when inside her Mecha.
+*Be mindful when taking on high-responsibility roles such as the Gem carrier in [[Gem Grab]] or the ball carrier in Brawl Ball, because if Meg's Mecha is taken out, she will become an easy target. 
+*Avoid close combat and engaging with aggressive Brawlers after her Mecha is destroyed. Either Star Power can help by shielding some damage or pushing away enemies near Meg, but those won't completely save her from taking damage or being defeated.
+*Meg's advanced Super will cancel its main attack. Keep this in mind if you want to deal substantial long-range damage. 
+*In [[Ranked]] games with the Big Friend [[Modifiers|Modifier]], both Meg and her Mecha will have their health scaled up. This makes her particularly difficult to fully take down and allows her to more easily recharge her Mecha once destroyed. 
+*In her Mecha form, Meg is able to deal a lot of damage and keep control of an area with her high-damaging attack and Super. This makes her an extreme menace in modes like [[Hot Zone]] and [[Brawl Ball]]. Since her range is shorter than most long-range Brawlers, she excels in maps that require mid-lane control.

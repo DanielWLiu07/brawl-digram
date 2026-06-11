@@ -1,0 +1,29 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Lola
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+=== Game Modes and Maps ===
+
+* Lola can control multiple lanes with her Ego if played correctly. This is best used in [[Hot Zone]], where her Ego provides a distraction for the enemy team.
+* In Siege, Lola can use her Super and her Freeze Frame Gadget to temporarily delay the Siege Robot from attacking your team's IKE turret. Similarly, in [[Heist]], Lola can place her Ego near the safe and activate Freeze Frame while standing behind it so you can deal damage while the Ego is shielded and can block enemy fire more effectively.
+* In many [[Knockout]] and [[Bounty]] maps, Lola can use her Super and Stunt Double Gadget to teleport to and from the enemy "base".
+
+=== Recommended Build ===
+
+* Lola's Ego with her Freeze Frame Gadget can be used to attack enemies behind walls, especially throwers like [[Tick]], [[Barley]], [[Dynamike]], or [[Sprout]].
+
+* Lola's Freeze Frame Gadget can be used to reposition yourself to your desired location in relation to your Ego. For example, if you throw your Super and want to be on top of it, you can activate Freeze Frame to position yourself right on top of your Ego.
+** Lola can also reposition her Ego by moving such that her Ego runs into a wall. This way she can get closer to her Ego or position it to a desired position. A corner is very suitable in this situation. Stacking Lola's Ego on top of her allows for higher damage potential and consistency.
+* Lola's Stunt Double Gadget can be used as if Lola had double the health - the enemy could fight the clone and then have to fight the real Lola as well, leading to a guaranteed kill.
+* Improvise is the most used Lola Star Power, as Sealed With a Kiss is too complex and inefficient at healing. Given Lola's DPS nature, Improvise is helpful when spamming damage against targets.
+
+=== Other ===
+*How far away to place your Ego depends on the situation you are in. Placing it close to her can allow them to do a large amount of damage to a single target and eliminate them faster. Alternatively, Lola can place it away from her to control a large area with her damage. This also removes the damage penalty of her Ego, causing it to pose more of a threat.
+**Although it will die much quicker, Lola can also throw her Ego in front of her and use it as a shield, blocking non piercing attacks, especially with the help of her Freeze Frame Gadget. This can be combined with the Health [[Gears|Gear]] to recover a good portion of health behind your Ego. This strategy is obviously not recommended against bouncing or piercing attacks, like [[Nita]], [[Belle]], [[Carl]], [[Tara]], [[Mr. P]], [[Penny]], or [[Jessie]].
+**If throwing it away from her, walk away from your Super as it is spawning to maximize the distance. When trying to control a Lola clone, envision as if you are the clone to help aim better.
+*When using the Stunt Double gadget, use it horizontally, allowing your clone to be able to continue fighting without having to adjust using a wall.
+*It may be more advantageous to keep Lola without any ammo when she doesn't need to heal when she has her Improvise Star Power, thus maximizing her burst damage.
+*Lola's Ego can be used to have yourself attack enemies without the risk of being defeated yourself, such as throwing it next to the middle when starting off a [[Brawl Ball]] round, where more often than not, players frequently rush the middle.
+*Lola's Ego has its own ammo supply that always reloads at Lola's base speed. Status effects that change reload speed such as playing with the Quickfire Modifier do not affect her Ego.

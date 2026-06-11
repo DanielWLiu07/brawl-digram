@@ -1,0 +1,26 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Mr._P
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+=== Game Modes and Maps ===
+
+* In Special Events such as [[Boss Fight]], [[Robo Rumble]] and [[Big Game]], Mr. P's Super can prove very useful as the porters can distract the enemies, and if a porter is destroyed, another one spawns to take its place. His Revolving Door Star Power makes this more of a threat.
+* In [[Siege]], throwing your home base inside the IKE zone can serve as a meat shield for you as long as it is closer to the IKE, causing the IKE to target it instead of you. This gives you more time to dive into the IKE to land extra shots and is amplified with his Revolving Door Star Power, which gives the porters additional health and therefore give you an even better meat shield. His Service Bell Gadget amplifies this further, as it can instantly heal a low health porter back to full health.
+* Mr. P can be a real nuisance on maps a plethora of bushes, such as [[Snake Prairie]], as his porters can flush out hidden enemies. This strategy works even better with his Porter Reinforcements Gadget, so Mr. P can instantly root out enemies at the start of the match without a Super.
+
+=== Recommended Build ===
+
+* On maps with an abundance of walls, it's usually a good idea to use his Handle With Care Star Power, as the walls give Mr. P plenty of opportunities to utilize the extra damage that the Star Power provides.
+* Mr. P’s Porter Reinforcements Gadget is a good way to block shots from enemies, making them expend their ammo on the porter despite its low health. It can also effectively counter Brawlers that have difficulty defending themselves at close range such as [[Piper]] or Brawlers with low damage or a slow reload speed. Using the Gadget right in front of an enemy can sometimes force them to retreat, allowing Mr. P to hit them with his attack and deal twice the damage.
+* Mr. P's Handle With Care Star Power is better on damage orientated modes, such as [[Heist]], because it can help melt the safe quicker, although it is not advisable to play Mr. P in Heist as he has a low damage output by himself without porters.
+
+=== Strategies ===
+
+* Mr. P's attack is unique in that it bounces after hitting an obstacle or target. If you throw attacks at walls, you can hit enemies behind them, like a thrower. This only works with one-tile-thick walls. If you hit a Brawler, the attack can hit them again if they stand still or are running away from you, effectively doubling your damage per hit against fleeing targets.
+* Continue to set up a home base when taking control of lanes in battles. Mr. P's Super can be charged consistently which allows them to secure control faster using their Super. It also means it's safe to bring the base further into the battlefield where it can be of more use. Take into note that sometimes spawning a new home base is better then that of waiting for a porter to spawn since a porter immediately spawns right when it's placed down.
+
+=== Other ===
+*Mr. P is a very versatile Brawler due to his pseudo-thrower attacks and his range. Taking note of the enemy's movement and position can be vital when dealing maximum damage with the bounce from his attack.
+*In a pinch, his porters can be used as a meat shield to hide behind them and heal up or attack the enemy. This should only be used in situations like [[Showdown]] or the last few seconds in [[Bounty]] or [[Siege]]. Watch out for [[Penny]], [[Jessie]], [[Belle]], [[Carl]], [[Rico]], [[Ruffs]], [[Tara]], [[Bibi]], [[Grom]], and other piercing or bouncing Brawlers though, since they can hit through spawnables, including Mr. P's porters.

@@ -1,0 +1,25 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Penny
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+=== Game Modes and Maps ===
+
+*The leftover fire from her cannonballs is very effective at restricting where an enemy is willing to go, often cutting off their escape route. This is valuable in game modes focused on control, such as [[Gem Grab]] and [[Hot Zone]]. The additional damage it deals is also effective against stationary targets such as safes.
+*Penny's pouch will not burst upon impact with walls or other obstacles. Her attack will, however, burst upon impact with a Power Cube box in [[Showdown]]. Use this to your advantage in keeping enemies away from the box with the coins from when your pouch splits. This strategy works particularly well in [[Rockwall Brawl]] in 8 out of the 10 spawn points. This also helps Penny open multiple grouped up boxes at ease, while she struggles to destroy single boxes due to her slow reload speed and pouch's low damage.
+
+=== Recommended Build ===
+
+*Salty Barrel is incredible against tanks and assassins because it can deal high damage if you are close to enemies. This also works if you put it near the safe, as it can destroy it very fast.
+*If a Brawler with a moving ability like [[Edgar]], [[El Primo]], [[Fang]], [[Bull]], [[Crow]], [[Mico]], [[Bonnie]], [[Darryl]], [[Kit]], or [[Buzz]] jumps, dashes, or charges on you, Penny's Master Blaster Star Power can be used to distance yourself from the said Brawler with moving ability.
+
+=== Strategies ===
+
+*To maximize the lifespan of the cannon, one of the very optimal placements for it is behind walls on the player's side of the map. The turret's extremely long range allows it to shoot cannonballs to the enemy's side of the map from the safety of the player's side and it is protected from enemy fire when behind walls. Additionally, close-ranged Brawlers' movement will be restricted by the walls when trying to take the turret down, causing them to be hit by its cannonballs.
+*It is better to put Penny's Cannon behind walls since it can attack through walls and make enemies have difficulty destroying it. The cannonballs from her Super take the same amount of time to land regardless of how far the opponent is. Use this to your advantage by placing the cannon as far back on the map as possible.
+
+=== Other ===
+*When an opponent is positioned behind another opponent, the splash effect of Penny's main attack is able to hit both of them. This makes her very effective against any Brawler that has a meat shield, like [[Mr. P]]'s Porters, [[Ash]]'s Rats, [[Tick]]'s Head, [[Nita]]'s Bruce, or [[Tara]]'s Shadow Clone.
+*Penny's cannon forces players to keep moving around the map. Use this to your advantage to predict your opponents' movement and shoot your attacks ahead of them in the direction they are moving. They will not be able to dodge the attack if it's aimed correctly, as by changing direction they'll be hit by the turret's cannonballs.
+*Like [[Jessie]], Penny's Super can act as a meat shield in a pinch, absorbing enemy fire for a while and allowing herself or an ally to escape from a dangerous situation. It is even more effective combined with Master Blaster, which deals 1000 damage and knocks the enemy back. However, it's less effective against opposing Pennys who can maximize their damage by hitting you and your cannon.

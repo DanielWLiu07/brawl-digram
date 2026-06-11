@@ -1,0 +1,27 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Byron
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+=== Games Modes and Maps ===
+
+* Byron's long range, high tick damage, and healing abilities truly shine in Team Events because he can consistently heal his teammates and himself with his attack, Super, and Shot In the Arm Gadget alike while they work towards the event objective with the healing giving more ease. Doing so will almost guarantee a positive outcome as the healing decreases enemy damage while assisting allies. In addition, he's also effective at preventing enemies from healing, making it easier to cripple the enemy team.
+* Byron is niche in Super City Rampage as he can heal allies while they aggressively attack the Boss. An excellent team composition in this event is himself with his Injection Star Power, [[Pam]], [[Poco]], [[Berry]], [[Doug]], and one who can stall the Boss such as Edgar/[[Nita]]. For Edgar, he should use his Fisticuffs Star Power; for Nita, she should use her Bear With Me Star Power. If Edgar is the stalling Brawler, he should continuously stall the Boss with his high burst damage and the healing provided from his attack, Pam, Doug, Berry, Poco, and Byron, and these should make him able to overcome the Boss's damage. For Nita, she should charge up her Super and spawn Bruce near the Boss opposite of Nita, and Nita and Bruce should take turns attacking and healing each other, and with Pam's and Byron's healing, Nita and Bruce can withstand more damage.
+
+=== Recommended Build ===
+
+* Byron's Booster Shots Gadget is best used to poison multiple enemies, heal multiple allies, or a combination of the two. It can also be used to heal or poison a single target for more damage/health than a regular shot, and can act as a form of close-range defense in combination with his Super. The Gadget is good for eliminating low health enemies up close, although sometimes Byron will be defeated too when he uses it up close.
+* Byron's Malaise Star Power is great against opposing Brawlers with healing abilities, including opposing Byrons. Pick this Star Power when the opposing team uses one of these Brawlers in order to negate most of their healing, granting the upper hand to your team.
+
+=== Strategies ===
+
+* Since his range is long but his cooldown is slow, sharpshooting skills, such as aiming ahead of the enemy's direction of travel, are needed to utilize Byron well. However, with his fast projectile speed, aiming with Byron is easier than with other long-ranged Brawlers such as [[Amber]], [[Brock]], [[Colt]], [[Mandy]], [[8-Bit]], [[Belle]], [[Nani]], [[Rico]], or [[Bea]]. Unless there are no enemies near faraway allies, prioritize allies closest to you.
+* To take advantage of Byron's range is to chip away at enemies with his stacking tick damage while also dodging their fire, and once they're low on health, you can use your Super to finish them off. This strategy will allow Byron to better secure defeats.
+
+=== Other ===
+*Byron is outstanding at supporting close-ranged Brawlers like [[Edgar]], [[Bull]], [[Mortis]], [[Rosa]], [[Lily]], [[Sam]], [[Fang]], [[Buzz]], [[Darryl]], or [[El Primo]] as Byron's allies can play aggressively, and if applicable, ambush enemies with their Supers or by bush-camping while Byron can consistently and quickly heal them from a safe distance.
+*When your attack is auto-aimed, it prioritizes the closest target to you. When fighting alongside a teammate, manually aim to hit the enemy and keep your distance, and even if you have his Injection Star Power, which allows you to chain attacks to hit both allies and enemies, you should still maintain a safe distance away from teammates that is far enough to damage enemies but close enough to heal allies without the disadvantages of long-range aiming.
+*Byron is hard countered by [[Crow]] or [[Angelo]]. When attacking, both of them have the ability to reduce incoming healing by 60%, including that from Byron's attack, Super, and Shot in the Arm Gadget, negating a lot of value from Byron.
+
+{{Clr}}

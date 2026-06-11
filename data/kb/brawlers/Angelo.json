@@ -1,0 +1,22 @@
+{
+ "name": "Angelo",
+ "notes": [
+  {
+   "text": "Open-map sniper for Bounty/Wipeout-style modes: charged shots threaten one-shot kills from afar; ~70% charge is enough to hold lane.",
+   "tags": ["Wanted", "map-fit"], "confidence": "llm-draft",
+   "source": "https://brawlstars.fandom.com/wiki/Angelo"
+  },
+  {
+   "text": "Water-walking trait makes water-heavy maps (e.g. Canal Grande) a unique strength — evades short-range pursuers entirely.",
+   "tags": ["map-fit"], "confidence": "llm-draft",
+   "source": "https://brawlstars.fandom.com/wiki/Angelo"
+  },
+  {
+   "text": "Stinging Flight jump answers dive (escape tanks/assassins) and enables thrower hunts; Heist tech: jump onto the safe + Super for 8000.",
+   "tags": ["Bankheist", "micro"], "confidence": "llm-draft",
+   "source": "https://brawlstars.fandom.com/wiki/Angelo"
+  }
+ ],
+ "patchVersion": "67.301",
+ "lastVerified": "2026-06-10"
+}

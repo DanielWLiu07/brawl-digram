@@ -1,0 +1,27 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Mina
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+=== Game Modes and Maps ===
+
+* In maps like [[Bridge Too Far]], Mina can use Windmill effectively. Place the Gadget right on the lane to push even farther.
+* In [[Brawl Arena]], Mina is an excellent pick. Use the middle lane as cover. Since Mina has good burst damage, she can either secure kills in the middle or quickly assassinate enemies that are too aggressive.
+
+=== Recommended Build ===
+
+* When playing MIna in maps or game modes that favor marksmen or assassins, Blown Away is usually the better Star Power. If an assassin gets too close, use her Super to root them, then finish them with attacks. Or, as an alternative, when assassins are rooted, use her attacks to place as much distance as she can between them. Dash towards marksmen and use the Super to prevent them from getting away.
+
+=== Strategies ===
+
+*Mina's attacks makes her dash in the direction she is currently facing. Use this mechanic to escape tough situations or to dodge more attacks when moving up a lane.
+**However, be cautious about where Mina is facing when attacking. Bad directions might make you end up right in front of a [[Bull]], [[Griff]], [[Shelly]], [[Spike]], [[Darryl]], or a [[Leon]].
+**When facing such brawlers, you can choose to not dash with your attack by briefly pausing in place right before you shoot your attack, as Mina doesn't dash when standing still.
+*Due to the 0.5s windup of Mina's Attack 3, using Windmill during that period can help the ability not get interrupted by a crowd control projectile.
+*Since Mina's full combo attack takes too much time to land, finish the sandal move right after using her Super. When the enemy lands, Mina can instantly deal high damage.
+*Be careful when you go against enemies who have ammo-stealing capabilities such as [[Colt]], [[Mico]], and [[Pam]], because Mina needs all three ammo to use the combo and losing even one of them will make the combo more difficult to play. Try to use the combo when the opponent used their ability.
+
+=== Other ===
+*Take note that Brawlers are launched into the sky when hit by Mina's Super, rendering them immune to any further attacks on the ground. Therefore, don't instantly use the second Super when using "Capo What?".
+*Since Mina's Super acts like a pull, using it at point-blank range will make it not pull the enemy and therefore not send them into the air, making it useless against Brawlers like [[Kit]] and [[El Primo]], who can jump right on top of you and nullifying any distance.

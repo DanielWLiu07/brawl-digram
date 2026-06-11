@@ -1,0 +1,15 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Buster
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+*It is recommended for Buster to close the gap between him and the enemy, as Buster's main attack does significantly more damage up close than farther away. Take advantage of bushes, obstacles, or thin choke points to ambush and defeat enemies.
+*Buster's wide and piercing attack makes it very effective against grouped-up enemies. Use this to your advantage to charge your Super faster.
+*When using his Super, make sure to point it in the direction of possible enemy attacks. Remember to strafe in the same direction as the enemy to deflect their attacks and avoid getting hit from the side. 
+*Be mindful when using Buster's Super, as it can be interrupted (unless Buster has his Kevlar Vest Star Power equipped) and will cancel Buster's Super.
+*Buster's barrier only counterattacks when it is hit, so it is possible to hit him from the side. Attacks from above, such as Artillery Brawlers, [[Willow]], and [[Berry]]'s main attack, will also not be reflected.
+*Use his Utility Belt Gadget in more supportive game modes like [[Gem Grab]] and [[Bounty]]. Buster's Slo-Mo Replay Gadget is handier in more aggressive modes like [[Brawl Ball]], where he can disarm the ball carrier.
+*Buster's Kevlar Vest is extremely useful against [[Bo]], as if you trigger a Bo's Super mine, then activate your Super you will not be knocked back, and you can withstand more damage.
+*When dealing with Brawlers with slow unload speeds, such as [[8-Bit]], [[Griff]], [[Pam]], [[Lola]], [[Rico]], and [[Eve]], you can angle your Super to be placed right in front of them, completely preventing them from dealing damage and ensuring their projectiles are reflected.
+
+{{Clr}}

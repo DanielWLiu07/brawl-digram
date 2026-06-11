@@ -1,0 +1,8 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Kaze
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===General===
+* Her geisha form has a very fast movement speed whereas her Ninja form only has normal movement speed. Try to use her geisha form to maneuver around the map as well as approach enemies. Due to her very quick reload speed in geisha form, she can also switch between forms to reload.
+* Her ninja form Super is very versatile and strong. Try to gain positioning using geisha form and then switch to ninja form to Super onto enemies and ambush them.

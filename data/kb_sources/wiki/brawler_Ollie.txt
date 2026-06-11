@@ -1,0 +1,15 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Ollie
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+*In [[Brawl Ball]], Ollie can use his Super to grab the ball and walk it into the goal, as his high health allows him to survive longer from opponents' attacks and the Hypnotize effect prevents nearby enemies from attacking for 2.5 seconds, further enhancing his survivability. This is even easier to do when paired with his Renegade Star Power.
+*When playing as Ollie, do not try to be overly aggressive, as Ollie does not have high damage output to support an aggressive playstyle. Instead, try to support your teammates and apply pressure on the opponents by using your Super, which is crucial in modes like [[Gem Grab]].
+*In Brawl Ball, Ollie can use his All Eyez on Me Gadget after shooting the ball at the goal to prevent enemies from blocking his goal. His high health allows him to get close enough to do this trick.
+
+===Recommended Build===
+*Be careful if the enemy has any knockback, pull, or stun abilities before using Ollie's Super. The Hypnotize effect is cancelled if he gets a knockback, pull, or a stun during the dash.
+*The Renegade Star Power is recommended because it greatly improves his survivability, since Ollie has to get dangerously close to enemies in order to use his Super effectively. 
+*The Regulate Gadget is also recommended since it can dodge dangerous attacks and Supers. However, his All Eyez on Me Gadget is generally better in Brawl Ball.
+*Ollie can use his Regulate Gadget during his Super delay to allow him to bypass walls that would otherwise greatly hinder his Super. For instance, if an enemy is within hypnotism range but is behind a wall, using Regulate before the Super detonation would allow Ollie to defeat the hypnotized target.

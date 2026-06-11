@@ -1,0 +1,28 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Gus
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+*Gus' Super can be used to protect the teammate who has the most Gems or is worth the most [[Bounty]] Stars so they do not die and lose their Gems/ give the opponents Stars. It can also be used to protect whoever is holding the Ball in [[Brawl Ball]].
+**In addition, if Gus or his teammate is the Gem carrier or is worth many [[Bounty]] Stars, and they're pursued by aggressive Brawlers like El Primo, [[Bull]], [[Fang]], [[Buzz]], [[Shelly]], [[Darryl]], or [[Mortis]], Gus can use his Super to knock them back and run away or stay out of their range to continue attacking.
+*Gus is better used defensively and for supporting teammates. Because of this, he is more useful in 3v3 modes or [[Duo Showdown]], where he can take more advantages of his abilities.
+*Gus shouldn't be underestimated when going offensive, either. With his Spirit Animal Star Power, Super, and Kooky Popper Gadget, he can deal high total damage combo, and his own survivability is ensured with his Super.
+
+===Recommended Build===
+*Gus' spirits can be very useful for area control if he's using his Kooky Popper Gadget, since he can hit enemies when they're close to the Gem Spawn in [[Gem Grab]] and put spirits in said area. Then, when enemies get close to the spawn to grab Gems, he can use the Gadget to pop the spirits and deal damage to the enemies.
+*Soul Switcher is generally seen as the worse Gadget for Gus. However, it can be very useful if your teammates are both melee Brawlers as Gus will be able to fill his spirit bar instantly using the gadget and place a spirit near his teammate by hitting an enemy Brawler, allowing for his teammate to regain some health.
+*Both Health Bonanza and Spirit Animal are suitable for Gus. When playing offensive, use his Spirit Animal Star Power to gain a damage boost when in a tight situation. This can allow Gus to finish off the enemies. If playing supportively, use the Health Bonanza Star Power as it will heal teammates a lot more. This is especially useful if your teammates are melee Brawlers e.g. Edgar, [[Rosa]], [[Kit]], [[Bibi]], Fang, Buzz, [[Sam]], [[Lily]], or [[El Primo]], as they will be close to the spirits that spawn and can heal themselves by collecting the spirits.
+
+===Strategies===
+*If playing Showdown modes with Gus e.g. [[Showdown|Solo Showdown]], he can use his Super to knock enemies into the poison gas for extra damage. This may even allow Gus to make use of the spirits he may have placed down earlier to deal more damage if using his Kooky Popper Gadget.
+*Gus' Super is used best on assassins with lower health and can quickly approach enemies such as [[Leon]], [[Crow]], Mortis, [[Mico]], [[Stu]], [[Cordelius]], [[Shade]], and [[Edgar]], as they can get close to the enemies with less risk of dying quickly, and are able to wipe out the entire team.
+**This could be a very effective strategy in game modes such as Brawl Ball, and gives your team enough time to easily score the ball.
+**In game modes like Gem Grab or Bounty, this can be used to turn the tables on the enemy as Gus' team will get a lot of Gems/Stars.
+
+===Other===
+*Gus' Super has to be used immediately, either offensively or defensively, after activating it, since its health decays very rapidly. After a couple seconds, it won't be useful anymore.
+*If giving Gus' Super shield to a teammate, aim carefully as it may miss them due to mistimed movements on both Gus' and his teammates sides. Alternatively, go closer to them so you have less chance of missing.
+*It is better to pair Gus with melee [[:Category:Brawlers|Brawlers]], since his spirits are usually positioned in the enemies' side, where the close-ranged teammates could get close and receive the heal from the spirits.
+*He is surprisingly able to do lots of damage at close-range and survive because he can use his shield for instant health, not to mention his ghosts that give him health. By rushing on enemies who cannot burst, he is more likely to win.
+*Do not use Soul Switcher when Gus is at drastically low health, this will cause him to defeat himself.

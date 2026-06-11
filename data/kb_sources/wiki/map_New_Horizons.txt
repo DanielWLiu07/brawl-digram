@@ -1,0 +1,7 @@
+SOURCE: https://brawlstars.fandom.com/wiki/New_Horizons
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+* Short-range Brawlers are risky to play on this map as wall breakers, such as [[Colt]], [[Shelly]], [[Frank]], [[El Primo]], [[Bull]], [[Grom]], [[Piper]], [[Tick]], [[Nani]], [[Pearl]], [[Dynamike]], or [[Brock]], can open up the map, making it harder to approach the enemy.

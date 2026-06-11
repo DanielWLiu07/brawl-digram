@@ -1,0 +1,24 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Doug
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+
+===Recommended Build===
+*When playing Doug, you should almost always be running his Extra Mustard Gadget as it changes many of his interactions, and helps him get his super very quickly. Only use Double Sausage when in a team comp built around Doug healing.
+*Doug's Self Service Star Power is frequently the better option because although 480 healing doesn't seem like a lot, it adds up over time, and since he charges super from healing, it is even stronger.
+
+===Strategies===
+*On bushy maps, push up with your team to gain control of the mid lanes as soon as possible. On more open maps, stay back to heal your teammates until you get your Super/Hyper at which point you can begin playing more aggressively.
+*Do not use your Hypercharged Super on yourself; it wastes the Hypercharge's effect. Instead, place it on a teammate with high mobility, especially assassins and tanks. This allows you to burst down many enemies at once as well as doubling your healing.
+*If you use your Gadget (Extra Mustard), it will double the damage of a teammate with your Hypercharged Super, as well as your own. With the Hyper stat buffs, you and your teammate can deal 10800 damage with one attack!
+*Use your Super on the gem carrier when there are 5 or less seconds left on the countdown as it will prevent the carrier from dropping the gems when killed, and even if it runs out, the match will be over.
+*Use your hot dog at the right time. Too early will cause the opponent to wait out the timer, but too late will cause the hotdog's activation lag to miss out on resurrection.
+*Remember to use your hot dog on teammates, they are theoretically more useful than resurrecting yourself, as they may have a Super which they can use.
+
+===Other===
+*Doug's short range limits his offensive and defensive capabilities, but he has enough range to attack enemies and heal allies that are at most a tile behind walls, which he can use to his advantage by attacking enemies and healing allies behind walls. This strictly limits throwers, [[Berry]], and [[Willow]], who can otherwise take cover behind walls.
+*When aiming to defeat a specific enemy or group of enemies, Doug can simply use his Super and charge towards the group to attack, because getting defeated under the effects of the Super will not drop any collectibles that puts his team in a losing situation. Make sure to take note of the duration of his Super when using this strategy.
+*Choose your Gadgets based on the map layout. In maps where you need to stay back, such as long range maps, consider using Double Sausage so you can help yourself and allies better. Otherwise, equip Extra Mustard.
+*When surprising high-damage enemies from bushes, such as [[Shelly]], [[Bull]], [[Darryl]], [[El Primo]], [[Spike]], [[Griff]], [[Buzz]], or [[Leon]], use your Super around one second in to prevent dying immediately.

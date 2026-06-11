@@ -1,0 +1,24 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Max
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+===Game Modes and Maps===
+
+===Recommended Build===
+*Max's Super Charged Star Power works better in team events like [[Gem Grab]] or [[Hot Zone]] where Max will need to play as a Support. Her Run n' Gun Star Power allows her to maintain the damage output of a typical sharpshooter and is preferred in Special Event modes like [[Boss Fight]], [[Super City Rampage]], and [[Robo Rumble]], where her Super Charged Star Power charges her Super much less efficiently than normal. In [[Showdown]], choose your Star Power based on your play style; use Super Charged if you're more passive, and use Run n' Gun if you'll like picking fights and collecting Power Cubes. The detection of her Star Powers will continue to work when the player remains moving.
+*Max can use her Phase Shifter Gadget to absorb a high-damaging projectile like [[Nani]]'s or [[Mandy]]'s Super to survive at crucial times or for a valuable teammate in order to help them survive. This, however, requires precise timing. Similarly, as long as you have sufficiently high health, Max can use her Sneaky Sneakers Gadget to absorb multiple projectiles and then teleport back safely with full health.
+*Max's Sneaky Sneakers Gadget allows her to play aggressively for 3 seconds without major repercussions. After dropping it on the ground, take time pressuring enemies before returning to her original location for better opportunities. Do note that high-damaging enemies such as [[Shelly]], [[Bull]], [[Spike]], [[Brock]], [[Leon]], [[Griff]], [[Buzz]], [[Fang]], Nani, [[El Primo]], and [[Darryl]] can ambush you when you teleport to your original location, as the location is made obvious by the icon Max leaves upon activating the Gadget, so therefore, refrain from using the Gadget near bushes or enemy spawn points.
+*Max's Sneaky Sneakers Gadget is useful in Showdown when you want to defeat a vulnerable enemy such as a thrower but you are in danger of being third-partied by someone else. You can drop your Sneaky Sneakers Gadget and then try defeating the enemy. You'll likely be low on health after fighting the enemy, and will be a target for other enemies, but you'll teleport back to your Gadget's location and regain lost health. All the same, make sure to use this Gadget only when you're away from enemies, or contained by obstacles to avoid being ambushed where you'll teleport. Also, avoid staying too far from the Gadget location with your Super, because you'll never know who's attempting to ambush you when you return, and you should save your Super as an escape tool for such situations.
+
+===Strategies===
+*Max can act like an assassin, using her fast reload speed and attack cooldown to burst enemies down and her movement speed to dodge enemy fire. After getting within range, follow and chip away at enemies until you eliminate them. If they manage to somehow escape, such as with Edgar's Super, use your Super and/or her Phase Shifter Gadget and rush them.
+
+===Other===
+*Max's Super can be used to catch up to fleeing enemies or ensure an easier escape from pursuing enemies. This makes her good with guerrilla tactics because she can rush in with her Super, deal a lot of damage, and escape with her Super before she takes any serious damage.
+*Auto-aiming at long range with Max, in most cases, will hit 3 of her projectiles. Because of this, auto-aiming is a good strategy while playing Max, but most of the time enemies are moving. Practice mirroring the enemy's movement to hit all 4 projectiles, and at the tip of her range, it's good to use practices commonly applied to sharpshooters.
+*Max's attack has a range similar to [[Tara]] and [[Crow]]'s, and while it doesn't deal much damage if only one projectile hits, the fact that Max has 4 ammo slots, coupled with her much faster reload speed, attack cooldown, and tighter spread, means she can consistently provide suppressive fire and chip away at enemies, unlike most long-ranged Brawlers who reload slower.
+*Max's Hypercharge energy drinks actually have a small splash radius, allowing them to charge the Supers of multiple allies. Although unpractical in most situations, if Max and her allies are stacked on top of each other (such as after respawning), using the Hypercharge and then Super will cause multiple energy drinks to hit all allies, granting them significant Super charge.
+
+{{Clr}}

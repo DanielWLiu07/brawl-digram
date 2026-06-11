@@ -1,0 +1,10 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Grass_Knot
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+* Use long-ranged Brawlers like [[Bea]], [[Colt]], [[Mandy]], [[R-T]], [[Lou]], [[Eve]], and [[Piper]] to snipe the enemy. Short-ranged Brawlers are discouraged due to the lack of walls in the middle, disallowing approaches.
+** Similarly, Artillery Brawlers are not a decent choice due to the map's relatively-few number of walls.
+*[[Melodie]] is viable in this map, given that her 3 dashes that allow her to gain control of the ball, and score goals
+**Alternatively, you could also use [[Darryl]], [[Edgar]], or [[Kit]], as their Supers can recharge quickly and use them to quickly dribble the ball and score.

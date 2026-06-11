@@ -1,0 +1,13 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Moe
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+*Moe's attack splits roughly one tile from its maximum point, giving you a sweet spot where the shards intersect. As such, try to hit enemies with the side of your reticle as you can get more hits in for targets with larger hitboxes. Alternatively, shooting from point blank gives the most reliable damage output but can be difficult against brawlers that outrange Moe.
+*Moe's attacks split into projectiles once they're shot, and because they do this multiple times, you may want to aim at an angle when attacking to hit the enemy with several of his stones with the same attack.
+*After Moe exits his Driller, his ammo count is set to the proportion he had before he used his Super. When using the Driller aggressively, always make sure to have ammo before you Super to ensure Moe is not helpless if you need to exit it.
+*Moe can barely complete his attack in the Driller form, so it is best to damage enemies for a bit and escape using the speed boost gained while attacking before he turns back into his normal form.
+*Moe's Super deals knockback in a small radius around it when he emerges, making it useful at dealing damage twice to fleeing opponents who've already been hit by Moe when he tunnels. This knockback can be useful in knocking the ball out of enemies in [[Brawl Ball]].
+*Moe's Dodgy Digging Gadget is quite similar to [[Clancy]]'s, so it's recommended to also use it while at full ammo to get the maximum efficiency.
+*Moe gets a Super to bail out of Digger when he Supers in normal form. This can be used to Super the ball into the goal from a distance in Brawl Ball.
+*Contrary to popular belief, Moe doesn't have a smaller hitbox than most other Brawlers, with his hitbox being the average size for most non-tank Brawlers. As such, be sure to exercise much caution in dodging shots even if they don't appear to hit your character model.

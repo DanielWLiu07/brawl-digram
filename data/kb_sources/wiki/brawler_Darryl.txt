@@ -1,0 +1,25 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Darryl
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+*Using his Super, Darryl can deal significant damage to the turret in [[Spirit Wars]] by rolling in and shooting at it, taking minimal damage because of the shield he gets from rolling. However, he shouldn't do this in situations where his teammates don't have sufficient control of the Amulet-spawning areas and should instead support his teammates in racking up Amulets.
+*In [[Brawl Ball]], he can be quite useful by kicking the ball forward and using his Super to roll into and retrieve the Ball. You can use it for retrieving the Ball from the center after either team scores, though it will put him in the middle of the fight and likely results in him being defeated. You can also use his Super on an enemy who's carrying the Ball, which knocks it from their possession and knocks them back. This can be used to defend the goal by delaying an enemy who's about to score.
+**Note that Darryl is also an exceptionally good goal scorer for Brawl Ball. He can throw the ball forward and Super into it two times, allowing him to cover significant distance. This is a good strategy to use if there is no counter near the goal or the enemy team is near your goal.
+
+===Recommended Build===
+*In maps with a lot of bushes, use Darryl's Recoiling Rotator Gadget to scout out the area. You can find enemies easier that way. The Gadget is also very useful for attacking the enemy safe in [[Heist]]. Position yourself right in the center of the safe and activate the Gadget as quickly as possible, moving clockwise a little to ensure that as many shells as possible hits.
+*Darryl's Steel Hoops Star Power can act as a secondary shield in numerous situations. He can use it to roll onto enemies normally so he's shielded while attacking them after rolling or use it in Siege to stay alive longer while attacking the IKE in Siege.
+*Darryl's Rolling Reload Star Power allows him to ambush and defeat tanks more easily with his Super, because it can drastically increase his damage output. He can also use this to roll onto the enemy safe in Heist and deal extreme amounts of damage. Rolling Reload is also handy if you can't directly hit a Brawler with your Super, allowing you to potentially chip them down from further away with your increased reload speed. It also helps when you desperately need to roll onto someone but have no ammo left.
+
+===Strategies===
+*Hitting a brawler with the edge of Darryl's Super can momentarily knock them back, and Darryl can deal significant damage while they are still knocked back.
+*If timed properly while rolling onto an opponent, Darryl's Super can cancel an enemy's Super due to the knockback, like how [[Frank]]'s Super can be cancelled with [[Shelly]], [[El Primo]], [[Dynamike]], [[Surge]], [[Jacky]], [[Gene]], or [[Bull]]'s Super. This becomes useful when attacking other Brawlers with Darryl who have their Supers ready (like Frank).
+
+===Other===
+*Darryl moves slightly faster than most other Brawlers since he is a tank. Due to this, retreating/approaching is easier and often safer.
+*His Super is great for quickly escaping enemies/dangerous situations or getting closer to enemies along with the fact that Darryl rolls extremely quickly and is shielded while rolling. It's also worth noting that you can increase the range of his roll if you happen to roll over water. This is vital when escaping enemies, as the water could help in getting away from tough situations (in maps like [[Acid Lakes]] or [[Canal Grande]], etc.).
+*Darryl's Super can hit multiple times when fighting in confined areas (which is optimal for Darryl as a tank). Aim his Super to bounce off walls and rack up damage on your enemies.
+*When confronting enemies at point-blank range, be mindful of your positioning and don't go through them as the second shot of Darryl's attack can completely miss.
+*Darryl's main attack deals a lot of damage but not consistently. When targeting someone with his Super, make sure he actually rolls into them and hits them. If he's too close, he might roll over them. If he's too far, he can hit them but won't be within bursting range. Tar Barrel's slowing effect allows him to catch up to enemies in case his Super misses by a few tiles.

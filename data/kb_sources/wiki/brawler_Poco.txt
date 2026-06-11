@@ -1,0 +1,30 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Poco
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+===Game Modes and Maps===
+
+*It is advised to use his Screeching Solo Star Power when playing [[Showdown]], [[Lone Star]], [[Takedown]], or other solo events, due to the lack of teammates to heal with Da Capo!. This Star Power is especially effective if Poco has his Super charged while standing with multiple low-health enemies. However, Poco is never too viable in such Solo events as he lacks a sufficient damage output and a use for his support abilities. He also suffers due to these game modes maps being bigger and more open, making it harder for Poco to charge his Super effectively, and is an easy target for Tanks and Assassins due to his lack of personal defense.
+*With most of Poco's abilities being revolved around longevity, he can be a valuable asset in [[Hot Zone]]. Not only is he able to heal his teamates with his Super, Tuning Fork Gadget, and Da Capo! Star Power, but the former two can also affect himself, which can make him a passable defender for a zone after factoring in his decently high health. Although his damage is low, it is able to handle multiple opponents at once, which is useful in single-zone maps.
+
+===Recommended Build===
+
+*When using Poco's Da Capo! Star Power, try lining up his attacks so you can chain them to heal allies and damage enemies simultaneously, similar to how you use [[Byron]]'s Injection Star Power. This is the best way to get the most value out of Da Capo!, and grants your allies more survivability whilst chipping away at enemies. The same logic applies with his Screeching Solo Star Power.
+*Even though Poco is a support Brawler, his Screeching Solo Star Power gives him hybrid capabilities, as this Star Power allows Poco to deal damage to enemy Brawlers and heal himself at the same time. Even so, Poco's Super with Screeching Solo should not be used to deal damage in the same manner as his attack. It's also important to note that Poco's Screeching Solo damage is fairly low, so it's usually not a great idea to use his Super to deal damage, and is best used to finish off low-health enemies instead of directly damaging enemies.
+*When fighting Brawlers with slow, poison, stun, or other effects, such as [[Crow]], Frank, [[Bea]], [[Amber]], [[Lou]], Willow, Buzz, [[Kit]], [[Angelo]], Byron, and [[Ollie]] in control-based modes such as [[Gem Grab]] and [[Hot Zone]], use the Protective Tunes Gadget. It will allow Poco to disable their effects temporarily, both on himself and on allies within range. This can be especially useful against Brawlers with poison effects like Crow, [[Byron]], Angelo, and [[Willow]], as it will render their attacks ineffective and disable their healing reduction, allowing Poco to save allies and secure control of the map. This Gadget can also completely disable Kit, [[Buzz]], and [[Frank]]'s stun and [[Belle]]'s mark.
+
+===Strategies===
+
+* Poco with other healers can be incredible at healing. Poco could constantly heal [[Berry]], [[Pam]], [[Doug]], and/or [[Byron]] and vice versa to stay alive almost indefinitely, or in 3v3 events, two such healers can continuously heal a third teammate while they attack enemies and attempt to gain control of the map. Beware of Crow or other Brawlers with anti-heal abilities that could cripple the team, or utilize the Protective Tunes Gadget to mitigate their effects.
+
+===Other=== 
+*Poco is great at supporting allies due to his ability to heal them using his Super, his Tuning Fork Gadget, and his Da Capo! Star Power. Prioritize healing over damaging enemies with Poco because Poco's healing can help teammates win many battles and interactions by keeping them alive.
+*Remember, Poco's attack has a wide spread but doesn't deal much damage. This means he's not used as a front line attacker, but rather used for effective support. Positively, the spread allows him to hit multiple targets at once and charge his Super quickly. The wide spread of his attack also allows him to check large bushes.
+*Poco's attacks can be released in quick succession, allowing him to attack an enemy Brawler multiple times to charge his Super quickly before retreating to reload again, or heal a teammate quickly and effectively with his Da Capo! Star Power.
+* Poco's healing abilities are more useful than [[Pam]]'s in tight situations when you or your teammates are on low health, as Pam's Super takes time, while Poco's Super is instant and occurs in a much larger area. This makes his healing considerably more useful than that of Pam in offense and survival-oriented modes like [[Bounty]] where teammates cannot afford to stay near Pam's turret for long.
+*Poco is amazing when paired up with tanks as Poco can continuously replenish their health while they keep Poco safe from stronger and aggressive Brawlers and control the map. Using Poco's Tuning Fork Gadget and Poco's Da Capo! Star Power will be more ideal in this case, since with them, Poco can heal allies even without his Super.
+*Poco's attack is divided into 4 rows of musical notes that don't come out simultaneously, with the side rows moving faster. Aiming his attack at the corner will gain Poco a small amount of additional range. This is especially useful when fighting enemies with greater range than him.
+*Using the main attack and then immediately using the Super at the same time will allow Poco to charge up some of his next Super. This can be best exploited by using Screeching Solo, allowing Poco to surprise the enemy with sudden extra damage while healing allies and recharging his Super faster.
+*Don't be afraid to use your Super in situations where you need to heal yourself to stay alive, since Poco needs to stay close to his allies to continue providing support, and his Super charge is extremely fast, requiring only 4 hits to fully charge, which is best justified by his wide attack range.

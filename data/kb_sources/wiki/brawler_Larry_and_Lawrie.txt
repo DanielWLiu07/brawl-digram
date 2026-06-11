@@ -1,0 +1,20 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Larry_%26_Lawrie
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+== Tips ==
+=== Game Modes and Maps ===
+*Larry and Lawrie's decent range, great area control, and potent spawnable make them excellent in modes where control over long periods of time is the priority, such as [[Gem Grab]] and [[Hot Zone]].
+
+=== Recommended Build ===
+*The Order: Fall Back Gadget is best used as a more tactical movement use for whether you're in [[Knockout]] or [[Showdown]]. If you spawn your twin brother Lawrie towards the enemy, they might play less aggressive considering you're the main target. Thus, you can swap places given the right opponent and fast attack them unexpectedly. This can be very useful in tight situations.
+*The Order: Swap Gadget is not recommended, as while Lawrie can utilize Larry's Ticket Dispenser well, receiving Lawrie's Shocker neuters Larry's long range and damage. This makes Larry essentially useless against enemy throwers and medium range Brawlers like [[Pearl]], [[Surge]], [[Emz]], [[Tara]], [[Nita]], and [[Spike]], and the low damage of the weapon means he struggles to take down even close range Brawlers.
+*Protocol: Protect is useful to defend against aggressive melee Brawlers like [[Fang]], [[Bull]], [[Shelly]], [[Darryl]], [[Rosa]], or [[El Primo]], making it a hard task to take him down. Against area damage melee Brawlers like [[Kenji]], [[Kit]], [[Shade]], [[Mico]], [[Mortis]], [[Edgar]], [[Ash]], [[Bibi]], [[Jacky]], [[Hank]], [[Sam]], [[Doug]], [[Draco]], [[Lily]], and [[Buzz]], keep some distance between you and Lawrie to ensure that Lawrie will not take increased damage from their attacks.
+*Protocol: Assist is very effective, especially when paired with Order: Fall Back. You can continuously keep attacking as the Star Power boosts your reload speed when you're close to Lawrie and he deals damage, while healing each other and swapping positions when you use Order: Fall Back. Given that Larry's reload speed is slow, it's recommended to use this Star Power to boost his reload speed while dealing large damage.
+
+=== Other ===
+*To maximize damage, try aiming ahead of an enemy. This is because Larry's attack explodes twice, so this increases you chances of the attack damaging the enemy twice. 
+*Aiming ahead is also beneficial as Larry's projectile speed is rather slow, so aiming ahead will increase your chances of hitting the enemy. 
+*Try spawning Lawrie closer to the enemy, or, if possible, in a bush. This will prevent the enemy from destroying him as easily or quickly, which will allow you to maximize his damage potential. 
+*Sometimes, players will mistake Lawrie for the player (in a similar manner to [[Leon]]'s Clone Projector Gadget), which can distract them and/or cause them to waste ammo.
+*Lawrie can act as a meat shield, especially if paired with the Protocol: Protect Star Power.

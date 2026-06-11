@@ -1,0 +1,8 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Below_Zero
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+* Since the map is more open, using Brawlers like [[Mortis]], [[Shade]], [[Lily]], and [[Leon]] to quickly grab the puck and score a fast goal would not do well. Therefore, in the long run, more viable options would be other fast assassins and dashers such as [[Stu]], [[Melodie]], [[Edgar]], [[Mico]], [[Kenji]], [[Cordelius]], or [[Crow]], making these picks more popular.
+** To counter pick these picks, use more long range assassin counters like [[Maisie]], [[Emz]], [[Lou]], [[Meg]], [[R-T]], or [[Gale]].

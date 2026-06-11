@@ -1,0 +1,33 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Lily
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+*Lily is good in Gem Grab since you can teleport to the enemy gem carrier, kill them, then escape using her Vanish gadget. However, you cannot see where enemies are when in the Shadow Realm, so be careful where you emerge. Since your Super only works if it hits an enemy, don’t rely on that to escape.
+*Lily excels in Brawl Arena, where the bot swarms allow her to passively charge her Super and Hypercharge extremely quickly. Her Vanish Gadget can be used to bypass enemy surveillance and bot swarms easily, or to escape from hairy situations, while her Hypercharge is exceptionally useful at taking down high-level brawlers.
+
+===Recommended Build===
+*Lily's Vanish Gadget is essential. It is a powerful tool to launch surprise attacks, escape battles, and dodge enemy attacks or even Supers (like [[Buzz]], [[Surge]], [[Chuck]], [[Colette]], [[Bull]], [[El Primo]], [[Fang]], [[Tick]], [[Mandy]], [[Kit]], [[Dynamike]], or [[Frank]]’s). As a result, it is advisable to use the Gadget Cooldown [[Gears|Gear]].
+**The Vanish Gadget can be used to temporarily ignore enemy Brawlers and their spawnables like [[Nita]]'s bear or [[Jessie]]'s turret, as a means of escaping from them, or to walk through them. For example, in [[Heist]], you can use this Gadget to walk freely to the enemy team's safe without being harmed.
+**You can also hide in a bush and wait for an enemy Brawler coming. You will know when an enemy is coming when your Super begins to automatically charge. You can then do 2120 damage or more and escape with your Vanish Gadget. This works especially well in Solo [[Showdown]].
+**You can use the Vanish Gadget to sneak into the enemy back lines without them noticing. There, you can ambush them after emerging from the Shadow Realm, taking them by surprise and dealing high damage to if not killing them.
+**When you use the Vanish Gadget, try to remember where your opponents were and predict where they will be when you emerge from the Shadow Realm. This way, you can either avoid reappearing right next to a strong Brawler that will overpower you at close range, or purposefully reappear on a weak brawler and catch them by surprise.
+***When playing against Lily and she uses her Vanish Gadget at low health to escape, try to predict where she will run to, so you can follow her there and be ready to finish her off once she reappears.
+***Vanish's long cooldown means that, when playing against Lily, you can easily punish her for being too aggressive. If there is a Lily on the enemy team, space out at the start of the game to ensure Lily cannot hit all of you at once, but not too far that you cannot react if a teammate gets ambushed.
+***When playing against Lily as [[Cordelius]], using your Super on any opposing player will also expose Lily to you if she used her Vanish Gadget.
+*Although Repot is a fantastic Gadget that enables Lily to use her Super to make unexpected plays or cover vast distances, it requires her to get a Super, which can be difficult even with her Trait due to her extremely short range. Vanish is simply a far better Gadget that allows Lily to get into key positions without being seen and allows for surprise attacks early into the match. Furthermore, Repot's slow speed allows enemies to easily evade the projectile.
+**If you insist on using Repot, use it on maps where enemies are likely to remain in Lily's Trait range and have areas where Lily can remain unseen until it is charged, such as [[Center Stage]], and use it only at close range so enemies can't dodge it. 
+*Lily's Vigilance Star Power is the best choice in modes where movement is the priority, like [[Brawl Ball]] and [[Showdown]]. However, the damage boost given by the Spiky Star Power can make it a better choice in other modes like [[Bounty]] or [[Heist]].
+*Due to how essential Vanish is to Lily, Gadget Cooldown Gear is recommended, reducing its cooldown from 22 seconds to 18.7 seconds. 
+* Damage Gear is also recommended to allow Lily to defeat enemies with less ammo. Due to Lily's short range, she will often go below half health during combat, allowing this Gear to activate. 
+
+===Strategies===
+*A good way to play Lily is to follow enemies to allow your Super to charge, while staying behind walls or hidden in bushes. Once it is charged, you can emerge and use her Super followed by spamming her attack to deal enough quick damage to take down most Brawlers.
+**With her Spiky Star Power, a Super followed by two attacks deals lots of damage almost instantly. After that, her quick unload and reload speed, plus her rapid Super charge, can keep up the damage enough to eliminate most Brawlers quickly.
+**If you teleport to a tank, do the same until you are low on health, then use your Vanish Gadget to go to the Shadow Realm and escape.
+
+===Other===
+*Lily's Trait, like [[Buzz]], [[Cordelius]], or [[Shade]]'s, is a great scouting tool for bush-filled areas or maps like [[Snake Prairie]], since her Super will start charging up if an invisible or bush-camping enemy is within its radius.
+**Because of this, if there are bushes near you or you are playing against a [[Leon]], [[Shelly]], [[Rosa]], or Kit. it is ideal not to hold on to a fully charged Super, because then you will not know if someone sneaks up on you.
+*Since you do not reload while using her Super, make sure that you have all your ammo beforehand. This allows you to deal high damage instantly after teleporting, especially if you have the Spiky Star Power equipped.

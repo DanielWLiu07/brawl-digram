@@ -1,0 +1,25 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Pam
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+*Pam is a versatile Brawler for [[Siege]]. It is recommended to place her Super near the middle of the map where bolts are spawned. Her Mama's Hug Star Power works well to keep her and her allies alive and continuously take control of the area. She can also potentially grant a great control by her Mama's Squeeze Star Power usage.
+*Pam is also useful in [[Boss Fight]] and [[Robo Rumble]], both for the high damage she can do from a safe range and for her Super and Mama's Hug Star Power.
+
+===Recommended Build===
+*Pam's Pulse Modulator Gadget is very useful in emergency situations. If you or a teammate is in need of healing, you can give them or yourself an instant heal to stay alive long enough to win an interaction or escape.
+*Pam's Mama's Hug Star Power can easily counter tick damage, such as [[Crow]]'s poison. If you can consistently land your shots, your health will regenerate faster than Crow's poison decay. The same works against [[Byron]] and [[Angelo]].
+*Pam's Mama's Hug Star Power, while not healing much, can still be a useful aspect in keeping teammates alive. Be sure to stay close to them to maximize healing. It is also useful for Pam in 1v1 situations.
+*Her Mama's Squeeze Star Power can be used to pressure Brawlers hiding behind walls provided that there no throwers on the other team to take out the turret. This very useful in maps like [[Encirclement]] where brawlers spend a lot of time behind a central wall.
+*Pam can place her healing turret on the [[Heist]] safe if she has Mama's Squeeze. This allows her to deal a very high amount of damage in total as the turret will keep dealing damage while it is alive. Coupled with her very fast reload speed and very high damage at close range, she can take out a major portion of the safe's health. Her turret's healing can also protect her other teammates and damage enemies during both offense and defense, making her very good in this mode.
+
+===Strategies===
+*Pam's attack has a set pattern: middle, left, middle, right, middle, etc. This can be used to aim where the majority of the bolts (middle will hit 5 projectile) will hit an enemy to ensure maximum possible damage. at long range. 
+
+===Other===
+*You can get close to enemy Brawlers to deal more damage to them because Pam's main attack is somewhat weak and inaccurate if she's attacking from a distance. However, be careful; close-ranged Brawlers with high burst damage such as [[El Primo]], [[Edgar]], [[Darryl]], [[Shelly]], [[Buzz]], and [[Bull]], among others can easily defeat you before you can defeat them, due to Pam's very slow attack unload speed. Only try to get close to ranged Brawlers, throwers and Brawlers with low damage.
+*Charge Pam's Super as quickly as possible and try to keep a heal station on the field at all times to effectively support your teammates and yourself.
+*Pam is mainly a defensive Brawler, healing teammates while providing cover fire. However, she can also sweep bushes with her attack, though she should be accompanied by another heavyweight or support Brawler.
+*Place Pam's healing turret behind walls, as the healing turret's radius passes through walls. This can ensure plenty of healing while keeping the turret itself safe.
+*In tight situations, Pam's Super can be quick-fired to serve as an absorbing shield, sacrificing it in the process to increase the chance of escape when being chased, similarly to [[Ruffs]]' Take Cover Gadget. However, this should be avoided when you go against [[Penny]], [[Barley]], [[Mr. P]], [[Dynamike]], [[Tick]], and [[Brock]]'s splash damage, [[Carl]], [[Tara]], [[Janet]], [[Amber]], [[Chuck]], and [[Nita]]'s piercing attack, or [[Jessie]] and [[Belle]]'s bounce shots that can still damage Pam when she is behind/around her healing station.

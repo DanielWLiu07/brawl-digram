@@ -1,0 +1,8 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Open_Zone
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+*[[Piper]] with her Ambush Star Power can use the bushes to her advantage for additional damage, and for cover to hide.
+*Despite overall having an absurd amount of bushes, avoid playing close-ranged Brawlers like [[Bull]], [[Rosa]], [[Draco]], [[Mortis]], [[Edgar]], [[El Primo]], [[Kit]], [[Mico]], or [[Sam]] as they are incredibly easy targets for Sharpshooters, which are Brawlers that are very likely to be played on such an open map like this.
+*[[Gale]] can use his Spring Ejector Gadget right from the start, to launch himself and his allies closer to the zone.

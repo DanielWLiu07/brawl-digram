@@ -1,0 +1,17 @@
+SOURCE: https://brawlstars.fandom.com/wiki/R-T
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+*Be careful about choosing where to place R-T's Super, as leaving his legs unprotected for too long enables enemies to defeat R-T by shooting a stationary target.
+*R-T should only use his Super when he's at full health or near full health, as both of his parts start out with the same amount of HP that he has before using his Super. Using his Super while low on health is very risky as any projectile hitting either part of him would defeat him.
+*R-T should primarily use his Super against short-ranged brawlers. This is because the range of his Super's attack is very short, leaving him vulnerable to brawlers with long ranges. 
+**If a close range brawler gets close to R-T, he can use his Super and position himself so that both his head and legs are damaging the attacking brawler. This does devastating damage to them and will almost certainly defeat them. Using the Recording Star Power increases R-T's survival when using this tactic. 
+*Using R-T's Super against a Brawler with piercing attacks like [[Ash]], [[Kit]], [[Kenji]], [[Amber]], [[Poco]], [[Grom]], [[Emz]], [[Sandy]], [[Chuck]], [[Mortis]], [[Bibi]], [[Frank]], [[Carl]], [[Shade]], [[Draco]], or [[Janet]] is almost useless, as they can simultaneously damage him and his legs.
+**Be especially aware of [[Penny]], as her main attack can splash after hitting either R-T's head or legs.
+*Beware of turrets when R-T is in his alternate form, like Penny's or [[Jessie]]'s, as they can outrange R-T and possibly defeat it without the help of his other part.
+*When using his Super in [[Showdown]], use his alternate form to burst down enemies behind walls, and his normal form to engage longer-ranged enemies. His Super's teleportation can be a helpful escape strategy but be wary of where his legs were placed; as the legs are stationary, the gas limits R-T's time in his alternate form, so while bursting enemies try to get your super as fast as possible for immediate use. 
+*Using R-T's alternate form's extra speed can be very effective, for example to score a goal in [[Brawl Ball]], quickly taking a few Gems in [[Gem Grab]], or trying to get a last-second kill in [[Bounty]].
+*R-T's Hacks! Gadget can be used to defeat marked targets that have very low health and are hiding behind a wall. 
+*In [[Hot Zone]], R-T's mobile body part has to be in the zone's radius to make progress in capturing the zone. Just legs will not charge it, but if you get inside of it with head or in normal form, progress will be gained.

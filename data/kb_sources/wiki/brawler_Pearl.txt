@@ -1,0 +1,12 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Pearl
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+*Using her Super against the goal barrier in [[Brawl Ball]] will instantly destroy it, allowing for an easy goal for the remainder of the match.
+
+===Recommended Build===
+
+===Other===
+*Never waste Pearl's heat. Her heat takes a fairly long time to charge up and wasting ammo will result in little damage output and not game altering at all. Instead, save up her heat and fire a burst of attacks at enemies to take most of them down. Her Heat Retention Star Power will further boost this and allow for a direct Super onto enemies and a quick burst of attacks shortly after.

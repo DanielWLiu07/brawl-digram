@@ -1,0 +1,31 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Gene
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+=== Game Modes and Maps ===
+
+* In [[Duo Showdown]], Gene can be deadly when paired up with short-ranged, high-damaging Brawlers like [[El Primo]], [[Bull]], [[Shelly]], [[Darryl]], [[Fang]], [[Doug]], [[Edgar]], and [[Buzz]] as pulling someone allows teammates finish them off easily. This is made more consistent because Gene can charge his Super again with four complete attacks.
+* Gene's Super is an incredibly useful tool that can turn the tide of a game. It can target the highest-value target in modes such as [[Bounty]] and [[Gem Grab]], dragging them into your team for an easy burst-down. It's also a great way to engage low-health enemies.
+* His Super can be used very effectively in [[Big Game]] to drag the Boss toward your group of allies so that they can deal extra damage, unless your team consists of low-health Brawlers with higher damage at long range such as [[Bea]], [[Nani]], [[Brock]], [[Tick]], [[Colt]], [[Rico]], [[Dynamike]], or [[Piper]].
+* In [[Siege]], Gene can pull the Siege Robot away from the IKE with his Super. Alternatively, he can use his Lamp Blowout Gadget to instead push the Siege Robot away. These tactics can give his team more time to defeat the Siege Bot and prevent it from defeating the IKE. Gene can also pull enemies into the range of his team's turret to have the turret quickly defeat them (unless the turret is attacking another target, so it is advised to only do this when there isn't any Siege).
+
+=== Recommended Build ===
+
+* Gene's Magic Puffs Star Power is useless in Solo events due to the lack of teammates, so always use his Spirit Slap Star Power in Solo events.
+*Spirit Slap can be used as a great finish to low-health enemies, as his Super deals damage when it hits them. However, do keep in mind that if Gene uses his Super on a gem carrier with less than 1000 health while using Spirit Slap, the gems will be dropped where the enemy gem carrier was, and it make grabbing the gems harder.
+*In open maps, Gene can make great use of his Vengeful Spirits Gadget, as there are not many walls to block the missiles from it. In addition, the lack of walls will discourage the use of short-range Brawlers, which will result in more long-range Brawlers being used instead. This will allow the missiles to travel for longer and further increase their damage.
+*Lamp Blowout is versatile, especially when Gene's Super is charged. You can pull in enemies with your Super and use Lamp Blowout to regain some health while pushing enemies back. This is best used against assassins like [[Edgar]] so you can push him away to make Edgar waste his ammo.
+*Gene makes great use of the Vision Gear, as the split of his projectiles has long range and wide spread. It is also recommended to equip Gene's Mythic Gear to increase the effectiveness of his Super.
+
+=== Other ===
+*Gene can extend his Super's pull by walking backwards as soon as it launches. It is also extended if Gene uses a launch pad while firing his Super, or if he teleports.
+*While an enemy is being pulled by Gene, they are stunned and unable to do anything. It is therefore recommended to start shooting at them the moment you have grabbed them and not afterwards.
+*Gene's Super interrupts enemy attacks and Supers, so he can halt [[Carl]]'s Super and [[Frank]] from landing his Super, etc.
+*The effectiveness of Gene's Super can be amplified when used in [[Events]] with [[Modifiers]] active. It can be used to pull enemies into the area where meteors are going to land, pull them into robots, or pull them away from energy drinks and healing mushrooms. His Super can also be used to pull enemies into the poison gas.
+*When using Gene's Super, be aware of who your target is. Avoid using it on close-medium ranged Brawlers or a Brawler with a dangerous Super charged, like [[Clancy]], [[Hank]], [[Shelly]], [[Dynamike]], [[Pearl]], [[Maisie]], or Carl (if he uses his Super after you pull him with yours), and in [[Showdown]], an enemy with a large amount of Power Cubes; doing so in these situations will most likely result in backfire. If you do accidentally use your Super on the above Brawlers, make sure to use your Lamp Blowout Gadget to push them back, giving you ample time and distance to attack or escape from them.
+*Gene's pull has priority over every entity in the game, except against another Gene that is pulling someone, the knockback from his Lamp Blowout Gadget, and the knockback from Gus' Super. This means Gene can pull enemies into minecarts in [[Minecart Madness]] to deal 2000 damage to them. Gene can also make use of his Gadget Lamp Blowout to push enemies into the minecarts.
+*Since Gene's attack has a very wide spread angle, it is very effective at checking bushes. His attack is also effective at dealing small chip damage that prevents enemies from healing from a long range, similar to [[Crow]]'s and [[Angelo]]'s poison.
+*Gene is especially powerful when paired with [[Max]], as Gene can heal Max with his Magic Puffs Star Power while she provides consistent damage, and Max's speed boost from her Super allows Gene to consistently land his Supers, as well as pull them further into allied territory if caught. This combination is also extremely deadly in 3v3 modes.
+*Gene’s Super will always hit an enemy if you auto-aim at close range. But be careful—you might pull the wrong target. Aim manually if you want to hit a specific enemy or if you’re pulling from far away.

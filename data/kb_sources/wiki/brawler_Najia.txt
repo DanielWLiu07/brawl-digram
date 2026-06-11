@@ -1,0 +1,22 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Najia
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+=== Game Modes and Maps ===
+
+* One of Najia's big advantages is her range, being one of the highest in the game at maximum main attack jar distance. However, it is backed off by her relatively slow projectile speed. The best positioning for Najia is at maximum distance on open maps and behind walls in other maps.
+* Najia is terrible at high DPS. She is extremely damage-consistent, but lacks burst damage and self-defense. As such, it is best to play her in Team Game Modes where she excels at suppressing grouped enemies or in Assasin/Tank-unfriendly Maps where she excels at high range and aim.
+
+=== Recommended Build ===
+
+* Najia's Venomous Star Power has a fixed damage boost that does not increase with buffs or debuffs. As a result, her Poisonous Protector Star Power is recommended over it.
+* Najia works well with Damage and Shield [[Gears]]. Extra damage is preferred to increase Najia's DPS, while the Shield is preferred to increase Najia's low maximum health.
+* Beware when using Najia's Najia Jar Gadget, as it will occasionally stun Najia for 2 seconds when destroyed, leaving her unable to move. It additionally will not be enough to tank high damaging attacks such as [[Mandy]]'s or [[Dynamike]]'s Super, and will result in Najia's defeat if she's hit by one as she's hiding inside the jar.
+
+=== Other ===
+
+* Najia has a very unique attack, capable of aiming after releasing a projectile. This allows her to snipe enemies behind obstacles. However, it is incredibly hard to aim with such projectile, and it takes lots of time to learn. Once you mastered it, Najia gets to shine her incredible controlling skill.
+* It is possible to auto-attack her main attack, but it often brings no value. The best time to use an auto-attack is right when the enemy is hit by the jar. This immediately places the snake's hitbox near the enemy, allowing a free hit.
+* Her Super can be launched at very high ranges. This is done by aiming the super when releasing her main attack's jar. This allows you to have even more control of the snakes' positioning.

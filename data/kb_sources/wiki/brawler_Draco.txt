@@ -1,0 +1,20 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Draco
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+* Draco is a menace in game modes that require lane control, especially [[Hot Zone]] and [[Brawl Ball]]. In Hot Zone, Draco's high hit points and Gadget allows him to withstand a considerable amount of damage, and with his Super, he is able to either force enemies out of the zone or prevent them from moving in a specific lane. In Brawl Ball, Draco is able to pressure the enemies with his Super and deal a substantial amount of damage at mid-close range. However, mind that Draco struggles against long-range Brawlers unless he is in close range. This means he is usually not a top-pick in an open map.
+
+===Recommended Build===
+*Because Draco's Uppercut Gadget has a short enough knockback range that it can actually pose as a disadvantage for you and your teammates because enemies cannot be hit midair. Instead, Draco should use this Gadget as a way of escaping if he is in danger.
+*Draco's Last Stand should be activated when Draco is still at medium health, therefore he can rush in, activate the Gadget, and deal a lot of damage to the enemy team. Unfortunately, he will probably end up being quickly defeated once the Gadget duration ends. He can also activate this Gadget and act as a meat shield for his allies to take control of key points on the map.
+*Because his Expose Star Power lasts for five seconds and takes five seconds to recharge, he can consistently apply 35% extra damage to the same enemy without it ever wearing off until the enemy or Draco himself is defeated.
+*Draco's Shredding Star Power will still give him the healing even if he activates his Super while his Super is already active. This can give Draco an overall larger amount of tanking.
+
+===Strategies===
+*Because of Draco's unique attack mechanic, it's recommended to use him to check for enemies in bushes first, dealing high damage at his range's apex before slowly hounding them down and charging up his Super.
+*Draco functions best as a counter to other tanks and close-ranged Brawlers; his main attack is perfect for keeping aggressive opponents at arm's length, while his Super can easily melt through whole teams and provide cover for his teammates.
+*It's better to activate Draco's Super first before using his Hypercharge rather than activating his Hypercharge first and then his Super. This is due to the delay when using his Super, which will lower the duration of his Hypercharge Super if it's activated first.
+
+===Other===

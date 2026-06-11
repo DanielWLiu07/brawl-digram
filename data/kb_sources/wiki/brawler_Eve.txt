@@ -1,0 +1,21 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Eve
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+== Tips ==
+
+=== Game Modes and Maps ===
+
+* On maps with a lot of lakes like [[Island Invasion]], [[Flowing Springs]] or [[Sapphire Plains]], Eve can travel across the lakes to reach enemies faster and prevent taking much damage.
+
+=== Recommended Build ===
+
+* Eve's Unnatural Order Star Power allows Eve to fire the biggest egg first. This allows her to deal more immediate damage. This also allows Eve to have slightly more range.
+* Eve's Happy Surprise Star Power can be good against single-target Brawlers like [[Piper]], [[Byron]], [[Bea]], Fang, [[Pam]], [[Angelo]], [[Mandy]], [[Cordelius]], and [[Bonnie]] while in her cannon form, as they have no way to effectively deal with a hatchling invasion.
+
+=== Other ===
+*Eve has moderate health, but Brawlers like [[Edgar]], [[Leon]], [[Mortis]], [[Crow]], Kenji, [[Buzz]], [[Spike]], or [[Mico]] can defeat her with ease because of Eve's slow unload speed. Her Trait perfectly counters this as short-ranged Brawlers like Edgar, [[Kenji]], [[Lily]], El Primo, Mico, and Mortis cannot reach her in a sufficiently large lake.
+*Because of Eve's slow unload and reload speed, she can struggle in 1v1 situations with Brawlers with a high damage burst potential like [[Fang]], [[El Primo]], Buzz, [[Stu]], [[Emz]], [[Griff]], and Edgar, so you should play her passively from a long range, poking in and out of cover similarly to [[Mr. P]].
+*Because Eve's Super takes five seconds to crack open, you may think it's a good idea to place it in the map's backline. However, the hatchlings' health decreases over time, so try to use it decently far, but not too far from enemies.
+
+{{Clr}}

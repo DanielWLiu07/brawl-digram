@@ -1,0 +1,30 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Piper
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+*Piper's Super can be used to shape the map to your advantage, destroying walls which your opponents would otherwise be hiding behind. This is especially useful on maps such as [[Shooting Star]], where there isn't much cover to begin with. Due to Piper's very low damage at close range and her low health, she cannot afford to be ambushed by tanks at close range and instead must have an open area which tanks have to cross to get to her, allowing Piper to position herself well and attack the enemy.
+*Due to Piper's attack mechanics, she is very likely to have boxes stolen in [[Showdown]] as attacking boxes at close range will be very time consuming due to her very slow reload speed and low damage. When breaking down a box at range and an enemy is close to it, target the enemy instead until they are fended off or defeated and then continue with the box.
+
+===Recommended Build===
+*Piper's Auto Aimer Gadget can be used to stop Brawlers who are pursuing her at close range since her main attack does very little damage at close range. It can also help Piper land her narrow shots. Auto Aimer can also be used to cancel enemy attacks if fired while the attack cycle is ongoing, e.g. opposing Frank's Super.
+*Piper's Homemade Recipe Gadget can be used to defeat low health enemies hiding behind walls or to increase the chances of hitting an enemy Brawler at low health to guarantee their defeat. Piper can also take advantage of the extra range of her Gadget to finish off enemies that are out of her attack range.
+*Since Homemade Recipe homes in on Brawlers and determines their location to an extent, it's a good idea to use it when you know someone is in bushes but don't know where they are. This works best on small bushes, as large bushes will be too large for the curvature of the bullet to reach.
+*Both of Piper's Star Powers are usable. Ambush grants extra damage to her attacks as long as she's in a bush, allowing Piper to deal significant damage to enemies from far away. Snappy Sniping allows her to reload faster by reloading part of her ammo, since Piper has a very slow reload speed, so you can use it to deal high damage while regaining some ammo.
+*Piper's Snappy Sniping pairs particularly well with her Auto Aimer Gadget, as the projectile from the Gadget will activate the Star Power, effectively granting her 0.4 ammo. This can be helpful in situations where a 4th attack is needed.
+
+===Strategies===
+*Try to predict your target's movement when firing. Piper's shots are narrow, so you will need to aim ahead of moving targets in case they move out of the shot's range.
+*Since Piper's Hypercharge can knock back enemies when landing, she can use that to her advantage by knocking enemies back and quickly walk backwards and snipe at the enemy, which would give you a free kill, but don't aim at walls, or the enemy won't get knocked back.
+*Since Piper does more damage the further away from Piper the bullet hits, after a Hypercharged Super, you can use the Auto Aimer Gadget to deal even more damage.
+*To deal massive damage to brawlers when using a Hypercharge, aim the Hypercharged Super behind them, and then use it, and the enemy Brawler will get knocked into the bombs dealing massive damage.
+
+===Other===
+*Piper's range is very deceiving due to the fast speed of the bullets. Don't underestimate a Piper's range. If you are a more close-ranged brawler juke her shots by moving side to side while steadily advancing to her. Piper is only easy to defeat at close range, otherwise she will definitely put up a good fight from long range.
+*Piper can be overwhelmed and defeated easily if she is unprotected due to her low health and very slow reload, as well as the fact that she only does sufficient damage from distance. Piper is most effective when she is covered by other Brawlers on her team. If enemies do get too close, it may be a good idea to use Piper's Super to escape if the Super is charged. You need to aim too because otherwise, you land in the place from where you jumped.
+*Piper has a very defensive Super since it only affects the area right near her, but it can also be used offensively in a riskier play. Piper can rush the enemy team, drop the grenades, and fly away. In addition, she can use her Super to destroy enemy cover to open up the map. This plays to her advantage because her long range is more effective in open maps.
+*When escaping, always try your best to aim Piper away from the enemy rather than auto-aiming because if you quickfire her super, she will only land in the place from where she activated her super, without covering any distance. However, if you are in a very pressurized situation and your enemy has short range, you can quickfire the Super because the knockback of the grenades is reliable to distance yourself from them. However, always aim the landing point when you can.
+*Charge up Piper's Super as a priority, as there are Brawlers that can pop right in such as [[Darryl]], [[Bull]], [[Mortis]], [[Shelly]], [[El Primo]], [[Buzz]], Leon, [[Bonnie]], Kenji, [[Surge]], [[Rosa]], [[Kit]], [[Fang]], Crow, [[Bibi]], and [[Edgar]]. If you have your Auto Aimer Gadget, use it primarily to escape as its offensive capabilities are negligible.
+*Assassin Brawlers are a major counter to Piper due to their above-average speed and abilities that help them dodge and reach her very easily (Mortis, [[Kenji]], and [[Mico]]'s attack, [[Crow]], Edgar, [[Melodie]], Buzz, Fang, [[Shade]], and [[Leon]]'s Supers, and [[Stu]]'s Hypercharge etc.), so it is best to avoid and keep an eye on them from distance.
+*Think carefully when it comes to the position of Piper's landing after her Super. Since it takes a long time for her to land, it is easy for the enemy to predict where she will end up. Try going to places that the enemy will take a long time to reach such as across water regions or behind walls, but make sure you do not land close to the location of other enemies.

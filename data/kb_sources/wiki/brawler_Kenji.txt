@@ -1,0 +1,27 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Kenji
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+* Use your Super to dodge heavy attacks and stuns like [[Frank]], [[Griff]], [[Pearl]], Maisie, Shelly, [[Clancy]], and [[Buzz]]'s Super.  It is recommended to use your Super against a group of enemies so that you can chain Supers more easily.
+* Use your dash attack to close up on enemies while dodging them, try not to use your Dashi Dash Gadget forward, use them to move sideways so that your movement will not be predictable. Slash attack is recommended for more damage and healing.
+* If playing Kenji in [[Showdown]], you should take advantage of Kenji's dash attack and mobility, so that you can grab more cubes, also ensure that you have Super by the late game. When the poison clouds closes in, use your Super, to grant a short invincibility.
+* Before using your Super, ensure that your next attack is a dash. Because Kenji is vulnerable after using his Super, the dash will allow him to escape from any threats.
+* Kenji can use his dash to dribble the ball and also climb up the map for a good positioning, Kenji's slash attack has a wide arc, so it is also good for wall pinching. Kenji's Super when timed correctly, can be used to score the ball, however, this requires practice and is hard to pull off.
+
+===Recommended Build===
+*Kenji's Dashi Dash Gadget is useful for catching up to enemies who are low on health, or Brawlers that are helpless in close range, like [[Piper]]. When doing this, use your dashes unpredictably to lower the chances of said Brawler hitting you.
+*Kenji's Dashi Dash Gadget can also be used to quickly reach the gem mine in [[Gem Grab]], the zone in [[Hot Zone]], or the ball in [[Brawl Ball]].
+*While you can use Kenji's Dashi Dash Gadget to escape from dangerous situations, it is generally preferred to use the Hosomaki Healing Gadget as other Brawlers may have abilities to catch up with you and kill you.
+*It is best to use Kenji's Hosomaki Healing Gadget after you have taken large amounts of damage, such as from a [[Shelly]], [[Tick]], [[Mandy]], [[Dynamike]], [[Nani]], or [[Colt]]'s Super. Do not try to wait and activate the Gadget to get more healing, unless you are certain that it will pay off as timing the Gadget right is important. Activating the Gadget too late will decrease the effectiveness of the Gadget as the 3-second duration may have expired. You could also get killed by other Brawlers if you decide to remain at low health and not activate the Gadget.
+* In open maps, where snipers with high-damaging attacks like [[Maisie]], [[Piper]], [[Brock]], [[Bea]], [[Nani]], and [[Mandy]] likely to be present, the Nigiri Nemesis Shield is especially valuable as it will allow you to tank a large amount of damage from their first attack. However, do not get reckless, as once the shield is gone, Kenji is completely vulnerable to them until the shield recharges. In this case, use Kenji's high mobility to dodge shots and recharge the shield, and use the Hosomaki Healing Gadget to escape if something goes wrong.
+
+===Game Modes and Maps===
+
+* Kenji is an outstanding choice in speed-based modes like [[Brawl Ball]] because of his very fast movement speed, mobility, and his ability to dribble the ball with his dash attacks. Kenji's Hypercharge is also really good in Brawl Ball, when the enemies are grouped up together, Kenji can activate his Hypercharge and Super, to secure a team wipe, leading to an easy goal.
+* Kenji is also an excellent choice in [[Gem Grab]]. He can poke and kill enemies easily, His Hypercharge has a wide circumference and can be used over walls, so he will be able to easily assassinate the opponent's gem-carrier easily. If Kenji is the gem carrier, he will be able to use his dash attacks to move back to a safe place, his Super and Hosomaki Healing Gadget can come in handy in case the enemies broke through your team's defenses.
+
+===Other===
+*When against Kenji, it is important to not get hit by his Super, as this not only heals him for a sizable amount, it also contributes to a second Super, allowing him to chain Supers and become almost impossible to defeat. Kenji needs his targets to be in the center of the Super for maximum damage, so if you suspect he will Super on top of you, move in a non-diagonal direction to make both slashes miss.
+*Chip damage is very useful when playing against Kenji as this prevents him from healing and reduces the effectiveness of his Hosomaki Healing Gadget. While his Nigiri Nemesis Star Power can help tank one shot, he remains vulnerable after that as dealing consistent chip damage to Kenji will prevent the shield from being activated again.

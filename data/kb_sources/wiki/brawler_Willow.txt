@@ -1,0 +1,14 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Willow
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+*If Willow uses her Super against an enemy, she can control them to walk away to keep her and/or her allies safe or attempt to ambush them by bringing them closer (although this is not recommended with only herself).
+**With her Obsession Star Power, this strategy can be more effective.
+*Be aware that Willow is unable to control herself while controlling someone else, making her vulnerable to third party enemies or their teammates.
+**Because of this, it is advised not to use Willow's Super while being out in the open.
+*Willow's Super can be used in a lot of strategies, such as bringing closer an enemy for a high-damaging Brawler like [[Shelly]], [[Bull]], [[Darryl]], [[Spike]], [[Nani]], [[Buzz]], [[Griff]], [[Fang]], [[El Primo]], or [[Leon]] to ambush them, make enemies walk towards their own goal in [[Brawl Ball]] (although a controlled enemy couldn't self-score), bringing enemies with a huge amount of gems or stars closer to your team in [[Gem Grab]] and [[Bounty]], forcing enemies to go into the poison clouds in [[Knockout]] or [[Showdown]]/[[Duo Showdown]], or making enemies walk away from the safe in [[Heist]].
+*Similar to [[Crow]], Willow's poison damage makes her an excellent bush checker, since the poison damage reveals enemies for an extended period of time. Willow also an advantage over Crow in that she can lob her projectiles to check bushes behind the safety of walls.
+*Willow's Super can be used to undo another Willow's Super, shooting the Super at a teammate who is under the hex of another Willow.
+*Although enemy Brawlers are forced out of Willow's Super when they fall below 30% HP, it is possible for a controlled enemy to be completely defeated if the opponent's teammate manages to deal enough damage at once. 
+**This strategy is most effective against squishier Brawlers such as [[Tick]], [[Piper]], [[Colt]], [[Crow]], [[Rico]], [[Byron]], [[Barley]], or Spike, as their smaller health pool allows them to be defeated much more consistently.

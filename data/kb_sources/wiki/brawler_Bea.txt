@@ -1,0 +1,31 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Bea
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+=== Game Modes and Maps ===
+* Bea is a good choice in open maps. As a shooter, she can deal high damage from afar, but she lacks a failsafe escape method that could protect her from assassins. This means she requires an assassin or close-range Brawler that could protect her if such an situation occurred.
+* Bea is a viable counter against tanks. Since most tanks are close-ranged, in order to deal effective damage, they would have to get close up to other team. Bea's slowing Super and Gadget can be effective in this place, and she is able to shoot them down without getting hurt herself. However, a lot of tanks have Supers or Gadgets that can allow them to travel a distance, therefore closing up with Bea. In this case, it would be a good idea to team her with a Brawler that can protect her if she is threatened (i.e. [[Buster]], [[Bibi]], [[Rosa]], [[Frank]], [[El Primo]], or [[Shelly]]).
+
+=== Recommended Build ===
+*It is a good choice to place Bea's Honey Molasses Gadget behind a wall in order to make it harder for enemies to destroy the beehive, as it has very low health. Alternatively, you can use it as a shield to tank some damage if you find yourself in a desperate situation where you need to escape quickly with their remaining health. This can also slow down chasing Brawlers, helping you escape.
+*Honey Molasses can be very effective in closing off certain chokepoints in the map that can help your team with area control. For example, in [[Hot Zone]], you could put the Gadget down on a lane that the other team must or should pass in order to reach the zone. This can prevent them from reaching it in time or force them to choose another lane, giving your team an advantage on taking them down and gaining control of the zone. The same could be said for other modes.
+*Bea's Rattled Hive Gadget is very unpredictable and hard to dodge if players are dealing with other threats. Because the bees move faster and do more damage at a longer range, it is more advisable to use this Gadget offensively for massive area denial and damage potential than to use it defensively. It can also be used to check bushes that are behind walls and damage throwers hiding behind walls.
+*The Gadget Cooldown Gear is very effective with Rattled Hive; it has the longest cooldown of any Gadget, and equipping the Gadget Cooldown Gear reduces its cooldown from 24 seconds to 20.4 seconds. It is also a Gadget that is often activated as soon as it is off cooldown to help Bea control areas, meaning Bea will often make use of the faster cooldown.
+*While both Star Powers are usable overall, Insta Beaload is usually the better one to use for Bea, as missing a Supercharged shot gives you another one back. Honeycomb is good for more survivability as a 30% shield can make Bea a little tanky, considering her health is quite low. However, you'd use the Supercharged shot to deal large damage to enemies, and Honeycomb is only active if you hold onto your Supercharged shot.
+
+=== Strategies ===
+* Bea has only one ammo slot and low health, so she can be ambushed easily. It is advised not to stay too close to bushes that cover a large area like in [[Cavern Churn]], because close-ranged Brawlers and assassins such as Shelly, [[Bull]], [[Darryl]], Edgar, [[Leon]], [[Buzz]], El Primo, [[Doug]], or [[Fang]] can be great counters and can inflict lots of burst damage if they have been bush-camping or behind walls nearby, and assassins can dodge your shots easily with their fast movement speed and/or fast Supers (i.e. [[Stu]], [[Mortis]], [[Mico]], [[Crow]], [[Kenji]], [[Edgar]], and [[Melodie]]).
+* Usually, most Brawlers are fast enough to be able to dodge Bea's shots. However, upon hitting a Brawler with her Super, it is possible to auto-aim them down very quickly without aiming as the Brawler is slowed down and unable to move fast enough to dodge her shots. Keep in mind that Brawlers with movement speed boosts from Star Powers or Supers might still be able to dodge auto-aimed shots.
+*Bea’s Super projectiles spread out in a wide cone, which allows them to hit enemies around walls. It's useful for discouraging enemies from afar and defeating enemies that are close to you.
+*If you're not sure whether a Bea has a Supercharged shot or not, you can check the bee flying close to her. If it's glowing red (for enemies) or blue (for you/allies), that shows a Supercharged shot is ready. Her ammo bar will also turn yellow instead of the usual orange.
+*Since Bea's Super can slow down enemies, she can use it to escape from enemies who are chasing her. She can also use it to slow down enemies who are trying to escape from her.
+
+=== Other ===
+*Since Bea's Super spreads out, it is great for checking bushes when you know an enemy Brawler is hiding, but the area the bush covers is too large for her normal attack.
+*Note that Bea's shot will only Supercharge her next shot if it hits an enemy Brawler or Bosses in certain events; hitting anything else, such as [[Showdown]] crates, the [[Heist]] safe, the [[Siege]] IKE turret, and minions such as [[Jessie]], [[Penny]], [[Pam]], [[8-Bit]], or [[Mr. P]]'s turret, [[Larry & Lawrie|Lawrie]], [[Tara]]'s shadow clones, and [[Nita]]'s bear will not Supercharge her next shot.
+*Take into consideration that while it only takes four attacks to charge Bea's Super, her normal shot and Supercharged shot have the same Super charge.
+*Bea will actually take longer to shoot her next shot if you spam the aim button. Instead, wait for the shot to reload and instantly press the attack button. This may take practice but will overall boost your overall damage output.
+
+{{Clr}}

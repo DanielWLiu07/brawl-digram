@@ -1,0 +1,12 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Damian
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+* At the start of the match, try to use the Tank trait to get your first Super. Once you have the Super, you can launch yourself into the enemies to easily attack and regain another Super.
+* When you are using the Wall of Sound Gadget, make sure the rotation of the wall is correct (horizontal or vertical).
+* If you are playing [[Gem Grab]] and you are the Gem carrier, you can use the Super to defend yourself by moving to a safe place. The walls created by the Super will impede the opponents from reaching you.
+** Alternatively, you can use the Super to move to the place with a lot of enemies to make it difficult for them to leave the area, which will lessen the number of opponents your team's Gem carrier has to deal with. 
+* Try to land the Super in such a way that the enemies are located on the rim of the Super so they take damage and get knocked in to you for colliding with the boomboxes.
+* In [[Brawl Arena]], make full use of the bots to chain your explosions off of; not only can the do immense chain damage when positioned near a turret, but they can function as handy ways of spreading the explosions to opponents just out of your reach, seeing as they're launched slightly further than brawlers. All of these explosions also help Damian charge his Super extremely fast.

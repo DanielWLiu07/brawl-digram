@@ -1,0 +1,10 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Double_Decker
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+Double Decker is a relatively decent map where multiple kinds of brawlers can perform well using their unique abilities.
+
+* Marksman (Sharpshooters, Snipers) can be very useful in the map as the middle ground is relatively wide open. Brawlers such as '''Piper, Brock, Mandy, Bonnie, Belle, Bea''', etc. can easily snipe enemies standing far away from them, ensuring damage and survival. '''Brock''' and '''Piper''' are especially good at breaking walls and bushes in the middle-top and stop-side of the map, reducing the chance of their enemies healing or planning ambush. '''Belle''' with her gadget Nest Egg can be used to scan and protect important chokepoints where enemies are easy to approach. '''Mandy''' is also advantaged since she can use her super to clear enemies who try to hide behind the top-middle wall or the bush on the top-left of the map.
+* Assassins can also be useful. Those with hiding abilities such as '''Kaze''' (Star Power), '''Kit''' (Gadget), '''Lily''' (Gadget), and '''Leon''' (Super) can easily travel between bushes without being spotted by enemies. They can surprise enemies or ambush to maximize their damage.
+* Certain combinations of brawlers are also useful on the map. '''Buster''' system, '''Doug''' system, '''Byron-Tank''' system, as well as '''Kit-Darryl''' system all perform well on the map for their sustainability and mobility. However, try not to cluster together when faced with Brock, Mandy, or Belle.

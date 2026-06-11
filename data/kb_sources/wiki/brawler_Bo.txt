@@ -1,0 +1,24 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Bo
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+*If Bo manages to place his mines on the IKE turret in Siege or on the [[Heist]] safe, he can activate Tripwire as soon as he can to deal immediate high damage to the safe/IKE turret.
+*Bo's traps can knockback enemies, so if placed correctly, it can knock enemies into the poison gas in Showdown. With Bo's Snare a Bear, Bo's traps will instead stun, giving you ample time to quickly defeat opponents without any risk of dying, making this effective in [[Knockout]], [[Lone Star]], and [[Bounty]]. In [[Duo Showdown]], Bo can be used with a high-damaging Brawler, such as [[Buzz]], [[Darryl]], [[Bull]], [[Fang]], [[Doug]], [[El Primo]], [[Griff]], [[Leon]], [[Frank]], [[Spike]], or [[Shelly]] to finish off a stunned enemy.
+*Bo's fairly high health can be used to walk the Ball into the enemy goal in Brawl Ball. In addition, Bo's traps can be used to destroy enemy cover and goalposts. Clearing up certain maps could be beneficial due to Bo's relatively long range, especially if he has teammates with long-ranged abilities. Hence, Bo is a viable Brawler in Brawl Ball.
+
+===Recommended Build===
+*Try to use Bo's Tripwire Gadget before the enemy steps onto it, since the 1.5 second delay allows the enemy to escape. Also, note that the 1.5 second delay takes longer than its normal 1.15 seconds.
+*When Bo's Super is used, the third trap is set slightly after the other two. Thus, activating Bo's Tripwire Gadget immediately after using his Super only explodes two traps. In [[Brawl Ball]], this can be used to explode walls or obstacles in front of the enemies' goal effectively, which makes it much easier to score. This also leaves one trap hidden until an enemy steps on it, so you can use the last trap for other strategies such as bait for the Ball.
+*When an enemy tries to disarm your traps, use Bo's Tripwire Gadget to catch them off guard and deal instant damage. Coupled with Bo's second Star Power, Bo can passively force enemies to not disarm his mines. This allows him to control open areas simply by selecting this Gadget.
+*Bo's Circling Eagle is really useful on maps filled with bushes, with his doubled radius of vision in bushes. Some maps include [[Cavern Churn]], [[Feast or Famine]], [[Island Invasion]], [[Snake Prairie]], and [[Sapphire Plains]]. Since you have a sight advantage, avoid getting close to tanks or other high-damaging Brawlers. Place his traps to cover the lane with only one passageway while you can cover the other side with your increased sight. When played properly, Bo can quite easily dominate bushy maps. This is really useful in 3v3, for his increased sight in bushes is shared with teammates too.
+*Bo's Snare a Bear Star Power can come into great effect in several Special Events. If one is stunned, you and your teammates can deal massive damage to them temporarily without being targeted. This includes the Bosses in [[Super City Rampage]], [[Robo Rumble]] and [[Boss Fight]].
+
+===Strategies===
+*Bo's traps can be effectively lobbed over walls, making them an excellent tool for countering Brawlers hidden in bushes on the other side of a barrier. By strategically tossing a trap just ahead of their hiding spot, you can force them to walk into it, as they lack the ability to cross the wall unless they are airborne or equipped with a destructive Super. Additionally, with the Tripwire Gadget, you can inflict immediate damage on your unsuspecting opponent.
+*Bo always shoots three arrows from left to right, so you can take advantage of this to control the spread of your arrows. If you want to concentrate fire in a small area, move left while firing, allowing more arrows to hit a single target. For an attack with more spread, move right. The space between each arrow will be increased, giving the attack a wider spread. However, the former strategy only works on stationary targets as Brawlers will most likely be moving and can thus dodge all three arrows.
+
+===Other===
+*Bo's Super can be used to defend critical areas and choke points on the battlefield. Enemies heading in the area will take high damage when they step on the traps. It can be utilized to cover the Gem mine in [[Gem Grab]] to damage enemy Brawlers who are gathering Gems from it. It can also be used to cover key choke points in [[Showdown]], zone(s) in [[Hot Zone]] and Bolt spawning areas in [[Siege]], making Bo an ideal control Brawler.
+*Because Bo's attack sweeps in clockwise direction, when going against another Bo, try not to move in clockwise direction. Moving in this direction cause many of the opposing Bo's attacks to hit, while moving anti-clockwise avoids some of the attacks.

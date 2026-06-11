@@ -1,0 +1,28 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Shelly
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+*Shelly is good in [[Brawl Ball]] since she can destroy the walls blocking the enemy's goal, which allows your team to score easier. A rather useful tactic when using Shelly in Brawl Ball is to shoot the ball and then immediately use her Super to break any obstacles in the way while pushing back enemies blocking the goal. If the timing is done correctly it should be a guaranteed goal.
+*In [[Duo Showdown]], three useful team compositions are Shelly with [[Tara]], [[Jacky]], or [[Gene]], as either of them can pull enemies into Shelly, who can then finish them off with her Super. Another useful team composition is Shelly with any Brawler who can stun, like [[Frank]], [[Bull]], [[Kit]], or [[Bo]], that allow her to quickly eliminate the stunned Brawler with her super.
+*In [[Showdown|Solo Showdown]], if Shelly has her Super, she can bush camp and wait for enemies to come close then ambush them with her Super.
+
+===Recommended Build===
+*Shelly's Fast Forward Gadget allows Shelly to use 6 attacks with a Super (optionally) all at once. However, it serves more as a tactical retreat.
+*Shelly's Clay Pigeons Gadget can be used directly after using her Super at mid-range. While the enemy gets knocked back, Shelly is able to hit all bullets with the longer attacks provided by the Gadget to get maximum value out of it. This is especially effective when combined with her Shell Shock Star Power, allowing Shelly to easily land even more shots and take down foes, usually getting her Super back in the process, which could help her in a later combat.
+*Using her Shell Shock Star Power, Shelly can slow down Brawlers that are trying to escape, allowing her and/or her teammates to catch up and eliminate them. Shelly can also slow down the entire enemy team with her Shell Shock Star Power, making way for a potential team wipe with the help of allies. In [[Showdown]], this can be used to catch up with longer-range Brawlers if they get hit by Shelly's Super.
+**Alternatively, you can also use Shell Shock to slow down the enemy and quickly activating Clay Pigeons to get quick and easy hits off while also recharging your Super in the process.
+*Both Gadgets can be used depending on their own respected scenarios. For an example, Clay Pigeons can be used to finish off enemy Brawlers who manage to escape from being up close, while Fast Forward can be used to quickly close a distance with an enemy, while also fully reloading your ammo bar to continue the pressure.
+
+===Strategies===
+*When using Shelly, take advantage of walls or bushes when approaching brawlers that outrange her, though be mindful as destroying too many walls and bushes can put her at disadvantage
+*The spread of Shelly's attacks allows her to sweep bushes and expose any enemies hiding in them without having to go inside the bush, potentially risking being defeated by a high-damage Brawler such as [[Bull]], [[Griff]], [[Rosa]], or [[Leon]].
+*Shelly's Super has the ability to cancel or interrupt other Brawlers' Supers because it knocks them back. For example, she can stop [[Frank]] and [[Meg]] from finishing their Supers if she interrupts them with her Super during their wind-up and transformation respectively (be careful of Frank's active Noise Canceling Gadget). This can become even more deadly by waiting in a bush and then ambushing.
+*If Shelly is at low health and is being chased by a Brawler, she can use her Super to knock them back and gain a bit more time to escape. This works even better if she has her Shell Shock Star Power since she can also slow them down for a few seconds. Note that this only applies to Showdown and Knockout where survival is the key objective.
+
+===Other===
+*Shelly is best on maps with lots of bushes, notably [[Center Stage]], where she has been a top pick for several years as she can easily scout bushes and sneak up upon opponents.
+*Similar to [[Colt]] and [[Grom]]'s Super, projectiles from Shelly's Super don't pierce through walls, they disappear after breaking one. Keep this in mind if you are trying to use Shelly's Super to defeat a Brawler behind a wall, because the opponent will take less damage due to some of the shells disappearing after breaking a wall; the more walls between you and your enemy (in a scenario where the Super is aimed perfectly at the opponent), the less damage they'll take from the Super.
+*Shelly is an excellent counter to tanks with her Super. However, you should be mindful of tanks with high burst damage, such as Bull or [[El Primo]], as they can kill you before your Super goes off. So try to have your Super charged up before facing them.
+*For dealing with close-range assassins, focus on landing your shots correctly to quickly defeat them or use her Clay Pigeons Gadget to outrange them and slowly whittle them down.

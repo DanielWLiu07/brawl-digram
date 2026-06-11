@@ -1,0 +1,22 @@
+{
+ "name": "Hank",
+ "notes": [
+  {
+   "text": "Anti-tank/anti-assassin anchor: torpedo Super bursts divers at point blank; aim at the middle of the hitbox to land every torpedo.",
+   "tags": ["anti-dive"], "confidence": "llm-draft",
+   "source": "https://brawlstars.fandom.com/wiki/Hank"
+  },
+  {
+   "text": "Wants walls: charges the bubble hidden, then rotates the aim onto the approach at max size. Wall-heavy Brawl Ball maps are his home (Barricade gadget covers the goal walk).",
+   "tags": ["Ball", "map-fit"], "confidence": "llm-draft",
+   "source": "https://brawlstars.fandom.com/wiki/Hank"
+  },
+  {
+   "text": "Terrible natural regeneration — long-range poke on open maps denies him entirely; Super self-heals up to 5600 when used defensively.",
+   "tags": ["weakness"], "confidence": "llm-draft",
+   "source": "https://brawlstars.fandom.com/wiki/Hank"
+  }
+ ],
+ "patchVersion": "67.301",
+ "lastVerified": "2026-06-10"
+}

@@ -1,0 +1,24 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Amber
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+*Amber's Super and Fire Starters Gadget can provide area control, making her niche in events like [[Gem Grab]] and [[Hot Zone]]. She can place her puddles over the Gem mine or a zone and prohibit enemies from achieving the respective event objective. If an enemy attempts to cross the puddle, she can ignite it to deal significant damage to the enemy. In addition, the puddles from her Super and Fire Starters Gadget can connect to create an extremely large puddle to control massive areas. The area control provided from the puddles is amplified with her Wild Flames Star Power. You can either connect the puddles to clear bushes or separate them to allow for select area denial.
+
+===Recommended Build===
+*Amber's Dancing Flames Gadget can deal incredible damage if all fireballs hit the target, so it gives her sturdy protection against assassin Brawlers or Brawlers with Supers that could fly over obstacles that would normally defeat Amber (e.g. [[El Primo]], [[Surge]], [[Mico]], [[Bonnie]], [[Crow]], [[Kit]], and [[Edgar]]). She can also use this Gadget effectively in modes like [[Heist]], where there is a stationary target. This allows her to deal massive damage with this Gadget, and combined with her piercing attack, Super, and Gadget Gear, she is a menace in such modes.
+
+*Amber's Wild Flames Star Power and Fire Starters Gadget are extremely useful in helping Amber quickly regain her Super, especially when Supers are most necessary. With her Fire Starters Gadget, she can create a large puddle area in which her Super recharges, allowing for an insane pace of Supers while fighting.
+*Trails from Amber's Fire Starters Gadget can also be used as firewalls to protect you and allies. Make sure to keep puddles connected so enemies, especially heavyweights and assassins, are damaged when crossing the puddles.
+
+===Strategies===
+*Amber is an excellent cover destroyer that can burn down a large amount of bushes from her fire puddles and her attack combined while also being able to inflict burn damage, restricting an enemy's ability to heal and retreat.
+*Be careful about positioning Amber's Super because if it's thrown in an undesirable position, you might accidentally ignite the puddle when attacking an enemy near it, so try to place the fluid outside your attacking spot but still in your range so you can ignite the puddle at the right time. This also enables you to control two lanes at once.
+*Try to predict the enemy's movement in order to land more shots, because there's a tiny yet noticeable delay between aiming and firing. You'll deal maximum damage by aiming where the enemy is likely to move as aiming at the enemy's current position won't damage the moving enemy since Amber's flames travel slowly.
+*Amber is an excellent counter to high-health Brawlers because her continuous attack deals enough damage to eliminate them. She can also use her Super to prevent them from healing and finish them off. However, maintain your distance from these Brawlers because Amber, with her moderate health, can be two-shotted or three-shotted by those Brawlers if they get close enough, and she's helpless at close range due to her inability to deal immediate damage and her lack of stuns, slows, or knockbacks to distance herself from such Brawlers.
+*Try not to waste ammo with Amber. If Amber is out of ammo, she needs to wait a while to fully reload despite what seems to be an incredibly fast reload speed. With her Scorchin' Siphon Star Power, you can partially mitigate this issue by using her Super or her Fire Starters Gadget to reload quicker. You can also place her Fire Starters Gadget at your spawn point and reload quicker if you die. If you do this you will enter battle with a full ammo bar.
+*If you have the Wild Flames Star Power, when you get your Super and throw it, sometimes it is a better idea to wait and keep the Super on the ground so that you charge up more of your Super. This is a good strategy in passive maps and also good if you aren't going to hit an enemy with it, as you can charge another Super.
+*Amber's fire fluid can be ignited before it fully spills on the ground which can be used to give enemies no time to escape the fire fluid's radius.
+*Especially if you have her Mythic Gear, don't immediately waste your Hypercharge Super. The simple threat of the size of the puddle is more than enough to scare off lower ranks or slow down higher ones.
+*In certain situations, you can throw your fire fluid across a body of water, which is the only way to separate individual puddles. This can be helpful if you want to charge your super or reload off of a small tile of fluid, while allowing the majority to deal damage. This can best be seen in the corner of Safe Zone.

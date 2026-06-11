@@ -1,0 +1,9 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Juju
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+*When you have her Super charged, you can use Gris-Gris as a tank and get closer to her enemies to deal high burst damage. This is more efficient when paired with her Numbing Needles Star Power to increase the accuracy of your hits.
+*When enemies approach you, because her attacks on the ground are the highest among the three types of elements, it is best to leave bushes to deal higher damage, or escape onto water while slowing the enemy down.
+**On the contrary, when enemies are escaping from you, it is highly advisable that you hide in bushes to increase your range and try dealing as much damage as possible.
+*Since Gris-Gris attacks with medium frequency and low accuracy, deploying it near enemies gives a higher threat to your enemies than letting it chase your enemies from far away.

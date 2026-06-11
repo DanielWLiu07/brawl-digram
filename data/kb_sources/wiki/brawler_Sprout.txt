@@ -1,0 +1,27 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Sprout
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+=== Game Modes and Maps ===
+
+* Sprout can prevent enemies from escaping the poison clouds with its Super in [[Showdown]]/[[Duo Showdown]], potentially knocking enemies out, and Sprout can increase the damage by attacking while the enemy can't provide counter fire. This is especially useful in [[Cavern Churn]] and other maps with an abundance of walls.
+* Sprout's walls can be used to block the ball from being shot into the goal in [[Brawl Ball]]. Paired with Transplant, Hedge can become an almost-permanent barrier. However, be wary that Hedge can be destroyed with invulnerability shields, so Sprout and its teammates should avoid running into the barrier in an attempt to defend the goal.
+* Despite his decent survivability, his lack of area control from the narrow attack makes him a poor choice in [[Hot Zone]]. Hedge does not have enough area to block a zone, and his low damage makes him an easy target from low-range Brawlers. As such, it is better to seek for other alternatives for an Artillery Brawler, such as [[Barley]], [[Grom]], [[Larry & Lawrie|Larry]], [[Dynamike]], or [[Berry]].
+
+=== Recommended Build ===
+
+* Sprout is viable in maps with a lot of bushes when its Garden Mulcher Gadget and Photosynthesis Star Power equipped, as these both make Sprout hard to defeat. As long as there is a decent amount of walls to hide behind, this shouldn't be too risky as long as ambushers are watched out for.
+*Sprout's Transplant Gadget can help it in weekend modes like [[Robo Rumble]] or [[Last Stand]] to quickly block wall cavities and hinder the bots' advance from attacking the safe or 8-Bit momentarily, especially if these targets are in places of the map with tightly packed walls, protecting them for a decent amount of time.
+
+=== Strategies ===
+
+* Aiming the Seed Bombs against walls can also help in close-range interactions. By bouncing the Seed Bombs against walls, the Seed Bombs will bounce back in Sprout's direction, effectively landing a hit on enemies close by. This strategy is effective with the Photosynthesis Starpower, allowing Sprout to tank shots while hitting enemies.
+
+=== Other ===
+*Sprout's Seed Bombs have a delay while in the air and can bounce uncontrollably. As a result, it's difficult for Sprout to attack enemies that are close to it unless nearby walls are used to assist them, which will allow Sprout's attacks to reach enemies easier. However, Sprout has greater damage potential at longer ranges because the attack bounces, in which hitting enemies is easier due to the range increase from the bouncing. Because of this, you can auto-aim with Sprout unlike other throwers as the attack can bounce on the ground and off walls.
+*Sprout's Seed Bombs' range increases from each bounce before exploding, just like Rico's projectiles. So, it's recommended to aim them diagonally towards walls to increase Sprout's range.
+*Sprout's Super is effective at blocking off vital choke points and essential areas, effectively leaving only one or two passages for enemies to pass through in many situations. This causes them to group together, allowing for an effective team wipe, especially with area attackers on your team such as [[Penny]], [[Brock]], [[Emz]], Barley, [[Carl]], or [[Mr. P]].
+*In maps with very narrow choke-points like [[G.G. Mortuary]] in [[Heist]] and [[Split]] in [[Hot Zone]], Sprout can use its Hedge along with its Transplant Gadget to almost permanently block those routes, preventing the enemies from reaching the important area.
+*Sprout's attack radius can damage multiple enemies, especially if it has its Overgrowth Star Power equipped. Hitting multiple opponents charges its Super faster and deals a lot more damage, despite Sprout's moderately low damage output, so always take advantage of the situation if enemies group together.

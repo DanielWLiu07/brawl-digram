@@ -1,0 +1,26 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Maisie
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+*In certain game modes, controlling the bushes can provide a significant advantage. As a long-range Brawler, you can keep enemies at bay by shooting into bushes and denying them access to key areas. This method is effective in areas such as [[Hot Zone]] and Gem Grab.
+*Maisie is a solid pick in Brawl Ball. Her Super, combined with her Tremors Star Power and Disengage! Gadget, can make the enemy drop the ball, push them away from the goal, stun them briefly, slow them, or provide area control if the enemies are grouping up together to defend their goal. This makes her a highly versatile Brawler in the mode; her very fast Super charge rate and high damage output allows her to eliminate enemies quickly if they're fired accurately.
+*Maisie can take out a large and consistent amount of damage from the enemy's safe in [[Heist]]. Since the safe is a stationary object, her shots are guaranteed to hit. She can deal 11480 damage with three ammo and a super, and if there are multiple defending enemies in range, she could potentially chain Supers and repeatedly take out the enemy's safe's health. Her reload speed is quite reasonable, and her damage is consistent. Maisie's Super is great for defense as well, as it pushes enemies away from the safe and slows them down if she has her Tremors Star Power equipped, allowing her to take out the enemy and potentially chain another Super.
+
+===Recommended Build===
+*If you're in a match facing an assassin, use Disengage! to stun them and dash away if they get too close to you. If you're facing any tanks, then use the Finish Them! gadget. A good tip would be to first attack them once or twice, then activate Finish Them! to wipe out their health.
+*Maisie's Tremors Star Power is the better option for most situations, as it allows you to hit more consistent shots on your enemies after using your Super. Moreover, using her Super with this Star Power provides a much better area control than her regular Super, as it forces your opponents to retreat.
+
+===Strategies===
+*A trick to use with her Super is to activate it, then use Disengage! to dash onto an enemy. With her Tremors Star Power, this should catch the enemy by surprise, and if they are on low health, it is easier to finish them off with her attack.
+
+===Other===
+*Never auto-aim your shots when using Maisie, unless your opponent is right in front of you, as with the starting slow projectile speed, it most likely won't work.
+*When aiming your Super as Maisie, try to corner brawlers into walls and activate your Super as you walk towards them. This will make it so that your Super hits accurately and you can cycle it back quickly thanks to a limited area available for your enemies to run.
+*Maisie can defend herself well against close-range Brawlers, try to use this to your advantage by either dashing away or pushing back close-range Brawlers that sneak up on you like [[Mortis]], [[Edgar]], [[Buzz]], [[El Primo]], [[Fang]], [[Kit]], or [[Mico]]. With the added slow from her Tremors Star Power, you can also efficiently charge her Super, due to the enemies being slowed.
+*Maisie struggles against long-range Brawlers like [[Piper]], [[Nani]], [[Brock]], [[Colt]], [[Rico]], [[Mandy]], or [[Bea]], but once Maisie can get in range, she can easily take them out. A good way to get in range, is to try and predict the shot of your enemy, dodge it, while also slowly moving closer to them.
+*Maisie's Super is excellent for crowd control and pushing back enemies. Use it strategically in tight situations or to clear the area around an objective, such as the Gem Mine in [[Gem Grab]] or the [[Brawl Ball]] goal.
+*Since Maisie's main attack is very easy to dodge, you should shoot multiple attacks in quick succession to increase the chance of a hit. Since Maisie's attack deals a lot of damage, one hit gives a lot of value. Do not shoot someone from afar when you only have one ammo unless they are in a very tight spot  and cannot dodge your attack or slowed/stunned.
+*With a limited ammo capacity, it's very important that you make every shot count. Avoid spamming her main shots at random and try to land shots consistently to make sure you hit an opponent. Even though Maisie has a fast unload speed, its still important to make sure you land your shots and focus on aspects such as timing.
+*Maisie can work well with Brawlers that provide healing, especially portable healing like [[Byron]], [[Doug]], [[Pam]], [[Berry]], or [[Poco]] to help her even more against sneak attacks. This allows her to stay in the battle longer and maintain map control.

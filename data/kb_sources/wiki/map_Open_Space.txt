@@ -1,0 +1,9 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Open_Space
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+== Tips ==
+
+* Marksmen, such as [[Brock]], [[Piper]], [[Maisie]], [[Janet]], [[Angelo]], and [[Belle]] are solid options, as the map is mainly open.
+* [[Gene]] is a solid gem carrier on this map. His split, long-ranged main attack can allow him to chip enemies from a distance, preventing them from healing and pushing them back. It also charges his game-changing Super pretty easily due to its width.
+*Artilleries and Tanks will struggle on this map as the map is very open and there are barely any walls to hide behind.

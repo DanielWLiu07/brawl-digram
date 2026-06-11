@@ -1,0 +1,22 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Grom
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+
+===Recommended Build===
+*Grom's Watchtower Gadget is very useful in maps with large bushes clusters such as [[Cavern Churn]] or [[Snake Prairie]] because it allows Grom and allies to see into bushes, allowing them to scout enemies easily. You must be aware of its placement since it can be easily destroyed along with the fact that it already loses health over time, so make sure to place it out of reach from most enemies.
+*The best way to use Grom's Foot Patrol Star Power is to chase enemies since his Super can be devastating. You can bring an enemy to low health with his attacks while charging his Super in the process, chase them, and throw his Super at the right time.
+*Remember that enemies will move in an attempt to dodge Grom's attacks. With Grom's X-Factor Star Power, keep this in mind, as if they move and fail to dodge the attack, they take extra damage.
+*With Grom's Radio Check Gadget, it's best to use it on targets that aren't moving, like the [[Heist]] safe. It can also be used for map control as enemies would naturally be wary of getting in your range. This can cause devastating damage and high value as it effectively fires three attacks for the cost of one ammo.
+
+===Strategies===
+*Enemies will likely walk diagonally in an attempt to dodge Grom's attack. Try to force enemies towards wall clusters where they are restricted and burst them down.
+*Try and learn how the knockback works on Grom's Super: once this is learnt, you can use it as a combo with his Radio Check Gadget. Aim the Gadget at where the enemies will be knocked back to. This is very effective as enemies will be unable to dodge the Gadget as they are being knocked back by the Super. If done correctly, it can deal over 5000 damage.
+
+===Other===
+*Be careful not to destroy walls near your spawn when using Grom's Super because these walls allow Grom to pressure the enemy team while being protected from them.
+*When against a Grom, it is crucial to know how to dodge his attacks. Luckily, Grom's attacks are slow enough that you can track the projectile mid-air (a good way is to look at the attack's shadow) and move away from the plus shape it creates. If you manage to get close, he becomes helpless due to his shot's slow landing speed.
+**His Super can be dodged similarly to his main attack, and is actually slightly slower than it; however, it is much wider, shrinking the areas where you can dodge successfully. 
+*Always try to place your Super in an area filled with Brawlers. This will allow for a clean hit and helps to clear out the map faster and give you the victory.

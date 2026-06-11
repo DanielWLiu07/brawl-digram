@@ -1,0 +1,20 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Sam
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+===Game Modes and Maps===
+*Sam's Trait makes him very useful in [[Brawl Ball]], since he starts the match with his Super charged up and unless he uses his Super, he can use that to get the ball and have a super-kick ready to go.
+
+===Recommended Build===
+*Sam's Magnetic Field Gadget makes his Super amazing for area control, since he can activate the Gadget when enemies bunch up together in the [[Hot Zone]], for example; to then kill them easily.
+*Sam's Pulse Repellant Gadget is also very good for area control, since he can get enemies away from a spot, like the Gem Spawn in [[Gem Grab]], without much difficulty. Pulse Repellant is also good for close up fights. By throwing your Knuckle Busters at a pinned enemy against a wall, to knock them back.
+*Sam's Hearty Recovery Star Power can be game-changing in maps with lots of walls, which Sam can use to throw the Knuckle Busters to and then instantly grab them. Repeating this process many times will put Sam to full health after a fight in a matter of seconds.
+*Sam's Remote Recharge Star Power can help Sam get his Knuckle Busters back in open maps or in situations where can't just go and get them normally.
+
+===Other===
+*When Sam attacks with his Knuckle Busters on he hits twice, first to the very left of the cone range of the attack and then to the very right. Moving counter-clockwise around him can effectively make one of his attacks miss, so to counter that - to make both punches land - don't stand too close to the enemy and move clockwise around the enemy.
+*Since Sam's ammo recharges faster without his Knuckle Busters, try reloading all his ammo before retrieving his Knuckle Busters.
+*Since Sam starts the game with his Super already charged up and it gives him a short speed boost after using it, he can use his Super at the very start of a game to get to a specific part of the map or to reach a specific thing faster than other [[:Category:Brawlers|Brawlers]] such as the Gem Mine, the Blue [[Bounty]] Star, etc. Be careful however, because throwing your Knuckle Busters close to where enemies are can make them difficult to collect. Due to this, this strategy works best in [[Showdown]] due to the large amount of space in Showdown maps.
+*Sam's Knuckle Busters do not extend their range if their endpoint is water, making it possible to be unable to manually collect them. Be careful throwing them around bodies of water, as accidently throwing the Knuckle Busters into large enough water bodies will force Sam to fight without them until he can recall them, greatly hindering his damage output and making his Gadgets useless. This can be partially remedied with his Remote Recharge Star Power if the location of the water is close to enemies.

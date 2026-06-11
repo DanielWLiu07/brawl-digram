@@ -1,0 +1,23 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Hank
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+
+=== Game Modes and Maps ===
+
+=== Recommended Build ===
+
+* The best loadout for all maps and modes is Barricade Gadget, It's Gonna Blow Star Power, Damage Gear and Health Gear. This is because Hank has one of the highest burst damages in the game, which can greatly be boosted with the Damage Gear and It's Gonna Blow Star Power helping you get in range. And Health Gear is because Hank has terrible natural regeneration, and you want to spend as little time as possible to heal up, so you can immediately go back to attacking again.
+* His Barricade Gadget can be used to give himself a defense mechanism when walking the ball into the goal in [[Brawl Ball]], or getting close to enemies to unleash his powerful attack.
+
+=== Strategies ===
+
+* Your Super is your #1 best anti-tank and anti-assassin option. Get as close to the middle of your enemies' hitbox before you unleash your Super, so you can hit as many torpedoes as possible.
+* When approaching an enemy, always charge your bubble in the opposite direction of that enemy. When the bubble is at its maximum size, quickly rotate the attack joystick to aim towards the enemy, and immediately release. This strategy catches the enemy off-guard as they will not be able to gauge a safe distance from you while your bubble is not facing them.
+
+=== Other ===
+* Spamming auto aim has higher DPS than waiting to charge up your bubbles.
+* Unless you're safe behind a wall, you should generally use your Barricades Gadget before engaging with a high DPS enemy.
+* Your Super can heal you up to 5600 health. Even if you're not hitting anyone with it, you can use it to get a quick health boost in a pinch.
+* Memorize your Super's angle pattern in the [[Training Cave]], it will help you snipe and finish off opponents when they're low on health.

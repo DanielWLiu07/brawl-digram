@@ -1,0 +1,11 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Lumi
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+== Tips ==
+*When throwing the maces, try to keep enemies at the tip of your range to make it easier to hit them with the recalled maces. This is especially important when throwing the second one, as if done right, Lumi can instantly recall the second mace after it hits for an additional burst of damage.
+*Against close range assassins such as [[Edgar]], [[Fang]], [[Sam]], [[Mico]], [[Kenji]], [[Shade]], [[Mortis]], [[Lily]], [[Alli]], and [[Buzz]], do not throw the maces far, as this will result in Lumi losing valuable damage due to the maces long travel time. Instead, in a similar manner to [[Carl]] and [[Charlie]], shoot the maces against a nearby wall to increase the amount you can throw.
+*When Lumi recalls the maces, they can go through walls and obstacles. This can be crucial when opponents only need one more hit to be defeated but are hiding behind a wall. She can take advantage of this by throwing her maces and moving towards the enemy behind the wall before they return. allowing them to get an indirect hit.
+*The fire from her Hit the Lights Gadget is very effective at restricting where an enemy is willing to go, often cutting off their escape route.
+*Her Grim and Frostbitten Gadget can cover zones in [[Hot Zone]]. She can use it to her and team's advantage as enemies can't enter the hot zones without slowing down and being quickly defeated with ease from Lumi and her teammates.
+*The Grim and Frostbitten Gadget can also be used to counter some assassins. If playing against Brawlers with a jumping Super and close range like Edgar, [[Kit]], [[Bonnie]], and [[El Primo]], make sure you haven’t thrown your maces, wait for them to jump, walk towards the jump while they are in the air, while using the Gadget so it leaves the slippery frost area behind, preventing them from moving, making it easier for you to kill them.

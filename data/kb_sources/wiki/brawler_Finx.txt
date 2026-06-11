@@ -1,0 +1,17 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Finx
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+=== Game Modes and Maps ===
+
+* 
+
+=== Recommended Build ===
+
+* Always aim Finx's attack. Auto aiming with Finx hits only the middle projectile, so learn to aim with Finx at a diagonal angle.
+* While Finx's Super can improve the accuracy of auto aiming, it may be disadvantageous when applied to teammates who land their shots often because speeding up their projectiles may mess up their aim.
+* Finx's Back to the Finxture Gadget allows him to either deal massive damage or escape.
+** Finx can use this Gadget to unload 6 shots in succession by using the Gadget instantly after unleashing three shots. When using this tactic, make sure you are around the same place 3 seconds ago.
+** Finx can use this Gadget to escape from close-range combat by walking back and forth over a considerable distance. You may also lure assassins to jump onto your current position and teleport away with this Gadget.
+* Since Finx's Super slows down enemies' projectiles significantly, beware of lingering attacks like [[Emz]]'s as they may cover an area for a longer time, potentially dealing higher damage to you and your teammates.

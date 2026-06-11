@@ -1,0 +1,28 @@
+SOURCE: https://brawlstars.fandom.com/wiki/Otis
+SECTION: Tips
+LICENSE: CC-BY-SA 3.0
+---
+==Tips==
+===Game Modes and Maps===
+
+*Otis can use his Dormant Star Gadget to block off choke points like in [[Hot Zone]] and [[Brawl Ball]] and prevent enemies from using their abilities. This can be utilized in maps like [[Parallel Plays]] and [[Backyard Bowl]]. One way is to aim a Super at a choke point near your goal so that when an enemy with a ball triggers it, they cannot shoot the ball and their only option is to walk it in, buying your team a bit of time to stop the goal.
+*His Super can prevent enemies from passing the ball in Brawl Ball and [[Basket Brawl]]. This can be a useful way to prevent enemies from scoring a goal efficiently, and is very useful against Brawlers like [[Stu]], [[Melodie]], [[Kenji]], and [[Mortis]] who score using Supers and dashing.
+*Otis is an insane defender in [[Heist]], as he can stop aggro Brawlers like [[El Primo]], [[Bull]], [[Edgar]], [[Buzz]], [[Darryl]], and [[Fang]] when they get close to the safe by muting them and then killing them. He can also mute [[Jessie]]'s turret, [[Penny]]'s cannon, [[Larry & Lawrie|Lawrie]], [[Tara]]'s clones, and [[Nita]]'s bear, which can be big threats to the safe. As an offender, with his Ink Refills Star Power and his Phat Splatter Gadget paired, Otis can deal high damage to the safe.
+*In bushy maps like [[Snake Prairie]], Otis' Gadget Phat Splatter combined with Stencil Glue can cover a lot of bushes and can see an enemy with Otis' Super on for 4 seconds.
+
+===Recommended Build===
+
+* Dormant Star is typically the worse Gadget, as when it is triggered Otis and his allies are usually not close enough to actually follow up on the Super. However, due to its ability to be placed multiple times at once it can make it a powerful chokepoint blocker with a much longer duration than the Phat Splatter, hindering enemy progress in certain events like Brawl Ball and [[Heist]].
+* Phat Splatter is typically the better Gadget, as it can be used to block checkpoints and deal damage to the safe. Paired with his Ink Refills Star Power, he can deal large amounts of damage to the safe extremely quickly.
+* Ink Refills is necessary to using Otis, drastically increasing his DPS and Super charge rate. It can usually determine finishing off a Brawler with an extra damage projectile.
+* Stencil Glue is the worse Star Power, as most Brawlers will die in 3 hits after Otis uses his Super, and it is unnecessary in most cases with it only giving one extra tick of poison damage from getting muted.
+* The damage area of Otis' Phat Splatter Gadget has slightly more range than his basic attack, and can sometimes even hit enemies behind walls. Use this to finish off enemies that are just slightly outside of your range.
+
+===Strategies===
+*Otis' Super makes him a powerful counter from tanks and assassins, if they get too close to him.
+*The damage area of Otis' Phat Splatter Gadget has slightly more range than his basic attack, and can sometimes even hit enemies behind walls. Use this to finish off enemies that are just slightly outside of your range.
+*Try to attack your opponent with your Super in close range, because it helps Otis to defeat the enemy faster, and ensures that you won't miss any attacks.
+*His attack has a deceivingly large spread and hitbox that can be used to poke at an enemy and keep them from healing.
+*Especially if you are going against an assassin, try to always have your Super ready. Similar to [[Gus]], Otis can easily stop them from dealing damage and quickly kill them.
+*Cil can silence certain special targets as well. When going against a Hyperbear or Hyperscrappy, it might be a good choice to use it against them especially if they have their Star Powers and Gadgets. 
+{{Clr}}

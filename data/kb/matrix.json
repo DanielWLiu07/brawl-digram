@@ -1,0 +1,74 @@
+{
+ "_meta": {
+  "note": "Seed counter/synergy edges drafted by LLM from mined wiki Tips text (kb_sources/wiki/). Directional: b beats a. deltaRating in log-odds-ish units per kb-design §2. All pending pro review; cross-check against draft_stats pair win rates via check_kb_edges.py.",
+  "patchVersion": "67.301",
+  "draftedAt": "2026-06-10"
+ },
+ "edges": [
+  {
+   "a": "Piper", "b": "Melodie", "type": "counter", "deltaRating": 0.3,
+   "reason": "Melodie's Super dashes close the gap on long reload; zig-zag dashing dodges straight-line shots",
+   "modeContext": null, "confidence": "llm-draft",
+   "statsCheck": "SUPPORTED: pair WR 0.628 vs mean 0.599 (n=7,416)",
+   "source": "https://brawlstars.fandom.com/wiki/Melodie",
+   "patchVersion": "67.301", "lastVerified": "2026-06-10"
+  },
+  {
+   "a": "Mandy", "b": "Melodie", "type": "counter", "deltaRating": 0.25,
+   "reason": "stationary line sniper; Melodie's multi-dash approach beats autoaim attempts",
+   "modeContext": null, "confidence": "llm-draft",
+   "source": "https://brawlstars.fandom.com/wiki/Melodie",
+   "patchVersion": "67.301", "lastVerified": "2026-06-10"
+  },
+  {
+   "a": "Bonnie", "b": "Melodie", "type": "counter", "deltaRating": 0.2,
+   "reason": "line-projectile attack is dodged by zig-zag Super dashes",
+   "modeContext": null, "confidence": "llm-draft",
+   "source": "https://brawlstars.fandom.com/wiki/Melodie",
+   "patchVersion": "67.301", "lastVerified": "2026-06-10"
+  },
+  {
+   "a": "El Primo", "b": "Hank", "type": "counter", "deltaRating": 0.25,
+   "reason": "Hank's torpedo Super is a premier anti-tank burst; tanks that walk onto him eat every torpedo",
+   "modeContext": null, "confidence": "llm-draft",
+   "source": "https://brawlstars.fandom.com/wiki/Hank",
+   "patchVersion": "67.301", "lastVerified": "2026-06-10"
+  },
+  {
+   "a": "Frank", "b": "Hank", "type": "counter", "deltaRating": 0.05,
+   "reason": "slow wind-up melee walks into max-size bubble + Super torpedo burst",
+   "modeContext": null, "confidence": "llm-draft",
+   "statsCheck": "CONTRADICTED: pair WR 0.583 vs table mean 0.599 (n=3,200) — delta reduced, needs pro review",
+   "source": "https://brawlstars.fandom.com/wiki/Hank",
+   "patchVersion": "67.301", "lastVerified": "2026-06-10"
+  },
+  {
+   "a": "Dynamike", "b": "Angelo", "type": "counter", "deltaRating": 0.2,
+   "reason": "Stinging Flight jump closes on throwers, water-walking trait ignores their wall cover lanes",
+   "modeContext": null, "confidence": "llm-draft",
+   "source": "https://brawlstars.fandom.com/wiki/Angelo",
+   "patchVersion": "67.301", "lastVerified": "2026-06-10"
+  },
+  {
+   "a": "Barley", "b": "Angelo", "type": "counter", "deltaRating": 0.15,
+   "reason": "jump gadget + long charged shots outrange and out-maneuver lobbed area denial",
+   "modeContext": null, "confidence": "llm-draft",
+   "source": "https://brawlstars.fandom.com/wiki/Angelo",
+   "patchVersion": "67.301", "lastVerified": "2026-06-10"
+  },
+  {
+   "a": "Hank", "b": "Piper", "type": "counter", "deltaRating": 0.2,
+   "reason": "Hank must close distance with terrible natural regen; long-range chip denies bubble charge approaches on open ground",
+   "modeContext": ["Wanted", "Knockout"], "confidence": "llm-draft",
+   "source": "https://brawlstars.fandom.com/wiki/Hank",
+   "patchVersion": "67.301", "lastVerified": "2026-06-10"
+  },
+  {
+   "a": "Melodie", "b": "Frank", "type": "counter", "deltaRating": 0.15,
+   "reason": "area-scan Super punishes dash-in playstyle if Melodie commits without a dash held in reserve",
+   "modeContext": null, "confidence": "llm-draft",
+   "source": "https://brawlstars.fandom.com/wiki/Melodie",
+   "patchVersion": "67.301", "lastVerified": "2026-06-10"
+  }
+ ]
+}
