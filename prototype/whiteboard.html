@@ -464,7 +464,7 @@ const status = document.getElementById("status");
 const setStatus = (t) => { status.textContent = t; };
 
 // ---- load data ----
-const [mapsDoc, brawlersDoc, kitsDoc, mechanicsDoc, tileIdxDoc, mapNameDoc, brawlifyMapsDoc, mapThemesDoc, draftSeedDoc] = await Promise.all([
+const [mapsDoc, brawlersDoc, kitsDoc, mechanicsDoc, tileIdxDoc, mapNameDoc, brawlifyMapsDoc, mapThemesDoc, draftSeedDoc, draftAiDoc] = await Promise.all([
   fetch("/data/maps.json").then(r => r.json()),
   fetch("/data/brawlers.json").then(r => r.json()),
   fetch("/data/kits.json").then(r => r.json()).catch(() => ({ kits: {} })),
@@ -474,6 +474,7 @@ const [mapsDoc, brawlersDoc, kitsDoc, mechanicsDoc, tileIdxDoc, mapNameDoc, braw
   fetch("/data/brawlify/maps.json").then(r => r.json()).catch(() => ({ data: { list: [] } })),
   fetch("/data/map_themes.json").then(r => r.json()).catch(() => ({ themes: {}, mapTheme: {}, themeToBiome: {} })),
   fetch("/data/draft_seed.json").then(r => r.json()).catch(() => ({ edges: [] })),
+  fetch("/data/draft_ai.json").then(r => r.json()).catch(() => null),
 ]);
 const maps = mapsDoc.maps;
 const brawlers = brawlersDoc.brawlers;
@@ -2991,11 +2992,15 @@ function validateMap() {
 }
 renderCustomList();
 
-// ---- draft advisor v0 (client-side heuristic scorer) ----
-// Scores = mode/class fit + map-geometry fit (computed live from the grid)
-// + counter edges (community seed + rules), confidence-weighted. No
-// win-rate data yet (sources blocked) — every term is labeled rule/community
-// so the output is honest about its basis. Design: docs/draft-advisor-kb-design.md.
+// ---- draft advisor v1 (learned weights + pro/ladder stats) ----
+// Scores = LEARNED attribute×geometry×mode fit (ridge regression over pro
+// pick/ban presence shrunk toward ranked ladder win rates — data/draft_ai.json,
+// fit by data/fit_draft_weights.py) + per-map ranked win rates ("stats") +
+// pro pick/ban presence ("pro") + counter edges (community seed + rules) +
+// comp coverage. Candidate pool is constrained to pro-picked/banned ∪
+// ladder-popular; everything else is tagged off-meta. Falls back to the v0
+// hand-tuned heuristics when draft_ai.json is absent.
+// Design: docs/draft-advisor-kb-design.md + docs/draft-advisor-data-acquisition.md.
 
 // Auto-derived brawler attributes — the "which character is a thrower"
 // layer, straight from baked CSV data, no human input.
@@ -3058,42 +3063,181 @@ for (const e of counterEdges) {
 }
 
 // Live map geometry from the current grid (works for painted edits too).
+// Formulas mirror data/build_map_descriptors.py exactly — the learned weights
+// in draft_ai.json were fit on those features, so the definitions must match.
 function mapDescriptors() {
-  let wall = 0, bush = 0, water = 0, cells = 0;
-  for (const row of currentMap.grid) {
+  const g = currentMap.grid, h = g.length, w = h ? g[0].length : 0;
+  let wall = 0, bush = 0, water = 0, open = 0, cells = 0;
+  for (const row of g) {
     for (const ch of row) {
+      if (ch === "=") continue;
       cells++;
       if (ch === "W" || ch === "V") water++;
-      else if (bushSet.has(ch)) bush++;
-      else if (blockMoveSet.has(ch)) wall++;
+      if (bushSet.has(ch)) bush++;
+      if (blockProjSet.has(ch)) wall++;
+      if (!blockMoveSet.has(ch) && !bushSet.has(ch) && ch !== "W" && ch !== "V") open++;
     }
   }
   cells = Math.max(cells, 1);
-  return { wallPct: wall / cells, bushPct: bush / cells, waterPct: water / cells,
-           open: 1 - (wall + bush + water) / cells };
+  // long unbroken vertical projectile paths (>=10 tiles), per column
+  let longCols = 0;
+  for (let c = 0; c < w; c++) {
+    let run = 0, best = 0;
+    for (let r = 0; r < h; r++) {
+      const ch = g[r][c];
+      if (ch !== "=" && !blockProjSet.has(ch)) { run++; best = Math.max(best, run); }
+      else run = 0;
+    }
+    if (best >= 10) longCols++;
+  }
+  // mid-band walkable segments: chokes (width<=3) + average lane width
+  let chokes = 0; const widths = [];
+  for (let r = Math.floor(h / 3); r < Math.floor(2 * h / 3); r++) {
+    let width = 0;
+    for (let c = 0; c <= w; c++) {
+      const ch = c < w ? g[r][c] : null;
+      const walkable = ch !== null && ch !== "=" && !blockMoveSet.has(ch);
+      if (walkable) width++;
+      else if (width) { widths.push(width); if (width <= 3) chokes++; width = 0; }
+    }
+  }
+  const rowsScanned = Math.max(1, Math.floor(2 * h / 3) - Math.floor(h / 3));
+  const avgLaneW = widths.length ? widths.reduce((a, b) => a + b, 0) / widths.length : 0;
+  // 7x7 center openness / cover
+  const cr = Math.floor(h / 2), cc = Math.floor(w / 2);
+  let cN = 0, cOpen = 0;
+  for (let r = cr - 3; r <= cr + 3; r++) for (let c = cc - 3; c <= cc + 3; c++) {
+    if (r < 0 || r >= h || c < 0 || c >= w || g[r][c] === "=") continue;
+    cN++;
+    if (!blockMoveSet.has(g[r][c])) cOpen++;
+  }
+  return {
+    wallPct: wall / cells, bushPct: bush / cells, waterPct: water / cells,
+    open: open / cells, openPct: open / cells,
+    sightlineFrac: w ? longCols / w : 0,
+    chokesPerRowN: Math.min(chokes / rowsScanned, 3) / 3,
+    avgLaneWidthN: Math.min(avgLaneW, 10) / 10,
+    midOpenness: cN ? cOpen / cN : 0,
+  };
+}
+
+// ---- learned-model + stats helpers (draft_ai.json) ----
+const AI = draftAiDoc && draftAiDoc.weights ? draftAiDoc : null;
+const normKey = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+const MODE_FAM = { Gemgrab: "Gemgrab", Wanted: "Wanted", Bankheist: "Bankheist",
+  BrawlBallV2: "Ball", Laserball: "Ball", AirHockey: "Ball",
+  KingOfHill: "KingOfHill", Knockout: "Knockout" };
+
+// Stats context for the loaded map: exact map cell if our pro/ladder tables
+// know it, mode-level aggregate as fallback (custom painted maps land here).
+// Stats are keyed by INTERNAL grid name, so seasonal reskins share their
+// grid's stats and the lookup never depends on display-name spelling.
+function draftStatsCtx() {
+  if (!AI || !currentMap) return null;
+  const fam = MODE_FAM[currentMap.mode];
+  if (!fam) return null;
+  const map = AI.stats[`${fam}|${currentMap.name}`] || null;
+  return { fam, map, mode: AI.modeStats[fam] || null };
+}
+
+// Per-attribute contribution of the learned model for one candidate on the
+// current map. Returns named groups so each becomes an honest term chip.
+function learnedFit(name, desc, fam) {
+  const a = AI.attrs[name];
+  if (!a) return null;
+  const groups = [];
+  for (const an of AI.attrNames) {
+    const av = a[an];
+    if (!av) continue;
+    let v = AI.weights[an] || 0;
+    const parts = [];
+    for (const gn of AI.geoNames) {
+      const wk = AI.weights[`${an}*${gn}`] || 0;
+      const fv = desc[gn] ?? 0;
+      if (wk && fv) { v += wk * fv; parts.push(`${gn} ${wk * fv >= 0 ? "+" : ""}${(wk * fv).toFixed(2)}`); }
+    }
+    const wm = AI.weights[`${an}@${fam}`] || 0;
+    if (wm) { v += wm; parts.push(`${fam} ${wm >= 0 ? "+" : ""}${wm.toFixed(2)}`); }
+    groups.push({ attr: an, v: av * v, why: parts.join(", ") });
+  }
+  groups.sort((x, y) => Math.abs(y.v) - Math.abs(x.v));
+  return groups;
+}
+
+// Candidate pool = pro-picked/banned on this map (or mode) ∪ ladder-popular.
+// Anything else is off-meta: still scoreable, but tagged and de-prioritized.
+function draftPool(st) {
+  if (!st) return null;
+  const pool = new Set();
+  const src = st.map && st.map.proGames >= 4 ? st.map : null;
+  if (src) for (const n in src.pro) pool.add(n);
+  if (st.mode) for (const n in st.mode.pro) pool.add(n);
+  const lad = (st.map && st.map.ladder) || {};
+  for (const n in lad) if (lad[n][2] >= 0.004) pool.add(n);   // useRate floor
+  if (st.mode) for (const n in st.mode.ladder) if (st.mode.ladder[n][1] >= 5000) pool.add(n);
+  return pool.size >= 20 ? pool : null;  // too thin to constrain honestly
 }
 
 const fmtV = (v) => (v >= 0 ? "+" : "") + (Math.round(v * 100) / 100);
 
 // Score one candidate. side = team the pick is FOR; for bans, side = the
 // banning team and the score measures threat against them.
-function scoreCandidate(name, side, phase, desc) {
+const GEO_LABEL = { thrower: "thrower", sniper: "sniper", shortRange: "close range",
+  tank: "tank", fast: "speedster", rangeN: "range", hpN: "bulk", speedN: "mobility", melee: "melee" };
+
+function scoreCandidate(name, side, phase, desc, st) {
   const a = ATTRS.get(name) || {};
   const mode = currentMap.mode || "";
   const terms = [];
-  const mf = a.cls ? ((MODE_FIT[mode] || {})[a.cls] || 0) : 0;
-  if (mf) terms.push({ t: `${a.cls} in mode`, v: mf, conf: "rule" });
-  if (a.thrower) {
-    const v = 2.6 * desc.wallPct + 0.8 * desc.bushPct - 0.45;
-    terms.push({ t: "thrower × walls", v, conf: "rule" });
+  const fam = st && st.fam;
+  if (AI && fam && AI.attrs[name]) {
+    // learned attribute×geometry×mode fit — replaces the v0 hand-tuned rules.
+    // Scaled 0.5× from z-units so stats/pro/counter chips stay comparable.
+    const FIT_SCALE = 0.5;
+    const groups = learnedFit(name, desc, fam);
+    let rest = 0;
+    groups.forEach((gr, i) => {
+      const v = gr.v * FIT_SCALE;
+      if (i < 2 && Math.abs(v) >= 0.06) {
+        terms.push({ t: `${GEO_LABEL[gr.attr] || gr.attr} fit`, v, conf: "fit", why: gr.why });
+      } else rest += v;
+    });
+    if (Math.abs(rest) >= 0.05) terms.push({ t: "map fit (other)", v: rest, conf: "fit" });
+  } else {
+    // v0 fallback: hand-tuned heuristics (draft_ai.json absent or unknown brawler)
+    const mf = a.cls ? ((MODE_FIT[mode] || {})[a.cls] || 0) : 0;
+    if (mf) terms.push({ t: `${a.cls} in mode`, v: mf, conf: "rule" });
+    if (a.thrower) terms.push({ t: "thrower × walls", v: 2.6 * desc.wallPct + 0.8 * desc.bushPct - 0.45, conf: "rule" });
+    if (a.sniper) terms.push({ t: "sniper × open lanes", v: 2.0 * desc.open - 1.35, conf: "rule" });
+    if (a.tank || a.shortRange) terms.push({ t: "close range × cover", v: 2.0 * desc.bushPct + 1.2 * desc.wallPct - 0.35, conf: "rule" });
   }
-  if (a.sniper) {
-    const v = 2.0 * desc.open - 1.35;
-    terms.push({ t: "sniper × open lanes", v, conf: "rule" });
-  }
-  if (a.tank || a.shortRange) {
-    const v = 2.0 * desc.bushPct + 1.2 * desc.wallPct - 0.35;
-    terms.push({ t: "close range × cover", v, conf: "rule" });
+  // objective stats terms: ranked win rate on this exact map, else mode-level
+  if (st) {
+    // Win rates shown as DELTA vs the map/mode average — brawltime's tracked
+    // population wins ~69% overall, so raw percentages would mislead.
+    const mLad = st.map && st.map.ladder[name];
+    if (mLad) {
+      const d = mLad[0] - (st.map.wrMean ?? 0.5);
+      terms.push({ t: `${d >= 0 ? "+" : ""}${(d * 100).toFixed(0)}% WR vs avg here`, v: d * 8,
+        conf: "stats", why: `${(mLad[0] * 100).toFixed(0)}% raw over ${mLad[1].toLocaleString()} ranked picks this patch (population skews strong)` });
+    } else if (st.mode && st.mode.ladder[name]) {
+      const [wr, n] = st.mode.ladder[name];
+      const d = wr - (st.mode.wrMean ?? 0.5);
+      terms.push({ t: `${d >= 0 ? "+" : ""}${(d * 100).toFixed(0)}% WR in mode`, v: d * 4,
+        conf: "stats", why: `${(wr * 100).toFixed(0)}% raw over ${n.toLocaleString()} ranked picks across ${st.fam} maps` });
+    }
+    // pro draft presence: gold signal, map-level when we have enough games
+    const pSrc = st.map && st.map.proGames >= 4 ? st.map : null;
+    const pRec = pSrc && pSrc.pro[name];
+    if (pRec) {
+      const [p, b] = pRec, g = pSrc.proGames, pres = (p + b) / g;
+      terms.push({ t: `pro: ${p}× picked, ${b}× banned`, v: pres * 1.4,
+        conf: "pro", why: `${g} pro games on this map (Liquipedia)` });
+    } else if (st.mode && st.mode.pro[name] && st.mode.proGames) {
+      const [p, b] = st.mode.pro[name], g = st.mode.proGames, pres = (p + b) / g;
+      if (pres >= 0.02) terms.push({ t: `pro-played in ${st.fam}`, v: pres * 0.8,
+        conf: "pro", why: `${p}× picked, ${b}× banned over ${g} pro games in this mode` });
+    }
   }
   const enemy = side === "blue" ? "red" : "blue";
   if (phase === "pick") {
@@ -3129,6 +3273,19 @@ function scoreCandidate(name, side, phase, desc) {
     }
   } else {
     // Ban: how much would this candidate hurt US if the enemy gets it.
+    // Pro ban rate is the gold ban signal (it's what pros actually remove).
+    if (st) {
+      const pSrc = st.map && st.map.proGames >= 4 ? st.map : null;
+      const bRec = pSrc && pSrc.pro[name];
+      if (bRec && bRec[1]) {
+        terms.push({ t: `pro-banned ${bRec[1]}×/${pSrc.proGames}g here`, v: (bRec[1] / pSrc.proGames) * 2.5,
+          conf: "pro", why: "ban rate in pro games on this exact map (Liquipedia)" });
+      } else if (st.mode && st.mode.pro[name] && st.mode.proGames) {
+        const bn = st.mode.pro[name][1], g = st.mode.proGames;
+        if (bn / g >= 0.01) terms.push({ t: `pro ban target in ${st.fam}`, v: (bn / g) * 1.5,
+          conf: "pro", why: `banned ${bn}× over ${g} pro games in this mode` });
+      }
+    }
     for (const us of draft.picks[side]) {
       const beats = edgeIdx.get(`${us}|${name}`);
       if (beats) terms.push({ t: `threatens ${us}`, v: beats.v, conf: beats.conf, why: beats.reason });
@@ -3165,10 +3322,15 @@ function renderDraft() {
   if (!host || !currentMap) return;
   const desc = mapDescriptors();
   const turn = draftTurn();
+  const st = draftStatsCtx();
+  const statsLine = !st ? "no stats for this mode — geometry only"
+    : st.map ? `pro ${st.map.proGames}g on this map · ranked stats ✓ · model ✓`
+    : `custom/unseen map — mode-level stats + live geometry model`;
   document.getElementById("draftMapLine").innerHTML =
     `<b>${mapLabel(currentMap.name)}</b> · ${currentMap.mode}<br>` +
     `walls ${(desc.wallPct*100).toFixed(0)}% · bushes ${(desc.bushPct*100).toFixed(0)}% · ` +
-    `water ${(desc.waterPct*100).toFixed(0)}% · open ${(desc.open*100).toFixed(0)}%`;
+    `water ${(desc.waterPct*100).toFixed(0)}% · open ${(desc.open*100).toFixed(0)}%<br>` +
+    `<span style="color:#8aa">${statsLine}</span>`;
   document.getElementById("draftFirstPick").textContent =
     `First pick: ${draft.firstPick === "blue" ? "Blue" : "Red"}`;
 
@@ -3223,15 +3385,35 @@ function renderDraft() {
   }
   const taken = draftTaken();
   const filter = (document.getElementById("draftFilter").value || "").trim().toLowerCase();
+  // Candidate pool: pro-picked/banned ∪ ladder-popular (anti-hallucination).
+  // Off-pool brawlers stay searchable and listed below a divider, tagged.
+  const pool = draftPool(st);
   let scored = brawlers
     .filter(b => !taken.has(b.name))
     .filter(b => !filter || b.name.toLowerCase().includes(filter))
-    .map(b => scoreCandidate(b.name, turn.team, turn.phase, desc))
-    .sort((x, y) => y.total - x.total);
-  if (!filter) scored = scored.slice(0, 8);
+    .map(b => {
+      const s = scoreCandidate(b.name, turn.team, turn.phase, desc, st);
+      s.offMeta = !!(pool && !pool.has(b.name));
+      return s;
+    })
+    .sort((x, y) => (x.offMeta - y.offMeta) || (y.total - x.total));
+  if (!filter) {
+    const inPool = scored.filter(s => !s.offMeta).slice(0, 8);
+    const off = scored.filter(s => s.offMeta).slice(0, 2);
+    scored = inPool.concat(off);
+  }
+  let dividerDone = false;
   for (const s of scored.slice(0, 20)) {
+    if (s.offMeta && !dividerDone) {
+      dividerDone = true;
+      const div = document.createElement("div");
+      div.style.cssText = "font-size:10px;color:#789;text-align:center;margin:6px 0 2px;letter-spacing:.06em";
+      div.textContent = "— off-meta (not in pro/ladder pool) —";
+      host.appendChild(div);
+    }
     const row = document.createElement("div");
     row.className = "sugg";
+    if (s.offMeta) row.style.opacity = "0.6";
     const img = document.createElement("img");
     img.src = portraitUrlFor(s.name); img.alt = s.name;
     row.appendChild(img);
