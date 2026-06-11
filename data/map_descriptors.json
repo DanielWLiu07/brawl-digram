@@ -1,0 +1,7729 @@
+{
+ "Wanted_1": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0779,
+  "bushPct": 0.2136,
+  "waterPct": 0.0,
+  "openPct": 0.7085,
+  "breakablePct": 0.0433,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 7.14,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Wanted",
+  "displayNames": [
+   "Temple Ruins"
+  ]
+ },
+ "Wanted_2": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0924,
+  "bushPct": 0.4488,
+  "waterPct": 0.0,
+  "openPct": 0.4589,
+  "breakablePct": 0.0924,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 6.72,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Wanted",
+  "displayNames": [
+   "Outlaw Camp"
+  ]
+ },
+ "Wanted_3": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.075,
+  "bushPct": 0.2367,
+  "waterPct": 0.0,
+  "openPct": 0.6883,
+  "breakablePct": 0.0404,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 7.52,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Wanted",
+  "displayNames": [
+   "Gem Fort",
+   "Stone Fort",
+   "Snow Fort",
+   "Merch Fort"
+  ]
+ },
+ "Gemgrab_1": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1241,
+  "bushPct": 0.1991,
+  "waterPct": 0.0,
+  "openPct": 0.6768,
+  "breakablePct": 0.1097,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 9.17,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Hard Rock Mine",
+   "Ice Block Rock"
+  ]
+ },
+ "Gemgrab_2": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0693,
+  "bushPct": 0.1818,
+  "waterPct": 0.0,
+  "openPct": 0.7489,
+  "breakablePct": 0.0606,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 8.36,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Crystal Arcade",
+   "Crystal Clearing"
+  ]
+ },
+ "Gemgrab_3": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0837,
+  "bushPct": 0.1876,
+  "waterPct": 0.0,
+  "openPct": 0.7287,
+  "breakablePct": 0.0837,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 11.0,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Deathcap Trap",
+   "Spruce Up"
+  ]
+ },
+ "Bankheist_1": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0823,
+  "bushPct": 0.1039,
+  "waterPct": 0.0693,
+  "openPct": 0.7446,
+  "breakablePct": 0.0823,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 1.45,
+  "avgLaneWidth": 7.17,
+  "midOpenness": 0.6939,
+  "midCover": 0.1429,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Bandit Stash"
+  ]
+ },
+ "Bankheist_2": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1039,
+  "bushPct": 0.1602,
+  "waterPct": 0.0462,
+  "openPct": 0.6898,
+  "breakablePct": 0.0866,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 10.41,
+  "midOpenness": 0.8367,
+  "midCover": 0.0,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Kaboom Canyon"
+  ]
+ },
+ "Bankheist_3": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0981,
+  "bushPct": 0.1328,
+  "waterPct": 0.0519,
+  "openPct": 0.7172,
+  "breakablePct": 0.075,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 8.68,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Safe Zone"
+  ]
+ },
+ "Wanted_6": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1126,
+  "bushPct": 0.7763,
+  "waterPct": 0.0,
+  "openPct": 0.1111,
+  "breakablePct": 0.1126,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.27,
+  "avgLaneWidth": 11.11,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Wanted",
+  "displayNames": [
+   "Snake Prairie"
+  ]
+ },
+ "Wanted_7": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0779,
+  "bushPct": 0.0693,
+  "waterPct": 0.026,
+  "openPct": 0.8268,
+  "breakablePct": 0.0664,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 10.37,
+  "midOpenness": 0.8367,
+  "midCover": 0.1224,
+  "mode": "Wanted",
+  "displayNames": [
+   "Shooting Star"
+  ]
+ },
+ "Gemgrab_4": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1068,
+  "bushPct": 0.1183,
+  "waterPct": 0.0,
+  "openPct": 0.7749,
+  "breakablePct": 0.1068,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 8.65,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Snowy Siege"
+  ]
+ },
+ "Gemgrab_5": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0895,
+  "bushPct": 0.2395,
+  "waterPct": 0.0,
+  "openPct": 0.671,
+  "breakablePct": 0.0895,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 7.74,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Undermine"
+  ]
+ },
+ "Wanted_8": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0693,
+  "bushPct": 0.0895,
+  "waterPct": 0.0,
+  "openPct": 0.8413,
+  "breakablePct": 0.0693,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.09,
+  "avgLaneWidth": 9.26,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Wanted",
+  "displayNames": [
+   "Hideout"
+  ]
+ },
+ "Bankheist_4": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0866,
+  "bushPct": 0.2309,
+  "waterPct": 0.0289,
+  "openPct": 0.6537,
+  "breakablePct": 0.0866,
+  "sightlineFrac": 0.5714,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 10.65,
+  "midOpenness": 0.8367,
+  "midCover": 0.0,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Gg. Mortuary"
+  ]
+ },
+ "Gemgrab_6": {
+  "width": 17,
+  "height": 33,
+  "playableTiles": 561,
+  "wallPct": 0.1176,
+  "bushPct": 0.1319,
+  "waterPct": 0.0,
+  "openPct": 0.7504,
+  "breakablePct": 0.1176,
+  "sightlineFrac": 0.7059,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 6.15,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Gemgrab",
+  "displayNames": []
+ },
+ "Laserball_1": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2453,
+  "bushPct": 0.0635,
+  "waterPct": 0.0,
+  "openPct": 0.6912,
+  "breakablePct": 0.075,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 13.8,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Backyard Bowl"
+  ]
+ },
+ "Laserball_2": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2886,
+  "bushPct": 0.0346,
+  "waterPct": 0.0,
+  "openPct": 0.6768,
+  "breakablePct": 0.1212,
+  "sightlineFrac": 0.8571,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 12.29,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Laserball",
+  "displayNames": [
+   "Triple Dribble"
+  ]
+ },
+ "Laserball_3": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2309,
+  "bushPct": 0.1328,
+  "waterPct": 0.0,
+  "openPct": 0.6364,
+  "breakablePct": 0.0491,
+  "sightlineFrac": 0.6667,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 9.95,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Pinhole Punt"
+  ]
+ },
+ "Gemgrab_8": {
+  "width": 17,
+  "height": 33,
+  "playableTiles": 561,
+  "wallPct": 0.1444,
+  "bushPct": 0.7184,
+  "waterPct": 0.0,
+  "openPct": 0.1373,
+  "breakablePct": 0.1444,
+  "sightlineFrac": 0.8235,
+  "chokesPerRow": 0.45,
+  "avgLaneWidth": 9.53,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": []
+ },
+ "Gemgrab_7": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1154,
+  "bushPct": 0.1703,
+  "waterPct": 0.0,
+  "openPct": 0.7143,
+  "breakablePct": 0.1154,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 1.82,
+  "avgLaneWidth": 5.51,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Chill Space",
+   "Holiday Chill"
+  ]
+ },
+ "Gemgrab_10": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0577,
+  "bushPct": 0.1328,
+  "waterPct": 0.0808,
+  "openPct": 0.7287,
+  "breakablePct": 0.0577,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 5.62,
+  "midOpenness": 0.9184,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Echo Chamber",
+   "Bouncing Diner"
+  ]
+ },
+ "Bankheist_5": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1212,
+  "bushPct": 0.1154,
+  "waterPct": 0.0563,
+  "openPct": 0.7071,
+  "breakablePct": 0.1212,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 8.5,
+  "midOpenness": 0.4898,
+  "midCover": 0.2041,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Fancy Fencing"
+  ]
+ },
+ "Bankheist_6": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1241,
+  "bushPct": 0.1039,
+  "waterPct": 0.0346,
+  "openPct": 0.7374,
+  "breakablePct": 0.1241,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.27,
+  "avgLaneWidth": 9.38,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Forks Out"
+  ]
+ },
+ "Gemgrab_11": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0664,
+  "bushPct": 0.228,
+  "waterPct": 0.0635,
+  "openPct": 0.6421,
+  "breakablePct": 0.0664,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 10.33,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Flooded Mine"
+  ]
+ },
+ "Bankheist_7": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0981,
+  "bushPct": 0.1674,
+  "waterPct": 0.0418,
+  "openPct": 0.6926,
+  "breakablePct": 0.0981,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 8.18,
+  "midOpenness": 0.6122,
+  "midCover": 0.0408,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Cactus Corridor"
+  ]
+ },
+ "Laserball_4": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2799,
+  "bushPct": 0.1674,
+  "waterPct": 0.0,
+  "openPct": 0.5527,
+  "breakablePct": 0.1183,
+  "sightlineFrac": 0.2381,
+  "chokesPerRow": 1.45,
+  "avgLaneWidth": 6.45,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Laserball",
+  "displayNames": [
+   "Sneaky Fields"
+  ]
+ },
+ "Laserball_6": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2655,
+  "bushPct": 0.075,
+  "waterPct": 0.0,
+  "openPct": 0.6595,
+  "breakablePct": 0.0952,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 8.44,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Laserball",
+  "displayNames": [
+   "Super Beach"
+  ]
+ },
+ "Laserball_7": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2222,
+  "bushPct": 0.1472,
+  "waterPct": 0.0981,
+  "openPct": 0.5325,
+  "breakablePct": 0.0606,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 6.17,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Laserball",
+  "displayNames": [
+   "Puddle Splash"
+  ]
+ },
+ "Bankheist_8": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1328,
+  "bushPct": 0.1833,
+  "waterPct": 0.0,
+  "openPct": 0.684,
+  "breakablePct": 0.1039,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 1.91,
+  "avgLaneWidth": 5.05,
+  "midOpenness": 0.6735,
+  "midCover": 0.3265,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Hot Potato"
+  ]
+ },
+ "Wanted_9": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0722,
+  "bushPct": 0.1587,
+  "waterPct": 0.1587,
+  "openPct": 0.6104,
+  "breakablePct": 0.0491,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 7.4,
+  "midOpenness": 0.7551,
+  "midCover": 0.0,
+  "mode": "Wanted",
+  "displayNames": [
+   "Canal Grande"
+  ]
+ },
+ "Gemgrab_9": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1385,
+  "bushPct": 0.1443,
+  "waterPct": 0.0,
+  "openPct": 0.7172,
+  "breakablePct": 0.1385,
+  "sightlineFrac": 0.619,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 12.06,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Gift Wrap"
+  ]
+ },
+ "Bankheist_9": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1068,
+  "bushPct": 0.0505,
+  "waterPct": 0.0866,
+  "openPct": 0.7561,
+  "breakablePct": 0.1068,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 11.53,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Split Second"
+  ]
+ },
+ "Bankheist_10": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1443,
+  "bushPct": 0.127,
+  "waterPct": 0.0,
+  "openPct": 0.7287,
+  "breakablePct": 0.1443,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 1.55,
+  "avgLaneWidth": 5.85,
+  "midOpenness": 0.7143,
+  "midCover": 0.2857,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Rolling Rumble"
+  ]
+ },
+ "Bankheist_11": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1039,
+  "bushPct": 0.0895,
+  "waterPct": 0.114,
+  "openPct": 0.6926,
+  "breakablePct": 0.1039,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 5.69,
+  "midOpenness": 0.3673,
+  "midCover": 0.2041,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Twist And Shoot"
+  ]
+ },
+ "Bankheist_12": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0289,
+  "bushPct": 0.1183,
+  "waterPct": 0.1818,
+  "openPct": 0.671,
+  "breakablePct": 0.0231,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 4.82,
+  "midOpenness": 0.5918,
+  "midCover": 0.2041,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Bridge Too Far"
+  ]
+ },
+ "Bankheist_13": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1126,
+  "bushPct": 0.0866,
+  "waterPct": 0.0519,
+  "openPct": 0.7489,
+  "breakablePct": 0.1126,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 3.09,
+  "avgLaneWidth": 3.34,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Bankheist",
+  "displayNames": []
+ },
+ "Wanted_10": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0693,
+  "bushPct": 0.0808,
+  "waterPct": 0.1818,
+  "openPct": 0.6681,
+  "breakablePct": 0.0693,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 9.29,
+  "midOpenness": 0.8776,
+  "midCover": 0.0,
+  "mode": "Wanted",
+  "displayNames": []
+ },
+ "Wanted_11": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1501,
+  "bushPct": 0.127,
+  "waterPct": 0.0346,
+  "openPct": 0.6883,
+  "breakablePct": 0.1501,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 2.55,
+  "avgLaneWidth": 4.79,
+  "midOpenness": 0.6735,
+  "midCover": 0.0,
+  "mode": "Wanted",
+  "displayNames": [
+   "Bull Pen"
+  ]
+ },
+ "Wanted_12": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0808,
+  "bushPct": 0.1385,
+  "waterPct": 0.0,
+  "openPct": 0.7807,
+  "breakablePct": 0.0808,
+  "sightlineFrac": 0.619,
+  "chokesPerRow": 1.36,
+  "avgLaneWidth": 9.0,
+  "midOpenness": 0.7551,
+  "midCover": 0.2449,
+  "mode": "Wanted",
+  "displayNames": [
+   "Excel"
+  ]
+ },
+ "Wanted_13": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1674,
+  "bushPct": 0.1962,
+  "waterPct": 0.0664,
+  "openPct": 0.57,
+  "breakablePct": 0.1241,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 7.32,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Wanted",
+  "displayNames": [
+   "Layer Cake"
+  ]
+ },
+ "Wanted_14": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0693,
+  "bushPct": 0.1443,
+  "waterPct": 0.0,
+  "openPct": 0.7864,
+  "breakablePct": 0.0548,
+  "sightlineFrac": 0.7619,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 14.73,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Wanted",
+  "displayNames": [
+   "Dry Season"
+  ]
+ },
+ "Laserball_8": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2251,
+  "bushPct": 0.0808,
+  "waterPct": 0.0519,
+  "openPct": 0.6421,
+  "breakablePct": 0.0635,
+  "sightlineFrac": 0.8571,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 8.65,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Laserball",
+  "displayNames": [
+   "Pool Party"
+  ]
+ },
+ "Gemgrab_4_LNY": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0952,
+  "bushPct": 0.1183,
+  "waterPct": 0.0,
+  "openPct": 0.7864,
+  "breakablePct": 0.0952,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 9.57,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Deep Diner"
+  ]
+ },
+ "Gemgrab_5_LNY": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0895,
+  "bushPct": 0.2049,
+  "waterPct": 0.0,
+  "openPct": 0.7056,
+  "breakablePct": 0.0895,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 7.74,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Gemgrab",
+  "displayNames": []
+ },
+ "Gemgrab_12": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.127,
+  "bushPct": 0.2338,
+  "waterPct": 0.0,
+  "openPct": 0.6392,
+  "breakablePct": 0.127,
+  "sightlineFrac": 0.6667,
+  "chokesPerRow": 1.82,
+  "avgLaneWidth": 6.03,
+  "midOpenness": 0.9796,
+  "midCover": 0.0204,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Diamond Dust"
+  ]
+ },
+ "Gemgrab_13": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1183,
+  "bushPct": 0.1905,
+  "waterPct": 0.0,
+  "openPct": 0.6912,
+  "breakablePct": 0.1183,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 1.27,
+  "avgLaneWidth": 6.55,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Four Squared"
+  ]
+ },
+ "Gemgrab_14": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1241,
+  "bushPct": 0.1991,
+  "waterPct": 0.0,
+  "openPct": 0.6768,
+  "breakablePct": 0.1241,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 9.17,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Gemgrab",
+  "displayNames": []
+ },
+ "Gemgrab_15": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1097,
+  "bushPct": 0.2193,
+  "waterPct": 0.0519,
+  "openPct": 0.619,
+  "breakablePct": 0.1097,
+  "sightlineFrac": 0.8571,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 9.09,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Escape Velocity"
+  ]
+ },
+ "Gemgrab_16": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0664,
+  "bushPct": 0.2569,
+  "waterPct": 0.0,
+  "openPct": 0.6768,
+  "breakablePct": 0.0606,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 11.11,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Double Swoosh"
+  ]
+ },
+ "Laserball_9": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2569,
+  "bushPct": 0.1443,
+  "waterPct": 0.0,
+  "openPct": 0.5988,
+  "breakablePct": 0.0952,
+  "sightlineFrac": 0.4286,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 9.48,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Pinball Dreams"
+  ]
+ },
+ "Gemgrab_17": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1212,
+  "bushPct": 0.2511,
+  "waterPct": 0.0,
+  "openPct": 0.6277,
+  "breakablePct": 0.1212,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 12.29,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Cell Division"
+  ]
+ },
+ "Gemgrab_18": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0895,
+  "bushPct": 0.2684,
+  "waterPct": 0.0548,
+  "openPct": 0.5873,
+  "breakablePct": 0.0895,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 8.48,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Spring Trap"
+  ]
+ },
+ "Gemgrab_19": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1039,
+  "bushPct": 0.075,
+  "waterPct": 0.0,
+  "openPct": 0.8038,
+  "breakablePct": 0.1097,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 14.07,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Minecart Madness"
+  ]
+ },
+ "Gemgrab_19_train_1": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0,
+  "bushPct": 0.0,
+  "waterPct": 0.0,
+  "openPct": 1.0,
+  "breakablePct": 0.0,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 21.0,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": []
+ },
+ "Gemgrab_19_train_0": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0,
+  "bushPct": 0.0,
+  "waterPct": 0.0,
+  "openPct": 1.0,
+  "breakablePct": 0.0,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 21.0,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": []
+ },
+ "Laserball_10": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2453,
+  "bushPct": 0.2136,
+  "waterPct": 0.0,
+  "openPct": 0.5411,
+  "breakablePct": 0.0837,
+  "sightlineFrac": 0.6667,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 9.17,
+  "midOpenness": 0.7959,
+  "midCover": 0.2041,
+  "mode": "Laserball",
+  "displayNames": [
+   "Center Stage"
+  ]
+ },
+ "Laserball_11": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2799,
+  "bushPct": 0.1356,
+  "waterPct": 0.0,
+  "openPct": 0.5844,
+  "breakablePct": 0.1183,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 1.09,
+  "avgLaneWidth": 7.07,
+  "midOpenness": 0.7551,
+  "midCover": 0.2449,
+  "mode": "Laserball",
+  "displayNames": [
+   "Curveball"
+  ]
+ },
+ "Bankheist_14": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1183,
+  "bushPct": 0.1703,
+  "waterPct": 0.0,
+  "openPct": 0.7114,
+  "breakablePct": 0.1039,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 1.45,
+  "avgLaneWidth": 6.42,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Pit Stop"
+  ]
+ },
+ "Bankheist_15": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1284,
+  "bushPct": 0.0635,
+  "waterPct": 0.0577,
+  "openPct": 0.7504,
+  "breakablePct": 0.1284,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 9.56,
+  "midOpenness": 0.9388,
+  "midCover": 0.0612,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Side Story"
+  ]
+ },
+ "Gemgrab_20": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1241,
+  "bushPct": 0.0462,
+  "waterPct": 0.0519,
+  "openPct": 0.7778,
+  "breakablePct": 0.1241,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 1.09,
+  "avgLaneWidth": 6.7,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Cross Cut"
+  ]
+ },
+ "Gemgrab_21": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0837,
+  "bushPct": 0.2309,
+  "waterPct": 0.127,
+  "openPct": 0.5584,
+  "breakablePct": 0.0837,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 8.13,
+  "midOpenness": 0.7959,
+  "midCover": 0.0816,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Stock Crash"
+  ]
+ },
+ "Laserball_12": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2569,
+  "bushPct": 0.1183,
+  "waterPct": 0.0,
+  "openPct": 0.6248,
+  "breakablePct": 0.0952,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 8.12,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Laserball",
+  "displayNames": [
+   "Beach Ball"
+  ]
+ },
+ "Laserball_13": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2742,
+  "bushPct": 0.1126,
+  "waterPct": 0.0,
+  "openPct": 0.6133,
+  "breakablePct": 0.1126,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 7.88,
+  "midOpenness": 0.7551,
+  "midCover": 0.2449,
+  "mode": "Laserball",
+  "displayNames": [
+   "Sunny Soccer"
+  ]
+ },
+ "Bankheist_16": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.101,
+  "bushPct": 0.2511,
+  "waterPct": 0.1847,
+  "openPct": 0.4632,
+  "breakablePct": 0.101,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 1.45,
+  "avgLaneWidth": 3.73,
+  "midOpenness": 0.6735,
+  "midCover": 0.2041,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Beachcombers"
+  ]
+ },
+ "Bankheist_17": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1544,
+  "bushPct": 0.2973,
+  "waterPct": 0.0,
+  "openPct": 0.5483,
+  "breakablePct": 0.1544,
+  "sightlineFrac": 0.6667,
+  "chokesPerRow": 1.45,
+  "avgLaneWidth": 5.94,
+  "midOpenness": 0.7755,
+  "midCover": 0.2245,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Twisted Gems"
+  ]
+ },
+ "Gemgrab_22": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0981,
+  "bushPct": 0.127,
+  "waterPct": 0.0404,
+  "openPct": 0.7345,
+  "breakablePct": 0.0981,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 8.91,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Acute Angle"
+  ]
+ },
+ "Gemgrab_23": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1587,
+  "bushPct": 0.1501,
+  "waterPct": 0.0173,
+  "openPct": 0.6739,
+  "breakablePct": 0.1587,
+  "sightlineFrac": 0.619,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 6.1,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Snake Shop"
+  ]
+ },
+ "Wanted_15": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1299,
+  "bushPct": 0.2078,
+  "waterPct": 0.0,
+  "openPct": 0.6623,
+  "breakablePct": 0.1299,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 1.64,
+  "avgLaneWidth": 6.66,
+  "midOpenness": 0.7551,
+  "midCover": 0.2449,
+  "mode": "Wanted",
+  "displayNames": [
+   "Sunstroke"
+  ]
+ },
+ "Wanted_16": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1039,
+  "bushPct": 0.176,
+  "waterPct": 0.0,
+  "openPct": 0.7201,
+  "breakablePct": 0.1039,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 9.38,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Wanted",
+  "displayNames": [
+   "Burning Sands"
+  ]
+ },
+ "Bankheist_18": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1356,
+  "bushPct": 0.1443,
+  "waterPct": 0.0,
+  "openPct": 0.7201,
+  "breakablePct": 0.1356,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 12.87,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Figure 8"
+  ]
+ },
+ "Gemgrab_24": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0952,
+  "bushPct": 0.1962,
+  "waterPct": 0.0,
+  "openPct": 0.7085,
+  "breakablePct": 0.0952,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 9.95,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Royal Flush"
+  ]
+ },
+ "Wanted_17": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1039,
+  "bushPct": 0.1991,
+  "waterPct": 0.0635,
+  "openPct": 0.6335,
+  "breakablePct": 0.1039,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 1.09,
+  "avgLaneWidth": 6.23,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Wanted",
+  "displayNames": [
+   "Overgrown Canyon"
+  ]
+ },
+ "Laserball_14": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2453,
+  "bushPct": 0.1154,
+  "waterPct": 0.0,
+  "openPct": 0.6392,
+  "breakablePct": 0.0491,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 1.09,
+  "avgLaneWidth": 7.67,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Field Goal"
+  ]
+ },
+ "Laserball_15": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2338,
+  "bushPct": 0.1212,
+  "waterPct": 0.0,
+  "openPct": 0.645,
+  "breakablePct": 0.0722,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.82,
+  "avgLaneWidth": 8.44,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Laserball",
+  "displayNames": [
+   "Post Haste"
+  ]
+ },
+ "Laserball_16": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2424,
+  "bushPct": 0.0952,
+  "waterPct": 0.0,
+  "openPct": 0.6623,
+  "breakablePct": 0.0808,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 12.53,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Slalom Slam"
+  ]
+ },
+ "Laserball_17": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2511,
+  "bushPct": 0.3088,
+  "waterPct": 0.0,
+  "openPct": 0.4401,
+  "breakablePct": 0.0895,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 12.41,
+  "midOpenness": 0.7959,
+  "midCover": 0.2041,
+  "mode": "Laserball",
+  "displayNames": [
+   "Coarse Course"
+  ]
+ },
+ "Laserball_18": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2655,
+  "bushPct": 0.1068,
+  "waterPct": 0.0,
+  "openPct": 0.6277,
+  "breakablePct": 0.1039,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 1.64,
+  "avgLaneWidth": 6.79,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Power Shot"
+  ]
+ },
+ "Gemgrab_25": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1501,
+  "bushPct": 0.1905,
+  "waterPct": 0.0,
+  "openPct": 0.6595,
+  "breakablePct": 0.1501,
+  "sightlineFrac": 0.6667,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 7.48,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Time Out"
+  ]
+ },
+ "Gemgrab_26": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1616,
+  "bushPct": 0.2049,
+  "waterPct": 0.0,
+  "openPct": 0.6335,
+  "breakablePct": 0.1616,
+  "sightlineFrac": 0.6667,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 8.04,
+  "midOpenness": 0.7959,
+  "midCover": 0.2041,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Swirling Storm"
+  ]
+ },
+ "Gemgrab_27": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1356,
+  "bushPct": 0.1789,
+  "waterPct": 0.0346,
+  "openPct": 0.6508,
+  "breakablePct": 0.1356,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 8.22,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Excellent Escapade"
+  ]
+ },
+ "Gemgrab_28": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1674,
+  "bushPct": 0.1385,
+  "waterPct": 0.0,
+  "openPct": 0.6941,
+  "breakablePct": 0.1674,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 8.3,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Spare Space"
+  ]
+ },
+ "Gemgrab_29": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1789,
+  "bushPct": 0.1703,
+  "waterPct": 0.0,
+  "openPct": 0.6508,
+  "breakablePct": 0.1789,
+  "sightlineFrac": 0.619,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 8.04,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Shabby Shells"
+  ]
+ },
+ "Gemgrab_30": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1212,
+  "bushPct": 0.1876,
+  "waterPct": 0.0173,
+  "openPct": 0.6739,
+  "breakablePct": 0.1212,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 1.27,
+  "avgLaneWidth": 6.59,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Secret Surprise"
+  ]
+ },
+ "Gemgrab_31": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.153,
+  "bushPct": 0.2828,
+  "waterPct": 0.0,
+  "openPct": 0.5642,
+  "breakablePct": 0.153,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 9.38,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Green Deck"
+  ]
+ },
+ "Bankheist_19": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1154,
+  "bushPct": 0.2554,
+  "waterPct": 0.0,
+  "openPct": 0.6291,
+  "breakablePct": 0.1154,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 6.72,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Bandit Cove"
+  ]
+ },
+ "Bankheist_20": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1328,
+  "bushPct": 0.2395,
+  "waterPct": 0.0231,
+  "openPct": 0.6046,
+  "breakablePct": 0.1328,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 10.68,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Tornado Ring"
+  ]
+ },
+ "Wanted_18": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1126,
+  "bushPct": 0.2742,
+  "waterPct": 0.0,
+  "openPct": 0.6133,
+  "breakablePct": 0.1126,
+  "sightlineFrac": 0.9524,
+  "chokesPerRow": 1.18,
+  "avgLaneWidth": 6.1,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Wanted",
+  "displayNames": [
+   "Deeper Danger"
+  ]
+ },
+ "Wanted_19": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1212,
+  "bushPct": 0.2424,
+  "waterPct": 0.1039,
+  "openPct": 0.5325,
+  "breakablePct": 0.1212,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 7.0,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Wanted",
+  "displayNames": [
+   "Land Ahoy"
+  ]
+ },
+ "Laserball_19": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2713,
+  "bushPct": 0.0519,
+  "waterPct": 0.0,
+  "openPct": 0.6768,
+  "breakablePct": 0.1097,
+  "sightlineFrac": 0.5714,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 7.8,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Laserball",
+  "displayNames": [
+   "Bank Shot"
+  ]
+ },
+ "Laserball_20": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.3203,
+  "bushPct": 0.0779,
+  "waterPct": 0.0,
+  "openPct": 0.6017,
+  "breakablePct": 0.1587,
+  "sightlineFrac": 0.1905,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 8.14,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Playbox"
+  ]
+ },
+ "Laserball_21": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.3059,
+  "bushPct": 0.127,
+  "waterPct": 0.0,
+  "openPct": 0.5671,
+  "breakablePct": 0.1443,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 13.93,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Laserball",
+  "displayNames": [
+   "Penalty Kick"
+  ]
+ },
+ "Laserball_22": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.3232,
+  "bushPct": 0.127,
+  "waterPct": 0.0,
+  "openPct": 0.5498,
+  "breakablePct": 0.1616,
+  "sightlineFrac": 0.381,
+  "chokesPerRow": 2.0,
+  "avgLaneWidth": 5.23,
+  "midOpenness": 0.7551,
+  "midCover": 0.2449,
+  "mode": "Laserball",
+  "displayNames": [
+   "Substitute"
+  ]
+ },
+ "Laserball_23": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2944,
+  "bushPct": 0.0433,
+  "waterPct": 0.0,
+  "openPct": 0.6623,
+  "breakablePct": 0.1328,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 6.93,
+  "midOpenness": 0.7551,
+  "midCover": 0.2449,
+  "mode": "Laserball",
+  "displayNames": [
+   "Happy Feet"
+  ]
+ },
+ "Laserball_24": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.3636,
+  "bushPct": 0.0635,
+  "waterPct": 0.0,
+  "openPct": 0.5729,
+  "breakablePct": 0.202,
+  "sightlineFrac": 0.5238,
+  "chokesPerRow": 1.27,
+  "avgLaneWidth": 5.55,
+  "midOpenness": 0.6735,
+  "midCover": 0.3265,
+  "mode": "Laserball",
+  "displayNames": [
+   "Square Off"
+  ]
+ },
+ "Laserball_25": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.4156,
+  "bushPct": 0.0895,
+  "waterPct": 0.0,
+  "openPct": 0.4949,
+  "breakablePct": 0.254,
+  "sightlineFrac": 0.2857,
+  "chokesPerRow": 1.45,
+  "avgLaneWidth": 5.35,
+  "midOpenness": 0.3878,
+  "midCover": 0.6122,
+  "mode": "Laserball",
+  "displayNames": [
+   "Barrel Vault"
+  ]
+ },
+ "KingOfHill_1": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.101,
+  "bushPct": 0.0519,
+  "waterPct": 0.0577,
+  "openPct": 0.7691,
+  "breakablePct": 0.1212,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 10.89,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Quarter Pounder"
+  ]
+ },
+ "KingOfHill_2": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0476,
+  "bushPct": 0.0202,
+  "waterPct": 0.039,
+  "openPct": 0.8341,
+  "breakablePct": 0.1068,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 1.18,
+  "avgLaneWidth": 5.93,
+  "midOpenness": 0.5714,
+  "midCover": 0.0612,
+  "mode": "KingOfHill",
+  "displayNames": []
+ },
+ "KingOfHill_3": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0952,
+  "bushPct": 0.127,
+  "waterPct": 0.0346,
+  "openPct": 0.7431,
+  "breakablePct": 0.0952,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 12.6,
+  "midOpenness": 0.551,
+  "midCover": 0.2041,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Temple Of Boom"
+  ]
+ },
+ "KingOfHill_4": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1313,
+  "bushPct": 0.1097,
+  "waterPct": 0.0577,
+  "openPct": 0.7013,
+  "breakablePct": 0.1313,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 7.42,
+  "midOpenness": 0.449,
+  "midCover": 0.3469,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Breakout Brawl"
+  ]
+ },
+ "KingOfHill_5": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1385,
+  "bushPct": 0.2222,
+  "waterPct": 0.0289,
+  "openPct": 0.6104,
+  "breakablePct": 0.1385,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 9.74,
+  "midOpenness": 0.7959,
+  "midCover": 0.2041,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Controller Chaos"
+  ]
+ },
+ "KingOfHill_6": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1414,
+  "bushPct": 0.1645,
+  "waterPct": 0.0231,
+  "openPct": 0.671,
+  "breakablePct": 0.1414,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 7.48,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Golden Hacks"
+  ]
+ },
+ "KingOfHill_7": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1183,
+  "bushPct": 0.189,
+  "waterPct": 0.0,
+  "openPct": 0.6926,
+  "breakablePct": 0.1183,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 8.36,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Street Brawler 2"
+  ]
+ },
+ "Laserball_26": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2655,
+  "bushPct": 0.1934,
+  "waterPct": 0.0,
+  "openPct": 0.5411,
+  "breakablePct": 0.1039,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 8.12,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Laserball",
+  "displayNames": [
+   "Galaxy Arena"
+  ]
+ },
+ "Laserball_27": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2944,
+  "bushPct": 0.1039,
+  "waterPct": 0.0,
+  "openPct": 0.6017,
+  "breakablePct": 0.1328,
+  "sightlineFrac": 0.619,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 13.67,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Laserball",
+  "displayNames": [
+   "Shoulder Bash"
+  ]
+ },
+ "Laserball_28": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2799,
+  "bushPct": 0.1068,
+  "waterPct": 0.0,
+  "openPct": 0.6133,
+  "breakablePct": 0.1183,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 1.27,
+  "avgLaneWidth": 6.29,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Laserball",
+  "displayNames": [
+   "Well Cut"
+  ]
+ },
+ "Laserball_29": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2771,
+  "bushPct": 0.1501,
+  "waterPct": 0.0,
+  "openPct": 0.5729,
+  "breakablePct": 0.1154,
+  "sightlineFrac": 0.381,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 8.74,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Laserball",
+  "displayNames": [
+   "Center Field"
+  ]
+ },
+ "Laserball_30": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2626,
+  "bushPct": 0.1876,
+  "waterPct": 0.0,
+  "openPct": 0.5498,
+  "breakablePct": 0.101,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 11.0,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Laserball",
+  "displayNames": [
+   "Warped Beach"
+  ]
+ },
+ "Wanted_27": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1154,
+  "bushPct": 0.2309,
+  "waterPct": 0.0,
+  "openPct": 0.6537,
+  "breakablePct": 0.1154,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 1.45,
+  "avgLaneWidth": 8.04,
+  "midOpenness": 0.7551,
+  "midCover": 0.2449,
+  "mode": "Wanted",
+  "displayNames": [
+   "Heat Wave"
+  ]
+ },
+ "Wanted_28": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1154,
+  "bushPct": 0.3059,
+  "waterPct": 0.0,
+  "openPct": 0.5786,
+  "breakablePct": 0.1154,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 10.47,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Wanted",
+  "displayNames": [
+   "Cobweb"
+  ]
+ },
+ "Bankheist_27": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1414,
+  "bushPct": 0.1212,
+  "waterPct": 0.0,
+  "openPct": 0.7374,
+  "breakablePct": 0.1414,
+  "sightlineFrac": 0.6667,
+  "chokesPerRow": 1.45,
+  "avgLaneWidth": 5.4,
+  "midOpenness": 0.7551,
+  "midCover": 0.2449,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Traffic Jam"
+  ]
+ },
+ "Bankheist_28": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1457,
+  "bushPct": 0.0808,
+  "waterPct": 0.0231,
+  "openPct": 0.7504,
+  "breakablePct": 0.1457,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 5.28,
+  "midOpenness": 0.8163,
+  "midCover": 0.1837,
+  "mode": "Bankheist",
+  "displayNames": []
+ },
+ "KingOfHill_8": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.101,
+  "bushPct": 0.0519,
+  "waterPct": 0.0577,
+  "openPct": 0.7691,
+  "breakablePct": 0.1212,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 10.89,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Snowball Fight"
+  ]
+ },
+ "KingOfHill_9": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.062,
+  "bushPct": 0.0491,
+  "waterPct": 0.0303,
+  "openPct": 0.7792,
+  "breakablePct": 0.1414,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 1.0,
+  "avgLaneWidth": 6.8,
+  "midOpenness": 0.5918,
+  "midCover": 0.0612,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Massive Attack"
+  ]
+ },
+ "KingOfHill_10": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0693,
+  "bushPct": 0.0722,
+  "waterPct": 0.1732,
+  "openPct": 0.6854,
+  "breakablePct": 0.0693,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 8.74,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Control Grande"
+  ]
+ },
+ "KingOfHill_11": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1385,
+  "bushPct": 0.1472,
+  "waterPct": 0.0,
+  "openPct": 0.7143,
+  "breakablePct": 0.1385,
+  "sightlineFrac": 0.619,
+  "chokesPerRow": 0.45,
+  "avgLaneWidth": 8.57,
+  "midOpenness": 0.6735,
+  "midCover": 0.3265,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Perimeter"
+  ]
+ },
+ "KingOfHill_12": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1039,
+  "bushPct": 0.0808,
+  "waterPct": 0.0,
+  "openPct": 0.8153,
+  "breakablePct": 0.1039,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 9.0,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Open Business"
+  ]
+ },
+ "KingOfHill_13": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1068,
+  "bushPct": 0.1558,
+  "waterPct": 0.0462,
+  "openPct": 0.6912,
+  "breakablePct": 0.0981,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 13.53,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Parallel Plays"
+  ]
+ },
+ "KingOfHill_14": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1227,
+  "bushPct": 0.1356,
+  "waterPct": 0.0,
+  "openPct": 0.7417,
+  "breakablePct": 0.1154,
+  "sightlineFrac": 0.8571,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 7.5,
+  "midOpenness": 0.4898,
+  "midCover": 0.5102,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Split"
+  ]
+ },
+ "Wanted_29": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0202,
+  "bushPct": 0.075,
+  "waterPct": 0.0,
+  "openPct": 0.9048,
+  "breakablePct": 0.0058,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 21.0,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Wanted",
+  "displayNames": [
+   "No Excuses"
+  ]
+ },
+ "Gemgrab_32": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1097,
+  "bushPct": 0.1558,
+  "waterPct": 0.0,
+  "openPct": 0.7172,
+  "breakablePct": 0.127,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 10.16,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Corner Case"
+  ]
+ },
+ "Gemgrab_33": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0808,
+  "bushPct": 0.2078,
+  "waterPct": 0.0231,
+  "openPct": 0.6768,
+  "breakablePct": 0.0924,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 9.95,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Hop Skip And Jump"
+  ]
+ },
+ "Gemgrab_34": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1212,
+  "bushPct": 0.202,
+  "waterPct": 0.0404,
+  "openPct": 0.6364,
+  "breakablePct": 0.1212,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 7.56,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Portal Overload"
+  ]
+ },
+ "KingOfHill_15": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.101,
+  "bushPct": 0.0519,
+  "waterPct": 0.0577,
+  "openPct": 0.7691,
+  "breakablePct": 0.1212,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 10.89,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "KingOfHill",
+  "displayNames": []
+ },
+ "KingOfHill_15F": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0866,
+  "bushPct": 0.1068,
+  "waterPct": 0.075,
+  "openPct": 0.7316,
+  "breakablePct": 0.0866,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 11.74,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Mosh Pit"
+  ]
+ },
+ "KingOfHill_16F": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0952,
+  "bushPct": 0.1645,
+  "waterPct": 0.0462,
+  "openPct": 0.6941,
+  "breakablePct": 0.0952,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 7.32,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Ring Of Fire"
+  ]
+ },
+ "Wanted_30": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.101,
+  "bushPct": 0.1039,
+  "waterPct": 0.0289,
+  "openPct": 0.7518,
+  "breakablePct": 0.1154,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 1.0,
+  "avgLaneWidth": 5.48,
+  "midOpenness": 0.5918,
+  "midCover": 0.0,
+  "mode": "Wanted",
+  "displayNames": [
+   "Quick Skip"
+  ]
+ },
+ "Bankheist_29": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1356,
+  "bushPct": 0.2251,
+  "waterPct": 0.0,
+  "openPct": 0.6392,
+  "breakablePct": 0.1356,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 5.11,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Turnaround"
+  ]
+ },
+ "KingOfHill_17": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1169,
+  "bushPct": 0.1356,
+  "waterPct": 0.0,
+  "openPct": 0.7374,
+  "breakablePct": 0.127,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 2.27,
+  "avgLaneWidth": 4.71,
+  "midOpenness": 0.7755,
+  "midCover": 0.0816,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Watch Out"
+  ]
+ },
+ "KingOfHill_18": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0779,
+  "bushPct": 0.2453,
+  "waterPct": 0.0635,
+  "openPct": 0.6133,
+  "breakablePct": 0.0779,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 7.52,
+  "midOpenness": 0.6735,
+  "midCover": 0.1224,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Sizzling Surprise"
+  ]
+ },
+ "KingOfHill_20F": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0895,
+  "bushPct": 0.0779,
+  "waterPct": 0.1039,
+  "openPct": 0.7287,
+  "breakablePct": 0.0606,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 1.27,
+  "avgLaneWidth": 6.56,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Dueling Beetles"
+  ]
+ },
+ "Gemgrab_35": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1674,
+  "bushPct": 0.1356,
+  "waterPct": 0.1212,
+  "openPct": 0.5758,
+  "breakablePct": 0.1674,
+  "sightlineFrac": 0.9524,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 6.28,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Flooded Dam"
+  ]
+ },
+ "Laserball_31": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2684,
+  "bushPct": 0.0981,
+  "waterPct": 0.0,
+  "openPct": 0.6335,
+  "breakablePct": 0.1068,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 10.47,
+  "midOpenness": 0.7551,
+  "midCover": 0.2449,
+  "mode": "Laserball",
+  "displayNames": [
+   "Encirclement"
+  ]
+ },
+ "Laserball_32": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2886,
+  "bushPct": 0.2395,
+  "waterPct": 0.0,
+  "openPct": 0.4719,
+  "breakablePct": 0.127,
+  "sightlineFrac": 0.6667,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 16.08,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Winter Party"
+  ]
+ },
+ "Laserball_33": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2482,
+  "bushPct": 0.1414,
+  "waterPct": 0.0,
+  "openPct": 0.6104,
+  "breakablePct": 0.0866,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 11.11,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Jumping Beans"
+  ]
+ },
+ "Laserball_34": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2799,
+  "bushPct": 0.0462,
+  "waterPct": 0.0,
+  "openPct": 0.6739,
+  "breakablePct": 0.1183,
+  "sightlineFrac": 0.4286,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 11.94,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Laserball",
+  "displayNames": [
+   "Fast Fork"
+  ]
+ },
+ "Wanted_20": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1558,
+  "bushPct": 0.1183,
+  "waterPct": 0.0,
+  "openPct": 0.7258,
+  "breakablePct": 0.1558,
+  "sightlineFrac": 0.619,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 12.18,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Wanted",
+  "displayNames": [
+   "Open Plaza"
+  ]
+ },
+ "Bankheist_21": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1515,
+  "bushPct": 0.2251,
+  "waterPct": 0.0,
+  "openPct": 0.6234,
+  "breakablePct": 0.1515,
+  "sightlineFrac": 0.619,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 7.83,
+  "midOpenness": 0.9796,
+  "midCover": 0.0204,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Central Traffic"
+  ]
+ },
+ "Bankheist_22": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1154,
+  "bushPct": 0.1934,
+  "waterPct": 0.0519,
+  "openPct": 0.6392,
+  "breakablePct": 0.1154,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 8.13,
+  "midOpenness": 0.7959,
+  "midCover": 0.1633,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Snaked Assault"
+  ]
+ },
+ "KingOfHill_21": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1227,
+  "bushPct": 0.1154,
+  "waterPct": 0.0,
+  "openPct": 0.733,
+  "breakablePct": 0.1515,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 9.4,
+  "midOpenness": 0.898,
+  "midCover": 0.102,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Conveyor Clash"
+  ]
+ },
+ "Gemgrab_36": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0519,
+  "bushPct": 0.0722,
+  "waterPct": 0.0087,
+  "openPct": 0.8672,
+  "breakablePct": 0.026,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 12.88,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Rustic Arcade"
+  ]
+ },
+ "Gemgrab_37": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0866,
+  "bushPct": 0.1356,
+  "waterPct": 0.0,
+  "openPct": 0.7662,
+  "breakablePct": 0.0981,
+  "sightlineFrac": 0.8571,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 8.28,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Arene En Folie"
+  ]
+ },
+ "Gemgrab_38": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0952,
+  "bushPct": 0.1674,
+  "waterPct": 0.0,
+  "openPct": 0.7143,
+  "breakablePct": 0.1183,
+  "sightlineFrac": 0.7619,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 9.0,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Red Herring"
+  ]
+ },
+ "KingOfHill_22": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0693,
+  "bushPct": 0.1674,
+  "waterPct": 0.0,
+  "openPct": 0.7374,
+  "breakablePct": 0.0952,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 9.48,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Triumvirate"
+  ]
+ },
+ "KingOfHill_23": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1126,
+  "bushPct": 0.2136,
+  "waterPct": 0.0173,
+  "openPct": 0.6465,
+  "breakablePct": 0.1227,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 7.5,
+  "midOpenness": 0.6939,
+  "midCover": 0.2449,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Quick Travel"
+  ]
+ },
+ "KingOfHill_24": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1212,
+  "bushPct": 0.1934,
+  "waterPct": 0.0,
+  "openPct": 0.6854,
+  "breakablePct": 0.1212,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 9.67,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Magnetic Field"
+  ]
+ },
+ "Laserball_35": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2511,
+  "bushPct": 0.1962,
+  "waterPct": 0.0,
+  "openPct": 0.5527,
+  "breakablePct": 0.0895,
+  "sightlineFrac": 0.7619,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 8.28,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Laserball",
+  "displayNames": [
+   "Clean Shot"
+  ]
+ },
+ "Laserball_36": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2771,
+  "bushPct": 0.1905,
+  "waterPct": 0.0,
+  "openPct": 0.5325,
+  "breakablePct": 0.1154,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 8.74,
+  "midOpenness": 0.7551,
+  "midCover": 0.2449,
+  "mode": "Laserball",
+  "displayNames": [
+   "Boxing Day"
+  ]
+ },
+ "Knockout_1": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1501,
+  "bushPct": 0.2583,
+  "waterPct": 0.0115,
+  "openPct": 0.5801,
+  "breakablePct": 0.1501,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 1.09,
+  "avgLaneWidth": 6.42,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Knockout",
+  "displayNames": [
+   "Ends Meet"
+  ]
+ },
+ "Knockout_2": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0981,
+  "bushPct": 0.0346,
+  "waterPct": 0.0779,
+  "openPct": 0.7691,
+  "breakablePct": 0.1183,
+  "sightlineFrac": 0.8571,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 6.92,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Knockout",
+  "displayNames": [
+   "Middle Ground"
+  ]
+ },
+ "Knockout_3": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1126,
+  "bushPct": 0.1299,
+  "waterPct": 0.0346,
+  "openPct": 0.6825,
+  "breakablePct": 0.153,
+  "sightlineFrac": 0.5714,
+  "chokesPerRow": 1.09,
+  "avgLaneWidth": 7.56,
+  "midOpenness": 0.7959,
+  "midCover": 0.1633,
+  "mode": "Knockout",
+  "displayNames": []
+ },
+ "Knockout_4": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.127,
+  "bushPct": 0.1241,
+  "waterPct": 0.039,
+  "openPct": 0.6696,
+  "breakablePct": 0.1674,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 2.0,
+  "avgLaneWidth": 5.6,
+  "midOpenness": 0.6939,
+  "midCover": 0.0,
+  "mode": "Knockout",
+  "displayNames": [
+   "Zip Zap"
+  ]
+ },
+ "Knockout_5": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0909,
+  "bushPct": 0.1818,
+  "waterPct": 0.0924,
+  "openPct": 0.6205,
+  "breakablePct": 0.1053,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 1.27,
+  "avgLaneWidth": 5.75,
+  "midOpenness": 0.898,
+  "midCover": 0.102,
+  "mode": "Knockout",
+  "displayNames": [
+   "Double Bluff"
+  ]
+ },
+ "Knockout_6": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1977,
+  "bushPct": 0.3434,
+  "waterPct": 0.0,
+  "openPct": 0.4589,
+  "breakablePct": 0.1977,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 1.27,
+  "avgLaneWidth": 6.14,
+  "midOpenness": 0.7755,
+  "midCover": 0.2245,
+  "mode": "Knockout",
+  "displayNames": [
+   "Snake Out"
+  ]
+ },
+ "Knockout_7": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1515,
+  "bushPct": 0.0346,
+  "waterPct": 0.0,
+  "openPct": 0.7763,
+  "breakablePct": 0.189,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 1.82,
+  "avgLaneWidth": 4.53,
+  "midOpenness": 0.6531,
+  "midCover": 0.3469,
+  "mode": "Knockout",
+  "displayNames": [
+   "Split Difference"
+  ]
+ },
+ "Knockout_8": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1154,
+  "bushPct": 0.1789,
+  "waterPct": 0.075,
+  "openPct": 0.6306,
+  "breakablePct": 0.1154,
+  "sightlineFrac": 0.8571,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 7.15,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Knockout",
+  "displayNames": [
+   "Goldarm Gulch"
+  ]
+ },
+ "Knockout_9": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1789,
+  "bushPct": 0.0606,
+  "waterPct": 0.0,
+  "openPct": 0.7605,
+  "breakablePct": 0.1645,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 7.61,
+  "midOpenness": 0.6735,
+  "midCover": 0.3265,
+  "mode": "Knockout",
+  "displayNames": [
+   "Belles Rock"
+  ]
+ },
+ "Knockout_10": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0722,
+  "bushPct": 0.3319,
+  "waterPct": 0.0779,
+  "openPct": 0.4921,
+  "breakablePct": 0.0981,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.27,
+  "avgLaneWidth": 14.27,
+  "midOpenness": 0.6735,
+  "midCover": 0.0,
+  "mode": "Knockout",
+  "displayNames": [
+   "Crimewater"
+  ]
+ },
+ "Knockout_11": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1443,
+  "bushPct": 0.0981,
+  "waterPct": 0.0303,
+  "openPct": 0.7273,
+  "breakablePct": 0.1443,
+  "sightlineFrac": 0.381,
+  "chokesPerRow": 1.45,
+  "avgLaneWidth": 5.0,
+  "midOpenness": 0.449,
+  "midCover": 0.1224,
+  "mode": "Knockout",
+  "displayNames": [
+   "Splash Out"
+  ]
+ },
+ "Knockout_12": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0433,
+  "bushPct": 0.062,
+  "waterPct": 0.1789,
+  "openPct": 0.7157,
+  "breakablePct": 0.0346,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 18.82,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Knockout",
+  "displayNames": [
+   "Deep End"
+  ]
+ },
+ "Gemgrab_39": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1097,
+  "bushPct": 0.2367,
+  "waterPct": 0.0462,
+  "openPct": 0.6075,
+  "breakablePct": 0.1097,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 8.57,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Stardust Storm"
+  ]
+ },
+ "Gemgrab_40": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1356,
+  "bushPct": 0.2482,
+  "waterPct": 0.026,
+  "openPct": 0.5902,
+  "breakablePct": 0.1356,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 9.38,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Cotton Candy Dreams"
+  ]
+ },
+ "Gemgrab_41": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0952,
+  "bushPct": 0.2136,
+  "waterPct": 0.0779,
+  "openPct": 0.6133,
+  "breakablePct": 0.0952,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 7.15,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Twisted Torpedo"
+  ]
+ },
+ "Gemgrab_42": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0895,
+  "bushPct": 0.1443,
+  "waterPct": 0.0231,
+  "openPct": 0.7431,
+  "breakablePct": 0.0895,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 7.56,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Gem Bash"
+  ]
+ },
+ "Gemgrab_43": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1183,
+  "bushPct": 0.1616,
+  "waterPct": 0.0289,
+  "openPct": 0.6912,
+  "breakablePct": 0.1183,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 10.88,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Molasses"
+  ]
+ },
+ "Gemgrab_44": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0,
+  "bushPct": 0.0,
+  "waterPct": 0.0,
+  "openPct": 1.0,
+  "breakablePct": 0.0,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 21.0,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": []
+ },
+ "Laserball_37": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2915,
+  "bushPct": 0.1328,
+  "waterPct": 0.0,
+  "openPct": 0.5758,
+  "breakablePct": 0.1299,
+  "sightlineFrac": 0.7619,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 9.48,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Side Strike"
+  ]
+ },
+ "Laserball_38": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.3059,
+  "bushPct": 0.1674,
+  "waterPct": 0.0,
+  "openPct": 0.5267,
+  "breakablePct": 0.1443,
+  "sightlineFrac": 0.8571,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 10.47,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Laserball",
+  "displayNames": [
+   "Wavedash"
+  ]
+ },
+ "Laserball_39": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2569,
+  "bushPct": 0.1616,
+  "waterPct": 0.0,
+  "openPct": 0.5815,
+  "breakablePct": 0.0952,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 8.91,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Retina"
+  ]
+ },
+ "Laserball_40": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2742,
+  "bushPct": 0.1847,
+  "waterPct": 0.0,
+  "openPct": 0.5411,
+  "breakablePct": 0.1126,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 6.79,
+  "midOpenness": 0.7959,
+  "midCover": 0.2041,
+  "mode": "Laserball",
+  "displayNames": [
+   "Turtle Shell"
+  ]
+ },
+ "Laserball_41": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2857,
+  "bushPct": 0.1962,
+  "waterPct": 0.0,
+  "openPct": 0.518,
+  "breakablePct": 0.1241,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 8.65,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Laserball",
+  "displayNames": [
+   "Sticky Notes"
+  ]
+ },
+ "Laserball_42": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1732,
+  "bushPct": 0.0,
+  "waterPct": 0.0,
+  "openPct": 0.8268,
+  "breakablePct": 0.0115,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 21.0,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": []
+ },
+ "Laserball_43": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1732,
+  "bushPct": 0.0,
+  "waterPct": 0.0,
+  "openPct": 0.8268,
+  "breakablePct": 0.0115,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 21.0,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": []
+ },
+ "Bankheist_23": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1241,
+  "bushPct": 0.2453,
+  "waterPct": 0.0,
+  "openPct": 0.6306,
+  "breakablePct": 0.1241,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 1.64,
+  "avgLaneWidth": 5.11,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Cover Crowd"
+  ]
+ },
+ "Bankheist_24": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.202,
+  "bushPct": 0.2237,
+  "waterPct": 0.0,
+  "openPct": 0.5743,
+  "breakablePct": 0.202,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 8.57,
+  "midOpenness": 0.7959,
+  "midCover": 0.2041,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Bandit Hook"
+  ]
+ },
+ "Bankheist_25": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0952,
+  "bushPct": 0.3074,
+  "waterPct": 0.0,
+  "openPct": 0.5974,
+  "breakablePct": 0.0952,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 10.05,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Spring Onions"
+  ]
+ },
+ "Bankheist_26": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0,
+  "bushPct": 0.0,
+  "waterPct": 0.0,
+  "openPct": 1.0,
+  "breakablePct": 0.0,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 21.0,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Bankheist",
+  "displayNames": []
+ },
+ "KingOfHill_25": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1385,
+  "bushPct": 0.202,
+  "waterPct": 0.0462,
+  "openPct": 0.6133,
+  "breakablePct": 0.1385,
+  "sightlineFrac": 0.7619,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 9.74,
+  "midOpenness": 0.7959,
+  "midCover": 0.2041,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Time Warp"
+  ]
+ },
+ "KingOfHill_26": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1328,
+  "bushPct": 0.1299,
+  "waterPct": 0.0,
+  "openPct": 0.7229,
+  "breakablePct": 0.1472,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 8.48,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Iron Cables"
+  ]
+ },
+ "KingOfHill_27": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.153,
+  "bushPct": 0.1659,
+  "waterPct": 0.0,
+  "openPct": 0.6667,
+  "breakablePct": 0.1674,
+  "sightlineFrac": 0.5238,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 6.79,
+  "midOpenness": 0.7143,
+  "midCover": 0.1224,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Sabotage Strip"
+  ]
+ },
+ "KingOfHill_28": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0,
+  "bushPct": 0.0,
+  "waterPct": 0.0,
+  "openPct": 1.0,
+  "breakablePct": 0.0,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 21.0,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "KingOfHill",
+  "displayNames": []
+ },
+ "Wanted_21": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1039,
+  "bushPct": 0.1934,
+  "waterPct": 0.0433,
+  "openPct": 0.6595,
+  "breakablePct": 0.1039,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 6.56,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Wanted",
+  "displayNames": [
+   "Storm Attack"
+  ]
+ },
+ "Wanted_22": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1587,
+  "bushPct": 0.2136,
+  "waterPct": 0.0,
+  "openPct": 0.6277,
+  "breakablePct": 0.1587,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 2.64,
+  "avgLaneWidth": 4.11,
+  "midOpenness": 0.6327,
+  "midCover": 0.3673,
+  "mode": "Wanted",
+  "displayNames": [
+   "Flanking Maneuver"
+  ]
+ },
+ "Knockout_13": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.127,
+  "bushPct": 0.2035,
+  "waterPct": 0.026,
+  "openPct": 0.632,
+  "breakablePct": 0.1385,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.45,
+  "avgLaneWidth": 6.93,
+  "midOpenness": 0.7959,
+  "midCover": 0.0,
+  "mode": "Knockout",
+  "displayNames": [
+   "Luis Revenge"
+  ]
+ },
+ "Knockout_14": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0866,
+  "bushPct": 0.2612,
+  "waterPct": 0.0722,
+  "openPct": 0.5801,
+  "breakablePct": 0.0866,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.27,
+  "avgLaneWidth": 8.26,
+  "midOpenness": 0.5918,
+  "midCover": 0.1633,
+  "mode": "Knockout",
+  "displayNames": []
+ },
+ "Knockout_15": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1616,
+  "bushPct": 0.1645,
+  "waterPct": 0.026,
+  "openPct": 0.6479,
+  "breakablePct": 0.153,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 9.19,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Knockout",
+  "displayNames": [
+   "Flaring Phoenix"
+  ]
+ },
+ "Bankheist_30": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2439,
+  "bushPct": 0.1558,
+  "waterPct": 0.0,
+  "openPct": 0.6003,
+  "breakablePct": 0.2439,
+  "sightlineFrac": 0.0,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 6.29,
+  "midOpenness": 0.7755,
+  "midCover": 0.2245,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Diagonal Alley"
+  ]
+ },
+ "Bankheist_31": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.14,
+  "bushPct": 0.1674,
+  "waterPct": 0.0,
+  "openPct": 0.6926,
+  "breakablePct": 0.14,
+  "sightlineFrac": 0.9524,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 10.5,
+  "midOpenness": 0.8163,
+  "midCover": 0.1837,
+  "mode": "Bankheist",
+  "displayNames": []
+ },
+ "Bankheist_32": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1833,
+  "bushPct": 0.1126,
+  "waterPct": 0.0,
+  "openPct": 0.7042,
+  "breakablePct": 0.1833,
+  "sightlineFrac": 0.8571,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 7.25,
+  "midOpenness": 0.6122,
+  "midCover": 0.3878,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Rattlesnake Ravine"
+  ]
+ },
+ "Wanted_23": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1039,
+  "bushPct": 0.1934,
+  "waterPct": 0.0,
+  "openPct": 0.7027,
+  "breakablePct": 0.1039,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 8.2,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Wanted",
+  "displayNames": [
+   "Electric Zone"
+  ]
+ },
+ "Wanted_24": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1558,
+  "bushPct": 0.3059,
+  "waterPct": 0.0,
+  "openPct": 0.5382,
+  "breakablePct": 0.1558,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 8.48,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Wanted",
+  "displayNames": [
+   "Cube Force"
+  ]
+ },
+ "Wanted_25": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1183,
+  "bushPct": 0.2078,
+  "waterPct": 0.026,
+  "openPct": 0.6479,
+  "breakablePct": 0.1183,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 11.47,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Wanted",
+  "displayNames": []
+ },
+ "KingOfHill_29": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1876,
+  "bushPct": 0.075,
+  "waterPct": 0.0,
+  "openPct": 0.7374,
+  "breakablePct": 0.1876,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 11.12,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Night At The Museum"
+  ]
+ },
+ "KingOfHill_30": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.075,
+  "bushPct": 0.2035,
+  "waterPct": 0.0115,
+  "openPct": 0.6926,
+  "breakablePct": 0.0924,
+  "sightlineFrac": 0.9524,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 9.35,
+  "midOpenness": 0.8367,
+  "midCover": 0.0408,
+  "mode": "KingOfHill",
+  "displayNames": []
+ },
+ "KingOfHill_31": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1385,
+  "bushPct": 0.1443,
+  "waterPct": 0.062,
+  "openPct": 0.6551,
+  "breakablePct": 0.1385,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 7.08,
+  "midOpenness": 0.5306,
+  "midCover": 0.0816,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Danger Zone"
+  ]
+ },
+ "Laserball_44": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2453,
+  "bushPct": 0.0924,
+  "waterPct": 0.0,
+  "openPct": 0.6623,
+  "breakablePct": 0.0837,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 9.95,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Laserball",
+  "displayNames": []
+ },
+ "Laserball_45": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2684,
+  "bushPct": 0.1876,
+  "waterPct": 0.0,
+  "openPct": 0.544,
+  "breakablePct": 0.1068,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 8.04,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Firm Grip"
+  ]
+ },
+ "Laserball_46": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2684,
+  "bushPct": 0.1299,
+  "waterPct": 0.0,
+  "openPct": 0.6017,
+  "breakablePct": 0.1068,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 1.64,
+  "avgLaneWidth": 5.38,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Laserball",
+  "displayNames": [
+   "Binary Coding"
+  ]
+ },
+ "Gemgrab_45": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1472,
+  "bushPct": 0.1299,
+  "waterPct": 0.0,
+  "openPct": 0.7229,
+  "breakablePct": 0.1472,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 1.18,
+  "avgLaneWidth": 6.21,
+  "midOpenness": 0.7959,
+  "midCover": 0.2041,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Pierced"
+  ]
+ },
+ "Gemgrab_46": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0981,
+  "bushPct": 0.1674,
+  "waterPct": 0.1068,
+  "openPct": 0.6277,
+  "breakablePct": 0.0981,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 1.27,
+  "avgLaneWidth": 6.93,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Gem Source"
+  ]
+ },
+ "Gemgrab_47": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1818,
+  "bushPct": 0.1414,
+  "waterPct": 0.0,
+  "openPct": 0.6768,
+  "breakablePct": 0.1818,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 9.38,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Gemgrab",
+  "displayNames": []
+ },
+ "Gemgrab_48": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1385,
+  "bushPct": 0.6609,
+  "waterPct": 0.1126,
+  "openPct": 0.088,
+  "breakablePct": 0.1385,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 9.19,
+  "midOpenness": 0.7959,
+  "midCover": 0.2041,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Sapphire Plains"
+  ]
+ },
+ "Gemgrab_49": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.075,
+  "bushPct": 0.1154,
+  "waterPct": 0.0722,
+  "openPct": 0.7374,
+  "breakablePct": 0.075,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 12.33,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Open Space"
+  ]
+ },
+ "Laserball_47": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2424,
+  "bushPct": 0.1154,
+  "waterPct": 0.0,
+  "openPct": 0.6421,
+  "breakablePct": 0.0808,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 9.67,
+  "midOpenness": 0.7959,
+  "midCover": 0.2041,
+  "mode": "Laserball",
+  "displayNames": [
+   "Off The Line"
+  ]
+ },
+ "Knockout_16": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1356,
+  "bushPct": 0.2424,
+  "waterPct": 0.127,
+  "openPct": 0.4949,
+  "breakablePct": 0.1356,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 9.84,
+  "midOpenness": 0.6327,
+  "midCover": 0.0816,
+  "mode": "Knockout",
+  "displayNames": [
+   "Riverside"
+  ]
+ },
+ "Knockout_17": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.127,
+  "bushPct": 0.1212,
+  "waterPct": 0.1515,
+  "openPct": 0.6003,
+  "breakablePct": 0.127,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 6.92,
+  "midOpenness": 0.5714,
+  "midCover": 0.0,
+  "mode": "Knockout",
+  "displayNames": [
+   "Flowing Springs"
+  ]
+ },
+ "KingOfHill_32": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1616,
+  "bushPct": 0.1645,
+  "waterPct": 0.0,
+  "openPct": 0.6739,
+  "breakablePct": 0.1616,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.09,
+  "avgLaneWidth": 8.48,
+  "midOpenness": 0.7959,
+  "midCover": 0.2041,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Double Sided"
+  ]
+ },
+ "Laserball_48": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2395,
+  "bushPct": 0.127,
+  "waterPct": 0.0,
+  "openPct": 0.6335,
+  "breakablePct": 0.0779,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 10.24,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Hairdryer Treatment"
+  ]
+ },
+ "Gemgrab_50": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0981,
+  "bushPct": 0.1212,
+  "waterPct": 0.0,
+  "openPct": 0.7807,
+  "breakablePct": 0.0981,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 12.88,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Gem Exchange"
+  ]
+ },
+ "Gemgrab_51": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1818,
+  "bushPct": 0.1414,
+  "waterPct": 0.0,
+  "openPct": 0.6768,
+  "breakablePct": 0.1818,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 9.38,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Opposing Forts"
+  ]
+ },
+ "KingOfHill_33": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0462,
+  "bushPct": 0.2222,
+  "waterPct": 0.0491,
+  "openPct": 0.6623,
+  "breakablePct": 0.0577,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 12.65,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Open Zone"
+  ]
+ },
+ "Knockout_18": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0924,
+  "bushPct": 0.1472,
+  "waterPct": 0.0519,
+  "openPct": 0.7085,
+  "breakablePct": 0.0924,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 1.09,
+  "avgLaneWidth": 8.74,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Knockout",
+  "displayNames": [
+   "New Perspective"
+  ]
+ },
+ "Knockout_19": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0736,
+  "bushPct": 0.1154,
+  "waterPct": 0.0635,
+  "openPct": 0.7475,
+  "breakablePct": 0.0664,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 7.0,
+  "midOpenness": 0.898,
+  "midCover": 0.102,
+  "mode": "Knockout",
+  "displayNames": [
+   "X Marks The Spot"
+  ]
+ },
+ "Bankheist_33": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1356,
+  "bushPct": 0.0722,
+  "waterPct": 0.0519,
+  "openPct": 0.7403,
+  "breakablePct": 0.1356,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 1.18,
+  "avgLaneWidth": 6.28,
+  "midOpenness": 0.6735,
+  "midCover": 0.0816,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Cant Touch This"
+  ]
+ },
+ "Laserball_49": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2742,
+  "bushPct": 0.075,
+  "waterPct": 0.0,
+  "openPct": 0.6508,
+  "breakablePct": 0.1126,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 1.64,
+  "avgLaneWidth": 7.21,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Laserball",
+  "displayNames": [
+   "Extra Bouncy"
+  ]
+ },
+ "Laserball_50": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2424,
+  "bushPct": 0.0289,
+  "waterPct": 0.0,
+  "openPct": 0.7287,
+  "breakablePct": 0.0808,
+  "sightlineFrac": 0.5238,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 9.95,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Laserball",
+  "displayNames": [
+   "Full Tilt"
+  ]
+ },
+ "Laserball_51": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2309,
+  "bushPct": 0.0722,
+  "waterPct": 0.0,
+  "openPct": 0.697,
+  "breakablePct": 0.0693,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 8.36,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "High Score"
+  ]
+ },
+ "Laserball_52": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.3232,
+  "bushPct": 0.0,
+  "waterPct": 0.0,
+  "openPct": 0.6768,
+  "breakablePct": 0.1616,
+  "sightlineFrac": 0.5714,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 8.3,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Laserball",
+  "displayNames": [
+   "Ping Pong"
+  ]
+ },
+ "Gemgrab_441": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0635,
+  "bushPct": 0.1313,
+  "waterPct": 0.0173,
+  "openPct": 0.7879,
+  "breakablePct": 0.0635,
+  "sightlineFrac": 0.9524,
+  "chokesPerRow": 0.45,
+  "avgLaneWidth": 8.62,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Glass Half Full"
+  ]
+ },
+ "Gemgrab_442": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0693,
+  "bushPct": 0.176,
+  "waterPct": 0.0289,
+  "openPct": 0.7258,
+  "breakablePct": 0.0693,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 8.65,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Duality"
+  ]
+ },
+ "Knockout_441": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0866,
+  "bushPct": 0.2006,
+  "waterPct": 0.0895,
+  "openPct": 0.6234,
+  "breakablePct": 0.0866,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 2.18,
+  "avgLaneWidth": 5.19,
+  "midOpenness": 0.5918,
+  "midCover": 0.2041,
+  "mode": "Knockout",
+  "displayNames": [
+   "Hidden Enemy"
+  ]
+ },
+ "KingOfHill_441": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0664,
+  "bushPct": 0.0895,
+  "waterPct": 0.1068,
+  "openPct": 0.7374,
+  "breakablePct": 0.0664,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 10.26,
+  "midOpenness": 0.9184,
+  "midCover": 0.0408,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Trident"
+  ]
+ },
+ "KingOfHill_442": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0779,
+  "bushPct": 0.1126,
+  "waterPct": 0.0375,
+  "openPct": 0.772,
+  "breakablePct": 0.0779,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.27,
+  "avgLaneWidth": 6.1,
+  "midOpenness": 0.449,
+  "midCover": 0.1224,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Imbalance"
+  ]
+ },
+ "Wanted_441": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0895,
+  "bushPct": 0.075,
+  "waterPct": 0.0289,
+  "openPct": 0.798,
+  "breakablePct": 0.0981,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 10.68,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Wanted",
+  "displayNames": [
+   "Dont Turn Around"
+  ]
+ },
+ "Wanted_442": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1053,
+  "bushPct": 0.0866,
+  "waterPct": 0.0404,
+  "openPct": 0.7677,
+  "breakablePct": 0.1053,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 9.6,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Wanted",
+  "displayNames": [
+   "Side By Side"
+  ]
+ },
+ "Laserball_441": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2482,
+  "bushPct": 0.0952,
+  "waterPct": 0.0,
+  "openPct": 0.6566,
+  "breakablePct": 0.0866,
+  "sightlineFrac": 0.5714,
+  "chokesPerRow": 0.27,
+  "avgLaneWidth": 11.72,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Laserball",
+  "displayNames": [
+   "Double Jeopardy"
+  ]
+ },
+ "Bankheist_441": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.075,
+  "bushPct": 0.0519,
+  "waterPct": 0.0,
+  "openPct": 0.873,
+  "breakablePct": 0.075,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 12.06,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Bankheist",
+  "displayNames": [
+   "River Banks"
+  ]
+ },
+ "Bankheist_442": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1039,
+  "bushPct": 0.1241,
+  "waterPct": 0.1053,
+  "openPct": 0.6667,
+  "breakablePct": 0.1039,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 6.08,
+  "midOpenness": 0.3265,
+  "midCover": 0.0816,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Treefecta"
+  ]
+ },
+ "Knockout_442": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0981,
+  "bushPct": 0.1126,
+  "waterPct": 0.0231,
+  "openPct": 0.7662,
+  "breakablePct": 0.0722,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 13.24,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Knockout",
+  "displayNames": [
+   "Out In The Open"
+  ]
+ },
+ "Laserball_442": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2424,
+  "bushPct": 0.1039,
+  "waterPct": 0.0,
+  "openPct": 0.6537,
+  "breakablePct": 0.0808,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 1.45,
+  "avgLaneWidth": 5.43,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Laserball",
+  "displayNames": [
+   "Make It Bounce"
+  ]
+ },
+ "Gemgrab_471": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.062,
+  "bushPct": 0.026,
+  "waterPct": 0.0202,
+  "openPct": 0.8788,
+  "breakablePct": 0.075,
+  "sightlineFrac": 0.9524,
+  "chokesPerRow": 1.27,
+  "avgLaneWidth": 8.08,
+  "midOpenness": 0.9796,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Juhas Test Chamber"
+  ]
+ },
+ "Wanted_481": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0924,
+  "bushPct": 0.1847,
+  "waterPct": 0.0433,
+  "openPct": 0.6537,
+  "breakablePct": 0.0548,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 1.09,
+  "avgLaneWidth": 6.56,
+  "midOpenness": 0.7143,
+  "midCover": 0.1224,
+  "mode": "Wanted",
+  "displayNames": [
+   "Crossroads"
+  ]
+ },
+ "Laserball_481": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2857,
+  "bushPct": 0.1212,
+  "waterPct": 0.0,
+  "openPct": 0.5931,
+  "breakablePct": 0.1241,
+  "sightlineFrac": 0.619,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 8.48,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Laserball",
+  "displayNames": [
+   "Circular Motion"
+  ]
+ },
+ "Gemgrab_481": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0952,
+  "bushPct": 0.1414,
+  "waterPct": 0.0,
+  "openPct": 0.7633,
+  "breakablePct": 0.0952,
+  "sightlineFrac": 0.9524,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 7.3,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Four Doors"
+  ]
+ },
+ "Wanted_482": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0606,
+  "bushPct": 0.1703,
+  "waterPct": 0.0519,
+  "openPct": 0.7172,
+  "breakablePct": 0.0606,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 8.39,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Wanted",
+  "displayNames": [
+   "Nowhere To Hide"
+  ]
+ },
+ "Bankheist_481": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.153,
+  "bushPct": 0.1558,
+  "waterPct": 0.0,
+  "openPct": 0.6912,
+  "breakablePct": 0.153,
+  "sightlineFrac": 0.8571,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 9.1,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Offset Heist"
+  ]
+ },
+ "KingOfHill_481": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1039,
+  "bushPct": 0.1674,
+  "waterPct": 0.0,
+  "openPct": 0.7287,
+  "breakablePct": 0.1039,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 13.13,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Rush Hour"
+  ]
+ },
+ "Knockout_481": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2193,
+  "bushPct": 0.2078,
+  "waterPct": 0.0,
+  "openPct": 0.5729,
+  "breakablePct": 0.2193,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 13.27,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Knockout",
+  "displayNames": [
+   "Healthy Middle Ground"
+  ]
+ },
+ "Gemgrab_482": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.101,
+  "bushPct": 0.0866,
+  "waterPct": 0.0,
+  "openPct": 0.8124,
+  "breakablePct": 0.0808,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 8.28,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Solid Center"
+  ]
+ },
+ "Wanted_483": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0895,
+  "bushPct": 0.1558,
+  "waterPct": 0.0173,
+  "openPct": 0.7374,
+  "breakablePct": 0.0491,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 9.48,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Wanted",
+  "displayNames": [
+   "Iron Standoff"
+  ]
+ },
+ "Bankheist_482": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1097,
+  "bushPct": 0.101,
+  "waterPct": 0.0,
+  "openPct": 0.7893,
+  "breakablePct": 0.075,
+  "sightlineFrac": 0.6667,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 10.68,
+  "midOpenness": 0.6735,
+  "midCover": 0.3265,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Center Control"
+  ]
+ },
+ "KingOfHill_482": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0779,
+  "bushPct": 0.0981,
+  "waterPct": 0.0346,
+  "openPct": 0.7893,
+  "breakablePct": 0.0491,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 12.29,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Iron Cover"
+  ]
+ },
+ "Knockout_482": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1126,
+  "bushPct": 0.0664,
+  "waterPct": 0.0404,
+  "openPct": 0.7691,
+  "breakablePct": 0.101,
+  "sightlineFrac": 0.8571,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 7.48,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Knockout",
+  "displayNames": [
+   "Step By Step"
+  ]
+ },
+ "Laserball_482": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.254,
+  "bushPct": 0.0952,
+  "waterPct": 0.0,
+  "openPct": 0.6508,
+  "breakablePct": 0.0635,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 8.28,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Laserball",
+  "displayNames": [
+   "Iron Corridor"
+  ]
+ },
+ "Laserball_511": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2569,
+  "bushPct": 0.0895,
+  "waterPct": 0.0,
+  "openPct": 0.6537,
+  "breakablePct": 0.0952,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 12.53,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Stepping Stones"
+  ]
+ },
+ "Gemgrab_511": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.127,
+  "bushPct": 0.2222,
+  "waterPct": 0.0289,
+  "openPct": 0.6219,
+  "breakablePct": 0.127,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 11.71,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Last Stop"
+  ]
+ },
+ "Gemgrab_512": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1501,
+  "bushPct": 0.2107,
+  "waterPct": 0.0,
+  "openPct": 0.6392,
+  "breakablePct": 0.1501,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 10.47,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": []
+ },
+ "Gemgrab_521": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.101,
+  "bushPct": 0.0895,
+  "waterPct": 0.0519,
+  "openPct": 0.7576,
+  "breakablePct": 0.101,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 9.11,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Stacking"
+  ]
+ },
+ "Gemgrab_522": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1472,
+  "bushPct": 0.0606,
+  "waterPct": 0.0,
+  "openPct": 0.7922,
+  "breakablePct": 0.1472,
+  "sightlineFrac": 0.9524,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 10.37,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Warehouse"
+  ]
+ },
+ "KingOfHill_521": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1674,
+  "bushPct": 0.3579,
+  "waterPct": 0.0,
+  "openPct": 0.4747,
+  "breakablePct": 0.1472,
+  "sightlineFrac": 0.619,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 9.67,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "On The Train"
+  ]
+ },
+ "KingOfHill_522": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1587,
+  "bushPct": 0.2511,
+  "waterPct": 0.0,
+  "openPct": 0.5902,
+  "breakablePct": 0.1587,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 12.41,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Over The Top"
+  ]
+ },
+ "Laserball_521": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2453,
+  "bushPct": 0.1443,
+  "waterPct": 0.0,
+  "openPct": 0.6104,
+  "breakablePct": 0.0837,
+  "sightlineFrac": 0.9524,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 8.52,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Laserball",
+  "displayNames": [
+   "Iron Bars"
+  ]
+ },
+ "Laserball_522": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2626,
+  "bushPct": 0.0895,
+  "waterPct": 0.0,
+  "openPct": 0.6479,
+  "breakablePct": 0.101,
+  "sightlineFrac": 0.8571,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 7.3,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Deadly Deflections"
+  ]
+ },
+ "Knockout_521": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0722,
+  "bushPct": 0.1876,
+  "waterPct": 0.1876,
+  "openPct": 0.5527,
+  "breakablePct": 0.0722,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 12.87,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Knockout",
+  "displayNames": [
+   "Waters Of Doom"
+  ]
+ },
+ "Knockout_522": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1356,
+  "bushPct": 0.101,
+  "waterPct": 0.0,
+  "openPct": 0.7633,
+  "breakablePct": 0.1356,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 12.18,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Knockout",
+  "displayNames": [
+   "Into Infinity"
+  ]
+ },
+ "Bankheist_521": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0548,
+  "bushPct": 0.1558,
+  "waterPct": 0.0,
+  "openPct": 0.7893,
+  "breakablePct": 0.0491,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 15.13,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Hungry Hippos"
+  ]
+ },
+ "Bankheist_522": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0462,
+  "bushPct": 0.1241,
+  "waterPct": 0.0765,
+  "openPct": 0.7532,
+  "breakablePct": 0.0462,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 7.83,
+  "midOpenness": 0.4082,
+  "midCover": 0.0816,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Sultans Of Swing"
+  ]
+ },
+ "Laserball_531": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1241,
+  "bushPct": 0.0779,
+  "waterPct": 0.0,
+  "openPct": 0.798,
+  "breakablePct": 0.1039,
+  "sightlineFrac": 0.7619,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 10.37,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Laserball",
+  "displayNames": [
+   "Crossing"
+  ]
+ },
+ "Laserball_532": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1183,
+  "bushPct": 0.127,
+  "waterPct": 0.0,
+  "openPct": 0.7547,
+  "breakablePct": 0.1039,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 9.19,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Side Jump"
+  ]
+ },
+ "Laserball_533": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2799,
+  "bushPct": 0.0346,
+  "waterPct": 0.0,
+  "openPct": 0.6854,
+  "breakablePct": 0.1039,
+  "sightlineFrac": 0.8571,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 10.68,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Laserball",
+  "displayNames": [
+   "Strange"
+  ]
+ },
+ "Laserball_534": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2597,
+  "bushPct": 0.0693,
+  "waterPct": 0.0,
+  "openPct": 0.671,
+  "breakablePct": 0.0808,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 7.52,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Laserball",
+  "displayNames": []
+ },
+ "Bankheist_531": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2367,
+  "bushPct": 0.0808,
+  "waterPct": 0.0,
+  "openPct": 0.6825,
+  "breakablePct": 0.2367,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 9.32,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Riverbed"
+  ]
+ },
+ "Gemgrab_531": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1039,
+  "bushPct": 0.1328,
+  "waterPct": 0.0,
+  "openPct": 0.7633,
+  "breakablePct": 0.1039,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 7.96,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Close Call"
+  ]
+ },
+ "Gemgrab_532": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0779,
+  "bushPct": 0.2367,
+  "waterPct": 0.026,
+  "openPct": 0.6595,
+  "breakablePct": 0.0693,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 10.33,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Stay In Your Lane"
+  ]
+ },
+ "Knockout_531": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0837,
+  "bushPct": 0.1356,
+  "waterPct": 0.0,
+  "openPct": 0.7807,
+  "breakablePct": 0.0837,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 10.89,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Knockout",
+  "displayNames": [
+   "Close Quarters"
+  ]
+ },
+ "KingOfHill_531": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1414,
+  "bushPct": 0.1457,
+  "waterPct": 0.0,
+  "openPct": 0.7128,
+  "breakablePct": 0.1414,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 7.3,
+  "midOpenness": 0.6735,
+  "midCover": 0.3265,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "The Great Divide"
+  ]
+ },
+ "KingOfHill_532": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0548,
+  "bushPct": 0.2251,
+  "waterPct": 0.0,
+  "openPct": 0.7201,
+  "breakablePct": 0.0548,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 16.08,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Checkered"
+  ]
+ },
+ "Laserball_541": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2569,
+  "bushPct": 0.1818,
+  "waterPct": 0.0,
+  "openPct": 0.5613,
+  "breakablePct": 0.0952,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 9.95,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Goalkeepers Dream"
+  ]
+ },
+ "Knockout_541": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1169,
+  "bushPct": 0.075,
+  "waterPct": 0.0519,
+  "openPct": 0.7561,
+  "breakablePct": 0.1169,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 8.0,
+  "midOpenness": 0.9796,
+  "midCover": 0.0204,
+  "mode": "Knockout",
+  "displayNames": [
+   "New Horizons"
+  ]
+ },
+ "Knockout_551": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.075,
+  "bushPct": 0.1097,
+  "waterPct": 0.0404,
+  "openPct": 0.7749,
+  "breakablePct": 0.075,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 9.86,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Knockout",
+  "displayNames": [
+   "Between The Rivers"
+  ]
+ },
+ "Knockout_552": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1414,
+  "bushPct": 0.1847,
+  "waterPct": 0.0895,
+  "openPct": 0.5844,
+  "breakablePct": 0.1414,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 7.67,
+  "midOpenness": 0.7551,
+  "midCover": 0.1633,
+  "mode": "Knockout",
+  "displayNames": [
+   "Four Levels"
+  ]
+ },
+ "Wanted_561": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0837,
+  "bushPct": 0.1587,
+  "waterPct": 0.0,
+  "openPct": 0.7576,
+  "breakablePct": 0.0837,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 12.41,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Wanted",
+  "displayNames": [
+   "Flank Attack"
+  ]
+ },
+ "Wanted_562": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1183,
+  "bushPct": 0.1934,
+  "waterPct": 0.0,
+  "openPct": 0.6883,
+  "breakablePct": 0.1183,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 10.68,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Wanted",
+  "displayNames": [
+   "Iris Intervention"
+  ]
+ },
+ "Laserball_561": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2713,
+  "bushPct": 0.1501,
+  "waterPct": 0.0,
+  "openPct": 0.5786,
+  "breakablePct": 0.1097,
+  "sightlineFrac": 0.5714,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 8.48,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Spider Crawler"
+  ]
+ },
+ "Laserball_562": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2511,
+  "bushPct": 0.1501,
+  "waterPct": 0.0,
+  "openPct": 0.5988,
+  "breakablePct": 0.0895,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 8.28,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Laserball",
+  "displayNames": [
+   "Offside Trap"
+  ]
+ },
+ "Gemgrab_561": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0722,
+  "bushPct": 0.2193,
+  "waterPct": 0.0346,
+  "openPct": 0.6739,
+  "breakablePct": 0.0722,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 14.2,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Sneaky Sneak"
+  ]
+ },
+ "Gemgrab_562": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1154,
+  "bushPct": 0.1645,
+  "waterPct": 0.0,
+  "openPct": 0.7201,
+  "breakablePct": 0.1154,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 11.82,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Ahead Of The Curve"
+  ]
+ },
+ "Bankheist_561": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1587,
+  "bushPct": 0.1876,
+  "waterPct": 0.0,
+  "openPct": 0.6537,
+  "breakablePct": 0.1587,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 9.67,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Diamond Dome"
+  ]
+ },
+ "Bankheist_562": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1414,
+  "bushPct": 0.1126,
+  "waterPct": 0.0,
+  "openPct": 0.746,
+  "breakablePct": 0.1414,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 10.26,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Double Locking"
+  ]
+ },
+ "KingOfHill_561": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.127,
+  "bushPct": 0.2251,
+  "waterPct": 0.0,
+  "openPct": 0.6479,
+  "breakablePct": 0.1154,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 14.07,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Reflections"
+  ]
+ },
+ "KingOfHill_562": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.127,
+  "bushPct": 0.127,
+  "waterPct": 0.0,
+  "openPct": 0.746,
+  "breakablePct": 0.1154,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 13.12,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Local Businesses"
+  ]
+ },
+ "Knockout_561": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1443,
+  "bushPct": 0.1443,
+  "waterPct": 0.0115,
+  "openPct": 0.6999,
+  "breakablePct": 0.1443,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 8.65,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Knockout",
+  "displayNames": [
+   "Dragon Jaws"
+  ]
+ },
+ "Knockout_562": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1183,
+  "bushPct": 0.2179,
+  "waterPct": 0.0,
+  "openPct": 0.6638,
+  "breakablePct": 0.1183,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 9.67,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Knockout",
+  "displayNames": [
+   "Twilight Passage"
+  ]
+ },
+ "Knockout_563": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1645,
+  "bushPct": 0.2439,
+  "waterPct": 0.153,
+  "openPct": 0.4387,
+  "breakablePct": 0.0866,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.64,
+  "avgLaneWidth": 4.45,
+  "midOpenness": 0.5102,
+  "midCover": 0.3673,
+  "mode": "Knockout",
+  "displayNames": [
+   "Hard Lane"
+  ]
+ },
+ "Knockout_564": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0462,
+  "bushPct": 0.1674,
+  "waterPct": 0.3838,
+  "openPct": 0.4026,
+  "breakablePct": 0.0462,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 1.27,
+  "avgLaneWidth": 3.91,
+  "midOpenness": 0.6327,
+  "midCover": 0.0,
+  "mode": "Knockout",
+  "displayNames": [
+   "Island Hopping"
+  ]
+ },
+ "Laserball_571": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2395,
+  "bushPct": 0.127,
+  "waterPct": 0.0,
+  "openPct": 0.6335,
+  "breakablePct": 0.0693,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 1.27,
+  "avgLaneWidth": 7.3,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Laserball",
+  "displayNames": [
+   "Back Pocket"
+  ]
+ },
+ "Gemgrab_571": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1385,
+  "bushPct": 0.1356,
+  "waterPct": 0.0,
+  "openPct": 0.7258,
+  "breakablePct": 0.1241,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 14.2,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Bear Trap"
+  ]
+ },
+ "Wanted_571": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1154,
+  "bushPct": 0.1501,
+  "waterPct": 0.0,
+  "openPct": 0.7345,
+  "breakablePct": 0.1154,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 8.28,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Wanted",
+  "displayNames": [
+   "Crowd Strike"
+  ]
+ },
+ "KingOfHill_571": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0606,
+  "bushPct": 0.1385,
+  "waterPct": 0.0,
+  "openPct": 0.8009,
+  "breakablePct": 0.0606,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 10.43,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Misty Meadows"
+  ]
+ },
+ "Bankheist_571": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.075,
+  "bushPct": 0.176,
+  "waterPct": 0.0519,
+  "openPct": 0.697,
+  "breakablePct": 0.075,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 9.48,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Secret Or Mystery"
+  ]
+ },
+ "Knockout_571": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1558,
+  "bushPct": 0.1703,
+  "waterPct": 0.0,
+  "openPct": 0.6739,
+  "breakablePct": 0.1558,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 11.59,
+  "midOpenness": 0.7959,
+  "midCover": 0.2041,
+  "mode": "Knockout",
+  "displayNames": [
+   "Sunset Spar"
+  ]
+ },
+ "KingOfHill_581": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1385,
+  "bushPct": 0.153,
+  "waterPct": 0.0,
+  "openPct": 0.7085,
+  "breakablePct": 0.1385,
+  "sightlineFrac": 0.8571,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 10.14,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Rush"
+  ]
+ },
+ "KingOfHill_582": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.127,
+  "bushPct": 0.1645,
+  "waterPct": 0.026,
+  "openPct": 0.6825,
+  "breakablePct": 0.127,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.27,
+  "avgLaneWidth": 9.19,
+  "midOpenness": 0.7551,
+  "midCover": 0.0,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "From Dusk Till Dawn"
+  ]
+ },
+ "Gemgrab_581": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1703,
+  "bushPct": 0.1645,
+  "waterPct": 0.0,
+  "openPct": 0.6652,
+  "breakablePct": 0.1703,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 7.8,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Pineapple Plaza"
+  ]
+ },
+ "Gemgrab_582": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0981,
+  "bushPct": 0.1472,
+  "waterPct": 0.0,
+  "openPct": 0.7547,
+  "breakablePct": 0.0837,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 9.09,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Corkscrew"
+  ]
+ },
+ "Knockout_581": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0952,
+  "bushPct": 0.176,
+  "waterPct": 0.075,
+  "openPct": 0.6537,
+  "breakablePct": 0.0952,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 6.93,
+  "midOpenness": 0.7551,
+  "midCover": 0.1224,
+  "mode": "Knockout",
+  "displayNames": [
+   "Gratitude"
+  ]
+ },
+ "Laserball_581": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2857,
+  "bushPct": 0.1385,
+  "waterPct": 0.0,
+  "openPct": 0.5758,
+  "breakablePct": 0.1154,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 7.96,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Laserball",
+  "displayNames": [
+   "Weak Foot"
+  ]
+ },
+ "Laserball_582": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2742,
+  "bushPct": 0.1558,
+  "waterPct": 0.0,
+  "openPct": 0.57,
+  "breakablePct": 0.1126,
+  "sightlineFrac": 0.6667,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 10.37,
+  "midOpenness": 0.7959,
+  "midCover": 0.2041,
+  "mode": "Laserball",
+  "displayNames": [
+   "Razzle Dazzle"
+  ]
+ },
+ "Bankheist_581": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1241,
+  "bushPct": 0.1789,
+  "waterPct": 0.013,
+  "openPct": 0.684,
+  "breakablePct": 0.1241,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 5.69,
+  "midOpenness": 0.6531,
+  "midCover": 0.1633,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Electric Storm"
+  ]
+ },
+ "AirHockey_1": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2222,
+  "bushPct": 0.0,
+  "waterPct": 0.0,
+  "openPct": 0.7778,
+  "breakablePct": 0.0519,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 9.17,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "AirHockey",
+  "displayNames": [
+   "Super Center"
+  ]
+ },
+ "AirHockey_2": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.202,
+  "bushPct": 0.0577,
+  "waterPct": 0.0,
+  "openPct": 0.7316,
+  "breakablePct": 0.0491,
+  "sightlineFrac": 0.9524,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 17.46,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "AirHockey",
+  "displayNames": [
+   "Slippery Slap"
+  ]
+ },
+ "AirHockey_3": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.202,
+  "bushPct": 0.0202,
+  "waterPct": 0.0,
+  "openPct": 0.7547,
+  "breakablePct": 0.0635,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 10.89,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "AirHockey",
+  "displayNames": [
+   "Bouncy Bowl"
+  ]
+ },
+ "AirHockey_4": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2107,
+  "bushPct": 0.0,
+  "waterPct": 0.0,
+  "openPct": 0.7893,
+  "breakablePct": 0.0491,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 11.53,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "AirHockey",
+  "displayNames": [
+   "Below Zero"
+  ]
+ },
+ "AirHockey_5": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2165,
+  "bushPct": 0.0346,
+  "waterPct": 0.0,
+  "openPct": 0.7489,
+  "breakablePct": 0.0548,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 8.52,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "AirHockey",
+  "displayNames": [
+   "Cool Box"
+  ]
+ },
+ "AirHockey_6": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2049,
+  "bushPct": 0.0,
+  "waterPct": 0.0,
+  "openPct": 0.7951,
+  "breakablePct": 0.0346,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 11.32,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "AirHockey",
+  "displayNames": [
+   "Starr Garden"
+  ]
+ },
+ "Laserball_591": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2222,
+  "bushPct": 0.1847,
+  "waterPct": 0.0,
+  "openPct": 0.5931,
+  "breakablePct": 0.0491,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 13.12,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Second Try"
+  ]
+ },
+ "Laserball_592": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2857,
+  "bushPct": 0.101,
+  "waterPct": 0.0,
+  "openPct": 0.6133,
+  "breakablePct": 0.1241,
+  "sightlineFrac": 0.5238,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 10.26,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Laserball",
+  "displayNames": [
+   "Trickey"
+  ]
+ },
+ "Gemgrab_591": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1097,
+  "bushPct": 0.2713,
+  "waterPct": 0.0,
+  "openPct": 0.619,
+  "breakablePct": 0.1097,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 11.32,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Forest Clearing"
+  ]
+ },
+ "Gemgrab_592": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1154,
+  "bushPct": 0.2251,
+  "waterPct": 0.0,
+  "openPct": 0.6595,
+  "breakablePct": 0.0981,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 1.45,
+  "avgLaneWidth": 6.68,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "The Cooler Hard Rock"
+  ]
+ },
+ "Bankheist_591": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0866,
+  "bushPct": 0.1501,
+  "waterPct": 0.0577,
+  "openPct": 0.7056,
+  "breakablePct": 0.0635,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 8.47,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Safe(r) Zone"
+  ]
+ },
+ "Bankheist_592": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0808,
+  "bushPct": 0.1876,
+  "waterPct": 0.1284,
+  "openPct": 0.6032,
+  "breakablePct": 0.0404,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 6.0,
+  "midOpenness": 0.0,
+  "midCover": 0.2857,
+  "mode": "Bankheist",
+  "displayNames": [
+   "The Great Lake"
+  ]
+ },
+ "Knockout_591": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1674,
+  "bushPct": 0.1082,
+  "waterPct": 0.0,
+  "openPct": 0.7244,
+  "breakablePct": 0.127,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 1.27,
+  "avgLaneWidth": 8.12,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Knockout",
+  "displayNames": [
+   "H For.."
+  ]
+ },
+ "Knockout_592": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0736,
+  "bushPct": 0.1905,
+  "waterPct": 0.1732,
+  "openPct": 0.5628,
+  "breakablePct": 0.0693,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 17.33,
+  "midOpenness": 0.898,
+  "midCover": 0.102,
+  "mode": "Knockout",
+  "displayNames": [
+   "Two Rivers"
+  ]
+ },
+ "KingOfHill_591": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0981,
+  "bushPct": 0.3059,
+  "waterPct": 0.0808,
+  "openPct": 0.5152,
+  "breakablePct": 0.0981,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 1.45,
+  "avgLaneWidth": 6.19,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Watersport"
+  ]
+ },
+ "KingOfHill_592": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1457,
+  "bushPct": 0.1905,
+  "waterPct": 0.0,
+  "openPct": 0.6638,
+  "breakablePct": 0.1299,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 2.73,
+  "avgLaneWidth": 4.7,
+  "midOpenness": 0.8571,
+  "midCover": 0.1429,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Noisy Neighbors"
+  ]
+ },
+ "Knockout_593": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.254,
+  "bushPct": 0.5974,
+  "waterPct": 0.088,
+  "openPct": 0.0606,
+  "breakablePct": 0.254,
+  "sightlineFrac": 0.4286,
+  "chokesPerRow": 1.09,
+  "avgLaneWidth": 5.7,
+  "midOpenness": 0.0,
+  "midCover": 0.0,
+  "mode": "Knockout",
+  "displayNames": [
+   "Deep Forest"
+  ]
+ },
+ "Knockout_594": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0173,
+  "bushPct": 0.0649,
+  "waterPct": 0.2222,
+  "openPct": 0.5801,
+  "breakablePct": 0.1328,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 1.64,
+  "avgLaneWidth": 6.13,
+  "midOpenness": 0.6735,
+  "midCover": 0.0,
+  "mode": "Knockout",
+  "displayNames": [
+   "Tiny Islands"
+  ]
+ },
+ "Knockout_595": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1212,
+  "bushPct": 0.0563,
+  "waterPct": 0.0,
+  "openPct": 0.8225,
+  "breakablePct": 0.1212,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 7.37,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Knockout",
+  "displayNames": [
+   "Temple Of Vroom"
+  ]
+ },
+ "Knockout_596": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1688,
+  "bushPct": 0.329,
+  "waterPct": 0.0,
+  "openPct": 0.5022,
+  "breakablePct": 0.1688,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 7.58,
+  "midOpenness": 0.9388,
+  "midCover": 0.0612,
+  "mode": "Knockout",
+  "displayNames": [
+   "Overgrown Ruins"
+  ]
+ },
+ "Bankheist_593": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0866,
+  "bushPct": 0.2251,
+  "waterPct": 0.0635,
+  "openPct": 0.6248,
+  "breakablePct": 0.0548,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 11.4,
+  "midOpenness": 0.7143,
+  "midCover": 0.0,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Gg 20"
+  ]
+ },
+ "AirHockey_5v5_701": {
+  "width": 60,
+  "height": 60,
+  "playableTiles": 3600,
+  "wallPct": 0.0633,
+  "bushPct": 0.0164,
+  "waterPct": 0.7,
+  "openPct": 0.2203,
+  "breakablePct": 0.0256,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.2,
+  "avgLaneWidth": 12.29,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "AirHockey",
+  "displayNames": [
+   "Snowcone Square"
+  ]
+ },
+ "Bankheist_601": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1356,
+  "bushPct": 0.1674,
+  "waterPct": 0.0,
+  "openPct": 0.697,
+  "breakablePct": 0.1356,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 12.73,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Plain Text"
+  ]
+ },
+ "Gemgrab_601": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0866,
+  "bushPct": 0.1674,
+  "waterPct": 0.0462,
+  "openPct": 0.6999,
+  "breakablePct": 0.0779,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 8.13,
+  "midOpenness": 0.8776,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Lilygear Lake"
+  ]
+ },
+ "Gemgrab_602": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1587,
+  "bushPct": 0.1616,
+  "waterPct": 0.0,
+  "openPct": 0.6797,
+  "breakablePct": 0.153,
+  "sightlineFrac": 0.7143,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 9.09,
+  "midOpenness": 0.7551,
+  "midCover": 0.2449,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Local Restaurants"
+  ]
+ },
+ "Wanted_601": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.101,
+  "bushPct": 0.1587,
+  "waterPct": 0.0462,
+  "openPct": 0.6941,
+  "breakablePct": 0.0664,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 10.05,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Wanted",
+  "displayNames": [
+   "Brace For Impact"
+  ]
+ },
+ "Knockout_601": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0808,
+  "bushPct": 0.1328,
+  "waterPct": 0.0519,
+  "openPct": 0.7345,
+  "breakablePct": 0.0808,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 9.0,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Knockout",
+  "displayNames": [
+   "Mossy Crossing"
+  ]
+ },
+ "Laserball_601": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2684,
+  "bushPct": 0.1183,
+  "waterPct": 0.0,
+  "openPct": 0.6133,
+  "breakablePct": 0.1068,
+  "sightlineFrac": 0.8571,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 9.19,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Laserball",
+  "displayNames": [
+   "Priceless Cactus"
+  ]
+ },
+ "Laserball_602": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2395,
+  "bushPct": 0.1212,
+  "waterPct": 0.0,
+  "openPct": 0.6219,
+  "breakablePct": 0.0952,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 8.28,
+  "midOpenness": 0.7959,
+  "midCover": 0.2041,
+  "mode": "Laserball",
+  "displayNames": [
+   "Rooftop Runners"
+  ]
+ },
+ "KingOfHill_601": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1255,
+  "bushPct": 0.1212,
+  "waterPct": 0.0,
+  "openPct": 0.7532,
+  "breakablePct": 0.1169,
+  "sightlineFrac": 0.7619,
+  "chokesPerRow": 1.09,
+  "avgLaneWidth": 7.83,
+  "midOpenness": 0.9388,
+  "midCover": 0.0612,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Bejeweled"
+  ]
+ },
+ "KingOfHill_602": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1097,
+  "bushPct": 0.1154,
+  "waterPct": 0.0967,
+  "openPct": 0.6782,
+  "breakablePct": 0.1097,
+  "sightlineFrac": 0.8571,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 7.73,
+  "midOpenness": 0.3673,
+  "midCover": 0.1633,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Fishing Bed"
+  ]
+ },
+ "Knockout_6101": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1328,
+  "bushPct": 0.1241,
+  "waterPct": 0.0,
+  "openPct": 0.7431,
+  "breakablePct": 0.1328,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 8.44,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Knockout",
+  "displayNames": [
+   "Double Decker"
+  ]
+ },
+ "Knockout_6102": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0866,
+  "bushPct": 0.127,
+  "waterPct": 0.0462,
+  "openPct": 0.7403,
+  "breakablePct": 0.0866,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 8.65,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Knockout",
+  "displayNames": [
+   "Streets With No Name"
+  ]
+ },
+ "Laserball_6101": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2684,
+  "bushPct": 0.1126,
+  "waterPct": 0.0,
+  "openPct": 0.619,
+  "breakablePct": 0.1068,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 9.57,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Grass Knot"
+  ]
+ },
+ "Laserball_6102": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2367,
+  "bushPct": 0.0519,
+  "waterPct": 0.0,
+  "openPct": 0.7114,
+  "breakablePct": 0.075,
+  "sightlineFrac": 0.8571,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 8.52,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Laserball",
+  "displayNames": [
+   "Spiraling Out"
+  ]
+ },
+ "KingOfHill_6101": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0924,
+  "bushPct": 0.1587,
+  "waterPct": 0.026,
+  "openPct": 0.7229,
+  "breakablePct": 0.0924,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 9.95,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Abracadabra"
+  ]
+ },
+ "KingOfHill_6102": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0808,
+  "bushPct": 0.1645,
+  "waterPct": 0.0,
+  "openPct": 0.7547,
+  "breakablePct": 0.0808,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 11.74,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "In The Liminal"
+  ]
+ },
+ "Bankheist_6101": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1183,
+  "bushPct": 0.127,
+  "waterPct": 0.0,
+  "openPct": 0.7547,
+  "breakablePct": 0.1183,
+  "sightlineFrac": 0.9524,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 7.52,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Subway Turfers"
+  ]
+ },
+ "Bankheist_6102": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0779,
+  "bushPct": 0.1486,
+  "waterPct": 0.0577,
+  "openPct": 0.7157,
+  "breakablePct": 0.0779,
+  "sightlineFrac": 0.9524,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 8.71,
+  "midOpenness": 0.7551,
+  "midCover": 0.1224,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Ghoulish Lagoon"
+  ]
+ },
+ "Gemgrab_6101": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0808,
+  "bushPct": 0.1183,
+  "waterPct": 0.0,
+  "openPct": 0.8009,
+  "breakablePct": 0.0808,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 9.95,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "On A Roll"
+  ]
+ },
+ "Gemgrab_6102": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0779,
+  "bushPct": 0.1616,
+  "waterPct": 0.0577,
+  "openPct": 0.7027,
+  "breakablePct": 0.0779,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 9.67,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Storage Sector"
+  ]
+ },
+ "AirHockey_5v5_702": {
+  "width": 60,
+  "height": 60,
+  "playableTiles": 3600,
+  "wallPct": 0.0722,
+  "bushPct": 0.0128,
+  "waterPct": 0.0,
+  "openPct": 0.915,
+  "breakablePct": 0.0289,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.5,
+  "avgLaneWidth": 10.88,
+  "midOpenness": 0.9388,
+  "midCover": 0.0612,
+  "mode": "AirHockey",
+  "displayNames": [
+   "Massive Meltdown"
+  ]
+ },
+ "AirHockey_5v5_703": {
+  "width": 60,
+  "height": 60,
+  "playableTiles": 3600,
+  "wallPct": 0.0667,
+  "bushPct": 0.0239,
+  "waterPct": 0.0,
+  "openPct": 0.9094,
+  "breakablePct": 0.0267,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.5,
+  "avgLaneWidth": 12.02,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "AirHockey",
+  "displayNames": [
+   "Frostbite Rink"
+  ]
+ },
+ "AirHockey_5v5_704": {
+  "width": 60,
+  "height": 60,
+  "playableTiles": 3600,
+  "wallPct": 0.0644,
+  "bushPct": 0.0183,
+  "waterPct": 0.0,
+  "openPct": 0.9172,
+  "breakablePct": 0.0267,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.3,
+  "avgLaneWidth": 10.55,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "AirHockey",
+  "displayNames": [
+   "Cold Snap"
+  ]
+ },
+ "Gemgrab_6201": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0779,
+  "bushPct": 0.1616,
+  "waterPct": 0.0,
+  "openPct": 0.7605,
+  "breakablePct": 0.0779,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 7.74,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Whisper Vale"
+  ]
+ },
+ "Bankheist_6201": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0851,
+  "bushPct": 0.1876,
+  "waterPct": 0.0433,
+  "openPct": 0.684,
+  "breakablePct": 0.0765,
+  "sightlineFrac": 0.8571,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 8.73,
+  "midOpenness": 0.9796,
+  "midCover": 0.0204,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Zip Zap Zoom"
+  ]
+ },
+ "KingOfHill_6201": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1097,
+  "bushPct": 0.0808,
+  "waterPct": 0.0,
+  "openPct": 0.8095,
+  "breakablePct": 0.0895,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 7.74,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Playmaker"
+  ]
+ },
+ "Knockout_6202": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1068,
+  "bushPct": 0.1587,
+  "waterPct": 0.0577,
+  "openPct": 0.6768,
+  "breakablePct": 0.1068,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 8.3,
+  "midOpenness": 0.7959,
+  "midCover": 0.0408,
+  "mode": "Knockout",
+  "displayNames": [
+   "Call Of The Water"
+  ]
+ },
+ "Gemgrab_6202": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1068,
+  "bushPct": 0.1443,
+  "waterPct": 0.0,
+  "openPct": 0.7489,
+  "breakablePct": 0.0895,
+  "sightlineFrac": 0.9524,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 9.95,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Extreme Nonchalance"
+  ]
+ },
+ "Bankheist_6202": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0765,
+  "bushPct": 0.127,
+  "waterPct": 0.0,
+  "openPct": 0.7965,
+  "breakablePct": 0.0765,
+  "sightlineFrac": 0.9524,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 13.0,
+  "midOpenness": 0.7755,
+  "midCover": 0.2245,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Corner Cave"
+  ]
+ },
+ "Knockout_6201": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1414,
+  "bushPct": 0.1299,
+  "waterPct": 0.0,
+  "openPct": 0.7287,
+  "breakablePct": 0.1414,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 1.45,
+  "avgLaneWidth": 6.55,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Knockout",
+  "displayNames": [
+   "Think Ahead"
+  ]
+ },
+ "Laserball_6201": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2626,
+  "bushPct": 0.1212,
+  "waterPct": 0.0,
+  "openPct": 0.6162,
+  "breakablePct": 0.101,
+  "sightlineFrac": 0.7619,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 11.82,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Laserball",
+  "displayNames": [
+   "Sidetrack"
+  ]
+ },
+ "Laserball_6202": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2453,
+  "bushPct": 0.1616,
+  "waterPct": 0.0,
+  "openPct": 0.5931,
+  "breakablePct": 0.0837,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 12.65,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Match 1123581321"
+  ]
+ },
+ "Wanted_6201": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.127,
+  "bushPct": 0.1414,
+  "waterPct": 0.0,
+  "openPct": 0.7316,
+  "breakablePct": 0.127,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 13.4,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Wanted",
+  "displayNames": [
+   "Starrburst"
+  ]
+ },
+ "Gemgrab_631": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1212,
+  "bushPct": 0.127,
+  "waterPct": 0.0,
+  "openPct": 0.7518,
+  "breakablePct": 0.1212,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 8.65,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Atlas"
+  ]
+ },
+ "Gemgrab_632": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1501,
+  "bushPct": 0.1934,
+  "waterPct": 0.0,
+  "openPct": 0.6566,
+  "breakablePct": 0.1385,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 10.58,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Afterparty"
+  ]
+ },
+ "KingOfHill_631": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1558,
+  "bushPct": 0.1241,
+  "waterPct": 0.0245,
+  "openPct": 0.6955,
+  "breakablePct": 0.1501,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 9.2,
+  "midOpenness": 0.6122,
+  "midCover": 0.0408,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Just Another Race To Anywhere"
+  ]
+ },
+ "KingOfHill_632": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1414,
+  "bushPct": 0.1472,
+  "waterPct": 0.0,
+  "openPct": 0.7114,
+  "breakablePct": 0.1414,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 10.47,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Back Shuffle"
+  ]
+ },
+ "Laserball_631": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2828,
+  "bushPct": 0.1299,
+  "waterPct": 0.0,
+  "openPct": 0.5873,
+  "breakablePct": 0.1212,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 6.86,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Laserball",
+  "displayNames": [
+   "Flute Chutes"
+  ]
+ },
+ "Laserball_632": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2569,
+  "bushPct": 0.1212,
+  "waterPct": 0.0,
+  "openPct": 0.6219,
+  "breakablePct": 0.0952,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 8.3,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Laserball",
+  "displayNames": [
+   "Grab The Moment"
+  ]
+ },
+ "Knockout_631": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1068,
+  "bushPct": 0.1587,
+  "waterPct": 0.0519,
+  "openPct": 0.6825,
+  "breakablePct": 0.101,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 8.13,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Knockout",
+  "displayNames": [
+   "Party For You"
+  ]
+ },
+ "Knockout_632": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1212,
+  "bushPct": 0.1587,
+  "waterPct": 0.0649,
+  "openPct": 0.6551,
+  "breakablePct": 0.1212,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 1.45,
+  "avgLaneWidth": 5.06,
+  "midOpenness": 0.6122,
+  "midCover": 0.0816,
+  "mode": "Knockout",
+  "displayNames": [
+   "A Ballad About Minced Cutlets"
+  ]
+ },
+ "Bankheist_631": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1227,
+  "bushPct": 0.1991,
+  "waterPct": 0.0,
+  "openPct": 0.6782,
+  "breakablePct": 0.1227,
+  "sightlineFrac": 0.9524,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 10.3,
+  "midOpenness": 0.9796,
+  "midCover": 0.0204,
+  "mode": "Bankheist",
+  "displayNames": [
+   "All Things Wicked"
+  ]
+ },
+ "Bankheist_632": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0996,
+  "bushPct": 0.1732,
+  "waterPct": 0.0289,
+  "openPct": 0.6984,
+  "breakablePct": 0.0808,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 8.92,
+  "midOpenness": 0.8163,
+  "midCover": 0.1837,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Photic Doom"
+  ]
+ },
+ "Gemgrab_641": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0606,
+  "bushPct": 0.1212,
+  "waterPct": 0.0,
+  "openPct": 0.8182,
+  "breakablePct": 0.0606,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 17.0,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Railroad Robbery"
+  ]
+ },
+ "KingOfHill_641": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0404,
+  "bushPct": 0.0548,
+  "waterPct": 0.0,
+  "openPct": 0.9048,
+  "breakablePct": 0.0404,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 14.87,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Zone Splitting"
+  ]
+ },
+ "KingOfHill_642": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0779,
+  "bushPct": 0.0519,
+  "waterPct": 0.0,
+  "openPct": 0.8701,
+  "breakablePct": 0.0779,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 13.8,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Ticket To Die"
+  ]
+ },
+ "Knockout_641": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0837,
+  "bushPct": 0.1097,
+  "waterPct": 0.0693,
+  "openPct": 0.7374,
+  "breakablePct": 0.0837,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 17.62,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Knockout",
+  "displayNames": [
+   "Chivalry"
+  ]
+ },
+ "Wanted_652": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0952,
+  "bushPct": 0.1616,
+  "waterPct": 0.0519,
+  "openPct": 0.6912,
+  "breakablePct": 0.0952,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 10.24,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Wanted",
+  "displayNames": [
+   "Choral Chambers"
+  ]
+ },
+ "Wanted_651": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0924,
+  "bushPct": 0.1616,
+  "waterPct": 0.0,
+  "openPct": 0.746,
+  "breakablePct": 0.0924,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 6.29,
+  "midOpenness": 0.6735,
+  "midCover": 0.3265,
+  "mode": "Wanted",
+  "displayNames": [
+   "Wall Hugging"
+  ]
+ },
+ "Laserball_652": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2309,
+  "bushPct": 0.1212,
+  "waterPct": 0.0,
+  "openPct": 0.6479,
+  "breakablePct": 0.0693,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 9.26,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Laserball",
+  "displayNames": [
+   "Nutmeg"
+  ]
+ },
+ "Laserball_651": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.254,
+  "bushPct": 0.1818,
+  "waterPct": 0.0,
+  "openPct": 0.5642,
+  "breakablePct": 0.0924,
+  "sightlineFrac": 0.8571,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 8.83,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Laserball",
+  "displayNames": [
+   "Singed Earth"
+  ]
+ },
+ "Knockout_651": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.088,
+  "bushPct": 0.1097,
+  "waterPct": 0.0462,
+  "openPct": 0.7561,
+  "breakablePct": 0.088,
+  "sightlineFrac": 0.9524,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 11.89,
+  "midOpenness": 0.9796,
+  "midCover": 0.0204,
+  "mode": "Knockout",
+  "displayNames": [
+   "Konnakol"
+  ]
+ },
+ "KingOfHill_652": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1385,
+  "bushPct": 0.0635,
+  "waterPct": 0.0,
+  "openPct": 0.7835,
+  "breakablePct": 0.153,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 14.07,
+  "midOpenness": 0.8776,
+  "midCover": 0.0,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "The Seven Pillars Of Humanity"
+  ]
+ },
+ "KingOfHill_651": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0981,
+  "bushPct": 0.1356,
+  "waterPct": 0.0,
+  "openPct": 0.7662,
+  "breakablePct": 0.0779,
+  "sightlineFrac": 0.9524,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 10.05,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Tax Evasion"
+  ]
+ },
+ "Gemgrab_652": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0866,
+  "bushPct": 0.1443,
+  "waterPct": 0.0,
+  "openPct": 0.7691,
+  "breakablePct": 0.0577,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 1.64,
+  "avgLaneWidth": 6.93,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Fortress Fall"
+  ]
+ },
+ "Gemgrab_651": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0722,
+  "bushPct": 0.1876,
+  "waterPct": 0.026,
+  "openPct": 0.7143,
+  "breakablePct": 0.0491,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 10.24,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Snake Pit"
+  ]
+ },
+ "Bankheist_652": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1068,
+  "bushPct": 0.1371,
+  "waterPct": 0.0,
+  "openPct": 0.7561,
+  "breakablePct": 0.1068,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 7.48,
+  "midOpenness": 0.6735,
+  "midCover": 0.3265,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Quintillion"
+  ]
+ },
+ "Bankheist_651": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1183,
+  "bushPct": 0.1818,
+  "waterPct": 0.0563,
+  "openPct": 0.6436,
+  "breakablePct": 0.1183,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 1.09,
+  "avgLaneWidth": 7.31,
+  "midOpenness": 0.6939,
+  "midCover": 0.0408,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Aridity"
+  ]
+ },
+ "AirHockey_652": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.228,
+  "bushPct": 0.0577,
+  "waterPct": 0.0,
+  "openPct": 0.7143,
+  "breakablePct": 0.0664,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 10.43,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "AirHockey",
+  "displayNames": [
+   "Hyperspace"
+  ]
+ },
+ "AirHockey_651": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.228,
+  "bushPct": 0.0173,
+  "waterPct": 0.0,
+  "openPct": 0.746,
+  "breakablePct": 0.075,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 7.67,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "AirHockey",
+  "displayNames": [
+   "H Is For Holiday"
+  ]
+ },
+ "Knockout_652": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0678,
+  "bushPct": 0.1328,
+  "waterPct": 0.0,
+  "openPct": 0.7821,
+  "breakablePct": 0.0851,
+  "sightlineFrac": 0.7619,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 11.44,
+  "midOpenness": 0.6531,
+  "midCover": 0.3469,
+  "mode": "Knockout",
+  "displayNames": [
+   "Pinned Down"
+  ]
+ },
+ "Gemgrab_661": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0722,
+  "bushPct": 0.1789,
+  "waterPct": 0.0173,
+  "openPct": 0.7316,
+  "breakablePct": 0.0722,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 7.81,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Picturesque"
+  ]
+ },
+ "Gemgrab_662": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1183,
+  "bushPct": 0.2367,
+  "waterPct": 0.0606,
+  "openPct": 0.5844,
+  "breakablePct": 0.1126,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 9.53,
+  "midOpenness": 0.8776,
+  "midCover": 0.0408,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Satomi Springs"
+  ]
+ },
+ "KingOfHill_661": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1097,
+  "bushPct": 0.1501,
+  "waterPct": 0.0289,
+  "openPct": 0.7114,
+  "breakablePct": 0.1097,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 9.43,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Golden Bay"
+  ]
+ },
+ "KingOfHill_662": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1039,
+  "bushPct": 0.1299,
+  "waterPct": 0.013,
+  "openPct": 0.7532,
+  "breakablePct": 0.1039,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 7.38,
+  "midOpenness": 0.7755,
+  "midCover": 0.0408,
+  "mode": "KingOfHill",
+  "displayNames": [
+   "Hyacinth House"
+  ]
+ },
+ "Knockout_661": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1472,
+  "bushPct": 0.176,
+  "waterPct": 0.0,
+  "openPct": 0.6768,
+  "breakablePct": 0.1472,
+  "sightlineFrac": 0.8571,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 9.17,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "Knockout",
+  "displayNames": [
+   "Opening Move"
+  ]
+ },
+ "Knockout_662": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1472,
+  "bushPct": 0.1616,
+  "waterPct": 0.0231,
+  "openPct": 0.6681,
+  "breakablePct": 0.1472,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.45,
+  "avgLaneWidth": 9.95,
+  "midOpenness": 0.7959,
+  "midCover": 0.1224,
+  "mode": "Knockout",
+  "displayNames": [
+   "Crab Claws"
+  ]
+ },
+ "Laserball_661": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2222,
+  "bushPct": 0.1472,
+  "waterPct": 0.0,
+  "openPct": 0.6306,
+  "breakablePct": 0.0462,
+  "sightlineFrac": 0.9524,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 8.36,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Laserball",
+  "displayNames": [
+   "Goalies"
+  ]
+ },
+ "Laserball_662": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2597,
+  "bushPct": 0.075,
+  "waterPct": 0.0,
+  "openPct": 0.6652,
+  "breakablePct": 0.0981,
+  "sightlineFrac": 0.619,
+  "chokesPerRow": 1.64,
+  "avgLaneWidth": 6.09,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Laserball",
+  "displayNames": [
+   "No Good Deed"
+  ]
+ },
+ "Wanted_661": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1126,
+  "bushPct": 0.1847,
+  "waterPct": 0.0,
+  "openPct": 0.7027,
+  "breakablePct": 0.1126,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 9.17,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "Wanted",
+  "displayNames": [
+   "Watermelons"
+  ]
+ },
+ "Wanted_662": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1299,
+  "bushPct": 0.0779,
+  "waterPct": 0.0,
+  "openPct": 0.7835,
+  "breakablePct": 0.1385,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 14.33,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Wanted",
+  "displayNames": [
+   "Hit And Run"
+  ]
+ },
+ "AirHockey_661": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2569,
+  "bushPct": 0.0606,
+  "waterPct": 0.0,
+  "openPct": 0.6825,
+  "breakablePct": 0.0952,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 12.76,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "AirHockey",
+  "displayNames": [
+   "Tip Toe"
+  ]
+ },
+ "AirHockey_662": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2222,
+  "bushPct": 0.0635,
+  "waterPct": 0.0,
+  "openPct": 0.7143,
+  "breakablePct": 0.0606,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.55,
+  "avgLaneWidth": 10.24,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "AirHockey",
+  "displayNames": [
+   "Cabin Fever"
+  ]
+ },
+ "Bankheist_661": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0693,
+  "bushPct": 0.2049,
+  "waterPct": 0.013,
+  "openPct": 0.7128,
+  "breakablePct": 0.0693,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 7.62,
+  "midOpenness": 0.8163,
+  "midCover": 0.0,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Tuning Fork"
+  ]
+ },
+ "Bankheist_662": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0837,
+  "bushPct": 0.2049,
+  "waterPct": 0.0,
+  "openPct": 0.7114,
+  "breakablePct": 0.0837,
+  "sightlineFrac": 0.7619,
+  "chokesPerRow": 1.09,
+  "avgLaneWidth": 7.0,
+  "midOpenness": 0.8367,
+  "midCover": 0.1633,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Perpetual Motion"
+  ]
+ },
+ "BrawlBallV2_1": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.228,
+  "bushPct": 0.1732,
+  "waterPct": 0.0,
+  "openPct": 0.5988,
+  "breakablePct": 0.0577,
+  "sightlineFrac": 0.619,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 12.18,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "BrawlBallV2",
+  "displayNames": [
+   "Keepers Corner"
+  ]
+ },
+ "BrawlBallV2_2": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1962,
+  "bushPct": 0.1501,
+  "waterPct": 0.0,
+  "openPct": 0.6335,
+  "breakablePct": 0.0548,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.73,
+  "avgLaneWidth": 8.83,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "BrawlBallV2",
+  "displayNames": [
+   "Backnet Bonanza"
+  ]
+ },
+ "BrawlBallV2_3": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2338,
+  "bushPct": 0.0895,
+  "waterPct": 0.0,
+  "openPct": 0.6768,
+  "breakablePct": 0.0606,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.91,
+  "avgLaneWidth": 6.68,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "BrawlBallV2",
+  "displayNames": [
+   "Goalmouth Scramble"
+  ]
+ },
+ "BrawlBallV2_4": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2424,
+  "bushPct": 0.1847,
+  "waterPct": 0.0,
+  "openPct": 0.5729,
+  "breakablePct": 0.0808,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 9.67,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "BrawlBallV2",
+  "displayNames": []
+ },
+ "BrawlBallV2_M1": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2136,
+  "bushPct": 0.0924,
+  "waterPct": 0.0,
+  "openPct": 0.6941,
+  "breakablePct": 0.0519,
+  "sightlineFrac": 0.8095,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 11.0,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "BrawlBallV2",
+  "displayNames": [
+   "Penalty Park"
+  ]
+ },
+ "BrawlBallV2_M2": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2165,
+  "bushPct": 0.0635,
+  "waterPct": 0.0,
+  "openPct": 0.7201,
+  "breakablePct": 0.0491,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.36,
+  "avgLaneWidth": 10.58,
+  "midOpenness": 0.8776,
+  "midCover": 0.1224,
+  "mode": "BrawlBallV2",
+  "displayNames": [
+   "Kickoff Coliseum"
+  ]
+ },
+ "BrawlBallV2_M3": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2078,
+  "bushPct": 0.101,
+  "waterPct": 0.0,
+  "openPct": 0.6912,
+  "breakablePct": 0.0375,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.82,
+  "avgLaneWidth": 9.26,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "BrawlBallV2",
+  "displayNames": [
+   "Midfield Madness"
+  ]
+ },
+ "BrawlBallV2_M4": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2078,
+  "bushPct": 0.1212,
+  "waterPct": 0.0,
+  "openPct": 0.671,
+  "breakablePct": 0.0346,
+  "sightlineFrac": 0.619,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 12.41,
+  "midOpenness": 0.9592,
+  "midCover": 0.0408,
+  "mode": "BrawlBallV2",
+  "displayNames": [
+   "Fox In The Box"
+  ]
+ },
+ "BrawlBallV2_M8": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.176,
+  "bushPct": 0.1097,
+  "waterPct": 0.0,
+  "openPct": 0.7143,
+  "breakablePct": 0.0144,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 20.09,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "BrawlBallV2",
+  "displayNames": [
+   "Impossible Arena"
+  ]
+ },
+ "AirHockey_671": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.2309,
+  "bushPct": 0.0,
+  "waterPct": 0.0,
+  "openPct": 0.7691,
+  "breakablePct": 0.0693,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 12.29,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "AirHockey",
+  "displayNames": [
+   "Slippery Showdown"
+  ]
+ },
+ "AirHockey_672": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.228,
+  "bushPct": 0.0577,
+  "waterPct": 0.0,
+  "openPct": 0.7143,
+  "breakablePct": 0.0664,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.0,
+  "avgLaneWidth": 10.14,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "AirHockey",
+  "displayNames": [
+   "Arabesque"
+  ]
+ },
+ "Bankheist_671": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1688,
+  "bushPct": 0.1587,
+  "waterPct": 0.0,
+  "openPct": 0.6724,
+  "breakablePct": 0.1688,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 8.0,
+  "midOpenness": 0.449,
+  "midCover": 0.551,
+  "mode": "Bankheist",
+  "displayNames": [
+   "Eating Good"
+  ]
+ },
+ "Gemgrab_671": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.1299,
+  "bushPct": 0.1385,
+  "waterPct": 0.0,
+  "openPct": 0.7316,
+  "breakablePct": 0.1299,
+  "sightlineFrac": 0.9048,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 8.2,
+  "midOpenness": 1.0,
+  "midCover": 0.0,
+  "mode": "Gemgrab",
+  "displayNames": [
+   "Ancestral Roots"
+  ]
+ },
+ "Knockout_671": {
+  "width": 21,
+  "height": 33,
+  "playableTiles": 693,
+  "wallPct": 0.0837,
+  "bushPct": 0.1241,
+  "waterPct": 0.0,
+  "openPct": 0.7922,
+  "breakablePct": 0.0548,
+  "sightlineFrac": 1.0,
+  "chokesPerRow": 0.18,
+  "avgLaneWidth": 9.17,
+  "midOpenness": 0.9184,
+  "midCover": 0.0816,
+  "mode": "Knockout",
+  "displayNames": [
+   "Please Remain Standing"
+  ]
+ }
+}
