@@ -195,21 +195,25 @@ def load_name_canon():
     canon = {}
     for b in brawlers:
         canon[b["name"].lower()] = b["name"]
-    # Liquipedia spellings that differ from our display names
+    # Liquipedia spellings that differ from our display names. setdefault so a
+    # correct entry derived from brawlers.json is never clobbered by an alias
+    # (the old unconditional overwrite turned "Jae-Yong" into "Jae-yong").
     aliases = {
         "rt": "R-T", "r-t": "R-T", "8bit": "8-Bit", "8-bit": "8-Bit",
-        "mr p": "Mr. P", "mr. p": "Mr. P", "mrp": "Mr. P",
+        "mr p": "Mr. P", "mr. p": "Mr. P", "mrp": "Mr. P", "mr.p": "Mr. P",
         "larry and lawrie": "Larry & Lawrie", "larry & lawrie": "Larry & Lawrie",
         "l&l": "Larry & Lawrie", "l & l": "Larry & Lawrie",
         "el primo": "El Primo", "elprimo": "El Primo", "primo": "El Primo",
-        "dyna": "Dynamike", "jae": "Jae-yong", "jae-yong": "Jae-yong",
+        "dyna": "Dynamike", "jae": "Jae-Yong", "jae-yong": "Jae-Yong",
+        "glowbert": "Glowy",  # Liquipedia uses Glowy's in-lore name
         "mico": "Mico", "moe": "Moe",
     }
     for k, v in aliases.items():
-        if v.lower() in canon or v in canon.values():
-            canon[k] = v
-        else:
-            canon[k] = v  # keep alias even if brawler newer than our bake
+        canon.setdefault(k, v)
+    # punctuation/space-insensitive fallback ("mr.p", "8 bit", ...) — built
+    # last so exact keys always win
+    canon["_stripped"] = {re.sub(r"[^a-z0-9]", "", k): v
+                          for k, v in canon.items() if k != "_stripped"}
     return canon
 
 
@@ -219,6 +223,9 @@ def canon_name(raw, canon, unknown):
         return None
     if key in canon:
         return canon[key]
+    hit = canon["_stripped"].get(re.sub(r"[^a-z0-9]", "", key))
+    if hit:
+        return hit
     unknown[key] = unknown.get(key, 0) + 1
     return raw.strip().title()  # newer brawler than our bake — keep readable
 
@@ -299,6 +306,24 @@ def main():
             continue
         games += parse_event(title.replace("_", " "), wt, canon, unknown)
 
+    # Sanitize volunteer data-entry errors (these exist on Liquipedia itself):
+    # - a brawler listed twice in one team's picks -> the pick record is
+    #   unusable, drop the whole game;
+    # - a banned brawler also appearing in picks -> can't tell which record
+    #   is wrong; picks are the load-bearing data, so blank that game's bans.
+    clean, dropped_dup, bans_cleared = [], 0, 0
+    for g in games:
+        if any(len({p for p in team if p}) < len([p for p in team if p])
+               for team in g["picks"]):
+            dropped_dup += 1
+            continue
+        picked = {p for team in g["picks"] for p in team if p}
+        if any(b in picked for team in g["bans"] for b in team if b):
+            g["bans"] = [[None] * 3, [None] * 3]
+            bans_cleared += 1
+        clean.append(g)
+    games = clean
+
     games_with_bans = sum(1 for g in games if any(g["bans"][0]))
     out = {
         "_meta": {
@@ -308,6 +333,8 @@ def main():
             "pages": len(pages),
             "games": len(games),
             "gamesWithBans": games_with_bans,
+            "droppedDuplicatePicks": dropped_dup,
+            "bansClearedPickOverlap": bans_cleared,
             "unmatchedNames": dict(sorted(unknown.items(), key=lambda kv: -kv[1])),
         },
         "games": games,
