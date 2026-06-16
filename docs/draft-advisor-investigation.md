@@ -92,3 +92,42 @@ The earlier conversation is well documented (project memory entries from
 4. Budget/account for **Groq** (or preference to self-host)?
 5. Win-rate source preference: Brawlify stats (objective, ladder-biased) vs
    community tier lists (subjective, pro-aware) as the primary prior?
+
+## 7. v1 outcome audit (2026-06-11) — honest read of the learned fit
+
+The v1 ridge fit (`data/fit_draft_weights.py` → `draft_ai.json`) shipped and
+its weights replaced the v0 hand-tuned rules in the term-chip UI, but the
+recorded cross-validation tells a sharper story than the status log did:
+
+- **cv-R² = 0.017 at λ = 1000** — the largest λ in the search grid. CV pushed
+  regularization to the edge of the grid; the attribute×geometry component
+  explains <2% of label variance.
+- Interpretation: pro draft behavior is dominated by **identity-level**
+  effects (Mr. P's pets holding the point) that attribute features (range/HP/
+  speed/thrower/...) cannot express — and we excluded identity *on purpose*
+  for patch-robustness and custom-map generalization.
+- Consequence for the ensemble: ranking accuracy is carried by the **stats**
+  chips (map-exact WR deltas) and **pro** chips (map-exact pick/ban counts);
+  the learned fit functions as a weak structured prior and as the *only*
+  signal on painted custom maps — which is exactly where a weak-but-sane
+  geometric prior beats nothing.
+
+**Levers, in expected-impact order:** (1) denser pro-pick labels via the
+battle-log self-collector (acquisition doc §3 step 6); (2) hybrid model —
+per-brawler offset terms regularized hard toward 0 on top of the attribute
+backbone (identity where data supports it, attributes elsewhere); (3) richer
+mechanics features from `ability_mechanics.json` (pets, wall-break, shields,
+dashes); (4) KB counter edges with pro-reviewed confidence as ensemble terms.
+
+## 8. Phase-2 retrieval context: implemented
+
+The kb-design §1 deterministic key-select pipeline now exists:
+`data/build_advisor_context.py` assembles a budgeted (~6K-token default)
+advisor context from map + draft state — geometry card, WR-delta + pro-usage
+rows, candidate kit lines, KB/community matchup edges (KB outranks seed per
+pair), KB notes, and cleaned CC-BY-SA wiki excerpts — with priority-ordered
+section dropping (prose dies first, numeric core never). Tagged per the §2
+anti-hallucination contract ([pro]/[stats]/[community]/[llm-draft] + a
+"cite only supplied numbers" rule). Tests: `data/tests/test_advisor_context.py`.
+Measured: a mid-draft on Hard Rock Mine (the richest pro map) renders at
+~1.8K tokens — comfortable headroom for KB growth inside the 4–8K target.

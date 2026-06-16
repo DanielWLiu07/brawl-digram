@@ -196,3 +196,34 @@ now exist to validate drafted edges against.
 Parallel zero-effort asks stay open: brawltime Discord courtesy note (we're
 using the open Cube endpoint; offer attribution), Brawlify Discord stats ask,
 Liquipedia LPDB key application.
+
+## 4. Addendum (2026-06-11): gameplay video & the gameplan advisor
+
+Outcome of the follow-up discussion on mining strategy from footage.
+
+**Structural limit:** the broadcast camera shows one player's ~21×12-tile
+viewport (no minimap); off-screen players are unrecoverable in principle, and
+the observer chases fights, under-sampling off-ball positioning. Any
+"strategy/intent inference from footage" is therefore confabulation-prone —
+the evidence for the actual plan is mostly not in the pixels. **Skip it.**
+
+**What survives the limit:** statistics over many fragments. Each on-screen
+brawler position is independently true; aggregated across a season they give
+honest per-(map, brawler) **positioning heatmaps**. Feasible for us
+specifically because we hold exact grids + tile sprites, so camera→tile
+registration is classic CV; character ID through skins is the real work.
+Sparse sampling + frame grounding (grid overlay) + LLM-vision tagging is the
+cheap pipeline shape. ~2–4 wk; backlog, not committed. Pro POV streams add
+clean per-player samples under the same viewport limit.
+
+**Gameplan advisor (the product this feeds):** "draft done → positions +
+rotation arrows + plan, drawn on the whiteboard." Buildable WITHOUT video:
+map geometry (have) + kit data (have) + pro KB prose (Phase 2 pipeline) →
+LLM composes, whiteboard renders. Source ranking for plan knowledge:
+**pro text/KB ≫ positioning heatmaps > strategy-from-footage (never)**.
+Awaiting Daniel's go before any build (interacts with the game-sim design's
+tokens-as-entities layer).
+
+**Pick-order CV (unchanged):** draft-screen template matching stays the only
+justified video work, gated on Phase 3 commit; a ~50-VOD Claude-vision spike
+is the cheap way to validate coverage + accuracy before committing.
