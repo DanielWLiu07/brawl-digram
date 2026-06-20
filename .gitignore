@@ -36,3 +36,6 @@ logs/
 
 # Liquipedia raw wikitext cache (regenerable via data/fetch_liquipedia_drafts.py)
 data/liquipedia_cache/
+
+# Local planning / scratch docs — never tracked
+plans/
