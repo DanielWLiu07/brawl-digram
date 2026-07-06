@@ -2,10 +2,11 @@
 
 Collaborative Brawl Stars drafting + whiteboard. Drag brawlers onto tile-accurate maps, see attack reticles, multiple people in the same room. Eventually an LLM advisor on top, fed by pro-curated map notes.
 
-Status: building Phase 1 (whiteboard MVP). Frontend isn't scaffolded yet — currently all the data prep lives in `data/`.
+Status: Phase 1 whiteboard MVP in progress. **`web/`** ships the read-only draft wiki (Next.js + Neon + Drizzle). Collaborative canvas is next.
 
 ## What's in here
 
+- `web/` — Next.js draft wiki (`/wiki/brawlers`, `/wiki/maps`, `/wiki/tier-lists`). See [`web/README.md`](web/README.md).
 - `data/csv_logic/` — Brawl Stars game CSVs (v67.264, ~18 MB). Source of truth for brawler stats, skill geometry, tile encoding, map layouts. Pulled from the [tailsjs mirror](https://github.com/tailsjs/brawl-stars-assets).
 - `data/brawlers.json` — flat per-brawler JSON for the frontend (attack/super/hyper/gadget reticles in tile units, plus asset paths). Built by `build_brawlers_json.py`.
 - `data/maps.json` — 409 ranked-mode maps decoded into 2D tile grids + tile legend. Built by `build_maps_json.py`.
@@ -20,7 +21,7 @@ See [`ROADMAP.md`](ROADMAP.md) for the full plan and [`CLAUDE.md`](CLAUDE.md) fo
 
 ## Scripts
 
-Everything's a `python3 data/<file>.py` call. No build system, no Make, no Node yet.
+Everything's a `python3 data/<file>.py` call for data prep. The wiki app lives in `web/` (`npm run dev`, `npm run db:seed`).
 
 | Script | What it does |
 |---|---|

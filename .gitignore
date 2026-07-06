@@ -39,3 +39,8 @@ data/liquipedia_cache/
 
 # Local planning / scratch docs — never tracked
 plans/
+
+# Cursor / agent local tooling (not part of the app)
+.agents/
+skills-lock.json
+.claude/local/
